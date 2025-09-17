@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement-et-introduction-a-la-programmation/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement-et-introduction-a-la-programmation/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-et-introduction-a-la-programmation-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 

@@ -9,7 +9,7 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Modalité de l'unité d'enseignement
 description: Modalité de l'unité d'enseignement  pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement-et-introduction-a-la-programmation/01-supports-de-cours/index.html
+url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html
 header: "**Modalité de l'unité d'enseignement**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -235,7 +235,7 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/01.01-modalites-de-lunite-denseignement-et-introduction-a-la-programmation
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/01.01-modalites-de-lunite-denseignement
 [license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 
