@@ -6,7 +6,7 @@ Bienvenue sur le dépôt principal de l'unité d'enseignement
 [Programmation 1 (ProgIM1)](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7624)
 enseigné à la
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
-Suisse ! -->
+Suisse !
 
 ## 🎯 Objectifs généraux
 
