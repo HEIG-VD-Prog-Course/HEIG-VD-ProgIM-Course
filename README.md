@@ -6,7 +6,7 @@ Bienvenue sur le dépôt principal de l'unité d'enseignement
 [Programmation 1 (ProgIM1)](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=7624)
 enseigné à la
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
-Suisse ! -->
+Suisse !
 
 ## 🎯 Objectifs généraux
 
@@ -58,3 +58,25 @@ Les dates sont tirées du
 |    10 | Projet : conception et implémentation d’une application simple |
 |    11 | Programmation collaborative et revue par les pairs             |
 |    12 | Révision finale, préparation à l’examen                        |
+
+## 🕐 Cours 01
+
+### Modalités de l'unité d'enseignement
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation :
+  [Lien vers le contenu](./01.01-modalites-de-lunite-denseignement/)
+- Supports de cours :
+  [Presentation (web)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+
+### Introduction à la programmation et aux algorithmes
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation :
+  [Lien vers le contenu](./01.02-introduction-a-la-programmation-et-aux-algorithmes/)
+- Supports de cours :
+  [Presentation (web)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
