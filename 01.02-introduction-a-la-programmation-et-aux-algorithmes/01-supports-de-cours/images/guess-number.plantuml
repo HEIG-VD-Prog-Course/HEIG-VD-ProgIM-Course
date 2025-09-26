@@ -13,6 +13,5 @@ repeat
       :Afficher "C'est plus petit";
     endif
   endif
-repeat while (Proposition != nombre secret)
-stop
+repeat while
 @enduml
