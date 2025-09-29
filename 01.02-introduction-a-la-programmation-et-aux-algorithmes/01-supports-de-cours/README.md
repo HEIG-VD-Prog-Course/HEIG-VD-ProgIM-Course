@@ -28,7 +28,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Pourquoi la précision est importante](#pourquoi-la-précision-est-importante)
 - [Présentation des exemples dans le cours](#présentation-des-exemples-dans-le-cours)
   - [Exemple : « Deviner un nombre »](#exemple-deviner-un-nombre)
-- [Ressources complémentaires](#ressources-complémentaires)
 
 ## Objectifs
 
@@ -127,11 +126,6 @@ public class GuessNumber {
     }
 }
 ```
-
-## Ressources complémentaires
-
-- [France-IOI – Premiers pas en algorithmique](https://www.france-ioi.org/algo/course/?chapter=1)
-- [Pix – Algorithmique](https://pix.fr/)
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

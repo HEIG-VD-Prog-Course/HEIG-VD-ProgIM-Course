@@ -51,6 +51,10 @@ _paginate: false
 
 ## Mes objectifs et souhaits pour ProgIM
 
+- Bienveillance et transparence.
+- Déconstruire la peur de la programmation.
+- Vous donner des bases solides en programmation.
+
 ## Comment me contacter
 
 Selon vos préférences, vous pouvez utiliser l'un des canaux suivants pour toutes
@@ -195,12 +199,6 @@ Quelques règles concernant l'utilisation de ces outils :
 - Vous **devez être capable de faire le travail par vous-même**. Ces outils vont
   et viennent ($$$, fin de vie, etc.), vous ne devez pas vous y fier
   entièrement.
-
-## Bibliographie et ressources utilisées
-
-- <https://developer.mozilla.org>
-
-![bg right:40%][illustration-bibliographie-et-ressources]
 
 ## Questions
 
