@@ -29,7 +29,7 @@ public class Exercice05_ucfirst {
      */
     private static String ucfirst(String prenom) {
         String chaine = "";
-        if (prenom != null && chaine.length() >= 1) {
+        if (prenom != null && prenom.length() >= 1) {
             chaine += Exercice03_Majusculise.majusculise(prenom.charAt(0));
             char car;
             for (int i = 1; i < prenom.length(); i++) {
