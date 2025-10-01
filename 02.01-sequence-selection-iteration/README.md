@@ -10,15 +10,28 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](.)
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
+- Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Objectifs
 
-- Lister les objectifs de l'unité d'enseignement.
-- Lister les modalités d'organisation de l'unité d'enseignement.
-- Lister les modalités d'évaluation.
+Cette séance a pour but de vous présenter les concepts fondamentaux de la
+programmation, à savoir la séquence, la sélection et l'itération. Et de savoir
+les représenter à l'aide de pseudocode et de diagrammes d'activités.
+
+De façon plus concise, à la fin de cette séance, vous devriez être capable de :
+
+- Comprendre les trois piliers fondamentaux de la programmation
+- Décrire le concept de variable en programmation
+- Écrire des algorithmes en pseudocode
+- Créer des diagrammes d'activité avec PlantUML
+- Comprendre et appliquer la séquence d'instructions
+- Décrire la sélection avec les conditions SI/ALORS/SINON
+- Utiliser l'itération avec les différents types de boucles
+- Traduire des concepts algorithmiques en diagrammes visuels
+- Analyser et décomposer des problèmes complexes
 
 ## Méthodes d'enseignement et d'apprentissage
 

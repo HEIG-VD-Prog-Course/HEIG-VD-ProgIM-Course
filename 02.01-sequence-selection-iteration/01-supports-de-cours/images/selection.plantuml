@@ -1,0 +1,11 @@
+@startuml
+start
+:Demander l'âge;
+:Sauvegarder dans user_age;
+if (user_age >= 18) then (oui)
+    :Afficher "Vous pouvez voter";
+else (non)
+    :Afficher "Vous ne pouvez pas encore voter";
+endif
+stop
+@enduml
