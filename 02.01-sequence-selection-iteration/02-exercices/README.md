@@ -66,8 +66,15 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
 > Pour chaque exercice, créez d'abord le **pseudocode**, puis le **diagramme
 > d'activité** avec PlantUML, et enfin vérifiez votre logique avec la solution.
 >
-> Utilisez l'éditeur PlantUML en ligne :
+> **À propos du pseudocode** : Le pseudocode est un outil pour structurer vos
+> idées et organiser votre réflexion. Vous pouvez l'écrire à la main sur papier,
+> dans un bloc-notes, dans n'importe quelle application de texte, ou même
+> mentalement. L'important est qu'il vous aide à clarifier la logique de votre
+> algorithme avant de passer à l'implémentation.
+>
+> **À propos de PlantUML** : Utilisez l'éditeur PlantUML en ligne :
 > <https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
+> (Désolé pour les publicités sur le site, nous cherchons une alternative.)
 
 > [!NOTE]
 >
@@ -299,6 +306,13 @@ l'utilisatrice et afficher l'aire correspondante.
 - `area` : aire calculée
 - `pi` : constante pi (3.14159)
 
+> [!TIP]
+>
+> **Bonnes pratiques - Constantes** : Il est recommandé d'initialiser et
+> d'assigner les constantes (comme `pi`) au début du programme. Ainsi, si vous
+> voulez modifier la précision ou la valeur plus tard, vous n'avez qu'un seul
+> endroit à changer dans tout le code.
+
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
@@ -389,6 +403,14 @@ littérale.
 
 - `grade` : la note saisie
 
+> [!TIP]
+>
+> **Bonnes pratiques - Validation des entrées** : Dans un vrai programme, il
+> serait judicieux de vérifier que la note saisie est bien entre 0 et 20. Cela
+> peut sembler redondant d'avoir des boucles et des if/else imbriqués, mais nous
+> verrons plus tard dans le semestre comment les **fonctions** nous aident à
+> organiser et structurer ce type de code de validation.
+
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
@@ -410,6 +432,13 @@ DÉBUT
     SINON
         Afficher "Insuffisant"
     FIN SI
+
+> [!TIP]
+>
+> **Structures imbriquées** : Les if/else imbriqués sont comme des poupées
+> russes - chaque structure s'imbrique dans la précédente. **Important** :
+> n'oubliez jamais de fermer chaque structure avec son `FIN SI`, `FIN POUR`,
+> `FIN TANT QUE`, etc. Chaque ouverture doit avoir sa fermeture correspondante !
 FIN
 ```
 
@@ -851,6 +880,14 @@ DÉBUT
 
         attempts = attempts - 1
     FIN TANT QUE
+
+> [!TIP]
+>
+> **Poupées russes** : Cet exercice combine une boucle `TANT QUE` avec des
+> `SI/SINON` imbriqués à l'intérieur. Comme des poupées russes, chaque
+> structure doit être correctement fermée : le `FIN SI` ferme la structure
+> conditionnelle, et le `FIN TANT QUE` ferme la boucle. Vérifiez toujours que
+> vous avez le bon nombre de fermetures !
 
     SI (found = faux) ALORS
         Afficher "Perdu ! Le nombre était", secret_number
