@@ -27,6 +27,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Qu'est-ce qu'une variable ?](#quest-ce-quune-variable-)
   - [Comment utiliser les variables ?](#comment-utiliser-les-variables-)
   - [Types de variables courantes](#types-de-variables-courantes)
+- [Le pseudocode](#le-pseudocode)
+  - [Qu'est-ce que le pseudocode ?](#quest-ce-que-le-pseudocode-)
+  - [Règles de base du pseudocode](#règles-de-base-du-pseudocode)
+  - [Avantages du pseudocode](#avantages-du-pseudocode)
 - [La séquence](#la-séquence)
   - [Qu'est-ce qu'une séquence ?](#quest-ce-quune-séquence-)
   - [Pseudocode pour la séquence](#pseudocode-pour-la-séquence)
@@ -40,10 +44,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Types d'itération](#types-ditération)
   - [Pseudocode pour l'itération](#pseudocode-pour-litération)
   - [Diagrammes d'activité pour l'itération](#diagrammes-dactivité-pour-litération)
-- [Le pseudocode](#le-pseudocode)
-  - [Qu'est-ce que le pseudocode ?](#quest-ce-que-le-pseudocode-)
-  - [Règles de base du pseudocode](#règles-de-base-du-pseudocode)
-  - [Avantages du pseudocode](#avantages-du-pseudocode)
 - [Exercices pratiques](#exercices-pratiques)
   - [Exercice 1 : Séquence simple](#exercice-1--séquence-simple)
   - [Exercice 2 : Sélection](#exercice-2--sélection)
@@ -151,6 +151,119 @@ FIN
 - Choisissez des noms clairs : `user_age` plutôt que `x`
 - Une variable ne peut contenir qu'une seule valeur à la fois
 - Si on change le contenu d'une variable, l'ancienne valeur est perdue
+
+## Le pseudocode
+
+### Qu'est-ce que le pseudocode ?
+
+Le pseudocode est un langage informel utilisé par les programmeurs pour décrire
+des algorithmes. Il utilise des mots en français (ou dans votre langue
+maternelle) plutôt que la syntaxe spécifique d'un langage de programmation.
+
+C'est un excellent outil pour :
+
+- Planifier un programme avant de l'écrire
+- Communiquer des idées entre développeurs
+- Apprendre les concepts de programmation
+
+### Règles de base du pseudocode
+
+1. **Utilisez des mots simples et clairs**
+
+   - "Demander l'âge à l'utilisatrice" (recommandé)
+   - "scanf(%d, &age)" (à éviter)
+
+2. **Indentez pour montrer la structure**
+
+   ```text
+   SI (condition) ALORS
+       action 1
+       action 2
+   FIN SI
+   ```
+
+3. **Utilisez des mots-clés cohérents**
+
+   - DÉBUT / FIN
+   - SI / ALORS / SINON / FIN SI
+   - POUR / À / FAIRE / FIN POUR
+   - TANT QUE / FAIRE / FIN TANT QUE
+
+4. **Nommez clairement les variables**
+   - user_age, secret_number, total_price (recommandé)
+   - x, y, temp, a1 (à éviter)
+
+### Avantages du pseudocode
+
+- **Indépendant du langage** : peut être traduit en Java, Python, C++, etc.
+- **Facile à comprendre** : même sans connaissances en programmation
+- **Permet de se concentrer sur la logique** : pas de syntaxe compliquée
+- **Facilite la correction d'erreurs** : plus simple de repérer les erreurs de
+  logique
+
+**Exemple complet** : Calculer la moyenne d'une classe :
+
+```text
+DÉBUT
+    total = 0
+    student_count = 0
+
+    Afficher "Combien d'élèves dans la classe ?"
+    Demander student_count
+
+    POUR i DE 1 À student_count FAIRE
+        Afficher "Note de l'élève", i, ":"
+        Demander grade
+        total = total + grade
+    FIN POUR
+
+    average = total / student_count
+    Afficher "La moyenne de la classe est :", average
+FIN
+```
+
+<details>
+<summary>Exemple en Java</summary>
+
+```java
+import java.util.Scanner;
+
+public class MoyenneClasse {
+    public static void main(String[] args) {
+        // Scanner pour lire les entrées
+        Scanner scanner = new Scanner(System.in);
+
+        // Variables pour stocker le total des notes et le nombre d'élèves
+        double total = 0;
+        int student_count = 0;
+
+        // Demander le nombre d'élèves dans la classe
+        System.out.print("Combien d'élèves dans la classe ? ");
+        student_count = scanner.nextInt();
+
+        // Boucle pour demander chaque note
+        for (int i = 1; i <= student_count; i++) {
+            // Afficher quel élève on traite actuellement
+            System.out.print("Note de l'élève " + i + " : ");
+            // Lire la note saisie
+            double grade = scanner.nextDouble();
+            // Ajouter cette note au total
+            total = total + grade;
+        }
+
+        // Calculer la moyenne : total divisé par nombre d'élèves
+        double average = total / student_count;
+
+        // Afficher le résultat
+        System.out.println("La moyenne de la classe est : " + average);
+
+        // Fermer le scanner
+        scanner.close();
+    }
+}
+```
+
+</details>
 
 ## La séquence
 
@@ -654,119 +767,6 @@ repeat while (entered_password ≠ "password123") is (oui) not (non)
 stop
 @enduml
 ```
-
-## Le pseudocode
-
-### Qu'est-ce que le pseudocode ?
-
-Le pseudocode est un langage informel utilisé par les programmeurs pour décrire
-des algorithmes. Il utilise des mots en français (ou dans votre langue
-maternelle) plutôt que la syntaxe spécifique d'un langage de programmation.
-
-C'est un excellent outil pour :
-
-- Planifier un programme avant de l'écrire
-- Communiquer des idées entre développeurs
-- Apprendre les concepts de programmation
-
-### Règles de base du pseudocode
-
-1. **Utilisez des mots simples et clairs**
-
-   - "Demander l'âge à l'utilisatrice" (recommandé)
-   - "scanf(%d, &age)" (à éviter)
-
-2. **Indentez pour montrer la structure**
-
-   ```text
-   SI (condition) ALORS
-       action 1
-       action 2
-   FIN SI
-   ```
-
-3. **Utilisez des mots-clés cohérents**
-
-   - DÉBUT / FIN
-   - SI / ALORS / SINON / FIN SI
-   - POUR / À / FAIRE / FIN POUR
-   - TANT QUE / FAIRE / FIN TANT QUE
-
-4. **Nommez clairement les variables**
-   - user_age, secret_number, total_price (recommandé)
-   - x, y, temp, a1 (à éviter)
-
-### Avantages du pseudocode
-
-- **Indépendant du langage** : peut être traduit en Java, Python, C++, etc.
-- **Facile à comprendre** : même sans connaissances en programmation
-- **Permet de se concentrer sur la logique** : pas de syntaxe compliquée
-- **Facilite la correction d'erreurs** : plus simple de repérer les erreurs de
-  logique
-
-**Exemple complet** : Calculer la moyenne d'une classe :
-
-```text
-DÉBUT
-    total = 0
-    student_count = 0
-
-    Afficher "Combien d'élèves dans la classe ?"
-    Demander student_count
-
-    POUR i DE 1 À student_count FAIRE
-        Afficher "Note de l'élève", i, ":"
-        Demander grade
-        total = total + grade
-    FIN POUR
-
-    average = total / student_count
-    Afficher "La moyenne de la classe est :", average
-FIN
-```
-
-<details>
-<summary>Exemple en Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class MoyenneClasse {
-    public static void main(String[] args) {
-        // Scanner pour lire les entrées
-        Scanner scanner = new Scanner(System.in);
-
-        // Variables pour stocker le total des notes et le nombre d'élèves
-        double total = 0;
-        int student_count = 0;
-
-        // Demander le nombre d'élèves dans la classe
-        System.out.print("Combien d'élèves dans la classe ? ");
-        student_count = scanner.nextInt();
-
-        // Boucle pour demander chaque note
-        for (int i = 1; i <= student_count; i++) {
-            // Afficher quel élève on traite actuellement
-            System.out.print("Note de l'élève " + i + " : ");
-            // Lire la note saisie
-            double grade = scanner.nextDouble();
-            // Ajouter cette note au total
-            total = total + grade;
-        }
-
-        // Calculer la moyenne : total divisé par nombre d'élèves
-        double average = total / student_count;
-
-        // Afficher le résultat
-        System.out.println("La moyenne de la classe est : " + average);
-
-        // Fermer le scanner
-        scanner.close();
-    }
-}
-```
-
-</details>
 
 ## Exercices pratiques
 
