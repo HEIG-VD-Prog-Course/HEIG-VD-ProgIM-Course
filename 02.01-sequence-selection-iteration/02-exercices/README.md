@@ -104,14 +104,20 @@ et affiche le résultat.
 
 ```
 DÉBUT
+    Initialiser first_grade
     Afficher "Entrez la première note :"
-    Demander first_grade
+    Demander une valeur
+    Assigner la valeur à first_grade
 
+    Initialiser second_grade
     Afficher "Entrez la deuxième note :"
-    Demander second_grade
+    Demander une valeur
+    Assigner la valeur à second_grade
 
+    Initialiser third_grade
     Afficher "Entrez la troisième note :"
-    Demander third_grade
+    Demander une valeur
+    Assigner la valeur à third_grade
 
     average = (first_grade + second_grade + third_grade) / 3
 
@@ -127,12 +133,18 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser first_grade;
 :Afficher "Entrez la première note :";
-:Demander first_grade;
+:Demander une valeur;
+:Assigner la valeur à first_grade;
+:Initialiser second_grade;
 :Afficher "Entrez la deuxième note :";
-:Demander second_grade;
+:Demander une valeur;
+:Assigner la valeur à second_grade;
+:Initialiser third_grade;
 :Afficher "Entrez la troisième note :";
-:Demander third_grade;
+:Demander une valeur;
+:Assigner la valeur à third_grade;
 :average = (first_grade + second_grade + third_grade) / 3;
 :Afficher "La moyenne est :", average;
 stop
@@ -203,8 +215,10 @@ pseudocode, on utilise l'opérateur **modulo** noté `%` ou `MOD`.
 
 ```
 DÉBUT
+    Initialiser number
     Afficher "Entrez un nombre entier :"
-    Demander number
+    Demander une valeur
+    Assigner la valeur à number
 
     SI (number % 2 = 0) ALORS
         Afficher "Le nombre est pair"
@@ -222,8 +236,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser number;
 :Afficher "Entrez un nombre entier :";
-:Demander number;
+:Demander une valeur;
+:Assigner la valeur à number;
 if (number % 2 = 0) then (oui)
     :Afficher "Le nombre est pair";
 else (non)
@@ -290,8 +306,10 @@ l'utilisatrice et afficher l'aire correspondante.
 DÉBUT
     pi = 3.14159
 
+    Initialiser radius
     Afficher "Entrez le rayon du cercle :"
-    Demander radius
+    Demander une valeur
+    Assigner la valeur à radius
 
     area = pi * radius * radius
 
@@ -308,8 +326,10 @@ FIN
 @startuml
 start
 :pi = 3.14159;
+:Initialiser radius;
 :Afficher "Entrez le rayon du cercle :";
-:Demander radius;
+:Demander une valeur;
+:Assigner la valeur à radius;
 :area = pi * radius * radius;
 :Afficher "L'aire du cercle est :", area;
 stop
@@ -374,8 +394,10 @@ littérale.
 
 ```
 DÉBUT
+    Initialiser grade
     Afficher "Entrez une note entre 0 et 20 :"
-    Demander grade
+    Demander une valeur
+    Assigner la valeur à grade
 
     SI (grade >= 16) ALORS
         Afficher "Excellent"
@@ -399,8 +421,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser grade;
 :Afficher "Entrez une note entre 0 et 20 :";
-:Demander grade;
+:Demander une valeur;
+:Assigner la valeur à grade;
 if (grade >= 16) then (oui)
     :Afficher "Excellent";
 elseif (grade >= 14) then (oui)
@@ -477,8 +501,10 @@ Kelvin.
 
 ```
 DÉBUT
+    Initialiser celsius
     Afficher "Entrez la température en Celsius :"
-    Demander celsius
+    Demander une valeur
+    Assigner la valeur à celsius
 
     fahrenheit = celsius * 9 / 5 + 32
     kelvin = celsius + 273.15
@@ -496,8 +522,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser celsius;
 :Afficher "Entrez la température en Celsius :";
-:Demander celsius;
+:Demander une valeur;
+:Assigner la valeur à celsius;
 :fahrenheit = celsius * 9 / 5 + 32;
 :kelvin = celsius + 273.15;
 :Afficher celsius, "°C =", fahrenheit, "°F";
@@ -566,8 +594,10 @@ d'une réduction selon le montant d'achat.
 
 ```
 DÉBUT
+    Initialiser original_price
     Afficher "Entrez le prix de l'article :"
-    Demander original_price
+    Demander une valeur
+    Assigner la valeur à original_price
 
     SI (original_price > 100) ALORS
         discount_rate = 15
@@ -596,7 +626,10 @@ FIN
 ```plantuml
 @startuml
 start
-:Demander original_price;
+:Initialiser original_price;
+:Afficher "Entrez le prix de l'article :";
+:Demander une valeur;
+:Assigner la valeur à original_price;
 if (original_price > 100) then (oui)
     :discount_rate = 15;
 elseif (original_price >= 50) then (oui)
@@ -694,8 +727,10 @@ n (notée n!) est le produit de tous les nombres entiers positifs inférieurs ou
 
 ```
 DÉBUT
+    Initialiser n
     Afficher "Entrez un nombre positif :"
-    Demander n
+    Demander une valeur
+    Assigner la valeur à n
 
     factorial = 1
 
@@ -715,8 +750,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser n;
 :Afficher "Entrez un nombre positif :";
-:Demander n;
+:Demander une valeur;
+:Assigner la valeur à n;
 :factorial = 1;
 :i = 1;
 while (i <= n)
@@ -798,8 +835,10 @@ DÉBUT
 
     TANT QUE (attempts > 0 ET found = faux) FAIRE
         Afficher "Il vous reste", attempts, "tentatives."
+        Initialiser guessed_number
         Afficher "Entrez votre proposition :"
-        Demander guessed_number
+        Demander une valeur
+        Assigner la valeur à guessed_number
 
         SI (guessed_number = secret_number) ALORS
             Afficher "Bravo ! Vous avez trouvé !"
@@ -833,7 +872,10 @@ start
 :Afficher "Devinez le nombre secret entre 1 et 100 !";
 while (attempts > 0 ET found = faux) is (oui)
     :Afficher "Il vous reste", attempts, "tentatives";
-    :Demander guessed_number;
+    :Initialiser guessed_number;
+    :Afficher "Entrez votre proposition :";
+    :Demander une valeur;
+    :Assigner la valeur à guessed_number;
     if (guessed_number = secret_number) then (oui)
         :Afficher "Bravo ! Vous avez trouvé !";
         :found = vrai;
@@ -926,8 +968,10 @@ Créer un algorithme qui affiche la table de multiplication d'un nombre donné (
 
 ```
 DÉBUT
+    Initialiser number
     Afficher "Entrez un nombre :"
-    Demander number
+    Demander une valeur
+    Assigner la valeur à number
 
     Afficher "Table de multiplication de", number, ":"
 
@@ -946,8 +990,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser number;
 :Afficher "Entrez un nombre :";
-:Demander number;
+:Demander une valeur;
+:Assigner la valeur à number;
 :Afficher "Table de multiplication de", number, ":";
 :i = 1;
 while (i <= 10)
@@ -1017,14 +1063,20 @@ le résultat.
 
 ```
 DÉBUT
+    Initialiser first_number
     Afficher "Entrez le premier nombre :"
-    Demander first_number
+    Demander une valeur
+    Assigner la valeur à first_number
 
+    Initialiser operation
     Afficher "Entrez l'opération (+, -, *, /) :"
-    Demander operation
+    Demander une valeur
+    Assigner la valeur à operation
 
+    Initialiser second_number
     Afficher "Entrez le second nombre :"
-    Demander second_number
+    Demander une valeur
+    Assigner la valeur à second_number
 
     SI (operation = "+") ALORS
         result = first_number + second_number
@@ -1056,9 +1108,18 @@ FIN
 ```plantuml
 @startuml
 start
-:Demander first_number;
-:Demander operation;
-:Demander second_number;
+:Initialiser first_number;
+:Afficher "Entrez le premier nombre :";
+:Demander une valeur;
+:Assigner la valeur à first_number;
+:Initialiser operation;
+:Afficher "Entrez l'opération (+, -, *, /) :";
+:Demander une valeur;
+:Assigner la valeur à operation;
+:Initialiser second_number;
+:Afficher "Entrez le second nombre :";
+:Demander une valeur;
+:Assigner la valeur à second_number;
 if (operation = "+") then (oui)
     :result = first_number + second_number;
     :Afficher le résultat;
