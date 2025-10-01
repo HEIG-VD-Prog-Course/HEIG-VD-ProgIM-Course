@@ -27,7 +27,7 @@ public class Exercice05_RecherchePetitGrand {
         int petit = nb;
         int grand = nb;
         // On compare les éléments du reste du flot avec "petit" et "grand".
-        for (int i=2; i<NB_ELEMENTS; i++){
+        for (int i=2; i<=NB_ELEMENTS; i++){
             nb = Clavier.rend_int("Entrez le " + (i+1) + "e nombre:");
             if (nb < petit){
                petit = nb;
