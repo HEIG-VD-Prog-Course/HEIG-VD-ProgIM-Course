@@ -26,10 +26,12 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Qu'est-ce qu'une variable ?](#quest-ce-quune-variable-)
   - [Comment utiliser les variables ?](#comment-utiliser-les-variables-)
   - [Types de variables courantes](#types-de-variables-courantes)
+  - [Pour aller plus loin : Comprendre les variables](#pour-aller-plus-loin--comprendre-les-variables)
 - [Le pseudocode](#le-pseudocode)
   - [Qu'est-ce que le pseudocode ?](#quest-ce-que-le-pseudocode-)
   - [Règles de base du pseudocode](#règles-de-base-du-pseudocode)
   - [Avantages du pseudocode](#avantages-du-pseudocode)
+- [À propos des diagrammes d'activité PlantUML](#à-propos-des-diagrammes-dactivité-plantuml)
 - [La séquence](#la-séquence)
   - [Qu'est-ce qu'une séquence ?](#quest-ce-quune-séquence-)
   - [Pseudocode pour la séquence](#pseudocode-pour-la-séquence)
@@ -146,6 +148,35 @@ FIN
 - Une variable ne peut contenir qu'une seule valeur à la fois
 - Si on change le contenu d'une variable, l'ancienne valeur est perdue
 
+### Pour aller plus loin : Comprendre les variables
+
+Les variables sont la base de tout programme informatique. Voici quelques points
+supplémentaires pour mieux les comprendre :
+
+- **Types de variables** : Selon le langage, il existe différents types (entier,
+  décimal, texte, booléen). En Java, par exemple : `int` pour les entiers,
+  `double` pour les décimaux, `String` pour le texte, `boolean` pour vrai/faux.
+- **Portée d'une variable** : Une variable n'est accessible que dans la partie
+  du programme où elle a été déclarée (par exemple, à l'intérieur d'une
+  fonction).
+- **Initialisation** : Il est recommandé de donner une valeur initiale à une
+  variable dès sa déclaration pour éviter des erreurs.
+- **Modification** : On peut changer la valeur d'une variable à tout moment,
+  mais l'ancienne valeur sera perdue.
+
+**Exemple en Java :**
+
+```java
+int age = 25;           // Déclaration et initialisation
+age = age + 1;          // Modification de la valeur (age vaut maintenant 26)
+```
+
+**À retenir :**  
+Une variable est comme une boîte : elle a un nom, un type, et peut contenir une
+valeur qui peut changer au cours du programme.
+
+---
+
 ## Le pseudocode
 
 ### Qu'est-ce que le pseudocode ?
@@ -258,6 +289,41 @@ public class MoyenneClasse {
 ```
 
 </details>
+
+## À propos des diagrammes d'activité PlantUML
+
+Les diagrammes d'activité sont des outils visuels pour représenter le
+déroulement d'un algorithme ou d'un processus. Ils permettent de :
+
+- Visualiser l'enchaînement des actions (séquence)
+- Montrer les choix possibles (sélection)
+- Illustrer les répétitions (itération)
+
+**Principaux éléments d'un diagramme d'activité :**
+
+- **Début/Fin** : représentés par un cercle noir (début) et un cercle avec un
+  point (fin)
+- **Actions** : rectangles contenant une instruction ou une opération
+- **Décisions** : losanges pour les conditions (oui/non)
+- **Flèches** : indiquent le sens du déroulement
+
+**Exemple simple en PlantUML :**
+
+```plantuml
+@startuml
+start
+:Demander l'âge;
+if (âge >= 18) then (oui)
+    :Afficher "Majeur";
+else (non)
+    :Afficher "Mineur";
+endif
+stop
+@enduml
+```
+
+Pour créer vos propres diagrammes, vous pouvez utiliser
+[PlantUML en ligne](https://www.plantuml.com/plantuml/uml/).
 
 ## La séquence
 
@@ -513,12 +579,6 @@ endif
 stop
 @enduml
 ```
-
-**Légende** :
-
-- Le losange représente une condition (question oui/non)
-- Les branches "oui" et "non" montrent les différents chemins possibles
-- Toutes les branches se rejoignent ensuite
 
 ## L'itération
 
