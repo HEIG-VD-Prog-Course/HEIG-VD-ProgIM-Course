@@ -1,4 +1,4 @@
-# Modalité de l'unité d'enseignement
+# Séquence, sélection et itération
 
 V. Guidoux, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
@@ -14,7 +14,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
-- Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières
@@ -27,10 +26,13 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Qu'est-ce qu'une variable ?](#quest-ce-quune-variable-)
   - [Comment utiliser les variables ?](#comment-utiliser-les-variables-)
   - [Types de variables courantes](#types-de-variables-courantes)
+  - [Pour aller plus loin : Comprendre les variables](#pour-aller-plus-loin--comprendre-les-variables)
 - [Le pseudocode](#le-pseudocode)
   - [Qu'est-ce que le pseudocode ?](#quest-ce-que-le-pseudocode-)
   - [Règles de base du pseudocode](#règles-de-base-du-pseudocode)
   - [Avantages du pseudocode](#avantages-du-pseudocode)
+- [À propos des diagrammes d'activité PlantUML](#à-propos-des-diagrammes-dactivité-plantuml)
+  - [Détail des éléments PlantUML](#détail-des-éléments-plantuml)
 - [La séquence](#la-séquence)
   - [Qu'est-ce qu'une séquence ?](#quest-ce-quune-séquence-)
   - [Pseudocode pour la séquence](#pseudocode-pour-la-séquence)
@@ -147,6 +149,35 @@ FIN
 - Une variable ne peut contenir qu'une seule valeur à la fois
 - Si on change le contenu d'une variable, l'ancienne valeur est perdue
 
+### Pour aller plus loin : Comprendre les variables
+
+Les variables sont la base de tout programme informatique. Voici quelques points
+supplémentaires pour mieux les comprendre :
+
+- **Types de variables** : Selon le langage, il existe différents types (entier,
+  décimal, texte, booléen). En Java, par exemple : `int` pour les entiers,
+  `double` pour les décimaux, `String` pour le texte, `boolean` pour vrai/faux.
+- **Portée d'une variable** : Une variable n'est accessible que dans la partie
+  du programme où elle a été déclarée (par exemple, à l'intérieur d'une
+  fonction).
+- **Initialisation** : Il est recommandé de donner une valeur initiale à une
+  variable dès sa déclaration pour éviter des erreurs.
+- **Modification** : On peut changer la valeur d'une variable à tout moment,
+  mais l'ancienne valeur sera perdue.
+
+**Exemple en Java :**
+
+```java
+int age = 25;           // Déclaration et initialisation
+age = age + 1;          // Modification de la valeur (age vaut maintenant 26)
+```
+
+**À retenir :**  
+Une variable est comme une boîte : elle a un nom, un type, et peut contenir une
+valeur qui peut changer au cours du programme.
+
+---
+
 ## Le pseudocode
 
 ### Qu'est-ce que le pseudocode ?
@@ -259,6 +290,63 @@ public class MoyenneClasse {
 ```
 
 </details>
+
+## À propos des diagrammes d'activité PlantUML
+
+Les diagrammes d'activité sont des outils visuels pour représenter le
+déroulement d'un algorithme ou d'un processus. Ils permettent de :
+
+- Visualiser l'enchaînement des actions (séquence)
+- Montrer les choix possibles (sélection)
+- Illustrer les répétitions (itération)
+
+**Principaux éléments d'un diagramme d'activité :**
+
+- **Début/Fin** : représentés par un cercle noir (début) et un cercle avec un
+  point (fin)
+- **Actions** : rectangles contenant une instruction ou une opération
+- **Décisions** : losanges pour les conditions (oui/non)
+- **Flèches** : indiquent le sens du déroulement
+
+**Exemple simple en PlantUML :**
+
+```plantuml
+@startuml
+start
+:Demander l'âge;
+if (âge >= 18) then (oui)
+    :Afficher "Majeur";
+else (non)
+    :Afficher "Mineur";
+endif
+stop
+@enduml
+```
+
+Pour créer vos propres diagrammes, vous pouvez utiliser
+[PlantUML en ligne](https://www.plantuml.com/plantuml/uml/).
+
+### Détail des éléments PlantUML
+
+#### **Début/Fin**
+
+- **Début** : `start` - Un cercle noir
+- **Fin** : `stop` - Un cercle noir entouré d'un cercle blanc
+
+#### **Actions**
+
+- Syntaxe : `:Action à effectuer;`
+- Exemple : `:Demander l'âge;`
+
+#### **Décisions**
+
+- Syntaxe : `if (condition) then (oui) ... else (non) ... endif`
+- Les losanges permettent les embranchements
+
+#### **Flèches**
+
+- Automatiquement générées par PlantUML
+- Indiquent le flux d'exécution
 
 ## La séquence
 
@@ -514,12 +602,6 @@ endif
 stop
 @enduml
 ```
-
-**Légende** :
-
-- Le losange représente une condition (question oui/non)
-- Les branches "oui" et "non" montrent les différents chemins possibles
-- Toutes les branches se rejoignent ensuite
 
 ## L'itération
 
@@ -800,13 +882,12 @@ Dans les prochains cours, vous apprendrez :
 **Ressources pour aller plus loin :**
 
 - [Documentation PlantUML pour les diagrammes d'activité](https://plantuml.com/fr/activity-diagram-beta)
-- Entraînez-vous sur des plateformes comme
 
 ### Bibliographie et ressources utilisées
 
 Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 
-- <https://plantuml.com/fr/activity-diagram-legacy>
+- <https://plantuml.com/fr/activity-diagram-beta>
 - <https://www.w3schools.com/java/java_intro.asp>
 - <https://www.geeksforgeeks.org/java/java/>
 - <https://www.learnjavaonline.org/>

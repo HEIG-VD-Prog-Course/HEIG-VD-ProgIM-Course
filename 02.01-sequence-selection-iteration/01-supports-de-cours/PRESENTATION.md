@@ -64,16 +64,6 @@ consultez le [support de cours][cours]._
 
 ![bg right:40%][illustration-objectifs]
 
-## Les trois piliers de la programmation
-
-<!-- _class: lead -->
-
-**Tout programme informatique repose sur trois concepts fondamentaux :**
-
-1. **Séquence** : exécuter des instructions dans l'ordre
-2. **Sélection** : prendre des décisions
-3. **Itération** : répéter des actions
-
 ## Les variables
 
 <!-- _class: lead -->
@@ -157,6 +147,16 @@ stop
 ```
 
 ![bg right:30% w:100%][illustration-plantuml]
+
+## Les trois piliers de la programmation
+
+<!-- _class: lead -->
+
+**Tout programme informatique repose sur trois concepts fondamentaux :**
+
+1. **Séquence** : exécuter des instructions dans l'ordre
+2. **Sélection** : prendre des décisions
+3. **Itération** : répéter des actions
 
 ## La séquence
 

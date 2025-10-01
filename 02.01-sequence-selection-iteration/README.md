@@ -1,4 +1,4 @@
-# Introduction
+# Séquence, sélection et itération
 
 V. Guidoux, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).

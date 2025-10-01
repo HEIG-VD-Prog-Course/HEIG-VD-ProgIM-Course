@@ -11,7 +11,6 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
-- Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières
