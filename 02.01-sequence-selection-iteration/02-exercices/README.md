@@ -26,36 +26,37 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
   - [Consignes](#consignes-1)
   - [Variables à utiliser](#variables-à-utiliser-1)
   - [Rappel](#rappel)
-- [Exercice 3 - Itération : Factorielle](#exercice-3---itération--factorielle)
+- [Exercice 3 - Séquence : Calcul d'aire](#exercice-3---séquence--calcul-daire)
   - [Énoncé](#énoncé-2)
   - [Consignes](#consignes-2)
   - [Variables à utiliser](#variables-à-utiliser-2)
-  - [Exemples](#exemples)
-- [Exercice 4 - Combinaison : Jeu de devinette](#exercice-4---combinaison--jeu-de-devinette)
+- [Exercice 4 - Sélection : Système de notes](#exercice-4---sélection--système-de-notes)
   - [Énoncé](#énoncé-3)
   - [Consignes](#consignes-3)
   - [Variables à utiliser](#variables-à-utiliser-3)
-- [Exercice 5 - Séquence : Calcul d'aire](#exercice-5---séquence--calcul-daire)
+- [Exercice 5 - Séquence : Conversion de température](#exercice-5---séquence--conversion-de-température)
   - [Énoncé](#énoncé-4)
   - [Consignes](#consignes-4)
   - [Variables à utiliser](#variables-à-utiliser-4)
-- [Exercice 6 - Sélection : Système de notes](#exercice-6---sélection--système-de-notes)
+- [Exercice 6 - Sélection : Calcul de réduction](#exercice-6---sélection--calcul-de-réduction)
   - [Énoncé](#énoncé-5)
   - [Consignes](#consignes-5)
   - [Variables à utiliser](#variables-à-utiliser-5)
-- [Exercice 7 - Itération : Table de multiplication](#exercice-7---itération--table-de-multiplication)
+- [Pour aller plus loin](#pour-aller-plus-loin)
+- [Exercice 7 - Itération : Factorielle](#exercice-7---itération--factorielle)
   - [Énoncé](#énoncé-6)
   - [Consignes](#consignes-6)
   - [Variables à utiliser](#variables-à-utiliser-6)
-- [Exercice 8 - Combinaison : Calculatrice simple](#exercice-8---combinaison--calculatrice-simple)
+  - [Exemples](#exemples)
+- [Exercice 8 - Combinaison : Jeu de devinette](#exercice-8---combinaison--jeu-de-devinette)
   - [Énoncé](#énoncé-7)
   - [Consignes](#consignes-7)
   - [Variables à utiliser](#variables-à-utiliser-7)
-- [Exercice 9 - Séquence : Conversion de température](#exercice-9---séquence--conversion-de-température)
+- [Exercice 9 - Itération : Table de multiplication](#exercice-9---itération--table-de-multiplication)
   - [Énoncé](#énoncé-8)
   - [Consignes](#consignes-8)
   - [Variables à utiliser](#variables-à-utiliser-8)
-- [Exercice 10 - Sélection : Calcul de réduction](#exercice-10---sélection--calcul-de-réduction)
+- [Exercice 10 - Combinaison : Calculatrice simple](#exercice-10---combinaison--calculatrice-simple)
   - [Énoncé](#énoncé-9)
   - [Consignes](#consignes-9)
   - [Variables à utiliser](#variables-à-utiliser-9)
@@ -65,8 +66,15 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
 > Pour chaque exercice, créez d'abord le **pseudocode**, puis le **diagramme
 > d'activité** avec PlantUML, et enfin vérifiez votre logique avec la solution.
 >
-> Utilisez l'éditeur PlantUML en ligne :
+> **À propos du pseudocode** : Le pseudocode est un outil pour structurer vos
+> idées et organiser votre réflexion. Vous pouvez l'écrire à la main sur papier,
+> dans un bloc-notes, dans n'importe quelle application de texte, ou même
+> mentalement. L'important est qu'il vous aide à clarifier la logique de votre
+> algorithme avant de passer à l'implémentation.
+>
+> **À propos de PlantUML** : Utilisez l'éditeur PlantUML en ligne :
 > <https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
+> (Désolé pour les publicités sur le site, nous cherchons une alternative.)
 
 > [!NOTE]
 >
@@ -103,14 +111,20 @@ et affiche le résultat.
 
 ```
 DÉBUT
+    Initialiser first_grade
     Afficher "Entrez la première note :"
-    Demander first_grade
+    Demander une valeur
+    Assigner la valeur à first_grade
 
+    Initialiser second_grade
     Afficher "Entrez la deuxième note :"
-    Demander second_grade
+    Demander une valeur
+    Assigner la valeur à second_grade
 
+    Initialiser third_grade
     Afficher "Entrez la troisième note :"
-    Demander third_grade
+    Demander une valeur
+    Assigner la valeur à third_grade
 
     average = (first_grade + second_grade + third_grade) / 3
 
@@ -126,12 +140,18 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser first_grade;
 :Afficher "Entrez la première note :";
-:Demander first_grade;
+:Demander une valeur;
+:Assigner la valeur à first_grade;
+:Initialiser second_grade;
 :Afficher "Entrez la deuxième note :";
-:Demander second_grade;
+:Demander une valeur;
+:Assigner la valeur à second_grade;
+:Initialiser third_grade;
 :Afficher "Entrez la troisième note :";
-:Demander third_grade;
+:Demander une valeur;
+:Assigner la valeur à third_grade;
 :average = (first_grade + second_grade + third_grade) / 3;
 :Afficher "La moyenne est :", average;
 stop
@@ -202,8 +222,10 @@ pseudocode, on utilise l'opérateur **modulo** noté `%` ou `MOD`.
 
 ```
 DÉBUT
+    Initialiser number
     Afficher "Entrez un nombre entier :"
-    Demander number
+    Demander une valeur
+    Assigner la valeur à number
 
     SI (number % 2 = 0) ALORS
         Afficher "Le nombre est pair"
@@ -221,8 +243,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser number;
 :Afficher "Entrez un nombre entier :";
-:Demander number;
+:Demander une valeur;
+:Assigner la valeur à number;
 if (number % 2 = 0) then (oui)
     :Afficher "Le nombre est pair";
 else (non)
@@ -262,7 +286,446 @@ public class PairOuImpair {
 
 </details>
 
-## Exercice 3 - Itération : Factorielle
+## Exercice 3 - Séquence : Calcul d'aire
+
+### Énoncé
+
+Créer un algorithme qui calcule l'aire d'un cercle. Demander le rayon à
+l'utilisatrice et afficher l'aire correspondante.
+
+### Consignes
+
+1. Demander le rayon du cercle
+2. Calculer l'aire avec la formule : aire = π × rayon²
+3. Utiliser π ≈ 3.14159
+4. Afficher le résultat
+
+### Variables à utiliser
+
+- `radius` : rayon du cercle
+- `area` : aire calculée
+- `pi` : constante pi (3.14159)
+
+> [!TIP]
+>
+> **Bonnes pratiques - Constantes** : Il est recommandé d'initialiser et
+> d'assigner les constantes (comme `pi`) au début du programme. Ainsi, si vous
+> voulez modifier la précision ou la valeur plus tard, vous n'avez qu'un seul
+> endroit à changer dans tout le code.
+
+<details>
+<summary>Afficher la solution - Pseudocode</summary>
+
+```
+DÉBUT
+    pi = 3.14159
+
+    Initialiser radius
+    Afficher "Entrez le rayon du cercle :"
+    Demander une valeur
+    Assigner la valeur à radius
+
+    area = pi * radius * radius
+
+    Afficher "L'aire du cercle est :", area
+FIN
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Diagramme PlantUML</summary>
+
+```plantuml
+@startuml
+start
+:pi = 3.14159;
+:Initialiser radius;
+:Afficher "Entrez le rayon du cercle :";
+:Demander une valeur;
+:Assigner la valeur à radius;
+:area = pi * radius * radius;
+:Afficher "L'aire du cercle est :", area;
+stop
+@enduml
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Code Java</summary>
+
+```java
+import java.util.Scanner;
+
+public class AireCercle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Constante pi
+        final double pi = 3.14159;
+
+        // Demander le rayon
+        System.out.print("Entrez le rayon du cercle : ");
+        double radius = scanner.nextDouble();
+
+        // Calculer l'aire
+        double area = pi * radius * radius;
+
+        // Afficher le résultat
+        System.out.println("L'aire du cercle est : " + area);
+
+        scanner.close();
+    }
+}
+```
+
+</details>
+
+## Exercice 4 - Sélection : Système de notes
+
+### Énoncé
+
+Créer un algorithme qui convertit une note numérique (0-20) en appréciation
+littérale.
+
+### Consignes
+
+1. Demander une note entre 0 et 20
+2. Afficher l'appréciation correspondante :
+   - 16-20 : "Excellent"
+   - 14-15.9 : "Très bien"
+   - 12-13.9 : "Bien"
+   - 10-11.9 : "Assez bien"
+   - 0-9.9 : "Insuffisant"
+
+### Variables à utiliser
+
+- `grade` : la note saisie
+
+> [!TIP]
+>
+> **Bonnes pratiques - Validation des entrées** : Dans un vrai programme, il
+> serait judicieux de vérifier que la note saisie est bien entre 0 et 20. Cela
+> peut sembler redondant d'avoir des boucles et des if/else imbriqués, mais nous
+> verrons plus tard dans le semestre comment les **fonctions** nous aident à
+> organiser et structurer ce type de code de validation.
+
+<details>
+<summary>Afficher la solution - Pseudocode</summary>
+
+```
+DÉBUT
+    Initialiser grade
+    Afficher "Entrez une note entre 0 et 20 :"
+    Demander une valeur
+    Assigner la valeur à grade
+
+    SI (grade >= 16) ALORS
+        Afficher "Excellent"
+    SINON SI (grade >= 14) ALORS
+        Afficher "Très bien"
+    SINON SI (grade >= 12) ALORS
+        Afficher "Bien"
+    SINON SI (grade >= 10) ALORS
+        Afficher "Assez bien"
+    SINON
+        Afficher "Insuffisant"
+    FIN SI
+FIN
+```
+
+> [!TIP]
+>
+> **Structures imbriquées** : Les if/else imbriqués sont comme des poupées
+> russes - chaque structure s'imbrique dans la précédente. **Important** :
+> n'oubliez jamais de fermer chaque structure avec son `FIN SI`, `FIN POUR`,
+> `FIN TANT QUE`, etc. Chaque ouverture doit avoir sa fermeture correspondante !
+
+</details>
+
+<details>
+<summary>Afficher la solution - Diagramme PlantUML</summary>
+
+```plantuml
+@startuml
+start
+:Initialiser grade;
+:Afficher "Entrez une note entre 0 et 20 :";
+:Demander une valeur;
+:Assigner la valeur à grade;
+if (grade >= 16) then (oui)
+    :Afficher "Excellent";
+elseif (grade >= 14) then (oui)
+    :Afficher "Très bien";
+elseif (grade >= 12) then (oui)
+    :Afficher "Bien";
+elseif (grade >= 10) then (oui)
+    :Afficher "Assez bien";
+else (non)
+    :Afficher "Insuffisant";
+endif
+stop
+@enduml
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Code Java</summary>
+
+```java
+import java.util.Scanner;
+
+public class SystemeNotes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander la note
+        System.out.print("Entrez une note entre 0 et 20 : ");
+        double grade = scanner.nextDouble();
+
+        // Déterminer l'appréciation
+        if (grade >= 16) {
+            System.out.println("Excellent");
+        } else if (grade >= 14) {
+            System.out.println("Très bien");
+        } else if (grade >= 12) {
+            System.out.println("Bien");
+        } else if (grade >= 10) {
+            System.out.println("Assez bien");
+        } else {
+            System.out.println("Insuffisant");
+        }
+
+        scanner.close();
+    }
+}
+```
+
+</details>
+
+## Exercice 5 - Séquence : Conversion de température
+
+### Énoncé
+
+Créer un algorithme qui convertit une température de Celsius vers Fahrenheit et
+Kelvin.
+
+### Consignes
+
+1. Demander une température en Celsius
+2. Convertir en Fahrenheit : F = C × 9/5 + 32
+3. Convertir en Kelvin : K = C + 273.15
+4. Afficher les trois températures
+
+### Variables à utiliser
+
+- `celsius` : température en Celsius
+- `fahrenheit` : température en Fahrenheit
+- `kelvin` : température en Kelvin
+
+<details>
+<summary>Afficher la solution - Pseudocode</summary>
+
+```
+DÉBUT
+    Initialiser celsius
+    Afficher "Entrez la température en Celsius :"
+    Demander une valeur
+    Assigner la valeur à celsius
+
+    fahrenheit = celsius * 9 / 5 + 32
+    kelvin = celsius + 273.15
+
+    Afficher celsius, "°C =", fahrenheit, "°F"
+    Afficher celsius, "°C =", kelvin, "K"
+FIN
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Diagramme PlantUML</summary>
+
+```plantuml
+@startuml
+start
+:Initialiser celsius;
+:Afficher "Entrez la température en Celsius :";
+:Demander une valeur;
+:Assigner la valeur à celsius;
+:fahrenheit = celsius * 9 / 5 + 32;
+:kelvin = celsius + 273.15;
+:Afficher celsius, "°C =", fahrenheit, "°F";
+:Afficher celsius, "°C =", kelvin, "K";
+stop
+@enduml
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Code Java</summary>
+
+```java
+import java.util.Scanner;
+
+public class ConversionTemperature {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander la température en Celsius
+        System.out.print("Entrez la température en Celsius : ");
+        double celsius = scanner.nextDouble();
+
+        // Convertir en Fahrenheit et Kelvin
+        double fahrenheit = celsius * 9.0 / 5.0 + 32;
+        double kelvin = celsius + 273.15;
+
+        // Afficher les résultats
+        System.out.println(celsius + "°C = " + fahrenheit + "°F");
+        System.out.println(celsius + "°C = " + kelvin + "K");
+
+        scanner.close();
+    }
+}
+```
+
+</details>
+
+## Exercice 6 - Sélection : Calcul de réduction
+
+### Énoncé
+
+Créer un algorithme qui calcule le prix final d'un article après application
+d'une réduction selon le montant d'achat.
+
+### Consignes
+
+1. Demander le prix de l'article
+2. Appliquer la réduction selon le barème :
+   - Plus de 100€ : 15% de réduction
+   - Entre 50€ et 100€ : 10% de réduction
+   - Entre 20€ et 49.99€ : 5% de réduction
+   - Moins de 20€ : aucune réduction
+3. Afficher le prix original, la réduction et le prix final
+
+### Variables à utiliser
+
+- `original_price` : prix original
+- `discount_rate` : taux de réduction (en %)
+- `discount_amount` : montant de la réduction
+- `final_price` : prix final après réduction
+
+<details>
+<summary>Afficher la solution - Pseudocode</summary>
+
+```
+DÉBUT
+    Initialiser original_price
+    Afficher "Entrez le prix de l'article :"
+    Demander une valeur
+    Assigner la valeur à original_price
+
+    SI (original_price > 100) ALORS
+        discount_rate = 15
+    SINON SI (original_price >= 50) ALORS
+        discount_rate = 10
+    SINON SI (original_price >= 20) ALORS
+        discount_rate = 5
+    SINON
+        discount_rate = 0
+    FIN SI
+
+    discount_amount = original_price * discount_rate / 100
+    final_price = original_price - discount_amount
+
+    Afficher "Prix original :", original_price, "€"
+    Afficher "Réduction (", discount_rate, "%) :", discount_amount, "€"
+    Afficher "Prix final :", final_price, "€"
+FIN
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Diagramme PlantUML</summary>
+
+```plantuml
+@startuml
+start
+:Initialiser original_price;
+:Afficher "Entrez le prix de l'article :";
+:Demander une valeur;
+:Assigner la valeur à original_price;
+if (original_price > 100) then (oui)
+    :discount_rate = 15;
+elseif (original_price >= 50) then (oui)
+    :discount_rate = 10;
+elseif (original_price >= 20) then (oui)
+    :discount_rate = 5;
+else (non)
+    :discount_rate = 0;
+endif
+:discount_amount = original_price * discount_rate / 100;
+:final_price = original_price - discount_amount;
+:Afficher prix original, réduction et prix final;
+stop
+@enduml
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Code Java</summary>
+
+```java
+import java.util.Scanner;
+
+public class CalculReduction {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander le prix original
+        System.out.print("Entrez le prix de l'article : ");
+        double original_price = scanner.nextDouble();
+
+        // Déterminer le taux de réduction
+        int discount_rate;
+        if (original_price > 100) {
+            discount_rate = 15;
+        } else if (original_price >= 50) {
+            discount_rate = 10;
+        } else if (original_price >= 20) {
+            discount_rate = 5;
+        } else {
+            discount_rate = 0;
+        }
+
+        // Calculer la réduction et le prix final
+        double discount_amount = original_price * discount_rate / 100.0;
+        double final_price = original_price - discount_amount;
+
+        // Afficher les résultats
+        System.out.println("Prix original : " + original_price + "€");
+        System.out.println("Réduction (" + discount_rate + "%) : " + discount_amount + "€");
+        System.out.println("Prix final : " + final_price + "€");
+
+        scanner.close();
+    }
+}
+```
+
+</details>
+
+## Pour aller plus loin
+
+Cette section contient des exercices plus avancés sur l'**itération** et la
+**combinaison** de concepts qui seront vus la semaine prochaine. Ces exercices
+sont optionnels pour cette semaine.
+
+## Exercice 7 - Itération : Factorielle
 
 ### Énoncé
 
@@ -293,8 +756,10 @@ n (notée n!) est le produit de tous les nombres entiers positifs inférieurs ou
 
 ```
 DÉBUT
+    Initialiser n
     Afficher "Entrez un nombre positif :"
-    Demander n
+    Demander une valeur
+    Assigner la valeur à n
 
     factorial = 1
 
@@ -314,8 +779,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser n;
 :Afficher "Entrez un nombre positif :";
-:Demander n;
+:Demander une valeur;
+:Assigner la valeur à n;
 :factorial = 1;
 :i = 1;
 while (i <= n)
@@ -359,7 +826,7 @@ public class Factorielle {
 
 </details>
 
-## Exercice 4 - Combinaison : Jeu de devinette
+## Exercice 8 - Combinaison : Jeu de devinette
 
 ### Énoncé
 
@@ -397,8 +864,10 @@ DÉBUT
 
     TANT QUE (attempts > 0 ET found = faux) FAIRE
         Afficher "Il vous reste", attempts, "tentatives."
+        Initialiser guessed_number
         Afficher "Entrez votre proposition :"
-        Demander guessed_number
+        Demander une valeur
+        Assigner la valeur à guessed_number
 
         SI (guessed_number = secret_number) ALORS
             Afficher "Bravo ! Vous avez trouvé !"
@@ -411,6 +880,14 @@ DÉBUT
 
         attempts = attempts - 1
     FIN TANT QUE
+
+> [!TIP]
+>
+> **Poupées russes** : Cet exercice combine une boucle `TANT QUE` avec des
+> `SI/SINON` imbriqués à l'intérieur. Comme des poupées russes, chaque
+> structure doit être correctement fermée : le `FIN SI` ferme la structure
+> conditionnelle, et le `FIN TANT QUE` ferme la boucle. Vérifiez toujours que
+> vous avez le bon nombre de fermetures !
 
     SI (found = faux) ALORS
         Afficher "Perdu ! Le nombre était", secret_number
@@ -432,7 +909,10 @@ start
 :Afficher "Devinez le nombre secret entre 1 et 100 !";
 while (attempts > 0 ET found = faux) is (oui)
     :Afficher "Il vous reste", attempts, "tentatives";
-    :Demander guessed_number;
+    :Initialiser guessed_number;
+    :Afficher "Entrez votre proposition :";
+    :Demander une valeur;
+    :Assigner la valeur à guessed_number;
     if (guessed_number = secret_number) then (oui)
         :Afficher "Bravo ! Vous avez trouvé !";
         :found = vrai;
@@ -501,196 +981,7 @@ public class JeuDevinette {
 
 </details>
 
-## Exercice 5 - Séquence : Calcul d'aire
-
-### Énoncé
-
-Créer un algorithme qui calcule l'aire d'un cercle. Demander le rayon à
-l'utilisatrice et afficher l'aire correspondante.
-
-### Consignes
-
-1. Demander le rayon du cercle
-2. Calculer l'aire avec la formule : aire = π × rayon²
-3. Utiliser π ≈ 3.14159
-4. Afficher le résultat
-
-### Variables à utiliser
-
-- `radius` : rayon du cercle
-- `area` : aire calculée
-- `pi` : constante pi (3.14159)
-
-<details>
-<summary>Afficher la solution - Pseudocode</summary>
-
-```
-DÉBUT
-    pi = 3.14159
-
-    Afficher "Entrez le rayon du cercle :"
-    Demander radius
-
-    area = pi * radius * radius
-
-    Afficher "L'aire du cercle est :", area
-FIN
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Diagramme PlantUML</summary>
-
-```plantuml
-@startuml
-start
-:pi = 3.14159;
-:Afficher "Entrez le rayon du cercle :";
-:Demander radius;
-:area = pi * radius * radius;
-:Afficher "L'aire du cercle est :", area;
-stop
-@enduml
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Code Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class AireCercle {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Constante pi
-        final double pi = 3.14159;
-
-        // Demander le rayon
-        System.out.print("Entrez le rayon du cercle : ");
-        double radius = scanner.nextDouble();
-
-        // Calculer l'aire
-        double area = pi * radius * radius;
-
-        // Afficher le résultat
-        System.out.println("L'aire du cercle est : " + area);
-
-        scanner.close();
-    }
-}
-```
-
-</details>
-
-## Exercice 6 - Sélection : Système de notes
-
-### Énoncé
-
-Créer un algorithme qui convertit une note numérique (0-20) en appréciation
-littérale.
-
-### Consignes
-
-1. Demander une note entre 0 et 20
-2. Afficher l'appréciation correspondante :
-   - 16-20 : "Excellent"
-   - 14-15.9 : "Très bien"
-   - 12-13.9 : "Bien"
-   - 10-11.9 : "Assez bien"
-   - 0-9.9 : "Insuffisant"
-
-### Variables à utiliser
-
-- `grade` : la note saisie
-
-<details>
-<summary>Afficher la solution - Pseudocode</summary>
-
-```
-DÉBUT
-    Afficher "Entrez une note entre 0 et 20 :"
-    Demander grade
-
-    SI (grade >= 16) ALORS
-        Afficher "Excellent"
-    SINON SI (grade >= 14) ALORS
-        Afficher "Très bien"
-    SINON SI (grade >= 12) ALORS
-        Afficher "Bien"
-    SINON SI (grade >= 10) ALORS
-        Afficher "Assez bien"
-    SINON
-        Afficher "Insuffisant"
-    FIN SI
-FIN
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Diagramme PlantUML</summary>
-
-```plantuml
-@startuml
-start
-:Afficher "Entrez une note entre 0 et 20 :";
-:Demander grade;
-if (grade >= 16) then (oui)
-    :Afficher "Excellent";
-elseif (grade >= 14) then (oui)
-    :Afficher "Très bien";
-elseif (grade >= 12) then (oui)
-    :Afficher "Bien";
-elseif (grade >= 10) then (oui)
-    :Afficher "Assez bien";
-else (non)
-    :Afficher "Insuffisant";
-endif
-stop
-@enduml
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Code Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class SystemeNotes {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander la note
-        System.out.print("Entrez une note entre 0 et 20 : ");
-        double grade = scanner.nextDouble();
-
-        // Déterminer l'appréciation
-        if (grade >= 16) {
-            System.out.println("Excellent");
-        } else if (grade >= 14) {
-            System.out.println("Très bien");
-        } else if (grade >= 12) {
-            System.out.println("Bien");
-        } else if (grade >= 10) {
-            System.out.println("Assez bien");
-        } else {
-            System.out.println("Insuffisant");
-        }
-
-        scanner.close();
-    }
-}
-```
-
-</details>
-
-## Exercice 7 - Itération : Table de multiplication
+## Exercice 9 - Itération : Table de multiplication
 
 ### Énoncé
 
@@ -714,8 +1005,10 @@ Créer un algorithme qui affiche la table de multiplication d'un nombre donné (
 
 ```
 DÉBUT
+    Initialiser number
     Afficher "Entrez un nombre :"
-    Demander number
+    Demander une valeur
+    Assigner la valeur à number
 
     Afficher "Table de multiplication de", number, ":"
 
@@ -734,8 +1027,10 @@ FIN
 ```plantuml
 @startuml
 start
+:Initialiser number;
 :Afficher "Entrez un nombre :";
-:Demander number;
+:Demander une valeur;
+:Assigner la valeur à number;
 :Afficher "Table de multiplication de", number, ":";
 :i = 1;
 while (i <= 10)
@@ -778,7 +1073,7 @@ public class TableMultiplication {
 
 </details>
 
-## Exercice 8 - Combinaison : Calculatrice simple
+## Exercice 10 - Combinaison : Calculatrice simple
 
 ### Énoncé
 
@@ -805,14 +1100,20 @@ le résultat.
 
 ```
 DÉBUT
+    Initialiser first_number
     Afficher "Entrez le premier nombre :"
-    Demander first_number
+    Demander une valeur
+    Assigner la valeur à first_number
 
+    Initialiser operation
     Afficher "Entrez l'opération (+, -, *, /) :"
-    Demander operation
+    Demander une valeur
+    Assigner la valeur à operation
 
+    Initialiser second_number
     Afficher "Entrez le second nombre :"
-    Demander second_number
+    Demander une valeur
+    Assigner la valeur à second_number
 
     SI (operation = "+") ALORS
         result = first_number + second_number
@@ -844,9 +1145,18 @@ FIN
 ```plantuml
 @startuml
 start
-:Demander first_number;
-:Demander operation;
-:Demander second_number;
+:Initialiser first_number;
+:Afficher "Entrez le premier nombre :";
+:Demander une valeur;
+:Assigner la valeur à first_number;
+:Initialiser operation;
+:Afficher "Entrez l'opération (+, -, *, /) :";
+:Demander une valeur;
+:Assigner la valeur à operation;
+:Initialiser second_number;
+:Afficher "Entrez le second nombre :";
+:Demander une valeur;
+:Assigner la valeur à second_number;
 if (operation = "+") then (oui)
     :result = first_number + second_number;
     :Afficher le résultat;
@@ -918,211 +1228,6 @@ public class CalculatriceSimple {
         if (valid_operation && !operation.equals("/") || (operation.equals("/") && second_number != 0)) {
             System.out.println(first_number + " " + operation + " " + second_number + " = " + result);
         }
-
-        scanner.close();
-    }
-}
-```
-
-</details>
-
-## Exercice 9 - Séquence : Conversion de température
-
-### Énoncé
-
-Créer un algorithme qui convertit une température de Celsius vers Fahrenheit et
-Kelvin.
-
-### Consignes
-
-1. Demander une température en Celsius
-2. Convertir en Fahrenheit : F = C × 9/5 + 32
-3. Convertir en Kelvin : K = C + 273.15
-4. Afficher les trois températures
-
-### Variables à utiliser
-
-- `celsius` : température en Celsius
-- `fahrenheit` : température en Fahrenheit
-- `kelvin` : température en Kelvin
-
-<details>
-<summary>Afficher la solution - Pseudocode</summary>
-
-```
-DÉBUT
-    Afficher "Entrez la température en Celsius :"
-    Demander celsius
-
-    fahrenheit = celsius * 9 / 5 + 32
-    kelvin = celsius + 273.15
-
-    Afficher celsius, "°C =", fahrenheit, "°F"
-    Afficher celsius, "°C =", kelvin, "K"
-FIN
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Diagramme PlantUML</summary>
-
-```plantuml
-@startuml
-start
-:Afficher "Entrez la température en Celsius :";
-:Demander celsius;
-:fahrenheit = celsius * 9 / 5 + 32;
-:kelvin = celsius + 273.15;
-:Afficher celsius, "°C =", fahrenheit, "°F";
-:Afficher celsius, "°C =", kelvin, "K";
-stop
-@enduml
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Code Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class ConversionTemperature {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander la température en Celsius
-        System.out.print("Entrez la température en Celsius : ");
-        double celsius = scanner.nextDouble();
-
-        // Convertir en Fahrenheit et Kelvin
-        double fahrenheit = celsius * 9.0 / 5.0 + 32;
-        double kelvin = celsius + 273.15;
-
-        // Afficher les résultats
-        System.out.println(celsius + "°C = " + fahrenheit + "°F");
-        System.out.println(celsius + "°C = " + kelvin + "K");
-
-        scanner.close();
-    }
-}
-```
-
-</details>
-
-## Exercice 10 - Sélection : Calcul de réduction
-
-### Énoncé
-
-Créer un algorithme qui calcule le prix final d'un article après application
-d'une réduction selon le montant d'achat.
-
-### Consignes
-
-1. Demander le prix de l'article
-2. Appliquer la réduction selon le barème :
-   - Plus de 100€ : 15% de réduction
-   - Entre 50€ et 100€ : 10% de réduction
-   - Entre 20€ et 49.99€ : 5% de réduction
-   - Moins de 20€ : aucune réduction
-3. Afficher le prix original, la réduction et le prix final
-
-### Variables à utiliser
-
-- `original_price` : prix original
-- `discount_rate` : taux de réduction (en %)
-- `discount_amount` : montant de la réduction
-- `final_price` : prix final après réduction
-
-<details>
-<summary>Afficher la solution - Pseudocode</summary>
-
-```
-DÉBUT
-    Afficher "Entrez le prix de l'article :"
-    Demander original_price
-
-    SI (original_price > 100) ALORS
-        discount_rate = 15
-    SINON SI (original_price >= 50) ALORS
-        discount_rate = 10
-    SINON SI (original_price >= 20) ALORS
-        discount_rate = 5
-    SINON
-        discount_rate = 0
-    FIN SI
-
-    discount_amount = original_price * discount_rate / 100
-    final_price = original_price - discount_amount
-
-    Afficher "Prix original :", original_price, "€"
-    Afficher "Réduction (", discount_rate, "%) :", discount_amount, "€"
-    Afficher "Prix final :", final_price, "€"
-FIN
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Diagramme PlantUML</summary>
-
-```plantuml
-@startuml
-start
-:Demander original_price;
-if (original_price > 100) then (oui)
-    :discount_rate = 15;
-elseif (original_price >= 50) then (oui)
-    :discount_rate = 10;
-elseif (original_price >= 20) then (oui)
-    :discount_rate = 5;
-else (non)
-    :discount_rate = 0;
-endif
-:discount_amount = original_price * discount_rate / 100;
-:final_price = original_price - discount_amount;
-:Afficher prix original, réduction et prix final;
-stop
-@enduml
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Code Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class CalculReduction {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander le prix original
-        System.out.print("Entrez le prix de l'article : ");
-        double original_price = scanner.nextDouble();
-
-        // Déterminer le taux de réduction
-        int discount_rate;
-        if (original_price > 100) {
-            discount_rate = 15;
-        } else if (original_price >= 50) {
-            discount_rate = 10;
-        } else if (original_price >= 20) {
-            discount_rate = 5;
-        } else {
-            discount_rate = 0;
-        }
-
-        // Calculer la réduction et le prix final
-        double discount_amount = original_price * discount_rate / 100.0;
-        double final_price = original_price - discount_amount;
-
-        // Afficher les résultats
-        System.out.println("Prix original : " + original_price + "€");
-        System.out.println("Réduction (" + discount_rate + "%) : " + discount_amount + "€");
-        System.out.println("Prix final : " + final_price + "€");
 
         scanner.close();
     }
