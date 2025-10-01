@@ -32,6 +32,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Règles de base du pseudocode](#règles-de-base-du-pseudocode)
   - [Avantages du pseudocode](#avantages-du-pseudocode)
 - [À propos des diagrammes d'activité PlantUML](#à-propos-des-diagrammes-dactivité-plantuml)
+  - [Détail des éléments PlantUML](#détail-des-éléments-plantuml)
 - [La séquence](#la-séquence)
   - [Qu'est-ce qu'une séquence ?](#quest-ce-quune-séquence-)
   - [Pseudocode pour la séquence](#pseudocode-pour-la-séquence)
@@ -324,6 +325,28 @@ stop
 
 Pour créer vos propres diagrammes, vous pouvez utiliser
 [PlantUML en ligne](https://www.plantuml.com/plantuml/uml/).
+
+### Détail des éléments PlantUML
+
+#### **Début/Fin**
+
+- **Début** : `start` - Un cercle noir
+- **Fin** : `stop` - Un cercle noir entouré d'un cercle blanc
+
+#### **Actions**
+
+- Syntaxe : `:Action à effectuer;`
+- Exemple : `:Demander l'âge;`
+
+#### **Décisions**
+
+- Syntaxe : `if (condition) then (oui) ... else (non) ... endif`
+- Les losanges permettent les embranchements
+
+#### **Flèches**
+
+- Automatiquement générées par PlantUML
+- Indiquent le flux d'exécution
 
 ## La séquence
 
@@ -859,13 +882,12 @@ Dans les prochains cours, vous apprendrez :
 **Ressources pour aller plus loin :**
 
 - [Documentation PlantUML pour les diagrammes d'activité](https://plantuml.com/fr/activity-diagram-beta)
-- Entraînez-vous sur des plateformes comme
 
 ### Bibliographie et ressources utilisées
 
 Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 
-- <https://plantuml.com/fr/activity-diagram-legacy>
+- <https://plantuml.com/fr/activity-diagram-beta>
 - <https://www.w3schools.com/java/java_intro.asp>
 - <https://www.geeksforgeeks.org/java/java/>
 - <https://www.learnjavaonline.org/>
