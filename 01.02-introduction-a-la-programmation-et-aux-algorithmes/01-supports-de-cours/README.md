@@ -15,7 +15,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   ·
   [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](../03-exercices/README.md)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
 
 ## Table des matières
 

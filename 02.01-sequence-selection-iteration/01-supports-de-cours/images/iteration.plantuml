@@ -1,0 +1,14 @@
+start
+:secret_number = 42;
+:guessed_number = 0;
+:Demander un nombre;
+while (guessed_number ≠ secret_number) is (oui)
+    if (guessed_number < secret_number) then (oui)
+        :Afficher "Trop petit !";
+    else (non)
+        :Afficher "Trop grand !";
+    endif
+    :Demander un nombre;
+endwhile (non)
+:Afficher "Bravo !";
+stop

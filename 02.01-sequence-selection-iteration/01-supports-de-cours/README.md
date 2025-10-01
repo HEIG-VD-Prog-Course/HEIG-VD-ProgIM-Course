@@ -15,7 +15,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](../03-exercices/README.md)
+- Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières
 
@@ -44,11 +44,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Types d'itération](#types-ditération)
   - [Pseudocode pour l'itération](#pseudocode-pour-litération)
   - [Diagrammes d'activité pour l'itération](#diagrammes-dactivité-pour-litération)
-- [Exercices pratiques](#exercices-pratiques)
-  - [Exercice 1 : Séquence simple](#exercice-1--séquence-simple)
-  - [Exercice 2 : Sélection](#exercice-2--sélection)
-  - [Exercice 3 : Itération](#exercice-3--itération)
-  - [Exercice 4 : Combinaison des trois concepts](#exercice-4--combinaison-des-trois-concepts)
 - [Conclusion](#conclusion)
   - [Ce que vous savez maintenant faire](#ce-que-vous-savez-maintenant-faire)
   - [Prochaines étapes](#prochaines-étapes)
@@ -745,7 +740,7 @@ while (guessed_number ≠ secret_number) is (oui)
     :Demander un nombre;
     if (guessed_number < secret_number) then (oui)
         :Afficher "Trop petit !";
-    elseif (guessed_number > secret_number) then (oui)
+    else (non)
         :Afficher "Trop grand !";
     endif
 endwhile (non)
@@ -767,51 +762,6 @@ repeat while (entered_password ≠ "password123") is (oui) not (non)
 stop
 @enduml
 ```
-
-## Exercices pratiques
-
-Maintenant que vous connaissez les trois concepts fondamentaux, voici quelques
-exercices pour vous entraîner. Pour chaque exercice, créez d'abord le
-pseudocode, puis le diagramme d'activité.
-
-> [!TIP]
->
-> Utilisez l'éditeur PlantUML en ligne pour créer vos diagrammes :
-> <https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
-
-### Exercice 1 : Séquence simple
-
-**Problème** : Créer un algorithme qui calcule et affiche la moyenne de trois
-notes.
-
-**Aide** : Vous devez demander trois notes, les additionner, diviser par 3, puis
-afficher le résultat.
-
-### Exercice 2 : Sélection
-
-**Problème** : Créer un algorithme qui détermine si un nombre est pair ou
-impair.
-
-**Aide** : Un nombre est pair si le reste de sa division par 2 est égal à 0.
-
-### Exercice 3 : Itération
-
-**Problème** : Créer un algorithme qui calcule la factorielle d'un nombre n (n!
-= 1 × 2 × 3 × ... × n).
-
-**Aide** : Utilisez une boucle POUR qui multiplie tous les nombres de 1 à n.
-
-### Exercice 4 : Combinaison des trois concepts
-
-**Problème** : Créer un petit jeu de devinette :
-
-1. L'ordinateur choisit un nombre secret entre 1 et 100
-2. L'utilisatrice a 7 tentatives maximum pour deviner
-3. À chaque tentative, indiquer si le nombre est trop grand ou trop petit
-4. Afficher "Gagné !" si trouvé, "Perdu !" si 7 tentatives épuisées
-
-**Aide** : Vous devrez utiliser une boucle (itération), des conditions
-(sélection), et des actions séquentielles.
 
 ## Conclusion
 

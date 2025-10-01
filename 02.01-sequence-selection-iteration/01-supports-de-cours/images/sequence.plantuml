@@ -1,0 +1,11 @@
+@startuml sequence
+start
+:Afficher "Quel est votre nom ?";
+:Demander de rentrer le nom;
+:Affecter le nom à la variable user_name;
+:Afficher "Quel est votre âge ?";
+:Demander de rentrer l'âge;
+:Affecter l'âge à la variable user_age;
+:Afficher "Bonjour", user_name, "vous avez", user_age, "ans";
+stop
+@enduml

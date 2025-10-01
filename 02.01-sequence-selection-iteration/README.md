@@ -13,8 +13,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
-- Exemples de code : [Lien vers le contenu](./02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](./03-exercices/README.md)
+- Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Objectifs
 
@@ -24,9 +23,15 @@ les représenter à l'aide de pseudocode et de diagrammes d'activités.
 
 De façon plus concise, à la fin de cette séance, vous devriez être capable de :
 
-- Expliquer les concepts de séquence, sélection et itération
-- Utiliser le pseudocode pour décrire des algorithmes simples
-- Créer des diagrammes d'activités pour représenter des processus
+- Comprendre les trois piliers fondamentaux de la programmation
+- Décrire le concept de variable en programmation
+- Écrire des algorithmes en pseudocode
+- Créer des diagrammes d'activité avec PlantUML
+- Comprendre et appliquer la séquence d'instructions
+- Décrire la sélection avec les conditions SI/ALORS/SINON
+- Utiliser l'itération avec les différents types de boucles
+- Traduire des concepts algorithmiques en diagrammes visuels
+- Analyser et décomposer des problèmes complexes
 
 ## Méthodes d'enseignement et d'apprentissage
 
