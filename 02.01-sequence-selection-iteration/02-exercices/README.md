@@ -432,6 +432,8 @@ DÉBUT
     SINON
         Afficher "Insuffisant"
     FIN SI
+FIN
+```
 
 > [!TIP]
 >
@@ -439,8 +441,6 @@ DÉBUT
 > russes - chaque structure s'imbrique dans la précédente. **Important** :
 > n'oubliez jamais de fermer chaque structure avec son `FIN SI`, `FIN POUR`,
 > `FIN TANT QUE`, etc. Chaque ouverture doit avoir sa fermeture correspondante !
-FIN
-```
 
 </details>
 
