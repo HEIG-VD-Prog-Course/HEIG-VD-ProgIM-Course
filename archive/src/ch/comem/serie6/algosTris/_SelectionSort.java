@@ -2,7 +2,7 @@ package ch.comem.serie6.algosTris;
 
 import java.util.Arrays;
 
-// Pour les détails du fonctionnement : https://fr.wikipedia.org/wiki/Tri_par_sélelection
+// Pour les détails du fonctionnement : https://fr.wikipedia.org/wiki/Tri_par_sélection
 // Code adapté de https://favtutor.com/blogs/sorting-algorithms-java
 public class _SelectionSort {
 
