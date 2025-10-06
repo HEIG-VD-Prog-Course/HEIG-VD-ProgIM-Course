@@ -202,7 +202,7 @@ C'est un excellent outil pour :
 2. **Indentez pour montrer la structure**
 
    ```text
-   SI (condition) ALORS
+   SI condition ALORS
        action 1
        action 2
    FIN SI
@@ -227,24 +227,18 @@ C'est un excellent outil pour :
 - **Facilite la correction d'erreurs** : plus simple de repérer les erreurs de
   logique
 
-**Exemple complet** : Calculer la moyenne d'une classe :
+**Exemple complet** : Préparer le petit-déjeuner pour la famille :
 
 ```text
 DÉBUT
-    total = 0
-    student_count = 0
-
-    Afficher "Combien d'élèves dans la classe ?"
-    Demander student_count
-
-    POUR i DE 1 À student_count FAIRE
-        Afficher "Note de l'élève", i, ":"
-        Demander grade
-        total = total + grade
-    FIN POUR
-
-    average = total / student_count
-    Afficher "La moyenne de la classe est :", average
+    Sortir le pain
+    Mettre le pain dans le grille-pain
+    Appuyer sur le bouton
+    Attendre que le pain grille
+    Sortir le pain grillé
+    Étaler le beurre
+    Ajouter la confiture
+    Servir sur l'assiette
 FIN
 ```
 
@@ -252,39 +246,22 @@ FIN
 <summary>Exemple en Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class MoyenneClasse {
+public class PetitDejeuner {
     public static void main(String[] args) {
-        // Scanner pour lire les entrées
-        Scanner scanner = new Scanner(System.in);
+        // Préparer le petit-déjeuner - séquence d'actions
+        System.out.println("Sortir le pain");
+        System.out.println("Mettre le pain dans le grille-pain");
+        System.out.println("Appuyer sur le bouton");
 
-        // Variables pour stocker le total des notes et le nombre d'élèves
-        double total = 0;
-        int student_count = 0;
+        // Simuler l'attente
+        System.out.println("Attendre que le pain grille...");
 
-        // Demander le nombre d'élèves dans la classe
-        System.out.print("Combien d'élèves dans la classe ? ");
-        student_count = scanner.nextInt();
+        System.out.println("Sortir le pain grillé");
+        System.out.println("Étaler le beurre");
+        System.out.println("Ajouter la confiture");
+        System.out.println("Servir sur l'assiette");
 
-        // Boucle pour demander chaque note
-        for (int i = 1; i <= student_count; i++) {
-            // Afficher quel élève on traite actuellement
-            System.out.print("Note de l'élève " + i + " : ");
-            // Lire la note saisie
-            double grade = scanner.nextDouble();
-            // Ajouter cette note au total
-            total = total + grade;
-        }
-
-        // Calculer la moyenne : total divisé par nombre d'élèves
-        double average = total / student_count;
-
-        // Afficher le résultat
-        System.out.println("La moyenne de la classe est : " + average);
-
-        // Fermer le scanner
-        scanner.close();
+        System.out.println("Petit-déjeuner prêt !");
     }
 }
 ```
@@ -313,11 +290,11 @@ déroulement d'un algorithme ou d'un processus. Ils permettent de :
 ```plantuml
 @startuml
 start
-:Demander l'âge;
-if (âge >= 18) then (oui)
-    :Afficher "Majeur";
+:Regarder par la fenêtre;
+if (il pleut) then (oui)
+    :Prendre un parapluie;
 else (non)
-    :Afficher "Mineur";
+    :Prendre des lunettes de soleil;
 endif
 stop
 @enduml
@@ -384,16 +361,16 @@ DÉBUT
 FIN
 ```
 
-**Autre exemple** : Calculer la surface d'un rectangle :
+**Autre exemple** : Ranger sa chambre :
 
 ```text
 DÉBUT
-    Demander la longueur à l'utilisatrice
-    Sauvegarder la longueur dans une variable length
-    Demander la largeur à l'utilisatrice
-    Sauvegarder la largeur dans une variable width
-    Calculer la surface : surface = length × width
-    Afficher le résultat surface
+    Faire le lit
+    Ramasser les vêtements sales
+    Les mettre dans le panier à linge
+    Ranger les livres sur l'étagère
+    Passer l'aspirateur
+    Fermer les rideaux
 FIN
 ```
 
@@ -401,31 +378,17 @@ FIN
 <summary>Exemple en Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class CalculSurface {
+public class RangerChambre {
     public static void main(String[] args) {
-        // Création d'un objet Scanner pour lire les entrées de l'utilisatrice
-        Scanner scanner = new Scanner(System.in);
+        // Ranger sa chambre - séquence d'actions
+        System.out.println("Faire le lit");
+        System.out.println("Ramasser les vêtements sales");
+        System.out.println("Les mettre dans le panier à linge");
+        System.out.println("Ranger les livres sur l'étagère");
+        System.out.println("Passer l'aspirateur");
+        System.out.println("Fermer les rideaux");
 
-        // Demander la longueur à l'utilisatrice
-        System.out.print("Entrez la longueur du rectangle : ");
-        // Lire la longueur saisie et la stocker dans la variable length
-        double length = scanner.nextDouble();
-
-        // Demander la largeur à l'utilisatrice
-        System.out.print("Entrez la largeur du rectangle : ");
-        // Lire la largeur saisie et la stocker dans la variable width
-        double width = scanner.nextDouble();
-
-        // Calculer la surface en multipliant longueur × largeur
-        double surface = length * width;
-
-        // Afficher le résultat à l'utilisatrice
-        System.out.println("La surface du rectangle est : " + surface);
-
-        // Fermer le scanner pour libérer les ressources
-        scanner.close();
+        System.out.println("Chambre rangée !");
     }
 }
 ```
@@ -483,24 +446,25 @@ pour exprimer ces choix.
 Voici la structure de base d'une sélection en pseudocode :
 
 ```text
-SI (condition) ALORS
+SI condition ALORS
     actions à faire si la condition est vraie
 SINON
     actions à faire si la condition est fausse
 FIN SI
 ```
 
-**Exemple complet** : Déterminer si une personne peut voter :
+**Exemple complet** : Choisir ses vêtements selon la météo :
 
 ```text
 DÉBUT
-    Demander l'âge de la personne
-    Sauvegarder l'âge dans une variable user_age
+    Regarder par la fenêtre
 
-    SI (user_age >= 18) ALORS
-        Afficher "Vous pouvez voter"
+    SI il pleut ALORS
+        Prendre un parapluie
+        Mettre un imperméable
     SINON
-        Afficher "Vous ne pouvez pas encore voter"
+        Prendre des lunettes de soleil
+        Mettre des vêtements légers
     FIN SI
 FIN
 ```
@@ -511,23 +475,25 @@ FIN
 ```java
 import java.util.Scanner;
 
-public class DroitDeVote {
+public class ChoixVetements {
     public static void main(String[] args) {
         // Création d'un scanner pour lire les entrées
         Scanner scanner = new Scanner(System.in);
 
-        // Demander l'âge de la personne
-        System.out.print("Quel est votre âge ? ");
-        // Lire l'âge saisi et le stocker dans la variable user_age
-        int user_age = scanner.nextInt();
+        // Demander la météo
+        System.out.print("Est-ce qu'il pleut ? (oui/non) : ");
+        // Lire la réponse et la stocker
+        String meteo = scanner.nextLine();
 
-        // Vérifier si la personne peut voter (condition : âge >= 18)
-        if (user_age >= 18) {
-            // Si la condition est vraie (âge >= 18)
-            System.out.println("Vous pouvez voter");
+        // Vérifier la météo pour choisir les vêtements
+        if (meteo.equals("oui")) {
+            // S'il pleut
+            System.out.println("Prendre un parapluie");
+            System.out.println("Mettre un imperméable");
         } else {
-            // Si la condition est fausse (âge < 18)
-            System.out.println("Vous ne pouvez pas encore voter");
+            // S'il ne pleut pas
+            System.out.println("Prendre des lunettes de soleil");
+            System.out.println("Mettre des vêtements légers");
         }
 
         // Fermer le scanner
@@ -538,47 +504,38 @@ public class DroitDeVote {
 
 </details>
 
-**Autre exemple** : Calculatrice simple :
+**Autre exemple** : Choisir un moyen de transport :
 
 ```text
 DÉBUT
-    Demander le premier nombre (first_number)
-    Demander l'opération (+, -, *, /)
-    Demander le second nombre (second_number)
+    Regarder la distance à parcourir
 
-    SI (operation = "+") ALORS
-        result = first_number + second_number
-    SINON SI (operation = "-") ALORS
-        result = first_number - second_number
-    SINON SI (operation = "*") ALORS
-        result = first_number * second_number
-    SINON SI (operation = "/") ALORS
-        SI (second_number ≠ 0) ALORS
-            result = first_number / second_number
-        SINON
-            Afficher "Erreur : division par zéro"
-        FIN SI
+    SI la distance est plus petite qu'1 km ALORS
+        Marcher à pied
+    SINON SI la distance est plus petite que 5 km ALORS
+        Prendre le vélo
+    SINON SI la distance est plus petite que 20 km ALORS
+        Prendre les transports en commun
     SINON
-        Afficher "Opération non reconnue"
+        Prendre la voiture
     FIN SI
-
-    Afficher le result
 FIN
 ```
 
 ### Diagramme d'activité pour la sélection
 
-Voici le diagramme pour l'exemple du droit de vote :
+Voici le diagramme pour l'exemple des vêtements selon la météo :
 
 ```plantuml
 @startuml
 start
-:Demander l'âge de la personne;
-:Sauvegarder l'âge dans user_age;
-if (user_age >= 18) then (oui)
-    :Afficher "Vous pouvez voter";
+:Regarder par la fenêtre;
+if (il pleut) then (oui)
+    :Prendre un parapluie;
+    :Mettre un imperméable;
 else (non)
-    :Afficher "Vous ne pouvez pas encore voter";
+    :Prendre des lunettes de soleil;
+    :Mettre des vêtements légers;
 endif
 stop
 @enduml
@@ -589,15 +546,15 @@ stop
 ```plantuml
 @startuml
 start
-:Demander la température;
-if (temperature < 0) then (oui)
-    :Afficher "Il gèle, attention au verglas";
-elseif (temperature < 15) then (oui)
-    :Afficher "Il fait froid, prenez un manteau";
-elseif (temperature < 25) then (oui)
-    :Afficher "Température agréable";
+:Regarder la distance à parcourir;
+if (la distance est plus petite qu'1 km) then (oui)
+    :Marcher à pied;
+elseif (la distance est plus petite que 5 km) then (oui)
+    :Prendre le vélo;
+elseif (la distance est plus petite que 20 km) then (oui)
+    :Prendre les transports en commun;
 else (non)
-    :Afficher "Il fait chaud";
+    :Prendre la voiture;
 endif
 stop
 @enduml
@@ -637,12 +594,12 @@ POUR variable DE valeur_début À valeur_fin FAIRE
 FIN POUR
 ```
 
-**Exemple** : Afficher les nombres de 1 à 10 :
+**Exemple** : Arroser toutes les plantes du jardin :
 
 ```text
 DÉBUT
-    POUR i DE 1 À 10 FAIRE
-        Afficher i
+    POUR chaque plante du jardin FAIRE
+        Arroser la plante
     FIN POUR
 FIN
 ```
@@ -651,14 +608,19 @@ FIN
 <summary>Exemple en Java</summary>
 
 ```java
-public class AfficherNombres {
+public class ArroserPlantes {
     public static void main(String[] args) {
-        // Boucle FOR qui répète 10 fois (i va de 1 à 10)
-        for (int i = 1; i <= 10; i++) {
-            // Afficher la valeur actuelle de i
-            System.out.println(i);
-            // i est automatiquement incrémenté à la fin de chaque itération
+        // Définir les plantes du jardin
+        String[] plantes = {"Rose", "Tulipe", "Marguerite", "Lavande", "Basilic"};
+
+        System.out.println("Commencer l'arrosage du jardin :");
+
+        // Boucle POUR : arroser chaque plante du jardin
+        for (int i = 0; i < plantes.length; i++) {
+            System.out.println("Arroser la " + plantes[i]);
         }
+
+        System.out.println("Toutes les plantes sont arrosées !");
     }
 }
 ```
@@ -668,30 +630,23 @@ public class AfficherNombres {
 #### Boucle TANT QUE
 
 ```text
-TANT QUE (condition) FAIRE
+TANT QUE condition FAIRE
     actions à répéter
 FIN TANT QUE
 ```
 
-**Exemple** : Deviner un nombre :
+**Exemple** : Chercher ses clés :
 
 ```text
 DÉBUT
-    secret_number = 42
-    guessed_number = 0
-
-    TANT QUE (guessed_number ≠ secret_number) FAIRE
-        Demander un nombre à l'utilisatrice
-        Sauvegarder dans guessed_number
-
-        SI (guessed_number < secret_number) ALORS
-            Afficher "Trop petit !"
-        SINON SI (guessed_number > secret_number) ALORS
-            Afficher "Trop grand !"
-        FIN SI
+    TANT QUE les clés ne sont pas trouvées FAIRE
+        Regarder dans une poche
+        Regarder sur la table
+        Regarder dans le sac
+        Regarder sous les coussins
     FIN TANT QUE
 
-    Afficher "Bravo ! Vous avez trouvé !"
+    Prendre les clés et sortir
 FIN
 ```
 
@@ -699,39 +654,32 @@ FIN
 <summary>Exemple en Java</summary>
 
 ```java
-import java.util.Scanner;
+import java.util.Random;
 
-public class DevinerNombre {
+public class ChercherCles {
     public static void main(String[] args) {
-        // Scanner pour lire les entrées de l'utilisatrice
-        Scanner scanner = new Scanner(System.in);
+        // Simuler la recherche de clés
+        Random random = new Random();
+        boolean cles_trouvees = false;
 
-        // Définir le nombre secret
-        int secret_number = 42;
-        // Initialiser le nombre saisi à 0 (différent du nombre secret)
-        int guessed_number = 0;
+        System.out.println("Oh non ! Où sont mes clés ?");
 
-        // Boucle WHILE : continuer tant que le nombre saisi est différent du secret
-        while (guessed_number != secret_number) {
-            // Demander un nombre à l'utilisatrice
-            System.out.print("Devinez le nombre (entre 1 et 100) : ");
-            // Lire et sauvegarder le nombre saisi
-            guessed_number = scanner.nextInt();
+        // Boucle TANT QUE les clés ne sont pas trouvées
+        while (!cles_trouvees) {
+            System.out.println("Regarder dans une poche...");
+            System.out.println("Regarder sur la table...");
+            System.out.println("Regarder dans le sac...");
+            System.out.println("Regarder sous les coussins...");
 
-            // Vérifier si le nombre est trop petit ou trop grand
-            if (guessed_number < secret_number) {
-                System.out.println("Trop petit !");
-            } else if (guessed_number > secret_number) {
-                System.out.println("Trop grand !");
+            // Simuler la chance de trouver les clés (20% à chaque tentative)
+            if (random.nextInt(5) == 0) {
+                cles_trouvees = true;
+            } else {
+                System.out.println("Toujours pas trouvées, continuer à chercher...\n");
             }
-            // Si guessed_number == secret_number, la boucle s'arrêtera
         }
 
-        // Message de félicitations (affiché quand on sort de la boucle)
-        System.out.println("Bravo ! Vous avez trouvé !");
-
-        // Fermer le scanner
-        scanner.close();
+        System.out.println("Trouvées ! Prendre les clés et sortir");
     }
 }
 ```
@@ -746,16 +694,16 @@ RÉPÉTER
 JUSQU'À (condition)
 ```
 
-**Exemple** : Saisie sécurisée d'un mot de passe :
+**Exemple** : Apprendre une nouvelle recette :
 
 ```text
 DÉBUT
     RÉPÉTER
-        Demander le mot de passe
-        Sauvegarder dans entered_password
-    JUSQU'À (entered_password = "password123")
+        Essayer de faire la recette
+        Goûter le résultat
+    JUSQU'À le goût est satisfaisant
 
-    Afficher "Accès autorisé !"
+    Servir le plat
 FIN
 ```
 
@@ -763,32 +711,37 @@ FIN
 <summary>Exemple en Java</summary>
 
 ```java
-import java.util.Scanner;
+import java.util.Random;
 
-public class MotDePasseSecurise {
+public class ApprendreRecette {
     public static void main(String[] args) {
-        // Scanner pour lire les entrées
-        Scanner scanner = new Scanner(System.in);
+        // Simuler l'apprentissage d'une recette
+        Random random = new Random();
+        boolean gout_satisfaisant = false;
+        int tentative = 1;
 
-        // Variable pour stocker le mot de passe saisi
-        String entered_password;
+        System.out.println("Apprendre à faire des crêpes :");
 
-        // Boucle DO-WHILE : exécuter AU MOINS une fois, puis répéter si nécessaire
+        // Boucle RÉPÉTER JUSQU'À ce que le goût soit satisfaisant
         do {
-            // Demander le mot de passe à l'utilisatrice
-            System.out.print("Entrez le mot de passe : ");
-            // Lire et sauvegarder le mot de passe saisi
-            entered_password = scanner.nextLine();
+            System.out.println("\nTentative " + tentative + " :");
+            System.out.println("Essayer de faire la recette...");
+            System.out.println("Mélanger la farine, les œufs et le lait");
+            System.out.println("Faire cuire la crêpe");
+            System.out.println("Goûter le résultat...");
 
-            // La condition est vérifiée à la fin de la boucle
-            // Continuer tant que le mot de passe est incorrect
-        } while (!entered_password.equals("password123"));
+            // Simuler si le goût est satisfaisant (30% de chance à chaque fois)
+            if (random.nextInt(10) < 3) {
+                gout_satisfaisant = true;
+                System.out.println("Mmm, délicieux ! Le goût est parfait !");
+            } else {
+                System.out.println("Pas terrible... il faut réessayer");
+                tentative++;
+            }
 
-        // Message affiché quand le mot de passe est correct
-        System.out.println("Accès autorisé !");
+        } while (!gout_satisfaisant);
 
-        // Fermer le scanner
-        scanner.close();
+        System.out.println("\nServir le plat - Recette maîtrisée !");
     }
 }
 ```
@@ -802,11 +755,12 @@ public class MotDePasseSecurise {
 ```plantuml
 @startuml
 start
-:i = 1;
-while (i <= 10)
-    :Afficher i;
-    :i = i + 1;
-endwhile
+:plante = première plante;
+while (il reste des plantes) is (oui)
+    :Arroser la plante;
+    :plante = plante suivante;
+endwhile (non)
+:Toutes les plantes sont arrosées;
 stop
 @enduml
 ```
@@ -816,17 +770,17 @@ stop
 ```plantuml
 @startuml
 start
-:secret_number = 42;
-:guessed_number = 0;
-while (guessed_number ≠ secret_number) is (oui)
-    :Demander un nombre;
-    if (guessed_number < secret_number) then (oui)
-        :Afficher "Trop petit !";
-    else (non)
-        :Afficher "Trop grand !";
+:cles_trouvees = faux;
+while (les clés ne sont pas trouvées) is (oui)
+    :Regarder dans une poche;
+    :Regarder sur la table;
+    :Regarder dans le sac;
+    :Regarder sous les coussins;
+    if (clés trouvées ?) then (oui)
+        :cles_trouvees = vrai;
     endif
 endwhile (non)
-:Afficher "Bravo !";
+:Prendre les clés et sortir;
 stop
 @enduml
 ```
@@ -837,10 +791,10 @@ stop
 @startuml
 start
 repeat
-    :Demander le mot de passe;
-    :Sauvegarder dans entered_password;
-repeat while (entered_password ≠ "password123") is (oui) not (non)
-:Afficher "Accès autorisé !";
+    :Essayer de faire la recette;
+    :Goûter le résultat;
+repeat while (le goût n'est pas satisfaisant) is (oui) not (non)
+:Servir le plat;
 stop
 @enduml
 ```
