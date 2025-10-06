@@ -17,28 +17,28 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Exercice 1 - Séquence simple : Moyenne de trois notes](#exercice-1---séquence-simple--moyenne-de-trois-notes)
+- [Exercice 1 - Séquence simple : Planifier un repas équilibré](#exercice-1---séquence-simple--planifier-un-repas-équilibré)
   - [Énoncé](#énoncé)
   - [Consignes](#consignes)
   - [Variables à utiliser](#variables-à-utiliser)
-- [Exercice 2 - Sélection : Nombre pair ou impair](#exercice-2---sélection--nombre-pair-ou-impair)
+- [Exercice 2 - Sélection : Choisir ses vêtements selon la température](#exercice-2---sélection--choisir-ses-vêtements-selon-la-température)
   - [Énoncé](#énoncé-1)
   - [Consignes](#consignes-1)
   - [Variables à utiliser](#variables-à-utiliser-1)
   - [Rappel](#rappel)
-- [Exercice 3 - Séquence : Calcul d'aire](#exercice-3---séquence--calcul-daire)
+- [Exercice 3 - Séquence : Préparer un gâteau pour une fête](#exercice-3---séquence--préparer-un-gâteau-pour-une-fête)
   - [Énoncé](#énoncé-2)
   - [Consignes](#consignes-2)
   - [Variables à utiliser](#variables-à-utiliser-2)
-- [Exercice 4 - Sélection : Système de notes](#exercice-4---sélection--système-de-notes)
+- [Exercice 4 - Sélection : Choisir une activité selon l'âge](#exercice-4---sélection--choisir-une-activité-selon-lâge)
   - [Énoncé](#énoncé-3)
   - [Consignes](#consignes-3)
   - [Variables à utiliser](#variables-à-utiliser-3)
-- [Exercice 5 - Séquence : Conversion de température](#exercice-5---séquence--conversion-de-température)
+- [Exercice 5 - Séquence : Préparer des boissons pour une réunion](#exercice-5---séquence--préparer-des-boissons-pour-une-réunion)
   - [Énoncé](#énoncé-4)
   - [Consignes](#consignes-4)
   - [Variables à utiliser](#variables-à-utiliser-4)
-- [Exercice 6 - Sélection : Calcul de réduction](#exercice-6---sélection--calcul-de-réduction)
+- [Exercice 6 - Sélection : Calculer le budget courses familiales](#exercice-6---sélection--calculer-le-budget-courses-familiales)
   - [Énoncé](#énoncé-5)
   - [Consignes](#consignes-5)
   - [Variables à utiliser](#variables-à-utiliser-5)
@@ -76,7 +76,13 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
 > <https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
 > (Désolé pour les publicités sur le site, nous cherchons une alternative.)
 
-> [!NOTE]
+> [!IMPORTANT]
+>
+> **Approche pédagogique** : Ces exercices utilisent des **exemples de la vie
+> quotidienne** plutôt que des problèmes de programmation classiques. L'objectif
+> est de vous faire comprendre les concepts fondamentaux (séquence, sélection,
+> itération) à travers des situations familières avant d'aborder la
+> programmation pure.
 >
 > **À propos du code Java** : Le code Java fourni dans les solutions est
 > **uniquement à titre de référence** pour illustrer la traduction des concepts
@@ -84,51 +90,46 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
 > comprendre ou écrire du code Java**. Concentrez-vous sur le pseudocode et les
 > diagrammes d'activité, qui sont les éléments essentiels à maîtriser.
 
-## Exercice 1 - Séquence simple : Moyenne de trois notes
+## Exercice 1 - Séquence simple : Planifier un repas équilibré
 
 ### Énoncé
 
-Créer un algorithme qui demande trois notes à l'utilisatrice, calcule la moyenne
-et affiche le résultat.
+Créer un algorithme qui planifie un repas équilibré en calculant les portions
+moyennes pour 3 personnes.
 
 ### Consignes
 
-1. Demander la première note
-2. Demander la deuxième note
-3. Demander la troisième note
-4. Calculer la moyenne (somme ÷ 3)
-5. Afficher le résultat
+1. Définir la quantité de légumes nécessaire (200g par personne)
+2. Définir la quantité de protéines nécessaire (150g par personne)
+3. Définir la quantité de féculents nécessaire (100g par personne)
+4. Calculer les quantités totales pour 3 personnes
+5. Afficher le plan de repas
 
 ### Variables à utiliser
 
-- `first_grade` : première note
-- `second_grade` : deuxième note
-- `third_grade` : troisième note
-- `average` : moyenne calculée
+- `legumes_par_personne` : quantité de légumes par personne (200g)
+- `proteines_par_personne` : quantité de protéines par personne (150g)
+- `feculents_par_personne` : quantité de féculents par personne (100g)
+- `nombre_personnes` : nombre de convives (3)
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
-    Initialiser first_grade
-    Afficher "Entrez la première note :"
-    Demander une valeur
-    Assigner la valeur à first_grade
+    legumes_par_personne = 200
+    proteines_par_personne = 150
+    feculents_par_personne = 100
+    nombre_personnes = 3
 
-    Initialiser second_grade
-    Afficher "Entrez la deuxième note :"
-    Demander une valeur
-    Assigner la valeur à second_grade
+    total_legumes = legumes_par_personne * nombre_personnes
+    total_proteines = proteines_par_personne * nombre_personnes
+    total_feculents = feculents_par_personne * nombre_personnes
 
-    Initialiser third_grade
-    Afficher "Entrez la troisième note :"
-    Demander une valeur
-    Assigner la valeur à third_grade
-
-    average = (first_grade + second_grade + third_grade) / 3
-
-    Afficher "La moyenne est :", average
+    Afficher "Plan de repas pour", nombre_personnes, "personnes :"
+    Afficher "Légumes :", total_legumes, "g"
+    Afficher "Protéines :", total_proteines, "g"
+    Afficher "Féculents :", total_feculents, "g"
 FIN
 ```
 
@@ -140,20 +141,15 @@ FIN
 ```plantuml
 @startuml
 start
-:Initialiser first_grade;
-:Afficher "Entrez la première note :";
-:Demander une valeur;
-:Assigner la valeur à first_grade;
-:Initialiser second_grade;
-:Afficher "Entrez la deuxième note :";
-:Demander une valeur;
-:Assigner la valeur à second_grade;
-:Initialiser third_grade;
-:Afficher "Entrez la troisième note :";
-:Demander une valeur;
-:Assigner la valeur à third_grade;
-:average = (first_grade + second_grade + third_grade) / 3;
-:Afficher "La moyenne est :", average;
+:legumes_par_personne = 200;
+:proteines_par_personne = 150;
+:feculents_par_personne = 100;
+:nombre_personnes = 3;
+:total_legumes = legumes_par_personne * nombre_personnes;
+:total_proteines = proteines_par_personne * nombre_personnes;
+:total_feculents = feculents_par_personne * nombre_personnes;
+:Afficher "Plan de repas pour", nombre_personnes, "personnes";
+:Afficher quantités totales;
 stop
 @enduml
 ```
@@ -164,73 +160,65 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class MoyenneTroisNotes {
+public class PlanifierRepas {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Définir les quantités par personne
+        int legumes_par_personne = 200;  // grammes
+        int proteines_par_personne = 150; // grammes
+        int feculents_par_personne = 100; // grammes
+        int nombre_personnes = 3;
 
-        // Demander la première note
-        System.out.print("Entrez la première note : ");
-        double first_grade = scanner.nextDouble();
+        // Calculer les quantités totales
+        int total_legumes = legumes_par_personne * nombre_personnes;
+        int total_proteines = proteines_par_personne * nombre_personnes;
+        int total_feculents = feculents_par_personne * nombre_personnes;
 
-        // Demander la deuxième note
-        System.out.print("Entrez la deuxième note : ");
-        double second_grade = scanner.nextDouble();
-
-        // Demander la troisième note
-        System.out.print("Entrez la troisième note : ");
-        double third_grade = scanner.nextDouble();
-
-        // Calculer la moyenne
-        double average = (first_grade + second_grade + third_grade) / 3;
-
-        // Afficher le résultat
-        System.out.println("La moyenne est : " + average);
-
-        scanner.close();
+        // Afficher le plan de repas
+        System.out.println("Plan de repas pour " + nombre_personnes + " personnes :");
+        System.out.println("Légumes : " + total_legumes + "g");
+        System.out.println("Protéines : " + total_proteines + "g");
+        System.out.println("Féculents : " + total_feculents + "g");
     }
 }
 ```
 
 </details>
 
-## Exercice 2 - Sélection : Nombre pair ou impair
+## Exercice 2 - Sélection : Choisir ses vêtements selon la température
 
 ### Énoncé
 
-Créer un algorithme qui demande un nombre à l'utilisatrice et détermine s'il est
-pair ou impair.
+Créer un algorithme qui choisit les vêtements appropriés selon la température
+extérieure.
 
 ### Consignes
 
-1. Demander un nombre entier à l'utilisatrice
-2. Vérifier si le nombre est divisible par 2 (reste de la division = 0)
-3. Afficher "Le nombre est pair" ou "Le nombre est impair"
+1. Définir la température actuelle (15 degrés)
+2. Vérifier si la température est chaude (plus de 20°) ou froide
+3. Afficher les vêtements recommandés
 
 ### Variables à utiliser
 
-- `number` : le nombre saisi par l'utilisatrice
+- `temperature` : la température extérieure (15 degrés)
 
 ### Rappel
 
-Un nombre est **pair** si le reste de sa division par 2 est égal à 0. En
-pseudocode, on utilise l'opérateur **modulo** noté `%` ou `MOD`.
+Pour une bonne lisibilité, utilisez des conditions naturelles comme "SI la
+température est plus grande que 20 ALORS" plutôt que des symboles mathématiques.
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
-    Initialiser number
-    Afficher "Entrez un nombre entier :"
-    Demander une valeur
-    Assigner la valeur à number
+    temperature = 15
 
-    SI (number % 2 = 0) ALORS
-        Afficher "Le nombre est pair"
+    SI la temperature est plus grande que 20 ALORS
+        Afficher "Mettre un t-shirt et un short"
+        Afficher "Prendre des lunettes de soleil"
     SINON
-        Afficher "Le nombre est impair"
+        Afficher "Mettre un pull et un pantalon"
+        Afficher "Prendre une veste"
     FIN SI
 FIN
 ```
@@ -243,14 +231,13 @@ FIN
 ```plantuml
 @startuml
 start
-:Initialiser number;
-:Afficher "Entrez un nombre entier :";
-:Demander une valeur;
-:Assigner la valeur à number;
-if (number % 2 = 0) then (oui)
-    :Afficher "Le nombre est pair";
+:temperature = 15;
+if (la temperature est plus grande que 20) then (oui)
+    :Mettre un t-shirt et un short;
+    :Prendre des lunettes de soleil;
 else (non)
-    :Afficher "Le nombre est impair";
+    :Mettre un pull et un pantalon;
+    :Prendre une veste;
 endif
 stop
 @enduml
@@ -262,49 +249,45 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class PairOuImpair {
+public class ChoisirVetements {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Définir la température actuelle
+        int temperature = 15;
 
-        // Demander un nombre à l'utilisatrice
-        System.out.print("Entrez un nombre entier : ");
-        int number = scanner.nextInt();
-
-        // Vérifier si le nombre est pair ou impair
-        if (number % 2 == 0) {
-            System.out.println("Le nombre est pair");
+        // Choisir les vêtements selon la température
+        if (temperature > 20) {
+            System.out.println("Mettre un t-shirt et un short");
+            System.out.println("Prendre des lunettes de soleil");
         } else {
-            System.out.println("Le nombre est impair");
+            System.out.println("Mettre un pull et un pantalon");
+            System.out.println("Prendre une veste");
         }
-
-        scanner.close();
     }
 }
 ```
 
 </details>
 
-## Exercice 3 - Séquence : Calcul d'aire
+## Exercice 3 - Séquence : Préparer un gâteau pour une fête
 
 ### Énoncé
 
-Créer un algorithme qui calcule l'aire d'un cercle. Demander le rayon à
-l'utilisatrice et afficher l'aire correspondante.
+Créer un algorithme qui calcule les ingrédients nécessaires pour un gâteau au
+chocolat pour 8 personnes.
 
 ### Consignes
 
-1. Demander le rayon du cercle
-2. Calculer l'aire avec la formule : aire = π × rayon²
-3. Utiliser π ≈ 3.14159
-4. Afficher le résultat
+1. Définir les ingrédients de base pour 4 personnes
+2. Calculer les quantités pour 8 personnes (multiplier par 2)
+3. Ajouter la décoration (100g de chocolat fondu)
+4. Afficher la liste complète des ingrédients
 
 ### Variables à utiliser
 
-- `radius` : rayon du cercle
-- `area` : aire calculée
-- `pi` : constante pi (3.14159)
+- `farine_base` : farine pour 4 personnes (200g)
+- `sucre_base` : sucre pour 4 personnes (150g)
+- `oeufs_base` : œufs pour 4 personnes (2)
+- `multiplicateur` : facteur pour ajuster les quantités (2)
 
 > [!TIP]
 >
@@ -316,18 +299,23 @@ l'utilisatrice et afficher l'aire correspondante.
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
-    pi = 3.14159
+    farine_base = 200
+    sucre_base = 150
+    oeufs_base = 2
+    multiplicateur = 2
+    chocolat_decoration = 100
 
-    Initialiser radius
-    Afficher "Entrez le rayon du cercle :"
-    Demander une valeur
-    Assigner la valeur à radius
+    farine_totale = farine_base * multiplicateur
+    sucre_total = sucre_base * multiplicateur
+    oeufs_total = oeufs_base * multiplicateur
 
-    area = pi * radius * radius
-
-    Afficher "L'aire du cercle est :", area
+    Afficher "Ingrédients pour gâteau au chocolat (8 personnes) :"
+    Afficher "Farine :", farine_totale, "g"
+    Afficher "Sucre :", sucre_total, "g"
+    Afficher "Œufs :", oeufs_total
+    Afficher "Chocolat pour décoration :", chocolat_decoration, "g"
 FIN
 ```
 
@@ -339,13 +327,16 @@ FIN
 ```plantuml
 @startuml
 start
-:pi = 3.14159;
-:Initialiser radius;
-:Afficher "Entrez le rayon du cercle :";
-:Demander une valeur;
-:Assigner la valeur à radius;
-:area = pi * radius * radius;
-:Afficher "L'aire du cercle est :", area;
+:farine_base = 200;
+:sucre_base = 150;
+:oeufs_base = 2;
+:multiplicateur = 2;
+:chocolat_decoration = 100;
+:farine_totale = farine_base * multiplicateur;
+:sucre_total = sucre_base * multiplicateur;
+:oeufs_total = oeufs_base * multiplicateur;
+:Afficher "Ingrédients pour gâteau (8 personnes)";
+:Afficher toutes les quantités;
 stop
 @enduml
 ```
@@ -356,52 +347,52 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class AireCercle {
+public class PreparerGateau {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Ingrédients de base pour 4 personnes
+        int farine_base = 200;  // grammes
+        int sucre_base = 150;   // grammes
+        int oeufs_base = 2;
+        int multiplicateur = 2; // pour passer de 4 à 8 personnes
+        int chocolat_decoration = 100; // grammes
 
-        // Constante pi
-        final double pi = 3.14159;
+        // Calculer les quantités pour 8 personnes
+        int farine_totale = farine_base * multiplicateur;
+        int sucre_total = sucre_base * multiplicateur;
+        int oeufs_total = oeufs_base * multiplicateur;
 
-        // Demander le rayon
-        System.out.print("Entrez le rayon du cercle : ");
-        double radius = scanner.nextDouble();
-
-        // Calculer l'aire
-        double area = pi * radius * radius;
-
-        // Afficher le résultat
-        System.out.println("L'aire du cercle est : " + area);
-
-        scanner.close();
+        // Afficher la liste des ingrédients
+        System.out.println("Ingrédients pour gâteau au chocolat (8 personnes) :");
+        System.out.println("Farine : " + farine_totale + "g");
+        System.out.println("Sucre : " + sucre_total + "g");
+        System.out.println("Œufs : " + oeufs_total);
+        System.out.println("Chocolat pour décoration : " + chocolat_decoration + "g");
     }
 }
 ```
 
 </details>
 
-## Exercice 4 - Sélection : Système de notes
+## Exercice 4 - Sélection : Choisir une activité selon l'âge
 
 ### Énoncé
 
-Créer un algorithme qui convertit une note numérique (0-20) en appréciation
-littérale.
+Créer un algorithme qui recommande une activité de loisir selon l'âge d'une
+personne.
 
 ### Consignes
 
-1. Demander une note entre 0 et 20
-2. Afficher l'appréciation correspondante :
-   - 16-20 : "Excellent"
-   - 14-15.9 : "Très bien"
-   - 12-13.9 : "Bien"
-   - 10-11.9 : "Assez bien"
-   - 0-9.9 : "Insuffisant"
+1. Définir l'âge de la personne (25 ans)
+2. Recommander une activité selon l'âge :
+   - 0-5 ans : "Jeux dans le bac à sable"
+   - 6-12 ans : "Vélo dans le parc"
+   - 13-17 ans : "Cinéma avec les amis"
+   - 18-30 ans : "Randonnée en montagne"
+   - Plus de 30 ans : "Lecture tranquille"
 
 ### Variables à utiliser
 
-- `grade` : la note saisie
+- `age` : l'âge de la personne (25 ans)
 
 > [!TIP]
 >
@@ -414,23 +405,20 @@ littérale.
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
-    Initialiser grade
-    Afficher "Entrez une note entre 0 et 20 :"
-    Demander une valeur
-    Assigner la valeur à grade
+    age = 25
 
-    SI (grade >= 16) ALORS
-        Afficher "Excellent"
-    SINON SI (grade >= 14) ALORS
-        Afficher "Très bien"
-    SINON SI (grade >= 12) ALORS
-        Afficher "Bien"
-    SINON SI (grade >= 10) ALORS
-        Afficher "Assez bien"
+    SI l'age est plus petit ou égal à 5 ALORS
+        Afficher "Jeux dans le bac à sable"
+    SINON SI l'age est plus petit ou égal à 12 ALORS
+        Afficher "Vélo dans le parc"
+    SINON SI l'age est plus petit ou égal à 17 ALORS
+        Afficher "Cinéma avec les amis"
+    SINON SI l'age est plus petit ou égal à 30 ALORS
+        Afficher "Randonnée en montagne"
     SINON
-        Afficher "Insuffisant"
+        Afficher "Lecture tranquille"
     FIN SI
 FIN
 ```
@@ -450,20 +438,17 @@ FIN
 ```plantuml
 @startuml
 start
-:Initialiser grade;
-:Afficher "Entrez une note entre 0 et 20 :";
-:Demander une valeur;
-:Assigner la valeur à grade;
-if (grade >= 16) then (oui)
-    :Afficher "Excellent";
-elseif (grade >= 14) then (oui)
-    :Afficher "Très bien";
-elseif (grade >= 12) then (oui)
-    :Afficher "Bien";
-elseif (grade >= 10) then (oui)
-    :Afficher "Assez bien";
+:age = 25;
+if (l'age est plus petit ou égal à 5) then (oui)
+    :Afficher "Jeux dans le bac à sable";
+elseif (l'age est plus petit ou égal à 12) then (oui)
+    :Afficher "Vélo dans le parc";
+elseif (l'age est plus petit ou égal à 17) then (oui)
+    :Afficher "Cinéma avec les amis";
+elseif (l'age est plus petit ou égal à 30) then (oui)
+    :Afficher "Randonnée en montagne";
 else (non)
-    :Afficher "Insuffisant";
+    :Afficher "Lecture tranquille";
 endif
 stop
 @enduml
@@ -475,175 +460,72 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class SystemeNotes {
+public class ChoisirActivite {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Définir l'âge de la personne
+        int age = 25;
 
-        // Demander la note
-        System.out.print("Entrez une note entre 0 et 20 : ");
-        double grade = scanner.nextDouble();
-
-        // Déterminer l'appréciation
-        if (grade >= 16) {
-            System.out.println("Excellent");
-        } else if (grade >= 14) {
-            System.out.println("Très bien");
-        } else if (grade >= 12) {
-            System.out.println("Bien");
-        } else if (grade >= 10) {
-            System.out.println("Assez bien");
+        // Recommander une activité selon l'âge
+        if (age <= 5) {
+            System.out.println("Jeux dans le bac à sable");
+        } else if (age <= 12) {
+            System.out.println("Vélo dans le parc");
+        } else if (age <= 17) {
+            System.out.println("Cinéma avec les amis");
+        } else if (age <= 30) {
+            System.out.println("Randonnée en montagne");
         } else {
-            System.out.println("Insuffisant");
+            System.out.println("Lecture tranquille");
         }
-
-        scanner.close();
     }
 }
 ```
 
 </details>
 
-## Exercice 5 - Séquence : Conversion de température
+## Exercice 5 - Séquence : Préparer des boissons pour une réunion
 
 ### Énoncé
 
-Créer un algorithme qui convertit une température de Celsius vers Fahrenheit et
-Kelvin.
+Créer un algorithme qui calcule les quantités de boissons nécessaires pour une
+réunion de 12 personnes.
 
 ### Consignes
 
-1. Demander une température en Celsius
-2. Convertir en Fahrenheit : F = C × 9/5 + 32
-3. Convertir en Kelvin : K = C + 273.15
-4. Afficher les trois températures
+1. Définir la température extérieure (28 degrés)
+2. Calculer la quantité d'eau : 0.5L par personne quand il fait chaud, 0.3L
+   sinon
+3. Calculer la quantité de café : 0.2L par personne
+4. Afficher les quantités totales nécessaires
 
 ### Variables à utiliser
 
-- `celsius` : température en Celsius
-- `fahrenheit` : température en Fahrenheit
-- `kelvin` : température en Kelvin
+- `temperature` : température extérieure (28 degrés)
+- `nombre_personnes` : nombre de participants (12)
+- `eau_par_personne` : quantité d'eau par personne
+- `cafe_par_personne` : quantité de café par personne (0.2L)
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
-    Initialiser celsius
-    Afficher "Entrez la température en Celsius :"
-    Demander une valeur
-    Assigner la valeur à celsius
+    temperature = 28
+    nombre_personnes = 12
+    cafe_par_personne = 0.2
 
-    fahrenheit = celsius * 9 / 5 + 32
-    kelvin = celsius + 273.15
-
-    Afficher celsius, "°C =", fahrenheit, "°F"
-    Afficher celsius, "°C =", kelvin, "K"
-FIN
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Diagramme PlantUML</summary>
-
-```plantuml
-@startuml
-start
-:Initialiser celsius;
-:Afficher "Entrez la température en Celsius :";
-:Demander une valeur;
-:Assigner la valeur à celsius;
-:fahrenheit = celsius * 9 / 5 + 32;
-:kelvin = celsius + 273.15;
-:Afficher celsius, "°C =", fahrenheit, "°F";
-:Afficher celsius, "°C =", kelvin, "K";
-stop
-@enduml
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Code Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class ConversionTemperature {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander la température en Celsius
-        System.out.print("Entrez la température en Celsius : ");
-        double celsius = scanner.nextDouble();
-
-        // Convertir en Fahrenheit et Kelvin
-        double fahrenheit = celsius * 9.0 / 5.0 + 32;
-        double kelvin = celsius + 273.15;
-
-        // Afficher les résultats
-        System.out.println(celsius + "°C = " + fahrenheit + "°F");
-        System.out.println(celsius + "°C = " + kelvin + "K");
-
-        scanner.close();
-    }
-}
-```
-
-</details>
-
-## Exercice 6 - Sélection : Calcul de réduction
-
-### Énoncé
-
-Créer un algorithme qui calcule le prix final d'un article après application
-d'une réduction selon le montant d'achat.
-
-### Consignes
-
-1. Demander le prix de l'article
-2. Appliquer la réduction selon le barème :
-   - Plus de 100€ : 15% de réduction
-   - Entre 50€ et 100€ : 10% de réduction
-   - Entre 20€ et 49.99€ : 5% de réduction
-   - Moins de 20€ : aucune réduction
-3. Afficher le prix original, la réduction et le prix final
-
-### Variables à utiliser
-
-- `original_price` : prix original
-- `discount_rate` : taux de réduction (en %)
-- `discount_amount` : montant de la réduction
-- `final_price` : prix final après réduction
-
-<details>
-<summary>Afficher la solution - Pseudocode</summary>
-
-```
-DÉBUT
-    Initialiser original_price
-    Afficher "Entrez le prix de l'article :"
-    Demander une valeur
-    Assigner la valeur à original_price
-
-    SI (original_price > 100) ALORS
-        discount_rate = 15
-    SINON SI (original_price >= 50) ALORS
-        discount_rate = 10
-    SINON SI (original_price >= 20) ALORS
-        discount_rate = 5
+    SI la temperature est plus grande que 25 ALORS
+        eau_par_personne = 0.5
     SINON
-        discount_rate = 0
+        eau_par_personne = 0.3
     FIN SI
 
-    discount_amount = original_price * discount_rate / 100
-    final_price = original_price - discount_amount
+    eau_totale = eau_par_personne * nombre_personnes
+    cafe_total = cafe_par_personne * nombre_personnes
 
-    Afficher "Prix original :", original_price, "€"
-    Afficher "Réduction (", discount_rate, "%) :", discount_amount, "€"
-    Afficher "Prix final :", final_price, "€"
+    Afficher "Boissons nécessaires pour", nombre_personnes, "personnes :"
+    Afficher "Eau :", eau_totale, "L"
+    Afficher "Café :", cafe_total, "L"
 FIN
 ```
 
@@ -655,22 +537,17 @@ FIN
 ```plantuml
 @startuml
 start
-:Initialiser original_price;
-:Afficher "Entrez le prix de l'article :";
-:Demander une valeur;
-:Assigner la valeur à original_price;
-if (original_price > 100) then (oui)
-    :discount_rate = 15;
-elseif (original_price >= 50) then (oui)
-    :discount_rate = 10;
-elseif (original_price >= 20) then (oui)
-    :discount_rate = 5;
+:temperature = 28;
+:nombre_personnes = 12;
+:cafe_par_personne = 0.2;
+if (la temperature est plus grande que 25) then (oui)
+    :eau_par_personne = 0.5;
 else (non)
-    :discount_rate = 0;
+    :eau_par_personne = 0.3;
 endif
-:discount_amount = original_price * discount_rate / 100;
-:final_price = original_price - discount_amount;
-:Afficher prix original, réduction et prix final;
+:eau_totale = eau_par_personne * nombre_personnes;
+:cafe_total = cafe_par_personne * nombre_personnes;
+:Afficher quantités totales;
 stop
 @enduml
 ```
@@ -681,38 +558,142 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class CalculReduction {
+public class PreparerBoissons {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Définir les paramètres
+        int temperature = 28; // degrés
+        int nombre_personnes = 12;
+        double cafe_par_personne = 0.2; // litres
+        double eau_par_personne;
 
-        // Demander le prix original
-        System.out.print("Entrez le prix de l'article : ");
-        double original_price = scanner.nextDouble();
-
-        // Déterminer le taux de réduction
-        int discount_rate;
-        if (original_price > 100) {
-            discount_rate = 15;
-        } else if (original_price >= 50) {
-            discount_rate = 10;
-        } else if (original_price >= 20) {
-            discount_rate = 5;
+        // Ajuster la quantité d'eau selon la température
+        if (temperature > 25) {
+            eau_par_personne = 0.5; // plus d'eau quand il fait chaud
         } else {
-            discount_rate = 0;
+            eau_par_personne = 0.3;
         }
 
-        // Calculer la réduction et le prix final
-        double discount_amount = original_price * discount_rate / 100.0;
-        double final_price = original_price - discount_amount;
+        // Calculer les quantités totales
+        double eau_totale = eau_par_personne * nombre_personnes;
+        double cafe_total = cafe_par_personne * nombre_personnes;
 
         // Afficher les résultats
-        System.out.println("Prix original : " + original_price + "€");
-        System.out.println("Réduction (" + discount_rate + "%) : " + discount_amount + "€");
-        System.out.println("Prix final : " + final_price + "€");
+        System.out.println("Boissons nécessaires pour " + nombre_personnes + " personnes :");
+        System.out.println("Eau : " + eau_totale + "L");
+        System.out.println("Café : " + cafe_total + "L");
+    }
+}
+```
 
-        scanner.close();
+</details>
+
+## Exercice 6 - Sélection : Calculer le budget courses familiales
+
+### Énoncé
+
+Créer un algorithme qui calcule le budget courses d'une famille selon le nombre
+de personnes dans le foyer.
+
+### Consignes
+
+1. Définir le nombre de personnes dans la famille (4 personnes)
+2. Calculer le budget selon la taille du foyer :
+   - 1 personne : 80€ par semaine
+   - 2 personnes : 130€ par semaine
+   - 3-4 personnes : 180€ par semaine
+   - Plus de 4 personnes : 220€ par semaine
+3. Calculer le budget mensuel (multiplier par 4.3)
+4. Afficher le budget hebdomadaire et mensuel
+
+### Variables à utiliser
+
+- `nombre_personnes` : nombre de personnes dans la famille (4)
+- `budget_semaine` : budget hebdomadaire
+- `budget_mois` : budget mensuel
+- `multiplicateur_mensuel` : coefficient pour passer de semaine à mois (4.3)
+
+<details>
+<summary>Afficher la solution - Pseudocode</summary>
+
+```text
+DÉBUT
+    nombre_personnes = 4
+    multiplicateur_mensuel = 4.3
+
+    SI le nombre_personnes est égal à 1 ALORS
+        budget_semaine = 80
+    SINON SI le nombre_personnes est égal à 2 ALORS
+        budget_semaine = 130
+    SINON SI le nombre_personnes est plus petit ou égal à 4 ALORS
+        budget_semaine = 180
+    SINON
+        budget_semaine = 220
+    FIN SI
+
+    budget_mois = budget_semaine * multiplicateur_mensuel
+
+    Afficher "Budget courses pour", nombre_personnes, "personnes :"
+    Afficher "Hebdomadaire :", budget_semaine, "€"
+    Afficher "Mensuel :", budget_mois, "€"
+FIN
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Diagramme PlantUML</summary>
+
+```plantuml
+@startuml
+start
+:nombre_personnes = 4;
+:multiplicateur_mensuel = 4.3;
+if (le nombre_personnes est égal à 1) then (oui)
+    :budget_semaine = 80;
+elseif (le nombre_personnes est égal à 2) then (oui)
+    :budget_semaine = 130;
+elseif (le nombre_personnes est plus petit ou égal à 4) then (oui)
+    :budget_semaine = 180;
+else (non)
+    :budget_semaine = 220;
+endif
+:budget_mois = budget_semaine * multiplicateur_mensuel;
+:Afficher budget hebdomadaire et mensuel;
+stop
+@enduml
+```
+
+</details>
+
+<details>
+<summary>Afficher la solution - Code Java</summary>
+
+```java
+public class BudgetCourses {
+    public static void main(String[] args) {
+        // Définir les paramètres
+        int nombre_personnes = 4;
+        double multiplicateur_mensuel = 4.3;
+        int budget_semaine;
+
+        // Déterminer le budget selon la taille du foyer
+        if (nombre_personnes == 1) {
+            budget_semaine = 80;
+        } else if (nombre_personnes == 2) {
+            budget_semaine = 130;
+        } else if (nombre_personnes <= 4) {
+            budget_semaine = 180;
+        } else {
+            budget_semaine = 220;
+        }
+
+        // Calculer le budget mensuel
+        double budget_mois = budget_semaine * multiplicateur_mensuel;
+
+        // Afficher les résultats
+        System.out.println("Budget courses pour " + nombre_personnes + " personnes :");
+        System.out.println("Hebdomadaire : " + budget_semaine + "€");
+        System.out.println("Mensuel : " + (int)budget_mois + "€");
     }
 }
 ```
@@ -754,7 +735,7 @@ n (notée n!) est le produit de tous les nombres entiers positifs inférieurs ou
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
     Initialiser n
     Afficher "Entrez un nombre positif :"
@@ -853,7 +834,7 @@ l'utilisatrice doit le deviner en maximum 7 tentatives.
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
     secret_number = 42
     attempts = 7
@@ -1003,7 +984,7 @@ Créer un algorithme qui affiche la table de multiplication d'un nombre donné (
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
     Initialiser number
     Afficher "Entrez un nombre :"
@@ -1098,7 +1079,7 @@ le résultat.
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
-```
+```text
 DÉBUT
     Initialiser first_number
     Afficher "Entrez le premier nombre :"
