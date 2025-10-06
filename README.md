@@ -47,9 +47,9 @@ Les dates sont tirées du
 | Cours | Contenu                                                        |
 | ----: | :------------------------------------------------------------- |
 |    01 | Introduction à la programmation et aux algorithmes             |
-|    02 | Variables, constantes, types de données et leur représentation |
 |    03 | Structures algorithmiques : séquence, sélection (if/else)      |
 |    04 | Structures algorithmiques : itération (boucles)                |
+|    02 | Variables, constantes, types de données et leur représentation |
 |    05 | Procédures, fonctions et entrée/sortie                         |
 |    06 | Tableaux et structures de données de base                      |
 |    07 | Structures de données avancées (listes, piles, files)          |
