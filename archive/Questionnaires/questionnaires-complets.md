@@ -53,7 +53,7 @@ Java avec leurs solutions correspondantes.
   - [5. Exercice pratique : Écrire un programme permettant à l'utilisateur d'estimer la durée d'une seconde (10 essais)](#5-exercice-pratique--écrire-un-programme-permettant-à-lutilisateur-destimer-la-durée-dune-seconde-10-essais)
 - [Questionnaire 05 - Fonctions](#questionnaire-05---fonctions)
   - [1. Qu'est ce qu'une fonction ?](#1-quest-ce-quune-fonction-)
-  - [2. Quelle sont les règles de nommage d'une fonction (en java) ?](#2-quelle-sont-les-règles-de-nommage-dune-fonction-en-java-)
+  - [2. Quelles sont les règles de nommage d'une fonction (en java) ?](#2-quelles-sont-les-règles-de-nommage-dune-fonction-en-java-)
   - [3. Soit le code suivant : `public static void nomFonction() { ... }` Que signifie le mot void précédant le nom de la fonction ?](#3-soit-le-code-suivant--public-static-void-nomfonction----que-signifie-le-mot-void-précédant-le-nom-de-la-fonction-)
   - [4. Que doit-on faire si on désire qu'une fonction retourne un entier (int) ?](#4-que-doit-on-faire-si-on-désire-quune-fonction-retourne-un-entier-int-)
   - [5. Qu'est-ce qu'un paramètre d'une fonction ?](#5-quest-ce-quun-paramètre-dune-fonction-)
