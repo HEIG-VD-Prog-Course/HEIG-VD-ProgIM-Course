@@ -14,7 +14,7 @@ Java avec leurs solutions correspondantes.
   - [5. Quel est le rôle du compilateur java ?](#5-quel-est-le-rôle-du-compilateur-java-)
   - [6. Que contient le JDK ?](#6-que-contient-le-jdk-)
   - [7. Qu'est-ce qu'une variable ?](#7-quest-ce-quune-variable-)
-  - [8. Quelles sont les règles de nommage d'une variable ?](#8-quelles-sont-les-règles-de-nommage-dune-variable-)
+  - [8. Quelle sont les règles de nommage d'une variable ?](#8-quelle-sont-les-règles-de-nommage-dune-variable-)
   - [9. Citez les huit types primitifs de java](#9-citez-les-huit-types-primitifs-de-java)
   - [10. Veuillez indiquer le résultat de l'exécution des expressions suivantes :](#10-veuillez-indiquer-le-résultat-de-lexécution-des-expressions-suivantes-)
   - [11. Quelle différence y a-t-il entre les opérateurs : `=` et `==` ?](#11-quelle-différence-y-a-t-il-entre-les-opérateurs---et--)
@@ -22,7 +22,7 @@ Java avec leurs solutions correspondantes.
   - [1. Veuillez écrire un programme permettant d'afficher le caractère " (un seul double-guillemet)](#1-veuillez-écrire-un-programme-permettant-dafficher-le-caractère--un-seul-double-guillemet)
   - [2. Quel est le caractère correspondant au code décimal 49 ?](#2-quel-est-le-caractère-correspondant-au-code-décimal-49-)
   - [3. Le bloc SI permet de choisir deux chemins distincts dans un programme. Que faire si nous sommes en face d'un cas où il y a trois chemins possible ? (Tapez 1 pour un ristretto, 2 pour un expresso, 3 pour un café)](#3-le-bloc-si-permet-de-choisir-deux-chemins-distincts-dans-un-programme-que-faire-si-nous-sommes-en-face-dun-cas-où-il-y-a-trois-chemins-possible--tapez-1-pour-un-ristretto-2-pour-un-expresso-3-pour-un-café)
-  - [4. Que faire si nous sommes en face d'un cas où il y a quatre chemins possible ? (Tapez 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un caffè-latte)](#4-que-faire-si-nous-sommes-en-face-dun-cas-où-il-y-a-quatre-chemins-possible--tapez-1-pour-un-ristretto-2-pour-un-expresso-3-pour-un-café-4-pour-un-caffè-latte)
+  - [4. Que faire si nous sommes en face d'un cas où il y a quatre chemins possible ? (Tapez 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un café-latte)](#4-que-faire-si-nous-sommes-en-face-dun-cas-où-il-y-a-quatre-chemins-possible--tapez-1-pour-un-ristretto-2-pour-un-expresso-3-pour-un-café-4-pour-un-café-latte)
   - [5. Soit l'instruction suivante : `x = "1" + "2";` De quel type doit être la variable x ?](#5-soit-linstruction-suivante--x--1--2-de-quel-type-doit-être-la-variable-x-)
   - [6. Soit l'instruction suivante : `x = a && b;` De quel type doit être la variable x ?](#6-soit-linstruction-suivante--x--a--b-de-quel-type-doit-être-la-variable-x-)
   - [7. Que signifie l'opérateur || ?](#7-que-signifie-lopérateur--)
@@ -53,7 +53,7 @@ Java avec leurs solutions correspondantes.
   - [5. Exercice pratique : Écrire un programme permettant à l'utilisateur d'estimer la durée d'une seconde (10 essais)](#5-exercice-pratique--écrire-un-programme-permettant-à-lutilisateur-destimer-la-durée-dune-seconde-10-essais)
 - [Questionnaire 05 - Fonctions](#questionnaire-05---fonctions)
   - [1. Qu'est ce qu'une fonction ?](#1-quest-ce-quune-fonction-)
-  - [2. Quelles sont les règles de nommage d'une fonction (en java) ?](#2-quelles-sont-les-règles-de-nommage-dune-fonction-en-java-)
+  - [2. Quelle sont les règles de nommage d'une fonction (en java) ?](#2-quelle-sont-les-règles-de-nommage-dune-fonction-en-java-)
   - [3. Soit le code suivant : `public static void nomFonction() { ... }` Que signifie le mot void précédant le nom de la fonction ?](#3-soit-le-code-suivant--public-static-void-nomfonction----que-signifie-le-mot-void-précédant-le-nom-de-la-fonction-)
   - [4. Que doit-on faire si on désire qu'une fonction retourne un entier (int) ?](#4-que-doit-on-faire-si-on-désire-quune-fonction-retourne-un-entier-int-)
   - [5. Qu'est-ce qu'un paramètre d'une fonction ?](#5-quest-ce-quun-paramètre-dune-fonction-)
@@ -295,15 +295,15 @@ if (choix == 1) {
 
 </details>
 
-### 4. Que faire si nous sommes en face d'un cas où il y a quatre chemins possible ? (Tapez 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un caffè-latte)
+### 4. Que faire si nous sommes en face d'un cas où il y a quatre chemins possible ? (Tapez 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un café-latte)
 
 <details>
 <summary>Réponse</summary>
 
-Il faut mettre un SI dans un SI dans un SI dans un SI (et ainSi de suite)
+Il faut mettre un SI dans un SI dans un SI dans un SI (et ainsi de suite)
 
 ```java
-int choix = Clavier.rend_int("Taper 1 pour un ristretto, 2 pour un expresso, 3 pour un café");
+int choix = Clavier.rend_int("Taper 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un café-latte");
 if (choix == 1) {
     System.out.println("Voilà votre ristretto");
 } else {
@@ -314,7 +314,7 @@ if (choix == 1) {
             System.out.println("Voilà votre café");
         } else {
             if (choix == 4) {
-                System.out.println("Voilà votre caffè-latte");
+                System.out.println("Voilà votre café-latte");
             }
         }
     }
@@ -487,7 +487,7 @@ déclarée avant la boucle :
 
 ```java
 do {
-    // PIEGE !!!
+    // PIÈGE !!!
     boolean ok;
     ok = ...;
 } while (ok);
