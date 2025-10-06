@@ -14,7 +14,7 @@ Java avec leurs solutions correspondantes.
   - [5. Quel est le rôle du compilateur java ?](#5-quel-est-le-rôle-du-compilateur-java-)
   - [6. Que contient le JDK ?](#6-que-contient-le-jdk-)
   - [7. Qu'est-ce qu'une variable ?](#7-quest-ce-quune-variable-)
-  - [8. Quelle sont les règles de nommage d'une variable ?](#8-quelle-sont-les-règles-de-nommage-dune-variable-)
+  - [8. Quelles sont les règles de nommage d'une variable ?](#8-quelles-sont-les-règles-de-nommage-dune-variable-)
   - [9. Citez les huit types primitifs de java](#9-citez-les-huit-types-primitifs-de-java)
   - [10. Veuillez indiquer le résultat de l'exécution des expressions suivantes :](#10-veuillez-indiquer-le-résultat-de-lexécution-des-expressions-suivantes-)
   - [11. Quelle différence y a-t-il entre les opérateurs : `=` et `==` ?](#11-quelle-différence-y-a-t-il-entre-les-opérateurs---et--)
