@@ -36,38 +36,38 @@ Java avec leurs solutions correspondantes.
   - [4. Qu'est ce qui différencie la boucle do...while de la boucle while ?](#4-quest-ce-qui-différencie-la-boucle-dowhile-de-la-boucle-while-)
   - [5. La boucle for nécessite trois instructions (dans ses parenthèses) pour pouvoir fonctionner. Quelles sont-elles ?](#5-la-boucle-for-nécessite-trois-instructions-dans-ses-parenthèses-pour-pouvoir-fonctionner-quelles-sont-elles-)
   - [6. A quoi doit-on faire attention lors de l'utilisation d'une boucle do...while ou d'une boucle while ?](#6-a-quoi-doit-on-faire-attention-lors-de-lutilisation-dune-boucle-dowhile-ou-dune-boucle-while-)
-  - [7. Soit la boucle suivante : `while (aEncoreUneVie || nbPoints>=1000)` Quelle(s) condition(s) doit/doivent être réunie(s) pour qu'on puisse quitter la boucle ?](#7-soit-la-boucle-suivante--while-aencoreunevie--nbpoints1000-quelles-conditions-doitdoivent-être-réunies-pour-quon-puisse-quitter-la-boucle-)
+  - [7. Soit la boucle suivante : `while (hasLifeLeft || points>=1000)` Quelle(s) condition(s) doit/doivent être réunie(s) pour qu'on puisse quitter la boucle ?](#7-soit-la-boucle-suivante--while-haslifeleft--points1000-quelles-conditions-doitdoivent-être-réunies-pour-quon-puisse-quitter-la-boucle-)
   - [8. Quelle est la différence entre les instructions System.out.print(...) et System.out.println(...) ?](#8-quelle-est-la-différence-entre-les-instructions-systemoutprint-et-systemoutprintln-)
   - [9. Quelle est la différence entre ces deux boucles for ?](#9-quelle-est-la-différence-entre-ces-deux-boucles-for-)
   - [10. A quoi sert le "debugger" ?](#10-a-quoi-sert-le-debugger-)
 - [Questionnaire 04 - Tableaux](#questionnaire-04---tableaux)
   - [1. Qu'est ce qu'un tableau ?](#1-quest-ce-quun-tableau-)
-  - [2a. Veuillez créer un tableau nommé noms contenant trois chaînes de caractères](#2a-veuillez-créer-un-tableau-nommé-noms-contenant-trois-chaînes-de-caractères)
-  - [2b. Veuillez mettre la valeur "Dominique" dans la première case du tableau noms](#2b-veuillez-mettre-la-valeur-dominique-dans-la-première-case-du-tableau-noms)
-  - [2c. Veuillez mettre la valeur "Claude" dans la dernière case du tableau noms](#2c-veuillez-mettre-la-valeur-claude-dans-la-dernière-case-du-tableau-noms)
-  - [2d. Comment peut-on connaître la taille du tableau noms ?](#2d-comment-peut-on-connaître-la-taille-du-tableau-noms-)
+  - [2a. Veuillez créer un tableau nommé names contenant trois chaînes de caractères](#2a-veuillez-créer-un-tableau-nommé-names-contenant-trois-chaînes-de-caractères)
+  - [2b. Veuillez mettre la valeur "Dominique" dans la première case du tableau names](#2b-veuillez-mettre-la-valeur-dominique-dans-la-première-case-du-tableau-names)
+  - [2c. Veuillez mettre la valeur "Claude" dans la dernière case du tableau names](#2c-veuillez-mettre-la-valeur-claude-dans-la-dernière-case-du-tableau-names)
+  - [2d. Comment peut-on connaître la taille du tableau names ?](#2d-comment-peut-on-connaître-la-taille-du-tableau-names-)
   - [2e. Veuillez écrire le code nécessaire pour afficher toutes les valeurs du tableau](#2e-veuillez-écrire-le-code-nécessaire-pour-afficher-toutes-les-valeurs-du-tableau)
   - [2f. Quel est le contenu de la case du milieu du tableau ?](#2f-quel-est-le-contenu-de-la-case-du-milieu-du-tableau-)
-  - [3. Soit le code suivant, qu'affichera la ligne `System.out.println(tab);` ?](#3-soit-le-code-suivant-quaffichera-la-ligne-systemoutprintlntab-)
+  - [3. Soit le code suivant, qu'affichera la ligne `System.out.println(array);` ?](#3-soit-le-code-suivant-quaffichera-la-ligne-systemoutprintlnarray-)
   - [4. Lors de la création d'un tableau (en java) chaque case contient une valeur par défaut. Veuillez indiquer pour chaque type (primitifs et objet) la valeur par défaut.](#4-lors-de-la-création-dun-tableau-en-java-chaque-case-contient-une-valeur-par-défaut-veuillez-indiquer-pour-chaque-type-primitifs-et-objet-la-valeur-par-défaut)
   - [5. Exercice pratique : Écrire un programme permettant à l'utilisateur d'estimer la durée d'une seconde (10 essais)](#5-exercice-pratique--écrire-un-programme-permettant-à-lutilisateur-destimer-la-durée-dune-seconde-10-essais)
 - [Questionnaire 05 - Fonctions](#questionnaire-05---fonctions)
   - [1. Qu'est ce qu'une fonction ?](#1-quest-ce-quune-fonction-)
   - [2. Quelle sont les règles de nommage d'une fonction (en java) ?](#2-quelle-sont-les-règles-de-nommage-dune-fonction-en-java-)
-  - [3. Soit le code suivant : `public static void nomFonction() { ... }` Que signifie le mot void précédant le nom de la fonction ?](#3-soit-le-code-suivant--public-static-void-nomfonction----que-signifie-le-mot-void-précédant-le-nom-de-la-fonction-)
+  - [3. Soit le code suivant : `public static void functionName() { ... }` Que signifie le mot void précédant le nom de la fonction ?](#3-soit-le-code-suivant--public-static-void-functionname----que-signifie-le-mot-void-précédant-le-nom-de-la-fonction-)
   - [4. Que doit-on faire si on désire qu'une fonction retourne un entier (int) ?](#4-que-doit-on-faire-si-on-désire-quune-fonction-retourne-un-entier-int-)
   - [5. Qu'est-ce qu'un paramètre d'une fonction ?](#5-quest-ce-quun-paramètre-dune-fonction-)
   - [6. Comment envoie-t-on une valeur à une fonction ?](#6-comment-envoie-t-on-une-valeur-à-une-fonction-)
   - [7. Combien de paramètres peut avoir une fonction ?](#7-combien-de-paramètres-peut-avoir-une-fonction-)
   - [8. Comment faire pour qu'une fonction retourne deux valeurs (par exemple la valeur min et la valeur max d'un tableau) ?](#8-comment-faire-pour-quune-fonction-retourne-deux-valeurs-par-exemple-la-valeur-min-et-la-valeur-max-dun-tableau-)
   - [9. Qu'affichera l'exécution du code suivant ?](#9-quaffichera-lexécution-du-code-suivant-)
-  - [10. Veuillez écrire le code nécessaire dans la fonction main(...) pour voir le contenu du tableau retourné par la fonction rendTab() (Une valeur par ligne).](#10-veuillez-écrire-le-code-nécessaire-dans-la-fonction-main-pour-voir-le-contenu-du-tableau-retourné-par-la-fonction-rendtab-une-valeur-par-ligne)
+  - [10. Veuillez écrire le code nécessaire dans la fonction main(...) pour voir le contenu du tableau retourné par la fonction returnArray() (Une valeur par ligne).](#10-veuillez-écrire-le-code-nécessaire-dans-la-fonction-main-pour-voir-le-contenu-du-tableau-retourné-par-la-fonction-returnarray-une-valeur-par-ligne)
   - [11. Qu'affichera l'exécution du code suivant ?](#11-quaffichera-lexécution-du-code-suivant-)
 - [Questionnaire 06 - Tableaux multidimensionnels](#questionnaire-06---tableaux-multidimensionnels)
   - [1. Qu'affichera l'exécution du code suivant ?](#1-quaffichera-lexécution-du-code-suivant-)
   - [2. Qu'affichera l'exécution du code suivant ?](#2-quaffichera-lexécution-du-code-suivant-)
   - [3. Qu'affichera l'exécution du code suivant ?](#3-quaffichera-lexécution-du-code-suivant-)
-  - [4. Soit le tableau à quatre dimensions suivant, veuillez écrire le code de la fonction rendTailleDim(...) permettant de rendre la taille de la dimension voulue](#4-soit-le-tableau-à-quatre-dimensions-suivant-veuillez-écrire-le-code-de-la-fonction-rendtailledim-permettant-de-rendre-la-taille-de-la-dimension-voulue)
+  - [4. Soit le tableau à quatre dimensions suivant, veuillez écrire le code de la fonction returnDimensionSize(...) permettant de rendre la taille de la dimension voulue](#4-soit-le-tableau-à-quatre-dimensions-suivant-veuillez-écrire-le-code-de-la-fonction-returndimensionsize-permettant-de-rendre-la-taille-de-la-dimension-voulue)
   - [5. Qu'affichera l'exécution du code suivant ?](#5-quaffichera-lexécution-du-code-suivant-)
   - [6. Qu'affichera l'exécution du code suivant ?](#6-quaffichera-lexécution-du-code-suivant-)
 - [Résumé](#résumé)
@@ -113,7 +113,7 @@ un problème.
 
 ```java
 // Le premier bloc représente la classe associée au programme.
-public class Programme_1 {
+public class Program1 {
     // Le second bloc représente la fonction principale (main()) du programme.
     public static void main(String[] args) {
 
@@ -220,8 +220,8 @@ nom doit être un identifiant unique.
 variable. Exemples :
 
 ```java
-ageMin = 12
-ageDeReference = ageMin
+minAge = 12
+referenceAge = minAge
 ```
 
 **`==` est l'opérateur de comparaison.** Il permet de comparer deux données.
@@ -279,14 +279,14 @@ System.out.println((char)49);
 Il faut mettre un SI dans un SI dans un SI
 
 ```java
-int choix = Clavier.rend_int("Taper 1 pour un ristretto, 2 pour un expresso, 3 pour un café");
-if (choix == 1) {
+int choice = Clavier.rend_int("Taper 1 pour un ristretto, 2 pour un expresso, 3 pour un café");
+if (choice == 1) {
     System.out.println("Voilà votre ristretto");
 } else {
-    if (choix == 2) {
+    if (choice == 2) {
         System.out.println("Voilà votre expresso");
     } else {
-        if (choix == 3) {
+        if (choice == 3) {
             System.out.println("Voilà votre café");
         }
     }
@@ -303,17 +303,17 @@ if (choix == 1) {
 Il faut mettre un SI dans un SI dans un SI dans un SI (et ainsi de suite)
 
 ```java
-int choix = Clavier.rend_int("Taper 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un café-latte");
-if (choix == 1) {
+int choice = Clavier.rend_int("Taper 1 pour un ristretto, 2 pour un expresso, 3 pour un café, 4 pour un café-latte");
+if (choice == 1) {
     System.out.println("Voilà votre ristretto");
 } else {
-    if (choix == 2) {
+    if (choice == 2) {
         System.out.println("Voilà votre expresso");
     } else {
-        if (choix == 3) {
+        if (choice == 3) {
             System.out.println("Voilà votre café");
         } else {
-            if (choix == 4) {
+            if (choice == 4) {
                 System.out.println("Voilà votre café-latte");
             }
         }
@@ -393,8 +393,8 @@ L'extension est **.class**
 Car les réels ne sont que des approximations (pas extrêmement précis)
 
 ```java
-double val = 0.33333333333333;
-if (val == 1.0/3) {
+double value = 0.33333333333333;
+if (value == 1.0/3) {
     // ON N'ENTRE PAS DANS LE IF !!!!!!!!!
     System.out.println("La valeur vaut un tiers");
 }
@@ -410,7 +410,7 @@ if (val == 1.0/3) {
 On les compare en tenant compte d'une tolérance admissible de l'imprécision.
 
 ```java
-if (Math.abs(valeurCible - valeurReel) <= toleranceAdmissible) {
+if (Math.abs(targetValue - realValue) <= allowableTolerance) {
     // ...
 }
 ```
@@ -467,7 +467,7 @@ for (...; ...; ...) {
 Exemple :
 
 ```java
-for (int compteur=1; compteur<=10; compteur++) {
+for (int counter=1; counter<=10; counter++) {
     // instructions à répéter
 }
 ```
@@ -507,14 +507,14 @@ laquelle elle est déclarée !
 
 </details>
 
-### 7. Soit la boucle suivante : `while (aEncoreUneVie || nbPoints>=1000)` Quelle(s) condition(s) doit/doivent être réunie(s) pour qu'on puisse quitter la boucle ?
+### 7. Soit la boucle suivante : `while (hasLifeLeft || points>=1000)` Quelle(s) condition(s) doit/doivent être réunie(s) pour qu'on puisse quitter la boucle ?
 
 <details>
 <summary>Réponse</summary>
 
-Il faut que la variable `aEncoreUneVie` soit à **false**  
+Il faut que la variable `hasLifeLeft` soit à **false**  
 **ET** (😉)  
-que `nbPoints` soit **inférieur à 1000**
+que `points` soit **inférieur à 1000**
 
 </details>
 
@@ -599,42 +599,42 @@ de même type.
 
 </details>
 
-### 2a. Veuillez créer un tableau nommé noms contenant trois chaînes de caractères
+### 2a. Veuillez créer un tableau nommé names contenant trois chaînes de caractères
 
 <details>
 <summary>Réponse</summary>
 
 ```java
-String[] noms = new String[3];
+String[] names = new String[3];
 ```
 
 </details>
 
-### 2b. Veuillez mettre la valeur "Dominique" dans la première case du tableau noms
+### 2b. Veuillez mettre la valeur "Dominique" dans la première case du tableau names
 
 <details>
 <summary>Réponse</summary>
 
 ```java
-noms[0] = "Dominique";
+names[0] = "Dominique";
 ```
 
 </details>
 
-### 2c. Veuillez mettre la valeur "Claude" dans la dernière case du tableau noms
+### 2c. Veuillez mettre la valeur "Claude" dans la dernière case du tableau names
 
 <details>
 <summary>Réponse</summary>
 
 ```java
-noms[2] = "Claude";
+names[2] = "Claude";
 // ou mieux
-noms[noms.length-1] = "Claude";
+names[names.length-1] = "Claude";
 ```
 
 </details>
 
-### 2d. Comment peut-on connaître la taille du tableau noms ?
+### 2d. Comment peut-on connaître la taille du tableau names ?
 
 <details>
 <summary>Réponse</summary>
@@ -642,9 +642,9 @@ noms[noms.length-1] = "Claude";
 En utilisant la propriété `.length` liée à chaque tableau
 
 ```java
-System.out.println(noms.length);
+System.out.println(names.length);
 // ou
-int taille = noms.length;
+int size = names.length;
 ```
 
 </details>
@@ -655,16 +655,16 @@ int taille = noms.length;
 <summary>Réponse</summary>
 
 ```java
-for (int i=0; i<=noms.length-1; i++) {
-    System.out.println(noms[i]);
+for (int i=0; i<=names.length-1; i++) {
+    System.out.println(names[i]);
 }
 ```
 
 ou en utilisant une variante de la boucle for :
 
 ```java
-for (String nom : noms) {
-    System.out.println(nom);
+for (String name : names) {
+    System.out.println(name);
 }
 ```
 
@@ -681,14 +681,14 @@ Cela signifie qu'il n'y a pas de String dans cette case là.
 
 </details>
 
-### 3. Soit le code suivant, qu'affichera la ligne `System.out.println(tab);` ?
+### 3. Soit le code suivant, qu'affichera la ligne `System.out.println(array);` ?
 
 ```java
-int[] tab = new int[3];
-tab[0] = 3;
-tab[1] = 2;
-tab[2] = 3;
-System.out.println(tab);
+int[] array = new int[3];
+array[0] = 3;
+array[1] = 2;
+array[2] = 3;
+System.out.println(array);
 ```
 
 <details>
@@ -721,34 +721,34 @@ tableau.
 <summary>Réponse</summary>
 
 ```java
-public class Programme {
+public class Program {
     public static void main(String[] args) {
-        double[] estimations = new double[10];
+        double[] estimates = new double[10];
         double deltaMin = Double.MAX_VALUE;
         double delta;
-        int meilleurEssai = -1;
+        int bestAttempt = -1;
 
-        for (int i = 0; i < estimations.length; i++) {
+        for (int i = 0; i < estimates.length; i++) {
             System.out.println("Essai " + (i+1));
             Clavier.rend_String("Veuillez appuyer sur la touche Enter pour démarrer le chrono ");
             long t1 = System.currentTimeMillis();
             Clavier.rend_String("Veuillez appuyer sur la touche Enter pour stopper le chrono ");
             long t2 = System.currentTimeMillis();
-            estimations[i] = (t2-t1)/1000d;
-            System.out.println("Votre estimation : " + estimations[i] + " [s]");
+            estimates[i] = (t2-t1)/1000d;
+            System.out.println("Votre estimation : " + estimates[i] + " [s]");
             System.out.println();
 
-            delta = Math.abs(1d-estimations[i]);
+            delta = Math.abs(1d-estimates[i]);
             if (delta<deltaMin) {
                 deltaMin = delta;
-                meilleurEssai = i+1;
+                bestAttempt = i+1;
             }
         }
 
-        for (int i = 0; i < estimations.length; i++) {
-            System.out.println(i+1 + " essai(s) : " + estimations[i] + " [s]");
+        for (int i = 0; i < estimates.length; i++) {
+            System.out.println(i+1 + " essai(s) : " + estimates[i] + " [s]");
         }
-        System.out.println("Votre meilleur essai a été le " + meilleurEssai + "e avec un écart de " + deltaMin + " [s]");
+        System.out.println("Votre meilleur essai a été le " + bestAttempt + "e avec un écart de " + deltaMin + " [s]");
     }
 }
 ```
@@ -794,7 +794,7 @@ paramètres de la fonction)
 
 </details>
 
-### 3. Soit le code suivant : `public static void nomFonction() { ... }` Que signifie le mot void précédant le nom de la fonction ?
+### 3. Soit le code suivant : `public static void functionName() { ... }` Que signifie le mot void précédant le nom de la fonction ?
 
 <details>
 <summary>Réponse</summary>
@@ -811,7 +811,7 @@ Cela signifie que la fonction **ne retourne rien**
 Tout d'abord la fonction doit indiquer qu'elle retourne un entier :
 
 ```java
-public static int fonctionQuiRetourneUnEntier() {
+public static int functionThatReturnsInteger() {
     //...
 }
 ```
@@ -820,10 +820,10 @@ puis la dernière ligne de la fonction doit comporter un `return...` (pour
 retourner la valeur de cet entier) :
 
 ```java
-public static int fonctionQuiRetourneUnEntier() {
+public static int functionThatReturnsInteger() {
     // ...
-    int valeurARetourner = 5;
-    return valeurARetourner;
+    int valueToReturn = 5;
+    return valueToReturn;
 }
 ```
 
@@ -838,9 +838,9 @@ Un paramètre est une variable permettant de recevoir une donnée nécessaire au
 bon fonctionnement d'une fonction.
 
 ```java
-public static void fonctionParametree(int parametreRecu) {
+public static void parameterizedFunction(int receivedParameter) {
     // ...
-    System.out.println(parametreRecu);
+    System.out.println(receivedParameter);
     // ...
 }
 ```
@@ -856,14 +856,14 @@ En la transmettant entre les parenthèses '()' lors de l'appel à la fonction
 
 ```java
 public static void main(String[] args) {
-    int valeurATransmettre = 5;
+    int valueToTransmit = 5;
     // appel de la fonction et transmission de la valeur
-    fonctionParametree(valeurATransmettre);
+    parameterizedFunction(valueToTransmit);
 }
 
-public static void fonctionParametree(int parametreRecu) {
+public static void parameterizedFunction(int receivedParameter) {
     // ...
-    System.out.println(parametreRecu);
+    System.out.println(receivedParameter);
     // ...
 }
 ```
@@ -878,7 +878,7 @@ public static void fonctionParametree(int parametreRecu) {
 **Autant que nécessaire**
 
 ```java
-public static void fonctionParametree(int param1, int param2, double param3, String param4) {
+public static void parameterizedFunction(int param1, int param2, double param3, String param4) {
     //...
 }
 ```
@@ -893,12 +893,12 @@ public static void fonctionParametree(int param1, int param2, double param3, Str
 Il suffit de placer les deux valeurs dans un tableau et de retourner ce tableau
 
 ```java
-public static double[] fonctionQuiRetourneMinMax(...) {
+public static double[] functionThatReturnsMinMax(...) {
     double min;
     double max;
     // ...
-    double[] tabMinMax = {min, max};
-    return tabMinMax;
+    double[] minMaxArray = {min, max};
+    return minMaxArray;
 }
 ```
 
@@ -907,12 +907,12 @@ public static double[] fonctionQuiRetourneMinMax(...) {
 ### 9. Qu'affichera l'exécution du code suivant ?
 
 ```java
-public class Programme {
+public class Program {
     public static void main(String[] args) {
-        System.out.println(fonction1());
+        System.out.println(function1());
     }
-    public static int fonction1() {
-        System.out.println("fonction1");
+    public static int function1() {
+        System.out.println("function1");
         return 1;
     }
 }
@@ -922,24 +922,24 @@ public class Programme {
 <summary>Réponse</summary>
 
 ```bash
-fonction1
+function1
 1
 ```
 
 </details>
 
-### 10. Veuillez écrire le code nécessaire dans la fonction main(...) pour voir le contenu du tableau retourné par la fonction rendTab() (Une valeur par ligne).
+### 10. Veuillez écrire le code nécessaire dans la fonction main(...) pour voir le contenu du tableau retourné par la fonction returnArray() (Une valeur par ligne).
 
 ```java
-public class Programme {
+public class Program {
     public static void main(String[] args) {
         // que faut écrire ici ?
     }
-    public static int[] rendTab() {
-        int[] tab = new int[3];
-        tab[0] = 3;
-        tab[2] = 1;
-        return tab;
+    public static int[] returnArray() {
+        int[] array = new int[3];
+        array[0] = 3;
+        array[2] = 1;
+        return array;
     }
 }
 ```
@@ -948,9 +948,9 @@ public class Programme {
 <summary>Réponse</summary>
 
 ```java
-int[] tabRecup = rendTab();
-for (int i=0; i<tabRecup.length; i++) {
-    System.out.println(tabRecup[i]);
+int[] receivedArray = returnArray();
+for (int i=0; i<receivedArray.length; i++) {
+    System.out.println(receivedArray[i]);
 }
 ```
 
@@ -959,14 +959,14 @@ for (int i=0; i<tabRecup.length; i++) {
 ### 11. Qu'affichera l'exécution du code suivant ?
 
 ```java
-public class Programme {
+public class Program {
     public static void main(String[] args) {
         int a = 5;
         int b = 6;
         int c = 7;
-        afficheValeurs(a,b,c);
+        displayValues(a,b,c);
     }
-    public static void afficheValeurs(int c, int b, int a) {
+    public static void displayValues(int c, int b, int a) {
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
@@ -1001,12 +1001,12 @@ public class Prog {
         tab[1][0] = 9;
         tab[1][1] = 8;
         tab[1][2] = 7;
-        affiche(tab);
+        display(tab);
     }
-    public static void affiche(int[][] unTab) {
-        for (int i=0; i<unTab.length; i++) {
-            for (int j=0; j<unTab[0].length; j++) {
-                System.out.print(unTab[i][j]);
+    public static void display(int[][] anArray) {
+        for (int i=0; i<anArray.length; i++) {
+            for (int j=0; j<anArray[0].length; j++) {
+                System.out.print(anArray[i][j]);
                 System.out.print(' ');
             }
             System.out.println();
@@ -1030,19 +1030,19 @@ public class Prog {
 ```java
 public class Prog {
     public static void main(String[] args) {
-        int[][] tab = new int[2][3];
-        tab[0][0] = 1;
-        tab[0][1] = 2;
-        tab[0][2] = 3;
-        tab[1][0] = 9;
-        tab[1][1] = 8;
-        tab[1][2] = 7;
-        affiche(tab);
+        int[][] array = new int[2][3];
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 9;
+        array[1][1] = 8;
+        array[1][2] = 7;
+        display(array);
     }
-    public static void affiche(int[][] unTab) {
-        for (int i=0; i<unTab[0].length; i++) {
-            for (int j=0; j<unTab.length; j++) {
-                System.out.print(unTab[j][i]);
+    public static void display(int[][] anArray) {
+        for (int i=0; i<anArray[0].length; i++) {
+            for (int j=0; j<anArray.length; j++) {
+                System.out.print(anArray[j][i]);
                 System.out.print(' ');
             }
             System.out.println();
@@ -1067,15 +1067,15 @@ public class Prog {
 ```java
 public class Prog {
     public static void main(String[] args) {
-        int[][] tab = new int[2][3];
-        tab[0][0] = 1; tab[0][1] = 2; tab[0][2] = 3;
-        tab[1][0] = 9; tab[1][1] = 8; tab[1][2] = 7;
-        affiche(tab);
+        int[][] array = new int[2][3];
+        array[0][0] = 1; array[0][1] = 2; array[0][2] = 3;
+        array[1][0] = 9; array[1][1] = 8; array[1][2] = 7;
+        display(array);
     }
-    public static void affiche(int[][] unTab) {
-        for (int i=unTab.length-1; i>=0; i--) {
-            for (int j=unTab[0].length-1; j>=0; j--) {
-                System.out.print(unTab[i][j]);
+    public static void display(int[][] anArray) {
+        for (int i=anArray.length-1; i>=0; i--) {
+            for (int j=anArray[0].length-1; j>=0; j--) {
+                System.out.print(anArray[i][j]);
                 System.out.print(' ');
             }
             System.out.println();
@@ -1094,32 +1094,32 @@ public class Prog {
 
 </details>
 
-### 4. Soit le tableau à quatre dimensions suivant, veuillez écrire le code de la fonction rendTailleDim(...) permettant de rendre la taille de la dimension voulue
+### 4. Soit le tableau à quatre dimensions suivant, veuillez écrire le code de la fonction returnDimensionSize(...) permettant de rendre la taille de la dimension voulue
 
 ```java
 int[][][][] tab = new int[3][2][4][6];
-System.out.println(rendTailleDim(tab, 1)); //3
-System.out.println(rendTailleDim(tab, 2)); //2
-System.out.println(rendTailleDim(tab, 3)); //4
-System.out.println(rendTailleDim(tab, 4)); //6
+System.out.println(returnDimensionSize(tab, 1)); //3
+System.out.println(returnDimensionSize(tab, 2)); //2
+System.out.println(returnDimensionSize(tab, 3)); //4
+System.out.println(returnDimensionSize(tab, 4)); //6
 ```
 
 <details>
 <summary>Réponse</summary>
 
 ```java
-public static int rendTailleDim(int[][][][] unTab, int xDim) {
-    int taille = -1;
-    if (xDim == 1) {
-        taille = unTab.length;
-    } else if (xDim == 2) {
-        taille = unTab[0].length;
-    } else if (xDim == 3) {
-        taille = unTab[0][0].length;
-    } else if (xDim == 4) {
-        taille = unTab[0][0][0].length;
+public static int returnDimensionSize(int[][][][] anArray, int dimension) {
+    int size = -1;
+    if (dimension == 1) {
+        size = anArray.length;
+    } else if (dimension == 2) {
+        size = anArray[0].length;
+    } else if (dimension == 3) {
+        size = anArray[0][0].length;
+    } else if (dimension == 4) {
+        size = anArray[0][0][0].length;
     }
-    return taille;
+    return size;
 }
 ```
 
@@ -1128,8 +1128,8 @@ public static int rendTailleDim(int[][][][] unTab, int xDim) {
 ### 5. Qu'affichera l'exécution du code suivant ?
 
 ```java
-boolean[][] aEteVisite = new boolean[8][8];
-System.out.println(aEteVisite[4][2]);
+boolean[][] hasBeenVisited = new boolean[8][8];
+System.out.println(hasBeenVisited[4][2]);
 ```
 
 <details>
@@ -1145,8 +1145,8 @@ soit le nombre de dimensions)
 ### 6. Qu'affichera l'exécution du code suivant ?
 
 ```java
-int[][][][] tab = new int[3][2][4][6];
-System.out.println(tab[2][1][3].length);
+int[][][][] array = new int[3][2][4][6];
+System.out.println(array[2][1][3].length);
 ```
 
 <details>
