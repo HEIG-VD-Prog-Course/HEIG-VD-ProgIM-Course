@@ -20,6 +20,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
+- [Objectifs](#objectifs)
 - [L'itération](#litération)
   - [Qu'est-ce que l'itération ? (rappel)](#quest-ce-que-litération--rappel)
   - [La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)](#la-boucle-tant-que-quand-on-ne-connaît-pas-le-nombre-ditérations)
@@ -28,6 +29,13 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Comparaison rapide : POUR vs TANT QUE](#comparaison-rapide--pour-vs-tant-que)
   - [Erreurs courantes et bonnes pratiques](#erreurs-courantes-et-bonnes-pratiques)
   - [Sources et liens utiles](#sources-et-liens-utiles)
+
+## Objectifs
+
+- Comprendre le concept d'itération et son utilité dans la programmation.
+- Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
+- Être capable de représenter des boucles en pseudocode et en diagrammes
+  d'activité UML.
 
 ## L'itération
 

@@ -17,21 +17,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-Cette séance a pour but de vous présenter les concepts fondamentaux de la
-programmation, à savoir la séquence, la sélection et l'itération. Et de savoir
-les représenter à l'aide de pseudocode et de diagrammes d'activités.
-
-De façon plus concise, à la fin de cette séance, vous devriez être capable de :
-
-- Comprendre les trois piliers fondamentaux de la programmation
-- Décrire le concept de variable en programmation
-- Écrire des algorithmes en pseudocode
-- Créer des diagrammes d'activité avec PlantUML
-- Comprendre et appliquer la séquence d'instructions
-- Décrire la sélection avec les conditions SI/ALORS/SINON
-- Utiliser l'itération avec les différents types de boucles
-- Traduire des concepts algorithmiques en diagrammes visuels
-- Analyser et décomposer des problèmes complexes
+- Comprendre le concept d'itération et son utilité dans la programmation.
+- Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
+- Être capable de représenter des boucles en pseudocode et en diagrammes
+  d'activité UML.
 
 ## Méthodes d'enseignement et d'apprentissage
 
