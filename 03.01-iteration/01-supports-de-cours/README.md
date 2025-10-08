@@ -186,7 +186,7 @@ stop
 @enduml
 ```
 
-![entrainement](images/entrainement.png)
+![entraînement](images/entrainement.png)
 
 <details>
 <summary>Java</summary>
