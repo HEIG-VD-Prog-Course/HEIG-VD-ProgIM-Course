@@ -87,7 +87,7 @@ Exemple 1 — Économiser pour un objectif
 Phrase descriptive :
 
 ```text
-Ajouter 50 euros dans la tirelire chaque semaine jusqu'à atteindre 300 euros.
+Ajouter 50 francs dans la tirelire chaque semaine jusqu'à atteindre 300 francs.
 ```
 
 Pseudocode :
@@ -136,10 +136,10 @@ public class Economies {
 
     while (total < objectif) {
       total = total + economie_hebdo;
-      System.out.println("Économies actuelles : " + total + " euros");
+      System.out.println("Économies actuelles : " + total + " francs");
     }
 
-    System.out.println("Objectif atteint : " + total + " euros");
+    System.out.println("Objectif atteint : " + total + " francs");
   }
 }
 ```
@@ -225,7 +225,7 @@ accumulateur (somme). Voici deux analogies faciles :
 - Un **panier** contient des pommes. On peut avoir une variable `pommes` qui
   indique combien de pommes sont dans le panier.
 - Un **portefeuille** contient de l'argent. On peut avoir une variable `argent`
-  qui indique combien d'euros on a.
+  qui indique combien d'francs on a.
 
 Ces variables peuvent être lues et modifiées à chaque répétition :
 
