@@ -10,9 +10,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](.)
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Objectifs

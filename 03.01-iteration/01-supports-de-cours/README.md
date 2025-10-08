@@ -11,318 +11,365 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
-- Exercices : [Énoncés et solutions](../02-exercices/README.md)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
 
 ## Table des matières
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Objectifs](#objectifs)
 - [L'itération](#litération)
-  - [Qu'est-ce qu'une itération ?](#quest-ce-quune-itération-)
-  - [Types d'itération](#types-ditération)
-  - [Pseudocode pour l'itération](#pseudocode-pour-litération)
-  - [Diagrammes d'activité pour l'itération](#diagrammes-dactivité-pour-litération)
-- [Conclusion](#conclusion)
-  - [Ce que vous savez maintenant faire](#ce-que-vous-savez-maintenant-faire)
-  - [Prochaines étapes](#prochaines-étapes)
-  - [Bibliographie et ressources utilisées](#bibliographie-et-ressources-utilisées)
-
-## Objectifs
-
-De façon plus concise, à la fin de cette séance, vous devriez être capable de :
-
--
+  - [Qu'est-ce que l'itération ? (rappel)](#quest-ce-que-litération--rappel)
+  - [La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)](#la-boucle-tant-que-quand-on-ne-connaît-pas-le-nombre-ditérations)
+  - [Variables pour les boucles (exemples réels)](#variables-pour-les-boucles-exemples-réels)
+  - [La boucle POUR (quand on connaît le nombre d'itérations)](#la-boucle-pour-quand-on-connaît-le-nombre-ditérations)
+  - [Comparaison rapide : POUR vs TANT QUE](#comparaison-rapide--pour-vs-tant-que)
+  - [Petits exercices proposés (sans programmation)](#petits-exercices-proposés-sans-programmation)
+  - [Erreurs courantes et bonnes pratiques](#erreurs-courantes-et-bonnes-pratiques)
 
 ## L'itération
 
-### Qu'est-ce qu'une itération ?
+### Qu'est-ce que l'itération ? (rappel)
 
-L'itération permet de répéter des instructions plusieurs fois. C'est très utile
-quand on doit faire la même chose de nombreuses fois, comme compter de 1 à 100
-ou traiter une liste d'éléments.
+L'itération permet de répéter des actions plusieurs fois. On emploie des
+structures d'itération pour automatiser des tâches répétitives : distribuer
+quelque chose à plusieurs personnes, calculer une somme mois après mois, ou
+parcourir une collection d'objets.
 
-**Exemple concret** : Pour apprendre les tables de multiplication, on répète :
+Deux structures très utilisées sont :
 
-- "2 × 1 = 2"
-- "2 × 2 = 4"
-- "2 × 3 = 6"
-- ... jusqu'à "2 × 10 = 20"
+- **TANT QUE** (while) : quand on répète tant qu'une condition est vraie
+- **POUR** (for) : quand on sait à l'avance combien de fois on doit répéter
 
-### Types d'itération
+### La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)
 
-Il existe trois types principaux d'itération :
+La boucle `TANT QUE` répète tant qu'une condition est vraie. Elle est utile
+quand on ne connaît pas à l'avance le nombre d'itérations, mais on sait qu'on
+s'arrêtera quand une condition sera satisfaite.
 
-1. **POUR** (for) : quand on sait combien de fois répéter
-2. **TANT QUE** (while) : quand on répète tant qu'une condition est vraie
-3. **RÉPÉTER JUSQU'À** (repeat until) : quand on répète jusqu'à ce qu'une
-   condition soit vraie
-
-### Pseudocode pour l'itération
-
-#### Boucle POUR
+Structure générale :
 
 ```text
-POUR variable DE valeur_début À valeur_fin FAIRE
-    actions à répéter
-FIN POUR
-```
-
-**Exemple** : Arroser toutes les plantes du jardin :
-
-```text
-DÉBUT
-    POUR chaque plante du jardin FAIRE
-        Arroser la plante
-    FIN POUR
-FIN
-```
-
-<details>
-<summary>Exemple en Java</summary>
-
-```java
-public class ArroserPlantes {
-    public static void main(String[] args) {
-        // Définir les plantes du jardin
-        String[] plantes = {"Rose", "Tulipe", "Marguerite", "Lavande", "Basilic"};
-
-        System.out.println("Commencer l'arrosage du jardin :");
-
-        // Boucle POUR : arroser chaque plante du jardin
-        for (int i = 0; i < plantes.length; i++) {
-            System.out.println("Arroser la " + plantes[i]);
-        }
-
-        System.out.println("Toutes les plantes sont arrosées !");
-    }
-}
-```
-
-</details>
-
-#### Boucle TANT QUE
-
-```text
-TANT QUE condition FAIRE
-    actions à répéter
+TANT QUE (condition) FAIRE
+  actions à répéter
 FIN TANT QUE
 ```
 
-**Exemple** : Chercher ses clés :
+Exemple 1 — Économiser pour un objectif
+
+Phrase descriptive : "Ajouter 50 euros dans la tirelire chaque semaine jusqu'à
+atteindre 300 euros."  
+Pseudocode (version « vie réelle ») :
 
 ```text
 DÉBUT
-    TANT QUE les clés ne sont pas trouvées FAIRE
-        Regarder dans une poche
-        Regarder sur la table
-        Regarder dans le sac
-        Regarder sous les coussins
-    FIN TANT QUE
+  Définir son objectif à 300.-
+  Définir ses économies hebdomadaires à 50.-
+  Ma tirelire d'économie ne contient rien pour le moment
 
-    Prendre les clés et sortir
+  TANT QUE ma tirelire ne contient pas mon objectif FAIRE
+    J'ajoute mes économies hebdomadaires à ma tirelire
+  FIN TANT QUE
+
+  J'ai réussi à économiser mon objectif de 300.- !!!
 FIN
 ```
 
+PlantUML :
+
+```plantuml
+@startuml
+start
+:Définir son objectif à 300.-;
+:Définir ses économies hebdomadaires à 50.-;
+:Ma tirelire d'économie ne contient rien pour le moment;
+while (ma tirelire ne contient pas mon objectif) is (oui)
+  :J'ajoute mes économies hebdomadaires à ma tirelire;
+endwhile
+:J'ai réussi à économiser mon objectif de 300.- !!!;
+stop
+@enduml
+```
+
 <details>
-<summary>Exemple en Java</summary>
+<summary>Java</summary>
 
 ```java
-import java.util.Random;
+public class Economies {
+  public static void main(String[] args) {
+    int objectif = 300;
+    int economie_hebdo = 50;
+    int total = 0;
 
-public class ChercherCles {
-    public static void main(String[] args) {
-        // Simuler la recherche de clés
-        Random random = new Random();
-        boolean cles_trouvees = false;
-
-        System.out.println("Oh non ! Où sont mes clés ?");
-
-        // Boucle TANT QUE les clés ne sont pas trouvées
-        while (!cles_trouvees) {
-            System.out.println("Regarder dans une poche...");
-            System.out.println("Regarder sur la table...");
-            System.out.println("Regarder dans le sac...");
-            System.out.println("Regarder sous les coussins...");
-
-            // Simuler la chance de trouver les clés (20% à chaque tentative)
-            if (random.nextInt(5) == 0) {
-                cles_trouvees = true;
-            } else {
-                System.out.println("Toujours pas trouvées, continuer à chercher...\n");
-            }
-        }
-
-        System.out.println("Trouvées ! Prendre les clés et sortir");
+    while (total < objectif) {
+      total = total + economie_hebdo;
+      System.out.println("Économies actuelles : " + total + " euros");
     }
+
+    System.out.println("Objectif atteint : " + total + " euros");
+  }
 }
 ```
 
 </details>
 
-#### Boucle RÉPÉTER JUSQU'À
+Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes
 
-```text
-RÉPÉTER
-    actions à répéter
-JUSQU'À (condition)
-```
-
-**Exemple** : Apprendre une nouvelle recette :
+Phrase descriptive : "Faire des séries de 15 minutes jusqu'à totaliser au moins
+60 minutes d'entraînement."  
+Pseudocode (version « vie réelle ») :
 
 ```text
 DÉBUT
-    RÉPÉTER
-        Essayer de faire la recette
-        Goûter le résultat
-    JUSQU'À le goût est satisfaisant
+  Je me fixe un objectif de 60 minutes d'entraînement
+  Chaque série d'exercice dure 15 minutes
+  Pour l'instant, je n'ai pas encore commencé à m'entraîner
 
-    Servir le plat
+  TANT QUE je n'ai pas atteint mon objectif de 60 minutes FAIRE
+    J'ajoute une série de 15 minutes à mon temps d'entraînement
+  FIN TANT QUE
+
+  J'ai terminé mon objectif d'entraînement de 60 minutes !
 FIN
 ```
 
+PlantUML :
+
+```plantuml
+@startuml
+start
+:Je me fixe un objectif de 60 minutes d'entraînement;
+:Chaque série d'exercice dure 15 minutes;
+:Pour l'instant, je n'ai pas encore commencé à m'entraîner;
+while (je n'ai pas atteint mon objectif de 60 minutes) is (oui)
+  :J'ajoute une série de 15 minutes à mon temps d'entraînement;
+endwhile
+:J'ai terminé mon objectif d'entraînement de 60 minutes !;
+stop
+@enduml
+```
+
 <details>
-<summary>Exemple en Java</summary>
+<summary>Java</summary>
 
 ```java
-import java.util.Random;
+public class Pratique {
+  public static void main(String[] args) {
+    int objectif_minutes = 60;
+    int duree_serie = 15;
+    int total_minutes = 0;
 
-public class ApprendreRecette {
-    public static void main(String[] args) {
-        // Simuler l'apprentissage d'une recette
-        Random random = new Random();
-        boolean gout_satisfaisant = false;
-        int tentative = 1;
-
-        System.out.println("Apprendre à faire des crêpes :");
-
-        // Boucle RÉPÉTER JUSQU'À ce que le goût soit satisfaisant
-        do {
-            System.out.println("\nTentative " + tentative + " :");
-            System.out.println("Essayer de faire la recette...");
-            System.out.println("Mélanger la farine, les œufs et le lait");
-            System.out.println("Faire cuire la crêpe");
-            System.out.println("Goûter le résultat...");
-
-            // Simuler si le goût est satisfaisant (30% de chance à chaque fois)
-            if (random.nextInt(10) < 3) {
-                gout_satisfaisant = true;
-                System.out.println("Mmm, délicieux ! Le goût est parfait !");
-            } else {
-                System.out.println("Pas terrible... il faut réessayer");
-                tentative++;
-            }
-
-        } while (!gout_satisfaisant);
-
-        System.out.println("\nServir le plat - Recette maîtrisée !");
+    while (total_minutes < objectif_minutes) {
+      total_minutes = total_minutes + duree_serie;
+      System.out.println("Minutes pratiquées : " + total_minutes);
     }
+
+    System.out.println("Objectif de pratique atteint : " + total_minutes + " minutes");
+  }
 }
 ```
 
 </details>
 
-### Diagrammes d'activité pour l'itération
+Points d'attention pour `TANT QUE` :
 
-#### Boucle POUR avec PlantUML
+- Veillez à modifier une variable qui fera évoluer la condition (sinon la boucle
+  peut devenir infinie).
+- Vérifiez la condition avant d'entrer dans la boucle (si elle est fausse au
+  départ, le corps ne sera pas exécuté).
+
+### Variables pour les boucles (exemples réels)
+
+Les boucles s'appuient souvent sur des variables : un compteur (indice) ou un
+accumulateur (somme). Voici deux analogies faciles :
+
+- Un **panier** contient des pommes. On peut avoir une variable `pommes` qui
+  indique combien de pommes sont dans le panier.
+- Un **portefeuille** contient de l'argent. On peut avoir une variable `argent`
+  qui indique combien d'euros on a.
+
+Ces variables peuvent être lues et modifiées à chaque répétition :
+
+Phrase descriptive : "Je commence avec un panier contenant 5 pommes."  
+Pseudocode :
+
+```text
+DÉBUT
+  pommes = 5
+  Afficher "Il y a", pommes, "pommes dans le panier"
+FIN
+```
+
+PlantUML :
 
 ```plantuml
 @startuml
 start
-:plante = première plante;
-while (il reste des plantes) is (oui)
-    :Arroser la plante;
-    :plante = plante suivante;
-endwhile (non)
-:Toutes les plantes sont arrosées;
+:pommes = 5;
+:Afficher "Il y a 5 pommes dans le panier";
 stop
 @enduml
 ```
 
-#### Boucle TANT QUE
+<details>
+<summary>Java</summary>
+
+```java
+public class Panier {
+  public static void main(String[] args) {
+    int pommes = 5;
+    System.out.println("Il y a " + pommes + " pommes dans le panier");
+  }
+}
+```
+
+</details>
+
+> À retenir : pour les boucles on utilise souvent :
+
+- un compteur (par exemple `i` ou `index`) qui indique la position courante
+- un accumulateur (par exemple `total` ou `somme`) qui cumule une valeur
+
+### La boucle POUR (quand on connaît le nombre d'itérations)
+
+La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter
+une action (par exemple : arroser 5 plantes, distribuer 6 parts, etc.).
+
+Structure générale :
+
+```text
+POUR variable DE valeur_debut À valeur_fin FAIRE
+  actions à répéter
+FIN POUR
+```
+
+Exemple 1 — Arroser les plantes du jardin
+
+Phrase descriptive : "Arroser successivement chacune des 5 plantes du jardin."
+
+Pseudocode :
+
+```text
+DÉBUT
+  nombre_plantes = 5
+  POUR plante_index DE 1 À nombre_plantes FAIRE
+    Afficher "Arroser la plante", plante_index
+  FIN POUR
+FIN
+```
+
+PlantUML :
 
 ```plantuml
 @startuml
 start
-:cles_trouvees = faux;
-while (les clés ne sont pas trouvées) is (oui)
-    :Regarder dans une poche;
-    :Regarder sur la table;
-    :Regarder dans le sac;
-    :Regarder sous les coussins;
-    if (clés trouvées ?) then (oui)
-        :cles_trouvees = vrai;
-    endif
-endwhile (non)
-:Prendre les clés et sortir;
+:nombre_plantes = 5;
+:plante_index = 1;
+while (plante_index <= nombre_plantes) is (oui)
+    :Afficher "Arroser la plante " + plante_index;
+    :plante_index = plante_index + 1;
+endwhile
 stop
 @enduml
 ```
 
-#### Boucle RÉPÉTER JUSQU'À
+<details>
+<summary>Java</summary>
+
+```java
+public class ArroserPlantes {
+  public static void main(String[] args) {
+    int nombre_plantes = 5;
+    for (int plante_index = 1; plante_index <= nombre_plantes; plante_index++) {
+      System.out.println("Arroser la plante " + plante_index);
+    }
+  }
+}
+```
+
+</details>
+
+Exemple 2 — Distribuer des parts de gâteau
+
+Phrase descriptive : "Donner une part de gâteau à chacun des 8 invités."
+
+Pseudocode :
+
+```text
+DÉBUT
+  nombre_invites = 8
+  POUR i DE 1 À nombre_invites FAIRE
+    Afficher "Donner une part au invité", i
+  FIN POUR
+FIN
+```
+
+PlantUML :
 
 ```plantuml
 @startuml
 start
-repeat
-    :Essayer de faire la recette;
-    :Goûter le résultat;
-repeat while (le goût n'est pas satisfaisant) is (oui) not (non)
-:Servir le plat;
+:nombre_invites = 8;
+:i = 1;
+while (i <= nombre_invites) is (oui)
+  :Afficher "Donner une part au invité " + i;
+  :i = i + 1;
+endwhile
 stop
 @enduml
 ```
 
-## Conclusion
+<details>
+<summary>Java</summary>
 
-Félicitations ! Vous venez d'apprendre les trois piliers de la programmation :
+```java
+public class DistribuerPart {
+  public static void main(String[] args) {
+    int nombre_invites = 8;
+    for (int i = 1; i <= nombre_invites; i++) {
+      System.out.println("Donner une part au invité " + i);
+    }
+  }
+}
+```
 
-1. **La séquence** : exécuter des instructions dans l'ordre
-2. **La sélection** : prendre des décisions avec SI/ALORS/SINON
-3. **L'itération** : répéter des actions avec des boucles
+</details>
 
-Ces concepts sont universels et se retrouvent dans tous les langages de
-programmation. Que vous appreniez Java, Python, JavaScript ou tout autre
-langage, vous utiliserez toujours ces trois structures de base.
+Remarques pour `POUR` :
 
-### Ce que vous savez maintenant faire
+- L'indice commence souvent à 0 ou 1 selon la convention. Ici nous commençons à
+  1 pour rester proche du comptage humain.
+- Faites attention aux erreurs du type "off-by-one" : vérifier si la borne
+  supérieure est incluse ou non.
 
-- Écrire des algorithmes simples en pseudocode
-- Créer des diagrammes d'activités avec PlantUML
-- Comprendre le flux d'exécution d'un programme
-- Analyser et décomposer un problème en étapes logiques
+### Comparaison rapide : POUR vs TANT QUE
 
-### Prochaines étapes
+- `POUR` : vous utilisez un compteur quand vous savez exactement combien de
+  répétitions exécuter.
+- `TANT QUE` : vous répétez tant qu'une condition est vraie ; le nombre
+  d'itérations peut être variable.
 
-Dans les prochains cours, vous apprendrez :
+### Petits exercices proposés (sans programmation)
 
-- À traduire votre pseudocode en vrai code Java
-- À utiliser des variables et des types de données
-- À créer des fonctions pour organiser votre code
-- À manipuler des tableaux et des structures de données plus complexes
+1. Écrivez en une phrase l'algorithme pour : mettre une serviette sur chaque
+   chaise de la salle si on a 12 chaises.
+2. Écrivez en pseudocode : ajouter 20 CHF dans une tirelire chaque semaine
+   jusqu'à atteindre 200 CHF.
+3. Dessinez un petit diagramme d'activité (à la main ou avec PlantUML) pour
+   distribuer des flyers à 30 maisons.
 
-> [!IMPORTANT]
->
-> La programmation s'apprend par la pratique ! N'hésitez pas à créer vos propres
-> exercices et à expérimenter avec les diagrammes PlantUML. Plus vous pratiquez,
-> plus ces concepts deviendront naturels.
+Ces exercices visent à vous entraîner à raisonner en termes de variables,
+compteurs et conditions avant d'aborder la traduction en code Java.
 
-**Ressources pour aller plus loin :**
+### Erreurs courantes et bonnes pratiques
 
-- [Documentation PlantUML pour les diagrammes d'activité](https://plantuml.com/fr/activity-diagram-beta)
-
-### Bibliographie et ressources utilisées
-
-Les ressources suivantes ont été utilisées pour la préparation de ce cours :
-
-- <https://plantuml.com/fr/activity-diagram-beta>
-- <https://www.w3schools.com/java/java_intro.asp>
-- <https://www.geeksforgeeks.org/java/java/>
-- <https://www.learnjavaonline.org/>
-- <https://upskillcourses.com/courses/essential-web-developer-course>
+- Toujours initialiser vos variables (compteurs, accumulateurs) avant la boucle.
+- Penser à la condition d'arrêt : testez avec de petites valeurs pour vérifier
+  que votre boucle s'arrête correctement.
+- Éviter les boucles infinies : assurez-vous que la condition deviendra
+  éventuellement fausse.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
