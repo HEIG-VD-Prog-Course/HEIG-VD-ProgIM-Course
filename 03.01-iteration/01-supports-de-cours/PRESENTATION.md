@@ -42,369 +42,301 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs (1/3)
-
-- Comprendre les trois piliers fondamentaux de la programmation
-- Décrire le concept de variable en programmation
-- Écrire des algorithmes en pseudocode
-- Créer des diagrammes d'activité avec PlantUML
-
-![bg right:40%][illustration-objectifs]
-
-## Objectifs (2/3)
-
-- Comprendre et appliquer la séquence d'instructions
-- Décrire la sélection avec les conditions SI/ALORS/SINON
-- Utiliser l'itération avec les différents types de boucles
-- Traduire des concepts algorithmiques en diagrammes visuels
-
-## Objectifs (3/3)
-
-- Analyser et décomposer des problèmes complexes
-
-![bg right:40%][illustration-objectifs]
-
-## Les variables
-
-<!-- _class: lead -->
-
-### Qu'est-ce qu'une variable ?
-
-- Une **boîte** qui peut contenir une valeur
-- Comme une **étiquette** sur un tiroir
-- Peut changer de contenu au cours du temps
-- Essentielle pour stocker et manipuler des données
-
-### Variables : exemple concret
-
-```text
-name = "Marie"
-user_age = 20
-height = 1.65
-is_student = vrai
-```
-
-**Analogie** : Pensez aux variables comme des tiroirs étiquetés dans un bureau.
-
-## Le pseudocode
-
-<!-- _class: lead -->
-
-### Qu'est-ce que le pseudocode ?
-
-- Langage **simplifié** pour décrire des algorithmes
-- **Français structuré** avec des mots-clés
-- Indépendant de tout langage de programmation
-- Permet de **réfléchir** avant de coder
-
-### Règles de base du pseudocode
-
-```text
-DÉBUT
-    Demander le nom de l'utilisatrice
-    Sauvegarder le nom dans la variable name
-
-    Afficher "Bonjour", name
-FIN
-```
-
-- `DÉBUT` et `FIN` délimitent l'algorithme
-- Instructions claires en français
-- Utilisation de variables explicites
-
-## PlantUML : vos diagrammes visuels
-
-<!-- _class: lead -->
-
-### Pourquoi utiliser PlantUML ?
-
-- **Visualise** la logique de vos algorithmes
-- **Facilite la compréhension** des flux complexes
-- **Standard professionnel** dans l'informatique
-- **Éditeur en ligne** disponible gratuitement
-
-Liens utiles :
-
-- <https://plantuml.nortalle.ch>
-- <https://www.plantuml.com/plantuml/uml/>
-- <https://plantuml.com/fr/activity-diagram-beta>
-
-### Éléments de base PlantUML
-
-- `start` / `stop` : début et fin
-- `:action;` : une action
-
-```plantuml
-@startuml
-start
-:Action 1;
-if (condition) then (oui)
-    :Action 2;
-else (non)
-    :Action 3;
-endif
-stop
-@enduml
-```
-
-![bg right:30% w:100%][illustration-plantuml]
-
-## Les trois piliers de la programmation
-
-<!-- _class: lead -->
-
-**Tout programme informatique repose sur trois concepts fondamentaux :**
-
-1. **Séquence** : exécuter des instructions dans l'ordre
-2. **Sélection** : prendre des décisions
-3. **Itération** : répéter des actions
-
-## La séquence
-
-<!-- _class: lead -->
-
-### Qu'est-ce qu'une séquence ?
-
-- Suite d'**instructions exécutées dans l'ordre**
-- Chaque instruction se fait **après** la précédente
-- Comme une **recette de cuisine** : étape 1, puis 2, puis 3...
-
-### Exemple de séquence
-
-```text
-DÉBUT
-    Afficher "Quel est votre nom ?"
-    Demander user_name
-
-    Afficher "Quel est votre âge ?"
-    Demander user_age
-
-    Afficher "Bonjour", user_name, "vous avez", user_age, "ans"
-FIN
-```
-
-Va afficher : "Bonjour Alice, vous avez 30 ans" si l'utilisatrice a entré
-"Alice" et "30".
-
-### Diagramme d'activité - Séquence
-
-![bg right:40% w:100%][illustration-sequence]
-
-```plantuml
-@startuml sequence
-start
-:Afficher "Quel est votre nom ?";
-:Demander de rentrer le nom;
-:Affecter le nom à la variable user_name;
-:Afficher "Quel est votre âge ?";
-:Demander de rentrer l'âge;
-:Affecter l'âge à la variable user_age;
-:Afficher "Bonjour", user_name, "vous avez", user_age, "ans";
-stop
-@enduml
-```
-
-**Les rectangles** montrent la séquence d'actions.
-
-## La sélection
-
-<!-- _class: lead -->
-
-### Qu'est-ce qu'une sélection ?
-
-- Permet de **prendre des décisions** dans un programme
-- **SI** une condition est vraie, **ALORS** faire quelque chose
-- **SINON** faire autre chose
-- Comme un **carrefour** : aller à gauche ou à droite ?
-
-### Structure de la sélection
-
-```text
-SI (condition) ALORS
-    actions si la condition est vraie
-SINON
-    actions si la condition est fausse
-FIN SI
-```
-
-**Exemple** : Déterminer si une personne peut voter
-
-### Exemple concret de sélection
-
-```text
-DÉBUT
-    Demander l'âge de la personne
-    Sauvegarder l'âge dans user_age
-
-    SI (user_age >= 18) ALORS
-        Afficher "Vous pouvez voter"
-    SINON
-        Afficher "Vous ne pouvez pas encore voter"
-    FIN SI
-FIN
-```
-
-### Diagramme d'activité - Sélection
-
-![bg right:40% w:100%][illustration-selection]
-
-```plantuml
-@startuml
-start
-:Demander l'âge;
-:Sauvegarder dans user_age;
-if (user_age >= 18) then (oui)
-    :Afficher "Vous pouvez voter";
-else (non)
-    :Afficher "Vous ne pouvez pas encore voter";
-endif
-stop
-@enduml
-```
-
-**Le losange** représente la condition.
-
 ## L'itération
 
-<!-- _class: lead -->
+L'itération permet de répéter des actions plusieurs fois. On emploie des
+structures d'itération pour automatiser des tâches répétitives : distribuer
+quelque chose à plusieurs personnes, calculer une somme mois après mois, ou
+parcourir une collection d'objets.
 
-### Qu'est-ce qu'une itération ?
+Deux structures très utilisées sont :
 
-- Permet de **répéter** des instructions plusieurs fois
-- Évite de réécrire le même code
-- Comme apprendre ses **tables de multiplication** : répéter jusqu'à maîtriser
-- Trois types principaux de boucles
+- **TANT QUE** (while) : quand on répète tant qu'une condition est vraie
+- **POUR** (for) : quand on sait à l'avance combien de fois on doit répéter
 
-### Les trois types d'itération
+## La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)
 
-1. **POUR** : quand on sait **combien de fois** répéter
-2. **TANT QUE** : répéter **tant qu'une condition** est vraie
-3. **RÉPÉTER JUSQU'À** : répéter **jusqu'à ce qu'une condition** soit vraie
+> Dans la plupart des langages de programmation, la boucle « TANT QUE »
+> s'appelle « WHILE » (mot anglais pour « tant que »).
 
-### Boucle POUR - Exemple
+La boucle `TANT QUE` répète tant qu'une condition est vraie. Elle est utile
+quand on ne connaît pas à l'avance le nombre d'itérations, mais on sait qu'on
+s'arrêtera quand une condition sera satisfaite.
 
-```text
-DÉBUT
-    POUR i DE 1 À 10 FAIRE
-        Afficher "Table de 5 :", 5, "×", i, "=", (5 * i)
-    FIN POUR
-FIN
-```
-
-**Résultat** : Affiche la table de multiplication de 5 de 1 à 10.
-
-### Boucle TANT QUE - Exemple
+Structure générale :
 
 ```text
-DÉBUT
-    secret_number = 42
-    guessed_number = 0
-    Demander un nombre
-    TANT QUE (guessed_number ≠ secret_number) FAIRE
-        SI (guessed_number < secret_number) ALORS
-            Afficher "Trop petit !"
-        SINON
-            Afficher "Trop grand !"
-        FIN SI
-        Demander un nombre
-    FIN TANT QUE
-    Afficher "Bravo !"
-FIN
+TANT QUE (condition) FAIRE
+  actions à répéter
+FIN TANT QUE
 ```
 
-### Diagramme d'activité - Itération
+### Comment représenter une boucle TANT QUE en UML ?
+
+Dans un diagramme d'activité UML, une boucle « TANT QUE » (while) est
+représentée par une flèche qui revient vers une condition. Tant que la condition
+est vraie, on répète les actions. Quand la condition devient fausse, on sort de
+la boucle.
 
 ```plantuml
+@startuml
 start
-:secret_number = 42;
-:guessed_number = 0;
-:Demander un nombre;
-while (guessed_number ≠ secret_number) is (oui)
-    if (guessed_number < secret_number) then (oui)
-        :Afficher "Trop petit !";
-    else (non)
-        :Afficher "Trop grand !";
-    endif
-    :Demander un nombre;
-endwhile (non)
-:Afficher "Bravo !";
+while (mon panier n'est pas plein) is (oui)
+  :Je mets une pomme dans le panier;
+endwhile
+:Le panier est plein;
 stop
+@enduml
 ```
 
----
+![](images/panier.png)
 
-![bg  h:100%][illustration-iteration]
+## Exemple 1 — Économiser pour un objectif
 
-## À vous de jouer !
+Phrase descriptive :
 
-- (Re)lire le [support de cours][cours]
-- Réaliser les [exercices][exercices]
-- Expérimenter avec [PlantUML en ligne][plantuml-editor]
-- Poser des questions si nécessaire
+```text
+Ajouter 50 francs dans la tirelire chaque semaine jusqu'à atteindre 300 francs.
+```
 
-\
-**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos propres
-exercices.**
+Pseudocode :
 
-![bg right:40%][illustration-a-vous-de-jouer]
+```text
+DÉBUT
+  Définir son objectif à 300.-
+  Définir ses économies hebdomadaires à 50.-
+  Ma tirelire d'économie ne contient rien pour le moment
 
-## Questions
+  TANT QUE ma tirelire ne contient pas mon objectif FAIRE
+    J'ajoute mes économies hebdomadaires à ma tirelire
+  FIN TANT QUE
 
-<!-- _class: lead -->
+  J'ai réussi à économiser mon objectif de 300.- !!!
+FIN
+```
 
-Est-ce que vous avez des questions ?
+```plantuml
+@startuml
+start
+:Définir son objectif à 300.-;
+:Définir ses économies hebdomadaires à 50.-;
+:Ma tirelire d'économie ne contient rien pour le moment;
+while (ma tirelire ne contient pas mon objectif) is (oui)
+  :J'ajoute mes économies hebdomadaires à ma tirelire;
+endwhile
+:J'ai réussi à économiser mon objectif de 300.- !!!;
+stop
+@enduml
+```
 
-## Sources
+![](images/economies.png)
 
-- [Illustration objectifs][illustration-objectifs] par
-  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-- [Illustration variables][illustration-variables] par
-  [Javier Allegue Barros](https://unsplash.com/@soymeraki) sur
-  [Unsplash](https://unsplash.com/photos/C7B-ExXpOIE)
-- [Illustration pseudocode][illustration-pseudocode] par
-  [Florian Olivo](https://unsplash.com/@florianolv) sur
-  [Unsplash](https://unsplash.com/photos/4hbJ-eymZ1o)
-- [Illustration exercices][illustration-exercices] par
-  [Green Chameleon](https://unsplash.com/@craftedbygc) sur
-  [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
-- [Illustration récap][illustration-recap] par
-  [Patrick Perkins](https://unsplash.com/@patrickperkins) sur
-  [Unsplash](https://unsplash.com/photos/ETRPjvb0KM0)
-- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
-  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
-  [Unsplash](https://unsplash.com/photos/FJFPuE1MAOM)
+## Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes
 
-<!-- URLs -->
+Phrase descriptive :
 
-[presentation-web]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/index.html
-[presentation-pdf]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf
-[cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/03.01-iteration/01-supports-de-cours
-[exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/03.01-iteration/02-exercices
-[plantuml-editor]: https://plantuml.nortalle.ch
-[license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+```text
+Faire des séries de 15 minutes jusqu'à totaliser au moins 60 minutes d'entraînement.
+```
 
-<!-- Illustrations -->
+Pseudocode :
 
-[illustration-principale]: ./images/home.jpg
-[illustration-objectifs]:
-	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
-[illustration-variables]:
-	https://images.unsplash.com/photo-1558618666-fcd25c85cd64?fit=crop&h=720
-[illustration-pseudocode]:
-	https://images.unsplash.com/photo-1461749280684-dccba630e2f6?fit=crop&h=720
-[illustration-sequence]: ./images/sequence.png
-[illustration-selection]: ./images/selection.png
-[illustration-iteration]: ./images/iteration.png
-[illustration-plantuml]: ./images/exemple.png
-[illustration-exercices]:
-	https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720
-[illustration-recap]:
-	https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?fit=crop&h=720
-[illustration-a-vous-de-jouer]:
-	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
+```text
+DÉBUT
+  Je me fixe un objectif de 60 minutes d'entraînement
+  Chaque série d'exercice dure 15 minutes
+  Pour l'instant, je n'ai pas encore commencé à m'entraîner
+
+  TANT QUE je n'ai pas atteint mon objectif de 60 minutes FAIRE
+    J'ajoute une série de 15 minutes à mon temps d'entraînement
+  FIN TANT QUE
+
+  J'ai terminé mon objectif d'entraînement de 60 minutes !
+FIN
+```
+
+```plantuml
+@startuml
+start
+:Je me fixe un objectif de 60 minutes d'entraînement;
+:Chaque série d'exercice dure 15 minutes;
+:Pour l'instant, je n'ai pas encore commencé à m'entraîner;
+while (je n'ai pas atteint mon objectif de 60 minutes) is (oui)
+  :J'ajoute une série de 15 minutes à mon temps d'entraînement;
+endwhile
+:J'ai terminé mon objectif d'entraînement de 60 minutes !;
+stop
+@enduml
+```
+
+![](images/entrainement.png)
+
+## Points d'attention pour `TANT QUE`
+
+- Veillez à modifier une variable qui fera évoluer la condition (sinon la boucle
+  peut devenir infinie).
+- Vérifiez la condition avant d'entrer dans la boucle (si elle est fausse au
+  départ, le corps ne sera pas exécuté).
+
+## Variables
+
+Les boucles s'appuient souvent sur des variables : un compteur (indice) ou un
+accumulateur (somme). Voici deux analogies faciles :
+
+- Un **panier** contient des pommes. On peut avoir une variable `pommes` qui
+  indique combien de pommes sont dans le panier.
+- Un **portefeuille** contient de l'argent. On peut avoir une variable `argent`
+  qui indique combien d'francs on a.
+
+Ces variables peuvent être lues et modifiées à chaque répétition :
+
+Phrase descriptive :
+
+```text
+Je prends un panier vide et j'y mets 5 pommes.
+```
+
+Pseudocode :
+
+```text
+DÉBUT
+  Je prends un panier de pommes vide
+  J'y mets 5 pommes
+  Mon panier contient 5 pommes
+FIN
+```
+
+```plantuml
+@startuml
+start
+:Je prends un panier de pommes vide;
+:J'y mets 5 pommes;
+:Mon panier contient 5 pommes;
+stop
+@enduml
+```
+
+![](images/panier-5-variable.png)
+
+> À retenir : pour les boucles on utilise souvent :
+>
+> - un compteur (par exemple `i` ou `index`) qui indique la position courante
+> - un accumulateur (par exemple `total` ou `somme`) qui cumule une valeur
+
+## La boucle POUR (quand on connaît le nombre d'itérations)
+
+> Dans la plupart des langages de programmation, la boucle « POUR » s'appelle
+> « FOR » (mot anglais pour « pour »).
+
+La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter
+une action (par exemple : arroser 5 plantes, distribuer 6 parts, etc.).
+
+Structure générale :
+
+```text
+POUR variable DE valeur_debut À valeur_fin FAIRE
+  actions à répéter
+FIN POUR
+```
+
+### Comment représenter une boucle POUR en UML ?
+
+Dans un diagramme d'activité UML, une boucle « POUR » (for) ressemble à une
+boucle « TANT QUE » mais on précise souvent l'initialisation, la condition et
+l'incrémentation du compteur. On répète les actions pour chaque valeur du
+compteur.
+
+```plantuml
+@startuml
+start
+:J'ai 5 enveloppes à préparer;
+repeat
+  :Je mets une lettre dans l'enveloppe suivante;
+repeat while (il reste des enveloppes à préparer) is (oui) not (non)
+:Toutes les enveloppes sont prêtes;
+stop
+@enduml
+```
+
+![](images/enveloppe-for.png)
+
+## Exemple 1 — Arroser les plantes du jardin
+
+Phrase descriptive :
+
+```text
+Arroser successivement chacune des 5 plantes du jardin.
+```
+
+Pseudocode :
+
+```text
+DÉBUT
+  J'ai 5 plantes dans mon jardin
+  Pour chaque plante du jardin
+    J'arrose la plante
+  Fin pour
+  Toutes les plantes sont arrosées
+FIN
+```
+
+```plantuml
+@startuml
+start
+:J'ai 5 plantes dans mon jardin;
+repeat
+  :J'arrose la plante suivante;
+repeat while (il reste des plantes à arroser) is (oui) not (non)
+:Toutes les plantes sont arrosées;
+stop
+@enduml
+```
+
+## Exemple 2 — Distribuer des parts de gâteau
+
+Phrase descriptive :
+
+```text
+Donner une part de gâteau à chacun des 8 invités.
+```
+
+Pseudocode :
+
+```text
+DÉBUT
+  Il y a 8 invités à la fête
+  Pour chaque invité
+    Je donne une part de gâteau à l'invité
+  Fin pour
+  Tout le monde a eu une part de gâteau
+FIN
+```
+
+```plantuml
+@startuml
+start
+:Il y a 8 invités à la fête;
+repeat
+  :Je donne une part de gâteau à l'invité suivant;
+repeat while (il reste des invités sans part) is (oui) not (non)
+:Tout le monde a eu une part de gâteau;
+stop
+@enduml
+```
+
+![](images/gateau.png)
+
+## Comparaison rapide : POUR vs TANT QUE
+
+- `POUR` : vous utilisez un compteur quand vous savez exactement combien de
+  répétitions exécuter.
+- `TANT QUE` : vous répétez tant qu'une condition est vraie ; le nombre
+  d'itérations peut être variable.
+
+## Erreurs courantes et bonnes pratiques
+
+- Toujours initialiser vos variables (compteurs, accumulateurs) avant la boucle.
+- Penser à la condition d'arrêt : testez avec de petites valeurs pour vérifier
+  que votre boucle s'arrête correctement.
+- Éviter les boucles infinies : assurez-vous que la condition deviendra
+  éventuellement fausse.
