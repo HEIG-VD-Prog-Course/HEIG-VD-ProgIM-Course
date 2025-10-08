@@ -26,7 +26,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Variables](#variables)
   - [La boucle POUR (quand on connaît le nombre d'itérations)](#la-boucle-pour-quand-on-connaît-le-nombre-ditérations)
   - [Comparaison rapide : POUR vs TANT QUE](#comparaison-rapide--pour-vs-tant-que)
-  - [Petits exercices proposés (sans programmation)](#petits-exercices-proposés-sans-programmation)
   - [Erreurs courantes et bonnes pratiques](#erreurs-courantes-et-bonnes-pratiques)
 
 ## L'itération
@@ -432,18 +431,6 @@ Remarques pour `POUR` :
   répétitions exécuter.
 - `TANT QUE` : vous répétez tant qu'une condition est vraie ; le nombre
   d'itérations peut être variable.
-
-### Petits exercices proposés (sans programmation)
-
-1. Écrivez en une phrase l'algorithme pour : mettre une serviette sur chaque
-   chaise de la salle si on a 12 chaises.
-2. Écrivez en pseudocode : ajouter 20 CHF dans une tirelire chaque semaine
-   jusqu'à atteindre 200 CHF.
-3. Dessinez un petit diagramme d'activité (à la main ou avec PlantUML) pour
-   distribuer des flyers à 30 maisons.
-
-Ces exercices visent à vous entraîner à raisonner en termes de variables,
-compteurs et conditions avant d'aborder la traduction en code Java.
 
 ### Erreurs courantes et bonnes pratiques
 
