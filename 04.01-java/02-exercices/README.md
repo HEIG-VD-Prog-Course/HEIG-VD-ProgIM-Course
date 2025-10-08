@@ -42,6 +42,14 @@ _[Java](../01-supports-de-cours/README.md)_.
 > comprendre ou écrire du code Java**. Concentrez-vous sur le pseudocode et les
 > diagrammes d'activité, qui sont les éléments essentiels à maîtriser.
 
+> [!TIP]
+>
+> Lorem Ipsum
+
+> [!IMPORTANT]
+>
+> Lorem Ipsum
+
 ## Exercice 1
 
 ### Énoncé
