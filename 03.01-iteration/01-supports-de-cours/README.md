@@ -80,6 +80,8 @@ stop
 @enduml
 ```
 
+![panier](images/panier.png)
+
 Exemple 1 — Économiser pour un objectif
 
 Phrase descriptive : "Ajouter 50 euros dans la tirelire chaque semaine jusqu'à
@@ -115,6 +117,8 @@ endwhile
 stop
 @enduml
 ```
+
+![](images/economies.png)
 
 <details>
 <summary>Java</summary>
@@ -173,6 +177,8 @@ endwhile
 stop
 @enduml
 ```
+
+![entrainement](images/entrainement.png)
 
 <details>
 <summary>Java</summary>
@@ -238,6 +244,8 @@ stop
 @enduml
 ```
 
+![](images/panier-5-variable.png)
+
 <details>
 <summary>Java</summary>
 
@@ -293,6 +301,8 @@ repeat while (il reste des enveloppes à préparer) is (oui) not (non)
 stop
 @enduml
 ```
+
+![](images/enveloppe-for.png)
 
 Exemple 1 — Arroser les plantes du jardin
 
@@ -369,6 +379,8 @@ repeat while (il reste des invités sans part) is (oui) not (non)
 stop
 @enduml
 ```
+
+![](images/gateau.png)
 
 <details>
 <summary>Java</summary>
