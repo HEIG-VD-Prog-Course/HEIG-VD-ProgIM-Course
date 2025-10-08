@@ -40,7 +40,7 @@ _[Itération](../01-supports-de-cours/README.md)_.
 >
 > **À propos de PlantUML** : Utilisez l'éditeur PlantUML en ligne :
 > <https://plantuml.nortalle.ch>
->
+
 > [!IMPORTANT]
 >
 > **Approche pédagogique** : Ces exercices utilisent des **exemples de la vie
