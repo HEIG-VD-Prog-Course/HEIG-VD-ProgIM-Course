@@ -23,7 +23,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [L'itération](#litération)
   - [Qu'est-ce que l'itération ? (rappel)](#quest-ce-que-litération--rappel)
   - [La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)](#la-boucle-tant-que-quand-on-ne-connaît-pas-le-nombre-ditérations)
-  - [Variables pour les boucles (exemples réels)](#variables-pour-les-boucles-exemples-réels)
+  - [Variables](#variables)
   - [La boucle POUR (quand on connaît le nombre d'itérations)](#la-boucle-pour-quand-on-connaît-le-nombre-ditérations)
   - [Comparaison rapide : POUR vs TANT QUE](#comparaison-rapide--pour-vs-tant-que)
   - [Petits exercices proposés (sans programmation)](#petits-exercices-proposés-sans-programmation)
@@ -45,6 +45,9 @@ Deux structures très utilisées sont :
 
 ### La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)
 
+> [!TIP] Dans la plupart des langages de programmation, la boucle « TANT QUE »
+> s'appelle « WHILE » (mot anglais pour « tant que »).
+
 La boucle `TANT QUE` répète tant qu'une condition est vraie. Elle est utile
 quand on ne connaît pas à l'avance le nombre d'itérations, mais on sait qu'on
 s'arrêtera quand une condition sera satisfaite.
@@ -57,11 +60,31 @@ TANT QUE (condition) FAIRE
 FIN TANT QUE
 ```
 
+#### Comment représenter une boucle TANT QUE en UML ?
+
+Dans un diagramme d'activité UML, une boucle « TANT QUE » (while) est
+représentée par une flèche qui revient vers une condition. Tant que la condition
+est vraie, on répète les actions. Quand la condition devient fausse, on sort de
+la boucle.
+
+Exemple minimal (version vie réelle) :
+
+```plantuml
+@startuml
+start
+while (mon panier n'est pas plein) is (oui)
+  :Je mets une pomme dans le panier;
+endwhile
+:Le panier est plein;
+stop
+@enduml
+```
+
 Exemple 1 — Économiser pour un objectif
 
 Phrase descriptive : "Ajouter 50 euros dans la tirelire chaque semaine jusqu'à
 atteindre 300 euros."  
-Pseudocode (version « vie réelle ») :
+Pseudocode :
 
 ```text
 DÉBUT
@@ -119,7 +142,7 @@ Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes
 
 Phrase descriptive : "Faire des séries de 15 minutes jusqu'à totaliser au moins
 60 minutes d'entraînement."  
-Pseudocode (version « vie réelle ») :
+Pseudocode :
 
 ```text
 DÉBUT
@@ -180,7 +203,7 @@ Points d'attention pour `TANT QUE` :
 - Vérifiez la condition avant d'entrer dans la boucle (si elle est fausse au
   départ, le corps ne sera pas exécuté).
 
-### Variables pour les boucles (exemples réels)
+### Variables
 
 Les boucles s'appuient souvent sur des variables : un compteur (indice) ou un
 accumulateur (somme). Voici deux analogies faciles :
@@ -192,23 +215,25 @@ accumulateur (somme). Voici deux analogies faciles :
 
 Ces variables peuvent être lues et modifiées à chaque répétition :
 
-Phrase descriptive : "Je commence avec un panier contenant 5 pommes."  
-Pseudocode :
+Phrase descriptive : "Je prends un panier vide et j'y mets 5 pommes."  
+Pseudocode :
 
 ```text
 DÉBUT
-  pommes = 5
-  Afficher "Il y a", pommes, "pommes dans le panier"
+  Je prends un panier de pommes vide
+  J'y mets 5 pommes
+  Mon panier contient 5 pommes
 FIN
 ```
 
-PlantUML :
+PlantUML :
 
 ```plantuml
 @startuml
 start
-:pommes = 5;
-:Afficher "Il y a 5 pommes dans le panier";
+:Je prends un panier de pommes vide;
+:J'y mets 5 pommes;
+:Mon panier contient 5 pommes;
 stop
 @enduml
 ```
@@ -234,6 +259,9 @@ public class Panier {
 
 ### La boucle POUR (quand on connaît le nombre d'itérations)
 
+> [!TIP] Dans la plupart des langages de programmation, la boucle « POUR »
+> s'appelle « FOR » (mot anglais pour « pour »).
+
 La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter
 une action (par exemple : arroser 5 plantes, distribuer 6 parts, etc.).
 
@@ -245,32 +273,53 @@ POUR variable DE valeur_debut À valeur_fin FAIRE
 FIN POUR
 ```
 
-Exemple 1 — Arroser les plantes du jardin
+#### Comment représenter une boucle POUR en UML ?
 
-Phrase descriptive : "Arroser successivement chacune des 5 plantes du jardin."
+Dans un diagramme d'activité UML, une boucle « POUR » (for) ressemble à une
+boucle « TANT QUE » mais on précise souvent l'initialisation, la condition et
+l'incrémentation du compteur. On répète les actions pour chaque valeur du
+compteur.
 
-Pseudocode :
-
-```text
-DÉBUT
-  nombre_plantes = 5
-  POUR plante_index DE 1 À nombre_plantes FAIRE
-    Afficher "Arroser la plante", plante_index
-  FIN POUR
-FIN
-```
-
-PlantUML :
+Exemple minimal (version vie réelle) :
 
 ```plantuml
 @startuml
 start
-:nombre_plantes = 5;
-:plante_index = 1;
-while (plante_index <= nombre_plantes) is (oui)
-    :Afficher "Arroser la plante " + plante_index;
-    :plante_index = plante_index + 1;
-endwhile
+:J'ai 5 enveloppes à préparer;
+repeat
+  :Je mets une lettre dans l'enveloppe suivante;
+repeat while (il reste des enveloppes à préparer) is (oui) not (non)
+:Toutes les enveloppes sont prêtes;
+stop
+@enduml
+```
+
+Exemple 1 — Arroser les plantes du jardin
+
+Phrase descriptive : "Arroser successivement chacune des 5 plantes du jardin."
+
+Pseudocode :
+
+```text
+DÉBUT
+  J'ai 5 plantes dans mon jardin
+  Pour chaque plante du jardin
+    J'arrose la plante
+  Fin pour
+  Toutes les plantes sont arrosées
+FIN
+```
+
+PlantUML :
+
+```plantuml
+@startuml
+start
+:J'ai 5 plantes dans mon jardin;
+repeat
+  :J'arrose la plante suivante;
+repeat while (il reste des plantes à arroser) is (oui) not (non)
+:Toutes les plantes sont arrosées;
 stop
 @enduml
 ```
@@ -295,28 +344,28 @@ Exemple 2 — Distribuer des parts de gâteau
 
 Phrase descriptive : "Donner une part de gâteau à chacun des 8 invités."
 
-Pseudocode :
+Pseudocode :
 
 ```text
 DÉBUT
-  nombre_invites = 8
-  POUR i DE 1 À nombre_invites FAIRE
-    Afficher "Donner une part au invité", i
-  FIN POUR
+  Il y a 8 invités à la fête
+  Pour chaque invité
+    Je donne une part de gâteau à l'invité
+  Fin pour
+  Tout le monde a eu une part de gâteau
 FIN
 ```
 
-PlantUML :
+PlantUML :
 
 ```plantuml
 @startuml
 start
-:nombre_invites = 8;
-:i = 1;
-while (i <= nombre_invites) is (oui)
-  :Afficher "Donner une part au invité " + i;
-  :i = i + 1;
-endwhile
+:Il y a 8 invités à la fête;
+repeat
+  :Je donne une part de gâteau à l'invité suivant;
+repeat while (il reste des invités sans part) is (oui) not (non)
+:Tout le monde a eu une part de gâteau;
 stop
 @enduml
 ```

@@ -1,0 +1,7 @@
+@startuml
+start
+:Je prends un panier de pommes vide;
+:J'y mets 5 pommes;
+:Mon panier contient 5 pommes;
+stop
+@enduml

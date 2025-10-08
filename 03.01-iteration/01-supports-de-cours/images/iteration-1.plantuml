@@ -1,9 +1,0 @@
-@startuml
-start
-:Initialisation de la variable de contrôle;
-repeat
-  :Corps de la boucle;
-  :Mise à jour de la variable de contrôle;
-repeat while (Condition de continuation)
-stop
-@enduml

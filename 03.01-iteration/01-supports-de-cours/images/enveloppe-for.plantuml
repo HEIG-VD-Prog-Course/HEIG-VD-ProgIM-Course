@@ -1,0 +1,9 @@
+@startuml
+start
+:J'ai 5 enveloppes à préparer;
+repeat
+  :Je mets une lettre dans l'enveloppe suivante;
+repeat while (il reste des enveloppes à préparer) is (oui) not (non)
+:Toutes les enveloppes sont prêtes;
+stop
+@enduml
