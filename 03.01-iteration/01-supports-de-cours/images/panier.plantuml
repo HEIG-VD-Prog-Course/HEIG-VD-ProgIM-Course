@@ -1,0 +1,8 @@
+@startuml
+start
+while (mon panier n'est pas plein) is (oui)
+  :Je mets une pomme dans le panier;
+endwhile
+:Le panier est plein;
+stop
+@enduml

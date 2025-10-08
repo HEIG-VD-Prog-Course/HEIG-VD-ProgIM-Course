@@ -125,6 +125,7 @@ FIN
 
 Liens utiles :
 
+- <https://plantuml.nortalle.ch>
 - <https://www.plantuml.com/plantuml/uml/>
 - <https://plantuml.com/fr/activity-diagram-beta>
 
@@ -384,8 +385,7 @@ Est-ce que vous avez des questions ?
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/02.01-sequence-selection-iteration/01-supports-de-cours
 [exercices]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/02.01-sequence-selection-iteration/02-exercices
-[plantuml-editor]:
-	https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
+[plantuml-editor]: https://plantuml.nortalle.ch
 [license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 

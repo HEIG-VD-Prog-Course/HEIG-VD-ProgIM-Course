@@ -1,0 +1,9 @@
+@startuml
+start
+:J'ai 5 plantes dans mon jardin;
+repeat
+  :J'arrose la plante suivante;
+repeat while (il reste des plantes à arroser) is (oui) not (non)
+:Toutes les plantes sont arrosées;
+stop
+@enduml

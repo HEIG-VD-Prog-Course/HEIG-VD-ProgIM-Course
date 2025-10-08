@@ -1,0 +1,11 @@
+@startuml
+start
+:Je me fixe un objectif de 60 minutes d'entraînement;
+:Chaque série d'exercice dure 15 minutes;
+:Pour l'instant, je n'ai pas encore commencé à m'entraîner;
+while (je n'ai pas atteint mon objectif de 60 minutes) is (oui)
+  :J'ajoute une série de 15 minutes à mon temps d'entraînement;
+endwhile
+:J'ai terminé mon objectif d'entraînement de 60 minutes !;
+stop
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+start
+:Définir son objectif à 300.-;
+:Définir ses économies hebdomadaires à 50.-;
+:Ma tirelire d'économie ne contient rien pour le moment;
+while (ma tirelire ne contient pas mon objectif) is (oui)
+  :J'ajoute mes économies hebdomadaires à ma tirelire;
+endwhile
+:J'ai réussi à économiser mon objectif de 300.- !!!;
+stop
+@enduml

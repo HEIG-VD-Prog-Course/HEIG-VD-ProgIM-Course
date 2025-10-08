@@ -149,7 +149,8 @@ l'ingénierie des médias numériques.
 
 L'unité d'enseignement sera évaluée à l'aide des éléments suivants :
 
-- Une évaluation écrite à la septième semaine (50%).
+- Une évaluation écrite à la huitième semaine le vendredi 14 novembre à
+  8h30(50%).
 - Un examen écrit final à la fin du semestre (50%).
 
 ![bg right:40%][illustration-modalites-devaluation]

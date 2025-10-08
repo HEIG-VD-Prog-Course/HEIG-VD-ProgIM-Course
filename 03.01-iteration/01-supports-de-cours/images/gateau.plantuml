@@ -1,0 +1,9 @@
+@startuml
+start
+:Il y a 8 invités à la fête;
+repeat
+  :Je donne une part de gâteau à l'invité suivant;
+repeat while (il reste des invités sans part) is (oui) not (non)
+:Tout le monde a eu une part de gâteau;
+stop
+@enduml
