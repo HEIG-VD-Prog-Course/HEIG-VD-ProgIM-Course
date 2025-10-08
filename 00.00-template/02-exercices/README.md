@@ -76,7 +76,7 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-public class PanierPommes {
+public class Main {
   public static void main(String[] args) {
 
   }

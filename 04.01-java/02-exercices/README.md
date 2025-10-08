@@ -17,7 +17,7 @@ _[Java](../01-supports-de-cours/README.md)_.
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Exercice 1 - Java](#exercice-1---java)
+- [Exercice 1](#exercice-1)
   - [Énoncé](#énoncé)
 
 > [!TIP]
@@ -76,7 +76,7 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-public class PanierPommes {
+public class Main {
   public static void main(String[] args) {
 
   }
