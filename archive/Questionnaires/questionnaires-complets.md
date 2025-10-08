@@ -121,8 +121,8 @@ public class Program1 {
 }
 ```
 
-Le premier bloc commence à la ligne 2 et fini à la ligne 8  
-Le second bloc commence à la ligne 5 et se termine à la ligne 7  
+Le premier bloc commence à la ligne 2 et finit à la ligne 8  
+Le second bloc commence à la ligne 5 et finit à la ligne 7  
 Le premier bloc contient le second bloc
 
 Tout programme doit contenir ces deux blocs, sinon le programme ne pourra pas
