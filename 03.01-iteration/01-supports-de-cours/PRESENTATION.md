@@ -89,7 +89,7 @@ stop
 @enduml
 ```
 
-![](images/panier.png)
+![bg right:30% w:100%](./images/panier.png)
 
 ## Exemple 1 — Économiser pour un objectif
 
@@ -129,7 +129,7 @@ stop
 @enduml
 ```
 
-![](images/economies.png)
+![bg right:30% w:100%](./images/economies.png)
 
 ## Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes
 
@@ -169,7 +169,7 @@ stop
 @enduml
 ```
 
-![](images/entrainement.png)
+![bg right:30% w:100%](./images/entrainement.png)
 
 ## Points d'attention pour `TANT QUE`
 
@@ -216,7 +216,7 @@ stop
 @enduml
 ```
 
-![](images/panier-5-variable.png)
+![bg right:30% w:100%](./images/panier-5-variable.png)
 
 > À retenir : pour les boucles on utilise souvent :
 >
@@ -258,7 +258,7 @@ stop
 @enduml
 ```
 
-![](images/enveloppe-for.png)
+![bg right:30% w:100%](./images/enveloppe-for.png)
 
 ## Exemple 1 — Arroser les plantes du jardin
 
@@ -324,7 +324,7 @@ stop
 @enduml
 ```
 
-![](images/gateau.png)
+![bg right:30% w:100%](./images/gateau.png)
 
 ## Comparaison rapide : POUR vs TANT QUE
 
