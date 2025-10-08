@@ -349,7 +349,17 @@ exercices.**
 
 Est-ce que vous avez des questions ?
 
-## Sources
+## Sources (1/2)
+
+- <https://www.youtube.com/watch?v=-7xg8pGcP6w> (cringe warning)
+- <https://plantuml.com/fr/activity-diagram-beta>
+- <https://plantuml.nortalle.ch/>
+- <https://www.w3schools.com/java/java_intro.asp>
+- <https://www.w3schools.com/java/java_while_loop.asp>
+- <https://www.w3schools.com/java/java_for_loop.asp>
+- <https://code.visualstudio.com/docs/java/java-tutorial>
+
+## Sources (2/2)
 
 - [Illustration objectifs][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur

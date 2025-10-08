@@ -17,23 +17,15 @@ _[Itération](../01-supports-de-cours/README.md)_.
 
 - [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
-- [Exercice 7 - Itération : Factorielle](#exercice-7---itération--factorielle)
+- [Exercice 1 - Remplir un panier de pommes](#exercice-1---remplir-un-panier-de-pommes)
   - [Énoncé](#énoncé)
   - [Consignes](#consignes)
-  - [Variables à utiliser](#variables-à-utiliser)
-  - [Exemples](#exemples)
-- [Exercice 8 - Combinaison : Jeu de devinette](#exercice-8---combinaison--jeu-de-devinette)
+- [Exercice 2 - Arroser les plantes du salon](#exercice-2---arroser-les-plantes-du-salon)
   - [Énoncé](#énoncé-1)
   - [Consignes](#consignes-1)
-  - [Variables à utiliser](#variables-à-utiliser-1)
-- [Exercice 9 - Itération : Table de multiplication](#exercice-9---itération--table-de-multiplication)
+- [Exercice 3 - Mettre la table pour un dîner](#exercice-3---mettre-la-table-pour-un-dîner)
   - [Énoncé](#énoncé-2)
   - [Consignes](#consignes-2)
-  - [Variables à utiliser](#variables-à-utiliser-2)
-- [Exercice 10 - Combinaison : Calculatrice simple](#exercice-10---combinaison--calculatrice-simple)
-  - [Énoncé](#énoncé-3)
-  - [Consignes](#consignes-3)
-  - [Variables à utiliser](#variables-à-utiliser-3)
 
 > [!TIP]
 >
@@ -62,49 +54,31 @@ _[Itération](../01-supports-de-cours/README.md)_.
 > comprendre ou écrire du code Java**. Concentrez-vous sur le pseudocode et les
 > diagrammes d'activité, qui sont les éléments essentiels à maîtriser.
 
-## Exercice 7 - Itération : Factorielle
+## Exercice 1 - Remplir un panier de pommes
 
 ### Énoncé
 
-Créer un algorithme qui calcule la factorielle d'un nombre n. La factorielle de
-n (notée n!) est le produit de tous les nombres entiers positifs inférieurs ou
-égaux à n.
+Vous avez un panier vide et un pommier. Vous voulez remplir le panier avec 10
+pommes, en les cueillant une par une.
 
 ### Consignes
 
-1. Demander un nombre positif à l'utilisatrice
-2. Calculer la factorielle : n! = 1 × 2 × 3 × ... × n
-3. Afficher le résultat
-
-### Variables à utiliser
-
-- `n` : le nombre dont on veut calculer la factorielle
-- `factorial` : le résultat de la factorielle
-- `i` : variable de boucle
-
-### Exemples
-
-- 3! = 1 × 2 × 3 = 6
-- 4! = 1 × 2 × 3 × 4 = 24
-- 5! = 1 × 2 × 3 × 4 × 5 = 120
+1. Mon panier est vide.
+2. Je cueille une pomme et je la mets dans le panier.
+3. Je répète jusqu'à ce que mon panier contienne 10 pommes.
+4. J'annonce que le panier est plein.
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
 ```text
 DÉBUT
-    Initialiser n
-    Afficher "Entrez un nombre positif :"
-    Demander une valeur
-    Assigner la valeur à n
-
-    factorial = 1
-
-    POUR i DE 1 À n FAIRE
-        factorial = factorial * i
-    FIN POUR
-
-    Afficher n, "! =", factorial
+  Mon panier est vide
+  TANT QUE mon panier ne contient pas 10 pommes FAIRE
+    Je cueille une pomme
+    Je mets la pomme dans le panier
+  FIN TANT QUE
+  J'annonce "Le panier est plein !"
 FIN
 ```
 
@@ -116,17 +90,12 @@ FIN
 ```plantuml
 @startuml
 start
-:Initialiser n;
-:Afficher "Entrez un nombre positif :";
-:Demander une valeur;
-:Assigner la valeur à n;
-:factorial = 1;
-:i = 1;
-while (i <= n)
-    :factorial = factorial * i;
-    :i = i + 1;
+:Mon panier est vide;
+while (Mon panier ne contient pas 10 pommes) is (oui)
+  :Je cueille une pomme;
+  :Je mets la pomme dans le panier;
 endwhile
-:Afficher n, "! =", factorial;
+:J'annonce "Le panier est plein !";
 stop
 @enduml
 ```
@@ -137,98 +106,45 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class Factorielle {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander un nombre à l'utilisatrice
-        System.out.print("Entrez un nombre positif : ");
-        int n = scanner.nextInt();
-
-        // Calculer la factorielle
-        long factorial = 1;
-        for (int i = 1; i <= n; i++) {
-            factorial = factorial * i;
-        }
-
-        // Afficher le résultat
-        System.out.println(n + "! = " + factorial);
-
-        scanner.close();
+public class PanierPommes {
+  public static void main(String[] args) {
+    int pommesDansPanier = 0;
+    while (pommesDansPanier < 10) {
+      // Je cueille une pomme
+      // Je mets la pomme dans le panier
+      pommesDansPanier = pommesDansPanier + 1;
     }
+    System.out.println("Le panier est plein !");
+  }
 }
 ```
 
 </details>
 
-## Exercice 8 - Combinaison : Jeu de devinette
+## Exercice 2 - Arroser les plantes du salon
 
 ### Énoncé
 
-Créer un jeu où l'ordinateur choisit un nombre secret entre 1 et 100, et
-l'utilisatrice doit le deviner en maximum 7 tentatives.
+Vous avez 5 plantes dans votre salon. Vous voulez arroser chaque plante, une par
+une.
 
 ### Consignes
 
-1. Générer un nombre secret entre 1 et 100
-2. Donner 7 tentatives maximum à l'utilisatrice
-3. Pour chaque tentative :
-   - Demander un nombre
-   - Comparer avec le nombre secret
-   - Afficher "Trop grand", "Trop petit" ou "Bravo !"
-4. Afficher "Perdu !" si les 7 tentatives sont épuisées
-
-### Variables à utiliser
-
-- `secret_number` : le nombre secret (fixé à 42 pour cet exercice)
-- `guessed_number` : le nombre proposé par l'utilisatrice
-- `attempts` : nombre de tentatives restantes
-- `found` : booléen indiquant si le nombre a été trouvé
+1. J'ai 5 plantes à arroser.
+2. Pour chaque plante, j'arrose la plante suivante.
+3. Je répète jusqu'à ce que toutes les plantes soient arrosées.
+4. J'annonce que toutes les plantes ont reçu de l'eau.
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
 ```text
 DÉBUT
-    secret_number = 42
-    attempts = 7
-    found = faux
-
-    Afficher "Devinez le nombre secret entre 1 et 100 !"
-    Afficher "Vous avez", attempts, "tentatives."
-
-    TANT QUE (attempts > 0 ET found = faux) FAIRE
-        Afficher "Il vous reste", attempts, "tentatives."
-        Initialiser guessed_number
-        Afficher "Entrez votre proposition :"
-        Demander une valeur
-        Assigner la valeur à guessed_number
-
-        SI (guessed_number = secret_number) ALORS
-            Afficher "Bravo ! Vous avez trouvé !"
-            found = vrai
-        SINON SI (guessed_number < secret_number) ALORS
-            Afficher "Trop petit !"
-        SINON
-            Afficher "Trop grand !"
-        FIN SI
-
-        attempts = attempts - 1
-    FIN TANT QUE
-
-> [!TIP]
->
-> **Poupées russes** : Cet exercice combine une boucle `TANT QUE` avec des
-> `SI/SINON` imbriqués à l'intérieur. Comme des poupées russes, chaque
-> structure doit être correctement fermée : le `FIN SI` ferme la structure
-> conditionnelle, et le `FIN TANT QUE` ferme la boucle. Vérifiez toujours que
-> vous avez le bon nombre de fermetures !
-
-    SI (found = faux) ALORS
-        Afficher "Perdu ! Le nombre était", secret_number
-    FIN SI
+  J'ai 5 plantes à arroser
+  POUR chaque plante du salon FAIRE
+    J'arrose la plante suivante
+  FIN POUR
+  J'annonce "Toutes les plantes sont arrosées !"
 FIN
 ```
 
@@ -240,29 +156,11 @@ FIN
 ```plantuml
 @startuml
 start
-:secret_number = 42;
-:attempts = 7;
-:found = faux;
-:Afficher "Devinez le nombre secret entre 1 et 100 !";
-while (attempts > 0 ET found = faux) is (oui)
-    :Afficher "Il vous reste", attempts, "tentatives";
-    :Initialiser guessed_number;
-    :Afficher "Entrez votre proposition :";
-    :Demander une valeur;
-    :Assigner la valeur à guessed_number;
-    if (guessed_number = secret_number) then (oui)
-        :Afficher "Bravo ! Vous avez trouvé !";
-        :found = vrai;
-    elseif (guessed_number < secret_number) then (oui)
-        :Afficher "Trop petit !";
-    else (non)
-        :Afficher "Trop grand !";
-    endif
-    :attempts = attempts - 1;
-endwhile (non)
-if (found = faux) then (oui)
-    :Afficher "Perdu ! Le nombre était", secret_number;
-endif
+:J'ai 5 plantes à arroser;
+repeat
+  :J'arrose la plante suivante;
+repeat while (il reste des plantes à arroser) is (oui) not (non)
+:J'annonce "Toutes les plantes sont arrosées !";
 stop
 @enduml
 ```
@@ -273,86 +171,43 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class JeuDevinette {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Initialiser le jeu
-        int secret_number = 42;
-        int attempts = 7;
-        boolean found = false;
-
-        System.out.println("Devinez le nombre secret entre 1 et 100 !");
-        System.out.println("Vous avez " + attempts + " tentatives.");
-
-        // Boucle principale du jeu
-        while (attempts > 0 && !found) {
-            System.out.println("Il vous reste " + attempts + " tentatives.");
-            System.out.print("Entrez votre proposition : ");
-            int guessed_number = scanner.nextInt();
-
-            // Vérifier la proposition
-            if (guessed_number == secret_number) {
-                System.out.println("Bravo ! Vous avez trouvé !");
-                found = true;
-            } else if (guessed_number < secret_number) {
-                System.out.println("Trop petit !");
-            } else {
-                System.out.println("Trop grand !");
-            }
-
-            attempts--;
-        }
-
-        // Message de fin si pas trouvé
-        if (!found) {
-            System.out.println("Perdu ! Le nombre était " + secret_number);
-        }
-
-        scanner.close();
+public class ArroserPlantes {
+  public static void main(String[] args) {
+    int nombrePlantes = 5;
+    for (int plante = 1; plante <= nombrePlantes; plante++) {
+      // J'arrose la plante suivante
     }
+    System.out.println("Toutes les plantes sont arrosées !");
+  }
 }
 ```
 
 </details>
 
-## Exercice 9 - Itération : Table de multiplication
+## Exercice 3 - Mettre la table pour un dîner
 
 ### Énoncé
 
-Créer un algorithme qui affiche la table de multiplication d'un nombre donné (de
-1 à 10).
+Vous attendez 6 invités pour le dîner. Vous voulez placer une assiette à chaque
+place.
 
 ### Consignes
 
-1. Demander un nombre à l'utilisatrice
-2. Afficher la table de multiplication de ce nombre de 1 à 10
-3. Format d'affichage : "5 × 3 = 15"
-
-### Variables à utiliser
-
-- `number` : le nombre pour lequel afficher la table
-- `i` : variable de boucle (de 1 à 10)
-- `result` : résultat de la multiplication
+1. J'ai 6 invités à table.
+2. Je place une assiette pour chaque invité.
+3. Je répète jusqu'à ce que chaque place ait une assiette.
+4. J'annonce que la table est prête.
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
 
 ```text
 DÉBUT
-    Initialiser number
-    Afficher "Entrez un nombre :"
-    Demander une valeur
-    Assigner la valeur à number
-
-    Afficher "Table de multiplication de", number, ":"
-
-    POUR i DE 1 À 10 FAIRE
-        result = number * i
-        Afficher number, "×", i, "=", result
-    FIN POUR
+  J'ai 6 invités à table
+  TANT QUE toutes les places n'ont pas une assiette FAIRE
+    Je place une assiette
+  FIN TANT QUE
+  J'annonce "La table est prête !"
 FIN
 ```
 
@@ -364,17 +219,11 @@ FIN
 ```plantuml
 @startuml
 start
-:Initialiser number;
-:Afficher "Entrez un nombre :";
-:Demander une valeur;
-:Assigner la valeur à number;
-:Afficher "Table de multiplication de", number, ":";
-:i = 1;
-while (i <= 10)
-    :result = number * i;
-    :Afficher number, "×", i, "=", result;
-    :i = i + 1;
+:J'ai 6 invités à table;
+while (toutes les places n'ont pas une assiette) is (oui)
+  :Je place une assiette;
 endwhile
+:J'annonce "La table est prête !";
 stop
 @enduml
 ```
@@ -385,189 +234,16 @@ stop
 <summary>Afficher la solution - Code Java</summary>
 
 ```java
-import java.util.Scanner;
-
-public class TableMultiplication {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander le nombre
-        System.out.print("Entrez un nombre : ");
-        int number = scanner.nextInt();
-
-        // Afficher la table de multiplication
-        System.out.println("Table de multiplication de " + number + " :");
-
-        for (int i = 1; i <= 10; i++) {
-            int result = number * i;
-            System.out.println(number + " × " + i + " = " + result);
-        }
-
-        scanner.close();
+public class MettreTable {
+  public static void main(String[] args) {
+    int invites = 6;
+    int assiettesPosees = 0;
+    while (assiettesPosees < invites) {
+      // Je place une assiette
+      assiettesPosees = assiettesPosees + 1;
     }
-}
-```
-
-</details>
-
-## Exercice 10 - Combinaison : Calculatrice simple
-
-### Énoncé
-
-Créer une calculatrice qui demande deux nombres et une opération, puis affiche
-le résultat.
-
-### Consignes
-
-1. Demander le premier nombre
-2. Demander l'opération (+, -, \*, /)
-3. Demander le second nombre
-4. Effectuer le calcul selon l'opération choisie
-5. Gérer la division par zéro
-6. Afficher le résultat ou un message d'erreur
-
-### Variables à utiliser
-
-- `first_number`, `second_number` : les deux nombres
-- `operation` : l'opération choisie (+, -, \*, /)
-- `result` : le résultat du calcul
-
-<details>
-<summary>Afficher la solution - Pseudocode</summary>
-
-```text
-DÉBUT
-    Initialiser first_number
-    Afficher "Entrez le premier nombre :"
-    Demander une valeur
-    Assigner la valeur à first_number
-
-    Initialiser operation
-    Afficher "Entrez l'opération (+, -, *, /) :"
-    Demander une valeur
-    Assigner la valeur à operation
-
-    Initialiser second_number
-    Afficher "Entrez le second nombre :"
-    Demander une valeur
-    Assigner la valeur à second_number
-
-    SI (operation = "+") ALORS
-        result = first_number + second_number
-        Afficher first_number, "+", second_number, "=", result
-    SINON SI (operation = "-") ALORS
-        result = first_number - second_number
-        Afficher first_number, "-", second_number, "=", result
-    SINON SI (operation = "*") ALORS
-        result = first_number * second_number
-        Afficher first_number, "*", second_number, "=", result
-    SINON SI (operation = "/") ALORS
-        SI (second_number ≠ 0) ALORS
-            result = first_number / second_number
-            Afficher first_number, "/", second_number, "=", result
-        SINON
-            Afficher "Erreur : Division par zéro !"
-        FIN SI
-    SINON
-        Afficher "Erreur : Opération non reconnue !"
-    FIN SI
-FIN
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Diagramme PlantUML</summary>
-
-```plantuml
-@startuml
-start
-:Initialiser first_number;
-:Afficher "Entrez le premier nombre :";
-:Demander une valeur;
-:Assigner la valeur à first_number;
-:Initialiser operation;
-:Afficher "Entrez l'opération (+, -, *, /) :";
-:Demander une valeur;
-:Assigner la valeur à operation;
-:Initialiser second_number;
-:Afficher "Entrez le second nombre :";
-:Demander une valeur;
-:Assigner la valeur à second_number;
-if (operation = "+") then (oui)
-    :result = first_number + second_number;
-    :Afficher le résultat;
-elseif (operation = "-") then (oui)
-    :result = first_number - second_number;
-    :Afficher le résultat;
-elseif (operation = "*") then (oui)
-    :result = first_number * second_number;
-    :Afficher le résultat;
-elseif (operation = "/") then (oui)
-    if (second_number ≠ 0) then (oui)
-        :result = first_number / second_number;
-        :Afficher le résultat;
-    else (non)
-        :Afficher "Erreur : Division par zéro !";
-    endif
-else (non)
-    :Afficher "Erreur : Opération non reconnue !";
-endif
-stop
-@enduml
-```
-
-</details>
-
-<details>
-<summary>Afficher la solution - Code Java</summary>
-
-```java
-import java.util.Scanner;
-
-public class CalculatriceSimple {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander les données
-        System.out.print("Entrez le premier nombre : ");
-        double first_number = scanner.nextDouble();
-
-        System.out.print("Entrez l'opération (+, -, *, /) : ");
-        String operation = scanner.next();
-
-        System.out.print("Entrez le second nombre : ");
-        double second_number = scanner.nextDouble();
-
-        // Effectuer le calcul
-        double result = 0;
-        boolean valid_operation = true;
-
-        if (operation.equals("+")) {
-            result = first_number + second_number;
-        } else if (operation.equals("-")) {
-            result = first_number - second_number;
-        } else if (operation.equals("*")) {
-            result = first_number * second_number;
-        } else if (operation.equals("/")) {
-            if (second_number != 0) {
-                result = first_number / second_number;
-            } else {
-                System.out.println("Erreur : Division par zéro !");
-                valid_operation = false;
-            }
-        } else {
-            System.out.println("Erreur : Opération non reconnue !");
-            valid_operation = false;
-        }
-
-        // Afficher le résultat
-        if (valid_operation && !operation.equals("/") || (operation.equals("/") && second_number != 0)) {
-            System.out.println(first_number + " " + operation + " " + second_number + " = " + result);
-        }
-
-        scanner.close();
-    }
+    System.out.println("La table est prête !");
+  }
 }
 ```
 

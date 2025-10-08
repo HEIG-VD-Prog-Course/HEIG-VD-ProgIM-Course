@@ -27,6 +27,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [La boucle POUR (quand on connaît le nombre d'itérations)](#la-boucle-pour-quand-on-connaît-le-nombre-ditérations)
   - [Comparaison rapide : POUR vs TANT QUE](#comparaison-rapide--pour-vs-tant-que)
   - [Erreurs courantes et bonnes pratiques](#erreurs-courantes-et-bonnes-pratiques)
+  - [Sources et liens utiles](#sources-et-liens-utiles)
 
 ## L'itération
 
@@ -439,6 +440,16 @@ Remarques pour `POUR` :
   que votre boucle s'arrête correctement.
 - Éviter les boucles infinies : assurez-vous que la condition deviendra
   éventuellement fausse.
+
+### Sources et liens utiles
+
+- <https://code.visualstudio.com/docs/java/java-tutorial>
+- <https://www.youtube.com/watch?v=-7xg8pGcP6w>
+- <https://plantuml.com/fr/activity-diagram-beta>
+- <https://plantuml.nortalle.ch/>
+- <https://www.w3schools.com/java/java_intro.asp>
+- <https://www.w3schools.com/java/java_while_loop.asp>
+- <https://www.w3schools.com/java/java_for_loop.asp>
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
