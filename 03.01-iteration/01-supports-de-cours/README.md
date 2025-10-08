@@ -84,8 +84,12 @@ stop
 
 Exemple 1 — Économiser pour un objectif
 
-Phrase descriptive : "Ajouter 50 euros dans la tirelire chaque semaine jusqu'à
-atteindre 300 euros."  
+Phrase descriptive :
+
+```text
+Ajouter 50 euros dans la tirelire chaque semaine jusqu'à atteindre 300 euros.
+```
+
 Pseudocode :
 
 ```text
@@ -144,8 +148,12 @@ public class Economies {
 
 Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes
 
-Phrase descriptive : "Faire des séries de 15 minutes jusqu'à totaliser au moins
-60 minutes d'entraînement."  
+Phrase descriptive :
+
+```text
+Faire des séries de 15 minutes jusqu'à totaliser au moins 60 minutes d'entraînement.
+```
+
 Pseudocode :
 
 ```text
@@ -221,7 +229,12 @@ accumulateur (somme). Voici deux analogies faciles :
 
 Ces variables peuvent être lues et modifiées à chaque répétition :
 
-Phrase descriptive : "Je prends un panier vide et j'y mets 5 pommes."  
+Phrase descriptive :
+
+```text
+Je prends un panier vide et j'y mets 5 pommes.
+```
+
 Pseudocode :
 
 ```text
@@ -306,7 +319,11 @@ stop
 
 Exemple 1 — Arroser les plantes du jardin
 
-Phrase descriptive : "Arroser successivement chacune des 5 plantes du jardin."
+Phrase descriptive :
+
+```text
+Arroser successivement chacune des 5 plantes du jardin.
+```
 
 Pseudocode :
 
@@ -352,7 +369,11 @@ public class ArroserPlantes {
 
 Exemple 2 — Distribuer des parts de gâteau
 
-Phrase descriptive : "Donner une part de gâteau à chacun des 8 invités."
+Phrase descriptive :
+
+```text
+Donner une part de gâteau à chacun des 8 invités.
+```
 
 Pseudocode :
 
