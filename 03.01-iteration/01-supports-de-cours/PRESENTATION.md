@@ -44,24 +44,19 @@ consultez le [support de cours][cours]._
 
 ## L'itération
 
-L'itération permet de répéter des actions plusieurs fois. On emploie des
-structures d'itération pour automatiser des tâches répétitives : distribuer
-quelque chose à plusieurs personnes, calculer une somme mois après mois, ou
-parcourir une collection d'objets.
-
 Deux structures très utilisées sont :
 
 - **TANT QUE** (while) : quand on répète tant qu'une condition est vraie
 - **POUR** (for) : quand on sait à l'avance combien de fois on doit répéter
 
+## TANT QUE / WHILE
+
+<!-- _class: lead -->
+
 ## La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)
 
 > Dans la plupart des langages de programmation, la boucle « TANT QUE »
 > s'appelle « WHILE » (mot anglais pour « tant que »).
-
-La boucle `TANT QUE` répète tant qu'une condition est vraie. Elle est utile
-quand on ne connaît pas à l'avance le nombre d'itérations, mais on sait qu'on
-s'arrêtera quand une condition sera satisfaite.
 
 Structure générale :
 
@@ -72,11 +67,6 @@ FIN TANT QUE
 ```
 
 ### Comment représenter une boucle TANT QUE en UML ?
-
-Dans un diagramme d'activité UML, une boucle « TANT QUE » (while) est
-représentée par une flèche qui revient vers une condition. Tant que la condition
-est vraie, on répète les actions. Quand la condition devient fausse, on sort de
-la boucle.
 
 ```plantuml
 @startuml
@@ -91,15 +81,12 @@ stop
 
 ![bg right:30% w:100%](./images/panier.png)
 
-## Exemple 1 — Économiser pour un objectif
+## Exemple 1 — Économiser pour un objectif (1/3)
 
-Phrase descriptive :
+> Ajouter 50 francs dans la tirelire chaque semaine jusqu'à atteindre 300
+> francs.
 
-```text
-Ajouter 50 francs dans la tirelire chaque semaine jusqu'à atteindre 300 francs.
-```
-
-Pseudocode :
+## Exemple 1 — Économiser pour un objectif (2/3)
 
 ```text
 DÉBUT
@@ -115,6 +102,8 @@ DÉBUT
 FIN
 ```
 
+## Exemple 1 — Économiser pour un objectif (3/3)
+
 ```plantuml
 @startuml
 start
@@ -129,15 +118,14 @@ stop
 @enduml
 ```
 
-![bg right:30% w:100%](./images/economies.png)
+![bg right:40% w:100%](./images/economies.png)
 
-## Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes
+## Exemple 2 — Faire des séries d'exercices jusqu'à atteindre 60 minutes (1/3)
 
-Phrase descriptive :
+> Faire des séries de 15 minutes jusqu'à totaliser au moins 60 minutes
+> d'entraînement.
 
-```text
-Faire des séries de 15 minutes jusqu'à totaliser au moins 60 minutes d'entraînement.
-```
+## Exemple 2 (2/3)
 
 Pseudocode :
 
@@ -155,6 +143,8 @@ DÉBUT
 FIN
 ```
 
+## Exemple 2 (3/3)
+
 ```plantuml
 @startuml
 start
@@ -169,7 +159,7 @@ stop
 @enduml
 ```
 
-![bg right:30% w:100%](./images/entrainement.png)
+![bg right:40% w:100%](./images/entrainement.png)
 
 ## Points d'attention pour `TANT QUE`
 
@@ -180,21 +170,25 @@ stop
 
 ## Variables
 
+<!-- _class: lead -->
+
+## Variables
+
 Les boucles s'appuient souvent sur des variables : un compteur (indice) ou un
-accumulateur (somme). Voici deux analogies faciles :
+accumulateur (somme).
 
 - Un **panier** contient des pommes. On peut avoir une variable `pommes` qui
   indique combien de pommes sont dans le panier.
 - Un **portefeuille** contient de l'argent. On peut avoir une variable `argent`
   qui indique combien d'francs on a.
 
+## Exemple (1/3)
+
 Ces variables peuvent être lues et modifiées à chaque répétition :
 
-Phrase descriptive :
+> Je prends un panier vide et j'y mets 5 pommes.
 
-```text
-Je prends un panier vide et j'y mets 5 pommes.
-```
+## Exemple (2/3)
 
 Pseudocode :
 
@@ -205,6 +199,8 @@ DÉBUT
   Mon panier contient 5 pommes
 FIN
 ```
+
+## Exemple (3/3)
 
 ```plantuml
 @startuml
@@ -218,18 +214,14 @@ stop
 
 ![bg right:30% w:100%](./images/panier-5-variable.png)
 
-> À retenir : pour les boucles on utilise souvent :
->
-> - un compteur (par exemple `i` ou `index`) qui indique la position courante
-> - un accumulateur (par exemple `total` ou `somme`) qui cumule une valeur
+## POUR / FOR
+
+<!-- _class: lead -->
 
 ## La boucle POUR (quand on connaît le nombre d'itérations)
 
 > Dans la plupart des langages de programmation, la boucle « POUR » s'appelle
 > « FOR » (mot anglais pour « pour »).
-
-La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter
-une action (par exemple : arroser 5 plantes, distribuer 6 parts, etc.).
 
 Structure générale :
 
@@ -240,11 +232,6 @@ FIN POUR
 ```
 
 ### Comment représenter une boucle POUR en UML ?
-
-Dans un diagramme d'activité UML, une boucle « POUR » (for) ressemble à une
-boucle « TANT QUE » mais on précise souvent l'initialisation, la condition et
-l'incrémentation du compteur. On répète les actions pour chaque valeur du
-compteur.
 
 ```plantuml
 @startuml
@@ -258,15 +245,13 @@ stop
 @enduml
 ```
 
-![bg right:30% w:100%](./images/enveloppe-for.png)
+![bg right:40% w:100%](./images/enveloppe-for.png)
 
-## Exemple 1 — Arroser les plantes du jardin
+## Exemple 1 — Arroser les plantes du jardin (1/3)
 
-Phrase descriptive :
+> Arroser successivement chacune des 5 plantes du jardin.
 
-```text
-Arroser successivement chacune des 5 plantes du jardin.
-```
+## Exemple 1 — Arroser les plantes du jardin (2/3)
 
 Pseudocode :
 
@@ -280,6 +265,8 @@ DÉBUT
 FIN
 ```
 
+## Exemple 1 — Arroser les plantes du jardin (3/3)
+
 ```plantuml
 @startuml
 start
@@ -292,13 +279,13 @@ stop
 @enduml
 ```
 
+![bg right:30% w:100%](./images/plante-a-arroser.png)
+
 ## Exemple 2 — Distribuer des parts de gâteau
 
-Phrase descriptive :
+> Donner une part de gâteau à chacun des 8 invités.
 
-```text
-Donner une part de gâteau à chacun des 8 invités.
-```
+## Exemple 2 — Distribuer des parts de gâteau (2/3)
 
 Pseudocode :
 
@@ -312,6 +299,8 @@ DÉBUT
 FIN
 ```
 
+## Exemple 2 — Distribuer des parts de gâteau (3/3)
+
 ```plantuml
 @startuml
 start
@@ -324,7 +313,7 @@ stop
 @enduml
 ```
 
-![bg right:30% w:100%](./images/gateau.png)
+![bg right:40% w:100%](./images/gateau.png)
 
 ## Comparaison rapide : POUR vs TANT QUE
 
