@@ -301,7 +301,7 @@ stop
 ```
 
 Pour créer vos propres diagrammes, vous pouvez utiliser
-[PlantUML en ligne](https://www.plantuml.com/plantuml/uml/).
+[PlantUML en ligne](https://plantuml.nortalle.ch).
 
 ### Détail des éléments PlantUML
 
@@ -423,7 +423,7 @@ stop
 > [!TIP]
 >
 > Vous pouvez tester ce diagramme directement dans l'éditeur PlantUML en ligne :
-> <https://www.plantuml.com/plantuml/uml/>
+> <https://plantuml.nortalle.ch>
 
 ## La sélection
 

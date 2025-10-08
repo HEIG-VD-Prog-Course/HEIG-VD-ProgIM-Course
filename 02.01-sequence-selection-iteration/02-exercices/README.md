@@ -73,8 +73,7 @@ _[Séquence, sélection et itération](../01-supports-de-cours/README.md)_.
 > algorithme avant de passer à l'implémentation.
 >
 > **À propos de PlantUML** : Utilisez l'éditeur PlantUML en ligne :
-> <https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000>
-> (Désolé pour les publicités sur le site, nous cherchons une alternative.)
+> <https://plantuml.nortalle.ch>
 
 > [!IMPORTANT]
 >
