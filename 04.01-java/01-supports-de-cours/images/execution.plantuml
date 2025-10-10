@@ -1,0 +1,20 @@
+@startuml
+!theme plain
+
+rectangle "Votre code\n(Java, JavaScript, Python...)" as code
+rectangle "Traduction\n(compilation ou interprétation)" as translation
+rectangle "Code machine\n(0 et 1)" as machine
+rectangle "Processeur\n(CPU)" as cpu
+rectangle "Résultat" as result
+
+code -right-> translation
+translation -right-> machine
+machine -right-> cpu
+cpu -right-> result
+
+note bottom of cpu
+    Le processeur exécute
+    les instructions une par une
+    à très grande vitesse
+end note
+@enduml

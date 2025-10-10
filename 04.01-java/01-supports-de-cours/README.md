@@ -45,7 +45,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Visual Studio Code pour Java](#visual-studio-code-pour-java)
   - [Alternative : IntelliJ IDEA](#alternative--intellij-idea)
   - [Votre premier programme Java](#votre-premier-programme-java)
-- [Validation de l'installation](#validation-de-linstallation)
 - [Conseils et bonnes pratiques](#conseils-et-bonnes-pratiques)
 - [Sources et liens utiles](#sources-et-liens-utiles)
 
@@ -104,31 +103,7 @@ binaire) :
 
 ### Code source vs code machine
 
-```plantuml
-@startuml
-!theme plain
-
-rectangle "Code source\n(compréhensible par l'humain)" as source {
-    note as sourceNote
-        System.out.println("Bonjour !");
-        int age = 25;
-        if (age >= 18) {
-            System.out.println("Majeur");
-        }
-    end note
-}
-
-rectangle "Code machine\n(compréhensible par l'ordinateur)" as machine {
-    note as machineNote
-        01001000 01100101 01101100
-        10110001 00000000 00011001
-        01110100 01100101 01110011
-    end note
-}
-
-source -down-> machine : Traduction\nnécessaire
-@enduml
-```
+![Représentation du code source et du code machine](./images/source-machine.png)
 
 Il faut donc un moyen de traduire le code que nous écrivons (le **code source**)
 en instructions que l'ordinateur peut comprendre (le **code machine**). Il
@@ -143,34 +118,7 @@ La compilation est un processus qui traduit **tout** le code source en code
 machine **avant** l'exécution du programme. C'est comme traduire un livre entier
 d'une langue à une autre avant de le lire.
 
-```plantuml
-@startuml
-!theme plain
-
-rectangle "Code source\n(.java)" as source
-rectangle "Compilateur\n(javac)" as compiler
-rectangle "Code compilé\n(.class)" as bytecode
-rectangle "Machine virtuelle\n(JVM)" as jvm
-rectangle "Exécution" as execution
-
-source -right-> compiler : Compilation
-compiler -right-> bytecode : Génère
-bytecode -right-> jvm : Interprétation
-jvm -right-> execution : Exécute
-
-note bottom of compiler
-    Le compilateur Java (javac)
-    traduit le code source
-    en bytecode
-end note
-
-note bottom of jvm
-    La JVM traduit le bytecode
-    en code machine spécifique
-    à votre ordinateur
-end note
-@enduml
-```
+![Représentation de la compilation](./images/compilation.png)
 
 ### Exemple avec Java
 
@@ -222,24 +170,7 @@ L'interprétation traduit et exécute le code source **ligne par ligne** au mome
 de l'exécution. C'est comme avoir un traducteur simultané qui traduit un
 discours en temps réel.
 
-```plantuml
-@startuml
-!theme plain
-
-rectangle "Code source\n(.js)" as source
-rectangle "Interpréteur\n(Node.js/Navigateur)" as interpreter
-rectangle "Exécution\nligne par ligne" as execution
-
-source -right-> interpreter : Lecture
-interpreter -right-> execution : Traduction +\nExécution simultanées
-
-note bottom of interpreter
-    L'interpréteur lit chaque ligne,
-    la traduit et l'exécute
-    immédiatement
-end note
-@enduml
-```
+![Représentation de l'interprétation](./images/interpretation.png)
 
 ### Exemple avec JavaScript
 
@@ -286,28 +217,7 @@ machine** (des séquences de 0 et 1). Toutes les instructions, qu'elles viennent
 d'un code compilé ou interprété, doivent finalement être traduites dans ce
 langage.
 
-```plantuml
-@startuml
-!theme plain
-
-rectangle "Votre code\n(Java, JavaScript, Python...)" as code
-rectangle "Traduction\n(compilation ou interprétation)" as translation
-rectangle "Code machine\n(0 et 1)" as machine
-rectangle "Processeur\n(CPU)" as cpu
-rectangle "Résultat" as result
-
-code -right-> translation
-translation -right-> machine
-machine -right-> cpu
-cpu -right-> result
-
-note bottom of cpu
-    Le processeur exécute
-    les instructions une par une
-    à très grande vitesse
-end note
-@enduml
-```
+![Représentation de l'exécution du code par le processeur](./images/execution.png)
 
 ### Les machines virtuelles
 
@@ -315,63 +225,14 @@ Une machine virtuelle est un programme qui simule un ordinateur à l'intérieur 
 votre ordinateur. Elle crée une couche d'abstraction entre votre code et le
 système d'exploitation réel.
 
-```plantuml
-@startuml
-!theme plain
-
-package "Votre ordinateur" {
-    rectangle "Système d'exploitation\n(Windows, macOS, Linux)" as os
-
-    package "Machine Virtuelle Java (JVM)" {
-        rectangle "Bytecode Java\n(.class)" as bytecode
-        rectangle "Interpréteur JVM" as jvm_interpreter
-    }
-
-    rectangle "Processeur physique" as cpu
-}
-
-bytecode -down-> jvm_interpreter : Exécution
-jvm_interpreter -down-> os : Appels système
-os -down-> cpu : Instructions machine
-
-note right of jvm_interpreter
-    La JVM traduit le bytecode
-    en instructions spécifiques
-    à votre ordinateur
-end note
-@enduml
-```
+![Représentation d'une machine virtuelle](./images/machine-virtuelle.png)
 
 ### Le cas particulier de Java
 
 Java utilise une approche hybride qui combine les avantages de la compilation et
 de l'interprétation :
 
-```plantuml
-@startuml
-!theme plain
-
-rectangle "Code source\n(.java)" as source
-rectangle "Compilation\n(javac)" as compile
-rectangle "Bytecode\n(.class)" as bytecode
-rectangle "JVM Windows" as jvm_win
-rectangle "JVM macOS" as jvm_mac
-rectangle "JVM Linux" as jvm_linux
-
-source -right-> compile : Une seule fois
-compile -right-> bytecode : Génère
-
-bytecode -down-> jvm_win : Portable
-bytecode -down-> jvm_mac : Portable
-bytecode -down-> jvm_linux : Portable
-
-note bottom of bytecode
-    "Write once, run anywhere"
-    Le même bytecode fonctionne
-    sur toutes les plateformes
-end note
-@enduml
-```
+![Représentation de l'exécution Java](./images/java.png)
 
 > [!IMPORTANT]
 >
@@ -417,7 +278,7 @@ au développement dans une seule application.
 @startuml
 !theme plain
 
-package "IDE (Environnement de Développement Intégré)" {
+package "IDE (Environnement de Développement Intégré)" as IDE {
     rectangle "Éditeur de code\navec coloration syntaxique" as editor
     rectangle "Compilateur\nintégré" as compiler
     rectangle "Débogueur\n(trouver les erreurs)" as debugger
@@ -431,6 +292,7 @@ note bottom of IDE
     pour une expérience de développement fluide
 end note
 @enduml
+
 ```
 
 ### Les fonctionnalités d'un IDE
@@ -463,35 +325,19 @@ Pour développer en Java, vous avez besoin de plusieurs éléments :
 Visual Studio Code (VS Code) est un éditeur de code gratuit et très populaire.
 Avec les bonnes extensions, il devient un excellent IDE pour Java.
 
-#### Installation de VS Code
-
-1. Téléchargez VS Code depuis
-   [https://code.visualstudio.com/](https://code.visualstudio.com/)
-2. Installez-le en suivant l'assistant d'installation
-
 #### Configuration Java dans VS Code
 
-Suivez le tutoriel officiel de Microsoft :
-[Java in Visual Studio Code](https://code.visualstudio.com/docs/java/java-tutorial)
+Pour vous aider à vous installer rapidement, vous pouvez installer le Coding
+Pack pour Java, qui comprend VS Code, le kit de développement Java (JDK) et les
+extensions Java essentielles. Le Coding Pack peut être utilisé pour une
+installation propre, ou pour mettre à jour ou réparer un environnement de
+développement existant.
 
-Les étapes principales sont :
+Installez le Coding Pack en suivant le guide officiel :
+[Java in Visual Studio Code](https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java)
 
-1. **Installer le JDK** : VS Code peut vous aider à télécharger et installer
-   Java
-2. **Installer l'Extension Pack for Java** : Un pack d'extensions qui transforme
-   VS Code en IDE Java
-3. **Créer votre premier projet** : VS Code peut générer la structure de base
-
-> [!TIP]
->
-> L'Extension Pack for Java de Microsoft inclut plusieurs extensions utiles :
->
-> - Language Support for Java
-> - Debugger for Java
-> - Test Runner for Java
-> - Maven for Java
-> - Project Manager for Java
-> - IntelliCode
+Dans VSCode, installez l' `Extension Pack for Java` :
+<https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack>
 
 ### Alternative : IntelliJ IDEA
 
@@ -517,48 +363,18 @@ Consultez le guide officiel :
 
 ### Votre premier programme Java
 
-Une fois votre environnement configuré, créez votre premier programme :
+En suivant
+<https://code.visualstudio.com/docs/java/java-tutorial#_creating-a-source-code-file>
+vous allez créer votre premier projet Java.
 
-1. **Créez un nouveau projet Java** dans votre IDE
-2. **Créez une classe** appelée `HelloWorld`
-3. **Écrivez ce code** :
+Et en suivant
+<https://code.visualstudio.com/docs/java/java-tutorial#_editing-source-code>,
+vous allez écrire votre premier programme Java
 
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Bonjour le monde !");
-        System.out.println("Je programme en Java !");
-    }
-}
-```
-
-4. **Exécutez le programme** en cliquant sur le bouton "Run" de votre IDE
-
-Vous devriez voir s'afficher :
-
-```
-Bonjour le monde !
-Je programme en Java !
-```
-
-> [!TIP]
->
-> Si votre programme fonctionne, félicitations ! Vous venez d'exécuter votre
-> premier programme Java. Si vous avez des erreurs, c'est normal : apprendre à
-> déboguer fait partie de l'apprentissage de la programmation.
-
-## Validation de l'installation
-
-Utilisez cette liste de vérification pour vous assurer que tout est correctement
-installé :
-
-- [ ] Java JDK est installé et accessible
-- [ ] Votre IDE (VS Code ou IntelliJ IDEA) est installé
-- [ ] Les extensions Java sont installées dans votre IDE
-- [ ] Vous pouvez créer un nouveau projet Java
-- [ ] Vous pouvez compiler et exécuter le programme "Hello World"
-- [ ] Vous comprenez la différence entre compilation et interprétation
-- [ ] Vous savez expliquer le rôle de la JVM
+Pour finir, avec
+<https://code.visualstudio.com/docs/java/java-tutorial#_running-and-debugging-your-program>,
+vous allez écrire votre premier programme Java qui affiche "Hello, World!" dans
+la console.
 
 ## Conseils et bonnes pratiques
 

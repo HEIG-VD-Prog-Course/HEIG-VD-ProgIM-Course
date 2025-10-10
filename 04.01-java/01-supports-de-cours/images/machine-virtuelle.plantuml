@@ -1,0 +1,24 @@
+@startuml
+!theme plain
+
+package "Votre ordinateur" {
+    rectangle "Système d'exploitation\n(Windows, macOS, Linux)" as os
+
+    package "Machine Virtuelle Java (JVM)" {
+        rectangle "Bytecode Java\n(.class)" as bytecode
+        rectangle "Interpréteur JVM" as jvm_interpreter
+    }
+
+    rectangle "Processeur physique" as cpu
+}
+
+bytecode -down-> jvm_interpreter : Exécution
+jvm_interpreter -down-> os : Appels système
+os -down-> cpu : Instructions machine
+
+note right of jvm_interpreter
+    La JVM traduit le bytecode
+    en instructions spécifiques
+    à votre ordinateur
+end note
+@enduml

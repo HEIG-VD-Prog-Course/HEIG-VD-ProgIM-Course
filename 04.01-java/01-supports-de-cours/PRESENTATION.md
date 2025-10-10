@@ -7,16 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgIM1 Course - Java
-description: Java pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
+title: HEIG-VD ProgIM1 Course - Introduction à Java
+description: Introduction à Java et aux environnements de développement pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
 url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.01-java/01-supports-de-cours/index.html
-header: "**Java**"
+header: "**Introduction à Java**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
 
-# Java
+# Introduction à Java
 
 <!--
 _class: lead
@@ -42,21 +42,229 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs
+## Objectifs (1/3)
 
 À la fin de cette séance, vous devriez être capable de :
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Comprendre les principes de base de la compilation, de l'interprétation et de
+  l'exécution des programmes.
+- Lister les outils nécessaires pour programmer en Java sur votre ordinateur.
+
+## Objectifs (2/3)
+
+- Expliquer le rôle de chaque outil dans le processus de développement Java.
+  - Java Development Kit (JDK)
+  - Un IDE (Integrated Development Environment)
+- Configurer un environnement de développement Java sur votre ordinateur.
+- Configurer un projet Java simple en utilisant un IDE (par exemple, Eclipse,
+  IntelliJ IDEA, ou VS Code).
+
+## Objectifs (3/3)
+
+- Exécuter un programme Java simple qui affiche "Hello, World!" dans la console.
+
+## Le problème de communication
+
+<!-- _class: lead -->
+
+## Humains vs Ordinateurs
+
+**Ce que nous écrivons :**
+
+```java
+System.out.println("Bonjour le monde !");
+```
+
+**Ce que l'ordinateur comprend :**
+
+```
+01001000 01100101 01101100 01101100 01101111
+```
+
+> Il faut un **traducteur** entre les deux !
+
+![bg right:40% w:100%](./images/source-machine.png)
+
+## Les deux approches de traduction
+
+<!-- _class: lead -->
+
+## Compilation vs Interprétation
+
+**Compilation** = Traduire tout avant d'exécuter
+
+**Interprétation** = Traduction simultanée instruction par instruction
+
+## La compilation
+
+**Principe :** Traduire TOUT le code source en code machine AVANT l'exécution
+
+---
+
+![bg bottom:50% w:100%](./images/compilation.png)
+
+---
+
+```java
+// Fichier: HelloWorld.java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+```
+
+```bash
+javac HelloWorld.java    # ⚙️ Compilation
+java HelloWorld          # ▶️ Exécution
+```
+
+## Avantages de la compilation
+
+✅ **Performance** : Code rapide à l'exécution
+
+✅ **Détection d'erreurs** : Erreurs trouvées avant l'exécution
+
+✅ **Distribution** : Peut distribuer sans le code source
+
+❌ **Temps de développement** : Doit compiler à chaque modification
+
+## L'interprétation
+
+**Principe :** Traduire et exécuter ligne par ligne au moment de l'exécution
+
+---
+
+![bg w:100%](./images/interpretation.png)
+
+## Exemple : JavaScript
+
+```javascript
+// Exécuté directement par l'interpréteur
+console.log("Bonjour le monde !");
+let age = 25;
+if (age >= 18) {
+	console.log("Majeur");
+}
+```
+
+> 💡 **Testez maintenant** dans la console de votre navigateur !
+
+## Avantages de l'interprétation
+
+✅ **Rapidité de développement** : Test immédiat
+
+✅ **Flexibilité** : Modification à l'exécution possible
+
+✅ **Portabilité** : Même code partout
+
+❌ **Performance** : Plus lent que le code compilé
+
+❌ **Erreurs tardives** : Erreurs découvertes à l'exécution
+
+## Le cas spécial de Java
+
+<!-- _class: lead -->
+
+## Java : Le meilleur des deux mondes
+
+**Java utilise une approche hybride** 🎯
+
+![bg w:100%](./images/java.png)
+
+## "Write once, run anywhere"
+
+✅ **Compile une fois** → Exécute partout
+
+✅ **Performance** correcte grâce à la JVM
+
+✅ **Portabilité** maximale
+
+> La **JVM** (Machine Virtuelle Java) est la clé ! 🔑
+
+## Comparaison rapide
+
+| Aspect            | C++ (compilé)                | JavaScript (interprété) | Java (hybride)       |
+| ----------------- | ---------------------------- | ----------------------- | -------------------- |
+| **Vitesse**       | 🟢 Très rapide               | 🟡 Plus lent            | 🟡 Rapide            |
+| **Développement** | 🟡 Compile à chaque fois     | 🟢 Test immédiat        | 🟡 Compile puis test |
+| **Portabilité**   | 🔴 Recompiler pour chaque OS | 🟢 Même code partout    | 🟢 Compile une fois  |
+| **Erreurs**       | 🟢 À la compilation          | 🔴 À l'exécution        | 🟢 À la compilation  |
+
+## Les outils de développement
+
+<!-- _class: lead -->
+
+## Pourquoi pas juste un éditeur de texte ?
+
+**Techniquement possible... mais :**
+
+- 📝 Écrire un livre avec un crayon vs traitement de texte
+- 🍳 Cuisiner sans ustensiles modernes
+- 🔧 Réparer une voiture sans outils
+
+> Un développeur passe plus de temps à **lire** et **comprendre** du code qu'à
+> en écrire ! 📖
+
+![bg right:40%][illustration-outils]
+
+## Qu'est-ce qu'un IDE ?
+
+**IDE** = Integrated Development Environment
+
+**Tout en un seul endroit :**
+
+- 🎨 Coloration syntaxique
+- 💡 Auto-complétion intelligente
+- 🐛 Détection d'erreurs en temps réel
+- 🔍 Débogueur intégré
+- 📁 Gestionnaire de projets
+
+## Nos recommandations (1/2)
+
+**Visual Studio Code** 🆓
+
+- Gratuit et populaire
+- Extension Pack for Java
+- Parfait pour débuter
+
+## Nos recommandations (2/2)
+
+**IntelliJ IDEA Community** 🆓
+
+- Spécialisé pour Java
+- Version gratuite complète
+- Très professionnel
+
+## Installation pratique
+
+<!-- _class: lead -->
+
+## Étapes d'installation
+
+<https://code.visualstudio.com/docs/java/java-tutorial>
+
+## Votre premier programme
+
+Dans `Hello.java` :
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Bonjour le monde !");
+    }
+}
+```
 
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][cours]
-- Réaliser les [exercices][exercices]
-- Expérimenter avec [PlantUML en ligne][plantuml-editor]
-- Poser des questions si nécessaire
+- 📖 (Re)lire le [support de cours][cours]
+- 💻 Réaliser les [exercices][exercices]
+- 🎯 Configurer votre environnement de développement
+- ❓ Poser des questions si nécessaire
 
-**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
-propres exercices.**
+**La programmation s'apprend par la pratique !** **N'hésitez pas à expérimenter
+! 🧪**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
