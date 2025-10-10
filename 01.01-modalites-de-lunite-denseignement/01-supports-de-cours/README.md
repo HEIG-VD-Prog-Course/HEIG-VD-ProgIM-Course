@@ -1,4 +1,4 @@
-# Modalité de l'unité d'enseignement
+# Modalité de l'unité d'enseignement - Support de cours
 
 V. Guidoux, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).

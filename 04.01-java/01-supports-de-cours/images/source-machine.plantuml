@@ -1,0 +1,23 @@
+@startuml
+!theme plain
+
+rectangle "Code source\n(compréhensible par l'humain)" as source {
+    note as sourceNote
+        System.out.println("Bonjour !");
+        int age = 25;
+        if (age >= 18) {
+            System.out.println("Majeur");
+        }
+    end note
+}
+
+rectangle "Code machine\n(compréhensible par l'ordinateur)" as machine {
+    note as machineNote
+        01001000 01100101 01101100
+        10110001 00000000 00011001
+        01110100 01100101 01110011
+    end note
+}
+
+source -down-> machine : Traduction\nnécessaire
+@enduml

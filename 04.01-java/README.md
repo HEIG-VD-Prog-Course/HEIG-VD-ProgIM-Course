@@ -1,4 +1,4 @@
-# Itération
+# Java
 
 V. Guidoux, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).
@@ -10,17 +10,18 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](.)
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.01-java/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.01-java/01-supports-de-cours/04.01-java-presentation.pdf)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Objectifs
 
-- Comprendre le concept d'itération et son utilité dans la programmation.
-- Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
-- Être capable de représenter des boucles en pseudocode et en diagrammes
-  d'activité UML.
+Cette séance a pour but pour lorem ipsum dolor sit amet, consectetur adipiscing
+
+De façon plus concise, à la fin de cette séance, vous devriez être capable de :
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Méthodes d'enseignement et d'apprentissage
 

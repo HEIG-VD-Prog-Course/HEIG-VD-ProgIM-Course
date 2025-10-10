@@ -1,0 +1,23 @@
+@startuml
+!theme plain
+
+rectangle "Code source\n(.java)" as source
+rectangle "Compilation\n(javac)" as compile
+rectangle "Bytecode\n(.class)" as bytecode
+rectangle "JVM Windows" as jvm_win
+rectangle "JVM macOS" as jvm_mac
+rectangle "JVM Linux" as jvm_linux
+
+source -right-> compile : Une seule fois
+compile -right-> bytecode : Génère
+
+bytecode -down-> jvm_win : Portable
+bytecode -down-> jvm_mac : Portable
+bytecode -down-> jvm_linux : Portable
+
+note bottom of bytecode
+    "Write once, run anywhere"
+    Le même bytecode fonctionne
+    sur toutes les plateformes
+end note
+@enduml

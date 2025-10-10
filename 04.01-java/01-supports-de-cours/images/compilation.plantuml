@@ -1,0 +1,26 @@
+@startuml
+!theme plain
+
+rectangle "Code source\n(.java)" as source
+rectangle "Compilateur\n(javac)" as compiler
+rectangle "Code compilé\n(.class)" as bytecode
+rectangle "Machine virtuelle\n(JVM)" as jvm
+rectangle "Exécution" as execution
+
+source -right-> compiler : Compilation
+compiler -right-> bytecode : Génère
+bytecode -right-> jvm : Interprétation
+jvm -right-> execution : Exécute
+
+note bottom of compiler
+    Le compilateur Java (javac)
+    traduit le code source
+    en bytecode
+end note
+
+note bottom of jvm
+    La JVM traduit le bytecode
+    en code machine spécifique
+    à votre ordinateur
+end note
+@enduml

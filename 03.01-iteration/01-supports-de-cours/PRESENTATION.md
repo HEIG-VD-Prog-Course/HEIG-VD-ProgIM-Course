@@ -42,6 +42,13 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
+## Objectifs
+
+- Comprendre le concept d'itération et son utilité dans la programmation.
+- Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
+- Être capable de représenter des boucles en pseudocode et en diagrammes
+  d'activité UML.
+
 ## L'itération
 
 Deux structures très utilisées sont :

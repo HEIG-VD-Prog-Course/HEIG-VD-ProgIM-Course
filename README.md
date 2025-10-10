@@ -47,17 +47,17 @@ Les dates sont tirées du
 | Cours | Contenu                                                        |
 | ----: | :------------------------------------------------------------- |
 |    01 | Introduction à la programmation et aux algorithmes             |
-|    03 | Structures algorithmiques : séquence, sélection (if/else)      |
-|    04 | Structures algorithmiques : itération (boucles)                |
-|    02 | Variables, constantes, types de données et leur représentation |
+|    02 | Structures algorithmiques : séquence, sélection (if/else)      |
+|    03 | Structures algorithmiques : itération (boucles)                |
+|    04 | Variables, constantes, types de données et leur représentation |
 |    05 | Procédures, fonctions et entrée/sortie                         |
 |    06 | Tableaux et structures de données de base                      |
-|    07 | Structures de données avancées (listes, piles, files)          |
-|    08 | Algorithmes de tri et de recherche (implémentations simples)   |
-|    09 | Test, débogage et documentation du code                        |
-|    10 | Projet : conception et implémentation d’une application simple |
-|    11 | Programmation collaborative et revue par les pairs             |
-|    12 | Révision finale, préparation à l’examen                        |
+|    07 | Révisions avant le test                                        |
+|    08 |                                                                |
+|    09 |                                                                |
+|    10 |                                                                |
+|    11 |                                                                |
+|    12 |                                                                |
 
 ## 🕐 Cours 01
 

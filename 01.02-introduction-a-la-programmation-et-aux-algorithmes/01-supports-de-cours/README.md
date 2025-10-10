@@ -1,4 +1,4 @@
-# Introduction à la programmation et aux algorithmes
+# Introduction à la programmation et aux algorithmes - Support de cours
 
 V. Guidoux, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).

@@ -1,0 +1,16 @@
+@startuml
+!theme plain
+
+rectangle "Code source\n(.js)" as source
+rectangle "Interpréteur\n(Node.js/Navigateur)" as interpreter
+rectangle "Exécution\nligne par ligne" as execution
+
+source -right-> interpreter : Lecture
+interpreter -right-> execution : Traduction +\nExécution simultanées
+
+note bottom of interpreter
+    L'interpréteur lit chaque ligne,
+    la traduit et l'exécute
+    immédiatement
+end note
+@enduml
