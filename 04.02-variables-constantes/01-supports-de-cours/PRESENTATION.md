@@ -102,7 +102,7 @@ Elle a :
 
 🍎 **Un panier de pommes**
 
-- Nom : `nombreDePommes`
+- Nom : `appleCount`
 - Type : nombre entier (`int`)
 - Valeur : `5`
 </div>
@@ -111,7 +111,7 @@ Elle a :
 
 💰 **Un portefeuille**
 
-- Nom : `monArgent`
+- Nom : `myMoney`
 - Type : nombre décimal (`double`)
 - Valeur : `25.50`
 </div>
@@ -123,7 +123,7 @@ Elle a :
 
 📛 **Une étiquette avec votre nom**
 
-- Nom : `monNom`
+- Nom : `myName`
 - Type : texte (`String`)
 - Valeur : `"Marie"`
 
@@ -132,7 +132,7 @@ Elle a :
 
 💡 **Un interrupteur**
 
-- Nom : `lampeAllumee`
+- Nom : `lampOn`
 - Type : vrai/faux (`boolean`)
 - Valeur : `true`
 
@@ -142,11 +142,11 @@ Elle a :
 
 ```java
 // Déclaration + initialisation en une ligne
-int nombreDePommes = 5;
+int appleCount = 5;
 
 // Ou en deux étapes
-int nombreDePoires;        // Déclaration
-nombreDePoires = 3;         // Initialisation
+int pearCount;        // Déclaration
+pearCount = 3;         // Initialisation
 ```
 
 > 💡 **Bonne pratique** : Initialisez toujours vos variables au moment de leur
@@ -159,13 +159,13 @@ nombreDePoires = 3;         // Initialisation
 ## Le type `int` (nombres entiers)
 
 ```java
-public class PanierDePommes {
+public class AppleBasket {
     public static void main(String[] args) {
         // Je déclare une variable pour compter les pommes
-        int nombreDePommes = 5;
+        int appleCount = 5;
 
         // J'affiche le nombre de pommes
-        System.out.println("Mon panier contient " + nombreDePommes + " pommes");
+        System.out.println("Mon panier contient " + appleCount + " pommes");
     }
 }
 ```
@@ -177,13 +177,13 @@ public class PanierDePommes {
 ## Le type `double` (nombres décimaux)
 
 ```java
-public class PrixTotal {
+public class TotalPrice {
     public static void main(String[] args) {
-        double prixLivre = 15.90;
-        double prixCafe = 4.50;
-        double prixTotal = prixLivre + prixCafe;
+        double bookPrice = 15.90;
+        double coffeePrice = 4.50;
+        double totalPrice = bookPrice + coffeePrice;
 
-        System.out.println("Prix total : " + prixTotal + " francs");
+        System.out.println("Prix total : " + totalPrice + " francs");
     }
 }
 ```
@@ -204,10 +204,10 @@ public class PrixTotal {
 ## Le type `String` (texte)
 
 ```java
-public class MessageBienvenue {
+public class WelcomeMessage {
     public static void main(String[] args) {
-        String nom = "Sophie";
-        String message = "Bienvenue " + nom + " !";
+        String name = "Sophie";
+        String message = "Bienvenue " + name + " !";
 
         System.out.println(message);
     }
@@ -223,12 +223,12 @@ public class MessageBienvenue {
 ## Le type `boolean` (vrai ou faux)
 
 ```java
-public class NombrePair {
+public class EvenNumber {
     public static void main(String[] args) {
-        int nombre = 10;
-        boolean estPair = (nombre % 2 == 0);
+        int number = 10;
+        boolean isEven = (number % 2 == 0);
 
-        System.out.println("Le nombre " + nombre + " est pair : " + estPair);
+        System.out.println("Le nombre " + number + " est pair : " + isEven);
     }
 }
 ```
@@ -254,13 +254,13 @@ public class NombrePair {
 ## Modifier une variable
 
 ```java
-public class ModifierPanier {
+public class ModifyBasket {
     public static void main(String[] args) {
-        int pommes = 5;
-        System.out.println("Au début, j'ai " + pommes + " pommes");
+        int apples = 5;
+        System.out.println("Au début, j'ai " + apples + " pommes");
 
-        pommes = pommes + 3;
-        System.out.println("Après ajout, j'ai " + pommes + " pommes");
+        apples = apples + 3;
+        System.out.println("Après ajout, j'ai " + apples + " pommes");
     }
 }
 ```
@@ -316,15 +316,15 @@ points--;      // Équivalent à : points = points - 1;
 ## Exemple : Calculer la TVA
 
 ```java
-public class CalculTVA {
+public class CalculateVAT {
     public static void main(String[] args) {
-        final double TVA_SUISSE = 0.077;  // 7.7%
-        double prixHT = 100.0;
+        final double SWISS_VAT = 0.077;  // 7.7%
+        double priceExclVAT = 100.0;
 
-        double montantTVA = prixHT * TVA_SUISSE;
-        double prixTTC = prixHT + montantTVA;
+        double vatAmount = priceExclVAT * SWISS_VAT;
+        double priceInclVAT = priceExclVAT + vatAmount;
 
-        System.out.println("Prix TTC : " + prixTTC + " francs");
+        System.out.println("Prix TTC : " + priceInclVAT + " francs");
     }
 }
 ```
@@ -348,13 +348,13 @@ public class CalculTVA {
 **Principe :** Les instructions s'exécutent de haut en bas, dans l'ordre
 
 ```java
-public class SequencePrixTTC {
+public class SequencePriceInclVAT {
     public static void main(String[] args) {
-        double prixHT = 100.0;           // 1. Définir le prix HT
-        final double TVA = 0.077;        // 2. Définir le taux de TVA
-        double montantTVA = prixHT * TVA; // 3. Calculer la TVA
-        double prixTTC = prixHT + montantTVA; // 4. Calculer le prix TTC
-        System.out.println("Prix TTC : " + prixTTC); // 5. Afficher
+        double priceExclVAT = 100.0;           // 1. Définir le prix HT
+        final double VAT = 0.077;        // 2. Définir le taux de TVA
+        double vatAmount = priceExclVAT * VAT; // 3. Calculer la TVA
+        double priceInclVAT = priceExclVAT + vatAmount; // 4. Calculer le prix TTC
+        System.out.println("Prix TTC : " + priceInclVAT); // 5. Afficher
     }
 }
 ```
@@ -392,12 +392,12 @@ if (condition) {
 ## Exemple : Vérifier l'âge pour voter
 
 ```java
-public class PeutVoter {
+public class CanVote {
     public static void main(String[] args) {
-        final int AGE_MAJORITE = 18;
+        final int VOTING_AGE = 18;
         int age = 20;
 
-        if (age >= AGE_MAJORITE) {
+        if (age >= VOTING_AGE) {
             System.out.println("Vous pouvez voter !");
         } else {
             System.out.println("Vous ne pouvez pas encore voter");
@@ -414,7 +414,7 @@ public class PeutVoter {
 | --------- | ------------- | -------------------------- |
 | `&&`      | ET (AND)      | `age >= 18 && age < 65`    |
 | `\|\|`    | OU (OR)       | `jour == 6 \|\| jour == 7` |
-| `!`       | NON (NOT)     | `!estMajeur`               |
+| `!`       | NON (NOT)     | `!isAdult`                 |
 
 > 💡 `&&` = toutes les conditions doivent être vraies  
 > 💡 `||` = au moins une condition doit être vraie
@@ -422,12 +422,12 @@ public class PeutVoter {
 ## Exemple : Conditions multiples
 
 ```java
-public class EntrerBar {
+public class EnterBar {
     public static void main(String[] args) {
         int age = 20;
-        boolean aCarteIdentite = true;
+        boolean hasIdCard = true;
 
-        if (age >= 18 && aCarteIdentite) {
+        if (age >= 18 && hasIdCard) {
             System.out.println("Vous pouvez entrer");
         } else {
             System.out.println("Accès refusé");
@@ -460,20 +460,20 @@ while (condition) {
 ## Exemple : Économiser de l'argent
 
 ```java
-public class EconomiserArgent {
+public class SaveMoney {
     public static void main(String[] args) {
-        final int OBJECTIF = 300;
-        int economiesHebdo = 50;
+        final int TARGET = 300;
+        int weeklySavings = 50;
         int total = 0;
-        int semaine = 0;
+        int week = 0;
 
-        while (total < OBJECTIF) {
-            semaine++;
-            total += economiesHebdo;
-            System.out.println("Semaine " + semaine + " : " + total + " francs");
+        while (total < TARGET) {
+            week++;
+            total += weeklySavings;
+            System.out.println("Semaine " + week + " : " + total + " francs");
         }
 
-        System.out.println("Objectif atteint en " + semaine + " semaines !");
+        System.out.println("Objectif atteint en " + week + " semaines !");
     }
 }
 ```
@@ -499,10 +499,10 @@ Objectif atteint en 6 semaines !
    finisse par être fausse
 
 ```java
-int compteur = 0;           // 1. Initialisation
-while (compteur < 5) {      // 2. Condition
-    System.out.println(compteur);
-    compteur++;             // 3. Modification
+int counter = 0;           // 1. Initialisation
+while (counter < 5) {      // 2. Condition
+    System.out.println(counter);
+    counter++;             // 3. Modification
 }
 ```
 
@@ -525,14 +525,14 @@ for (initialisation; condition; incrémentation) {
 ## Exemple : Arroser des plantes
 
 ```java
-public class ArroserPlantes {
+public class WaterPlants {
     public static void main(String[] args) {
-        final int NOMBRE_PLANTES = 5;
+        final int PLANT_COUNT = 5;
 
-        System.out.println("J'ai " + NOMBRE_PLANTES + " plantes à arroser");
+        System.out.println("J'ai " + PLANT_COUNT + " plantes à arroser");
 
-        for (int plante = 1; plante <= NOMBRE_PLANTES; plante++) {
-            System.out.println("J'arrose la plante numéro " + plante);
+        for (int plant = 1; plant <= PLANT_COUNT; plant++) {
+            System.out.println("J'arrose la plante numéro " + plant);
         }
 
         System.out.println("Toutes les plantes sont arrosées !");
@@ -555,15 +555,15 @@ Toutes les plantes sont arrosées !
 ## Exemple : Table de multiplication
 
 ```java
-public class TableMultiplication {
+public class MultiplicationTable {
     public static void main(String[] args) {
-        final int NOMBRE = 5;
+        final int NUMBER = 5;
 
-        System.out.println("Table de multiplication de " + NOMBRE + " :");
+        System.out.println("Table de multiplication de " + NUMBER + " :");
 
         for (int i = 1; i <= 10; i++) {
-            int resultat = NOMBRE * i;
-            System.out.println(NOMBRE + " x " + i + " = " + resultat);
+            int result = NUMBER * i;
+            System.out.println(NUMBER + " x " + i + " = " + result);
         }
     }
 }
@@ -647,9 +647,9 @@ total = total + 5;  // Maintenant ça fonctionne
 ✅ **Bon** : Noms descriptifs
 
 ```java
-int nombreDePommes;
-double prixTotal;
-final int AGE_MAJORITE = 18;
+int appleCount;
+double totalPrice;
+final int VOTING_AGE = 18;
 ```
 
 ❌ **Mauvais** : Noms vagues
@@ -666,7 +666,7 @@ final int A = 18;
 // ✅ Bon - Code indenté et lisible
 if (age >= 18) {
     System.out.println("Majeur");
-    if (aPermis) {
+    if (hasLicense) {
         System.out.println("Peut conduire");
     }
 }
@@ -674,7 +674,7 @@ if (age >= 18) {
 // ❌ Mauvais - Difficile à lire
 if (age >= 18) {
 System.out.println("Majeur");
-if (aPermis) {
+if (hasLicense) {
 System.out.println("Peut conduire");
 }
 }
@@ -684,7 +684,7 @@ System.out.println("Peut conduire");
 
 ```java
 // ✅ Bon - Explique le "pourquoi"
-final double TVA_SUISSE = 0.077;  // Taux défini par la loi suisse
+final double SWISS_VAT = 0.077;  // Taux défini par la loi suisse
 
 // ❌ Inutile - Répète le code
 int age = 18;  // Je déclare une variable age
