@@ -1,0 +1,11 @@
+@startuml
+start
+:Compteur = 1;
+:Maximum = 5;
+while (Compteur <= Maximum ?) is (oui)
+  :Afficher le compteur;
+  :Compteur = Compteur + 1;
+endwhile (non)
+:Comptage terminé !;
+stop
+@enduml

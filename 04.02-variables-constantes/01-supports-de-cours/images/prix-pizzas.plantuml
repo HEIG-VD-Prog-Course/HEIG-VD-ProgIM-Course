@@ -1,0 +1,8 @@
+@startuml
+start
+:Une pizza coûte 12.50 francs;
+:Je commande 4 pizzas;
+:Je calcule le prix total (12.50 * 4);
+:Le prix total est de 50.0 francs;
+stop
+@enduml

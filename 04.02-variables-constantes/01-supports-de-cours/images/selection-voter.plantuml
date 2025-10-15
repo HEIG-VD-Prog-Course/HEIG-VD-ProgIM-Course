@@ -1,0 +1,11 @@
+@startuml
+start
+:L'âge de majorité est 18 ans;
+:La personne a 20 ans;
+if (âge >= 18 ?) then (oui)
+  :Afficher "Vous pouvez voter";
+else (non)
+  :Afficher "Vous ne pouvez pas encore voter";
+endif
+stop
+@enduml

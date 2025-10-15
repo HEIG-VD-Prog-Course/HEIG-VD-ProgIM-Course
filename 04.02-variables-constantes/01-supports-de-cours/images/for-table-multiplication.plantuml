@@ -1,0 +1,12 @@
+@startuml
+start
+:Nombre = 5;
+:Multiplicateur = 1;
+repeat
+  :Calculer résultat = 5 * multiplicateur;
+  :Afficher "5 x multiplicateur = résultat";
+  :Multiplicateur = Multiplicateur + 1;
+repeat while (Multiplicateur <= 10 ?) is (oui) not (non)
+:Table de multiplication terminée !;
+stop
+@enduml

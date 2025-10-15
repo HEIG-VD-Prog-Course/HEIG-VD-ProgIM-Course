@@ -43,7 +43,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-Cette séance a pour but pour lorem ipsum dolor sit amet, consectetur adipiscing
+Cette séance a pour but pour vous faire découvrir les concepts de base des
+variables et constantes en Java. Vous apprendrez à déclarer, initialiser et
+utiliser différents types de variables, ainsi qu'à comprendre les structures
+algorithmiques associées.
 
 De façon plus concise, à la fin de cette séance, vous devriez être capable de :
 
@@ -2725,6 +2728,8 @@ programmation :
 >    - Testez les cas limites (0, nombres négatifs, etc.)
 
 ### Sources et liens utiles
+
+- <https://www.w3schools.com/java/>
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

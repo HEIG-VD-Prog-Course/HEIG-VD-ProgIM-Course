@@ -1,0 +1,8 @@
+@startuml
+start
+:Mon solde initial est de 100 francs;
+:Je dépense 25 francs (100 - 25 = 75);
+:Je reçois 50 francs (75 + 50 = 125);
+:Mon solde final est de 125 francs;
+stop
+@enduml

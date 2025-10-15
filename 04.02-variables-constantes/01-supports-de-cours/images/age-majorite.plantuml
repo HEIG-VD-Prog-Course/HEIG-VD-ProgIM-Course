@@ -1,0 +1,8 @@
+@startuml
+start
+:L'âge de majorité est 18 (constante);
+:La personne a 17 ans;
+:Je vérifie si 17 >= 18;
+:La personne n'est pas majeure (false);
+stop
+@enduml

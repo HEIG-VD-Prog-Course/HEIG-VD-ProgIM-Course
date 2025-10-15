@@ -1,0 +1,9 @@
+@startuml
+start
+:J'ai 20 bonbons;
+:Il y a 3 amis;
+:Je calcule les bonbons par ami (20 / 3 = 6);
+:Je calcule le reste (20 % 3 = 2);
+:Chaque ami reçoit 6 bonbons, il en reste 2;
+stop
+@enduml

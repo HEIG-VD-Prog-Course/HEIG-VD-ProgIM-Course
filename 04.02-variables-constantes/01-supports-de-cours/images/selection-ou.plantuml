@@ -1,0 +1,10 @@
+@startuml
+start
+:Jour = 6 (samedi);
+if (jour == 6 OU jour == 7 ?) then (oui)
+  :Afficher "Le magasin est fermé";
+else (non)
+  :Afficher "Le magasin est ouvert";
+endif
+stop
+@enduml

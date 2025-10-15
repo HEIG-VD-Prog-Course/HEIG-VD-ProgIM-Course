@@ -1,0 +1,9 @@
+@startuml
+start
+:Prix HT = 100 francs;
+:Taux TVA = 0.077;
+:Calculer montant TVA = 100 * 0.077;
+:Calculer prix TTC = 100 + 7.7;
+:Afficher le prix TTC;
+stop
+@enduml

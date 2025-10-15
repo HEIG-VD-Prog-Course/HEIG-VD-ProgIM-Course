@@ -1,0 +1,9 @@
+@startuml
+start
+:La remise maximale est de 30% (constante);
+:Le prix initial est de 50 francs;
+:Je calcule le montant de la remise (50 * 0.30 = 15);
+:Je calcule le prix minimal (50 - 15 = 35);
+:Le prix minimal est de 35 francs;
+stop
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+start
+:Nombre de plantes = 5;
+:Plante actuelle = 1;
+repeat
+  :Arroser la plante actuelle;
+  :Plante actuelle = Plante actuelle + 1;
+repeat while (Plante actuelle <= 5 ?) is (oui) not (non)
+:Toutes les plantes sont arrosées !;
+stop
+@enduml

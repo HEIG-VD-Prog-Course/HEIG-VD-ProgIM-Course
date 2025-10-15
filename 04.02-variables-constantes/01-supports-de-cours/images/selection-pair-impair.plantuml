@@ -1,0 +1,11 @@
+@startuml
+start
+:Nombre = 7;
+:Calculer reste = nombre % 2;
+if (reste == 0 ?) then (oui)
+  :Afficher "Le nombre est pair";
+else (non)
+  :Afficher "Le nombre est impair";
+endif
+stop
+@enduml

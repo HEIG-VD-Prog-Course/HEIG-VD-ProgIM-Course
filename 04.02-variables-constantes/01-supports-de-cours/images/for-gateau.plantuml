@@ -1,0 +1,11 @@
+@startuml
+start
+:Nombre d'invités = 8;
+:Invité actuel = 1;
+repeat
+  :Donner une part à l'invité actuel;
+  :Invité actuel = Invité actuel + 1;
+repeat while (Invité actuel <= 8 ?) is (oui) not (non)
+:Tout le monde a une part !;
+stop
+@enduml
