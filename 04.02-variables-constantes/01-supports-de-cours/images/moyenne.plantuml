@@ -1,0 +1,8 @@
+@startuml
+start
+:Pierre a eu 5.5 au premier examen;
+:Pierre a eu 4.0 au deuxième examen;
+:Je calcule la moyenne ((5.5 + 4.0) / 2);
+:La moyenne de Pierre est 4.75;
+stop
+@enduml

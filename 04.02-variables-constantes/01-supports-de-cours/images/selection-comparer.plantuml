@@ -1,0 +1,15 @@
+@startuml
+start
+:Nombre a = 15;
+:Nombre b = 10;
+if (a > b ?) then (oui)
+  :Afficher "a est plus grand que b";
+else (non)
+  if (a < b ?) then (oui)
+    :Afficher "a est plus petit que b";
+  else (non)
+    :Afficher "a est égal à b";
+  endif
+endif
+stop
+@enduml

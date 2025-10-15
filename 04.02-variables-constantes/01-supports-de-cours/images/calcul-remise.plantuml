@@ -1,0 +1,9 @@
+@startuml
+start
+:Le prix initial est de 80 francs;
+:La remise est de 20%;
+:Je calcule le montant de la remise (80 * 0.20 = 16);
+:Je calcule le prix final (80 - 16 = 64);
+:Le prix final est de 64 francs;
+stop
+@enduml

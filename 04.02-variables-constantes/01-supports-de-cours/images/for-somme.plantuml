@@ -1,0 +1,11 @@
+@startuml
+start
+:Somme = 0;
+:Nombre actuel = 1;
+repeat
+  :Somme = Somme + nombre actuel;
+  :Nombre actuel = Nombre actuel + 1;
+repeat while (Nombre actuel <= 10 ?) is (oui) not (non)
+:Afficher la somme totale;
+stop
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+start
+:Le taux de TVA est de 0.077 (constante);
+:Le prix HT est de 100 francs;
+:Je calcule le montant de la TVA (100 * 0.077 = 7.7);
+:Je calcule le prix TTC (100 + 7.7 = 107.7);
+:Le prix TTC est de 107.7 francs;
+stop
+@enduml

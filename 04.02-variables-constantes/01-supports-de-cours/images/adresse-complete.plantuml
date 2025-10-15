@@ -1,0 +1,9 @@
+@startuml
+start
+:La rue est "Avenue de la Gare";
+:Le numéro est "42";
+:La ville est "Yverdon-les-Bains";
+:Je combine les informations;
+:J'affiche l'adresse complète;
+stop
+@enduml

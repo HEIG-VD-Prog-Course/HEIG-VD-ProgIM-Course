@@ -1,0 +1,9 @@
+@startuml
+start
+:Prendre une tasse;
+:Mettre du café;
+:Ajouter de l'eau chaude;
+:Mélanger;
+:Mon café est prêt !;
+stop
+@enduml

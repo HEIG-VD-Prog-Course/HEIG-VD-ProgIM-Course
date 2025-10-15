@@ -1,0 +1,14 @@
+@startuml
+start
+:Objectif = 300 francs;
+:Économies hebdomadaires = 50 francs;
+:Total économisé = 0;
+:Semaine = 0;
+while (Total < Objectif ?) is (oui)
+  :Total = Total + 50;
+  :Semaine = Semaine + 1;
+  :Afficher le total;
+endwhile (non)
+:Objectif atteint !;
+stop
+@enduml

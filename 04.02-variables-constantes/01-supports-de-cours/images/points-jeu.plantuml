@@ -1,0 +1,8 @@
+@startuml
+start
+:Mes points initiaux : 10;
+:Je gagne 5 points (10 + 5 = 15);
+:Je perds 2 points (15 - 2 = 13);
+:Mes points finaux : 13;
+stop
+@enduml

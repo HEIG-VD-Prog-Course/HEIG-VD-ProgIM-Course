@@ -1,0 +1,13 @@
+@startuml
+start
+:Capacité = 10 pommes;
+:Pommes dans le panier = 0;
+:Nombre d'actions = 0;
+while (Pommes < Capacité ?) is (oui)
+  :Ajouter 2 pommes;
+  :Actions = Actions + 1;
+  :Afficher l'état;
+endwhile (non)
+:Le panier est plein !;
+stop
+@enduml

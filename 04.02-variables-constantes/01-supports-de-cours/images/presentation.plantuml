@@ -1,0 +1,9 @@
+@startuml
+start
+:Mon nom est "Julie";
+:Mon âge est 21;
+:Ma ville est "Lausanne";
+:Je crée une phrase de présentation;
+:J'affiche ma présentation;
+stop
+@enduml

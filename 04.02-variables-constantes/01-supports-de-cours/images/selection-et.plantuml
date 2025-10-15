@@ -1,0 +1,11 @@
+@startuml
+start
+:Âge = 20;
+:A une carte d'identité = true;
+if (âge >= 18 ET a carte ?) then (oui)
+  :Afficher "Vous pouvez entrer";
+else (non)
+  :Afficher "Accès refusé";
+endif
+stop
+@enduml

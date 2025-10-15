@@ -1,0 +1,7 @@
+@startuml
+start
+:Mon panier contient 5 pommes;
+:J'ajoute 3 pommes;
+:Mon panier contient maintenant 8 pommes;
+stop
+@enduml

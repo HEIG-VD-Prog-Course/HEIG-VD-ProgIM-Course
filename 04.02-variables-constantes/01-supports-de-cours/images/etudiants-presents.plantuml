@@ -1,0 +1,8 @@
+@startuml
+start
+:Il y a 25 étudiants dans la classe;
+:3 étudiants sont absents;
+:Je calcule le nombre de présents (25 - 3);
+:Il y a 22 étudiants présents aujourd'hui;
+stop
+@enduml

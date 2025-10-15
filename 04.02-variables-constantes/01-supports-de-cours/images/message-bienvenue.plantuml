@@ -1,0 +1,7 @@
+@startuml
+start
+:Le nom de l'utilisateur est "Sophie";
+:Je crée un message de bienvenue;
+:J'affiche "Bienvenue Sophie !";
+stop
+@enduml

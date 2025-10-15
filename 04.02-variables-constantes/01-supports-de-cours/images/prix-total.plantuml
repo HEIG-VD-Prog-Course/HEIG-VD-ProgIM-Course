@@ -1,0 +1,8 @@
+@startuml
+start
+:Le livre coûte 15.90 francs;
+:Le café coûte 4.50 francs;
+:Je calcule le prix total (15.90 + 4.50);
+:Le prix total est de 20.40 francs;
+stop
+@enduml

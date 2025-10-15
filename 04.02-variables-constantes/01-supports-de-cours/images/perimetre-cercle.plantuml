@@ -1,0 +1,8 @@
+@startuml
+start
+:La valeur de π est 3.14159 (constante);
+:Le rayon du cercle est de 5 mètres;
+:Je calcule le périmètre (2 * 3.14159 * 5);
+:Le périmètre est d'environ 31.42 mètres;
+stop
+@enduml
