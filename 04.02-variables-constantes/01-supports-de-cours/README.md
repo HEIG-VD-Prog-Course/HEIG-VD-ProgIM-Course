@@ -1782,11 +1782,11 @@ Pour créer des conditions, on utilise des **opérateurs de comparaison** :
 
 Pour combiner plusieurs conditions :
 
-| Opérateur | Signification | Exemple                     | Description                             |
-| --------- | ------------- | --------------------------- | --------------------------------------- |
-| `&&`      | ET (AND)      | `age >= 18 && age < 65`     | Les deux conditions doivent être vraies |
-| ` \| \|`  | OU (OR)       | `jour == 6 \| \| jour == 7` | Au moins une condition doit être vraie  |
-| `!`       | NON (NOT)     | `!estMajeur`                | Inverse la condition                    |
+| Opérateur | Signification | Exemple                    | Description                             |
+| --------- | ------------- | -------------------------- | --------------------------------------- |
+| `&&`      | ET (AND)      | `age >= 18 && age < 65`    | Les deux conditions doivent être vraies |
+| ` \|\|`   | OU (OR)       | `jour == 6 \|\| jour == 7` | Au moins une condition doit être vraie  |
+| `!`       | NON (NOT)     | `!estMajeur`               | Inverse la condition                    |
 
 #### Exemple 1 — Vérifier si on peut voter
 
