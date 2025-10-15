@@ -97,21 +97,29 @@ Elle a :
 
 ## Analogies de la vie réelle (1/2)
 
+<div class="two-columns">
+<div>
+
 🍎 **Un panier de pommes**
 
 - Nom : `nombreDePommes`
 - Type : nombre entier (`int`)
 - Valeur : `5`
+</div>
+
+<div>
 
 💰 **Un portefeuille**
 
 - Nom : `monArgent`
 - Type : nombre décimal (`double`)
 - Valeur : `25.50`
-
-![bg right:40%][illustration-variables]
+</div>
 
 ## Analogies de la vie réelle (2/2)
+
+<div class="two-columns">
+<div>
 
 📛 **Une étiquette avec votre nom**
 
@@ -119,13 +127,16 @@ Elle a :
 - Type : texte (`String`)
 - Valeur : `"Marie"`
 
+</div>
+<div>
+
 💡 **Un interrupteur**
 
 - Nom : `lampeAllumee`
 - Type : vrai/faux (`boolean`)
 - Valeur : `true`
 
-![bg right:40%][illustration-variables]
+</div>
 
 ## Déclaration et initialisation
 
@@ -240,8 +251,6 @@ public class NombrePair {
 | `/`       | Division       | `10 / 2` | `5`      |
 | `%`       | Modulo (reste) | `10 % 3` | `1`      |
 
-![bg right:40%][illustration-les-operateurs]
-
 ## Modifier une variable
 
 ```java
@@ -294,8 +303,6 @@ points--;      // Équivalent à : points = points - 1;
 | Déclarées normalement             | Déclarées avec le mot-clé `final`   |
 | Pour des valeurs qui changent     | Pour des valeurs qui restent fixes  |
 
-![bg right:40%][illustration-les-constantes]
-
 ## Pourquoi utiliser des constantes ?
 
 ✅ **Clarté** : `TVA_SUISSE` est plus clair que `0.077`
@@ -305,8 +312,6 @@ points--;      // Équivalent à : points = points - 1;
 ✅ **Maintenance** : Modifier à un seul endroit
 
 ✅ **Intention** : Indique clairement que la valeur est fixe
-
-![bg right:40%][illustration-les-constantes]
 
 ## Exemple : Calculer la TVA
 
@@ -337,8 +342,6 @@ public class CalculTVA {
 3. **Itération** : répéter des actions (boucles while et for)
 
 > 🎯 Ces trois structures sont les briques de base de TOUS les programmes !
-
-![bg right:40%][illustration-pseudocode]
 
 ## La séquence
 
@@ -407,11 +410,11 @@ public class PeutVoter {
 
 ## Opérateurs logiques
 
-| Opérateur | Signification | Exemple                 |
-| --------- | ------------- | ----------------------- | ------- | -------------------------- |
-| `&&`      | ET (AND)      | `age >= 18 && age < 65` |
-| `         |               | `                       | OU (OR) | `jour == 6 \|\| jour == 7` |
-| `!`       | NON (NOT)     | `!estMajeur`            |
+| Opérateur | Signification | Exemple                    |
+| --------- | ------------- | -------------------------- |
+| `&&`      | ET (AND)      | `age >= 18 && age < 65`    |
+| `\|\|`    | OU (OR)       | `jour == 6 \|\| jour == 7` |
+| `!`       | NON (NOT)     | `!estMajeur`               |
 
 > 💡 `&&` = toutes les conditions doivent être vraies  
 > 💡 `||` = au moins une condition doit être vraie
@@ -568,17 +571,24 @@ public class TableMultiplication {
 
 ## Quand utiliser while vs for ?
 
+<div class="two-columns">
+<div>
+
 **Utilisez `while` quand :**
 
 - ❓ Vous ne connaissez pas le nombre d'itérations à l'avance
 - 📊 La condition d'arrêt dépend d'un événement
 - 💰 Exemple : économiser jusqu'à atteindre un objectif
+</div>
+<div>
 
 **Utilisez `for` quand :**
 
 - ✅ Vous connaissez exactement le nombre d'itérations
 - 🔢 Vous voulez parcourir une séquence de nombres
 - 🌱 Exemple : arroser 5 plantes, compter de 1 à 10
+
+</div>
 
 ## Erreurs courantes à éviter
 
