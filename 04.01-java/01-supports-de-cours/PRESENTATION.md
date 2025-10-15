@@ -259,7 +259,6 @@ public class HelloWorld {
 ## À vous de jouer !
 
 - 📖 (Re)lire le [support de cours][cours]
-- 💻 Réaliser les [exercices][exercices]
 - 🎯 Configurer votre environnement de développement
 - ❓ Poser des questions si nécessaire
 
