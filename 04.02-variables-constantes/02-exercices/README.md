@@ -722,9 +722,9 @@ Buzz
 
 > [!TIP]
 >
-> L'opérateur modulo `%` vous permet de vérifier si un nombre est divisible par
-> un autre. Par exemple, `nombre % 3 == 0` vérifie si `nombre` est divisible
-> par 3.
+> L'opérateur modulo `%` retourne le reste de la division d'un nombre par un autre.
+> Il vous permet ainsi de vérifier si un nombre est divisible par un autre.
+> Par exemple, `nombre % 3 == 0` vérifie si `nombre` est divisible par 3.
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
