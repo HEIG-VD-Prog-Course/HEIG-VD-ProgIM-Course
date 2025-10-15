@@ -79,7 +79,7 @@ Aujourd'hui, nous allons aller beaucoup plus loin en apprenant à :
 > exécuté.
 
 ```java
-public class MonProgramme {
+public class MyProgram {
     public static void main(String[] args) {
         // Votre code s'exécute ici
         System.out.println("Hello, World!");
@@ -104,24 +104,24 @@ Pensez à ces exemples concrets :
 
 1. **Un panier de pommes** 🍎
 
-   - Le panier s'appelle `nombreDePommes`
+   - Le panier s'appelle `appleCount`
    - Il contient des **nombres entiers** (on ne peut pas avoir 2.5 pommes)
    - Sa valeur actuelle est `5`
 
 2. **Un portefeuille** 💰
 
-   - Le portefeuille s'appelle `monArgent`
+   - Le portefeuille s'appelle `myMoney`
    - Il contient un **nombre décimal** (on peut avoir 25.50 francs)
    - Sa valeur actuelle est `25.50`
 
 3. **Une étiquette avec votre nom** 📛
 
-   - L'étiquette s'appelle `monNom`
+   - L'étiquette s'appelle `myName`
    - Elle contient du **texte** (une chaîne de caractères)
    - Sa valeur actuelle est `"Marie"`
 
 4. **Un interrupteur** 💡
-   - L'interrupteur s'appelle `lampeAllumee`
+   - L'interrupteur s'appelle `lampOn`
    - Il peut être **vrai ou faux** (allumé ou éteint)
    - Sa valeur actuelle est `true` (allumé)
 
@@ -134,11 +134,11 @@ En Java, pour créer une variable, on doit :
 
 ```java
 // Déclaration + initialisation en une ligne
-int nombreDePommes = 5;
+int appleCount = 5;
 
 // Ou en deux étapes
-int nombreDePoires;        // Déclaration
-nombreDePoires = 3;         // Initialisation
+int pearCount;        // Déclaration
+pearCount = 3;         // Initialisation
 ```
 
 > [!TIP]
@@ -183,13 +183,13 @@ stop
 **Code Java :**
 
 ```java
-public class PanierDePommes {
+public class AppleBasket {
     public static void main(String[] args) {
         // Je déclare une variable pour compter les pommes
-        int nombreDePommes = 5;
+        int appleCount = 5;
 
         // J'affiche le nombre de pommes
-        System.out.println("Mon panier contient " + nombreDePommes + " pommes");
+        System.out.println("Mon panier contient " + appleCount + " pommes");
     }
 }
 ```
@@ -202,11 +202,11 @@ Mon panier contient 5 pommes
 
 **Explications ligne par ligne :**
 
-- `int nombreDePommes = 5;` → Je crée une variable de type entier nommée
-  `nombreDePommes` et je lui donne la valeur `5`
+- `int appleCount = 5;` → Je crée une variable de type entier nommée
+  `appleCount` et je lui donne la valeur `5`
 - `System.out.println(...)` → J'affiche un message dans la console
-- `"Mon panier contient " + nombreDePommes + " pommes"` → Je combine du texte
-  avec la valeur de ma variable en utilisant le symbole `+`
+- `"Mon panier contient " + appleCount + " pommes"` → Je combine du texte avec
+  la valeur de ma variable en utilisant le symbole `+`
 
 ##### Exemple 2 — Calculer un âge
 
@@ -233,17 +233,17 @@ stop
 **Code Java :**
 
 ```java
-public class CalculAge {
+public class CalculateAge {
     public static void main(String[] args) {
         // L'âge actuel de Marie
-        int ageActuel = 20;
+        int currentAge = 20;
 
         // Je calcule son âge dans 5 ans
-        int ageFutur = ageActuel + 5;
+        int futureAge = currentAge + 5;
 
         // J'affiche le résultat
-        System.out.println("Marie a " + ageActuel + " ans aujourd'hui");
-        System.out.println("Dans 5 ans, elle aura " + ageFutur + " ans");
+        System.out.println("Marie a " + currentAge + " ans aujourd'hui");
+        System.out.println("Dans 5 ans, elle aura " + futureAge + " ans");
     }
 }
 ```
@@ -282,21 +282,21 @@ stop
 **Code Java :**
 
 ```java
-public class EtudiantsPresents {
+public class PresentStudents {
     public static void main(String[] args) {
         // Le nombre total d'étudiants
-        int nombreTotal = 25;
+        int totalCount = 25;
 
         // Le nombre d'absents
-        int nombreAbsents = 3;
+        int absentCount = 3;
 
         // Je calcule le nombre de présents
-        int nombrePresents = nombreTotal - nombreAbsents;
+        int presentCount = totalCount - absentCount;
 
         // J'affiche le résultat
-        System.out.println("Nombre total d'étudiants : " + nombreTotal);
-        System.out.println("Nombre d'absents : " + nombreAbsents);
-        System.out.println("Nombre de présents : " + nombrePresents);
+        System.out.println("Nombre total d'étudiants : " + totalCount);
+        System.out.println("Nombre d'absents : " + absentCount);
+        System.out.println("Nombre de présents : " + presentCount);
     }
 }
 ```
@@ -353,21 +353,21 @@ stop
 **Code Java :**
 
 ```java
-public class PrixTotal {
+public class TotalPrice {
     public static void main(String[] args) {
         // Le prix du livre
-        double prixLivre = 15.90;
+        double bookPrice = 15.90;
 
         // Le prix du café
-        double prixCafe = 4.50;
+        double coffeePrice = 4.50;
 
         // Je calcule le prix total
-        double prixTotal = prixLivre + prixCafe;
+        double totalPrice = bookPrice + coffeePrice;
 
         // J'affiche le résultat
-        System.out.println("Prix du livre : " + prixLivre + " francs");
-        System.out.println("Prix du café : " + prixCafe + " francs");
-        System.out.println("Prix total : " + prixTotal + " francs");
+        System.out.println("Prix du livre : " + bookPrice + " francs");
+        System.out.println("Prix du café : " + coffeePrice + " francs");
+        System.out.println("Prix total : " + totalPrice + " francs");
     }
 }
 ```
@@ -407,19 +407,19 @@ stop
 **Code Java :**
 
 ```java
-public class CalculMoyenne {
+public class CalculateAverage {
     public static void main(String[] args) {
         // Les deux notes de Pierre
-        double note1 = 5.5;
-        double note2 = 4.0;
+        double grade1 = 5.5;
+        double grade2 = 4.0;
 
         // Je calcule la moyenne
-        double moyenne = (note1 + note2) / 2;
+        double average = (grade1 + grade2) / 2;
 
         // J'affiche le résultat
-        System.out.println("Note 1 : " + note1);
-        System.out.println("Note 2 : " + note2);
-        System.out.println("Moyenne : " + moyenne);
+        System.out.println("Note 1 : " + grade1);
+        System.out.println("Note 2 : " + grade2);
+        System.out.println("Moyenne : " + average);
     }
 }
 ```
@@ -459,21 +459,21 @@ stop
 **Code Java :**
 
 ```java
-public class DistanceTotale {
+public class TotalDistance {
     public static void main(String[] args) {
         // Distance du matin
-        double distanceMatin = 2.5;
+        double morningDistance = 2.5;
 
         // Distance du soir
-        double distanceSoir = 3.75;
+        double eveningDistance = 3.75;
 
         // Je calcule la distance totale
-        double distanceTotale = distanceMatin + distanceSoir;
+        double totalDistance = morningDistance + eveningDistance;
 
         // J'affiche le résultat
-        System.out.println("Distance du matin : " + distanceMatin + " km");
-        System.out.println("Distance du soir : " + distanceSoir + " km");
-        System.out.println("Distance totale : " + distanceTotale + " km");
+        System.out.println("Distance du matin : " + morningDistance + " km");
+        System.out.println("Distance du soir : " + eveningDistance + " km");
+        System.out.println("Distance totale : " + totalDistance + " km");
     }
 }
 ```
@@ -531,13 +531,13 @@ stop
 **Code Java :**
 
 ```java
-public class MessageBienvenue {
+public class WelcomeMessage {
     public static void main(String[] args) {
         // Le nom de l'utilisateur
-        String nom = "Sophie";
+        String name = "Sophie";
 
         // Je crée le message de bienvenue
-        String message = "Bienvenue " + nom + " !";
+        String message = "Bienvenue " + name + " !";
 
         // J'affiche le message
         System.out.println(message);
@@ -553,7 +553,7 @@ Bienvenue Sophie !
 
 **Explications :**
 
-- `String nom = "Sophie";` → Je crée une variable de type texte avec le nom
+- `String name = "Sophie";` → Je crée une variable de type texte avec le nom
   "Sophie"
 - Les textes (String) sont toujours entourés de guillemets doubles `"`
 - Le symbole `+` permet de **concaténer** (coller ensemble) plusieurs textes
@@ -585,18 +585,18 @@ stop
 **Code Java :**
 
 ```java
-public class AdresseComplete {
+public class CompleteAddress {
     public static void main(String[] args) {
         // Les différentes parties de l'adresse
-        String rue = "Avenue de la Gare";
-        String numero = "42";
-        String ville = "Yverdon-les-Bains";
+        String street = "Avenue de la Gare";
+        String number = "42";
+        String city = "Yverdon-les-Bains";
 
         // Je crée l'adresse complète
-        String adresseComplete = rue + " " + numero + ", " + ville;
+        String fullAddress = street + " " + number + ", " + city;
 
         // J'affiche l'adresse
-        System.out.println("Adresse : " + adresseComplete);
+        System.out.println("Adresse : " + fullAddress);
     }
 }
 ```
@@ -637,14 +637,14 @@ stop
 public class Presentation {
     public static void main(String[] args) {
         // Mes informations
-        String nom = "Julie";
+        String name = "Julie";
         int age = 21;
-        String ville = "Lausanne";
+        String city = "Lausanne";
 
         // Je crée ma présentation
-        String presentation = "Bonjour, je m'appelle " + nom +
+        String presentation = "Bonjour, je m'appelle " + name +
                             ", j'ai " + age +
-                            " ans et j'habite à " + ville + ".";
+                            " ans et j'habite à " + city + ".";
 
         // J'affiche ma présentation
         System.out.println(presentation);
@@ -695,13 +695,13 @@ stop
 **Code Java :**
 
 ```java
-public class EtatLampe {
+public class LampState {
     public static void main(String[] args) {
         // L'état de la lampe
-        boolean lampeAllumee = true;
+        boolean lampOn = true;
 
         // J'affiche l'état
-        System.out.println("La lampe est allumée : " + lampeAllumee);
+        System.out.println("La lampe est allumée : " + lampOn);
     }
 }
 ```
@@ -737,13 +737,13 @@ stop
 **Code Java :**
 
 ```java
-public class AiFaim {
+public class AmHungry {
     public static void main(String[] args) {
         // Est-ce que j'ai faim ?
-        boolean jaiFaim = false;
+        boolean hungry = false;
 
         // J'affiche mon état
-        System.out.println("J'ai faim : " + jaiFaim);
+        System.out.println("J'ai faim : " + hungry);
     }
 }
 ```
@@ -781,17 +781,17 @@ stop
 **Code Java :**
 
 ```java
-public class NombrePair {
+public class EvenNumber {
     public static void main(String[] args) {
         // Le nombre à vérifier
-        int nombre = 10;
+        int number = 10;
 
         // Je vérifie si le nombre est pair
         // Un nombre est pair si le reste de la division par 2 est 0
-        boolean estPair = (nombre % 2 == 0);
+        boolean isEven = (number % 2 == 0);
 
         // J'affiche le résultat
-        System.out.println("Le nombre " + nombre + " est pair : " + estPair);
+        System.out.println("Le nombre " + number + " est pair : " + isEven);
     }
 }
 ```
@@ -804,10 +804,10 @@ Le nombre 10 est pair : true
 
 **Explications :**
 
-- `nombre % 2` → Calcule le reste de la division de `nombre` par 2 (opérateur
+- `number % 2` → Calcule le reste de la division de `number` par 2 (opérateur
   modulo)
 - `==` → Opérateur de comparaison (égal à)
-- `(nombre % 2 == 0)` → Cette expression donne `true` si le reste est 0, `false`
+- `(number % 2 == 0)` → Cette expression donne `true` si le reste est 0, `false`
   sinon
 - Les parenthèses rendent le code plus lisible
 
@@ -881,15 +881,15 @@ stop
 **Code Java :**
 
 ```java
-public class ModifierPanier {
+public class ModifyBasket {
     public static void main(String[] args) {
         // Je commence avec 5 pommes
-        int pommes = 5;
-        System.out.println("Au début, j'ai " + pommes + " pommes");
+        int apples = 5;
+        System.out.println("Au début, j'ai " + apples + " pommes");
 
         // J'ajoute 3 pommes
-        pommes = pommes + 3;
-        System.out.println("Après avoir ajouté 3 pommes, j'ai " + pommes + " pommes");
+        apples = apples + 3;
+        System.out.println("Après avoir ajouté 3 pommes, j'ai " + apples + " pommes");
     }
 }
 ```
@@ -903,9 +903,9 @@ Après avoir ajouté 3 pommes, j'ai 8 pommes
 
 **Explications :**
 
-- `pommes = pommes + 3;` → Je prends la valeur actuelle de `pommes` (5), j'y
-  ajoute 3, et je stocke le résultat (8) dans `pommes`
-- La variable `pommes` est modifiée : elle passe de 5 à 8
+- `apples = apples + 3;` → Je prends la valeur actuelle de `apples` (5), j'y
+  ajoute 3, et je stocke le résultat (8) dans `apples`
+- La variable `apples` est modifiée : elle passe de 5 à 8
 
 ##### Exemple 2 — Mettre à jour un solde bancaire
 
@@ -934,19 +934,19 @@ stop
 **Code Java :**
 
 ```java
-public class SoldeBancaire {
+public class BankBalance {
     public static void main(String[] args) {
         // Mon solde initial
-        double solde = 100.0;
-        System.out.println("Solde initial : " + solde + " francs");
+        double balance = 100.0;
+        System.out.println("Solde initial : " + balance + " francs");
 
         // Je dépense 25 francs
-        solde = solde - 25.0;
-        System.out.println("Après dépense : " + solde + " francs");
+        balance = balance - 25.0;
+        System.out.println("Après dépense : " + balance + " francs");
 
         // Je reçois 50 francs
-        solde = solde + 50.0;
-        System.out.println("Solde final : " + solde + " francs");
+        balance = balance + 50.0;
+        System.out.println("Solde final : " + balance + " francs");
     }
 }
 ```
@@ -998,21 +998,21 @@ stop
 **Code Java :**
 
 ```java
-public class CommandePizzas {
+public class OrderPizzas {
     public static void main(String[] args) {
         // Le prix d'une pizza
-        double prixUnitaire = 12.50;
+        double unitPrice = 12.50;
 
         // Le nombre de pizzas
-        int quantite = 4;
+        int quantity = 4;
 
         // Je calcule le prix total
-        double prixTotal = prixUnitaire * quantite;
+        double totalPrice = unitPrice * quantity;
 
         // J'affiche le résultat
-        System.out.println("Prix unitaire : " + prixUnitaire + " francs");
-        System.out.println("Quantité : " + quantite);
-        System.out.println("Prix total : " + prixTotal + " francs");
+        System.out.println("Prix unitaire : " + unitPrice + " francs");
+        System.out.println("Quantité : " + quantity);
+        System.out.println("Prix total : " + totalPrice + " francs");
     }
 }
 ```
@@ -1054,25 +1054,25 @@ stop
 **Code Java :**
 
 ```java
-public class PartageBonbons {
+public class ShareCandies {
     public static void main(String[] args) {
         // Le nombre total de bonbons
-        int totalBonbons = 20;
+        int totalCandies = 20;
 
         // Le nombre d'amis
-        int nombreAmis = 3;
+        int friendCount = 3;
 
         // Combien de bonbons par ami ? (division entière)
-        int bonbonsParAmi = totalBonbons / nombreAmis;
+        int candiesPerFriend = totalCandies / friendCount;
 
         // Combien de bonbons restent ? (modulo)
-        int bonbonsRestants = totalBonbons % nombreAmis;
+        int remainingCandies = totalCandies % friendCount;
 
         // J'affiche le résultat
-        System.out.println("Total de bonbons : " + totalBonbons);
-        System.out.println("Nombre d'amis : " + nombreAmis);
-        System.out.println("Bonbons par ami : " + bonbonsParAmi);
-        System.out.println("Bonbons restants : " + bonbonsRestants);
+        System.out.println("Total de bonbons : " + totalCandies);
+        System.out.println("Nombre d'amis : " + friendCount);
+        System.out.println("Bonbons par ami : " + candiesPerFriend);
+        System.out.println("Bonbons restants : " + remainingCandies);
     }
 }
 ```
@@ -1120,25 +1120,25 @@ stop
 **Code Java :**
 
 ```java
-public class CalculRemise {
+public class CalculateDiscount {
     public static void main(String[] args) {
         // Le prix initial du produit
-        double prixInitial = 80.0;
+        double initialPrice = 80.0;
 
         // Le pourcentage de remise (20% = 0.20)
-        double pourcentageRemise = 0.20;
+        double discountPercentage = 0.20;
 
         // Je calcule le montant de la remise
-        double montantRemise = prixInitial * pourcentageRemise;
+        double discountAmount = initialPrice * discountPercentage;
 
         // Je calcule le prix final
-        double prixFinal = prixInitial - montantRemise;
+        double finalPrice = initialPrice - discountAmount;
 
         // J'affiche le résultat
-        System.out.println("Prix initial : " + prixInitial + " francs");
-        System.out.println("Remise : " + (pourcentageRemise * 100) + "%");
-        System.out.println("Montant de la remise : " + montantRemise + " francs");
-        System.out.println("Prix final : " + prixFinal + " francs");
+        System.out.println("Prix initial : " + initialPrice + " francs");
+        System.out.println("Remise : " + (discountPercentage * 100) + "%");
+        System.out.println("Montant de la remise : " + discountAmount + " francs");
+        System.out.println("Prix final : " + finalPrice + " francs");
     }
 }
 ```
@@ -1191,7 +1191,7 @@ stop
 **Code Java :**
 
 ```java
-public class PointsDeJeu {
+public class GamePoints {
     public static void main(String[] args) {
         // Mes points initiaux
         int points = 10;
@@ -1237,18 +1237,18 @@ qu'on y a mis quelque chose, on ne peut plus le changer.
 
 #### Différence avec les variables
 
-| Variables                         | Constantes                          |
-| --------------------------------- | ----------------------------------- |
-| Peuvent être modifiées            | **Ne peuvent PAS être modifiées**   |
-| Nom en minuscules (`age`, `prix`) | Nom en MAJUSCULES (`AGE_MAX`, `PI`) |
-| Déclarées normalement             | Déclarées avec le mot-clé `final`   |
-| Pour des valeurs qui changent     | Pour des valeurs qui restent fixes  |
+| Variables                          | Constantes                          |
+| ---------------------------------- | ----------------------------------- |
+| Peuvent être modifiées             | **Ne peuvent PAS être modifiées**   |
+| Nom en minuscules (`age`, `price`) | Nom en MAJUSCULES (`MAX_AGE`, `PI`) |
+| Déclarées normalement              | Déclarées avec le mot-clé `final`   |
+| Pour des valeurs qui changent      | Pour des valeurs qui restent fixes  |
 
 #### Pourquoi utiliser des constantes ?
 
 Les constantes sont utiles pour plusieurs raisons :
 
-1. **Clarté du code** : Un nom comme `TVA_SUISSE` est plus clair que `0.077`
+1. **Clarté du code** : Un nom comme `SWISS_VAT` est plus clair que `0.077`
 2. **Éviter les erreurs** : On ne peut pas modifier accidentellement une
    constante
 3. **Facilité de maintenance** : Si une valeur change (ex: le taux de TVA), on
@@ -1274,8 +1274,8 @@ Pour déclarer une constante en Java, on utilise le mot-clé `final` avant le ty
 
 ```java
 final double PI = 3.14159;
-final int AGE_MAJORITE = 18;
-final String NOM_ECOLE = "HEIG-VD";
+final int VOTING_AGE = 18;
+final String SCHOOL_NAME = "HEIG-VD";
 ```
 
 #### Convention de nommage
@@ -1288,11 +1288,11 @@ Par convention, les noms de constantes sont écrits :
 
 Exemples :
 
-- ✅ `TVA_SUISSE`
-- ✅ `NOMBRE_MAX_TENTATIVES`
-- ✅ `PRIX_BASE`
-- ❌ `tva` (minuscules)
-- ❌ `tvasuisse` (pas de séparation)
+- ✅ `SWISS_VAT`
+- ✅ `MAX_ATTEMPTS`
+- ✅ `BASE_PRICE`
+- ❌ `vat` (minuscules)
+- ❌ `swissvat` (pas de séparation)
 - ❌ `x` (pas descriptif)
 
 > [!IMPORTANT]
@@ -1331,25 +1331,25 @@ stop
 **Code Java :**
 
 ```java
-public class CalculTVA {
+public class CalculateVAT {
     public static void main(String[] args) {
         // Le taux de TVA en Suisse (constante)
-        final double TVA_SUISSE = 0.077;  // 7.7%
+        final double SWISS_VAT = 0.077;  // 7.7%
 
         // Le prix hors taxe
-        double prixHT = 100.0;
+        double priceExclVAT = 100.0;
 
         // Je calcule le montant de la TVA
-        double montantTVA = prixHT * TVA_SUISSE;
+        double vatAmount = priceExclVAT * SWISS_VAT;
 
         // Je calcule le prix TTC
-        double prixTTC = prixHT + montantTVA;
+        double priceInclVAT = priceExclVAT + vatAmount;
 
         // J'affiche le résultat
-        System.out.println("Prix HT : " + prixHT + " francs");
-        System.out.println("Taux TVA : " + (TVA_SUISSE * 100) + "%");
-        System.out.println("Montant TVA : " + montantTVA + " francs");
-        System.out.println("Prix TTC : " + prixTTC + " francs");
+        System.out.println("Prix HT : " + priceExclVAT + " francs");
+        System.out.println("Taux TVA : " + (SWISS_VAT * 100) + "%");
+        System.out.println("Montant TVA : " + vatAmount + " francs");
+        System.out.println("Prix TTC : " + priceInclVAT + " francs");
     }
 }
 ```
@@ -1396,20 +1396,20 @@ stop
 **Code Java :**
 
 ```java
-public class PerimetreCercle {
+public class CirclePerimeter {
     public static void main(String[] args) {
         // La valeur de π (constante mathématique)
         final double PI = 3.14159;
 
         // Le rayon du cercle
-        double rayon = 5.0;
+        double radius = 5.0;
 
         // Je calcule le périmètre : 2 * π * rayon
-        double perimetre = 2 * PI * rayon;
+        double perimeter = 2 * PI * radius;
 
         // J'affiche le résultat
-        System.out.println("Rayon du cercle : " + rayon + " mètres");
-        System.out.println("Périmètre du cercle : " + perimetre + " mètres");
+        System.out.println("Rayon du cercle : " + radius + " mètres");
+        System.out.println("Périmètre du cercle : " + perimeter + " mètres");
     }
 }
 ```
@@ -1454,21 +1454,21 @@ stop
 **Code Java :**
 
 ```java
-public class VerifierMajorite {
+public class CheckVotingAge {
     public static void main(String[] args) {
         // L'âge de la majorité en Suisse (constante)
-        final int AGE_MAJORITE = 18;
+        final int VOTING_AGE = 18;
 
         // L'âge de la personne
         int age = 17;
 
         // Je vérifie si la personne est majeure
-        boolean estMajeur = (age >= AGE_MAJORITE);
+        boolean isAdult = (age >= VOTING_AGE);
 
         // J'affiche le résultat
-        System.out.println("Âge de la majorité : " + AGE_MAJORITE + " ans");
+        System.out.println("Âge de la majorité : " + VOTING_AGE + " ans");
         System.out.println("Âge de la personne : " + age + " ans");
-        System.out.println("Est majeur : " + estMajeur);
+        System.out.println("Est majeur : " + isAdult);
     }
 }
 ```
@@ -1515,25 +1515,25 @@ stop
 **Code Java :**
 
 ```java
-public class PrixAvecRemiseMax {
+public class PriceWithMaxDiscount {
     public static void main(String[] args) {
         // La remise maximale autorisée (constante)
-        final double REMISE_MAX = 0.30;  // 30%
+        final double MAX_DISCOUNT = 0.30;  // 30%
 
         // Le prix initial du produit
-        double prixInitial = 50.0;
+        double initialPrice = 50.0;
 
         // Je calcule le montant de la remise
-        double montantRemise = prixInitial * REMISE_MAX;
+        double discountAmount = initialPrice * MAX_DISCOUNT;
 
         // Je calcule le prix minimal
-        double prixMinimal = prixInitial - montantRemise;
+        double minPrice = initialPrice - discountAmount;
 
         // J'affiche le résultat
-        System.out.println("Prix initial : " + prixInitial + " francs");
-        System.out.println("Remise maximale : " + (REMISE_MAX * 100) + "%");
-        System.out.println("Montant de la remise : " + montantRemise + " francs");
-        System.out.println("Prix minimal : " + prixMinimal + " francs");
+        System.out.println("Prix initial : " + initialPrice + " francs");
+        System.out.println("Remise maximale : " + (MAX_DISCOUNT * 100) + "%");
+        System.out.println("Montant de la remise : " + discountAmount + " francs");
+        System.out.println("Prix minimal : " + minPrice + " francs");
     }
 }
 ```
@@ -1648,7 +1648,7 @@ stop
 **Code Java :**
 
 ```java
-public class PreparerCafe {
+public class PrepareCoffee {
     public static void main(String[] args) {
         // Séquence d'instructions exécutées dans l'ordre
         System.out.println("1. Je prends une tasse");
@@ -1702,24 +1702,24 @@ stop
 **Code Java :**
 
 ```java
-public class SequencePrixTTC {
+public class SequencePriceInclVAT {
     public static void main(String[] args) {
         // 1. Définir le prix HT
-        double prixHT = 100.0;
+        double priceExclVAT = 100.0;
 
         // 2. Définir le taux de TVA
-        final double TVA = 0.077;
+        final double VAT = 0.077;
 
         // 3. Calculer le montant de la TVA
-        double montantTVA = prixHT * TVA;
+        double vatAmount = priceExclVAT * VAT;
 
         // 4. Calculer le prix TTC
-        double prixTTC = prixHT + montantTVA;
+        double priceInclVAT = priceExclVAT + vatAmount;
 
         // 5. Afficher le résultat
-        System.out.println("Prix HT : " + prixHT + " francs");
-        System.out.println("Montant TVA : " + montantTVA + " francs");
-        System.out.println("Prix TTC : " + prixTTC + " francs");
+        System.out.println("Prix HT : " + priceExclVAT + " francs");
+        System.out.println("Montant TVA : " + vatAmount + " francs");
+        System.out.println("Prix TTC : " + priceInclVAT + " francs");
     }
 }
 ```
@@ -1818,16 +1818,16 @@ stop
 **Code Java :**
 
 ```java
-public class PeutVoter {
+public class CanVote {
     public static void main(String[] args) {
         // L'âge de la majorité
-        final int AGE_MAJORITE = 18;
+        final int VOTING_AGE = 18;
 
         // L'âge de la personne
         int age = 20;
 
         // Vérification avec if/else
-        if (age >= AGE_MAJORITE) {
+        if (age >= VOTING_AGE) {
             System.out.println("Vous avez " + age + " ans");
             System.out.println("Vous pouvez voter !");
         } else {
@@ -1878,7 +1878,7 @@ stop
 **Code Java :**
 
 ```java
-public class ComparerNombres {
+public class CompareNumbers {
     public static void main(String[] args) {
         int a = 15;
         int b = 10;
@@ -1935,13 +1935,13 @@ stop
 **Code Java :**
 
 ```java
-public class PairOuImpair {
+public class EvenOrOdd {
     public static void main(String[] args) {
-        int nombre = 7;
+        int number = 7;
 
-        System.out.println("Nombre : " + nombre);
+        System.out.println("Nombre : " + number);
 
-        if (nombre % 2 == 0) {
+        if (number % 2 == 0) {
             System.out.println("Le nombre est pair");
         } else {
             System.out.println("Le nombre est impair");
@@ -1986,16 +1986,16 @@ stop
 **Code Java :**
 
 ```java
-public class EntrerBar {
+public class EnterBar {
     public static void main(String[] args) {
         int age = 20;
-        boolean aCarteIdentite = true;
+        boolean hasIdCard = true;
 
         System.out.println("Âge : " + age + " ans");
-        System.out.println("Carte d'identité : " + aCarteIdentite);
+        System.out.println("Carte d'identité : " + hasIdCard);
 
         // Les DEUX conditions doivent être vraies (&&)
-        if (age >= 18 && aCarteIdentite) {
+        if (age >= 18 && hasIdCard) {
             System.out.println("Vous pouvez entrer dans le bar");
         } else {
             System.out.println("Accès refusé");
@@ -2040,15 +2040,15 @@ stop
 **Code Java :**
 
 ```java
-public class MagasinOuvert {
+public class StoreOpen {
     public static void main(String[] args) {
         // Jour de la semaine (1=lundi, ..., 6=samedi, 7=dimanche)
-        int jour = 6;  // Samedi
+        int day = 6;  // Samedi
 
-        System.out.println("Nous sommes le jour " + jour);
+        System.out.println("Nous sommes le jour " + day);
 
         // AU MOINS une condition doit être vraie (||)
-        if (jour == 6 || jour == 7) {
+        if (day == 6 || day == 7) {
             System.out.println("Le magasin est fermé (week-end)");
         } else {
             System.out.println("Le magasin est ouvert");
@@ -2143,33 +2143,33 @@ stop
 **Code Java :**
 
 ```java
-public class EconomiserArgent {
+public class SaveMoney {
     public static void main(String[] args) {
         // Mon objectif d'économies
-        final int OBJECTIF = 300;
+        final int TARGET = 300;
 
         // Ce que j'économise chaque semaine
-        int economiesHebdo = 50;
+        int weeklySavings = 50;
 
         // Mon total actuel (au départ : 0)
-        int totalEconomise = 0;
+        int totalSaved = 0;
 
         // Compteur de semaines
-        int semaine = 0;
+        int week = 0;
 
-        System.out.println("Objectif : " + OBJECTIF + " francs");
-        System.out.println("Économies par semaine : " + economiesHebdo + " francs");
+        System.out.println("Objectif : " + TARGET + " francs");
+        System.out.println("Économies par semaine : " + weeklySavings + " francs");
         System.out.println();
 
         // Boucle while : tant que je n'ai pas atteint mon objectif
-        while (totalEconomise < OBJECTIF) {
-            semaine++;
-            totalEconomise += economiesHebdo;
-            System.out.println("Semaine " + semaine + " : " + totalEconomise + " francs");
+        while (totalSaved < TARGET) {
+            week++;
+            totalSaved += weeklySavings;
+            System.out.println("Semaine " + week + " : " + totalSaved + " francs");
         }
 
         System.out.println();
-        System.out.println("Objectif atteint en " + semaine + " semaines !");
+        System.out.println("Objectif atteint en " + week + " semaines !");
     }
 }
 ```
@@ -2223,25 +2223,25 @@ stop
 **Code Java :**
 
 ```java
-public class RemplirPanier {
+public class FillBasket {
     public static void main(String[] args) {
         // Capacité maximale du panier
-        final int CAPACITE = 10;
+        final int CAPACITY = 10;
 
         // Nombre de pommes actuellement dans le panier
-        int pommes = 0;
+        int apples = 0;
 
         // Compteur d'actions
         int actions = 0;
 
-        System.out.println("Capacité du panier : " + CAPACITE + " pommes");
+        System.out.println("Capacité du panier : " + CAPACITY + " pommes");
         System.out.println();
 
         // Boucle while : tant que le panier n'est pas plein
-        while (pommes < CAPACITE) {
-            pommes += 2;  // J'ajoute 2 pommes
+        while (apples < CAPACITY) {
+            apples += 2;  // J'ajoute 2 pommes
             actions++;
-            System.out.println("Action " + actions + " : " + pommes + " pommes dans le panier");
+            System.out.println("Action " + actions + " : " + apples + " pommes dans le panier");
         }
 
         System.out.println();
@@ -2293,17 +2293,17 @@ stop
 **Code Java :**
 
 ```java
-public class CompterJusquA {
+public class CountTo {
     public static void main(String[] args) {
-        int compteur = 1;
+        int counter = 1;
         final int MAXIMUM = 5;
 
         System.out.println("Je compte de 1 à " + MAXIMUM + " :");
 
         // Boucle while : tant que compteur <= maximum
-        while (compteur <= MAXIMUM) {
-            System.out.println(compteur);
-            compteur++;  // J'incrémente le compteur
+        while (counter <= MAXIMUM) {
+            System.out.println(counter);
+            counter++;  // J'incrémente le compteur
         }
 
         System.out.println("Comptage terminé !");
@@ -2389,16 +2389,16 @@ stop
 **Code Java :**
 
 ```java
-public class ArroserPlantes {
+public class WaterPlants {
     public static void main(String[] args) {
-        final int NOMBRE_PLANTES = 5;
+        final int PLANT_COUNT = 5;
 
-        System.out.println("J'ai " + NOMBRE_PLANTES + " plantes à arroser");
+        System.out.println("J'ai " + PLANT_COUNT + " plantes à arroser");
         System.out.println();
 
-        // Boucle for : de 1 à NOMBRE_PLANTES
-        for (int plante = 1; plante <= NOMBRE_PLANTES; plante++) {
-            System.out.println("J'arrose la plante numéro " + plante);
+        // Boucle for : de 1 à PLANT_COUNT
+        for (int plant = 1; plant <= PLANT_COUNT; plant++) {
+            System.out.println("J'arrose la plante numéro " + plant);
         }
 
         System.out.println();
@@ -2451,16 +2451,16 @@ stop
 **Code Java :**
 
 ```java
-public class DistribuerGateau {
+public class DistributeCake {
     public static void main(String[] args) {
-        final int NOMBRE_INVITES = 8;
+        final int GUEST_COUNT = 8;
 
-        System.out.println("Il y a " + NOMBRE_INVITES + " invités");
+        System.out.println("Il y a " + GUEST_COUNT + " invités");
         System.out.println();
 
-        // Boucle for : de 1 à NOMBRE_INVITES
-        for (int invite = 1; invite <= NOMBRE_INVITES; invite++) {
-            System.out.println("Je donne une part à l'invité " + invite);
+        // Boucle for : de 1 à GUEST_COUNT
+        for (int guest = 1; guest <= GUEST_COUNT; guest++) {
+            System.out.println("Je donne une part à l'invité " + guest);
         }
 
         System.out.println();
@@ -2516,17 +2516,17 @@ stop
 **Code Java :**
 
 ```java
-public class TableMultiplication {
+public class MultiplicationTable {
     public static void main(String[] args) {
-        final int NOMBRE = 5;
+        final int NUMBER = 5;
 
-        System.out.println("Table de multiplication de " + NOMBRE + " :");
+        System.out.println("Table de multiplication de " + NUMBER + " :");
         System.out.println();
 
         // Boucle for : de 1 à 10
         for (int i = 1; i <= 10; i++) {
-            int resultat = NOMBRE * i;
-            System.out.println(NOMBRE + " x " + i + " = " + resultat);
+            int result = NUMBER * i;
+            System.out.println(NUMBER + " x " + i + " = " + result);
         }
     }
 }
@@ -2579,22 +2579,22 @@ stop
 **Code Java :**
 
 ```java
-public class CalculerSomme {
+public class CalculateSum {
     public static void main(String[] args) {
         // Variable accumulateur (pour accumuler la somme)
-        int somme = 0;
+        int sum = 0;
 
         System.out.println("Calcul de la somme de 1 à 10 :");
         System.out.println();
 
         // Boucle for : de 1 à 10
-        for (int nombre = 1; nombre <= 10; nombre++) {
-            somme += nombre;  // J'ajoute le nombre à la somme
-            System.out.println("Après avoir ajouté " + nombre + " : somme = " + somme);
+        for (int number = 1; number <= 10; number++) {
+            sum += number;  // J'ajoute le nombre à la somme
+            System.out.println("Après avoir ajouté " + number + " : somme = " + sum);
         }
 
         System.out.println();
-        System.out.println("La somme totale est : " + somme);
+        System.out.println("La somme totale est : " + sum);
     }
 }
 ```
