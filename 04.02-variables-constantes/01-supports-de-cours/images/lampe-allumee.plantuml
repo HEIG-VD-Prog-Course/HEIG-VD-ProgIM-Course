@@ -1,0 +1,6 @@
+@startuml
+start
+:La lampe est allumée (true);
+:J'affiche l'état de la lampe;
+stop
+@enduml

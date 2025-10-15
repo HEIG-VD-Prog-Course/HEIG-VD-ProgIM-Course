@@ -1,0 +1,7 @@
+start
+:Je choisis le nombre 10;
+:Je calcule le reste de 10 divisé par 2;
+:Le reste est 0, donc 10 est pair (true);
+:J'affiche le résultat;
+stop
+@enduml

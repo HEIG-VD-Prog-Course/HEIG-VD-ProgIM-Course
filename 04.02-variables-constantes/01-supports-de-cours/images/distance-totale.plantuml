@@ -1,0 +1,8 @@
+@startuml
+start
+:Je cours 2.5 km le matin;
+:Je cours 3.75 km le soir;
+:Je calcule la distance totale (2.5 + 3.75);
+:J'ai couru 6.25 km aujourd'hui;
+stop
+@enduml

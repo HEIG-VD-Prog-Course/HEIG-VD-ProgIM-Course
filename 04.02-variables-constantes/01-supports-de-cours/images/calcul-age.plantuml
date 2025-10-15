@@ -1,0 +1,7 @@
+@startuml
+start
+:Marie a 20 ans aujourd'hui;
+:Je calcule son âge dans 5 ans (20 + 5);
+:Dans 5 ans, Marie aura 25 ans;
+stop
+@enduml

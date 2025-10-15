@@ -1,0 +1,7 @@
+@startuml
+start
+:Je viens de manger;
+:Je n'ai pas faim (false);
+:J'affiche si j'ai faim;
+stop
+@enduml
