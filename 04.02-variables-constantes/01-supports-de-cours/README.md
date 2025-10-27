@@ -2632,7 +2632,7 @@ La somme totale est : 55
 >
 > - Vous connaissez exactement le nombre d'itérations
 > - Vous voulez parcourir une séquence de nombres
-> - Exemple : arroser 5 plantes, compter de 1 à 10
+> - Exemple : arroser 5 plantes, compter de 1 à 5
 
 > [!IMPORTANT]
 >
@@ -2662,7 +2662,7 @@ programmation :
 | **Séquence** | Instructions à exécuter dans l'ordre    | Préparer un café, calculer un prix   |
 | **if/else**  | Prendre une décision                    | Vérifier l'âge, comparer des nombres |
 | **while**    | Répéter tant qu'une condition est vraie | Économiser jusqu'à un objectif       |
-| **for**      | Répéter un nombre connu de fois         | Arroser 5 plantes, compter de 1 à 10 |
+| **for**      | Répéter un nombre connu de fois         | Arroser 5 plantes, compter de 1 à 5  |
 
 ### Erreurs courantes à éviter
 
