@@ -305,7 +305,7 @@ points--;      // Équivalent à : points = points - 1;
 
 ## Pourquoi utiliser des constantes ?
 
-✅ **Clarté** : `TVA_SUISSE` est plus clair que `0.077`
+✅ **Clarté** : `PI` est plus clair que `3.14159`
 
 ✅ **Sécurité** : Impossible de modifier accidentellement
 
@@ -313,23 +313,22 @@ points--;      // Équivalent à : points = points - 1;
 
 ✅ **Intention** : Indique clairement que la valeur est fixe
 
-## Exemple : Calculer la TVA
+## Exemple : Calculer le périmètre d'un cercle
 
 ```java
-public class CalculateVAT {
+public class CirclePerimeter {
     public static void main(String[] args) {
-        final double SWISS_VAT = 0.077;  // 7.7%
-        double priceExclVAT = 100.0;
+        final double PI = 3.14159;
+        double radius = 5.0;
 
-        double vatAmount = priceExclVAT * SWISS_VAT;
-        double priceInclVAT = priceExclVAT + vatAmount;
+        double perimeter = 2 * PI * radius;
 
-        System.out.println("Prix TTC : " + priceInclVAT + " francs");
+        System.out.println("Le périmètre du cercle est : " + perimeter + " cm");
     }
 }
 ```
 
-**Résultat :** `Prix TTC : 107.7 francs`
+**Résultat :** `Le périmètre du cercle est : 31.4159 cm`
 
 ## Les structures algorithmiques
 
@@ -437,6 +436,122 @@ public class EnterBar {
 ```
 
 **Résultat :** `Vous pouvez entrer`
+
+## Les commentaires en Java
+
+<!-- _class: lead -->
+
+## Pourquoi commenter son code ?
+
+Les commentaires permettent d'**expliquer** votre code :
+
+- ✅ Pour vous-même (quand vous relirez votre code plus tard)
+- ✅ Pour les autres personnes qui liront votre code
+- ✅ Pour expliquer le "pourquoi" plutôt que le "quoi"
+
+> 💡 Les commentaires sont **ignorés** par l'ordinateur, ils sont uniquement
+> pour les humains !
+
+## Les deux types de commentaires
+
+**Commentaire sur une ligne :**
+
+```java
+// Ceci est un commentaire sur une ligne
+int age = 18;  // On peut aussi mettre un commentaire à la fin d'une ligne
+```
+
+**Commentaire sur plusieurs lignes :**
+
+```java
+/*
+  Ceci est un commentaire qui s'étend sur plusieurs lignes et explique quelque chose de plus complexe
+*/
+int total = 0;
+```
+
+## Exemple avec commentaires
+
+```java
+public class CalculateTVA {
+    public static void main(String[] args) {
+        // Prix du produit hors taxes
+        double priceExclVAT = 100.0;
+
+        // Taux de TVA en Suisse (défini par la loi)
+        final double VAT_RATE = 0.077;
+
+        // Calcul du prix avec TVA
+        double priceInclVAT = priceExclVAT * (1 + VAT_RATE);
+
+        System.out.println("Prix TTC : " + priceInclVAT + " francs");
+    }
+}
+```
+
+## Organisation du code en fichiers
+
+<!-- _class: lead -->
+
+## Règle importante : nom du fichier = nom du programme
+
+Votre fichier Java **doit** avoir le **même nom** que ce qui apparaît après
+`public class`
+
+```java
+public class CalculateTVA {  // Attention aux majuscules/minuscules : CalculateTVA ≠ calculatetva
+    public static void main(String[] args) {
+        // ...
+    }
+}
+```
+
+📄 **Nom du fichier :** `CalculateTVA.java` ← doit être identique !
+
+## Un fichier par exercice
+
+Pour chaque exercice, créez un **nouveau fichier** :
+
+```text
+📁 Mes exercices
+   📄 Exercise1.java
+   📄 Exercise2.java
+   📄 Exercise3.java
+   📄 WaterPlants.java
+   📄 SaveMoney.java
+```
+
+> 💡 **Avantage** : Chaque exercice est indépendant, facile à retrouver et à
+> tester !
+
+## Où écrire votre code ?
+
+Vous écrivez votre code **à l'intérieur** de
+`public static void main(String[] args)` :
+
+```java
+public class MyFirstProgram {
+    public static void main(String[] args) {
+
+        // ✅ Écrivez votre code ICI
+        // Déclarez vos variables
+        // Faites vos calculs
+        // Utilisez des if/else
+        // Créez des boucles ...
+    }
+}
+```
+
+## Ne vous inquiétez pas de ces mots compliqués !
+
+Pour l'instant, vous n'avez **pas besoin** de comprendre :
+
+- ❓ Ce que signifie `public`, `static`, `void`
+- ❓ Ce qu'est une "classe"
+- ❓ Ce qu'est une "méthode"
+
+> 💡 Concentrez-vous sur ce qui est **à l'intérieur** des accolades `{ }` !  
+> Le reste viendra plus tard dans le cours.
 
 ## L'itération - La boucle while
 

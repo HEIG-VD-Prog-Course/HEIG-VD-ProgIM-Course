@@ -83,13 +83,13 @@ Je mesure 1.75 mètres
 
 ```text
 DÉBUT
-  Déclarer nom comme chaîne de caractères et l'initialiser avec "Alice"
+  Déclarer name comme chaîne de caractères et l'initialiser avec "Alice"
   Déclarer age comme nombre entier et l'initialiser avec 20
-  Déclarer taille comme nombre décimal et l'initialiser avec 1.75
+  Déclarer height comme nombre décimal et l'initialiser avec 1.75
 
-  Afficher "Je m'appelle " suivi de nom
+  Afficher "Je m'appelle " suivi de name
   Afficher "J'ai " suivi de age suivi de " ans"
-  Afficher "Je mesure " suivi de taille suivi de " mètres"
+  Afficher "Je mesure " suivi de height suivi de " mètres"
 FIN
 ```
 
@@ -101,12 +101,12 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer et initialiser nom = "Alice";
+:Déclarer et initialiser name = "Alice";
 :Déclarer et initialiser age = 20;
-:Déclarer et initialiser taille = 1.75;
-:Afficher "Je m'appelle " + nom;
+:Déclarer et initialiser height = 1.75;
+:Afficher "Je m'appelle " + name;
 :Afficher "J'ai " + age + " ans";
-:Afficher "Je mesure " + taille + " mètres";
+:Afficher "Je mesure " + height + " mètres";
 stop
 @enduml
 ```
@@ -119,13 +119,13 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    String nom = "Alice";
+    String name = "Alice";
     int age = 20;
-    double taille = 1.75;
+    double height = 1.75;
 
-    System.out.println("Je m'appelle " + nom);
+    System.out.println("Je m'appelle " + name);
     System.out.println("J'ai " + age + " ans");
-    System.out.println("Je mesure " + taille + " mètres");
+    System.out.println("Je mesure " + height + " mètres");
   }
 }
 ```
@@ -152,19 +152,19 @@ Testez avec une longueur de 12.5 et une largeur de 7.3.
 
 ```text
 DÉBUT
-  Déclarer longueur comme nombre décimal et l'initialiser avec 12.5
-  Déclarer largeur comme nombre décimal et l'initialiser avec 7.3
+  Déclarer length comme nombre décimal et l'initialiser avec 12.5
+  Déclarer width comme nombre décimal et l'initialiser avec 7.3
 
-  Déclarer perimetre comme nombre décimal
-  Calculer perimetre = 2 × (longueur + largeur)
+  Déclarer perimeter comme nombre décimal
+  Calculer perimeter = 2 × (length + width)
 
-  Déclarer aire comme nombre décimal
-  Calculer aire = longueur × largeur
+  Déclarer area comme nombre décimal
+  Calculer area = length × width
 
-  Afficher "Longueur : " suivi de longueur
-  Afficher "Largeur : " suivi de largeur
-  Afficher "Périmètre : " suivi de perimetre
-  Afficher "Aire : " suivi de aire
+  Afficher "Longueur : " suivi de length
+  Afficher "Largeur : " suivi de width
+  Afficher "Périmètre : " suivi de perimeter
+  Afficher "Aire : " suivi de area
 FIN
 ```
 
@@ -176,10 +176,10 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer longueur = 12.5;
-:Déclarer largeur = 7.3;
-:Calculer perimetre = 2 * (longueur + largeur);
-:Calculer aire = longueur * largeur;
+:Déclarer length = 12.5;
+:Déclarer width = 7.3;
+:Calculer perimeter = 2 * (length + width);
+:Calculer area = length * width;
 :Afficher les dimensions;
 :Afficher le périmètre;
 :Afficher l'aire;
@@ -195,16 +195,16 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    double longueur = 12.5;
-    double largeur = 7.3;
+    double length = 12.5;
+    double width = 7.3;
 
-    double perimetre = 2 * (longueur + largeur);
-    double aire = longueur * largeur;
+    double perimeter = 2 * (length + width);
+    double area = length * width;
 
-    System.out.println("Longueur : " + longueur);
-    System.out.println("Largeur : " + largeur);
-    System.out.println("Périmètre : " + perimetre);
-    System.out.println("Aire : " + aire);
+    System.out.println("Longueur : " + length);
+    System.out.println("Largeur : " + width);
+    System.out.println("Périmètre : " + perimeter);
+    System.out.println("Aire : " + area);
   }
 }
 ```
@@ -231,13 +231,13 @@ Le programme doit :
 ```text
 DÉBUT
   Déclarer PI comme constante avec la valeur 3.14159
-  Déclarer rayon comme nombre décimal et l'initialiser avec 5.0
+  Déclarer radius comme nombre décimal et l'initialiser avec 5.0
 
-  Déclarer circonference comme nombre décimal
-  Calculer circonference = 2 × PI × rayon
+  Déclarer circumference comme nombre décimal
+  Calculer circumference = 2 × PI × radius
 
-  Afficher "Rayon : " suivi de rayon
-  Afficher "Circonférence : " suivi de circonference
+  Afficher "Rayon : " suivi de radius
+  Afficher "Circonférence : " suivi de circumference
 FIN
 ```
 
@@ -250,8 +250,8 @@ FIN
 @startuml
 start
 :Déclarer PI = 3.14159 (constante);
-:Déclarer rayon = 5.0;
-:Calculer circonference = 2 * PI * rayon;
+:Déclarer radius = 5.0;
+:Calculer circumference = 2 * PI * radius;
 :Afficher le rayon;
 :Afficher la circonférence;
 stop
@@ -267,12 +267,12 @@ stop
 public class Main {
   public static void main(String[] args) {
     final double PI = 3.14159;
-    double rayon = 5.0;
+    double radius = 5.0;
 
-    double circonference = 2 * PI * rayon;
+    double circumference = 2 * PI * radius;
 
-    System.out.println("Rayon : " + rayon);
-    System.out.println("Circonférence : " + circonference);
+    System.out.println("Rayon : " + radius);
+    System.out.println("Circonférence : " + circumference);
   }
 }
 ```
@@ -368,13 +368,13 @@ Le programme doit :
 
 ```text
 DÉBUT
-  Déclarer note comme nombre décimal et l'initialiser avec 5.2
+  Déclarer grade comme nombre décimal et l'initialiser avec 5.2
 
-  SI note >= 5.5 ALORS
+  SI grade >= 5.5 ALORS
     Afficher "Excellent"
-  SINON SI note >= 4.5 ALORS
+  SINON SI grade >= 4.5 ALORS
     Afficher "Bien"
-  SINON SI note >= 4.0 ALORS
+  SINON SI grade >= 4.0 ALORS
     Afficher "Suffisant"
   SINON
     Afficher "Insuffisant"
@@ -390,12 +390,12 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer note = 5.2;
-if (note >= 5.5 ?) then (oui)
+:Déclarer grade = 5.2;
+if (grade >= 5.5 ?) then (oui)
   :Afficher "Excellent";
-elseif (note >= 4.5 ?) then (oui)
+elseif (grade >= 4.5 ?) then (oui)
   :Afficher "Bien";
-elseif (note >= 4.0 ?) then (oui)
+elseif (grade >= 4.0 ?) then (oui)
   :Afficher "Suffisant";
 else (non)
   :Afficher "Insuffisant";
@@ -412,13 +412,13 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    double note = 5.2;
+    double grade = 5.2;
 
-    if (note >= 5.5) {
+    if (grade >= 5.5) {
       System.out.println("Excellent");
-    } else if (note >= 4.5) {
+    } else if (grade >= 4.5) {
       System.out.println("Bien");
-    } else if (note >= 4.0) {
+    } else if (grade >= 4.0) {
       System.out.println("Suffisant");
     } else {
       System.out.println("Insuffisant");
@@ -448,11 +448,11 @@ Le programme doit :
 
 ```text
 DÉBUT
-  Déclarer compteur comme nombre entier et l'initialiser avec 1
+  Déclarer counter comme nombre entier et l'initialiser avec 1
 
-  TANT QUE compteur <= 5 FAIRE
-    Afficher compteur
-    Incrémenter compteur de 1
+  TANT QUE counter <= 5 FAIRE
+    Afficher counter
+    Incrémenter counter de 1
   FIN TANT QUE
 FIN
 ```
@@ -465,10 +465,10 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer compteur = 1;
-while (compteur <= 5 ?) is (oui)
-  :Afficher compteur;
-  :compteur = compteur + 1;
+:Déclarer counter = 1;
+while (counter <= 5 ?) is (oui)
+  :Afficher counter;
+  :counter = counter + 1;
 endwhile (non)
 stop
 @enduml
@@ -482,11 +482,11 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    int compteur = 1;
+    int counter = 1;
 
-    while (compteur <= 5) {
-      System.out.println(compteur);
-      compteur = compteur + 1;
+    while (counter <= 5) {
+      System.out.println(counter);
+      counter = counter + 1;
     }
   }
 }
@@ -568,13 +568,13 @@ Le programme doit :
 
 ```text
 DÉBUT
-  Déclarer somme comme nombre entier et l'initialiser avec 0
+  Déclarer sum comme nombre entier et l'initialiser avec 0
 
   POUR i de 1 à 10 FAIRE
-    somme = somme + i
+    sum = sum + i
   FIN POUR
 
-  Afficher "La somme des nombres de 1 à 10 est : " suivi de somme
+  Afficher "La somme des nombres de 1 à 10 est : " suivi de sum
 FIN
 ```
 
@@ -586,13 +586,13 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer somme = 0;
+:Déclarer sum = 0;
 :i = 1;
 while (i <= 10 ?) is (oui)
-  :somme = somme + i;
+  :sum = sum + i;
   :i = i + 1;
 endwhile (non)
-:Afficher "La somme est : " + somme;
+:Afficher "La somme est : " + sum;
 stop
 @enduml
 ```
@@ -605,13 +605,13 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    int somme = 0;
+    int sum = 0;
 
     for (int i = 1; i <= 10; i++) {
-      somme = somme + i;
+      sum = sum + i;
     }
 
-    System.out.println("La somme des nombres de 1 à 10 est : " + somme);
+    System.out.println("La somme des nombres de 1 à 10 est : " + sum);
   }
 }
 ```
@@ -636,11 +636,11 @@ Le programme doit :
 
 ```text
 DÉBUT
-  Déclarer NOMBRE comme constante avec la valeur 7
+  Déclarer NUMBER comme constante avec la valeur 7
 
   POUR i de 1 à 10 FAIRE
-    Déclarer resultat = NOMBRE × i
-    Afficher NOMBRE + " x " + i + " = " + resultat
+    Déclarer result = NUMBER × i
+    Afficher NUMBER + " x " + i + " = " + result
   FIN POUR
 FIN
 ```
@@ -653,11 +653,11 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer NOMBRE = 7 (constante);
+:Déclarer NUMBER = 7 (constante);
 :i = 1;
 while (i <= 10 ?) is (oui)
-  :resultat = NOMBRE * i;
-  :Afficher NOMBRE + " x " + i + " = " + resultat;
+  :result = NUMBER * i;
+  :Afficher NUMBER + " x " + i + " = " + result;
   :i = i + 1;
 endwhile (non)
 stop
@@ -672,11 +672,11 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    final int NOMBRE = 7;
+    final int NUMBER = 7;
 
     for (int i = 1; i <= 10; i++) {
-      int resultat = NOMBRE * i;
-      System.out.println(NOMBRE + " x " + i + " = " + resultat);
+      int result = NUMBER * i;
+      System.out.println(NUMBER + " x " + i + " = " + result);
     }
   }
 }
@@ -722,13 +722,13 @@ Buzz
 
 > [!TIP]
 >
-> L'opérateur modulo `%` retourne le reste de la division d'un nombre par un autre.
-> Il vous permet ainsi de vérifier si un nombre est divisible par un autre.
-> Par exemple, `nombre % 3 == 0` vérifie si `nombre` est divisible par 3.
+> L'opérateur modulo `%` retourne le reste de la division d'un nombre par un
+> autre. Il vous permet ainsi de vérifier si un nombre est divisible par un
+> autre. Par exemple, `nombre % 3 == 0` vérifie si `nombre` est divisible par 3.
 
 <details>
 <summary>Afficher la solution - Pseudocode</summary>
-
+ 
 ```text
 DÉBUT
   POUR i de 1 à 20 FAIRE
@@ -814,11 +814,11 @@ Le programme doit :
 
 ```text
 DÉBUT
-  Déclarer compteur comme nombre entier et l'initialiser avec 10
+  Déclarer counter comme nombre entier et l'initialiser avec 10
 
-  TANT QUE compteur >= 0 FAIRE
-    Afficher compteur
-    Décrémenter compteur de 1
+  TANT QUE counter >= 0 FAIRE
+    Afficher counter
+    Décrémenter counter de 1
   FIN TANT QUE
 
   Afficher "Décollage !"
@@ -833,10 +833,10 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer compteur = 10;
-while (compteur >= 0 ?) is (oui)
-  :Afficher compteur;
-  :compteur = compteur - 1;
+:Déclarer counter = 10;
+while (counter >= 0 ?) is (oui)
+  :Afficher counter;
+  :counter = counter - 1;
 endwhile (non)
 :Afficher "Décollage !";
 stop
@@ -851,11 +851,11 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    int compteur = 10;
+    int counter = 10;
 
-    while (compteur >= 0) {
-      System.out.println(compteur);
-      compteur = compteur - 1;
+    while (counter >= 0) {
+      System.out.println(counter);
+      counter = counter - 1;
     }
 
     System.out.println("Décollage !");
@@ -886,22 +886,22 @@ Le programme doit :
 
 ```text
 DÉBUT
-  Déclarer NOMBRE_NOTES comme constante avec la valeur 5
+  Déclarer GRADE_COUNT comme constante avec la valeur 5
 
-  Déclarer note1 = 5.5
-  Déclarer note2 = 4.8
-  Déclarer note3 = 5.2
-  Déclarer note4 = 4.5
-  Déclarer note5 = 5.0
+  Déclarer grade1 = 5.5
+  Déclarer grade2 = 4.8
+  Déclarer grade3 = 5.2
+  Déclarer grade4 = 4.5
+  Déclarer grade5 = 5.0
 
-  Calculer somme = note1 + note2 + note3 + note4 + note5
-  Calculer moyenne = somme / NOMBRE_NOTES
+  Calculer sum = grade1 + grade2 + grade3 + grade4 + grade5
+  Calculer average = sum / GRADE_COUNT
 
-  Afficher "Notes : " + note1 + ", " + note2 + ", " + note3 + ", " + note4 + ", " + note5
-  Afficher "Somme : " + somme
-  Afficher "Moyenne : " + moyenne
+  Afficher "Notes : " + grade1 + ", " + grade2 + ", " + grade3 + ", " + grade4 + ", " + grade5
+  Afficher "Somme : " + sum
+  Afficher "Moyenne : " + average
 
-  SI moyenne >= 4.0 ALORS
+  SI average >= 4.0 ALORS
     Afficher "Résultat : Suffisant"
   SINON
     Afficher "Résultat : Insuffisant"
@@ -917,18 +917,18 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer NOMBRE_NOTES = 5 (constante);
-:Déclarer note1 = 5.5;
-:Déclarer note2 = 4.8;
-:Déclarer note3 = 5.2;
-:Déclarer note4 = 4.5;
-:Déclarer note5 = 5.0;
-:Calculer somme = note1 + note2 + note3 + note4 + note5;
-:Calculer moyenne = somme / NOMBRE_NOTES;
+:Déclarer GRADE_COUNT = 5 (constante);
+:Déclarer grade1 = 5.5;
+:Déclarer grade2 = 4.8;
+:Déclarer grade3 = 5.2;
+:Déclarer grade4 = 4.5;
+:Déclarer grade5 = 5.0;
+:Calculer sum = grade1 + grade2 + grade3 + grade4 + grade5;
+:Calculer average = sum / GRADE_COUNT;
 :Afficher les notes;
 :Afficher la somme;
 :Afficher la moyenne;
-if (moyenne >= 4.0 ?) then (oui)
+if (average >= 4.0 ?) then (oui)
   :Afficher "Résultat : Suffisant";
 else (non)
   :Afficher "Résultat : Insuffisant";
@@ -945,22 +945,22 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    final int NOMBRE_NOTES = 5;
+    final int GRADE_COUNT = 5;
 
-    double note1 = 5.5;
-    double note2 = 4.8;
-    double note3 = 5.2;
-    double note4 = 4.5;
-    double note5 = 5.0;
+    double grade1 = 5.5;
+    double grade2 = 4.8;
+    double grade3 = 5.2;
+    double grade4 = 4.5;
+    double grade5 = 5.0;
 
-    double somme = note1 + note2 + note3 + note4 + note5;
-    double moyenne = somme / NOMBRE_NOTES;
+    double sum = grade1 + grade2 + grade3 + grade4 + grade5;
+    double average = sum / GRADE_COUNT;
 
-    System.out.println("Notes : " + note1 + ", " + note2 + ", " + note3 + ", " + note4 + ", " + note5);
-    System.out.println("Somme : " + somme);
-    System.out.println("Moyenne : " + moyenne);
+    System.out.println("Notes : " + grade1 + ", " + grade2 + ", " + grade3 + ", " + grade4 + ", " + grade5);
+    System.out.println("Somme : " + sum);
+    System.out.println("Moyenne : " + average);
 
-    if (moyenne >= 4.0) {
+    if (average >= 4.0) {
       System.out.println("Résultat : Suffisant");
     } else {
       System.out.println("Résultat : Insuffisant");
