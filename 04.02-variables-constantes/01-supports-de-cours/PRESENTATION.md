@@ -701,7 +701,7 @@ public class MultiplicationTable {
 
 - ✅ Vous connaissez exactement le nombre d'itérations
 - 🔢 Vous voulez parcourir une séquence de nombres
-- 🌱 Exemple : arroser 5 plantes, compter de 1 à 10
+- 🌱 Exemple : arroser 5 plantes, compter de 1 à 5
 
 </div>
 
