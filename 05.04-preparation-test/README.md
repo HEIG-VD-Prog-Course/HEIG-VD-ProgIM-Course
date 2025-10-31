@@ -32,7 +32,7 @@ Le test se compose de **deux parties** :
 
 - [Support de cours](01-supports-de-cours/README.md)
 - [Quiz de révision](01-supports-de-cours/PRESENTATION.md)
-- [Questionnaires des années précédentes](../../archive/Questionnaires/questionnaires-complets.md)
+- [Questionnaires des années précédentes](../archive/Questionnaires/questionnaires-complets.md)
 
 ## Conseils
 
