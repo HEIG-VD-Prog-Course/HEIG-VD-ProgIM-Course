@@ -412,11 +412,18 @@ Quand `i` vaut 3, la condition `i < 3` est fausse, donc on sort de la boucle.
 
 ## Question 17 - Réponse
 
+<div class="two-columns">
+<div>
+
 **UTF-8** est un encodage de caractères qui :
 
 - Représente **tous** les caractères Unicode (toutes les langues + emojis)
 - Utilise **1 à 4 octets** par caractère
 - Est **compatible avec ASCII** (les 128 premiers caractères)
+
+</div>
+<div>
+
 - Est le **standard actuel** sur Internet
 
 Exemples :
@@ -425,6 +432,8 @@ Exemples :
 - `é` → 2 octets
 - `中` → 3 octets
 - Emoji → 4 octets
+
+</div>
 
 ## Question 18 - Donnée
 

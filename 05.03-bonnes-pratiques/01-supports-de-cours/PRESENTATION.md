@@ -42,13 +42,20 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs
+## Objectifs (1/2)
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Comprendre l'importance des bonnes pratiques
 - Nommer vos variables et méthodes de manière claire
 - Formater votre code de manière uniforme
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/2)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Écrire des commentaires utiles
 - Configurer VS Code pour automatiser la qualité
 
@@ -94,8 +101,6 @@ Comme choisir entre "tu" et "vous" : les deux marchent, mais soyez cohérent !
 
 **Important** : la cohérence > le choix spécifique
 
-![bg right:40%][illustration-conventions]
-
 ## L'important : la cohérence
 
 Vous préférez `snake_case` ? Pas de problème !
@@ -118,8 +123,6 @@ public class Main {
 
 Trois styles différents = confusion
 
-![bg right:40%][illustration-mauvais-exemple]
-
 ## Bon exemple de cohérence
 
 ```java
@@ -133,8 +136,6 @@ public class Main {
 ```
 
 Un seul style = clarté
-
-![bg right:40%][illustration-bon-exemple]
 
 ## Mauvais noms de variables
 
@@ -200,8 +201,6 @@ sc.close();}}
 ```
 
 Ça fonctionne, mais c'est illisible !
-
-![bg right:40%][illustration-mal-formate]
 
 ## Code bien formaté
 
@@ -346,10 +345,10 @@ trim_trailing_whitespace = true
 
 **Rendre votre projet accessible**
 
-Quand quelqu'un utilise votre code :
+Quand une personne utilise votre code :
 
-1. Il doit pouvoir le faire fonctionner facilement
-2. Il doit avoir la même expérience de développement que vous
+1. Elle doit pouvoir le faire fonctionner facilement
+2. Elle doit avoir la même expérience de développement que vous
 
 ![bg right:40%][illustration-regle-or]
 
@@ -361,17 +360,6 @@ Quand quelqu'un utilise votre code :
 - S'assurer que le code compile "out of the box"
 
 ![bg right:40%][illustration-pratique]
-
-## Récapitulatif
-
-1. **Cohérence > choix spécifique** : camelCase ou snake_case ? Peu importe,
-   soyez cohérent !
-2. **Formatage = lisibilité** : indentation, espaces, lignes vides
-3. **Commentaires = "pourquoi"** : pas le "quoi"
-4. **Automatisez** : VS Code et EditorConfig
-5. **Pensez aux autres** : votre code sera lu plus qu'écrit
-
-![bg right:40%][illustration-recapitulatif]
 
 ## À vous de jouer !
 
