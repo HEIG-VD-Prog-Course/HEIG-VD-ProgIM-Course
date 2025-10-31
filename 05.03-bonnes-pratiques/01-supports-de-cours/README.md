@@ -458,8 +458,11 @@ paramètres utiles :
 
 ```json
 {
-	"cSpell.language": "en,fr",
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"cSpell.language": "en,fr",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"editor.renderWhitespace": "all",
@@ -474,6 +477,8 @@ paramètres utiles :
 
 | Paramètre                  | Rôle                                                              |
 | -------------------------- | ----------------------------------------------------------------- |
+| `"[java]"`                 | Configuration spécifique pour le langage Java                     |
+| `editor.defaultFormatter`  | Définit le plugin `redhat.java` comme formateur par défaut        |
 | `cSpell.language`          | Vérifie l'orthographe en anglais et français                      |
 | `editor.defaultFormatter`  | Utilise Prettier pour formater automatiquement                    |
 | `editor.formatOnPaste`     | Formate le code quand vous collez du texte                        |
@@ -492,6 +497,7 @@ Ce fichier recommande les extensions VS Code utiles pour votre projet :
 {
 	"recommendations": [
 		"esbenp.prettier-vscode",
+		"redhat.java",
 		"streetsidesoftware.code-spell-checker",
 		"streetsidesoftware.code-spell-checker-french"
 	]
