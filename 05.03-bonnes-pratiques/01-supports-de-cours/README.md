@@ -35,6 +35,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   - [Exemples de mauvais commentaires](#exemples-de-mauvais-commentaires)
   - [Exemples de bons commentaires](#exemples-de-bons-commentaires)
 - [Configuration de VS Code](#configuration-de-vs-code)
+  - [Le fichier `.prettierrc.yaml`](#le-fichier-prettierrcyaml)
   - [Le fichier `.vscode/settings.json`](#le-fichier-vscodesettingsjson)
   - [Le fichier `.vscode/extensions.json`](#le-fichier-vscodeextensionsjson)
   - [Configuration pas à pas](#configuration-pas-à-pas)
