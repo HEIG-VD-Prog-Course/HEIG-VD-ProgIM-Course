@@ -6,9 +6,11 @@ This repository contains teaching materials for a programming course
 ## Context
 
 - **Language**: Course materials are primarily in French
-- **Target Audience**: Programming students learning Java and algorithms
+- **Target Audience**: Complete beginners in programming, learning Java and
+  algorithms from scratch
 - **Content Type**: Educational presentations (Marp), exercises, and PlantUML
   diagrams
+- **Level**: Introductory - assume no prior programming knowledge
 
 ## Teaching Philosophy
 

@@ -6,7 +6,7 @@ marp: true
 theme: custom-marp-theme
 size: 16:9
 paginate: true
-author: V. Guidoux, avec l'aide de GitHub Copilot
+author: L.Delafontaine & V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Fonctions
 description: Cours sur les fonctions pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
 url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/index.html
@@ -28,7 +28,7 @@ _paginate: false
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
 
-<small>V. Guidoux, avec l'aide de
+<small>L.Delafontaine & V. Guidoux, avec l'aide de
 [GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
@@ -42,13 +42,20 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs
+## Objectifs (1/2)
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Décrire ce qu'est une méthode en programmation
 - Déclarer et appeler une méthode en Java
 - Passer des paramètres et utiliser des valeurs de retour
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/2)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Expliquer la portée des variables
 - Utiliser des méthodes prédéfinies en Java
 
@@ -66,8 +73,6 @@ Comme une recette de cuisine :
 
 Exemple mathématique : $f(x) = x^2$
 
-![bg right:40%][illustration-methode]
-
 ## Déclarer une méthode
 
 ```java
@@ -77,8 +82,6 @@ public class Main {
     }
 }
 ```
-
-Structure :
 
 - `public static` : modificateurs
 - `void` : type de retour (rien ici)
@@ -177,37 +180,12 @@ public class Main {
         System.out.println(x); // Erreur : x n'existe pas ici
     }
 }
+
+// Comme une boîte à outils : les outils ne sont accessibles que lorsque la boîte
+// est ouverte.
 ```
 
-Comme une boîte à outils : les outils ne sont accessibles que lorsque la boîte
-est ouverte.
-
-![bg right:40%][illustration-portee]
-
-## Variables de classe
-
-```java
-public class Main {
-    public static int x = 42;
-
-    public static void square() {
-        x = x * x;
-    }
-
-    public static void main(String[] args) {
-        square();
-        System.out.println(x); // Affiche 1764
-    }
-}
-```
-
-Les variables `static` sont accessibles partout dans la classe.
-
-À éviter en général : préférer passer des paramètres.
-
-![bg right:40%][illustration-variables-classe]
-
-## Méthodes prédéfinies - Math
+## Méthodes prédéfinies - Math (1/2)
 
 ```java
 public class Main {
@@ -220,6 +198,8 @@ public class Main {
 
 La classe `Math` contient de nombreuses méthodes mathématiques : `abs`, `round`,
 `min`, `max`, `random`, etc.
+
+## Méthodes prédéfinies - Math (2/2)
 
 Documentation : <https://docs.oracle.com/en/java/javase/21/docs/api/>
 
@@ -283,6 +263,9 @@ Est-ce que vous avez des questions ?
 
 ## Sources
 
+- [Fonctions](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/02-fonctions/01-theorie/PRESENTATION.md)
+  par L. Delafontaine sur
+  [GitHub](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
 - [Illustration objectifs][illustration-objectifs] par
   [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
