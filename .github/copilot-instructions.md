@@ -86,6 +86,13 @@ This course follows key pedagogical principles:
     de jouer !", questions, and sources sections
   - **When creating/editing**: Keep the template structure and only modify
     content and update URLs/links
+  - **Quiz presentations**: For quiz/revision presentations, use the
+    "Question/Answer" format:
+    - Use `## Question X - Donnée` for the question slide
+    - Use `## Question X - Réponse` for single-slide answers
+    - Use `## Question X - Réponse (1/2)` and `## Question X - Réponse (2/2)`
+      when the answer needs multiple slides (even if content could fit on one
+      slide, always indicate pagination explicitly)
 - **PlantUML**: Render using local server at http://localhost:9090
 
 ### Code Examples

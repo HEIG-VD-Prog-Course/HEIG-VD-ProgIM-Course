@@ -192,12 +192,12 @@ nom doit être un identifiant unique.
 
 ### 10. Veuillez indiquer le résultat de l'exécution des expressions suivantes :
 
-- `9%5`
-- `5/2`
-- `5 == 2`
-- `5 != 2`
-- `2+3*4`
-- `"2" + 1 + 2`
+- `System.out.println(9 % 5);`
+- `System.out.println(5 / 2);`
+- `System.out.println(5 == 2);`
+- `System.out.println(5 != 2);`
+- `System.out.println(2 + 3 * 4);`
+- `System.out.println("2" + 1 + 2);`
 
 <details>
 <summary>Réponse</summary>
