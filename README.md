@@ -50,7 +50,7 @@ Les dates sont tirées du
 |    02 | Structures algorithmiques : séquence, sélection (if/else)      |
 |    03 | Structures algorithmiques : itération (boucles)                |
 |    04 | Variables, constantes, types de données et leur représentation |
-|    05 | Procédures, fonctions et entrée/sortie                         |
+|    05 | Fonctions et entrée/sortie                                     |
 |    06 | Tableaux et structures de données de base                      |
 |    07 | Révisions avant le test                                        |
 |    08 |                                                                |
