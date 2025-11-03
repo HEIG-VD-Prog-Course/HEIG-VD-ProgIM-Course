@@ -6,11 +6,12 @@ This repository contains teaching materials for a programming course
 ## Context
 
 - **Language**: Course materials are primarily in French
-- **Target Audience**: Complete beginners in programming, learning Java and
-  algorithms from scratch
-- **Content Type**: Educational presentations (Marp), exercises, and PlantUML
-  diagrams
-- **Level**: Introductory - assume no prior programming knowledge
+- **Target Audience**: Students with prior programming experience, learning
+  advanced Java and algorithmic concepts
+- **Content Type**: Educational presentations (Marp), code examples, exercises,
+  and PlantUML diagrams
+- **Level**: Intermediate - builds upon programming foundations
+- **Technology Stack**: Java, algorithms, data structures, software design
 
 ## Teaching Philosophy
 
@@ -54,7 +55,7 @@ This course follows key pedagogical principles:
 2. **French Content**: Most content should be in French unless specifically
    working on code
 3. **Educational Focus**: Explanations should be clear, pedagogical, and
-   appropriate for beginners
+   appropriate for intermediate-level students
 4. **No Emojis**: Never use emojis in any course materials, presentations, or
    exercises
 5. **Encourage exploration**: Guide students toward solutions without giving
@@ -64,14 +65,33 @@ This course follows key pedagogical principles:
 7. **Respect student freedom**: Support diverse approaches and personal projects
    that engage students
 
+### Author Attribution
+
+All course materials must include the following attribution format:
+
+```markdown
+V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
+
+Ce travail est sous licence [CC BY-SA 4.0][licence].
+```
+
+- Always use "V. Guidoux" as the author
+- Include the GitHub Copilot attribution line
+- Include the CC BY-SA 4.0 license reference with link variable `[licence]`
+
 ### File Structure
 
 - `XX.XX-topic/` folders contain course modules
 - `01-supports-de-cours/` contains presentation materials (PRESENTATION.md using
   Marp)
-- `02-exercices/` contains exercises
-- PlantUML diagrams are in `images/` folders with `.plantuml` extension. They
-  are generated manually using the `./build-all-plantuml-diagram.sh` script.
+- `02-exemples-de-code/` contains runnable code examples (when applicable)
+- `03-exercices/` contains exercises (when applicable)
+- `XX.XX-projet-libre-(N-sur-8)/` folders contain project milestones (no
+  exercises/examples)
+- PlantUML diagrams are in `images/` folders with `.plantuml` extension
+- Solutions for exercises are in `solution-exercice-XX/` subfolders within
+  `03-exercices/`
 
 ### Root README Structure
 
@@ -122,7 +142,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
-- Exercices : [Lien vers le contenu](./02-exercices/README.md)
+- Exemples de code : [Lien vers le contenu](./02-exemples-de-code/) (if
+  applicable)
+- Exercices : [Lien vers le contenu](./03-exercices/README.md) (if applicable)
 
 ## Objectifs
 
@@ -144,6 +166,9 @@ la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
 
+- Capacité à s'approprier des exemples de code. (if examples exist)
+- Capacité à appliquer les exemples de code à des situations similaires. (if
+  examples exist)
 - Capacité à répondre avec justesse.
 - Capacité à argumenter.
 
@@ -159,27 +184,75 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
+- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
+  classe. (if examples exist)
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 ```
 
+### Module Evaluation Patterns
+
+Modules can have different evaluation approaches:
+
+**Standard modules** (with exercises):
+
+- Capacité à s'approprier des exemples de code
+- Capacité à appliquer les exemples de code à des situations similaires
+- Capacité à répondre avec justesse
+- Capacité à argumenter
+
+**Project modules** (projet libre):
+
+- Capacité à travailler en équipe
+- Capacité à exécuter les tâches assignées
+- 🚨 Gives a grade (100% of total project grade)
+
+**Introductory modules** (modalités):
+
+- No formal evaluation
+
+### "À faire pour la semaine suivante" Variations
+
+**For modules with examples and exercises:**
+
+```markdown
+- Relire les supports de cours si nécessaire.
+- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
+  classe.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
+```
+
+**For modules without examples:**
+
+```markdown
+- Relire les supports de cours si nécessaire.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
+```
+
+**For introductory modules:**
+
+```markdown
+- Relire les supports de cours si nécessaire.
+```
+
 ### Subfolder README Structure
 
-Both `01-supports-de-cours/README.md` and `02-exercices/README.md` must include
-a "Ressources" section at the beginning with the following links:
+Both `01-supports-de-cours/README.md` and `03-exercices/README.md` must include
+a "Ressources annexes" section at the beginning with the following links:
 
 - Link to parent folder objectives and evaluation methods
 - Link to course materials README
 - Link to web presentation
 - Link to PDF presentation
+- Link to code examples README (if applicable)
 - Link to exercises README
 
 Example format (adjust XX.XX and topic name):
 
 ```markdown
-## Ressources
+## Ressources annexes
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
@@ -188,8 +261,82 @@ Example format (adjust XX.XX and topic name):
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
-- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+- Exemples de code : [Lien vers le contenu](../02-exemples-de-code/) (if
+  applicable)
+- Exercices : [Lien vers le contenu](../03-exercices/README.md)
 ```
+
+### Code Examples README Structure
+
+Each `02-exemples-de-code/README.md` must follow this structure:
+
+```markdown
+# [Topic Title] - Exemples de code
+
+V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
+
+Ce travail est sous licence [CC BY-SA 4.0][licence].
+
+## Ressources annexes
+
+[Same resources section as exercises with proper links]
+
+## Exemples de code
+
+Ce dossier contient des exemples de code en lien avec les éléments vus en cours.
+
+Ces exemples ont deux buts bien précis :
+
+1. Vous familiariser à la lecture de code et sa compréhension de façon autonome.
+2. Servir de base pour les exercices et les projets libres à réaliser.
+
+Ces exemples sont construits pour être simples d'accès et facilement
+compréhensibles. Ils sont à votre disposition pour vous aider à progresser dans
+votre apprentissage.
+
+Ces exemples sont triés par ordre de complexité croissante. Nous vous
+conseillons de les explorer dans l'ordre et de prendre le temps de les exécuter
+sur votre machine et de prendre le temps de les comprendre en profondeur **sans
+recourir à de l'aide externe (particulièrement les outils AI)**.
+
+Si vous avez des questions ou des problèmes à les comprendre, n'hésitez pas à
+demander de l'aide envers vos collègues ou au corps enseignant.
+
+[licence]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+```
+
+### Exercise Solutions
+
+- Each exercise solution must be in a `solution-exercice-XX/` subfolder
+- Solutions should include a complete, working implementation
+- Reference solutions in the exercise README:
+  `Une solution possible est disponible dans le dossier [\`solution-exercice-01\`](./solution-exercice-01/)`
+
+### URL Conventions
+
+All web presentation and PDF links follow this pattern:
+
+- Base: `https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/`
+- Web: `{base}XX.XX-topic/01-supports-de-cours/index.html`
+- PDF: `{base}XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf`
+
+For project modules with parentheses in folder names, use URL-encoded or escaped
+paths in Markdown:
+
+- Folder: `01.03-projet-libre-(1-sur-8)/`
+- URL: Use `<...>` brackets to handle special characters in Markdown links
+
+### Repository Information
+
+- **Repository**: HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course
+- **GitHub Organization**: HEIG-VD-Prog-Course
+- **Hosted URL Base**:
+  https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/
+- **License**: CC BY-SA 4.0
+- **License URL**:
+  https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 
 ### Technical Specifications
 
@@ -212,16 +359,20 @@ Example format (adjust XX.XX and topic name):
       when the answer needs multiple slides (even if content could fit on one
       slide, always indicate pagination explicitly)
 - **PlantUML**: Render using local server at http://localhost:9090
+  - Generate diagrams manually using `./build-all-plantuml-diagram.sh` script
 
 ### Code Examples
 
-- Use Java for code examples
+- Use **Java** for all code examples
 - Keep examples simple and relatable
 - Prefer practical, everyday scenarios over abstract concepts
 - Follow pedagogical progression from simple to complex
 - **Use English for all code elements**: variable names, method names, class
   names, and parameter names must be in English, even when course content is in
   French
+- Follow Java best practices and conventions (camelCase, proper access
+  modifiers, etc.)
+- Include proper package declarations and imports when relevant
 
 ### When Editing
 
@@ -229,3 +380,6 @@ Example format (adjust XX.XX and topic name):
 - Ensure PlantUML diagrams follow the same style patterns
 - Keep exercises aligned with course material in corresponding support files
 - Preserve the educational tone and accessibility of the content
+- Always verify that all cross-references and links are correct
+- Update the Programme table in root README when adding new course modules
+- Ensure all "Ressources annexes" sections are complete and accurate
