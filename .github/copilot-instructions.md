@@ -287,10 +287,24 @@ sur votre machine et de prendre le temps de les comprendre en profondeur
 
 ### Exercise Solutions
 
-- Each exercise solution must be in a `solution-exercice-XX/` subfolder
-- Solutions should include a complete, working implementation
-- Reference solutions in the exercise README:
-  `Une solution possible est disponible dans le dossier [\`solution-exercice-01\`](./solution-exercice-01/)`
+- Solutions are integrated directly in the exercise README using `<details>`
+  tags
+- Each exercise should include a complete, working solution hidden by default
+- Format:
+
+  ````markdown
+  <details>
+  <summary>Solution</summary>
+
+  ```java
+  // Complete solution code here
+  ```
+  ````
+
+  </details>
+  ```
+
+- Include explanatory notes after the solution code block when necessary
 
 ### URL Conventions
 

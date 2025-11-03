@@ -57,13 +57,13 @@ Les dates sont tirées du
 | [03](#-cours-03) | Itération                                                                                |
 | [04](#-cours-04) | Java & Variables & Constantes                                                            |
 | [05](#-cours-05) | Fonctions, Entrée/sortie/encodage, Bonnes pratiques & Préparation au test                |
-|               06 |                                                                                          |
-|               07 |                                                                                          |
-|               08 |                                                                                          |
-|               09 |                                                                                          |
-|               10 |                                                                                          |
-|               11 |                                                                                          |
-|               12 |                                                                                          |
+| [06](#-cours-06) | Tableaux                                                                                 |
+| [07](#-cours-07) | Bibliothèques et packages                                                                |
+| [08](#-cours-08) | Algorithmes de parcours                                                                  |
+| [09](#-cours-09) | Algorithme de tris                                                                       |
+| [10](#-cours-10) | Débogage                                                                                 |
+| [11](#-cours-11) | Tests unitaires et intégration                                                           |
+| [12](#-cours-12) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen                      |
 
 ## 🕐 Cours 01
 
@@ -171,3 +171,46 @@ Les dates sont tirées du
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/05.04-preparation-test-presentation.pdf)
+
+## 🕕 Cours 06
+
+### Tableaux
+
+- Supports de cours :
+  [Lien vers le contenu](./06.01-tableaux/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/06.01-tableaux/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/06.01-tableaux/01-supports-de-cours/06.01-tableaux-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./06.01-tableaux/02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./06.01-tableaux/03-exercices/README.md)
+
+## 🕖 Cours 07
+
+### Bibliothèques et packages
+
+- Supports de cours :
+  [Lien vers le contenu](./07.01-bibliotheques-et-packages/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-bibliotheques-et-packages/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-bibliotheques-et-packages/01-supports-de-cours/07.01-bibliotheques-et-packages-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./07.01-bibliotheques-et-packages/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./07.01-bibliotheques-et-packages/03-exercices/README.md)
+
+## 🕗 Cours 08
+
+### Algorithmes de parcours
+
+- Supports de cours :
+  [Lien vers le contenu](./08.01-algorithmes-de-parcours/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/08.01-algorithmes-de-parcours-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./08.01-algorithmes-de-parcours/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./08.01-algorithmes-de-parcours/03-exercices/README.md)
