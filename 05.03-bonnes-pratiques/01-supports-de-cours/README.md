@@ -8,8 +8,20 @@ V. Guidoux, avec l'aide de GitHub Copilot
 
 Ce travail est sous licence [CC BY-SA 4.0][license].
 
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+
 ## Table des matières
 
+- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Introduction](#introduction)

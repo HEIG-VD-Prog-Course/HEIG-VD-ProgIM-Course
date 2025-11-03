@@ -4,6 +4,17 @@ Ce document contient les exercices pour le cours sur les bonnes pratiques de
 programmation. Vous pratiquerez le nommage, le formatage, les commentaires et
 l'identification de problèmes dans du code.
 
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+
 ## Objectifs
 
 - Corriger du code mal formaté

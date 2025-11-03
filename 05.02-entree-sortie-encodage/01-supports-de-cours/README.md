@@ -2,11 +2,14 @@
 
 ## Ressources
 
-- Support de cours : [README.md](./README.md) ·
-  [Présentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Présentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
-- Exercices : [README.md](../02-exercices/README.md)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
 
 ## Table des matières
 

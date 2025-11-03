@@ -1,5 +1,16 @@
 # Exercices - Fonctions
 
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+
 ## Objectifs
 
 Ces exercices vous permettront de pratiquer la création et l'utilisation de

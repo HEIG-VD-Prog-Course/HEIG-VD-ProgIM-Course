@@ -50,7 +50,7 @@ This course follows key pedagogical principles:
 ### General Instructions
 
 1. **Language Style**: Use real-life, story-like language instead of programming
-   terms when creating examples or explanations (as noted in teaching-staff.txt)
+   terms when creating examples or explanations
 2. **French Content**: Most content should be in French unless specifically
    working on code
 3. **Educational Focus**: Explanations should be clear, pedagogical, and
@@ -72,6 +72,32 @@ This course follows key pedagogical principles:
 - `02-exercices/` contains exercises
 - PlantUML diagrams are in `images/` folders with `.plantuml` extension. They
   are generated manually using the `./build-all-plantuml-diagram.sh` script.
+
+### README Structure
+
+Both `01-supports-de-cours/README.md` and `02-exercices/README.md` must include
+a "Ressources" section at the beginning with the following links:
+
+- Link to parent folder objectives and evaluation methods
+- Link to course materials README
+- Link to web presentation
+- Link to PDF presentation
+- Link to exercises README
+
+Example format (adjust XX.XX and topic name):
+
+```markdown
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+```
 
 ### Technical Specifications
 
