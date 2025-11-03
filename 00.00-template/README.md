@@ -5,10 +5,8 @@ V. Guidoux, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources
+## Ressources annexes
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](.)
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/00.00-template/01-supports-de-cours/index.html)
   ·
@@ -39,8 +37,6 @@ la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
 
-- Capacité à s'approprier des exemples de code.
-- Capacité à appliquer les exemples de code à des situations similaires.
 - Capacité à répondre avec justesse.
 - Capacité à argumenter.
 
@@ -56,6 +52,7 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
