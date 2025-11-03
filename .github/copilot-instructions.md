@@ -162,6 +162,9 @@ la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
 
+- Capacité à s'approprier des exemples de code. (if examples exist)
+- Capacité à appliquer les exemples de code à des situations similaires. (if
+  examples exist)
 - Capacité à répondre avec justesse.
 - Capacité à argumenter.
 
@@ -177,6 +180,8 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
+- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
+  classe. (if examples exist)
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
@@ -189,6 +194,8 @@ Modules can have different evaluation approaches:
 
 **Standard modules** (with exercises):
 
+- Capacité à s'approprier des exemples de code
+- Capacité à appliquer les exemples de code à des situations similaires
 - Capacité à répondre avec justesse
 - Capacité à argumenter
 
@@ -271,8 +278,8 @@ votre apprentissage.
 
 Ces exemples sont triés par ordre de complexité croissante. Nous vous
 conseillons de les explorer dans l'ordre et de prendre le temps de les exécuter
-sur votre machine et de prendre le temps de les comprendre en profondeur **sans
-recourir à de l'aide externe (
+sur votre machine et de prendre le temps de les comprendre en profondeur
+\*\*sans recourir à de l'aide externe (
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
