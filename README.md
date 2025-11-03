@@ -214,3 +214,18 @@ Les dates sont tirées du
   [Lien vers le contenu](./08.01-algorithmes-de-parcours/02-exemples-de-code/)
 - Exercices :
   [Lien vers le contenu](./08.01-algorithmes-de-parcours/03-exercices/README.md)
+
+## 🕘 Cours 09
+
+### Algorithmes de tri
+
+- Supports de cours :
+  [Lien vers le contenu](./09.01-algorithmes-de-tri/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/09.01-algorithmes-de-tri-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./09.01-algorithmes-de-tri/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./09.01-algorithmes-de-tri/03-exercices/README.md)
