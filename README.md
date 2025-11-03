@@ -229,3 +229,16 @@ Les dates sont tirées du
   [Lien vers le contenu](./09.01-algorithmes-de-tri/02-exemples-de-code/)
 - Exercices :
   [Lien vers le contenu](./09.01-algorithmes-de-tri/03-exercices/README.md)
+
+## 🕙 Cours 10
+
+### Débogage
+
+- Supports de cours :
+  [Lien vers le contenu](./10.01-debogage/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/10.01-debogage-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./10.01-debogage/02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./10.01-debogage/03-exercices/README.md)
