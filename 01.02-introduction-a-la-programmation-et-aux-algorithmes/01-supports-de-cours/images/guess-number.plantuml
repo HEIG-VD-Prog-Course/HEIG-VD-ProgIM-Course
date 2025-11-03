@@ -2,7 +2,7 @@
 start
 :Choisir un nombre secret entre 1 et 100;
 repeat
-  :Demander une proposition à l'utilisateur;
+  :Demander une proposition à l'utilisatrice;
   if (Proposition = nombre secret ?) then (oui)
     :Afficher "Bravo, trouvé !";
     stop

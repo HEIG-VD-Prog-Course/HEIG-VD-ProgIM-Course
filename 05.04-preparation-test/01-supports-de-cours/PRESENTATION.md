@@ -302,7 +302,7 @@ System.out.println("le monde");
 
 ## Question 13 - Donnée
 
-> Comment lire un nombre entier saisi par l'utilisateur avec `Scanner` ?
+> Comment lire un nombre entier saisi par l'utilisatrice avec `Scanner` ?
 
 ## Question 13 - Réponse (1/2)
 

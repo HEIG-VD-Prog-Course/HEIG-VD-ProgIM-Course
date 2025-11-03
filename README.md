@@ -62,7 +62,7 @@ Les dates sont tirées du
 | [08](#-cours-08) | Algorithmes de parcours                                                                  |
 | [09](#-cours-09) | Algorithme de tris                                                                       |
 | [10](#-cours-10) | Débogage                                                                                 |
-| [11](#-cours-11) | Tests unitaires et intégration                                                           |
+| [11](#-cours-11) | Projet guidé - Puissance 4                                                               |
 | [12](#-cours-12) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen                      |
 
 ## 🕐 Cours 01
@@ -242,3 +242,18 @@ Les dates sont tirées du
 - Exemples de code :
   [Lien vers le contenu](./10.01-debogage/02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](./10.01-debogage/03-exercices/README.md)
+
+## 🕚 Cours 11
+
+### Projet guidé - Puissance 4
+
+- Supports de cours :
+  [Lien vers le contenu](./11.01-projet-puissance-4/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/11.01-projet-puissance-4-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./11.01-projet-puissance-4/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./11.01-projet-puissance-4/03-exercices/README.md)

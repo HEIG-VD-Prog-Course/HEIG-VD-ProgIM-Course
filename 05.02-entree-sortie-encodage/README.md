@@ -15,14 +15,14 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-Dans ce cours, vous allez apprendre à communiquer avec l'utilisateur de votre
+Dans ce cours, vous allez apprendre à communiquer avec l'utilisatrice de votre
 programme. Jusqu'à présent, vos programmes affichaient des résultats, mais vous
 ne pouviez pas vraiment interagir avec eux.
 
 De façon plus concise, vous devriez être capables de :
 
 - Afficher du texte dans le terminal avec `System.out`
-- Lire des données saisies par l'utilisateur avec `Scanner`
+- Lire des données saisies par l'utilisatrice avec `Scanner`
 - Comprendre ce qu'est l'encodage des caractères (ASCII, UTF-8)
 - Créer des programmes interactifs simples
 

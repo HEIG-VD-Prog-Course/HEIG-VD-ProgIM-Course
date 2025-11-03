@@ -87,10 +87,10 @@ en code réel.
 
 **En français :**
 
-> L’ordinateur choisit un nombre au hasard entre 1 et 100. L’utilisateur doit
+> L’ordinateur choisit un nombre au hasard entre 1 et 100. L’utilisatrice doit
 > deviner ce nombre. Après chaque proposition, l’ordinateur indique si le nombre
 > à deviner est plus grand, plus petit ou égal à la proposition. Le jeu continue
-> jusqu’à ce que l’utilisateur trouve le bon nombre.
+> jusqu’à ce que l’utilisatrice trouve le bon nombre.
 
 **En PlantUML :**
 

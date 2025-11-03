@@ -72,7 +72,7 @@ des problèmes.
 **Exemple de questions** :
 
 - "Dessinez le diagramme d'activité d'un programme qui demande un nombre à
-  l'utilisateur et affiche s'il est pair ou impair"
+  l'utilisatrice et affiche s'il est pair ou impair"
 - "Expliquez la différence entre une boucle `while` et une boucle `do...while`"
 - "Que va afficher ce programme ? (code fourni)"
 

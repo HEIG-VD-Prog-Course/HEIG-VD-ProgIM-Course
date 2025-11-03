@@ -210,7 +210,7 @@ Le formatage rend votre code plus lisible, comme les paragraphes et la
 ponctuation rendent un texte plus facile à lire.
 
 Imaginez lire un livre sans espaces ni retours à la ligne. C'est ce que ressent
-quelqu'un qui lit du code mal formaté !
+une personne qui lit du code mal formaté !
 
 ### Éléments de formatage
 
@@ -671,7 +671,7 @@ Maintenant, peu importe l'éditeur utilisé, tout le monde aura le même formata
 
 ## Règle d'or : rendre votre projet accessible
 
-**Principe fondamental** : quand quelqu'un utilise votre code, il doit :
+**Principe fondamental** : quand une personne utilise votre code, il doit :
 
 1. **Pouvoir le faire fonctionner facilement**
 2. **Avoir la même expérience de développement que vous**

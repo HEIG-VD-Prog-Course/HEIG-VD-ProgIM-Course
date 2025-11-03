@@ -104,7 +104,7 @@ public class Main {
 
 ## Exercice 4 : Première lecture
 
-Écrivez un programme qui demande le nom de l'utilisateur et affiche un message
+Écrivez un programme qui demande le nom de l'utilisatrice et affiche un message
 de bienvenue personnalisé.
 
 Exemple d'interaction :
@@ -138,7 +138,7 @@ public class Main {
 
 ## Exercice 5 : Calcul d'âge
 
-Écrivez un programme qui demande l'année de naissance de l'utilisateur et
+Écrivez un programme qui demande l'année de naissance de l'utilisatrice et
 affiche son âge approximatif (en supposant que nous sommes en 2025).
 
 Exemple d'interaction :
@@ -174,8 +174,8 @@ public class Main {
 
 ## Exercice 6 : Addition simple
 
-Écrivez un programme qui demande deux nombres entiers à l'utilisateur et affiche
-leur somme.
+Écrivez un programme qui demande deux nombres entiers à l'utilisatrice et
+affiche leur somme.
 
 Exemple d'interaction :
 
@@ -214,7 +214,7 @@ public class Main {
 
 ## Exercice 7 : Calculatrice de moyenne
 
-Écrivez un programme qui demande trois notes à l'utilisateur et calcule leur
+Écrivez un programme qui demande trois notes à l'utilisatrice et calcule leur
 moyenne. Utilisez des nombres décimaux (`double`).
 
 Exemple d'interaction :
@@ -258,7 +258,7 @@ public class Main {
 
 ## Exercice 8 : Carte de visite
 
-Écrivez un programme qui demande plusieurs informations à l'utilisateur (nom,
+Écrivez un programme qui demande plusieurs informations à l'utilisatrice (nom,
 prénom, âge, ville) et affiche une "carte de visite" formatée.
 
 Exemple d'interaction :
@@ -414,8 +414,8 @@ public class Main {
 
 ## Exercice bonus : Quiz interactif
 
-Créez un petit quiz qui pose trois questions à l'utilisateur et compte le nombre
-de bonnes réponses. Les questions peuvent être sur n'importe quel sujet.
+Créez un petit quiz qui pose trois questions à l'utilisatrice et compte le
+nombre de bonnes réponses. Les questions peuvent être sur n'importe quel sujet.
 
 Exemple d'interaction :
 
@@ -519,7 +519,7 @@ créer vos propres programmes :
 
 N'oubliez pas de :
 
-- Donner des instructions claires à l'utilisateur
+- Donner des instructions claires à l'utilisatrice
 - Utiliser des noms de variables explicites en anglais
 - Toujours fermer le `Scanner`
 - Tester votre programme avec différentes valeurs

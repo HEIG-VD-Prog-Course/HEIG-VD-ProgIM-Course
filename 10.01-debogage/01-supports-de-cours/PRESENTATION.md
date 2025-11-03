@@ -171,7 +171,7 @@ Avant d'utiliser un débogueur, plusieurs techniques simples :
 - Vérifier les noms de variables (fautes de frappe).
 - Vérifier les opérateurs (`==` vs `=`, `&&` vs `||`).
 
-**Astuce** : Expliquer le code à voix haute ou à quelqu'un (rubber duck
+**Astuce** : Expliquer le code à voix haute ou à une personne (rubber duck
 debugging).
 
 ---

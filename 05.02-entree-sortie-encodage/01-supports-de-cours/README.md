@@ -37,22 +37,22 @@
 
 ## Objectifs
 
-Dans ce cours, vous allez apprendre à communiquer avec l'utilisateur de votre
+Dans ce cours, vous allez apprendre à communiquer avec l'utilisatrice de votre
 programme. Jusqu'à présent, vos programmes affichaient des résultats, mais vous
 ne pouviez pas vraiment interagir avec eux. Maintenant, vous allez pouvoir créer
 des programmes qui posent des questions et répondent en fonction des réponses de
-l'utilisateur.
+l'utilisatrice.
 
 De façon plus concise, vous devriez être capables de :
 
 - Afficher du texte dans le terminal avec `System.out`
-- Lire des données saisies par l'utilisateur avec `Scanner`
+- Lire des données saisies par l'utilisatrice avec `Scanner`
 - Comprendre ce qu'est l'encodage des caractères (ASCII, UTF-8)
 - Créer des programmes interactifs simples
 
 ## Qu'est-ce que l'entrée et la sortie ?
 
-Imaginez que vous discutez avec quelqu'un. Quand vous parlez, c'est une
+Imaginez que vous discutez avec une personne. Quand vous parlez, c'est une
 **sortie** (vous envoyez de l'information). Quand vous écoutez, c'est une
 **entrée** (vous recevez de l'information).
 
@@ -60,7 +60,7 @@ En programmation, c'est la même chose :
 
 - **Sortie** : votre programme affiche quelque chose à l'écran (comme un
   message, un résultat, une question)
-- **Entrée** : votre programme reçoit quelque chose de l'utilisateur (comme une
+- **Entrée** : votre programme reçoit quelque chose de l'utilisatrice (comme une
   réponse, un nombre, du texte)
 
 Le terminal (ou console) est comme une fenêtre de conversation entre vous et
@@ -125,8 +125,8 @@ des chaînes de caractères.
 
 ## Lire des données avec Scanner
 
-Pour lire ce que l'utilisateur tape au clavier, on utilise la classe `Scanner`.
-C'est comme avoir une "oreille" pour écouter ce que dit l'utilisateur.
+Pour lire ce que l'utilisatrice tape au clavier, on utilise la classe `Scanner`.
+C'est comme avoir une "oreille" pour écouter ce que dit l'utilisatrice.
 
 ### Créer un Scanner
 
@@ -152,7 +152,7 @@ standard).
 ### Lire différents types de données
 
 Le Scanner peut lire différents types de données selon ce que vous attendez de
-l'utilisateur :
+l'utilisatrice :
 
 **Lire une ligne de texte complète :**
 
@@ -271,7 +271,7 @@ UTF-8 utilise entre 1 et 4 octets (bytes) pour encoder un caractère :
 
 ### Pourquoi l'encodage est important
 
-Imaginez que vous envoyez une lettre à quelqu'un, mais que cette personne ne
+Imaginez que vous envoyez une lettre à une personne, mais que cette personne ne
 comprend pas la langue dans laquelle vous avez écrit. Elle verra les mots, mais
 ne pourra pas les comprendre.
 
@@ -290,7 +290,7 @@ standard actuel.
 
 ### Programme simple avec entrée et sortie
 
-Voici un programme complet qui demande le nom de l'utilisateur et le salue :
+Voici un programme complet qui demande le nom de l'utilisatrice et le salue :
 
 ```java
 import java.util.Scanner;
@@ -352,8 +352,8 @@ Voici quelques bonnes pratiques à suivre :
 1. **Toujours fermer le Scanner** : utilisez `scanner.close()` quand vous avez
    fini.
 
-2. **Donner des instructions claires** : expliquez à l'utilisateur ce qu'il doit
-   faire.
+2. **Donner des instructions claires** : expliquez à l'utilisatrice ce qu'il
+   doit faire.
 
    ```java
    // Bon
@@ -369,7 +369,7 @@ Voici quelques bonnes pratiques à suivre :
    mieux que `a`.
 
 5. **Attention aux types** : si vous demandez un nombre avec `nextInt()`,
-   l'utilisateur doit taper un nombre, sinon le programme plantera.
+   l'utilisatrice doit taper un nombre, sinon le programme plantera.
 
 ## Conclusion
 
@@ -377,11 +377,11 @@ Vous savez maintenant comment créer des programmes interactifs en Java. Vous
 pouvez :
 
 - Afficher des messages avec `System.out.print()` et `System.out.println()`
-- Lire des données de l'utilisateur avec `Scanner`
+- Lire des données de l'utilisatrice avec `Scanner`
 - Comprendre comment les caractères sont encodés (ASCII, UTF-8)
 
 Ces compétences sont essentielles pour créer des programmes utiles qui peuvent
-communiquer avec l'utilisateur. Dans les prochains cours, vous allez combiner
+communiquer avec l'utilisatrice. Dans les prochains cours, vous allez combiner
 ces techniques avec ce que vous avez appris sur les structures de contrôle (if,
 for, while) et les méthodes pour créer des programmes encore plus intéressants.
 

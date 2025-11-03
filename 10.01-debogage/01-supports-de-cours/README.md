@@ -285,7 +285,8 @@ d'identifier les bugs.
 
 **Conseils** :
 
-- Lire le code à voix haute ou l'expliquer à quelqu'un (rubber duck debugging).
+- Lire le code à voix haute ou l'expliquer à une personne (rubber duck
+  debugging).
 - Vérifier les noms de variables (fautes de frappe).
 - Vérifier les opérateurs (`==` vs `=`, `&&` vs `||`).
 

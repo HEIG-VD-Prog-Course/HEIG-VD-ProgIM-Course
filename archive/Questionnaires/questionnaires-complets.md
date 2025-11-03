@@ -50,7 +50,7 @@ Java avec leurs solutions correspondantes.
   - [2f. Quel est le contenu de la case du milieu du tableau ?](#2f-quel-est-le-contenu-de-la-case-du-milieu-du-tableau-)
   - [3. Soit le code suivant, qu'affichera la ligne `System.out.println(array);` ?](#3-soit-le-code-suivant-quaffichera-la-ligne-systemoutprintlnarray-)
   - [4. Lors de la création d'un tableau (en java) chaque case contient une valeur par défaut. Veuillez indiquer pour chaque type (primitifs et objet) la valeur par défaut.](#4-lors-de-la-création-dun-tableau-en-java-chaque-case-contient-une-valeur-par-défaut-veuillez-indiquer-pour-chaque-type-primitifs-et-objet-la-valeur-par-défaut)
-  - [5. Exercice pratique : Écrire un programme permettant à l'utilisateur d'estimer la durée d'une seconde (10 essais)](#5-exercice-pratique--écrire-un-programme-permettant-à-lutilisateur-destimer-la-durée-dune-seconde-10-essais)
+  - [5. Exercice pratique : Écrire un programme permettant à l'utilisatrice d'estimer la durée d'une seconde (10 essais)](#5-exercice-pratique--écrire-un-programme-permettant-à-lutilisatrice-destimer-la-durée-dune-seconde-10-essais)
 - [Questionnaire 05 - Fonctions](#questionnaire-05---fonctions)
   - [1. Qu'est ce qu'une fonction ?](#1-quest-ce-quune-fonction-)
   - [2. Quelle sont les règles de nommage d'une fonction (en java) ?](#2-quelle-sont-les-règles-de-nommage-dune-fonction-en-java-)
@@ -715,7 +715,7 @@ tableau.
 
 </details>
 
-### 5. Exercice pratique : Écrire un programme permettant à l'utilisateur d'estimer la durée d'une seconde (10 essais)
+### 5. Exercice pratique : Écrire un programme permettant à l'utilisatrice d'estimer la durée d'une seconde (10 essais)
 
 <details>
 <summary>Réponse</summary>

@@ -511,7 +511,7 @@ noms, etc.).
 **Phrase descriptive :**
 
 ```text
-Je veux afficher un message de bienvenue avec le nom de l'utilisateur.
+Je veux afficher un message de bienvenue avec le nom de l'utilisatrice.
 ```
 
 **Diagramme UML :**
@@ -519,7 +519,7 @@ Je veux afficher un message de bienvenue avec le nom de l'utilisateur.
 ```plantuml
 @startuml
 start
-:Le nom de l'utilisateur est "Sophie";
+:Le nom de l'utilisatrice est "Sophie";
 :Je crée un message de bienvenue;
 :J'affiche "Bienvenue Sophie !";
 stop
@@ -533,7 +533,7 @@ stop
 ```java
 public class WelcomeMessage {
     public static void main(String[] args) {
-        // Le nom de l'utilisateur
+        // Le nom de l'utilisatrice
         String name = "Sophie";
 
         // Je crée le message de bienvenue

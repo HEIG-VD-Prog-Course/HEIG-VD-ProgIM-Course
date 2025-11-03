@@ -28,7 +28,7 @@ Le programme doit permettre de :
 3. Marquer une tâche comme terminée (la supprimer de la liste).
 4. Compter le nombre de tâches restantes.
 
-Utilisez un menu simple avec `Scanner` pour interagir avec l'utilisateur.
+Utilisez un menu simple avec `Scanner` pour interagir avec l'utilisatrice.
 
 <details>
 <summary>Solution</summary>
@@ -120,7 +120,7 @@ Créez un programme qui simule un jeu de devinette avec `Random`.
 Le programme doit :
 
 1. Générer un nombre aléatoire entre 1 et 100.
-2. Demander à l'utilisateur de deviner le nombre.
+2. Demander à l'utilisatrice de deviner le nombre.
 3. Indiquer si la réponse est trop haute, trop basse, ou correcte.
 4. Compter le nombre de tentatives.
 5. À la fin, afficher des statistiques (nombre de tentatives, pourcentage de

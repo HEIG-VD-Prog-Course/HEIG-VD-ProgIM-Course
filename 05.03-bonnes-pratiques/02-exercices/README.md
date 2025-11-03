@@ -521,7 +521,7 @@ Pour chaque situation, proposez un nom de variable approprié en respectant les
 conventions Java (camelCase pour les variables).
 
 1. Une variable qui stocke l'âge d'une personne
-2. Une variable qui indique si un utilisateur est connecté
+2. Une variable qui indique si un utilisatrice est connecté
 3. Une constante pour le nombre de jours dans une semaine
 4. Une variable qui stocke le prix total d'un panier
 5. Une variable qui compte le nombre de tentatives
@@ -624,7 +624,7 @@ Travaillez en groupe de 3-4 personnes :
 
 1. Chaque personne écrit un petit programme (20-30 lignes) qui :
 
-   - Demande des informations à l'utilisateur
+   - Demande des informations à l'utilisatrice
    - Effectue des calculs
    - Affiche des résultats
 

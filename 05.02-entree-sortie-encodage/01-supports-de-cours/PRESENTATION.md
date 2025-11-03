@@ -47,7 +47,7 @@ consultez le [support de cours][cours]._
 À la fin de cette séance, vous devriez être capable de :
 
 - Afficher du texte dans le terminal avec `System.out`
-- Lire des données saisies par l'utilisateur avec `Scanner`
+- Lire des données saisies par l'utilisatrice avec `Scanner`
 
 ![bg right:40%][illustration-objectifs]
 
@@ -124,7 +124,7 @@ L'opérateur `+` combine du texte et des nombres.
 
 ## Lire des données avec Scanner
 
-Pour "écouter" l'utilisateur, on utilise `Scanner` :
+Pour "écouter" l'utilisatrice, on utilise `Scanner` :
 
 ```java
 import java.util.Scanner;
@@ -248,7 +248,7 @@ Mauvais encodage = caractères bizarres :
 - `é` devient `Ã©`
 - Texte illisible
 
-Comme envoyer une lettre en français à quelqu'un qui ne lit que l'anglais.
+Comme envoyer une lettre en français à une personne qui ne lit que l'anglais.
 
 ## Exemple complet : Programme de salutation
 
@@ -298,7 +298,7 @@ public class Main {
 ## Bonnes pratiques (1/2)
 
 - **Toujours fermer le Scanner** : `scanner.close()`
-- **Instructions claires** : expliquez ce que l'utilisateur doit faire
+- **Instructions claires** : expliquez ce que l'utilisatrice doit faire
 - **Utiliser println** : rend la sortie plus lisible
 
 ![bg right:40%][illustration-best-practices]
