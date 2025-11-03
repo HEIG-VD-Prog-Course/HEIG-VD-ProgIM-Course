@@ -35,6 +35,12 @@ programmes simples et structurés pour résoudre des problèmes pratiques, jetan
 ainsi les bases d'un apprentissage plus approfondi de la programmation et de
 l'ingénierie des médias numériques.
 
+## ➡️ Par où commencer ?
+
+Vous ne savez pas par où commencer ? Jetez un œil aux
+[Modalités de l'unité d'enseignement](#modalités-de-lunité-denseignement) pour
+en savoir plus.
+
 ## 📅 Programme
 
 Les détails de chaque cours composant l'unité d'enseignement sont disponibles
@@ -44,39 +50,124 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 Les dates sont tirées du
 [calendrier académique HEIG-VD](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-| Cours | Contenu                                                        |
-| ----: | :------------------------------------------------------------- |
-|    01 | Introduction à la programmation et aux algorithmes             |
-|    02 | Structures algorithmiques : séquence, sélection (if/else)      |
-|    03 | Structures algorithmiques : itération (boucles)                |
-|    04 | Variables, constantes, types de données et leur représentation |
-|    05 | Fonctions et entrée/sortie                                     |
-|    06 | Tableaux et structures de données de base                      |
-|    07 | Révisions avant le test                                        |
-|    08 |                                                                |
-|    09 |                                                                |
-|    10 |                                                                |
-|    11 |                                                                |
-|    12 |                                                                |
+|            Cours | Contenu                                                                                  |
+| ---------------: | :--------------------------------------------------------------------------------------- |
+| [01](#-cours-01) | Modalités de l'unité d'enseignement & Introduction à la programmation et aux algorithmes |
+| [02](#-cours-02) | Séquence, sélection et itération                                                         |
+| [03](#-cours-03) | Itération                                                                                |
+| [04](#-cours-04) | Java & Variables & Constantes                                                            |
+| [05](#-cours-05) | Fonctions, Entrée/sortie/encodage, Bonnes pratiques & Préparation au test                |
+|               06 |                                                                                          |
+|               07 |                                                                                          |
+|               08 |                                                                                          |
+|               09 |                                                                                          |
+|               10 |                                                                                          |
+|               11 |                                                                                          |
+|               12 |                                                                                          |
 
 ## 🕐 Cours 01
 
 ### Modalités de l'unité d'enseignement
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation :
-  [Lien vers le contenu](./01.01-modalites-de-lunite-denseignement/)
 - Supports de cours :
-  [Presentation (web)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Lien vers le contenu](./01.01-modalites-de-lunite-denseignement/01-supports-de-cours/README.md)
   ·
-  [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 
 ### Introduction à la programmation et aux algorithmes
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation :
-  [Lien vers le contenu](./01.02-introduction-a-la-programmation-et-aux-algorithmes/)
 - Supports de cours :
-  [Presentation (web)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
+  [Lien vers le contenu](./01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/README.md)
   ·
-  [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
+
+## 🕑 Cours 02
+
+### Séquence, sélection et itération
+
+- Supports de cours :
+  [Lien vers le contenu](./02.01-sequence-selection-iteration/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
+- Exercices :
+  [Lien vers le contenu](./02.01-sequence-selection-iteration/02-exercices/README.md)
+
+## 🕒 Cours 03
+
+### Itération
+
+- Supports de cours :
+  [Lien vers le contenu](./03.01-iteration/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
+- Exercices : [Lien vers le contenu](./03.01-iteration/02-exercices/README.md)
+
+## 🕓 Cours 04
+
+### Java
+
+- Supports de cours :
+  [Lien vers le contenu](./04.01-java/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.01-java/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.01-java/01-supports-de-cours/04.01-java-presentation.pdf)
+
+### Variables & Constantes
+
+- Supports de cours :
+  [Lien vers le contenu](./04.02-variables-constantes/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
+- Exercices :
+  [Lien vers le contenu](./04.02-variables-constantes/02-exercices/README.md)
+
+## 🕔 Cours 05
+
+### Fonctions
+
+- Supports de cours :
+  [Lien vers le contenu](./05.01-fonctions/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
+- Exercices : [Lien vers le contenu](./05.01-fonctions/02-exercices/README.md)
+
+### Entrée, sortie et encodage
+
+- Supports de cours :
+  [Lien vers le contenu](./05.02-entree-sortie-encodage/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
+- Exercices :
+  [Lien vers le contenu](./05.02-entree-sortie-encodage/02-exercices/README.md)
+
+### Bonnes pratiques de programmation
+
+- Supports de cours :
+  [Lien vers le contenu](./05.03-bonnes-pratiques/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+- Exercices :
+  [Lien vers le contenu](./05.03-bonnes-pratiques/02-exercices/README.md)
+
+### Préparation au test
+
+- Supports de cours :
+  [Lien vers le contenu](./05.04-preparation-test/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/05.04-preparation-test-presentation.pdf)

@@ -73,6 +73,37 @@ This course follows key pedagogical principles:
 - PlantUML diagrams are in `images/` folders with `.plantuml` extension. They
   are generated manually using the `./build-all-plantuml-diagram.sh` script.
 
+### Root README Structure
+
+The root `README.md` file at the repository root serves as the main entry point
+and navigation hub for the entire course. It is the **ONLY** file in the
+repository that uses emojis (for section headings).
+
+#### Structure Requirements:
+
+1. **Title and Introduction**: Course name, license link, and welcome text
+2. **🎯 Objectifs généraux**: High-level learning objectives for the entire
+   course
+3. **➡️ Par où commencer ?**: Quick start guide pointing to course modalities
+4. **📅 Programme**: Table with course numbers and topics, each linking to
+   detailed sections below
+5. **🕐 Cours XX sections**: One section per course session with:
+   - Clock emoji matching the course number (🕐, 🕑, 🕒, 🕓, 🕔, 🕕, 🕖, 🕗, 🕘,
+     🕙, 🕚, 🕛)
+   - Topic titles matching the titles from `XX.XX-topic/README.md` files
+   - Ressources annexes from each module's `README.md` (supports de cours,
+     presentations, exercises)
+
+#### Important Notes:
+
+- Clock emojis cycle through hours: 🕐 (1), 🕑 (2), 🕒 (3), 🕓 (4), 🕔 (5), 🕕
+  (6), 🕖 (7), 🕗 (8), 🕘 (9), 🕙 (10), 🕚 (11), 🕛 (12)
+- Each course section is a **summary** of the "Ressources annexes" from the
+  corresponding `XX.XX-topic/README.md`
+- Update the Programme table whenever new courses are added
+- Emojis are **only allowed in the root README.md**, never in module or
+  subfolder READMEs
+
 ### Module Root README Structure
 
 Each `XX.XX-topic/README.md` file must follow this structure:
