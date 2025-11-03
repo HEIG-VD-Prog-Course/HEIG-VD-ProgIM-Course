@@ -365,8 +365,6 @@ Quand une personne utilise votre code :
 
 - (Re)lire le [support de cours][cours]
 - Réaliser les [exercices][exercices]
-- Configurer VS Code pour vos projets
-- Pratiquer le formatage et les conventions
 - Poser des questions si nécessaire
 
 **La qualité du code s'apprend par la pratique !**

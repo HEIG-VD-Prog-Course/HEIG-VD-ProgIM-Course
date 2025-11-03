@@ -341,7 +341,6 @@ stop
 
 - (Re)lire le [support de cours][cours]
 - Réaliser les [exercices][exercices]
-- Expérimenter avec [PlantUML en ligne][plantuml-editor]
 - Poser des questions si nécessaire
 
 \

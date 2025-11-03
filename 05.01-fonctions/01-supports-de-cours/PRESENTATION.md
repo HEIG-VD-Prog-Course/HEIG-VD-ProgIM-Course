@@ -246,8 +246,6 @@ Les méthodes évitent la duplication de code et facilitent la maintenance.
 
 - (Re)lire le [support de cours][cours]
 - Réaliser les [exercices][exercices]
-- Expérimenter avec les méthodes de `Math` et `String`
-- Créer vos propres méthodes
 - Poser des questions si nécessaire
 
 **La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
