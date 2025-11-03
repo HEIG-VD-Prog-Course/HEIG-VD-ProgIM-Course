@@ -55,7 +55,7 @@ This course follows key pedagogical principles:
 2. **French Content**: Most content should be in French unless specifically
    working on code
 3. **Educational Focus**: Explanations should be clear, pedagogical, and
-   appropriate for intermediate-level students
+   appropriate for beginner-level students
 4. **No Emojis**: Never use emojis in any course materials, presentations, or
    exercises
 5. **Encourage exploration**: Guide students toward solutions without giving
@@ -87,11 +87,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   Marp)
 - `02-exemples-de-code/` contains runnable code examples (when applicable)
 - `03-exercices/` contains exercises (when applicable)
-- `XX.XX-projet-libre-(N-sur-8)/` folders contain project milestones (no
-  exercises/examples)
 - PlantUML diagrams are in `images/` folders with `.plantuml` extension
-- Solutions for exercises are in `solution-exercice-XX/` subfolders within
-  `03-exercices/`
 
 ### Root README Structure
 
@@ -166,9 +162,6 @@ la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
 
-- Capacité à s'approprier des exemples de code. (if examples exist)
-- Capacité à appliquer les exemples de code à des situations similaires. (if
-  examples exist)
 - Capacité à répondre avec justesse.
 - Capacité à argumenter.
 
@@ -184,8 +177,6 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
-- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
-  classe. (if examples exist)
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
@@ -198,16 +189,8 @@ Modules can have different evaluation approaches:
 
 **Standard modules** (with exercises):
 
-- Capacité à s'approprier des exemples de code
-- Capacité à appliquer les exemples de code à des situations similaires
 - Capacité à répondre avec justesse
 - Capacité à argumenter
-
-**Project modules** (projet libre):
-
-- Capacité à travailler en équipe
-- Capacité à exécuter les tâches assignées
-- 🚨 Gives a grade (100% of total project grade)
 
 **Introductory modules** (modalités):
 
@@ -216,15 +199,6 @@ Modules can have different evaluation approaches:
 ### "À faire pour la semaine suivante" Variations
 
 **For modules with examples and exercises:**
-
-```markdown
-- Relire les supports de cours si nécessaire.
-- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
-  classe.
-- Finaliser les exercices qui n'ont pas été terminés en classe.
-```
-
-**For modules without examples:**
 
 ```markdown
 - Relire les supports de cours si nécessaire.
@@ -298,10 +272,7 @@ votre apprentissage.
 Ces exemples sont triés par ordre de complexité croissante. Nous vous
 conseillons de les explorer dans l'ordre et de prendre le temps de les exécuter
 sur votre machine et de prendre le temps de les comprendre en profondeur **sans
-recourir à de l'aide externe (particulièrement les outils AI)**.
-
-Si vous avez des questions ou des problèmes à les comprendre, n'hésitez pas à
-demander de l'aide envers vos collègues ou au corps enseignant.
+recourir à de l'aide externe (
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
