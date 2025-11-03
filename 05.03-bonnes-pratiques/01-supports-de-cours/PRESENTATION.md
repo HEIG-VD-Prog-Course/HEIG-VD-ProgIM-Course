@@ -363,9 +363,10 @@ Quand une personne utilise votre code :
 
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][cours]
-- Réaliser les [exercices][exercices]
-- Poser des questions si nécessaire
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
 **La qualité du code s'apprend par la pratique !**
 
