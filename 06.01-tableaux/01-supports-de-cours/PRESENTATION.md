@@ -42,13 +42,20 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs
+## Objectifs (1/2)
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Décrire ce qu'est un tableau et ses caractéristiques en Java.
 - Créer et initialiser des tableaux de types primitifs et d'objets.
 - Accéder aux éléments d'un tableau par leur index.
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (1/2)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Parcourir un tableau avec différentes structures de boucle.
 - Manipuler des tableaux multidimensionnels.
 - Utiliser les méthodes utilitaires de la classe `Arrays`.
@@ -56,9 +63,6 @@ consultez le [support de cours][cours]._
 ![bg right:40%][illustration-objectifs]
 
 ## Introduction aux tableaux
-
-Un tableau permet de stocker plusieurs valeurs du même type dans une seule
-variable.
 
 **Sans tableau :**
 
@@ -86,7 +90,7 @@ double[] notes = {5.5, 4.0, 5.0, 4.5, 6.0};
 **Exemple concret :** Stocker les températures relevées chaque jour de la
 semaine, les noms des étudiants d'une classe, ou les scores d'un joueur.
 
-## Déclaration et initialisation
+## Déclaration et initialisation (1/2)
 
 **Avec valeurs initiales :**
 
@@ -102,6 +106,8 @@ int[] temperatures = new int[5];     // {0, 0, 0, 0, 0}
 String[] names = new String[3];      // {null, null, null}
 ```
 
+## Déclaration et initialisation (2/2)
+
 **Déclaration suivie d'initialisation :**
 
 ```java
@@ -109,7 +115,7 @@ double[] prices;
 prices = new double[]{9.99, 19.99, 29.99};
 ```
 
-## Accès aux éléments
+## Accès aux éléments (1/2)
 
 Les éléments sont accessibles par leur index, qui commence à zéro :
 
@@ -122,6 +128,8 @@ String thirdDay = days[2];      // "mercredi"
 days[1] = "MARDI";              // Modification
 ```
 
+## Accès aux éléments (2/2)
+
 **Représentation du tableau :**
 
 | Index | Valeur       |
@@ -132,9 +140,7 @@ days[1] = "MARDI";              // Modification
 | 3     | `"jeudi"`    |
 | 4     | `"vendredi"` |
 
-## Taille d'un tableau
-
-La propriété `length` donne le nombre d'éléments :
+## Taille d'un tableau avec `length`
 
 ```java
 int[] numbers = {10, 20, 30, 40};
@@ -142,17 +148,15 @@ int size = numbers.length;  // 4
 
 // Accès au dernier élément
 int lastNumber = numbers[numbers.length - 1];  // 40
+
+String[] fruits = {"pomme", "banane"};
+String fruit = fruits[5];  // Erreur !
 ```
 
 **Attention :** Accéder à un index inexistant provoque une erreur
 `ArrayIndexOutOfBoundsException`.
 
-```java
-String[] fruits = {"pomme", "banane"};
-String fruit = fruits[5];  // Erreur !
-```
-
-## Parcourir un tableau - Boucle for classique
+## Parcourir un tableau - Boucle for classique (1/2)
 
 Idéale pour connaître l'index de chaque élément :
 
@@ -163,6 +167,8 @@ for (int i = 0; i < fruits.length; i++) {
     System.out.println("Fruit " + i + " : " + fruits[i]);
 }
 ```
+
+## Parcourir un tableau - Boucle for classique (2/2)
 
 Permet de modifier les éléments :
 
@@ -190,32 +196,34 @@ for (String city : cities) {
 
 **Attention :** Ne permet pas de modifier les éléments du tableau.
 
-## Tableaux multidimensionnels
+## Tableaux multidimensionnels (1/2)
 
 Un tableau de tableaux, souvent visualisé comme une grille :
 
 ```java
 String[][] grid = {
-    {"X", "O", "X"},
-    {"O", "X", "O"},
-    {"X", "O", "X"}
+    {"A0", "A1", "A2"},
+    {"B0", "B1", "B2"},
+    {"C0", "C1", "C2"}
 };
 
-String cell = grid[1][2];  // "O"
+String bTwo = grid[1][2];  // "B2"
+String cZero = grid[2][0];   // "C0"
+
+// grid[Ligne][Colonne]
 ```
+
+## Tableaux multidimensionnels (2/2)
 
 **Visualisation :**
 
-```text
-  Col 0  Col 1  Col 2
-Row 0  X      O      X
-Row 1  O      X      O
-Row 2  X      O      X
-```
+|       | Col 0 | Col 1 | Col 2 |
+| ----- | ----- | ----- | ----- |
+| Row 0 | A0    | A1    | A2    |
+| Row 1 | B0    | B1    | B2    |
+| Row 2 | C0    | C1    | C2    |
 
-## Parcourir un tableau 2D
-
-Utilisation de boucles imbriquées :
+## Parcourir un tableau 2D - Boucles imbriquées
 
 ```java
 int[][] matrix = {
@@ -240,7 +248,7 @@ for (int row = 0; row < matrix.length; row++) {
 7 8 9
 ```
 
-## La classe Arrays
+## La classe Arrays (1/2)
 
 La classe `java.util.Arrays` fournit des méthodes utilitaires :
 
@@ -256,6 +264,8 @@ System.out.println(Arrays.toString(numbers));
 // Affiche : [5, 2, 8, 1, 9]
 ```
 
+## La classe Arrays (2/2)
+
 **Tri :**
 
 ```java
@@ -264,7 +274,7 @@ System.out.println(Arrays.toString(numbers));
 // Affiche : [1, 2, 5, 8, 9]
 ```
 
-## Autres méthodes utiles
+## Autres méthodes utiles (1/2)
 
 **Copie :**
 
@@ -281,6 +291,8 @@ Arrays.fill(numbers, 7);
 // Résultat : [7, 7, 7, 7, 7]
 ```
 
+## Autres méthodes utiles (2/2)
+
 **Comparaison :**
 
 ```java
@@ -289,7 +301,7 @@ int[] array2 = {1, 2, 3};
 System.out.println(Arrays.equals(array1, array2));  // true
 ```
 
-## Limites des tableaux
+<!-- ## Limites des tableaux
 
 **Limitations principales :**
 
@@ -315,7 +327,7 @@ de flexibilité.
 - La classe **`Arrays`** fournit des méthodes utilitaires.
 - Les tableaux sont **efficaces** mais **peu flexibles**.
 
-![bg right:40%][illustration-conclusion]
+![bg right:40%][illustration-conclusion] -->s
 
 ## À vous de jouer !
 
