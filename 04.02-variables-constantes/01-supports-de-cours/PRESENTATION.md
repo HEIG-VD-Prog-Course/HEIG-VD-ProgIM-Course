@@ -833,10 +833,10 @@ int age = 18;  // Je déclare une variable age
 
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][cours]
-- Réaliser les [exercices][exercices]
-- Expérimenter avec [PlantUML en ligne][plantuml-editor]
-- Poser des questions si nécessaire
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
 **La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
 propres exercices.**
@@ -895,7 +895,7 @@ Est-ce que vous avez des questions ?
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/02-exercices
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/03-exercices
 [plantuml-editor]: https://plantuml.nortalle.ch
 [license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

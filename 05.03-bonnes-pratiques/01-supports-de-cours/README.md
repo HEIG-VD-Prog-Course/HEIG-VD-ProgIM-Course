@@ -8,8 +8,20 @@ V. Guidoux, avec l'aide de GitHub Copilot
 
 Ce travail est sous licence [CC BY-SA 4.0][license].
 
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+
 ## Table des matières
 
+- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Introduction](#introduction)
@@ -198,7 +210,7 @@ Le formatage rend votre code plus lisible, comme les paragraphes et la
 ponctuation rendent un texte plus facile à lire.
 
 Imaginez lire un livre sans espaces ni retours à la ligne. C'est ce que ressent
-quelqu'un qui lit du code mal formaté !
+une personne qui lit du code mal formaté !
 
 ### Éléments de formatage
 
@@ -659,7 +671,7 @@ Maintenant, peu importe l'éditeur utilisé, tout le monde aura le même formata
 
 ## Règle d'or : rendre votre projet accessible
 
-**Principe fondamental** : quand quelqu'un utilise votre code, il doit :
+**Principe fondamental** : quand une personne utilise votre code, il doit :
 
 1. **Pouvoir le faire fonctionner facilement**
 2. **Avoir la même expérience de développement que vous**

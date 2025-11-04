@@ -5,23 +5,28 @@ V. Guidoux, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources
+## Ressources annexes
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](.)
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
-- Exercices : [Lien vers le contenu](./02-exercices/README.md)
+- Exemples de code : [Lien vers le contenu](./02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./03-exercices/README.md)
 
 ## Objectifs
 
-Cette séance a pour but pour lorem ipsum dolor sit amet, consectetur adipiscing
+Cette séance a pour but pour vous faire découvrir les concepts de base des
+variables et constantes en Java. Vous apprendrez à déclarer, initialiser et
+utiliser différents types de variables, ainsi qu'à comprendre les structures
+algorithmiques associées.
 
 De façon plus concise, à la fin de cette séance, vous devriez être capable de :
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Identifier et appliquer les structures algorithmiques fondamentales :
+  séquence, sélection et itération en Java
+- Utiliser efficacement les variables, les constantes et les types de données de
+  base en Java
 
 ## Méthodes d'enseignement et d'apprentissage
 
@@ -56,6 +61,9 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
+- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
+  classe.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

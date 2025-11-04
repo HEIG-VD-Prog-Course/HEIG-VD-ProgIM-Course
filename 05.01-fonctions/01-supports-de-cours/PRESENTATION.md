@@ -244,11 +244,10 @@ Les méthodes évitent la duplication de code et facilitent la maintenance.
 
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][cours]
-- Réaliser les [exercices][exercices]
-- Expérimenter avec les méthodes de `Math` et `String`
-- Créer vos propres méthodes
-- Poser des questions si nécessaire
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
 **La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
 propres exercices.**
@@ -282,7 +281,7 @@ Est-ce que vous avez des questions ?
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.01-fonctions/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.01-fonctions/02-exercices
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.01-fonctions/03-exercices
 [plantuml-editor]: https://plantuml.nortalle.ch
 [license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

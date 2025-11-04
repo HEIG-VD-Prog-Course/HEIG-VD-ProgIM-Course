@@ -1,17 +1,67 @@
 # Bonnes pratiques de programmation
 
-Bienvenue dans le module sur les bonnes pratiques de programmation !
+V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).
 
-Ce module vous apprendra à écrire du code propre, lisible et maintenable. Vous
-découvrirez l'importance de la cohérence dans votre code et comment configurer
-votre environnement de développement pour faciliter le travail en équipe.
+Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Contenu du module
+## Ressources annexes
 
-- [Support de cours](01-supports-de-cours/README.md) - Cours complet sur les
-  bonnes pratiques
-- [Présentation](01-supports-de-cours/PRESENTATION.md) - Diapositives du cours
-- [Exercices](02-exercices/README.md) - Exercices pratiques
+- Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+- Exercices : [Lien vers le contenu](./02-exercices/README.md)
+
+## Objectifs
+
+Les bonnes pratiques de programmation sont comme les règles de politesse dans
+une conversation : elles facilitent la communication et évitent les malentendus.
+
+À la fin de ce cours, vous devriez être capable de :
+
+- Comprendre l'importance des bonnes pratiques de programmation
+- Nommer vos variables, méthodes et classes de manière claire et cohérente
+- Formater votre code de manière uniforme et lisible
+- Écrire des commentaires utiles et pertinents
+- Configurer VS Code pour maintenir automatiquement la qualité de votre code
+- Utiliser EditorConfig pour assurer la cohérence dans une équipe
+
+## Méthodes d'enseignement et d'apprentissage
+
+Les méthodes d'enseignement et d'apprentissage utilisées pour animer le cours
+sont les suivantes :
+
+- Présentation magistrale.
+- Discussions collectives.
+- Travail en autonomie.
+
+## Méthodes d'évaluation
+
+L'évaluation prend la forme d'exercices à réaliser en autonomie en classe ou à
+la maison.
+
+L'évaluation se fait en utilisant les critères suivants :
+
+- Capacité à répondre avec justesse.
+- Capacité à argumenter.
+
+Les retours se font de la manière suivante :
+
+- Corrigé des exercices.
+
+L'évaluation ne donne pas lieu à une note.
+
+## À faire pour la semaine suivante
+
+Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
+il est recommandé pour le cours suivant de :
+
+- Relire les supports de cours si nécessaire.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
+
+[licence]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 
 ## Objectifs d'apprentissage
 

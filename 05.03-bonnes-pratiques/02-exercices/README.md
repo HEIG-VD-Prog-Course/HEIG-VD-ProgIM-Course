@@ -4,6 +4,17 @@ Ce document contient les exercices pour le cours sur les bonnes pratiques de
 programmation. Vous pratiquerez le nommage, le formatage, les commentaires et
 l'identification de problèmes dans du code.
 
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+
 ## Objectifs
 
 - Corriger du code mal formaté
@@ -510,7 +521,7 @@ Pour chaque situation, proposez un nom de variable approprié en respectant les
 conventions Java (camelCase pour les variables).
 
 1. Une variable qui stocke l'âge d'une personne
-2. Une variable qui indique si un utilisateur est connecté
+2. Une variable qui indique si un utilisatrice est connecté
 3. Une constante pour le nombre de jours dans une semaine
 4. Une variable qui stocke le prix total d'un panier
 5. Une variable qui compte le nombre de tentatives
@@ -613,7 +624,7 @@ Travaillez en groupe de 3-4 personnes :
 
 1. Chaque personne écrit un petit programme (20-30 lignes) qui :
 
-   - Demande des informations à l'utilisateur
+   - Demande des informations à l'utilisatrice
    - Effectue des calculs
    - Affiche des résultats
 

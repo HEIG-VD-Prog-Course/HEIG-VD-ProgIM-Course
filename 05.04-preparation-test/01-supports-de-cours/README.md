@@ -8,8 +8,20 @@ V. Guidoux, avec l'aide de GitHub Copilot
 
 Ce travail est sous licence [CC BY-SA 4.0][license].
 
+## Ressources
+
+- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
+  d'évaluation : [Lien vers le contenu](..)
+- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/05.04-preparation-test-presentation.pdf)
+- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+
 ## Table des matières
 
+- [Ressources](#ressources)
 - [Table des matières](#table-des-matières)
 - [Introduction](#introduction)
 - [Format du test](#format-du-test)
@@ -60,7 +72,7 @@ des problèmes.
 **Exemple de questions** :
 
 - "Dessinez le diagramme d'activité d'un programme qui demande un nombre à
-  l'utilisateur et affiche s'il est pair ou impair"
+  l'utilisatrice et affiche s'il est pair ou impair"
 - "Expliquez la différence entre une boucle `while` et une boucle `do...while`"
 - "Que va afficher ce programme ? (code fourni)"
 

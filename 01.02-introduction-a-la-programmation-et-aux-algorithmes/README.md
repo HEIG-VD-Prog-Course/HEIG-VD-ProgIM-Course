@@ -5,18 +5,24 @@ V. Guidoux, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources
+## Ressources annexes
 
-- Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
-  d'évaluation : [Lien vers le contenu](.)
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
 
 ## Objectifs
 
-- TODO
+Dans ce cours, nous allons découvrir ce qu'est la programmation et ce qu'est un
+algorithme, à travers une métaphore simple : la recette de cuisine.
+
+À la fin de ce cours, vous serez capables de :
+
+- Expliquer ce qu'est la programmation à l'aide d'exemples du quotidien
+- Comprendre la notion d'algorithme grâce à la métaphore de la recette
+- Suivre et imaginer des instructions simples pour résoudre un problème
+- Prendre conscience de l'importance de la précision dans les instructions
 
 ## Méthodes d'enseignement et d'apprentissage
 
@@ -34,8 +40,6 @@ la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
 
-- Capacité à s'approprier des exemples de code.
-- Capacité à appliquer les exemples de code à des situations similaires.
 - Capacité à répondre avec justesse.
 - Capacité à argumenter.
 
@@ -51,8 +55,7 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
-- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
-  classe.
+- Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

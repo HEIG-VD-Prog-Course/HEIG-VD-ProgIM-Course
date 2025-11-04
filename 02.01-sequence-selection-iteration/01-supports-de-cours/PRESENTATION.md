@@ -337,10 +337,10 @@ stop
 
 ## À vous de jouer !
 
-- (Re)lire le [support de cours][cours]
-- Réaliser les [exercices][exercices]
-- Expérimenter avec [PlantUML en ligne][plantuml-editor]
-- Poser des questions si nécessaire
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
 \
 **La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos propres

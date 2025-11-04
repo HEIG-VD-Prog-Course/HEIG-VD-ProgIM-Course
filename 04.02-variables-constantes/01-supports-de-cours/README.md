@@ -14,7 +14,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
-- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+- Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
 ## Table des matières
 
@@ -511,7 +512,7 @@ noms, etc.).
 **Phrase descriptive :**
 
 ```text
-Je veux afficher un message de bienvenue avec le nom de l'utilisateur.
+Je veux afficher un message de bienvenue avec le nom de l'utilisatrice.
 ```
 
 **Diagramme UML :**
@@ -519,7 +520,7 @@ Je veux afficher un message de bienvenue avec le nom de l'utilisateur.
 ```plantuml
 @startuml
 start
-:Le nom de l'utilisateur est "Sophie";
+:Le nom de l'utilisatrice est "Sophie";
 :Je crée un message de bienvenue;
 :J'affiche "Bienvenue Sophie !";
 stop
@@ -533,7 +534,7 @@ stop
 ```java
 public class WelcomeMessage {
     public static void main(String[] args) {
-        // Le nom de l'utilisateur
+        // Le nom de l'utilisatrice
         String name = "Sophie";
 
         // Je crée le message de bienvenue
