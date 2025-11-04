@@ -12,7 +12,8 @@ l'encodage. Chaque exercice est suivi de sa solution, cachée par défaut.
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
-- Exercices : [Lien vers le contenu](../02-exercices/README.md)
+- Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
 ## Objectifs
 

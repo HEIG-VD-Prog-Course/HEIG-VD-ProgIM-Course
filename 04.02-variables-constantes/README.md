@@ -11,7 +11,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
-- Exercices : [Lien vers le contenu](./02-exercices/README.md)
+- Exemples de code : [Lien vers le contenu](./02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./03-exercices/README.md)
 
 ## Objectifs
 
@@ -43,6 +44,8 @@ la maison.
 
 L'évaluation se fait en utilisant les critères suivants :
 
+- Capacité à s'approprier des exemples de code.
+- Capacité à appliquer les exemples de code à des situations similaires.
 - Capacité à répondre avec justesse.
 - Capacité à argumenter.
 
@@ -58,6 +61,8 @@ Chaque personne est libre de gérer son temps comme elle le souhaite. Cependant,
 il est recommandé pour le cours suivant de :
 
 - Relire les supports de cours si nécessaire.
+- Finaliser l'appropriation des exemples de code qui n'ont pas été vus en
+  classe.
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:

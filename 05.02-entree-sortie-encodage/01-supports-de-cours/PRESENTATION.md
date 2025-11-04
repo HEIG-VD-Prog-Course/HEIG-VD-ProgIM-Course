@@ -349,7 +349,7 @@ Est-ce que vous avez des questions ?
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.02-entree-sortie-encodage/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.02-entree-sortie-encodage/02-exercices
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.02-entree-sortie-encodage/03-exercices
 [license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 

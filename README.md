@@ -127,8 +127,10 @@ Les dates sont tirées du
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./04.02-variables-constantes/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./04.02-variables-constantes/02-exercices/README.md)
+  [Lien vers le contenu](./04.02-variables-constantes/03-exercices/README.md)
 
 ## 🕔 Cours 05
 
@@ -139,7 +141,9 @@ Les dates sont tirées du
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
-- Exercices : [Lien vers le contenu](./05.01-fonctions/02-exercices/README.md)
+- Exemples de code :
+  [Lien vers le contenu](./05.01-fonctions/02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./05.01-fonctions/03-exercices/README.md)
 
 ### Entrée, sortie et encodage
 
@@ -149,8 +153,10 @@ Les dates sont tirées du
   [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
   ·
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./05.02-entree-sortie-encodage/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./05.02-entree-sortie-encodage/02-exercices/README.md)
+  [Lien vers le contenu](./05.02-entree-sortie-encodage/03-exercices/README.md)
 
 ### Bonnes pratiques de programmation
 

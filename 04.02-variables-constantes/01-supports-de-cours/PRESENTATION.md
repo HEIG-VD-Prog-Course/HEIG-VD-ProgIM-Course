@@ -895,7 +895,7 @@ Est-ce que vous avez des questions ?
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/02-exercices
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/03-exercices
 [plantuml-editor]: https://plantuml.nortalle.ch
 [license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
