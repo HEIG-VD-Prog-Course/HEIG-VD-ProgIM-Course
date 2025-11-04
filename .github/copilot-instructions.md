@@ -334,22 +334,141 @@ paths in Markdown:
 
 - **Markdown**: Use Prettier formatting (80 character ruler)
 - **Encoding**: UTF-8 with LF line endings
-- **Marp Presentations**: Use `.marp/theme.css` for styling
-  - **Structure**: All presentations must follow the template structure in
+- **Marp Presentations**: Follow strict template structure
+
+  - **Reference template**: All presentations MUST follow the exact structure in
     `00.00-template/01-supports-de-cours/PRESENTATION.md`
-  - **Slide separation**: NEVER use `---` to separate slides, only use headings
-    (`##`)
-  - **Consistent sections**: Include title slide, objectives, content, "À vous
-    de jouer !", questions, and sources sections
-  - **When creating/editing**: Keep the template structure and only modify
-    content and update URLs/links
-  - **Quiz presentations**: For quiz/revision presentations, use the
-    "Question/Answer" format:
-    - Use `## Question X - Donnée` for the question slide
-    - Use `## Question X - Réponse` for single-slide answers
-    - Use `## Question X - Réponse (1/2)` and `## Question X - Réponse (2/2)`
-      when the answer needs multiple slides (even if content could fit on one
-      slide, always indicate pagination explicitly)
+  - **Theme**: Use `.marp/theme.css` via `theme: custom-marp-theme` in
+    frontmatter
+
+  #### Frontmatter Structure (MANDATORY)
+
+  ```markdown
+  ---
+  marp: true
+  ---
+
+  <!--
+  theme: custom-marp-theme
+  size: 16:9
+  paginate: true
+  author: V. Guidoux, avec l'aide de GitHub Copilot
+  title: HEIG-VD ProgIM1 Course - [Topic]
+  description: [Brief description] pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
+  url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/index.html
+  header: "**[Topic]**"
+  footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+  headingDivider: 6
+  math: mathjax
+  -->
+  ```
+
+  **CRITICAL**:
+
+  - Use `theme: custom-marp-theme` (NOT `theme: default`)
+  - NEVER use `<style>` tag with `@import url('.marp/theme.css')`
+  - Set `headingDivider: 6` to auto-create slides from `##` headings
+  - Use `[license]` (NOT `[licence]`) for consistency
+
+  #### Slide Separation (CRITICAL RULE)
+
+  **NEVER use `---` to separate slides** after the frontmatter. The only `---`
+  allowed are:
+
+  1. Line 1: Opening frontmatter delimiter
+  2. Line 3: Closing frontmatter delimiter
+
+  All other slides are automatically created by `##` headings thanks to
+  `headingDivider: 6`.
+
+  ❌ **WRONG**:
+
+  ```markdown
+  ## Slide 1
+
+  Content here
+
+  ---
+
+  ## Slide 2
+
+  More content
+  ```
+
+  ✅ **CORRECT**:
+
+  ```markdown
+  ## Slide 1
+
+  Content here
+
+  ## Slide 2
+
+  More content
+  ```
+
+  #### Required Sections (in order)
+
+  1. **Title slide** with `_class: lead` and `_paginate: false`
+  2. **"Retrouvez plus de détails"** section with `_class: lead`
+  3. **Objectifs** starting with "À la fin de cette séance, vous devriez être
+     capable de :" with `![bg right:40%][illustration-objectifs]`
+  4. **Content sections** (as many `##` headings as needed)
+  5. **"À vous de jouer !"** with standard bullets and
+     `![bg right:40%][illustration-a-vous-de-jouer]`
+  6. **Questions** with `_class: lead`
+  7. **Sources** with illustration credits and all URL references
+
+  #### Footer URL Structure (MANDATORY)
+
+  All presentations must include these URL references at the end:
+
+  ```markdown
+  <!-- URLs -->
+
+  [presentation-web]:
+  	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/index.html
+  [presentation-pdf]:
+  	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf
+  [cours]:
+  	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/XX.XX-topic/01-supports-de-cours
+  [exercices]:
+  	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/XX.XX-topic/03-exercices
+  [license]:
+  	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+
+  <!-- Illustrations -->
+
+  [illustration-principale]: ./images/home.jpg
+  [illustration-objectifs]:
+  	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+  [illustration-a-vous-de-jouer]:
+  	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
+  ```
+
+  **Replace `XX.XX-topic` with actual module folder name.**
+
+  #### Common Mistakes to Avoid
+
+  1. ❌ Using `theme: default` instead of `theme: custom-marp-theme`
+  2. ❌ Adding `<style>` tag with `@import` (theme is already configured)
+  3. ❌ Using `---` to separate slides (breaks with `headingDivider: 6`)
+  4. ❌ Using `[licence]` instead of `[license]`
+  5. ❌ Forgetting `![bg right:40%][illustration-objectifs]` on objectives slide
+  6. ❌ Not including "À la fin de cette séance, vous devriez être capable de :"
+  7. ❌ Using `<!-- _class: title -->` instead of proper lead structure
+  8. ❌ Missing "Retrouvez plus de détails dans le support de cours" section
+  9. ❌ Not creating `images/` folder with `home.jpg` placeholder
+
+  #### Quiz Presentations (Special Format)
+
+  For quiz/revision presentations, use the "Question/Answer" format:
+
+  - Use `## Question X - Donnée` for the question slide
+  - Use `## Question X - Réponse` for single-slide answers
+  - Use `## Question X - Réponse (1/2)` and `## Question X - Réponse (2/2)` when
+    the answer needs multiple slides
+
 - **PlantUML**: Render using local server at http://localhost:9090
   - Generate diagrams manually using `./build-all-plantuml-diagram.sh` script
 
