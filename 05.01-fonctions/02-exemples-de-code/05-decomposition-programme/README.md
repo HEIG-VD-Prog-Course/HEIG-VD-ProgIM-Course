@@ -1,6 +1,7 @@
 # Exemple : Décomposition en fonctions
 
-Cet exemple illustre comment décomposer un programme complexe en fonctions avec :
+Cet exemple illustre comment décomposer un programme complexe en fonctions avec
+:
 
 - Décomposition d'un problème en sous-problèmes
 - Création de fonctions réutilisables

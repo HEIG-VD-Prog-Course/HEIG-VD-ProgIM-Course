@@ -32,8 +32,8 @@ votre apprentissage.
 
 Ces exemples sont triés par ordre de complexité croissante. Nous vous
 conseillons de les explorer dans l'ordre et de prendre le temps de les exécuter
-sur votre machine et de prendre le temps de les comprendre en profondeur
-**sans recourir à de l'aide externe** (professeure, collègues, intelligence
+sur votre machine et de prendre le temps de les comprendre en profondeur **sans
+recourir à de l'aide externe** (professeure, collègues, intelligence
 artificielle, recherche sur internet).
 
 [licence]:

@@ -1,6 +1,7 @@
 # Exemple : Structures de contrôle
 
-Cet exemple illustre l'utilisation des structures algorithmiques fondamentales avec :
+Cet exemple illustre l'utilisation des structures algorithmiques fondamentales
+avec :
 
 - Séquence : instructions exécutées les unes après les autres
 - Sélection : prise de décision avec `if`, `else if`, `else`

@@ -1,6 +1,7 @@
 # Exemple : Lecture avec Scanner
 
-Cet exemple illustre l'utilisation de la classe Scanner pour lire des données avec :
+Cet exemple illustre l'utilisation de la classe Scanner pour lire des données
+avec :
 
 - Importation de `java.util.Scanner`
 - Création d'un Scanner lié à `System.in`
