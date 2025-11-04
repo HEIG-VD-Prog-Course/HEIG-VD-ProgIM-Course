@@ -27,6 +27,149 @@ programmes efficaces.
 Dans ce module, nous explorerons différentes stratégies de recherche, de la plus
 simple à la plus optimisée, en analysant leurs performances et cas d'usage.
 
+## Comprendre la complexité algorithmique
+
+Avant de plonger dans les algorithmes de recherche, il est essentiel de
+comprendre comment on mesure leur performance. En informatique, on utilise la
+**notation grand O** (Big O notation) pour exprimer la complexité d'un
+algorithme.
+
+### Qu'est-ce que la complexité ?
+
+La complexité d'un algorithme mesure **combien de temps** (ou d'opérations) il
+va prendre en fonction de la **taille des données**.
+
+Par exemple, si vous cherchez un livre dans une bibliothèque :
+
+- Combien de livres devrez-vous regarder ?
+- Est-ce que le temps augmente beaucoup si la bibliothèque double de taille ?
+
+### La notation O()
+
+On note la complexité avec un **O()** suivi d'une expression mathématique. Voici
+les complexités les plus courantes, de la plus rapide à la plus lente :
+
+#### O(1) - Complexité constante
+
+**Signification** : Le temps d'exécution ne dépend **pas** de la taille des
+données.
+
+**Exemple concret** : Accéder au premier élément d'un tableau.
+
+```java
+int[] numbers = {10, 20, 30, 40, 50};
+int first = numbers[0]; // Toujours 1 opération
+```
+
+Que le tableau ait 10 éléments ou 1 million, accéder à `numbers[0]` prend
+toujours le même temps.
+
+**Graphique** : Une ligne horizontale - le temps ne change pas.
+
+#### O(log n) - Complexité logarithmique
+
+**Signification** : Le temps augmente **très lentement** quand les données
+augmentent.
+
+**Exemple concret** : Chercher un mot dans un dictionnaire en l'ouvrant au
+milieu, puis au milieu de la moitié, etc.
+
+**Cas pratique** :
+
+- 1'000 éléments → environ 10 opérations
+- 1'000'000 éléments → environ 20 opérations
+- 1'000'000'000 éléments → environ 30 opérations
+
+Doubler la taille n'ajoute qu'**une seule opération** supplémentaire !
+
+**Graphique** : Une courbe qui monte doucement puis s'aplatit.
+
+#### O(n) - Complexité linéaire
+
+**Signification** : Le temps augmente **proportionnellement** à la taille des
+données.
+
+**Exemple concret** : Compter les pages d'un livre page par page.
+
+**Cas pratique** :
+
+- 1'000 éléments → 1'000 opérations maximum
+- 2'000 éléments → 2'000 opérations maximum
+
+Si vous doublez la taille, vous doublez le temps.
+
+**Graphique** : Une ligne droite qui monte régulièrement.
+
+#### O(n log n) - Complexité quasi-linéaire
+
+**Signification** : Un peu plus lent que O(n), mais reste très efficace.
+
+**Exemple concret** : Les meilleurs algorithmes de tri (comme le tri fusion).
+
+**Graphique** : Une courbe un peu plus pentue que O(n).
+
+#### O(n²) - Complexité quadratique
+
+**Signification** : Le temps augmente avec le **carré** de la taille.
+
+**Exemple concret** : Comparer chaque page d'un livre avec toutes les autres
+pages.
+
+**Cas pratique** :
+
+- 100 éléments → 10'000 opérations
+- 1'000 éléments → 1'000'000 opérations
+
+Si vous doublez la taille, vous **quadruplez** le temps !
+
+**Graphique** : Une courbe qui monte très rapidement.
+
+### Comparaison visuelle
+
+Pour 1'000 éléments :
+
+| Complexité | Opérations | Exemple d'usage                |
+| ---------- | ---------- | ------------------------------ |
+| O(1)       | 1          | Accès direct à un élément      |
+| O(log n)   | ~10        | Recherche binaire              |
+| O(n)       | 1'000      | Recherche linéaire             |
+| O(n log n) | ~10'000    | Tri fusion                     |
+| O(n²)      | 1'000'000  | Tri à bulles (algorithme lent) |
+
+### Meilleur cas, cas moyen, pire cas
+
+Un même algorithme peut avoir différentes performances selon les circonstances :
+
+- **Meilleur cas** : La situation la plus favorable (ex: l'élément cherché est
+  le premier).
+- **Cas moyen** : Ce qui se passe en général.
+- **Pire cas** : La situation la plus défavorable (ex: l'élément cherché est le
+  dernier).
+
+On utilise généralement le **pire cas** pour garantir une borne supérieure.
+
+### Pourquoi c'est important ?
+
+Regardez cette comparaison pour chercher dans 1'000'000 d'éléments :
+
+- **O(log n)** : 20 opérations → **instantané**
+- **O(n)** : 1'000'000 opérations → **quelques secondes**
+- **O(n²)** : 1'000'000'000'000 opérations → **plusieurs jours !**
+
+Le choix de l'algorithme peut faire la différence entre un programme utilisable
+et un programme inutilisable.
+
+### En résumé
+
+- **O(1)** : Temps constant - le meilleur possible.
+- **O(log n)** : Très rapide - excellent pour grandes données.
+- **O(n)** : Acceptable - temps raisonnable.
+- **O(n log n)** : Bon compromis - standard pour le tri.
+- **O(n²)** : Lent - à éviter pour grandes données.
+
+Maintenant que vous comprenez comment on mesure la performance, explorons les
+algorithmes de recherche !
+
 ## Recherche linéaire
 
 ### Principe
