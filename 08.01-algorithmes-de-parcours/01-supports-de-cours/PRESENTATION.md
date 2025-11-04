@@ -1,29 +1,52 @@
 ---
 marp: true
-theme: default
-paginate: true
-header: "Algorithmes de parcours"
-footer: "HEIG-VD - ProgIM1 - 2024-2025"
 ---
 
-<style>
-@import url('.marp/theme.css');
-</style>
+<!--
+theme: custom-marp-theme
+size: 16:9
+paginate: true
+author: V. Guidoux, avec l'aide de GitHub Copilot
+title: HEIG-VD ProgIM1 Course - Template
+description: Template pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
+url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/index.html
+header: "**Template**"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+headingDivider: 6
+math: mathjax
+-->
 
 <!-- _class: title -->
 
 # Algorithmes de parcours
 
-HEIG-VD - ProgIM1 - 2024-2025
+<!--
+_class: lead
+_paginate: false
+-->
 
-V. Guidoux, avec l'aide de
-[GitHub Copilot](https://github.com/features/copilot).
+<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
 
-Ce travail est sous licence [CC BY-SA 4.0][licence].
+[Support de cours][cours] · [Présentation (web)][presentation-web] ·
+[Présentation (PDF)][presentation-pdf]
 
----
+<small>V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).</small>
+
+<small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
+
+![bg brightness:2 opacity:0.2][illustration-principale]
+
+## _Retrouvez plus de détails dans le support de cours_
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
 
 ## Objectifs
+
+À la fin de cette séance, vous devriez être capable de :
 
 À l'issue de ce module, vous serez capable de :
 
@@ -33,7 +56,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Choisir l'algorithme de recherche approprié selon le contexte.
 - Implémenter des parcours séquentiels et indexés dans des collections.
 
----
+![bg right:40%][illustration-objectifs]
 
 ## Recherche dans les données
 
@@ -47,8 +70,6 @@ La recherche d'éléments est une opération fondamentale en programmation.
 - Rechercher un produit sur un site e-commerce.
 
 **Question** : Comment ces systèmes trouvent-ils rapidement l'information ?
-
----
 
 ## Recherche linéaire
 
@@ -69,8 +90,6 @@ public static int linearSearch(int[] array, int target) {
 
 **Analogie** : Chercher vos clés en vidant votre sac objet par objet.
 
----
-
 ## Recherche linéaire - Complexité
 
 **Combien de comparaisons sont nécessaires ?**
@@ -87,8 +106,6 @@ Tableau : `[10, 25, 30, 45, 50]` - Recherche : `30`
 - Cas moyen : **O(n/2)** ≈ **O(n)**
 - Pire cas : **O(n)** - élément à la fin ou absent
 
----
-
 ## Recherche linéaire - Avantages et inconvénients
 
 **Avantages :**
@@ -103,8 +120,6 @@ Tableau : `[10, 25, 30, 45, 50]` - Recherche : `30`
 - Doit parcourir tous les éléments dans le pire cas.
 
 **Usage** : Petites listes, données non triées, recherches occasionnelles.
-
----
 
 ## Recherche binaire
 
@@ -127,8 +142,6 @@ public static int binarySearch(int[] array, int target) {
 }
 ```
 
----
-
 ## Recherche binaire - Exemple
 
 Tableau trié : `[5, 10, 15, 20, 25, 30, 35, 40, 45]` - Recherche : `25`
@@ -142,8 +155,6 @@ Recherche : `5`
 comparaisons !
 
 **Recherche linéaire aurait nécessité 5 comparaisons pour `25` et 1 pour `5`.**
-
----
 
 ## Recherche binaire - Complexité
 
@@ -161,8 +172,6 @@ comparaisons !
 |     1'000 |               10 |
 | 1'000'000 |               20 |
 
----
-
 ## Recherche binaire - Condition importante
 
 **La recherche binaire nécessite des données TRIÉES.**
@@ -179,8 +188,6 @@ Arrays.binarySearch(sorted, 20); // Fonctionne correctement
 **Si les données ne sont pas triées** : utilisez la recherche linéaire ou triez
 d'abord.
 
----
-
 ## Comparaison des algorithmes
 
 | Critère          | Recherche linéaire | Recherche binaire |
@@ -193,8 +200,6 @@ d'abord.
 
 **Règle générale** : Moins de 100 éléments non triés → linéaire. Plus de 100
 éléments triés → binaire.
-
----
 
 ## Recherche dans ArrayList
 
@@ -215,8 +220,6 @@ Collections.sort(names);
 int pos = Collections.binarySearch(names, "Alice"); // 0
 ```
 
----
-
 ## Recherche dans les tableaux
 
 Méthodes de la classe `Arrays` :
@@ -235,8 +238,6 @@ for (int i = 0; i < numbers.length; i++) {
 Arrays.sort(numbers);
 int index = Arrays.binarySearch(numbers, 8);
 ```
-
----
 
 ## Parcours de structures complexes
 
@@ -259,8 +260,6 @@ for (int i = 0; i < matrix.length; i++) {
 }
 ```
 
----
-
 ## Recherche dans des objets
 
 ```java
@@ -281,8 +280,6 @@ for (Product p : products) {
 }
 ```
 
----
-
 ## Optimisation : Tri + Recherches multiples
 
 Si vous devez chercher **plusieurs fois** dans les mêmes données :
@@ -300,8 +297,6 @@ int pos3 = Arrays.binarySearch(data, 50); // Rapide
 ```
 
 **Coût** : Tri en O(n log n) + Recherches en O(log n) chacune
-
----
 
 ## Structures de données alternatives
 
@@ -323,8 +318,6 @@ emails.add("alice@example.com");
 boolean exists = emails.contains("alice@example.com"); // O(1)
 ```
 
----
-
 ## Quand utiliser quel algorithme ?
 
 **Recherche linéaire :**
@@ -344,8 +337,6 @@ boolean exists = emails.contains("alice@example.com"); // O(1)
 - Recherches très fréquentes
 - Performance maximale requise
 
----
-
 ## Cas pratiques
 
 | Situation                         | Algorithme recommandé |
@@ -357,44 +348,49 @@ boolean exists = emails.contains("alice@example.com"); // O(1)
 | Recherche dans un dictionnaire    | Recherche binaire     |
 | Trouver un produit dans un panier | Recherche linéaire    |
 
----
-
 ## À vous de jouer !
 
-Explorez les exemples de code et pratiquez avec les exercices.
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les [exercices][exercices].
+- Poser des questions si nécessaire.
 
-**Expérimentez :**
+**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
+propres exercices.**
 
-- Implémentez les deux algorithmes de recherche.
-- Comparez leurs performances sur différentes tailles de données.
-- Essayez de chercher dans des structures complexes.
-- Analysez quand utiliser quelle approche.
+![bg right:40%][illustration-a-vous-de-jouer]
 
-**Conseil** : Commencez par maîtriser la recherche linéaire avant de passer à la
-binaire.
+## Questions
 
----
+<!-- _class: lead -->
 
-## Questions ?
-
-N'hésitez pas à poser vos questions !
-
-**Ressources :**
-
-- Exemples de code dans le dossier `02-exemples-de-code/`
-- Exercices dans le dossier `03-exercices/`
-- Documentation Java sur Arrays et Collections
-
----
+Est-ce que vous avez des questions ?
 
 ## Sources
 
-- Oracle Java Documentation - Arrays :
-  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html
-- Oracle Java Documentation - Collections :
-  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html
-- Introduction to Algorithms, Cormen et al.
-- Algorithms, 4th Edition, Sedgewick & Wayne
+- [Illustration objectifs][illustration-objectifs] par
+  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
+  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
+  [Unsplash](https://unsplash.com/photos/FJFPuE1MAOM)
 
-[licence]:
+<!-- URLs -->
+
+[presentation-web]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/index.html
+[presentation-pdf]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/08.01-algorithmes-de-parcours-presentation.pdf
+[cours]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/08.01-algorithmes-de-parcours/01-supports-de-cours
+[exercices]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/08.01-algorithmes-de-parcours/02-exercices
+[license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+
+<!-- Illustrations -->
+
+[illustration-objectifs]:
+	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-a-vous-de-jouer]:
+	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720

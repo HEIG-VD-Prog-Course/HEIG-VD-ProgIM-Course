@@ -1,35 +1,50 @@
 ---
 marp: true
-title: "Projet guidé - Puissance 4"
-description: "Développement étape par étape d'un jeu Puissance 4 en console"
-author: "V. Guidoux"
-theme: teaching
-paginate: true
-_paginate: false
-math: mathjax
 ---
 
-<!-- _class: title-slide lead -->
+<!--
+theme: custom-marp-theme
+size: 16:9
+paginate: true
+author: V. Guidoux, avec l'aide de GitHub Copilot
+title: HEIG-VD ProgIM1 Course - Projet guidé - Puissance 4
+description: Projet guidé Puissance 4 pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
+url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/index.html
+header: "**Projet guidé - Puissance 4**"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+headingDivider: 6
+math: mathjax
+-->
 
 # Projet guidé - Puissance 4
 
-V. Guidoux, avec l'aide de
-[GitHub Copilot](https://github.com/features/copilot).
+<!--
+_class: lead
+_paginate: false
+-->
 
-Ce travail est sous licence [CC BY-SA 4.0][licence].
+<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
 
-## Développement étape par étape
+[Support de cours][cours] · [Présentation (web)][presentation-web] ·
+[Présentation (PDF)][presentation-pdf]
 
-[licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+<small>V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
----
+<small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
+
+![bg brightness:2 opacity:0.2][illustration-principale]
+
+## _Retrouvez plus de détails dans le support de cours_
 
 <!-- _class: lead -->
 
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
+
 ## Objectifs du cours
 
-À l'issue de ce cours, vous serez capable de :
+À la fin de cette séance, vous devriez être capable de :
 
 - Analyser un problème complexe et le décomposer en étapes
 - Utiliser des tableaux 2D pour une grille de jeu
@@ -38,7 +53,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Développer une application interactive complète
 - Tester et déboguer méthodiquement
 
----
+![bg right:40%][illustration-objectifs]
 
 ## Le jeu Puissance 4
 
@@ -60,8 +75,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
  1 2 3 4 5 6 7
 ```
 
----
-
 ## Représentation en mémoire
 
 **Tableau 2D de caractères :**
@@ -81,8 +94,6 @@ char[][] grid = new char[6][7];  // 6 lignes, 7 colonnes
 - Lignes : de 0 (haut) à 5 (bas)
 - Colonnes : de 0 à 6
 
----
-
 ## Décomposition du problème
 
 **Fonctionnalités nécessaires :**
@@ -96,8 +107,6 @@ char[][] grid = new char[6][7];  // 6 lignes, 7 colonnes
 7. Boucle de jeu complète
 
 **Approche : développement incrémental**
-
----
 
 ## Étape 1 : Affichage de la grille
 
@@ -117,8 +126,6 @@ public static void displayGrid(char[][] grid) {
 ```
 
 **Concepts :** Boucles imbriquées, affichage formaté
-
----
 
 ## Étape 1 : Initialisation
 
@@ -144,8 +151,6 @@ public static char[][] createGrid() {
 ...
 ```
 
----
-
 ## Étape 2 : Placement d'un pion
 
 **Objectif :** Placer un pion en respectant la gravité
@@ -160,8 +165,6 @@ public static char[][] createGrid() {
 **Concept clé : la gravité**
 
 Les pions tombent jusqu'en bas !
-
----
 
 ## Étape 2 : Trouver la ligne disponible
 
@@ -180,8 +183,6 @@ public static int findLowestRow(char[][] grid, int col) {
 ```
 
 **Point important :** On commence par `grid.length - 1` (ligne du bas)
-
----
 
 ## Étape 2 : Placement complet
 
@@ -206,8 +207,6 @@ do {
 } while (col < 0 || col >= 7 || findLowestRow(grid, col) == -1);
 ```
 
----
-
 ## Étape 3 : Alternance des joueuses
 
 **Objectif :** Gérer le tour par tour
@@ -230,8 +229,6 @@ currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
 System.out.println("C'est au tour de : " + currentPlayer);
 ```
 
----
-
 ## Étape 4 : Détection horizontale
 
 **Objectif :** Détecter 4 pions alignés horizontalement
@@ -250,8 +247,6 @@ On teste :
 - Colonnes 0-3 → X X X X ✓
 - Colonnes 1-4 → X X X vide ✗
 - ...
-
----
 
 ## Étape 4 : Implémentation horizontale
 
@@ -272,8 +267,6 @@ public static boolean checkHorizontalWin(char[][] grid, char player) {
 }
 ```
 
----
-
 ## Étape 5 : Détection verticale
 
 **Même principe, mais dans les colonnes :**
@@ -293,8 +286,6 @@ public static boolean checkVerticalWin(char[][] grid, char player) {
     return false;
 }
 ```
-
----
 
 ## Étape 5 : Diagonale descendante ↘
 
@@ -318,8 +309,6 @@ public static boolean checkDiagonalDown(char[][] grid, char player) {
 
 **On avance en ligne ET en colonne simultanément**
 
----
-
 ## Étape 5 : Diagonale montante ↗
 
 **De bas-gauche vers haut-droite :**
@@ -342,8 +331,6 @@ public static boolean checkDiagonalUp(char[][] grid, char player) {
 
 **Attention :** On commence à `row = 3` (besoin de remonter de 3 cases)
 
----
-
 ## Étape 5 : Fonction globale de victoire
 
 **Combiner toutes les détections :**
@@ -358,8 +345,6 @@ public static boolean hasWon(char[][] grid, char player) {
 ```
 
 **Organisation claire : une fonction par type de victoire**
-
----
 
 ## Étape 6 : Détection de match nul
 
@@ -378,8 +363,6 @@ public static boolean isGridFull(char[][] grid) {
 
 **Astuce :** Il suffit de vérifier la première ligne (si elle est pleine, tout
 est plein)
-
----
 
 ## Étape 6 : Boucle de jeu complète
 
@@ -407,8 +390,6 @@ while (true) {
 }
 ```
 
----
-
 ## Structure complète du programme
 
 ```java
@@ -431,8 +412,6 @@ public class ConnectFour {
 }
 ```
 
----
-
 ## Bonnes pratiques appliquées
 
 **Organisation :**
@@ -452,8 +431,6 @@ public static final char PLAYER2 = 'O';
 
 **Tests progressifs :** Tester chaque étape avant de continuer
 
----
-
 ## Extensions possibles
 
 **Améliorations du jeu :**
@@ -469,8 +446,6 @@ public static final char PLAYER2 = 'O';
 
 **Choisissez ce qui vous intéresse !**
 
----
-
 ## Récapitulatif des étapes
 
 1. **Affichage** : Grille vide avec boucles imbriquées
@@ -481,8 +456,6 @@ public static final char PLAYER2 = 'O';
 6. **Jeu complet** : Boucle avec toutes les vérifications
 
 **Chaque étape construit sur la précédente**
-
----
 
 ## Concepts mobilisés
 
@@ -496,33 +469,52 @@ public static final char PLAYER2 = 'O';
 
 **Un projet de synthèse complet !**
 
----
-
-<!-- _class: lead -->
-
 ## À vous de jouer !
 
-Développez votre propre Puissance 4 étape par étape.
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
-Consultez les exemples de code et réalisez les exercices.
+**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
+propres exercices.**
 
-**Conseils :**
+![bg right:40%][illustration-a-vous-de-jouer]
 
-- Testez chaque étape avant de passer à la suivante
-- Utilisez le débogueur pour comprendre
-- N'hésitez pas à adapter et améliorer
-
----
-
-<!-- _class: lead -->
-
-## Questions ?
-
----
+## Questions
 
 <!-- _class: lead -->
+
+Est-ce que vous avez des questions ?
 
 ## Sources
 
-- Documentation Java : https://docs.oracle.com/en/java/javase/17/docs/api/
-- Règles du Puissance 4 : https://fr.wikipedia.org/wiki/Puissance_4
+- [Documentation Java](https://docs.oracle.com/en/java/javase/17/docs/api/)
+- [Règles du Puissance 4](https://fr.wikipedia.org/wiki/Puissance_4)
+- [Illustration objectifs][illustration-objectifs] par
+  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
+  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
+  [Unsplash](https://unsplash.com/photos/FJFPuE1MAOM)
+
+<!-- URLs -->
+
+[presentation-web]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/index.html
+[presentation-pdf]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/11.01-projet-puissance-4-presentation.pdf
+[cours]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/11.01-projet-puissance-4/01-supports-de-cours
+[exercices]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/11.01-projet-puissance-4/03-exercices
+[license]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+
+<!-- Illustrations -->
+
+[illustration-principale]: ./images/home.jpg
+[illustration-objectifs]:
+	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-a-vous-de-jouer]:
+	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720

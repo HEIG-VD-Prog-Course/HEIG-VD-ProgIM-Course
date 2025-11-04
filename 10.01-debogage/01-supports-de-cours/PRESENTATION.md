@@ -1,34 +1,50 @@
 ---
 marp: true
-theme: default
-paginate: true
-header: "Débogage"
-footer: "HEIG-VD - ProgIM1 - V. Guidoux (avec GitHub Copilot)"
 ---
 
-<style>
-@import '../../../.marp/theme.css';
-</style>
-
-<!-- _class: title -->
+<!--
+theme: custom-marp-theme
+size: 16:9
+paginate: true
+author: V. Guidoux, avec l'aide de GitHub Copilot
+title: HEIG-VD ProgIM1 Course - Débogage
+description: Débogage pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
+url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/index.html
+header: "**Débogage**"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+headingDivider: 6
+math: mathjax
+-->
 
 # Débogage
 
-Identifier, analyser et corriger les bugs
+<!--
+_class: lead
+_paginate: false
+-->
 
-V. Guidoux, avec l'aide de
-[GitHub Copilot](https://github.com/features/copilot).
+<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
 
-Ce travail est sous licence [CC BY-SA 4.0][licence].
+[Support de cours][cours] · [Présentation (web)][presentation-web] ·
+[Présentation (PDF)][presentation-pdf]
 
-[licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+<small>V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
----
+<small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
+
+![bg brightness:2 opacity:0.2][illustration-principale]
+
+## _Retrouvez plus de détails dans le support de cours_
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
 
 ## Objectifs
 
-À l'issue de ce cours, vous serez capable de :
+À la fin de cette séance, vous devriez être capable de :
 
 - Comprendre les différents types d'erreurs (compilation, exécution, logique).
 - Appliquer une démarche méthodique pour identifier et corriger les bugs.
@@ -37,15 +53,13 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Naviguer dans le code avec les actions de débogage.
 - Identifier et corriger les bugs courants.
 
----
+![bg right:40%][illustration-objectifs]
 
 <!-- _class: chapter -->
 
 # Partie 1
 
 ## Concepts généraux de débogage
-
----
 
 ## Qu'est-ce qu'un bug ?
 
@@ -61,8 +75,6 @@ ordinateur et causait des dysfonctionnements.
 **Réalité** : On estime que **50 à 75 % du temps de développement** est consacré
 au débogage et aux tests.
 
----
-
 ## Types d'erreurs
 
 Il existe trois grandes catégories d'erreurs :
@@ -72,8 +84,6 @@ Il existe trois grandes catégories d'erreurs :
 3. **Erreurs logiques** (Logic errors)
 
 Comprendre ces types aide à choisir la bonne approche de débogage.
-
----
 
 ## 1. Erreurs de compilation
 
@@ -94,8 +104,6 @@ int number = "hello";  // Type incompatible
 
 result = x + y;  // Variable non déclarée
 ```
-
----
 
 ## 2. Erreurs d'exécution
 
@@ -118,8 +126,6 @@ int x = numbers[5];  // ArrayIndexOutOfBoundsException
 String text = null;
 int length = text.length();  // NullPointerException
 ```
-
----
 
 ## 3. Erreurs logiques
 
@@ -145,8 +151,6 @@ for (int i = 0; i <= array.length; i++) {  // <= au lieu de <
 }
 ```
 
----
-
 ## Démarche méthodique de débogage
 
 Face à un bug, suivre une méthode structurée :
@@ -158,8 +162,6 @@ Face à un bug, suivre une méthode structurée :
 5. **Tester l'hypothèse** : Vérifier si l'hypothèse est correcte.
 6. **Corriger le bug** : Appliquer la correction.
 7. **Vérifier la correction** : Tester que le bug est bien résolu.
-
----
 
 ## Techniques de débogage de base
 
@@ -173,8 +175,6 @@ Avant d'utiliser un débogueur, plusieurs techniques simples :
 
 **Astuce** : Expliquer le code à voix haute ou à une personne (rubber duck
 debugging).
-
----
 
 ## 2. Ajout de traces
 
@@ -198,8 +198,6 @@ public static int calculateSum(int[] numbers) {
 **Avantages** : Simple et rapide. **Inconvénients** : Encombre le code, à
 retirer après.
 
----
-
 ## 3. Simplification du code
 
 Décomposer les expressions complexes :
@@ -221,8 +219,6 @@ if (isAdult || isMinorWithConsent) {
 
 **Avantage** : Plus facile à comprendre et à tester.
 
----
-
 ## 4. Vérification des cas limites
 
 Tester avec des valeurs extrêmes :
@@ -234,15 +230,11 @@ Tester avec des valeurs extrêmes :
 
 **Pourquoi** : Les bugs se cachent souvent dans les cas limites.
 
----
-
 <!-- _class: chapter -->
 
 # Partie 2
 
 ## Débogage avec VS Code
-
----
 
 ## Pourquoi utiliser un débogueur ?
 
@@ -256,8 +248,6 @@ Un **débogueur** permet de :
 **Débogueur VS Code** : Outil professionnel intégré pour Java (et autres
 langages).
 
----
-
 ## Interface du débogueur VS Code
 
 **Composants principaux** :
@@ -267,8 +257,6 @@ langages).
 3. **Console de débogage** : Affiche les sorties et évalue des expressions.
 4. **Sidebar de débogage** : Pile d'appels, variables, watch.
 5. **Menu Run** : Commandes de débogage courantes.
-
----
 
 ## Démarrer une session de débogage
 
@@ -281,8 +269,6 @@ langages).
 VS Code lance automatiquement le programme en mode débogage.
 
 **Prérequis** : Extension "Extension Pack for Java" installée.
-
----
 
 ## Points d'arrêt (Breakpoints)
 
@@ -298,8 +284,6 @@ spécifique.
 
 **Retirer un breakpoint** : Cliquer à nouveau ou **F9**.
 
----
-
 ## Types de points d'arrêt
 
 ### 1. Point d'arrêt simple
@@ -313,8 +297,6 @@ S'arrête uniquement si une condition est vraie.
 **Utilisation** : Clic droit → "Add Conditional Breakpoint" → Entrer `i == 10`.
 
 **Exemple** : Arrêter une boucle seulement quand `i` vaut 10.
-
----
 
 ## Types de points d'arrêt (suite)
 
@@ -332,8 +314,6 @@ S'arrête après un nombre de passages.
 
 **Exemple** : Arrêter après le 50ème passage dans une boucle.
 
----
-
 ## Actions de débogage
 
 Une fois en pause, on contrôle l'exécution avec ces actions :
@@ -346,8 +326,6 @@ Une fois en pause, on contrôle l'exécution avec ces actions :
 | **Step Out**  | **Shift+F11**     | Sortir de la méthode actuelle                   |
 | **Restart**   | **Ctrl+Shift+F5** | Redémarrer le programme                         |
 | **Stop**      | **Shift+F5**      | Arrêter le débogage                             |
-
----
 
 ## Step Over (F10)
 
@@ -362,8 +340,6 @@ System.out.println(y);   // <- On arrive ici
 ```
 
 **Quand l'utiliser** : Pour avancer rapidement sans descendre dans les détails.
-
----
 
 ## Step Into (F11)
 
@@ -387,8 +363,6 @@ public static int calculate(int n) {
 
 **Quand l'utiliser** : Pour analyser en détail une méthode.
 
----
-
 ## Step Out (Shift+F11)
 
 **Description** : Sort de la méthode actuelle et retourne à l'appelant.
@@ -407,8 +381,6 @@ int y = calculate(x);    // <- On revient ici
 **Quand l'utiliser** : Quand on s'est trompé en faisant Step Into ou qu'on veut
 sortir rapidement.
 
----
-
 ## Inspection des données
 
 Pendant le débogage, on peut inspecter :
@@ -423,8 +395,6 @@ Affiche toutes les variables **locales** et leurs valeurs.
 - Développer les objets et tableaux.
 - Modifier une valeur : Clic droit → "Set Value" (F2).
 
----
-
 ## 2. Section WATCH
 
 Permet de surveiller des **expressions** spécifiques.
@@ -437,8 +407,6 @@ Permet de surveiller des **expressions** spécifiques.
 L'expression est évaluée à chaque arrêt.
 
 **Quand l'utiliser** : Pour surveiller des calculs sans les ajouter au code.
-
----
 
 ## 3. Section CALL STACK
 
@@ -457,8 +425,6 @@ Call Stack
 25), appelé depuis `main` (ligne 10).
 
 **Utilité** : Comprendre le chemin d'exécution.
-
----
 
 ## Console de débogage
 
@@ -479,8 +445,6 @@ La **console de débogage** permet d'évaluer des expressions pendant le déboga
 
 **Avantage** : Expérimenter sans modifier le code.
 
----
-
 ## Bugs courants : Dépassement d'indice
 
 **Cause** : Accès à un indice inexistant d'un tableau.
@@ -499,8 +463,6 @@ for (int i = 0; i <= numbers.length; i++) {  // <= au lieu de <
 - Breakpoint dans la boucle.
 - Surveiller `i` et comparer avec `numbers.length`.
 - Identifier que `i` atteint 3 alors que le max est 2.
-
----
 
 ## Bugs courants : NullPointerException
 
@@ -527,8 +489,6 @@ if (text != null) {
 }
 ```
 
----
-
 ## Bugs courants : Boucle infinie
 
 **Cause** : Condition de sortie jamais atteinte.
@@ -548,8 +508,6 @@ while (i < 10) {
 - Breakpoint dans la boucle.
 - Step Over plusieurs fois.
 - Observer que `i` ne change jamais.
-
----
 
 ## Bugs courants : Division entière
 
@@ -575,8 +533,6 @@ double result = a / b;  // result = 2.0 au lieu de 2.5
 double result = (double) a / b;  // result = 2.5
 ```
 
----
-
 ## Bonnes pratiques
 
 1. **Utiliser le débogueur plutôt que des `println`** : Plus puissant et propre.
@@ -590,35 +546,51 @@ double result = (double) a / b;  // result = 2.5
    corriger.
 7. **Tester après correction** : Vérifier avec différents cas.
 
----
-
 ## À vous de jouer !
 
-**Exercices pratiques** :
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
-1. Déboguer des programmes avec différents types de bugs.
-2. Utiliser les actions de débogage (Step Over, Step Into, Step Out).
-3. Inspecter les variables et la pile d'appels.
-4. Placer des breakpoints conditionnels.
-5. Corriger les bugs courants (dépassement d'indice, NullPointerException,
-   etc.).
+**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
+propres exercices.**
 
-**Objectif** : Maîtriser l'utilisation du débogueur VS Code pour identifier et
-corriger efficacement les bugs.
+![bg right:40%][illustration-a-vous-de-jouer]
 
----
+## Questions
 
-## Questions ?
+<!-- _class: lead -->
 
----
+Est-ce que vous avez des questions ?
 
 ## Sources
 
-- V. Guidoux, avec l'aide de
-  [GitHub Copilot](https://github.com/features/copilot).
-- Documentation VS Code :
-  [Debugging](https://code.visualstudio.com/docs/debugtest/debugging)
-- Ce travail est sous licence [CC BY-SA 4.0][licence].
+- [Documentation VS Code - Debugging](https://code.visualstudio.com/docs/debugtest/debugging)
+- [Illustration objectifs][illustration-objectifs] par
+  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
+  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
+  [Unsplash](https://unsplash.com/photos/FJFPuE1MAOM)
 
-[licence]:
+<!-- URLs -->
+
+[presentation-web]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/index.html
+[presentation-pdf]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/10.01-debogage-presentation.pdf
+[cours]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/10.01-debogage/01-supports-de-cours
+[exercices]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/10.01-debogage/03-exercices
+[license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+
+<!-- Illustrations -->
+
+[illustration-principale]: ./images/home.jpg
+[illustration-objectifs]:
+	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-a-vous-de-jouer]:
+	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720

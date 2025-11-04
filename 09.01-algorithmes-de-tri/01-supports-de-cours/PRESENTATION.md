@@ -1,31 +1,50 @@
 ---
 marp: true
-theme: default
-paginate: true
-header: "Algorithmes de tri"
-footer: "HEIG-VD - ProgIM1 - 2024-2025"
 ---
 
-<style>
-@import url('.marp/theme.css');
-</style>
-
-<!-- _class: title -->
+<!--
+theme: custom-marp-theme
+size: 16:9
+paginate: true
+author: V. Guidoux, avec l'aide de GitHub Copilot
+title: HEIG-VD ProgIM1 Course - Algorithmes de tri
+description: Algorithmes de tri pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
+url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/index.html
+header: "**Algorithmes de tri**"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+headingDivider: 6
+math: mathjax
+-->
 
 # Algorithmes de tri
 
-HEIG-VD - ProgIM1 - 2024-2025
+<!--
+_class: lead
+_paginate: false
+-->
 
-V. Guidoux, avec l'aide de
-[GitHub Copilot](https://github.com/features/copilot).
+<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
 
-Ce travail est sous licence [CC BY-SA 4.0][licence].
+[Support de cours][cours] · [Présentation (web)][presentation-web] ·
+[Présentation (PDF)][presentation-pdf]
 
----
+<small>V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).</small>
+
+<small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
+
+![bg brightness:2 opacity:0.2][illustration-principale]
+
+## _Retrouvez plus de détails dans le support de cours_
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
 
 ## Objectifs
 
-À l'issue de ce module, vous serez capable de :
+À la fin de cette séance, vous devriez être capable de :
 
 - Comprendre et implémenter différents algorithmes de tri.
 - Analyser la complexité temporelle et spatiale des algorithmes de tri.
@@ -33,7 +52,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Choisir l'algorithme de tri approprié selon le contexte.
 - Comparer les performances de différents algorithmes de tri.
 
----
+![bg right:40%][illustration-objectifs]
 
 ## Pourquoi trier ?
 
@@ -52,8 +71,6 @@ Le tri est une opération fondamentale en informatique.
 - Organiser des contacts par nom.
 - Trier des produits par prix.
 
----
-
 ## Tri à bulles (Bubble Sort)
 
 ### Principe
@@ -68,8 +85,6 @@ mauvais ordre. Répéter jusqu'à ce que le tableau soit trié.
 ```
 
 **Complexité** : O(n²) dans le cas moyen et pire cas.
-
----
 
 ## Tri à bulles - Code
 
@@ -95,8 +110,6 @@ public static void bubbleSort(int[] array) {
 }
 ```
 
----
-
 ## Tri par sélection (Selection Sort)
 
 ### Principe
@@ -112,8 +125,6 @@ chaque position.
 ```
 
 **Complexité** : O(n²) dans tous les cas.
-
----
 
 ## Tri par sélection - Code
 
@@ -139,8 +150,6 @@ public static void selectionSort(int[] array) {
 }
 ```
 
----
-
 ## Tri par insertion (Insertion Sort)
 
 ### Principe
@@ -156,8 +165,6 @@ position correcte dans la partie déjà triée.
 [2, 5, 8, 1]  ← 8 déjà à sa place
 [1, 2, 5, 8]  ← Insérer 1 au début
 ```
-
----
 
 ## Tri par insertion - Code
 
@@ -182,8 +189,6 @@ public static void insertionSort(int[] array) {
 
 **Complexité** : O(n²) cas moyen, mais O(n) si presque trié !
 
----
-
 ## Comparaison des tris simples
 
 | Algorithme        | Meilleur cas | Cas moyen | Pire cas | Stable |
@@ -193,8 +198,6 @@ public static void insertionSort(int[] array) {
 | Tri par insertion | O(n)         | O(n²)     | O(n²)    | Oui    |
 
 **Usage** : Petites collections (< 50 éléments), données presque triées.
-
----
 
 ## Tri fusion (Merge Sort)
 
@@ -218,8 +221,6 @@ public static void insertionSort(int[] array) {
 [1, 2, 3, 5, 8, 9]
 ```
 
----
-
 ## Tri fusion - Complexité
 
 **Complexité** : O(n log n) dans tous les cas !
@@ -234,8 +235,6 @@ public static void insertionSort(int[] array) {
 
 - Tri à bulles : ≈ 1'000'000'000'000 opérations
 - Tri fusion : ≈ 20'000'000 opérations (50'000x plus rapide !)
-
----
 
 ## Tri rapide (Quick Sort)
 
@@ -254,8 +253,6 @@ public static void insertionSort(int[] array) {
 
 **Nom** : "Quick" car très rapide en pratique !
 
----
-
 ## Tri rapide - Complexité
 
 **Complexité** :
@@ -272,8 +269,6 @@ public static void insertionSort(int[] array) {
 **Usage** : Algorithme par défaut dans de nombreux langages, dont Java
 (`Arrays.sort()` pour les types primitifs).
 
----
-
 ## Comparaison complète
 
 | Algorithme        | Complexité   | Espace   | Stable | Usage principal                |
@@ -285,8 +280,6 @@ public static void insertionSort(int[] array) {
 | Tri rapide        | O(n log n)\* | O(log n) | Non    | Performance maximale           |
 
 \* Cas moyen, O(n²) pire cas
-
----
 
 ## Stabilité d'un tri
 
@@ -307,8 +300,6 @@ Charlie 25, Alice 25, Bob 30  ← Ordre inversé !
 
 **Importance** : Tri multi-critères (trier par âge puis par nom).
 
----
-
 ## Méthodes de tri en Java
 
 ### Arrays.sort()
@@ -323,8 +314,6 @@ Arrays.sort(numbers, 0, 3); // 3 premiers éléments
 ```
 
 **Algorithme** : Dual-Pivot Quicksort (variante optimisée).
-
----
 
 ## Collections.sort()
 
@@ -341,8 +330,6 @@ Collections.sort(list);
 **Algorithme** : Timsort (hybride fusion + insertion).
 
 **Caractéristiques** : Stable, O(n log n), adaptatif.
-
----
 
 ## Trier des objets
 
@@ -366,8 +353,6 @@ students.sort(Comparator.comparingInt((Student s) -> s.age)
                         .thenComparing(s -> s.name));
 ```
 
----
-
 ## Quand utiliser quel algorithme ?
 
 **Recommandation générale** : Utilisez `Arrays.sort()` ou `Collections.sort()`.
@@ -379,8 +364,6 @@ students.sort(Comparator.comparingInt((Student s) -> s.age)
 - **Stabilité requise** : Tri fusion ou `Collections.sort()`.
 - **Performance maximale** : Tri rapide ou `Arrays.sort()`.
 - **Apprentissage** : Tri à bulles (simple à comprendre).
-
----
 
 ## Optimisations possibles
 
@@ -396,8 +379,6 @@ students.sort(Comparator.comparingInt((Student s) -> s.age)
 
 **Détection de cas triés** : Arrêter si déjà trié.
 
----
-
 ## Exercices pratiques
 
 1. Implémenter les 3 tris simples.
@@ -408,44 +389,54 @@ students.sort(Comparator.comparingInt((Student s) -> s.age)
 
 **Conseil** : Visualisez les étapes pour mieux comprendre !
 
----
-
 ## À vous de jouer !
 
-Explorez les exemples de code et pratiquez avec les exercices.
+- (Re)lire le support de cours.
+- Explorer les exemples de code.
+- Faire les exercices.
+- Poser des questions si nécessaire.
 
-**Expérimentez :**
+**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
+propres exercices.**
 
-- Implémentez différents algorithmes de tri.
-- Comparez leurs performances.
-- Mesurez le temps d'exécution.
-- Testez la stabilité.
+![bg right:40%][illustration-a-vous-de-jouer]
 
-**Conseil** : Commencez par les tris simples avant de passer aux tris avancés.
+## Questions
 
----
+<!-- _class: lead -->
 
-## Questions ?
-
-N'hésitez pas à poser vos questions !
-
-**Ressources :**
-
-- Exemples de code dans le dossier `02-exemples-de-code/`
-- Exercices dans le dossier `03-exercices/`
-- Documentation Java sur Arrays et Collections
-
----
+Est-ce que vous avez des questions ?
 
 ## Sources
 
-- Oracle Java Documentation - Arrays :
-  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html
-- Oracle Java Documentation - Collections :
-  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html
+- [Oracle Java Documentation - Arrays](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html)
+- [Oracle Java Documentation - Collections](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html)
 - Introduction to Algorithms, Cormen et al.
 - Algorithms, 4th Edition, Sedgewick & Wayne
-- Timsort documentation : https://en.wikipedia.org/wiki/Timsort
+- [Timsort documentation](https://en.wikipedia.org/wiki/Timsort)
+- [Illustration objectifs][illustration-objectifs] par
+  [Aline de Nadai](https://unsplash.com/@alinedenadai) sur
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
+  [Nikita Kachanovsky](https://unsplash.com/@nkachanovskyyy) sur
+  [Unsplash](https://unsplash.com/photos/FJFPuE1MAOM)
 
-[licence]:
+<!-- URLs -->
+
+[presentation-web]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/index.html
+[presentation-pdf]:
+	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/09.01-algorithmes-de-tri-presentation.pdf
+[cours]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/09.01-algorithmes-de-tri/01-supports-de-cours
+[exercices]:
+	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/09.01-algorithmes-de-tri/03-exercices
+[license]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+
+<!-- Illustrations -->
+
+[illustration-objectifs]:
+	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
+[illustration-a-vous-de-jouer]:
+	https://images.unsplash.com/photo-1509198397868-475647b2a1e5?fit=crop&h=720
