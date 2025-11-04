@@ -593,21 +593,5 @@ Points clés à retenir :
 Dans les prochains cours, nous continuerons à utiliser ces bibliothèques pour
 créer des programmes plus sophistiqués.
 
-## Exemples de code
-
-Nous vous invitons maintenant à explorer les exemples de code pour mieux
-comprendre les concepts vus en classe.
-
-Vous trouverez les exemples de code ici :
-[Lien vers le contenu](../02-exemples-de-code/).
-
-## Exercices
-
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
-
-Vous trouverez les détails des exercices ici :
-[Lien vers le contenu](../03-exercices/README.md).
-
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

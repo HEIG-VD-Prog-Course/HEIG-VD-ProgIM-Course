@@ -43,8 +43,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Comparaison avec equals](#comparaison-avec-equals)
 - [Limites des tableaux](#limites-des-tableaux)
 - [Conclusion](#conclusion)
-- [Exemples de code](#exemples-de-code)
-- [Exercices](#exercices)
 
 ## Objectifs
 
@@ -283,25 +281,25 @@ Un tableau à deux dimensions peut représenter, par exemple, une grille de jeu,
 un planning hebdomadaire, ou une matrice mathématique :
 
 ```java
-// Matrice 3x3 représentant une grille de morpion
 String[][] grid = {
-    {"X", "O", "X"},
-    {"O", "X", "O"},
-    {"X", "O", "X"}
+    {"A0", "A1", "A2"},
+    {"B0", "B1", "B2"},
+    {"C0", "C1", "C2"}
 };
 
-// Accès à un élément : ligne 1, colonne 2
-String cell = grid[1][2];  // "O"
+String bTwo = grid[1][2];  // "B2"
+String cZero = grid[2][0];   // "C0"
+
+// grid[Ligne][Colonne]
 ```
 
 Visualisation de cette grille :
 
-```text
-  Col 0  Col 1  Col 2
-Row 0  X      O      X
-Row 1  O      X      O
-Row 2  X      O      X
-```
+|       | Col 0 | Col 1 | Col 2 |
+| ----- | ----- | ----- | ----- |
+| Row 0 | A0    | A1    | A2    |
+| Row 1 | B0    | B1    | B2    |
+| Row 2 | C0    | C1    | C2    |
 
 Déclaration avec taille spécifiée :
 
@@ -500,22 +498,6 @@ Points clés à retenir :
 Dans les prochains cours, nous explorerons des structures de données plus
 flexibles qui permettent de gérer des collections dont la taille peut varier
 dynamiquement.
-
-## Exemples de code
-
-Nous vous invitons maintenant à explorer les exemples de code pour mieux
-comprendre les concepts vus en classe.
-
-Vous trouverez les exemples de code ici :
-[Lien vers le contenu](../02-exemples-de-code/).
-
-## Exercices
-
-Nous vous invitons également à réaliser les exercices de cette session pour
-renforcer votre compréhension des concepts vus en classe.
-
-Vous trouverez les détails des exercices ici :
-[Lien vers le contenu](../03-exercices/README.md).
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
