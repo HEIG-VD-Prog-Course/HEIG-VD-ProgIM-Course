@@ -58,7 +58,11 @@ public class Main {
             placeToken(grid, columnIndex, currentPlayer);
 
             // Alterner les joueurs
-            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+            if (currentPlayer == 'X') {
+                currentPlayer = 'O';
+            } else {
+                currentPlayer = 'X';
+            }
 
             System.out.println();
         }

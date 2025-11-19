@@ -392,7 +392,12 @@ public class Main {
         // Affichage du bulletin
         System.out.println("Bulletin de la classe :");
         for (int i = 0; i < names.length; i++) {
-            String status = passed[i] ? "Réussi" : "Échoué";
+            String status;
+            if (passed[i]) {
+                status = "Réussi";
+            } else {
+                status = "Échoué";
+            }
             System.out.println(names[i] + " : " + grades[i] + " - " + status);
         }
 

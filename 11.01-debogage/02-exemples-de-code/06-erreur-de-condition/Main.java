@@ -114,7 +114,13 @@ public class Main {
 
         for (int value : values) {
             boolean valid = isInRange(value);
-            System.out.println(value + " est " + (valid ? "valide" : "invalide"));
+            String status;
+            if (valid) {
+                status = "valide";
+            } else {
+                status = "invalide";
+            }
+            System.out.println(value + " est " + status);
         }
 
         System.out.println();

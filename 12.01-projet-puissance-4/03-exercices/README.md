@@ -225,7 +225,7 @@ Implémentez une boucle de jeu qui :
 
 - Utilisez une boucle `while (true)`
 - Variable `char currentPlayer = 'X';`
-- Pour alterner : `currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';`
+- Pour alterner : utilisez un `if-else` pour changer entre 'X' et 'O'
 
 <details>
 <summary>Solution</summary>
@@ -270,7 +270,11 @@ public class ConnectFour {
             placeToken(grid, columnIndex, currentPlayer);
 
             // Alternance
-            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+            if (currentPlayer == 'X') {
+                currentPlayer = 'O';
+            } else {
+                currentPlayer = 'X';
+            }
 
             System.out.println();
         }
@@ -367,7 +371,11 @@ if (checkHorizontalWin(grid, currentPlayer)) {
     break;
 }
 
-currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+if (currentPlayer == 'X') {
+    currentPlayer = 'O';
+} else {
+    currentPlayer = 'X';
+}
 ```
 
 **Explication :**
@@ -572,7 +580,11 @@ if (isGridFull(grid)) {
     break;
 }
 
-currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+if (currentPlayer == 'X') {
+    currentPlayer = 'O';
+} else {
+    currentPlayer = 'X';
+}
 ```
 
 **Constantes recommandées :**

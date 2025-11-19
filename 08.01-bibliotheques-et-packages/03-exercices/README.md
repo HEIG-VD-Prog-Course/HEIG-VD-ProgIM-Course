@@ -718,7 +718,12 @@ class Book {
     }
 
     public String toFileLine() {
-        String dueDateStr = (dueDate != null) ? dueDate.toString() : "";
+        String dueDateStr;
+        if (dueDate != null) {
+            dueDateStr = dueDate.toString();
+        } else {
+            dueDateStr = "";
+        }
         return title + ";" + author + ";" + year + ";" + available + ";" + dueDateStr;
     }
 
@@ -739,7 +744,12 @@ class Book {
 
     @Override
     public String toString() {
-        String status = available ? "Disponible" : "Emprunté";
+        String status;
+        if (available) {
+            status = "Disponible";
+        } else {
+            status = "Emprunté";
+        }
         String info = String.format("%-30s | %-20s | %d | %s",
                 title, author, year, status);
 

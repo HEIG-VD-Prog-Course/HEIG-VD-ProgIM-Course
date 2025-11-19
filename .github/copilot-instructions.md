@@ -805,12 +805,24 @@ XX-example-name/
       theory
     - For formatted output, use `String.format()` combined with
       `System.out.println()`, or simple string concatenation
+    - **NEVER use ternary operators (`condition ? value1 : value2`)** - they are
+      too advanced for beginners and not taught in theory
+    - Always use explicit `if-else` statements for conditional assignments
     - Example:
+
       ```java
       System.out.println("=== Résultats ===");
       System.out.println("Montant total: " + total + " CHF");
       // OR for formatting:
       System.out.println(String.format("Montant total: %.2f CHF", total));
+
+      // For conditional values, use if-else:
+      String status;
+      if (condition) {
+          status = "valeur1";
+      } else {
+          status = "valeur2";
+      }
       ```
 
 11. **Error Handling**:

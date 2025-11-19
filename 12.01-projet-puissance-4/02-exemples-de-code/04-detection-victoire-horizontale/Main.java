@@ -53,7 +53,11 @@ public class Main {
                 break;
             }
 
-            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+            if (currentPlayer == 'X') {
+                currentPlayer = 'O';
+            } else {
+                currentPlayer = 'X';
+            }
             System.out.println();
         }
 

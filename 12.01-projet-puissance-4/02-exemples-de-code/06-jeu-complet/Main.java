@@ -89,7 +89,11 @@ public class Main {
             }
 
             // Alterner les joueurs
-            currentPlayer = (currentPlayer == PLAYER1) ? PLAYER2 : PLAYER1;
+            if (currentPlayer == PLAYER1) {
+                currentPlayer = PLAYER2;
+            } else {
+                currentPlayer = PLAYER1;
+            }
 
             System.out.println();
         }
