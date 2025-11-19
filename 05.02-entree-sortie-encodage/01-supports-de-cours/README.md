@@ -1,6 +1,6 @@
 # Cours 05.02 - Entrée, sortie et encodage
 
-## Ressources
+## Ressources annexes
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
@@ -14,7 +14,7 @@
 
 ## Table des matières
 
-- [Ressources](#ressources)
+- [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Qu'est-ce que l'entrée et la sortie ?](#quest-ce-que-lentrée-et-la-sortie-)

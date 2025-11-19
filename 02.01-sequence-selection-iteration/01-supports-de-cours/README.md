@@ -5,7 +5,7 @@ V. Guidoux, avec l'aide de
 
 Ce travail est sous licence [CC BY-SA 4.0][licence].
 
-## Ressources
+## Ressources annexes
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
@@ -18,7 +18,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Table des matières
 
-- [Ressources](#ressources)
+- [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Introduction](#introduction)

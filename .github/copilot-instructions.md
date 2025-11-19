@@ -82,11 +82,17 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ### File Structure
 
 - `XX.XX-topic/` folders contain course modules
-- `01-supports-de-cours/` contains presentation materials (PRESENTATION.md using
-  Marp)
+- `01-supports-de-cours/` contains:
+  - `README.md`: Complete, self-contained course material with all theoretical
+    content needed to achieve learning objectives
+  - `PRESENTATION.md`: Marp slides that introduce and motivate the topic (not
+    meant to be exhaustive)
+  - `images/`: PlantUML diagrams (`.plantuml` extension) and illustrations
 - `02-exemples-de-code/` contains runnable code examples (when applicable)
 - `03-exercices/` contains exercises (when applicable)
-- PlantUML diagrams are in `images/` folders with `.plantuml` extension
+
+**Important**: The `README.md` in `01-supports-de-cours/` must be comprehensive
+enough for students to learn independently without requiring external resources
 
 ### Root README Structure
 
@@ -329,6 +335,53 @@ paths in Markdown:
 - **License URL**:
   https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
 
+### Admonitions in Course Materials
+
+Course materials (README.md files in `01-supports-de-cours/`) can use
+GitHub-flavored admonitions to highlight important information. These are
+rendered as colored boxes on GitHub.
+
+**Available admonition types:**
+
+```markdown
+> [!NOTE] Highlights information that users should take into account, even when
+> skimming.
+
+> [!TIP] Optional information to help a user be more successful.
+
+> [!IMPORTANT] Crucial information necessary for users to succeed.
+
+> [!WARNING] Critical content demanding immediate user attention due to
+> potential risks.
+
+> [!CAUTION] Negative potential consequences of an action.
+```
+
+**Usage guidelines:**
+
+- Use sparingly - too many admonitions reduce their impact
+- Place them strategically near relevant content
+- Keep the text inside concise and action-oriented
+- Use NOTE for general information students should remember
+- Use TIP for optional enhancements or shortcuts
+- Use IMPORTANT for critical concepts required for success
+- Use WARNING for common mistakes or misunderstandings
+- Use CAUTION for dangerous operations or irreversible actions
+
+**Example in context:**
+
+```markdown
+### Type casting en Java
+
+La conversion entre types primitifs peut être implicite ou explicite.
+
+> [!IMPORTANT] Une conversion de type avec perte de précision (par exemple de
+> `double` vers `int`) nécessite un cast explicite.
+
+> [!WARNING] Un cast explicite peut entraîner une perte de données. Par exemple,
+> `(int) 3.9` donnera `3`, pas `4`.
+```
+
 ### Technical Specifications
 
 - **Markdown**: Use Prettier formatting (80 character ruler)
@@ -467,6 +520,78 @@ paths in Markdown:
   - Use `## Question X - Réponse` for single-slide answers
   - Use `## Question X - Réponse (1/2)` and `## Question X - Réponse (2/2)` when
     the answer needs multiple slides
+
+  #### Slide Content Density Guidelines
+
+  To ensure readability and prevent overcrowded slides, follow these rules:
+
+  **When to split a slide into multiple parts:**
+
+  - **Text-heavy slides**: If explanatory text exceeds ~150 words (excluding
+    code)
+  - **Mixed content**: When combining significant text (>100 words) AND code
+    examples
+  - **Long lists**: When bullet point lists exceed 8-10 items
+  - **Multiple code blocks**: When showing 2+ substantial code examples (>10
+    lines each)
+  - **Complex explanations**: When explaining 4+ distinct concepts on one slide
+
+  **Multi-part slide format:**
+
+  ```markdown
+  ## Title (1/n)
+
+  [First part of content]
+
+  ## Title (2/n)
+
+  [Second part of content]
+
+  ## Title (n/n)
+
+  [Final part of content]
+  ```
+
+  **Splitting strategies:**
+
+  - **Text + Code**: Put explanatory text on (1/2), code example on (2/2)
+  - **Long lists**: Group related items (e.g., 3-4 items per slide)
+  - **Before/After examples**: Split into separate slides with clear labels
+  - **Definitions**: One concept per slide when explaining vocabulary
+
+  **Visual balance considerations:**
+
+  - Code blocks are visually dense but take less vertical space than prose
+  - Aim for slides that fit comfortably without scrolling in 16:9 format
+  - Leave breathing room - not every slide needs to be full
+  - Use `![bg right:40%]` backgrounds judiciously to manage density
+
+  **Example of good splitting:**
+
+  ❌ **Too dense** (one slide):
+
+  ```markdown
+  ## Les types primitifs
+
+  [Long explanation paragraph] [8 types with descriptions] [Code example showing
+  all types] [When to use which type]
+  ```
+
+  ✅ **Well split** (3 slides):
+
+  ```markdown
+  ## Les types primitifs (1/3)
+
+  [4 integer types with descriptions]
+
+  ## Les types primitifs (2/3)
+
+  [2 floating types + boolean + char]
+
+  ## Les types primitifs (3/3)
+
+  [Code example showing all types]
+  ```
 
 - **PlantUML**: Render using local server at http://localhost:9090
   - Generate diagrams manually using `./build-all-plantuml-diagram.sh` script
