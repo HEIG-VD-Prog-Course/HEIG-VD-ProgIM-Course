@@ -45,6 +45,70 @@ This course follows key pedagogical principles:
 - Competency-based learning: mobilizing and combining resources to solve real
   problems
 
+### Sustainability Integration (HES-SO Requirement)
+
+The HES-SO requires all programs to integrate sustainability into their
+curricula by 2030. This course follows the transversal approach recommended by
+the HES-SO sustainability platform, where sustainability is woven into the
+profession being taught rather than added as a separate module.
+
+**Key principles for this programming course:**
+
+1. **Frequency**: Integrate sustainability 1-2 times across the entire course
+   (not in every chapter), through projects or specific modules that naturally
+   connect programming to ecological and social challenges
+
+2. **Approach**: Sustainability should be integrated **at the heart of what
+   we're teaching** - how programming can contribute to ecological transition
+   and social justice, not as a superficial add-on
+
+3. **Macro-competencies to develop** (adapted from UVED framework):
+
+   - **Systems thinking**: Understanding interconnections between technical
+     choices and their environmental/social impacts
+   - **Critical reflection**: Questioning the purpose and consequences of the
+     technologies we build
+   - **Problem analysis**: Identifying stakeholders and considering ecological
+     constraints in solution design
+   - **Positioning in debates**: Developing critical thinking about technology's
+     role in society
+
+4. **Concrete examples in programming context**:
+
+   - Energy efficiency of algorithms and resource optimization
+   - Digital sobriety and minimizing environmental footprint of software
+   - Accessibility and inclusion in software design
+   - Open source and knowledge commons as alternatives to proprietary models
+   - Technology at the service of ecological transition (environmental
+     monitoring, resource sharing, etc.)
+   - Questioning planned obsolescence and promoting repairability
+   - Local and decentralized solutions vs. centralized cloud infrastructure
+
+5. **Integration points**:
+
+   - **Projet libre** (free project): Encourage projects addressing social or
+     environmental challenges
+   - **Algorithm complexity**: Connect to energy consumption and resource
+     optimization
+   - **Data structures**: Discuss memory efficiency and sustainable software
+     design
+   - **File handling**: Environmental impact of data storage and transfer
+   - **Libraries and tools**: Open source philosophy and digital commons
+
+6. **Tone and framing**:
+   - Not moralizing or prescriptive
+   - Encouraging critical thinking and informed choices
+   - Showing that programming can be a lever for positive change
+   - Maintaining the "low-tech" and degrowth values already present in code
+     examples
+   - Inspiring without overwhelming ("nouveau monde" approach - modern but
+     sustainable, not "return to candles")
+
+**Implementation**: These sustainability elements should feel natural and
+integrated, not forced. They should enhance technical learning while opening
+perspectives on programming's role in building a more sustainable and just
+society.
+
 ## Guidelines
 
 ### General Instructions
