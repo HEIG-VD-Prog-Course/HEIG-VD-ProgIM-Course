@@ -49,19 +49,17 @@ This course follows key pedagogical principles:
 
 ### General Instructions
 
-1. **Language Style**: Use real-life, story-like language instead of programming
-   terms when creating examples or explanations
-2. **French Content**: Most content should be in French unless specifically
+1. **French Content**: Most content should be in French unless specifically
    working on code
-3. **Educational Focus**: Explanations should be clear, pedagogical, and
+2. **Educational Focus**: Explanations should be clear, pedagogical, and
    appropriate for beginner-level students
-4. **No Emojis**: Never use emojis in any course materials, presentations, or
+3. **No Emojis**: Never use emojis in any course materials, presentations, or
    exercises
-5. **Encourage exploration**: Guide students toward solutions without giving
+4. **Encourage exploration**: Guide students toward solutions without giving
    direct answers - "teach them to fish"
-6. **Real-world relevance**: Prefer practical, industry-relevant examples over
+5. **Real-world relevance**: Prefer practical, industry-relevant examples over
    purely academic ones
-7. **Respect student freedom**: Support diverse approaches and personal projects
+6. **Respect student freedom**: Support diverse approaches and personal projects
    that engage students
 
 ### Author Attribution
@@ -419,6 +417,8 @@ La conversion entre types primitifs peut être implicite ou explicite.
 
   - Use `theme: custom-marp-theme` (NOT `theme: default`)
   - NEVER use `<style>` tag with `@import url('.marp/theme.css')`
+  - NEVER use `:` in value without quotes (e.g., use
+    `title: "HEIG-VD ProgIM1 Course - [Topic]"`)
   - Set `headingDivider: 6` to auto-create slides from `##` headings
   - Use `[license]` (NOT `[licence]`) for consistency
 
