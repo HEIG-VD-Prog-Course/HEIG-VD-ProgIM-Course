@@ -55,12 +55,13 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [04](#-cours-04) | Java & Variables & Constantes                                                            |
 | [05](#-cours-05) | Fonctions, Entrée/sortie/encodage, Bonnes pratiques & Préparation au test                |
 | [06](#-cours-06) | Tableaux                                                                                 |
-| [07](#-cours-07) | Bibliothèques et packages                                                                |
-| [08](#-cours-08) | Algorithmes de parcours                                                                  |
-| [09](#-cours-09) | Algorithme de tris                                                                       |
-| [10](#-cours-10) | Débogage                                                                                 |
-| [11](#-cours-11) | Projet guidé - Puissance 4                                                               |
-| [12](#-cours-12) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen                      |
+| [07](#-cours-07) | Consolidation : Types, compilation et vocabulaire                                        |
+| [08](#-cours-08) | Bibliothèques et packages                                                                |
+| [09](#-cours-09) | Algorithmes de parcours                                                                  |
+| [10](#-cours-10) | Algorithme de tris                                                                       |
+| [11](#-cours-11) | Débogage                                                                                 |
+| [12](#-cours-12) | Projet guidé - Puissance 4                                                               |
+| [13](#-cours-13) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen                      |
 
 ## 🕐 Cours 01
 
@@ -190,73 +191,92 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕖 Cours 07
 
+### Consolidation : Types, compilation et vocabulaire
+
+- Supports de cours :
+  [Lien vers le contenu](./07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./07.01-consolidation-types-compilation-vocabulaire/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./07.01-consolidation-types-compilation-vocabulaire/03-exercices/README.md)
+
+## 🕗 Cours 08
+
 ### Bibliothèques et packages
 
 - Supports de cours :
-  [Lien vers le contenu](./07.01-bibliotheques-et-packages/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./08.01-bibliotheques-et-packages/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-bibliotheques-et-packages/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-bibliotheques-et-packages/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-bibliotheques-et-packages/01-supports-de-cours/07.01-bibliotheques-et-packages-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-bibliotheques-et-packages/01-supports-de-cours/08.01-bibliotheques-et-packages-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./07.01-bibliotheques-et-packages/02-exemples-de-code/)
+  [Lien vers le contenu](./08.01-bibliotheques-et-packages/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./07.01-bibliotheques-et-packages/03-exercices/README.md)
+  [Lien vers le contenu](./08.01-bibliotheques-et-packages/03-exercices/README.md)
 
-## 🕗 Cours 08
+## 🕘 Cours 09
 
 ### Algorithmes de parcours
 
 - Supports de cours :
-  [Lien vers le contenu](./08.01-algorithmes-de-parcours/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./09.01-algorithmes-de-parcours/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-parcours/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-algorithmes-de-parcours/01-supports-de-cours/08.01-algorithmes-de-parcours-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-parcours/01-supports-de-cours/09.01-algorithmes-de-parcours-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./08.01-algorithmes-de-parcours/02-exemples-de-code/)
+  [Lien vers le contenu](./09.01-algorithmes-de-parcours/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./08.01-algorithmes-de-parcours/03-exercices/README.md)
+  [Lien vers le contenu](./09.01-algorithmes-de-parcours/03-exercices/README.md)
 
-## 🕘 Cours 09
+## 🕙 Cours 10
 
 ### Algorithmes de tri
 
 - Supports de cours :
-  [Lien vers le contenu](./09.01-algorithmes-de-tri/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./10.01-algorithmes-de-tri/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-algorithmes-de-tri/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-tri/01-supports-de-cours/09.01-algorithmes-de-tri-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-algorithmes-de-tri/01-supports-de-cours/10.01-algorithmes-de-tri-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./09.01-algorithmes-de-tri/02-exemples-de-code/)
+  [Lien vers le contenu](./10.01-algorithmes-de-tri/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./09.01-algorithmes-de-tri/03-exercices/README.md)
+  [Lien vers le contenu](./10.01-algorithmes-de-tri/03-exercices/README.md)
 
-## 🕙 Cours 10
+## 🕚 Cours 11
 
 ### Débogage
 
 - Supports de cours :
-  [Lien vers le contenu](./10.01-debogage/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/index.html)
+  [Lien vers le contenu](./11.01-debogage/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-debogage/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-debogage/01-supports-de-cours/10.01-debogage-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-debogage/01-supports-de-cours/11.01-debogage-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./10.01-debogage/02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](./10.01-debogage/03-exercices/README.md)
+  [Lien vers le contenu](./11.01-debogage/02-exemples-de-code/)
+- Exercices : [Lien vers le contenu](./11.01-debogage/03-exercices/README.md)
 
-## 🕚 Cours 11
+## 🕛 Cours 12
 
 ### Projet guidé - Puissance 4
 
 - Supports de cours :
-  [Lien vers le contenu](./11.01-projet-puissance-4/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./12.01-projet-puissance-4/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-projet-puissance-4/01-supports-de-cours/11.01-projet-puissance-4-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/12.01-projet-puissance-4-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./11.01-projet-puissance-4/02-exemples-de-code/)
+  [Lien vers le contenu](./12.01-projet-puissance-4/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./11.01-projet-puissance-4/03-exercices/README.md)
+  [Lien vers le contenu](./12.01-projet-puissance-4/03-exercices/README.md)
+
+## 🕐 Cours 13
+
+### Récapitulatif de l'unité d'enseignement avec préparation à l'examen

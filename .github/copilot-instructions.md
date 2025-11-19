@@ -82,11 +82,17 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ### File Structure
 
 - `XX.XX-topic/` folders contain course modules
-- `01-supports-de-cours/` contains presentation materials (PRESENTATION.md using
-  Marp)
+- `01-supports-de-cours/` contains:
+  - `README.md`: Complete, self-contained course material with all theoretical
+    content needed to achieve learning objectives
+  - `PRESENTATION.md`: Marp slides that introduce and motivate the topic (not
+    meant to be exhaustive)
+  - `images/`: PlantUML diagrams (`.plantuml` extension) and illustrations
 - `02-exemples-de-code/` contains runnable code examples (when applicable)
 - `03-exercices/` contains exercises (when applicable)
-- PlantUML diagrams are in `images/` folders with `.plantuml` extension
+
+**Important**: The `README.md` in `01-supports-de-cours/` must be comprehensive
+enough for students to learn independently without requiring external resources
 
 ### Root README Structure
 
@@ -328,6 +334,53 @@ paths in Markdown:
 - **License**: CC BY-SA 4.0
 - **License URL**:
   https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+
+### Admonitions in Course Materials
+
+Course materials (README.md files in `01-supports-de-cours/`) can use
+GitHub-flavored admonitions to highlight important information. These are
+rendered as colored boxes on GitHub.
+
+**Available admonition types:**
+
+```markdown
+> [!NOTE] Highlights information that users should take into account, even when
+> skimming.
+
+> [!TIP] Optional information to help a user be more successful.
+
+> [!IMPORTANT] Crucial information necessary for users to succeed.
+
+> [!WARNING] Critical content demanding immediate user attention due to
+> potential risks.
+
+> [!CAUTION] Negative potential consequences of an action.
+```
+
+**Usage guidelines:**
+
+- Use sparingly - too many admonitions reduce their impact
+- Place them strategically near relevant content
+- Keep the text inside concise and action-oriented
+- Use NOTE for general information students should remember
+- Use TIP for optional enhancements or shortcuts
+- Use IMPORTANT for critical concepts required for success
+- Use WARNING for common mistakes or misunderstandings
+- Use CAUTION for dangerous operations or irreversible actions
+
+**Example in context:**
+
+```markdown
+### Type casting en Java
+
+La conversion entre types primitifs peut être implicite ou explicite.
+
+> [!IMPORTANT] Une conversion de type avec perte de précision (par exemple de
+> `double` vers `int`) nécessite un cast explicite.
+
+> [!WARNING] Un cast explicite peut entraîner une perte de données. Par exemple,
+> `(int) 3.9` donnera `3`, pas `4`.
+```
 
 ### Technical Specifications
 
