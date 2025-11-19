@@ -47,9 +47,6 @@ Les détails de chaque cours composant l'unité d'enseignement sont disponibles
 ci-dessous. Chaque cours est détaillée avec les contenus, les objectifs, les
 méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
-Les dates sont tirées du
-[calendrier académique HEIG-VD](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
-
 |            Cours | Contenu                                                                                  |
 | ---------------: | :--------------------------------------------------------------------------------------- |
 | [01](#-cours-01) | Modalités de l'unité d'enseignement & Introduction à la programmation et aux algorithmes |
