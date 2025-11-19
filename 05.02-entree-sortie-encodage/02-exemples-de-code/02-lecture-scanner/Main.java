@@ -38,7 +38,7 @@ public class Main {
         // ========================================
         System.out.print("Entrez votre taille (en mètres, ex: 1.75) : ");
         double height = scanner.nextDouble();
-        System.out.printf("Votre taille est %.2f m%n", height);
+        System.out.println("Votre taille est " + height + " m");
         System.out.println();
 
         // ATTENTION : après nextInt() ou nextDouble(), il reste un '\n'
@@ -66,8 +66,9 @@ public class Main {
         double sum = number1 + number2;
         double product = number1 * number2;
 
-        System.out.printf("%n%.2f + %.2f = %.2f%n", number1, number2, sum);
-        System.out.printf("%.2f × %.2f = %.2f%n", number1, number2, product);
+        System.out.println();
+        System.out.println(number1 + " + " + number2 + " = " + sum);
+        System.out.println(number1 + " × " + number2 + " = " + product);
 
         // ========================================
         // Fermeture du Scanner (bonne pratique)

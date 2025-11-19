@@ -70,7 +70,7 @@ public class Main {
             double percentage = Calculator.percentage(
                     found.getTotalValue(),
                     inventory.getTotalInventoryValue());
-            System.out.printf("Représente %.1f%% de la valeur totale%n", percentage);
+            System.out.println("Représente " + percentage + "% de la valeur totale");
         } else {
             System.out.println("Produit non trouvé : " + searchName);
         }

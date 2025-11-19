@@ -61,10 +61,10 @@ public class Main {
      */
     private static void displayInventory(String[] names, int[] quantities, double[] prices) {
         System.out.println("----------------------------------------");
-        System.out.printf("%-15s %10s %10s%n", "Produit", "Quantité", "Prix (CHF)");
+        System.out.println(String.format("%-15s %10s %10s", "Produit", "Quantité", "Prix (CHF)"));
         System.out.println("----------------------------------------");
         for (int i = 0; i < names.length; i++) {
-            System.out.printf("%-15s %10d %10.2f%n", names[i], quantities[i], prices[i]);
+            System.out.println(String.format("%-15s %10d %10.2f", names[i], quantities[i], prices[i]));
         }
         System.out.println("----------------------------------------");
     }

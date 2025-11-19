@@ -33,7 +33,7 @@ public class Main {
     public static boolean askQuestion(Scanner scanner, int questionNumber,
             String question, String correctAnswer) {
         System.out.println("╔════════════════════════════════════════════╗");
-        System.out.printf("║  QUESTION %d                                ║%n", questionNumber);
+        System.out.println("║  QUESTION " + questionNumber + "                                ║");
         System.out.println("╚════════════════════════════════════════════╝");
         System.out.println(question);
         System.out.print("\nVotre réponse : ");
@@ -61,7 +61,7 @@ public class Main {
         System.out.println("\n╔═══════════════════════════════════════╗");
         System.out.println("║          RÉSULTAT FINAL               ║");
         System.out.println("╚═══════════════════════════════════════╝");
-        System.out.printf("Score : %d / %d (%.1f%%)%n", score, totalQuestions, percentage);
+        System.out.println("Score : " + score + " / " + totalQuestions + " (" + percentage + "%)");
 
         // Feedback selon le score
         if (percentage >= 80) {

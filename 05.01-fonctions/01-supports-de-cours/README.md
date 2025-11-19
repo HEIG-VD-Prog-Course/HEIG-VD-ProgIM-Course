@@ -457,7 +457,7 @@ public class Main {
 
     // Paramètre décimal
     public static void afficherPrix(double prix) {
-        System.out.printf("Prix : %.2f CHF%n", prix);
+        System.out.println("Prix : " + prix + " CHF");
     }
 
     // Paramètre booléen

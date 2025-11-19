@@ -67,7 +67,7 @@ public class Main {
         int sum = calculateSum(matrix);
         double average = (double) sum / (matrix.length * matrix[0].length);
         System.out.println("Somme totale : " + sum);
-        System.out.printf("Moyenne : %.2f%n", average);
+        System.out.println("Moyenne : " + average);
 
         System.out.println("\n=== Fin de l'exemple ===");
     }
@@ -80,7 +80,7 @@ public class Main {
     public static void displayMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.printf("%3d ", matrix[i][j]);
+                System.out.print(String.format("%3d ", matrix[i][j]));
             }
             System.out.println();
         }

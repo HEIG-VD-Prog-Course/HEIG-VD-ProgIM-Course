@@ -27,8 +27,8 @@ public class Main {
 
         // Calcul de l'âge avec Period
         Period age = Period.between(birthday, today);
-        System.out.printf("Âge : %d ans, %d mois, %d jours%n",
-                age.getYears(), age.getMonths(), age.getDays());
+        System.out.println("Âge : " + age.getYears() + " ans, " + 
+                age.getMonths() + " mois, " + age.getDays() + " jours");
 
         // Ajouter et soustraire des dates
         LocalDate nextWeek = today.plusWeeks(1);
@@ -75,8 +75,8 @@ public class Main {
 
         if (today.isBefore(deadline)) {
             Period remaining = Period.between(today, deadline);
-            System.out.printf("Il reste %d jours avant l'échéance%n",
-                    remaining.getDays() + remaining.getMonths() * 30);
+            int totalDays = remaining.getDays() + remaining.getMonths() * 30;
+            System.out.println("Il reste " + totalDays + " jours avant l'échéance");
         }
 
         // Jours de la semaine

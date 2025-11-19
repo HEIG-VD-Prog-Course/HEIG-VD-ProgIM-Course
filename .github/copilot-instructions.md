@@ -731,10 +731,16 @@ XX-example-name/
     - Use `System.out.println()` for simple output demonstrations
     - Use `Scanner` for console input when needed
     - Format output clearly for students to understand results
+    - **NEVER use `System.out.printf()`** - it is not taught in the course
+      theory
+    - For formatted output, use `String.format()` combined with
+      `System.out.println()`, or simple string concatenation
     - Example:
       ```java
       System.out.println("=== Résultats ===");
-      System.out.printf("Montant total: %.2f CHF%n", total);
+      System.out.println("Montant total: " + total + " CHF");
+      // OR for formatting:
+      System.out.println(String.format("Montant total: %.2f CHF", total));
       ```
 
 11. **Error Handling**:

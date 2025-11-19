@@ -64,7 +64,7 @@ public class Main {
                     System.out.print("\nEntrez la température en Celsius : ");
                     double celsius = scanner.nextDouble();
                     double fahrenheit = celsiusToFahrenheit(celsius);
-                    System.out.printf("%.2f°C = %.2f°F%n", celsius, fahrenheit);
+                    System.out.println(celsius + "°C = " + fahrenheit + "°F");
                     break;
 
                 case 2:
@@ -72,7 +72,7 @@ public class Main {
                     System.out.print("\nEntrez la température en Fahrenheit : ");
                     double fahrenheitInput = scanner.nextDouble();
                     double celsiusResult = fahrenheitToCelsius(fahrenheitInput);
-                    System.out.printf("%.2f°F = %.2f°C%n", fahrenheitInput, celsiusResult);
+                    System.out.println(fahrenheitInput + "°F = " + celsiusResult + "°C");
                     break;
 
                 case 3:
