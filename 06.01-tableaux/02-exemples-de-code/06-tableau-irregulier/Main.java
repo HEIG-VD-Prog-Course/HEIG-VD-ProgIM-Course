@@ -47,7 +47,7 @@ public class Main {
             totalDays += weeklyHours[week].length;
         }
         double averageHours = (double) grandTotal / totalDays;
-        System.out.printf("Moyenne par jour : %.2f heures%n", averageHours);
+        System.out.println("Moyenne par jour : " + averageHours + " heures");
 
         // Exemple avec des notes d'étudiants (nombre variable de notes par étudiant)
         System.out.println("\n--- Notes des étudiants ---\n");
@@ -65,10 +65,8 @@ public class Main {
                 sum += studentGrades[student][grade];
             }
             double average = sum / studentGrades[student].length;
-            System.out.printf("Étudiant %d (%d notes) : %.2f%n",
-                    (student + 1),
-                    studentGrades[student].length,
-                    average);
+            System.out.println("Étudiant " + (student + 1) + " (" + 
+                    studentGrades[student].length + " notes) : " + average);
         }
 
         System.out.println("\n=== Fin de l'exemple ===");

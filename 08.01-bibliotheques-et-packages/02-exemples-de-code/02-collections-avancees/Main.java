@@ -25,7 +25,7 @@ public class Main {
 
         System.out.println("Notes des étudiants :");
         for (String name : grades.keySet()) {
-            System.out.printf("- %s : %.1f%n", name, grades.get(name));
+            System.out.println("- " + name + " : " + grades.get(name));
         }
 
         // Calcul de la moyenne
@@ -34,7 +34,8 @@ public class Main {
             sum += grade;
         }
         double average = sum / grades.size();
-        System.out.printf("%nMoyenne de la classe : %.2f%n", average);
+        System.out.println();
+        System.out.println("Moyenne de la classe : " + average);
 
         // Utilisation de Random pour simuler des lancers de dés
         Random random = new Random();

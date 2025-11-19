@@ -111,7 +111,7 @@ public class Main {
                 String name = parts[0];
                 double grade = Double.parseDouble(parts[1]);
 
-                System.out.printf("%-10s : %.1f%n", name, grade);
+                System.out.println(String.format("%-10s : %.1f", name, grade));
 
                 // Calculs statistiques
                 sum += grade;
@@ -130,10 +130,10 @@ public class Main {
         if (count > 0) {
             double average = sum / count;
             System.out.println("\n--- Statistiques ---");
-            System.out.printf("Nombre d'étudiants : %d%n", count);
-            System.out.printf("Moyenne : %.2f%n", average);
-            System.out.printf("Note minimale : %.1f%n", min);
-            System.out.printf("Note maximale : %.1f%n", max);
+            System.out.println("Nombre d'étudiants : " + count);
+            System.out.println("Moyenne : " + average);
+            System.out.println("Note minimale : " + min);
+            System.out.println("Note maximale : " + max);
         }
     }
 }

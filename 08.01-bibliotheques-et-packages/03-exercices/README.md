@@ -173,8 +173,8 @@ public class GuessNumber {
         int optimalAttempts = 7;
         double efficiency = ((double) optimalAttempts / attempts) * 100;
 
-        System.out.printf("Nombre optimal : %d%n", optimalAttempts);
-        System.out.printf("Efficacité : %.1f%%%n", efficiency);
+        System.out.println("Nombre optimal : " + optimalAttempts);
+        System.out.println("Efficacité : " + efficiency + "%");
 
         if (attempts <= optimalAttempts) {
             System.out.println("Excellent ! Vous avez été très efficace.");
@@ -294,8 +294,7 @@ public class EventManager {
 
             System.out.println("\n=== Prochain événement ===");
             System.out.println(nextEvent);
-            System.out.printf("Dans %d jours, %d heures et %d minutes%n",
-                    days, hours, minutes);
+            System.out.println("Dans " + days + " jours, " + hours + " heures et " + minutes + " minutes");
         } else {
             System.out.println("\nAucun événement à venir.");
         }

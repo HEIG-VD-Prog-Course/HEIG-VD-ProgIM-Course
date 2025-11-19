@@ -455,7 +455,7 @@ public class GridSearch {
     public static void displayGrid(int[][] grid) {
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
-                System.out.printf("%4d ", grid[i][j]);
+                System.out.print(String.format("%4d ", grid[i][j]));
             }
             System.out.println();
         }
@@ -613,7 +613,7 @@ public class PerformanceComparison {
         // Comparaison
         System.out.println("\n--- Résultat ---");
         double speedup = (double) linearTime / binaryTime;
-        System.out.printf("La recherche binaire est %.2fx plus rapide%n", speedup);
+        System.out.println("La recherche binaire est " + speedup + "x plus rapide");
 
         // Test avec Arrays.binarySearch (méthode native)
         System.out.println("\n--- Arrays.binarySearch() (méthode Java native) ---");
@@ -628,8 +628,8 @@ public class PerformanceComparison {
 
         System.out.println("Temps total : " + (nativeTime / 1_000_000) + " ms");
         double nativeSpeedup = (double) binaryTime / nativeTime;
-        System.out.printf("La méthode native est %.2fx plus rapide que notre implémentation%n",
-                nativeSpeedup);
+        System.out.println("La méthode native est " + nativeSpeedup +
+                "x plus rapide que notre implémentation");
     }
 
     /**

@@ -328,7 +328,7 @@ public class Main {
         System.out.println("Table de multiplication :");
         for (int row = 0; row < table.length; row++) {
             for (int col = 0; col < table[row].length; col++) {
-                System.out.printf("%4d", table[row][col]);
+                System.out.print(String.format("%4d", table[row][col]));
             }
             System.out.println();
         }

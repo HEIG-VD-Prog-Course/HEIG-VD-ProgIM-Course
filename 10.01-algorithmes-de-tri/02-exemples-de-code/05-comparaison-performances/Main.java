@@ -70,7 +70,7 @@ public class Main {
         if (size <= 5000) {
             int[] array = original.clone();
             long time = measureTime(() -> bubbleSort(array));
-            System.out.printf("Tri à bulles      : %6d ms\n", time);
+            System.out.println(String.format("Tri à bulles      : %6d ms", time));
         } else {
             System.out.println("Tri à bulles      : (ignoré - trop lent pour cette taille)");
         }
@@ -79,7 +79,7 @@ public class Main {
         if (size <= 5000) {
             int[] array = original.clone();
             long time = measureTime(() -> selectionSort(array));
-            System.out.printf("Tri par sélection : %6d ms\n", time);
+            System.out.println(String.format("Tri par sélection : %6d ms", time));
         } else {
             System.out.println("Tri par sélection : (ignoré - trop lent pour cette taille)");
         }
@@ -87,17 +87,17 @@ public class Main {
         // Test Tri par insertion
         int[] array1 = original.clone();
         long time = measureTime(() -> insertionSort(array1));
-        System.out.printf("Tri par insertion : %6d ms\n", time);
+        System.out.println(String.format("Tri par insertion : %6d ms", time));
 
         // Test Tri fusion
         int[] array2 = original.clone();
         time = measureTime(() -> mergeSort(array2));
-        System.out.printf("Tri fusion        : %6d ms\n", time);
+        System.out.println(String.format("Tri fusion        : %6d ms", time));
 
         // Test Arrays.sort() (référence)
         int[] array3 = original.clone();
         time = measureTime(() -> Arrays.sort(array3));
-        System.out.printf("Arrays.sort()     : %6d ms (référence Java)\n", time);
+        System.out.println(String.format("Arrays.sort()     : %6d ms (référence Java)", time));
     }
 
     /**
@@ -128,12 +128,12 @@ public class Main {
         // Test Tri par insertion (adaptatif)
         int[] array1 = original.clone();
         long time = measureTime(() -> insertionSort(array1));
-        System.out.printf("Tri par insertion : %6d ms (TRÈS EFFICACE)\n", time);
+        System.out.println(String.format("Tri par insertion : %6d ms (TRÈS EFFICACE)", time));
 
         // Test Tri fusion (non adaptatif)
         int[] array2 = original.clone();
         time = measureTime(() -> mergeSort(array2));
-        System.out.printf("Tri fusion        : %6d ms\n", time);
+        System.out.println(String.format("Tri fusion        : %6d ms", time));
         System.out.println("\n→ Le tri par insertion est très performant sur");
         System.out.println("  des données presque triées (adaptatif) !");
     }

@@ -88,7 +88,7 @@ public class Main {
     private static void displayMatrix(int[][] matrix) {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
-                System.out.printf("%4d", matrix[row][col]);
+                System.out.print(String.format("%4d", matrix[row][col]));
             }
             System.out.println();
         }
