@@ -715,16 +715,22 @@ XX-example-name/
      }
      ```
 
-9. **Real-World Scenarios**: Use relatable examples:
+9. **Real-World Scenarios**: Use relatable examples with ecological and low-tech
+   values:
 
-   - Bank account management
    - Student grade systems
-   - Library book management
-   - E-commerce shopping carts
-   - Task/Todo managers
-   - Game scores and leaderboards
-   - Event calendars
-   - Contact directories
+   - Library book management and sharing
+   - Community resource sharing (tool libraries, repair cafés)
+   - Local food networks and permaculture planning
+   - Public transport and bike-sharing systems
+   - Energy consumption tracking and reduction
+   - Waste reduction and composting management
+   - Community event planning and local initiatives
+   - Repair tracking (fixing instead of buying new)
+   - Second-hand exchange platforms
+
+   **Avoid**: E-commerce, banking with interest, mass consumption scenarios,
+   car-centric examples, growth-focused metrics
 
 10. **Input/Output Patterns**:
 
