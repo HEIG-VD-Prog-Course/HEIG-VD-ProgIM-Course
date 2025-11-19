@@ -8,7 +8,7 @@ V. Guidoux, avec l'aide de GitHub Copilot
 
 Ce travail est sous licence [CC BY-SA 4.0][license].
 
-## Ressources
+## Ressources annexes
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
@@ -21,7 +21,7 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
 
 ## Table des matières
 
-- [Ressources](#ressources)
+- [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
 - [Introduction](#introduction)
 - [Format du test](#format-du-test)

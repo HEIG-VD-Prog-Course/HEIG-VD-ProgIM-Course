@@ -521,6 +521,72 @@ La conversion entre types primitifs peut être implicite ou explicite.
   - Use `## Question X - Réponse (1/2)` and `## Question X - Réponse (2/2)` when
     the answer needs multiple slides
 
+  #### Slide Content Density Guidelines
+
+  To ensure readability and prevent overcrowded slides, follow these rules:
+
+  **When to split a slide into multiple parts:**
+  
+  - **Text-heavy slides**: If explanatory text exceeds ~150 words (excluding code)
+  - **Mixed content**: When combining significant text (>100 words) AND code examples
+  - **Long lists**: When bullet point lists exceed 8-10 items
+  - **Multiple code blocks**: When showing 2+ substantial code examples (>10 lines each)
+  - **Complex explanations**: When explaining 4+ distinct concepts on one slide
+  
+  **Multi-part slide format:**
+  
+  ```markdown
+  ## Title (1/n)
+  
+  [First part of content]
+  
+  ## Title (2/n)
+  
+  [Second part of content]
+  
+  ## Title (n/n)
+  
+  [Final part of content]
+  ```
+  
+  **Splitting strategies:**
+  
+  - **Text + Code**: Put explanatory text on (1/2), code example on (2/2)
+  - **Long lists**: Group related items (e.g., 3-4 items per slide)
+  - **Before/After examples**: Split into separate slides with clear labels
+  - **Definitions**: One concept per slide when explaining vocabulary
+  
+  **Visual balance considerations:**
+  
+  - Code blocks are visually dense but take less vertical space than prose
+  - Aim for slides that fit comfortably without scrolling in 16:9 format
+  - Leave breathing room - not every slide needs to be full
+  - Use `![bg right:40%]` backgrounds judiciously to manage density
+  
+  **Example of good splitting:**
+  
+  ❌ **Too dense** (one slide):
+  ```markdown
+  ## Les types primitifs
+  
+  [Long explanation paragraph]
+  [8 types with descriptions]
+  [Code example showing all types]
+  [When to use which type]
+  ```
+  
+  ✅ **Well split** (3 slides):
+  ```markdown
+  ## Les types primitifs (1/3)
+  [4 integer types with descriptions]
+  
+  ## Les types primitifs (2/3)
+  [2 floating types + boolean + char]
+  
+  ## Les types primitifs (3/3)
+  [Code example showing all types]
+  ```
+
 - **PlantUML**: Render using local server at http://localhost:9090
   - Generate diagrams manually using `./build-all-plantuml-diagram.sh` script
 

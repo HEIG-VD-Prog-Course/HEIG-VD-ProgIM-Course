@@ -7,19 +7,21 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
-title: HEIG-VD ProgIM1 Course - Consolidation : Types, compilation et vocabulaire
+title: "HEIG-VD ProgIM1 Course - Consolidation : Types, compilation et vocabulaire"
 description: Consolidation des connaissances sur les types, la compilation et le vocabulaire technique pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
 url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html
 header: "**Consolidation : Types, compilation et vocabulaire**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
-headingDivider: 6
+headingDivider: 2
 math: mathjax
 -->
 
-<!-- _class: lead -->
-<!-- _paginate: false -->
-
 # Consolidation : Types, compilation et vocabulaire
+
+<!--
+_class: lead
+_paginate: false
+-->
 
 Révision et approfondissement des bases
 
@@ -33,29 +35,41 @@ Ce travail est sous licence [CC BY-SA 4.0][license]
 
 [Présentation (web)][presentation-web] · [Présentation (PDF)][presentation-pdf]
 
-![bg right:40%][illustration-principale]
-
 <!-- _class: lead -->
 
 Retrouvez plus de détails dans le [support de cours][cours].
 
 Consultez également les [exercices][exercices].
 
-## Objectifs
+## Objectifs (1/3)
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Nommer et utiliser les 8 types primitifs de Java
 - Expliquer pourquoi les nombres à virgule flottante ont une précision limitée
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/3)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Compiler et exécuter un programme Java en ligne de commande
 - Passer des arguments à un programme via la ligne de commande
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (3/3)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Expliquer le rôle minimal d'une classe en Java
 - Utiliser le vocabulaire technique précis
 - Comprendre le rôle d'un IDE et ses limites
 
 ![bg right:40%][illustration-objectifs]
 
-## Les huit types primitifs de Java
+## Les huit types primitifs de Java (1/3)
 
 Java propose **8 types primitifs** répartis en 4 catégories :
 
@@ -66,6 +80,8 @@ Java propose **8 types primitifs** répartis en 4 catégories :
 - `int` : -2 147 483 648 à 2 147 483 647 (32 bits) ← **le plus courant**
 - `long` : très grand nombre (64 bits) ← nécessite suffixe `L`
 
+## Les huit types primitifs de Java (2/3)
+
 **Types à virgule flottante** (2 types)
 
 - `float` : précision simple (32 bits) ← nécessite suffixe `f`
@@ -74,6 +90,8 @@ Java propose **8 types primitifs** répartis en 4 catégories :
 **Type booléen** (1 type)
 
 - `boolean` : `true` ou `false`
+
+## Les huit types primitifs de Java (3/3)
 
 **Type caractère** (1 type)
 
@@ -104,13 +122,15 @@ public class AllPrimitiveTypes {
 }
 ```
 
-## Quand utiliser quel type ?
+## Quand utiliser quel type ? (1/3)
 
 **Pour les nombres entiers :**
 
 - `int` : **par défaut** pour tous les entiers courants
 - `long` : pour les très grandes valeurs (temps en millisecondes, identifiants)
 - `byte` et `short` : rarement utilisés (optimisation mémoire dans certains cas)
+
+## Quand utiliser quel type ? (2/3)
 
 **Pour les nombres décimaux :**
 
@@ -122,11 +142,11 @@ public class AllPrimitiveTypes {
 - `boolean` : pour les conditions (true/false)
 - `char` : pour un seul caractère (préférer `String` pour du texte)
 
+## Quand utiliser quel type ? (3/3)
+
 **Conseil** : Utilisez `int` et `double` dans 95% des cas !
 
 ## Pourquoi 0.1 + 0.2 ≠ 0.3 ?
-
-Testons ce code :
 
 ```java
 public class FloatingPointProblem {
@@ -138,15 +158,10 @@ public class FloatingPointProblem {
 }
 ```
 
-**Pourquoi ?**
-
-Les nombres à virgule flottante sont stockés en **base 2** (binaire), pas en
-base 10.
-
-Certains nombres décimaux simples en base 10 deviennent des nombres infinis en
-base 2 !
-
-C'est comme essayer d'écrire 1/3 en décimal : 0.333333... (infini)
+**Pourquoi ?** : Les nombres à virgule flottante sont stockés en **base 2**
+(binaire), pas en base 10. Certains nombres décimaux simples en base 10
+deviennent des nombres infinis en base 2 ! C'est comme essayer d'écrire 1/3 en
+décimal : 0.333333... (infini)
 
 ## Standard IEEE 754
 
@@ -160,6 +175,8 @@ Les types `float` et `double` suivent la **norme IEEE 754** :
 - `float` : environ 7 chiffres significatifs
 - `double` : environ 15 chiffres significatifs
 
+## Comparaison des nombres à virgule flottante
+
 **Leçon importante** : Ne jamais comparer des `double` avec `==` !
 
 ```java
@@ -171,10 +188,7 @@ double epsilon = 0.0001;
 if (Math.abs(result - 0.3) < epsilon) { ... }
 ```
 
-## Solution pour les calculs financiers
-
-Pour les calculs nécessitant une **précision exacte** (argent, finances),
-utilisez `BigDecimal` :
+## Solution pour les calculs financiers (exactes)
 
 ```java
 import java.math.BigDecimal;
@@ -190,6 +204,8 @@ public class PreciseCalculation {
     }
 }
 ```
+
+---
 
 **Note** : Nous verrons `BigDecimal` plus en détail dans un cours futur.
 
@@ -211,13 +227,13 @@ Main.class  ──java──>  Résultat
 (bytecode)             (à l'écran)
 ```
 
+## Compilation et exécution : résumé (1/2)
+
 **Important** : Votre IDE (VS Code, IntelliJ) fait ces étapes automatiquement !
 
 Mais comprendre ce qu'il fait "sous le capot" est essentiel.
 
 ## Compiler en ligne de commande
-
-Créons un fichier `Hello.java` :
 
 ```java
 public class Hello {
@@ -235,6 +251,8 @@ javac Hello.java
 
 Cela crée un fichier `Hello.class` (bytecode).
 
+## Compilation et exécution : résumé (2/2)
+
 **Exécution** :
 
 ```bash
@@ -243,7 +261,7 @@ java Hello
 
 Affiche : `Bonjour depuis la ligne de commande !`
 
-## Passer des arguments au programme
+## Passer des arguments au programme (1/2)
 
 La méthode `main` reçoit un tableau `String[] args` :
 
@@ -259,6 +277,8 @@ public class Greeting {
 }
 ```
 
+## Passer des arguments au programme (2/2)
+
 **Compilation** :
 
 ```bash
@@ -273,7 +293,7 @@ java Greeting Bob      # Affiche : Bonjour, Bob !
 java Greeting          # Affiche : Bonjour, inconnu !
 ```
 
-## Pourquoi `String[] args` ?
+## Pourquoi `String[] args` ? (1/2)
 
 Le tableau `args` contient **tous les arguments** passés au programme :
 
@@ -288,6 +308,8 @@ public class ShowArgs {
     }
 }
 ```
+
+## Pourquoi `String[] args` ? (2/2)
 
 **Exécution** :
 
@@ -304,7 +326,7 @@ Argument 1 : deux
 Argument 2 : trois
 ```
 
-## Structure minimale d'un programme Java
+## Structure minimale d'un programme Java (1/2)
 
 Pourquoi écrit-on toujours `public class Main` ?
 
@@ -316,7 +338,7 @@ public class Main {
 }
 ```
 
-**Explications** :
+## Structure minimale d'un programme Java (2/2)
 
 - `public` : la classe est accessible depuis l'extérieur
 - `class` : définition d'une classe (conteneur de code)
@@ -325,10 +347,12 @@ public class Main {
 - `main` : **point d'entrée** du programme (méthode spéciale que la JVM cherche)
 - `String[] args` : arguments passés au programme
 
+---
+
 **Important** : Le fichier `Main.java` doit contenir une classe
 `public class Main`.
 
-## Qu'est-ce qu'une classe ?
+## Qu'est-ce qu'une classe ? (1/2)
 
 Une **classe** est un **conteneur** qui regroupe :
 
@@ -338,7 +362,7 @@ Une **classe** est un **conteneur** qui regroupe :
 Pour l'instant, nous utilisons des classes simples avec juste une méthode
 `main`.
 
-**Exemple** :
+## Qu'est-ce qu'une classe ? (2/2)
 
 ```java
 public class Calculator {
@@ -353,24 +377,20 @@ public class Calculator {
 ```
 
 Plus tard, nous verrons la **programmation orientée objet** en profondeur.
+Retenez que `class` = conteneur de code.
 
-Pour le moment : retenez que `class` = conteneur de code.
-
-## Le rôle d'un IDE
+## Le rôle d'un IDE (1/2)
 
 **IDE** = Integrated Development Environment (Environnement de Développement
-Intégré)
-
-Exemples : **VS Code**, **IntelliJ IDEA**, **Eclipse**
-
-**Ce qu'un IDE fait** :
+Intégré). Exemples : **VS Code**, **IntelliJ IDEA**, **Eclipse**
 
 - Coloration syntaxique
 - Auto-complétion
 - Détection d'erreurs en temps réel
 - Compilation et exécution en un clic
 - Débogage visuel
-- Gestion de projets
+
+## Le rôle d'un IDE (2/2)
 
 **Ce qu'un IDE ne fait PAS** :
 
@@ -379,7 +399,7 @@ Exemples : **VS Code**, **IntelliJ IDEA**, **Eclipse**
 
 **L'IDE est une interface vers vos fichiers**, rien de plus !
 
-## IDE vs Ligne de commande
+## IDE vs Ligne de commande (1/3)
 
 **Avec IDE (VS Code)** :
 
@@ -388,20 +408,23 @@ Exemples : **VS Code**, **IntelliJ IDEA**, **Eclipse**
 3. L'IDE exécute en coulisses : `javac Main.java && java Main`
 4. Le résultat s'affiche dans le terminal intégré
 
+## IDE vs Ligne de commande (2/3)
+
 **Sans IDE (ligne de commande)** :
 
 1. Vous écrivez `Main.java` avec un éditeur de texte (Notepad, Vim, etc.)
 2. Vous exécutez manuellement : `javac Main.java && java Main`
 3. Le résultat s'affiche dans le terminal
 
+## IDE vs Ligne de commande (3/3)
+
 **Conclusion** : L'IDE facilite la vie, mais tout est possible sans !
 
 Comprendre la ligne de commande vous rend **autonome**.
 
-## Vocabulaire : Paramètre vs Argument
+## Vocabulaire : Paramètre vs Argument (1/2)
 
-**Paramètre** : variable dans la **définition** d'une fonction
-
+**Paramètre** : variable dans la **définition** d'une fonction  
 **Argument** : valeur passée lors de l'**appel** de la fonction
 
 ```java
@@ -418,12 +441,7 @@ public class Vocabulary {
 }
 ```
 
-**Astuce mnémotechnique** :
-
-- **P**aramètre = **P**laceholder (définition)
-- **A**rgument = **A**ctual value (appel)
-
-## Vocabulaire : Fonction vs Méthode
+## Vocabulaire : Fonction vs Méthode (1/2)
 
 **Fonction** : bloc de code réutilisable (terme général)
 
@@ -441,6 +459,8 @@ public class Example {
 }
 ```
 
+## Vocabulaire : Fonction vs Méthode (2/2)
+
 **Usage courant** :
 
 - On dit souvent "fonction" par habitude
@@ -448,7 +468,7 @@ public class Example {
 
 Les deux termes sont acceptables dans ce cours !
 
-## Vocabulaire : Déclaration vs Définition vs Appel
+## Vocabulaire : Déclaration vs Définition vs Appel (1/3)
 
 **Déclaration** : annoncer l'existence d'une variable
 
@@ -462,11 +482,15 @@ int age;  // Déclaration
 int age = 25;  // Déclaration + Définition
 ```
 
+## Vocabulaire : Déclaration vs Définition vs Appel (2/3)
+
 **Appel** : exécuter une méthode
 
 ```java
 greet("Alice");  // Appel de la méthode greet
 ```
+
+## Vocabulaire : Déclaration vs Définition vs Appel (3/3)
 
 **Pour les méthodes** :
 
@@ -480,7 +504,7 @@ public static void greet(String name) {
 greet("Bob");
 ```
 
-## Vocabulaire : Instruction vs Expression
+## Vocabulaire : Instruction vs Expression (1/3)
 
 **Instruction** : ligne de code qui **fait** quelque chose
 
@@ -489,6 +513,8 @@ System.out.println("Hello");  // Instruction
 int x = 5;                    // Instruction
 ```
 
+## Vocabulaire : Instruction vs Expression (2/3)
+
 **Expression** : morceau de code qui **produit une valeur**
 
 ```java
@@ -496,6 +522,8 @@ int x = 5;                    // Instruction
 x * 2           // Expression
 isValid && x > 0  // Expression
 ```
+
+## Vocabulaire : Instruction vs Expression (3/3)
 
 **Distinction** :
 
@@ -507,33 +535,10 @@ int result = 2 + 3;  // '2 + 3' est une expression
                      // 'int result = 2 + 3;' est une instruction
 ```
 
-## Récapitulatif
-
-**8 types primitifs** : byte, short, int, long, float, double, boolean, char
-
-**Virgule flottante** : 0.1 + 0.2 ≠ 0.3 à cause du standard IEEE 754
-
-**Compilation** : `javac` transforme `.java` en bytecode `.class`
-
-**Exécution** : `java` exécute le bytecode via la JVM
-
-**Arguments** : `String[] args` reçoit les arguments du programme
-
-**Classe** : conteneur obligatoire, nom fichier = nom classe
-
-**IDE** : facilitateur, pas créateur de magie (tout est possible en ligne de
-commande)
-
-**Vocabulaire** : paramètre vs argument, fonction vs méthode, déclaration vs
-définition vs appel
-
 ## À vous de jouer !
 
 - Lisez le support de cours complet pour tous les détails théoriques
-- Explorez les 4 exemples de code fournis
-- Testez la compilation en ligne de commande (`javac` puis `java`)
-- Expérimentez avec les arguments de ligne de commande
-- Vérifiez par vous-même que 0.1 + 0.2 ≠ 0.3
+
 - Complétez les exercices pour renforcer votre compréhension
 
 ![bg right:40%][illustration-a-vous-de-jouer]
@@ -566,8 +571,6 @@ Les illustrations et images utilisées dans cette présentation proviennent de :
 
 <!-- Illustrations -->
 
-[illustration-principale]:
-	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-objectifs]:
 	https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720
 [illustration-a-vous-de-jouer]:
