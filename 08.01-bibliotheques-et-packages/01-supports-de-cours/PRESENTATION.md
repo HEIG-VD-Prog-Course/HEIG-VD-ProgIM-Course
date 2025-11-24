@@ -42,13 +42,20 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs
+## Objectifs (1/2)
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Comprendre le concept de package et son utilité.
 - Organiser son code en packages.
 - Importer et utiliser des classes d'autres packages.
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/2)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Utiliser les bibliothèques standard Java (java.util, java.time, java.io).
 - Consulter la documentation Java pour explorer de nouvelles classes.
 
@@ -56,9 +63,8 @@ consultez le [support de cours][cours]._
 
 ## Pourquoi les packages ?
 
-Les packages organisent le code comme les dossiers organisent les fichiers.
-
-**Avantages :**
+Les packages organisent le code comme les dossiers organisent les fichiers. Avec
+quelques avantages :
 
 - **Organisation** : Regrouper les classes par fonctionnalité
 - **Réutilisation** : Faciliter l'utilisation dans d'autres projets
@@ -68,7 +74,7 @@ Les packages organisent le code comme les dossiers organisent les fichiers.
 
 **Analogie :** Une bibliothèque avec des livres classés par thème.
 
-## Déclarer un package
+## Déclarer un package (1/2)
 
 Le package est déclaré en première ligne du fichier :
 
@@ -76,12 +82,11 @@ Le package est déclaré en première ligne du fichier :
 package models;
 
 public class Student {
-    private String name;
-    private int age;
-
-    // ... constructeurs et méthodes
+    // ... méthodes
 }
 ```
+
+## Déclarer un package (2/2)
 
 **Convention de nommage :**
 
@@ -100,9 +105,7 @@ src/
 │       └── toolshare/
 │           ├── models/
 │           │   ├── Tool.java
-│           │   └── Member.java
-│           └── services/
-│               └── LoanService.java
+│           ... └── Member.java
 ```
 
 Le package `ch.heigvd.toolshare.models` correspond au dossier
@@ -125,13 +128,6 @@ import java.util.Scanner;
 import java.util.*;  // Importe toutes les classes de java.util
 ```
 
-**Import statique :**
-
-```java
-import static java.lang.Math.PI;
-import static java.lang.Math.sqrt;
-```
-
 ## Package java.lang
 
 Le package `java.lang` est automatiquement importé. Il contient :
@@ -144,19 +140,9 @@ Le package `java.lang` est automatiquement importé. Il contient :
 
 **Pas besoin de les importer !**
 
-## Bibliothèque java.util
+## Bibliothèque java.util (1/2)
 
 Package d'utilitaires essentiels :
-
-**Collections :**
-
-```java
-import java.util.ArrayList;
-import java.util.HashMap;
-
-ArrayList<String> list = new ArrayList<>();
-HashMap<String, Integer> map = new HashMap<>();
-```
 
 **Scanner :**
 
@@ -165,6 +151,8 @@ import java.util.Scanner;
 
 Scanner scanner = new Scanner(System.in);
 ```
+
+## Bibliothèque java.util (2/2)
 
 **Random :**
 
@@ -175,7 +163,7 @@ Random random = new Random();
 int dice = random.nextInt(6) + 1;
 ```
 
-## Bibliothèque java.time
+## Bibliothèque java.time (1/4)
 
 Gestion moderne des dates et heures (Java 8+) :
 
@@ -190,6 +178,8 @@ LocalDate birthDate = LocalDate.of(2000, 5, 15);
 int age = today.getYear() - birthDate.getYear();
 ```
 
+## Bibliothèque java.time (2/4)
+
 **LocalTime :**
 
 ```java
@@ -199,7 +189,7 @@ LocalTime now = LocalTime.now();
 LocalTime meeting = LocalTime.of(14, 30);  // 14h30
 ```
 
-## Bibliothèque java.time (suite)
+## Bibliothèque java.time (3/4)
 
 **LocalDateTime :**
 
@@ -214,42 +204,18 @@ DateTimeFormatter formatter =
 String formattedDate = now.format(formatter);
 ```
 
+## Bibliothèque java.time (4/4)
+
 **Period :**
 
 ```java
+import java.time.Period;
+
 Period period = Period.between(start, end);
 System.out.println(period.getYears() + " ans");
 ```
 
-## Bibliothèque java.io
-
-Gestion des entrées/sorties (fichiers) :
-
-**Lecture :**
-
-```java
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-try (BufferedReader reader = new BufferedReader(
-        new FileReader("data.txt"))) {
-    String line;
-    while ((line = reader.readLine()) != null) {
-        System.out.println(line);
-    }
-}
-```
-
-**Écriture :**
-
-```java
-try (BufferedWriter writer = new BufferedWriter(
-        new FileWriter("output.txt"))) {
-    writer.write("Contenu du fichier");
-}
-```
-
-## Bibliothèque java.math
+## Bibliothèque java.math (1/2)
 
 Calculs de haute précision :
 
@@ -264,6 +230,8 @@ BigInteger b = new BigInteger("987654321098765432109876543210");
 BigInteger sum = a.add(b);
 ```
 
+## Bibliothèque java.math (2/2)
+
 **BigDecimal (décimaux précis) :**
 
 ```java
@@ -272,57 +240,6 @@ import java.math.BigDecimal;
 BigDecimal price = new BigDecimal("19.99");
 BigDecimal quantity = new BigDecimal("3");
 BigDecimal total = price.multiply(quantity);
-```
-
-## Exemple concret : Bibliothèque d'outils
-
-Les bibliothèques d'outils communautaires permettent de partager des ressources
-:
-
-```java
-package models;
-
-public class Tool {
-    private String name;
-    private String category;
-    private int availableQuantity;
-
-    public Tool(String name, String category, int quantity) {
-        this.name = name;
-        this.category = category;
-        this.availableQuantity = quantity;
-    }
-
-    public boolean isAvailable() {
-        return availableQuantity > 0;
-    }
-}
-```
-
-## Exemple concret : Organisation en packages
-
-Une application de gestion organisée :
-
-```java
-// Dans models/Tool.java
-package models;
-public class Tool { /* ... */ }
-
-// Dans models/ToolLibrary.java
-package models;
-import java.util.ArrayList;
-public class ToolLibrary { /* ... */ }
-
-// Dans Main.java
-import models.Tool;
-import models.ToolLibrary;
-
-public class Main {
-    public static void main(String[] args) {
-        ToolLibrary library = new ToolLibrary("Atelier du Quartier");
-        library.addTool(new Tool("Perceuse", "Électroportatif", 5));
-    }
-}
 ```
 
 ## Documentation Java
@@ -340,21 +257,6 @@ Plateforme officielle dev.java :
 4. Consulter les exemples de code
 
 **Développe votre autonomie en programmation !**
-
-## Points clés à retenir
-
-- Les **packages** organisent le code de manière logique.
-- On déclare un package avec `package nom.du.package`.
-- On importe des classes avec `import`.
-- Java fournit de nombreuses **bibliothèques standard** :
-  - `java.util` : Utilitaires et collections
-  - `java.time` : Dates et heures
-  - `java.io` : Entrées/sorties
-  - `java.math` : Calculs précis
-- La documentation sur **dev.java** aide à explorer l'API Java.
-- Organiser son code en packages favorise la réutilisation.
-
-![bg right:40%][illustration-conclusion]
 
 ## À vous de jouer !
 
