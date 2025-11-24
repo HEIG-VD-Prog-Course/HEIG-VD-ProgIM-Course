@@ -451,6 +451,7 @@ Remarques pour `POUR` :
 
 ### Sources et liens utiles
 
+- <https://dev.java/learn/language-basics/controlling-flow/>
 - <https://code.visualstudio.com/docs/java/java-tutorial>
 - <https://www.youtube.com/watch?v=-7xg8pGcP6w>
 - <https://plantuml.com/fr/activity-diagram-beta>

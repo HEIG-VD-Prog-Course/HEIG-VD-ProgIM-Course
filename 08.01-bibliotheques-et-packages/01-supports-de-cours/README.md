@@ -42,6 +42,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
+- [Sources et liens utiles](#sources-et-liens-utiles)
 
 ## Objectifs
 
@@ -569,6 +570,11 @@ dans ce cours.
 Des exercices pratiques sont disponibles dans le dossier
 [03-exercices](../03-exercices/) pour mettre en pratique l'organisation du code
 en packages et l'utilisation des bibliothèques standard.
+
+## Sources et liens utiles
+
+- <https://dev.java/learn/packages/>
+- <https://www.w3schools.com/java/java_packages.asp>
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

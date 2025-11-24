@@ -846,6 +846,12 @@ Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 - <https://www.geeksforgeeks.org/java/java/>
 - <https://www.learnjavaonline.org/>
 - <https://upskillcourses.com/courses/essential-web-developer-course>
+- <https://dev.java/learn/language-basics/using-operators/>
+- <https://dev.java/learn/language-basics/expressions-statements-blocks/>
+- <https://dev.java/learn/language-basics/controlling-flow/>
+- <https://dev.java/learn/language-basics/switch-statement/>
+- <https://www.w3schools.com/java/java_operators.asp>
+- <https://www.w3schools.com/java/java_conditions.asp>
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
