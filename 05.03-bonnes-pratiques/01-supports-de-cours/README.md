@@ -676,8 +676,9 @@ Maintenant, peu importe l'éditeur utilisé, tout le monde aura le même formata
 1. **Pouvoir le faire fonctionner facilement**
 2. **Avoir la même expérience de développement que vous**
 
-C'est comme prêter votre voiture : vous laissez les réglages du siège et des
-rétroviseurs ajustables, pas dans une position fixe bizarre.
+C'est comme prêter un outil de la bibliothèque d'outils communautaire : vous le
+laissez propre, en bon état et avec un mode d'emploi clair, pas dans un état
+incompréhensible.
 
 **En pratique, cela signifie** :
 

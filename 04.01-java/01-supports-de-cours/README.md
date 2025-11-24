@@ -259,7 +259,7 @@ et le compiler en ligne de commande. Mais ce serait comme :
 
 - Écrire un livre avec un crayon au lieu d'un traitement de texte
 - Cuisiner sans ustensiles modernes
-- Réparer une voiture sans outils appropriés
+- Réparer un vélo sans outils appropriés
 
 > [!TIP]
 >
