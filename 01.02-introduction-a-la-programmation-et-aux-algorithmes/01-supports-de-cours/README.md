@@ -20,8 +20,8 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Ressources annexes](#ressources-annexes)
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
-- [Qu’est-ce que la programmation ?](#quest-ce-que-la-programmation)
-- [Qu’est-ce qu’un algorithme ?](#quest-ce-quun-algorithme)
+- [Qu'est-ce que la programmation ?](#quest-ce-que-la-programmation-)
+- [Qu'est-ce qu'un algorithme ?](#quest-ce-quun-algorithme-)
 - [La recette de cuisine : une métaphore](#la-recette-de-cuisine-une-métaphore)
 - [Pourquoi la précision est importante](#pourquoi-la-précision-est-importante)
 - [Présentation des exemples dans le cours](#présentation-des-exemples-dans-le-cours)
@@ -39,13 +39,13 @@ algorithme, à travers une métaphore simple : la recette de cuisine.
 - Suivre et imaginer des instructions simples pour résoudre un problème
 - Prendre conscience de l’importance de la précision dans les instructions
 
-## Qu’est-ce que la programmation ?
+## Qu'est-ce que la programmation ?
 
-La programmation, c’est donner des instructions précises à un ordinateur pour
-qu’il réalise une tâche. C’est comme expliquer à quelqu’un comment faire quelque
-chose, étape par étape.
+La programmation, c'est donner des instructions précises à un ordinateur pour
+qu'il réalise une tâche. C'est comme expliquer à une personne comment faire
+quelque chose, étape par étape.
 
-## Qu’est-ce qu’un algorithme ?
+## Qu'est-ce qu'un algorithme ?
 
 Un algorithme, c’est une suite d’instructions ordonnées qui permettent de
 résoudre un problème ou d’atteindre un objectif. On retrouve des algorithmes
