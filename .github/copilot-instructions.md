@@ -833,7 +833,7 @@ XX-example-name/
    - **Sub-Saharan African**: Lebo, Nyasha, Tariro, Khaya, Ayo
    - **Latin American**: Amaru, Inti, Ariel, Suyu
    - **Pacific / South-East Asian**: Ari, Mika, Koa, Nalu
-   - **European**: Sacha, Elian, Rune, Marin, Nox
+   - **European**: Sacha, Sasha, Elian, Rune, Marin, Nox, Zhenya
 
    **When generating multiple examples:**
 
