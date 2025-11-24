@@ -156,11 +156,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 ```
 
-**Import avec wildcard :**
+**Import avec wildcard (`*` = "tout") :**
 
 ```java
 import java.util.*;  // Importe toutes les classes de java.util
 ```
+
+Le symbole `*` (wildcard) signifie "tout" : ici, toutes les classes du package.
 
 ## Package java.lang
 
