@@ -125,7 +125,7 @@ Elle a :
 
 - Nom : `myName`
 - Type : texte (`String`)
-- Valeur : `"Marie"`
+- Valeur : `"Rune"`
 
 </div>
 <div>
@@ -206,7 +206,7 @@ public class TotalPrice {
 ```java
 public class WelcomeMessage {
     public static void main(String[] args) {
-        String name = "Sophie";
+        String name = "Khaya";
         String message = "Bienvenue " + name + " !";
 
         System.out.println(message);
@@ -214,7 +214,7 @@ public class WelcomeMessage {
 }
 ```
 
-**Résultat :** `Bienvenue Sophie !`
+**Résultat :** `Bienvenue Khaya !`
 
 > 💡 Le symbole `+` permet de **concaténer** (coller) des textes ensemble
 

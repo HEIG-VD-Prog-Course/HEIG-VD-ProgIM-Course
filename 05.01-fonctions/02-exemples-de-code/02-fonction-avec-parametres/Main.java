@@ -57,7 +57,7 @@ public class Main {
         System.out.println("=== Exemple : Fonction avec paramètres ===\n");
 
         // Appel avec un paramètre String
-        greetUser("Alice");
+        greetUser("Ariel");
         System.out.println();
 
         // Appel avec un paramètre int

@@ -112,11 +112,11 @@ Vous pouvez afficher plusieurs choses en même temps en utilisant l'opérateur `
 ```java
 public class Main {
     public static void main(String[] args) {
-        String name = "Alice";
+        String name = "Ariel";
         int age = 25;
 
         System.out.println("Je m'appelle " + name + " et j'ai " + age + " ans.");
-        // Affiche : Je m'appelle Alice et j'ai 25 ans.
+        // Affiche : Je m'appelle Ariel et j'ai 25 ans.
     }
 }
 ```

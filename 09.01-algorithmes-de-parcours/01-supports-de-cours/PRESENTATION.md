@@ -207,17 +207,17 @@ Java fournit des méthodes intégrées pour ArrayList :
 
 ```java
 ArrayList<String> names = new ArrayList<>();
-names.add("Alice");
-names.add("Bob");
-names.add("Charlie");
+names.add("Ariel");
+names.add("Nox");
+names.add("Amaru");
 
 // Recherche linéaire automatique
-int index = names.indexOf("Bob"); // Retourne 1
-boolean exists = names.contains("Charlie"); // true
+int index = names.indexOf("Nox"); // Retourne 1
+boolean exists = names.contains("Amaru"); // true
 
 // Si la liste est triée
 Collections.sort(names);
-int pos = Collections.binarySearch(names, "Alice"); // 0
+int pos = Collections.binarySearch(names, "Ariel"); // 0
 ```
 
 ## Recherche dans les tableaux
@@ -306,8 +306,8 @@ Pour des performances optimales, considérez :
 
 ```java
 HashMap<String, Integer> ages = new HashMap<>();
-ages.put("Alice", 25);
-Integer age = ages.get("Alice"); // Très rapide !
+ages.put("Ariel", 25);
+Integer age = ages.get("Ariel"); // Très rapide !
 ```
 
 **HashSet** : Vérification d'existence en O(1)

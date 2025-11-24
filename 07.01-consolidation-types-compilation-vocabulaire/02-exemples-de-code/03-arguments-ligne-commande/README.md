@@ -18,5 +18,5 @@ javac CommandLineArguments.java
 java CommandLineArguments
 
 # Exécution avec des arguments
-java CommandLineArguments Alice Bob Charlie
+java CommandLineArguments Ariel Nox Amaru
 ```

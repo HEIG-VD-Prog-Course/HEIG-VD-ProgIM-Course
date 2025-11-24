@@ -297,11 +297,11 @@ class Student {
 public class StudentSearch {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student("Alice Martin", 1001));
-        students.add(new Student("Bob Dupont", 1002));
-        students.add(new Student("Charlie Martin", 1003));
-        students.add(new Student("Diana Schmidt", 1004));
-        students.add(new Student("Eve Martinez", 1005));
+        students.add(new Student("Amal Cohen", 1001));
+        students.add(new Student("Amal Santos", 1002));
+        students.add(new Student("Marin Cohen", 1003));
+        students.add(new Student("Jin Nguyen", 1004));
+        students.add(new Student("Tanu Ali", 1005));
 
         System.out.println("=== Liste des étudiants ===\n");
         for (Student student : students) {

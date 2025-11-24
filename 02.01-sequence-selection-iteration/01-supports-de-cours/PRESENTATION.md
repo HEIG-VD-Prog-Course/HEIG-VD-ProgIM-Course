@@ -78,7 +78,7 @@ consultez le [support de cours][cours]._
 ### Variables : exemple concret
 
 ```text
-name = "Marie"
+name = "Rune"
 user_age = 20
 height = 1.65
 is_student = vrai
@@ -183,8 +183,8 @@ DÉBUT
 FIN
 ```
 
-Va afficher : "Bonjour Alice, vous avez 30 ans" si l'utilisatrice a entré
-"Alice" et "30".
+Va afficher : "Bonjour Ariel, vous avez 30 ans" si l'utilisatrice a entré
+"Ariel" et "30".
 
 ### Diagramme d'activité - Séquence
 

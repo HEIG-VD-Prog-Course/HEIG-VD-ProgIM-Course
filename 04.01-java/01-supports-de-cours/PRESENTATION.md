@@ -201,7 +201,7 @@ if (age >= 18) {
 
 - 📝 Écrire un livre avec un crayon vs traitement de texte
 - 🍳 Cuisiner sans ustensiles modernes
-- 🔧 Réparer une voiture sans outils
+- 🔧 Réparer un vélo sans outils
 
 > Un développeur passe plus de temps à **lire** et **comprendre** du code qu'à
 > en écrire ! 📖

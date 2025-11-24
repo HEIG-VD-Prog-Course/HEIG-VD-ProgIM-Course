@@ -262,9 +262,9 @@ préservé (stabilité).
 
 ```java
 Person[] people = {
-    new Person("Alice", 25),
-    new Person("Bob", 30),
-    new Person("Charlie", 25),
+    new Person("Ariel", 25),
+    new Person("Nox", 30),
+    new Person("Amaru", 25),
     new Person("David", 30)
 };
 ```
@@ -340,9 +340,9 @@ public static void selectionSortPeople(Person[] people) {
  */
 public static void main(String[] args) {
     Person[] people1 = {
-        new Person("Alice", 25),
-        new Person("Bob", 30),
-        new Person("Charlie", 25),
+        new Person("Ariel", 25),
+        new Person("Nox", 30),
+        new Person("Amaru", 25),
         new Person("David", 30)
     };
 
@@ -354,8 +354,8 @@ public static void main(String[] args) {
     bubbleSortPeople(people1);
     System.out.println("\nAprès tri à bulles (STABLE) :");
     System.out.println(Arrays.toString(people1));
-    // Alice et Charlie (25) restent dans cet ordre
-    // Bob et David (30) restent dans cet ordre
+    // Ariel et Amaru (25) restent dans cet ordre
+    // Nox et David (30) restent dans cet ordre
 
     selectionSortPeople(people2);
     System.out.println("\nAprès tri par sélection (NON STABLE) :");

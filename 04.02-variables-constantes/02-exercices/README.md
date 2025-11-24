@@ -76,7 +76,7 @@ clairs.
 **Exemple de sortie attendue :**
 
 ```text
-Je m'appelle Alice
+Je m'appelle Ariel
 J'ai 20 ans
 Je mesure 1.75 mètres
 ```
@@ -86,7 +86,7 @@ Je mesure 1.75 mètres
 
 ```text
 DÉBUT
-  Déclarer name comme chaîne de caractères et l'initialiser avec "Alice"
+  Déclarer name comme chaîne de caractères et l'initialiser avec "Ariel"
   Déclarer age comme nombre entier et l'initialiser avec 20
   Déclarer height comme nombre décimal et l'initialiser avec 1.75
 
@@ -104,7 +104,7 @@ FIN
 ```plantuml
 @startuml
 start
-:Déclarer et initialiser name = "Alice";
+:Déclarer et initialiser name = "Ariel";
 :Déclarer et initialiser age = 20;
 :Déclarer et initialiser height = 1.75;
 :Afficher "Je m'appelle " + name;
@@ -122,7 +122,7 @@ stop
 ```java
 public class Main {
   public static void main(String[] args) {
-    String name = "Alice";
+    String name = "Ariel";
     int age = 20;
     double height = 1.75;
 

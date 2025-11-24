@@ -30,7 +30,7 @@ séparées.
 Exemple de sortie :
 
 ```text
-Je m'appelle Alice
+Je m'appelle Ariel
 J'ai 25 ans
 ```
 
@@ -40,7 +40,7 @@ J'ai 25 ans
 ```java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Je m'appelle Alice");
+        System.out.println("Je m'appelle Ariel");
         System.out.println("J'ai 25 ans");
     }
 }
@@ -83,7 +83,7 @@ affiche "Je m'appelle [prénom] et j'habite à [ville]".
 Exemple de sortie :
 
 ```text
-Je m'appelle Alice et j'habite à Lausanne
+Je m'appelle Ariel et j'habite à Lausanne
 ```
 
 <details>
@@ -92,7 +92,7 @@ Je m'appelle Alice et j'habite à Lausanne
 ```java
 public class Main {
     public static void main(String[] args) {
-        String firstName = "Alice";
+        String firstName = "Ariel";
         String city = "Lausanne";
 
         System.out.println("Je m'appelle " + firstName +
@@ -111,8 +111,8 @@ de bienvenue personnalisé.
 Exemple d'interaction :
 
 ```text
-Comment vous appelez-vous ? Alice
-Bienvenue Alice !
+Comment vous appelez-vous ? Ariel
+Bienvenue Ariel !
 ```
 
 <details>
@@ -265,14 +265,14 @@ prénom, âge, ville) et affiche une "carte de visite" formatée.
 Exemple d'interaction :
 
 ```text
-Nom : Dupont
-Prénom : Alice
+Nom : Sacha
+Prénom : Ariel
 Âge : 25
 Ville : Lausanne
 
 === Carte de visite ===
-Nom : Dupont
-Prénom : Alice
+Nom : Sacha
+Prénom : Ariel
 Âge : 25 ans
 Ville : Lausanne
 ========================

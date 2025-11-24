@@ -388,8 +388,8 @@ class Student {
 }
 
 ArrayList<Student> students = new ArrayList<>();
-students.add(new Student("Alice", 1001));
-students.add(new Student("Bob", 1002));
+students.add(new Student("Ariel", 1001));
+students.add(new Student("Nox", 1002));
 
 // Recherche par critère
 for (Student student : students) {
@@ -429,11 +429,11 @@ efficaces :
 
 ```java
 HashMap<String, Integer> ages = new HashMap<>();
-ages.put("Alice", 25);
-ages.put("Bob", 30);
+ages.put("Ariel", 25);
+ages.put("Nox", 30);
 
 // Recherche très rapide
-Integer age = ages.get("Alice"); // O(1)
+Integer age = ages.get("Ariel"); // O(1)
 ```
 
 ## Stratégies de recherche

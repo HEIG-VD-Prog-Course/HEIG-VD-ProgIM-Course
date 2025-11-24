@@ -492,7 +492,7 @@ Développement → .java → javac → .class → JVM (Windows/Linux/Mac/...)
 On peut passer des **arguments** à un programme Java lors de son exécution :
 
 ```bash
-java HelloWorld Alice Bob Charlie
+java HelloWorld Ariel Nox Amaru
 ```
 
 Ces arguments sont accessibles via le tableau `String[] args` dans la méthode
@@ -521,13 +521,13 @@ public class Greeting {
 
 ```bash
 javac Greeting.java
-java Greeting Alice
+java Greeting Ariel
 ```
 
 **Sortie :**
 
 ```text
-Bonjour Alice !
+Bonjour Ariel !
 ```
 
 > [!TIP] > `args.length` donne le nombre d'arguments. `args[0]` est le premier
@@ -693,8 +693,9 @@ public static void main(String[] args) {
 **Méthode** : Fonction qui appartient à une classe (en programmation orientée
 objet).
 
-En Java, **toutes les fonctions sont des méthodes** car tout le code est dans
-des classes.
+En Java, **toutes les méthodes sont des fonctions, mais pas toutes les fonctions
+sont des méthodes**. Comme tout le code Java est dans des classes, nos fonctions
+sont toujours des méthodes.
 
 ```java
 public class MathUtils {

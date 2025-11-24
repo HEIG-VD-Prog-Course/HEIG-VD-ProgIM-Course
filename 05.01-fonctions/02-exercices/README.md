@@ -147,9 +147,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        displayMessage("Alice", 25);
-        displayMessage("Bob", 30);
-        displayMessage("Charlie", 18);
+        displayMessage("Ariel", 25);
+        displayMessage("Nox", 30);
+        displayMessage("Amaru", 18);
     }
 }
 ```

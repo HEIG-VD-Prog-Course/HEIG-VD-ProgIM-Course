@@ -32,7 +32,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Importer des classes](#importer-des-classes)
   - [Import spécifique](#import-spécifique)
   - [Import avec wildcard](#import-avec-wildcard)
-  - [Import statique](#import-statique)
   - [Package java.lang](#package-javalang)
 - [Bibliothèques standard de Java](#bibliothèques-standard-de-java)
   - [java.util - Utilitaires](#javautil---utilitaires)
@@ -239,7 +238,7 @@ C'est l'approche recommandée car elle rend le code plus explicite.
 
 ### Import avec wildcard
 
-Le wildcard `*` importe toutes les classes d'un package :
+Le wildcard `*` (qui signifie "tout") importe toutes les classes d'un package :
 
 ```java
 import java.util.*;
@@ -254,32 +253,12 @@ public class Main {
 }
 ```
 
+Le symbole `*` est appelé "wildcard" (joker) : il remplace n'importe quel nom de
+classe du package.
+
 > [!WARNING] L'import avec `*` n'importe que les classes du package spécifié,
 > pas les sous-packages. Par exemple, `import java.util.*` n'importe pas les
 > classes de `java.util.stream`.
-
-### Import statique
-
-L'import statique permet d'importer des membres statiques (méthodes ou
-constantes) :
-
-```java
-import static java.lang.Math.PI;
-import static java.lang.Math.sqrt;
-
-public class Main {
-    public static void main(String[] args) {
-        double radius = 5.0;
-        double area = PI * radius * radius;
-        double diagonal = sqrt(2.0) * 10;
-
-        System.out.println("Aire : " + area);
-        System.out.println("Diagonale : " + diagonal);
-    }
-}
-```
-
-Sans import statique, il faudrait écrire `Math.PI` et `Math.sqrt()`.
 
 ### Package java.lang
 

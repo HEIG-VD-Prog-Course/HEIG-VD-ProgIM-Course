@@ -288,8 +288,8 @@ javac Greeting.java
 **Exécution avec arguments** :
 
 ```bash
-java Greeting Alice    # Affiche : Bonjour, Alice !
-java Greeting Bob      # Affiche : Bonjour, Bob !
+java Greeting Ariel    # Affiche : Bonjour, Ariel !
+java Greeting Nox      # Affiche : Bonjour, Nox !
 java Greeting          # Affiche : Bonjour, inconnu !
 ```
 
@@ -435,8 +435,8 @@ public class Vocabulary {
     }
 
     public static void main(String[] args) {
-        // "Alice" est un ARGUMENT
-        greet("Alice");
+        // "Ariel" est un ARGUMENT
+        greet("Ariel");
     }
 }
 ```
@@ -447,8 +447,9 @@ public class Vocabulary {
 
 **Méthode** : fonction définie **à l'intérieur d'une classe** (terme Java)
 
-En Java, **toutes les fonctions sont des méthodes** car elles sont toujours dans
-une classe.
+En Java, **toutes les méthodes sont des fonctions, mais pas toutes les fonctions
+sont des méthodes**. Comme tout le code Java est dans une classe, nos fonctions
+sont toujours des méthodes.
 
 ```java
 public class Example {
@@ -487,7 +488,7 @@ int age = 25;  // Déclaration + Définition
 **Appel** : exécuter une méthode
 
 ```java
-greet("Alice");  // Appel de la méthode greet
+greet("Ariel");  // Appel de la méthode greet
 ```
 
 ## Vocabulaire : Déclaration vs Définition vs Appel (3/3)
@@ -501,7 +502,7 @@ public static void greet(String name) {
 }
 
 // Appel
-greet("Bob");
+greet("Nox");
 ```
 
 ## Vocabulaire : Instruction vs Expression (1/3)

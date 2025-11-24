@@ -157,8 +157,8 @@ Créez un fichier `Greeting.java` qui :
 **Testez votre programme avec** :
 
 - `java Greeting`
-- `java Greeting Alice`
-- `java Greeting Alice 25`
+- `java Greeting Ariel`
+- `java Greeting Ariel 25`
 
 <details>
 <summary>Solution</summary>
@@ -196,10 +196,10 @@ javac Greeting.java
 java Greeting
 
 # Avec nom
-java Greeting Alice
+java Greeting Ariel
 
 # Avec nom et âge
-java Greeting Alice 25
+java Greeting Ariel 25
 ```
 
 </details>
@@ -332,7 +332,7 @@ public class VocabularyExample {
         int age;  // (3)
         age = 25;  // (4)
         int score = 100;  // (5)
-        greet("Alice");  // (6)
+        greet("Ariel");  // (6)
         int result = 2 + 3;  // (7)
     }
 }
@@ -346,7 +346,7 @@ public class VocabularyExample {
 3. `int age;` : **Déclaration** de variable
 4. `age = 25;` : **Instruction** (affectation)
 5. `int score = 100;` : **Définition** (déclaration + initialisation)
-6. `"Alice"` dans `greet("Alice")` : **Argument** passé à la méthode
+6. `"Ariel"` dans `greet("Ariel")` : **Argument** passé à la méthode
 7. `2 + 3` : **Expression** (qui produit la valeur 5)
 8. `int result = 2 + 3;` : **Instruction** (définition de variable)
 

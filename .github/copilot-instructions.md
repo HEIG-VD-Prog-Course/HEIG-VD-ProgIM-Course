@@ -127,6 +127,13 @@ society.
    direct answers
 6. **Real-world relevance**: Prefer practical, relatable examples over abstract
    concepts
+7. **Langage épicène**: Use gender-neutral language when writing in French.
+   Prefer epicene forms (e.g., "l'utilisatrice", "la personne qui étudie", "la
+   personne qui développe") over masculine defaults or middle-point notation
+   (point médian). This promotes inclusivity while maintaining readability
+8. **Simple apostrophes**: Always use simple apostrophes (') instead of
+   typographic apostrophes (’) in all text content (Markdown files, Java
+   comments, etc.). This ensures consistency and avoids encoding issues
 
 ### Author Attribution
 
@@ -795,6 +802,51 @@ XX-example-name/
    **Avoid**: E-commerce, banking with interest, mass consumption scenarios,
    car-centric examples, growth-focused metrics
 
+   **Diversity in naming**: Use diverse, internationally representative names in
+   code examples to reflect the multicultural reality of programming. Follow
+   these principles for inclusive and non-gendered naming:
+
+   **Principles:**
+
+   1. **Prefer non-gendered names**: Use names that are commonly neutral in
+      their cultural context. Avoid names strongly associated with one gender
+      unless the example explicitly requires it.
+
+   2. **Reflect global diversity naturally**: Mix names from various regions
+      instead of clustering them by origin. This reflects the international
+      reality of programming.
+
+   3. **Avoid overused unisex clichés**: Refrain from repeatedly using Alex,
+      Sam, Chris, Taylor, or other names that appear in most tutorials. Variety
+      increases representation.
+
+   4. **Keep examples readable**: Names should be short, easy to type, and avoid
+      diacritics when readability might be affected. Use diacritics only when
+      they improve authenticity and clarity.
+
+   5. **Respect cultural context**: Some names are neutral in one region but
+      gendered in another. When in doubt, choose a name widely recognized as
+      neutral or used across cultures.
+
+   **Recommended Neutral Names (non-exhaustive):**
+
+   - **East Asian**: Min, Jin, Ren, Sora, Lin, Jing
+   - **South Asian**: Aadi, Kiran, Shaan, Amal, Tanu
+   - **Middle Eastern / North African**: Noor, Iman, Rayane, Nahil
+   - **Sub-Saharan African**: Lebo, Nyasha, Tariro, Khaya, Ayo
+   - **Latin American**: Amaru, Inti, Ariel, Suyu
+   - **Pacific / South-East Asian**: Ari, Mika, Koa, Nalu
+   - **European**: Sacha, Sasha, Elian, Rune, Marin, Nox, Zhenya
+
+   **When generating multiple examples:**
+
+   - Rotate names to avoid repetition
+   - Mix origins across files and examples
+   - Consider using short lists tailored to your language or audience
+
+   This promotes inclusivity and reflects the global nature of the tech
+   community.
+
 10. **Input/Output Patterns**:
 
     - Use `System.out.println()` for simple output demonstrations
@@ -824,22 +876,7 @@ XX-example-name/
       }
       ```
 
-11. **Error Handling**:
-
-    - Demonstrate proper exception handling where relevant
-    - Use checked exceptions for recoverable errors
-    - Use unchecked exceptions for programming errors
-    - Always clean up resources properly
-    - Example:
-      ```java
-      try {
-          // Operation risquée
-      } catch (IOException e) {
-          System.err.println("Erreur lors de la lecture: " + e.getMessage());
-      }
-      ```
-
-12. **Main Method Pattern**:
+11. **Main Method Pattern**:
 
     ```java
     public class Main {
@@ -858,19 +895,7 @@ XX-example-name/
     }
     ```
 
-13. **Testing Demonstrations** (when relevant):
-
-    - Include simple test cases to verify behavior
-    - Show assert statements for validation
-    - Demonstrate edge cases
-    - Example:
-      ```java
-      // Test avec différentes valeurs
-      assert calculator.add(2, 3) == 5 : "Addition simple échouée";
-      assert calculator.divide(10, 0) throws ArithmeticException : "Division par zéro non gérée";
-      ```
-
-14. **Build Instructions in README**: Always include compilation and execution
+12. **Build Instructions in README**: Always include compilation and execution
     instructions:
 
     ````markdown

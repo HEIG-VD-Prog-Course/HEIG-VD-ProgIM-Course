@@ -114,7 +114,7 @@ Vous préférez `snake_case` ? Pas de problème !
 ```java
 public class Main {
     public static void main(String[] args) {
-        String user_name = "Alice";    // snake_case
+        String user_name = "Ariel";    // snake_case
         int TotalPoints = 100;         // PascalCase
         double averageScore = 85.5;    // camelCase
     }
@@ -128,7 +128,7 @@ Trois styles différents = confusion
 ```java
 public class Main {
     public static void main(String[] args) {
-        String userName = "Alice";     // camelCase
+        String userName = "Ariel";     // camelCase
         int totalPoints = 100;         // camelCase
         double averageScore = 85.5;    // camelCase
     }
@@ -142,7 +142,7 @@ Un seul style = clarté
 ```java
 // Trop court, pas clair
 int x = 25;
-String n = "Alice";
+String n = "Ariel";
 
 // Abréviation obscure
 int nbUsrActv = 10;
@@ -158,7 +158,7 @@ int totalPrice = 1;  // Ce n'est pas un total !
 ```java
 // Noms clairs et explicites
 int age = 25;
-String firstName = "Alice";
+String firstName = "Ariel";
 int activeUserCount = 10;
 
 // Noms descriptifs pour les booléens

@@ -89,14 +89,14 @@ public class Main {
         }
 
         // Recherche dans un tableau de chaînes
-        String[] names = { "Alice", "Charlie", "Bob", "Diana" };
+        String[] names = { "Ariel", "Amaru", "Nox", "Ayo" };
         System.out.println("\nTableau de noms non trié : " + Arrays.toString(names));
 
         Arrays.sort(names);
         System.out.println("Tableau de noms trié     : " + Arrays.toString(names));
 
-        index = Arrays.binarySearch(names, "Bob");
-        System.out.println("Recherche de 'Bob' : index " + index);
+        index = Arrays.binarySearch(names, "Nox");
+        System.out.println("Recherche de 'Nox' : index " + index);
     }
 
     /**
