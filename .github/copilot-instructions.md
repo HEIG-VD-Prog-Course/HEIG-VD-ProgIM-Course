@@ -800,18 +800,49 @@ XX-example-name/
    car-centric examples, growth-focused metrics
 
    **Diversity in naming**: Use diverse, internationally representative names in
-   code examples to reflect the multicultural reality of programming. Avoid
-   defaulting to Western names only. Prefer non-gendered names when possible.
-   Examples of diverse names to use:
+   code examples to reflect the multicultural reality of programming. Follow
+   these principles for inclusive and non-gendered naming:
 
-   - European: Sacha, Camille, Claude, Dominique, Maxime, Noah
-   - Asian: Yuki, Wei, Mei, Kim, An
-   - African: Amari, Zuri, Keza, Nuru, Sekai
-   - Latin American: Alex, Andrea, Ariel, Angel, Guadalupe
-   - Middle Eastern: Nour, Sami, Rayan, Iman, Rasha
+   **Principles:**
 
-   Mix names naturally across examples rather than clustering by origin. This
-   promotes inclusivity and reflects the global nature of the tech community.
+   1. **Prefer non-gendered names**: Use names that are commonly neutral in
+      their cultural context. Avoid names strongly associated with one gender
+      unless the example explicitly requires it.
+
+   2. **Reflect global diversity naturally**: Mix names from various regions
+      instead of clustering them by origin. This reflects the international
+      reality of programming.
+
+   3. **Avoid overused unisex clichés**: Refrain from repeatedly using Alex,
+      Sam, Chris, Taylor, or other names that appear in most tutorials. Variety
+      increases representation.
+
+   4. **Keep examples readable**: Names should be short, easy to type, and avoid
+      diacritics when readability might be affected. Use diacritics only when
+      they improve authenticity and clarity.
+
+   5. **Respect cultural context**: Some names are neutral in one region but
+      gendered in another. When in doubt, choose a name widely recognized as
+      neutral or used across cultures.
+
+   **Recommended Neutral Names (non-exhaustive):**
+
+   - **East Asian**: Min, Jin, Ren, Sora, Lin, Jing
+   - **South Asian**: Aadi, Kiran, Shaan, Amal, Tanu
+   - **Middle Eastern / North African**: Noor, Iman, Rayane, Nahil
+   - **Sub-Saharan African**: Lebo, Nyasha, Tariro, Khaya, Ayo
+   - **Latin American**: Amaru, Inti, Ariel, Suyu
+   - **Pacific / South-East Asian**: Ari, Mika, Koa, Nalu
+   - **European**: Sacha, Elian, Rune, Marin, Nox
+
+   **When generating multiple examples:**
+
+   - Rotate names to avoid repetition
+   - Mix origins across files and examples
+   - Consider using short lists tailored to your language or audience
+
+   This promotes inclusivity and reflects the global nature of the tech
+   community.
 
 10. **Input/Output Patterns**:
 
