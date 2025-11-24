@@ -112,6 +112,39 @@ src/
 Le package `ch.heigvd.toolshare.models` correspond au dossier
 `src/ch/heigvd/toolshare/models/`.
 
+## Compiler et exécuter (1/2)
+
+**Structure simple :**
+
+```text
+projet/
+├── Main.java
+└── utils/
+    ├── Calculator.java
+    └── Formatter.java
+```
+
+**Compilation :**
+
+```bash
+javac utils/*.java Main.java
+java Main
+```
+
+## Compiler et exécuter (2/2)
+
+**Structure hiérarchique :**
+
+```bash
+# Compilation depuis src/
+javac ch/heigvd/toolshare/utils/*.java ch/heigvd/toolshare/Main.java
+
+# Exécution avec le nom complet (points, pas slashes)
+java ch.heigvd.toolshare.Main
+```
+
+**Astuce :** `javac **/*.java` compile tous les fichiers récursivement.
+
 ## Importer des classes
 
 Pour utiliser une classe d'un autre package, il faut l'importer :

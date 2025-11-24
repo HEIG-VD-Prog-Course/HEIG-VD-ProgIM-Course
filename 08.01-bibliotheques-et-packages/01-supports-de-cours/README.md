@@ -28,6 +28,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Déclarer un package](#déclarer-un-package)
   - [Convention de nommage](#convention-de-nommage)
   - [Structure de dossiers](#structure-de-dossiers)
+  - [Compiler et exécuter des programmes avec packages](#compiler-et-exécuter-des-programmes-avec-packages)
 - [Importer des classes](#importer-des-classes)
   - [Import spécifique](#import-spécifique)
   - [Import avec wildcard](#import-avec-wildcard)
@@ -144,6 +145,73 @@ src/
 > [!IMPORTANT] Le package `ch.heigvd.toolshare.models` doit correspondre
 > exactement au chemin de dossiers `src/ch/heigvd/toolshare/models/`. Une erreur
 > dans cette correspondance empêchera la compilation.
+
+### Compiler et exécuter des programmes avec packages
+
+Pour compiler un programme qui utilise des packages, il faut compiler toutes les
+classes en respectant la structure des packages.
+
+**Structure simple (un seul niveau de package) :**
+
+```text
+projet/
+├── Main.java
+└── utils/
+    ├── Calculator.java
+    └── Formatter.java
+```
+
+**Compilation :**
+
+```bash
+javac utils/*.java Main.java
+```
+
+Cette commande compile d'abord toutes les classes du package `utils`, puis la
+classe `Main` qui les utilise.
+
+**Exécution :**
+
+```bash
+java Main
+```
+
+**Structure hiérarchique (plusieurs niveaux) :**
+
+```text
+src/
+└── ch/
+    └── heigvd/
+        └── toolshare/
+            ├── Main.java
+            └── utils/
+                └── Calculator.java
+```
+
+**Compilation depuis le dossier `src/` :**
+
+```bash
+javac ch/heigvd/toolshare/utils/*.java ch/heigvd/toolshare/Main.java
+```
+
+**Exécution depuis le dossier `src/` :**
+
+```bash
+java ch.heigvd.toolshare.Main
+```
+
+> [!IMPORTANT] Lors de l'exécution, utilisez le nom complet de la classe avec
+> son package (points, pas de slashes) : `java ch.heigvd.toolshare.Main`
+
+> [!TIP] Pour faciliter la compilation de projets complexes, vous pouvez
+> compiler tous les fichiers Java d'un coup :
+>
+> ```bash
+> javac **/*.java
+> ```
+>
+> Cette commande compile récursivement tous les fichiers `.java` dans tous les
+> sous-dossiers.
 
 ## Importer des classes
 
