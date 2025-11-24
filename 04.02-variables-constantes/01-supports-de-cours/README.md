@@ -119,7 +119,7 @@ Pensez à ces exemples concrets :
 
    - L'étiquette s'appelle `myName`
    - Elle contient du **texte** (une chaîne de caractères)
-   - Sa valeur actuelle est `"Marie"`
+   - Sa valeur actuelle est `"Rune"`
 
 4. **Un interrupteur** 💡
    - L'interrupteur s'appelle `lampOn`
@@ -214,7 +214,7 @@ Mon panier contient 5 pommes
 **Phrase descriptive :**
 
 ```text
-Marie a 20 ans. Dans 5 ans, elle aura 25 ans.
+Rune a 20 ans. Dans 5 ans, elle aura 25 ans.
 ```
 
 **Diagramme UML :**
@@ -222,9 +222,9 @@ Marie a 20 ans. Dans 5 ans, elle aura 25 ans.
 ```plantuml
 @startuml
 start
-:Marie a 20 ans aujourd'hui;
+:Rune a 20 ans aujourd'hui;
 :Je calcule son âge dans 5 ans (20 + 5);
-:Dans 5 ans, Marie aura 25 ans;
+:Dans 5 ans, Rune aura 25 ans;
 stop
 @enduml
 ```
@@ -236,14 +236,14 @@ stop
 ```java
 public class CalculateAge {
     public static void main(String[] args) {
-        // L'âge actuel de Marie
+        // L'âge actuel de Rune
         int currentAge = 20;
 
         // Je calcule son âge dans 5 ans
         int futureAge = currentAge + 5;
 
         // J'affiche le résultat
-        System.out.println("Marie a " + currentAge + " ans aujourd'hui");
+        System.out.println("Rune a " + currentAge + " ans aujourd'hui");
         System.out.println("Dans 5 ans, elle aura " + futureAge + " ans");
     }
 }
@@ -252,7 +252,7 @@ public class CalculateAge {
 **Résultat dans la console :**
 
 ```
-Marie a 20 ans aujourd'hui
+Rune a 20 ans aujourd'hui
 Dans 5 ans, elle aura 25 ans
 ```
 
@@ -520,9 +520,9 @@ Je veux afficher un message de bienvenue avec le nom de l'utilisatrice.
 ```plantuml
 @startuml
 start
-:Le nom de l'utilisatrice est "Sophie";
+:Le nom de l'utilisatrice est "Khaya";
 :Je crée un message de bienvenue;
-:J'affiche "Bienvenue Sophie !";
+:J'affiche "Bienvenue Khaya !";
 stop
 @enduml
 ```
@@ -535,7 +535,7 @@ stop
 public class WelcomeMessage {
     public static void main(String[] args) {
         // Le nom de l'utilisatrice
-        String name = "Sophie";
+        String name = "Khaya";
 
         // Je crée le message de bienvenue
         String message = "Bienvenue " + name + " !";
@@ -549,13 +549,13 @@ public class WelcomeMessage {
 **Résultat dans la console :**
 
 ```
-Bienvenue Sophie !
+Bienvenue Khaya !
 ```
 
 **Explications :**
 
-- `String name = "Sophie";` → Je crée une variable de type texte avec le nom
-  "Sophie"
+- `String name = "Khaya";` → Je crée une variable de type texte avec le nom
+  "Khaya"
 - Les textes (String) sont toujours entourés de guillemets doubles `"`
 - Le symbole `+` permet de **concaténer** (coller ensemble) plusieurs textes
 

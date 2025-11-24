@@ -99,7 +99,7 @@ public class Main {
         System.out.println();
 
         // Fonction qui retourne un String
-        String greeting = generateGreeting("Sophie", " après-midi");
+        String greeting = generateGreeting("Khaya", " après-midi");
         System.out.println(greeting);
 
         // Exemple d'utilisation dans un calcul

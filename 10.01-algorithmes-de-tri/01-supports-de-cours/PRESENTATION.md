@@ -289,13 +289,13 @@ Un tri est **stable** s'il préserve l'ordre relatif des éléments égaux.
 
 ```
 Avant tri par âge :
-Alice 25, Bob 30, Charlie 25
+Ariel 25, Nox 30, Amaru 25
 
 Tri stable :
-Alice 25, Charlie 25, Bob 30  ← Alice avant Charlie
+Ariel 25, Amaru 25, Nox 30  ← Ariel avant Amaru
 
 Tri non stable :
-Charlie 25, Alice 25, Bob 30  ← Ordre inversé !
+Amaru 25, Ariel 25, Nox 30  ← Ordre inversé !
 ```
 
 **Importance** : Tri multi-critères (trier par âge puis par nom).

@@ -136,7 +136,7 @@ Ce qui est problématique :
 ```java
 public class Main {
     public static void main(String[] args) {
-        String user_name = "Alice";    // snake_case
+        String user_name = "Ariel";    // snake_case
         int TotalPoints = 100;         // PascalCase
         double average-score = 85.5;   // kebab-case (ne compile même pas!)
     }
@@ -148,7 +148,7 @@ Ce qui est cohérent :
 ```java
 public class Main {
     public static void main(String[] args) {
-        String userName = "Alice";     // camelCase
+        String userName = "Ariel";     // camelCase
         int totalPoints = 100;         // camelCase
         double averageScore = 85.5;    // camelCase
     }
@@ -162,7 +162,7 @@ public class Main {
     public static void main(String[] args) {
         // Trop court, pas clair
         int x = 25;
-        String n = "Alice";
+        String n = "Ariel";
 
         // Nom en français alors que le code est en anglais
         double prixTotal = 99.99;
@@ -186,7 +186,7 @@ public class Main {
     public static void main(String[] args) {
         // Noms clairs et explicites
         int age = 25;
-        String firstName = "Alice";
+        String firstName = "Ariel";
         double totalPrice = 99.99;
         int activeUserCount = 10;
 

@@ -74,7 +74,7 @@ public class Main {
         System.out.println("=== Exemple : Portée des variables ===\n");
 
         // 'userName' est une variable locale à la fonction main
-        String userName = "Alice";
+        String userName = "Ariel";
         System.out.println("Utilisateur : " + userName);
         System.out.println();
 

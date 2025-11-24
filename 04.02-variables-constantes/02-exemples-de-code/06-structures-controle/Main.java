@@ -13,7 +13,7 @@ public class Main {
         // 1. SÉQUENCE : instructions dans l'ordre
         // ========================================
         System.out.println("=== 1. Séquence ===");
-        String playerName = "Alice";
+        String playerName = "Ariel";
         int initialHealth = 100;
         int damage = 25;
         int finalHealth = initialHealth - damage;

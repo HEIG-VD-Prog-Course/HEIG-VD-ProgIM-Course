@@ -75,9 +75,9 @@ public class Main {
     public static void testAccessControl() {
         System.out.println("--- Test 2 : Contrôle d'accès ---");
 
-        checkAccess("Alice", 25, true); // Devrait avoir accès
-        checkAccess("Bob", 17, true); // Devrait être refusé (mineur)
-        checkAccess("Charlie", 25, false); // Devrait être refusé (pas membre)
+        checkAccess("Ariel", 25, true); // Devrait avoir accès
+        checkAccess("Nox", 17, true); // Devrait être refusé (mineur)
+        checkAccess("Amaru", 25, false); // Devrait être refusé (pas membre)
 
         System.out.println();
     }

@@ -414,9 +414,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        saluer("Alice"); // Affiche "Bonjour Alice !"
-        saluer("Bob");   // Affiche "Bonjour Bob !"
-        saluer("Charlie"); // Affiche "Bonjour Charlie !"
+        saluer("Ariel"); // Affiche "Bonjour Ariel !"
+        saluer("Nox");   // Affiche "Bonjour Nox !"
+        saluer("Amaru"); // Affiche "Bonjour Amaru !"
     }
 }
 ```
@@ -691,9 +691,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String facture = creerFacture("Alice", 3, 15.50);
+        String facture = creerFacture("Ariel", 3, 15.50);
         System.out.println(facture);
-        // Affiche : Facture pour Alice : 3 articles à 15.5 CHF = 46.5 CHF
+        // Affiche : Facture pour Ariel : 3 articles à 15.5 CHF = 46.5 CHF
     }
 }
 ```

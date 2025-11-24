@@ -394,10 +394,10 @@ Arrays.sort(numbers);
 System.out.println(Arrays.toString(numbers));
 // Affiche : [1, 2, 5, 8, 9]
 
-String[] names = {"Charlie", "Alice", "Bob"};
+String[] names = {"Amaru", "Ariel", "Nox"};
 Arrays.sort(names);
 System.out.println(Arrays.toString(names));
-// Affiche : [Alice, Bob, Charlie]
+// Affiche : [Ariel, Nox, Amaru]
 ```
 
 ### Copie avec copyOf

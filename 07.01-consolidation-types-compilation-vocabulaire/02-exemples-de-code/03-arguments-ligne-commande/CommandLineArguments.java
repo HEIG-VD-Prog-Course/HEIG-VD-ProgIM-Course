@@ -5,7 +5,7 @@
  * arguments passés au programme lors de son exécution.
  * 
  * Exemple d'exécution :
- * java CommandLineArguments Alice 25 Lausanne
+ * java CommandLineArguments Ariel 25 Lausanne
  * 
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
@@ -32,7 +32,7 @@ public class CommandLineArguments {
         if (args.length == 0) {
             System.out.println("Aucun argument passé au programme.");
             System.out.println();
-            System.out.println("Essayez : java CommandLineArguments Alice Bob Charlie");
+            System.out.println("Essayez : java CommandLineArguments Ariel Nox Amaru");
         } else {
             for (int i = 0; i < args.length; i++) {
                 System.out.println("Argument " + i + " : " + args[i]);
@@ -154,7 +154,7 @@ public class CommandLineArguments {
         System.out.println("5. Les arguments sont toujours des String (conversion nécessaire)");
         System.out.println();
         System.out.println("Pour passer un argument avec des espaces, utilisez des guillemets :");
-        System.out.println("  java CommandLineArguments \"Alice Dupont\"");
+        System.out.println("  java CommandLineArguments \"Ariel Sacha\"");
     }
 
     public static void main(String[] args) {

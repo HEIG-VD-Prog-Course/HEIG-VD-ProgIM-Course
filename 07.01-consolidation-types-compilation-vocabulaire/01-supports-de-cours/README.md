@@ -492,7 +492,7 @@ Développement → .java → javac → .class → JVM (Windows/Linux/Mac/...)
 On peut passer des **arguments** à un programme Java lors de son exécution :
 
 ```bash
-java HelloWorld Alice Bob Charlie
+java HelloWorld Ariel Nox Amaru
 ```
 
 Ces arguments sont accessibles via le tableau `String[] args` dans la méthode
@@ -521,13 +521,13 @@ public class Greeting {
 
 ```bash
 javac Greeting.java
-java Greeting Alice
+java Greeting Ariel
 ```
 
 **Sortie :**
 
 ```text
-Bonjour Alice !
+Bonjour Ariel !
 ```
 
 > [!TIP] > `args.length` donne le nombre d'arguments. `args[0]` est le premier

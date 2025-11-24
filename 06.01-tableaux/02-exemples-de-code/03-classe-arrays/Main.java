@@ -57,7 +57,7 @@ public class Main {
 
         // Tri de chaînes de caractères
         System.out.println("\nTri de noms...");
-        String[] names = { "Charlie", "Alice", "Bob", "David" };
+        String[] names = { "Amaru", "Ariel", "Nox", "David" };
         System.out.println("Avant tri : " + Arrays.toString(names));
         Arrays.sort(names);
         System.out.println("Après tri : " + Arrays.toString(names));

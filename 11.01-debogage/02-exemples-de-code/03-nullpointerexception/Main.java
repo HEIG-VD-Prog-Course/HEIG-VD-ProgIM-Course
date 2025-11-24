@@ -14,8 +14,8 @@ public class Main {
         System.out.println("=== Débogage : NullPointerException ===\n");
 
         // Créer quelques étudiants
-        Student alice = new Student("Alice", 20);
-        Student bob = new Student("Bob", 22);
+        Student alice = new Student("Ariel", 20);
+        Student bob = new Student("Nox", 22);
         Student charlie = null; // BUG : charlie n'est pas initialisé
 
         // Afficher les informations
@@ -77,7 +77,7 @@ class Student {
  * 
  * 1. Dans main() :
  * - Initialiser charlie correctement :
- * Student charlie = new Student("Charlie", 19);
+ * Student charlie = new Student("Amaru", 19);
  * 
  * Ou vérifier avant d'utiliser :
  * if (charlie != null) {

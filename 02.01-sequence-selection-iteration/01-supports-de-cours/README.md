@@ -115,7 +115,7 @@ garde-manger :
 En programmation, c'est pareil :
 
 - Une variable nommée `age` peut contenir le nombre 25
-- Une variable nommée `name` peut contenir le texte "Marie"
+- Une variable nommée `name` peut contenir le texte "Rune"
 - Une variable nommée `temperature` peut contenir le nombre 18.5
 
 ### Comment utiliser les variables ?
@@ -140,7 +140,7 @@ FIN
 
 - **Nombres entiers** : 1, 2, 100, -5
 - **Nombres décimaux** : 3.14, 18.5, -2.7
-- **Texte** : "Bonjour", "Marie", "Programmation"
+- **Texte** : "Bonjour", "Rune", "Programmation"
 - **Vrai/Faux** : vrai, faux (pour les conditions)
 
 **Règles importantes** :

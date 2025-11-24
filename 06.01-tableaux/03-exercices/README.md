@@ -359,11 +359,11 @@ public class Main {
 
 ```text
 Bulletin de la classe :
-Alice : 5.5 - Réussi
-Bob : 3.5 - Échoué
-Charlie : 4.0 - Réussi
-Diana : 5.0 - Réussi
-Eve : 3.0 - Échoué
+Ariel : 5.5 - Réussi
+Nox : 3.5 - Échoué
+Amaru : 4.0 - Réussi
+Ayo : 5.0 - Réussi
+Ren : 3.0 - Échoué
 
 Taux de réussite : 60.0%
 ```
@@ -380,7 +380,7 @@ public class Main {
         System.out.println("=== Exercice 5 : Gestion d'une classe ===\n");
 
         // Tableaux parallèles
-        String[] names = {"Alice", "Bob", "Charlie", "Diana", "Eve"};
+        String[] names = {"Ariel", "Nox", "Amaru", "Ayo", "Ren"};
         double[] grades = {5.5, 3.5, 4.0, 5.0, 3.0};
         boolean[] passed = new boolean[names.length];
 

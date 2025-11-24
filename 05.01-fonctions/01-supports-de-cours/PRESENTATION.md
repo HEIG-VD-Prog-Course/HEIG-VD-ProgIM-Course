@@ -118,8 +118,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        sayHello("Alice"); // Affiche "Bonjour Alice !"
-        sayHello("Bob");   // Affiche "Bonjour Bob !"
+        sayHello("Ariel"); // Affiche "Bonjour Ariel !"
+        sayHello("Nox");   // Affiche "Bonjour Nox !"
     }
 }
 ```

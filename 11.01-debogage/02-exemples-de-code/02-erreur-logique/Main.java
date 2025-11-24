@@ -15,9 +15,9 @@ public class Main {
         System.out.println("=== Débogage : Erreur logique ===\n");
 
         // Tester différents âges
-        checkAge("Alice", 25);
-        checkAge("Bob", 17);
-        checkAge("Charlie", 18);
+        checkAge("Ariel", 25);
+        checkAge("Nox", 17);
+        checkAge("Amaru", 18);
         checkAge("David", 12);
 
         System.out.println("\n--- Test de calcul de moyenne ---\n");
