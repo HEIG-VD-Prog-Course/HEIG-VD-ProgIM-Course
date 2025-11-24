@@ -131,6 +131,9 @@ society.
    Prefer epicene forms (e.g., "l'utilisatrice", "la personne qui étudie", "la
    personne qui développe") over masculine defaults or middle-point notation
    (point médian). This promotes inclusivity while maintaining readability
+8. **Simple apostrophes**: Always use simple apostrophes (') instead of
+   typographic apostrophes (’) in all text content (Markdown files, Java
+   comments, etc.). This ensures consistency and avoids encoding issues
 
 ### Author Attribution
 
