@@ -447,8 +447,9 @@ public class Vocabulary {
 
 **Méthode** : fonction définie **à l'intérieur d'une classe** (terme Java)
 
-En Java, **toutes les fonctions sont des méthodes** car elles sont toujours dans
-une classe.
+En Java, **toutes les méthodes sont des fonctions, mais pas toutes les fonctions
+sont des méthodes**. Comme tout le code Java est dans une classe, nos fonctions
+sont toujours des méthodes.
 
 ```java
 public class Example {
