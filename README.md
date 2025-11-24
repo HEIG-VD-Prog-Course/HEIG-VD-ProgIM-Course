@@ -53,7 +53,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [02](#-cours-02) | Séquence, sélection et itération                                                         |
 | [03](#-cours-03) | Itération                                                                                |
 | [04](#-cours-04) | Java & Variables & Constantes                                                            |
-| [05](#-cours-05) | Fonctions, Entrée/sortie/encodage, Bonnes pratiques & Préparation au test                |
+| [05](#-cours-05) | Fonctions, Entrée/sortie/encodage & Bonnes pratiques                                     |
 | [06](#-cours-06) | Tableaux                                                                                 |
 | [07](#-cours-07) | Consolidation : Types, compilation et vocabulaire                                        |
 | [08](#-cours-08) | Bibliothèques et packages                                                                |
@@ -166,15 +166,6 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
 - Exercices :
   [Lien vers le contenu](./05.03-bonnes-pratiques/02-exercices/README.md)
-
-### Préparation au test
-
-- Supports de cours :
-  [Lien vers le contenu](./05.04-preparation-test/01-supports-de-cours/README.md)
-  ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/05.04-preparation-test-presentation.pdf)
 
 ## 🕕 Cours 06
 
