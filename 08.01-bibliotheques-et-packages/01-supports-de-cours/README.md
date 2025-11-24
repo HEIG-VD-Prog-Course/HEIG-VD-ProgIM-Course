@@ -40,8 +40,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Exemple concret : Fonctions utilitaires pour une bibliothèque d'outils](#exemple-concret--fonctions-utilitaires-pour-une-bibliothèque-doutils)
 - [Consulter la documentation Java](#consulter-la-documentation-java)
 - [Conclusion](#conclusion)
-- [Exemples de code](#exemples-de-code)
-- [Exercices](#exercices)
 - [Sources et liens utiles](#sources-et-liens-utiles)
 
 ## Objectifs
@@ -501,7 +499,9 @@ public class Main {
 ## Consulter la documentation Java
 
 Pour explorer les packages et classes disponibles en Java, vous pouvez consulter
-la documentation officielle sur [dev.java](https://dev.java/learn/packages/).
+la documentation officielle Java API sur
+<https://docs.oracle.com/javase/8/docs/api/> ou la plateforme moderne
+[dev.java](https://dev.java/learn/packages/).
 
 > [!IMPORTANT] La documentation Java est votre meilleure alliée pour découvrir
 > de nouvelles classes et comprendre comment les utiliser. Prenez l'habitude de
@@ -516,7 +516,7 @@ La plateforme dev.java propose :
 
 Pour trouver une classe spécifique :
 
-1. Visitez [dev.java/learn](https://dev.java/learn/)
+1. Visitez <https://docs.oracle.com/javase/8/docs/api/>
 2. Recherchez le package concerné (par exemple, `java.util`)
 3. Consultez la liste des classes disponibles
 4. Lisez la description, les constructeurs et les méthodes
@@ -558,18 +558,6 @@ Points clés à retenir :
 
 Dans les prochains cours, nous continuerons à utiliser ces bibliothèques pour
 créer des programmes plus sophistiqués.
-
-## Exemples de code
-
-Des exemples pratiques sont disponibles dans le dossier
-[02-exemples-de-code](../02-exemples-de-code/) pour illustrer les concepts vus
-dans ce cours.
-
-## Exercices
-
-Des exercices pratiques sont disponibles dans le dossier
-[03-exercices](../03-exercices/) pour mettre en pratique l'organisation du code
-en packages et l'utilisation des bibliothèques standard.
 
 ## Sources et liens utiles
 

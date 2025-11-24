@@ -57,6 +57,7 @@ consultez le [support de cours][cours]._
 À la fin de cette séance, vous devriez être capable de :
 
 - Utiliser les bibliothèques standard Java (java.util, java.time, java.io).
+- Créer des packages personnalisés avec des fonctions utilitaires.
 - Consulter la documentation Java pour explorer de nouvelles classes.
 
 ![bg right:40%][illustration-objectifs]
@@ -150,6 +151,9 @@ Package d'utilitaires essentiels :
 import java.util.Scanner;
 
 Scanner scanner = new Scanner(System.in);
+
+String name = scanner.nextLine();
+int age = scanner.nextInt();
 ```
 
 ## Bibliothèque java.util (2/2)
@@ -162,6 +166,9 @@ import java.util.Random;
 Random random = new Random();
 int dice = random.nextInt(6) + 1;
 ```
+
+`+ 1` pour obtenir un nombre entre 1 et 6. Sans cela, on obtient un nombre entre
+0 et 5.
 
 ## Bibliothèque java.time (1/4)
 
@@ -242,12 +249,65 @@ BigDecimal quantity = new BigDecimal("3");
 BigDecimal total = price.multiply(quantity);
 ```
 
+## Exemple : Packages personnalisés (1/3)
+
+**Création d'un package utilitaire :**
+
+Structure du projet :
+
+```text
+03-packages-personnalises/
+├── Main.java
+└── utils/
+    ├── Calculator.java
+    └── Formatter.java
+```
+
+Organisation simple et claire !
+
+## Exemple : Packages personnalisés (2/3)
+
+```java
+// utils/Calculator.java
+package utils;
+
+public class Calculator {
+    public static double average(double[] values) {
+        if (values.length == 0) return 0;
+        double sum = 0;
+        for (double value : values) {
+            sum += value;
+        }
+        return sum / values.length;
+    }
+    public static double max(double[] values) { /* ... */ }
+    public static double min(double[] values) { /* ... */ }
+}
+```
+
+## Exemple : Packages personnalisés (3/3)
+
+```java
+// Main.java
+import utils.Calculator;
+import utils.Formatter;
+
+public class Main {
+    public static void main(String[] args) {
+        double[] data = {7.0, 14.0, 3.5, 21.0};
+
+        double avg = Calculator.average(data);
+        System.out.println("Moyenne : " + avg);
+}   }
+```
+
+Voir l'exemple dans `02-exemples-de-code/03-packages-personnalises/`
+
 ## Documentation Java
 
 **Consulter la documentation :**
 
-Plateforme officielle dev.java :
-[dev.java/learn/packages/](https://dev.java/learn/packages/)
+Documentation officielle Java API : <https://docs.oracle.com/javase/8/docs/api/>
 
 **Utilisation :**
 
