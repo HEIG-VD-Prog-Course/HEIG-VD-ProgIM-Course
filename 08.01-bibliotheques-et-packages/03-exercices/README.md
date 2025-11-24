@@ -16,488 +16,249 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.01-bibliotheques-et-packages/01-supports-de-cours/08.01-bibliotheques-et-packages-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 
-## Exercice 1 : Gestion de tâches avec `ArrayList`
+## Exercice 1 : Calculs statistiques avec `java.util.Arrays`
 
-Créez un programme de gestion de tâches qui utilise `ArrayList` pour stocker des
-tâches sous forme de chaînes de caractères.
+Créez un programme qui calcule des statistiques sur un tableau de températures
+relevées pendant une semaine.
 
-Le programme doit permettre de :
+Le programme doit :
 
-1. Ajouter une nouvelle tâche.
-2. Afficher toutes les tâches.
-3. Marquer une tâche comme terminée (la supprimer de la liste).
-4. Compter le nombre de tâches restantes.
-
-Utilisez un menu simple avec `Scanner` pour interagir avec l'utilisatrice.
+1. Déclarer un tableau de 7 températures (une par jour).
+2. Utiliser `Arrays.sort()` pour trier les températures.
+3. Calculer la température moyenne (sans utiliser de fonctions préexistantes).
+4. Afficher la température minimale et maximale (premier et dernier élément
+   après tri).
+5. Utiliser `Arrays.toString()` pour afficher le tableau trié.
 
 <details>
-<summary>Solution</summary>
+<summary>Solution - Approche 1 : Tout dans le main</summary>
 
 ```java
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Arrays;
 
-public class TaskManager {
+public class Main {
     public static void main(String[] args) {
-        ArrayList<String> tasks = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        boolean running = true;
+        System.out.println("=== Statistiques de températures ===\n");
 
-        System.out.println("=== Gestionnaire de tâches ===\n");
+        // Températures de la semaine (en degrés Celsius)
+        double[] temperatures = {18.5, 22.3, 19.8, 21.0, 17.5, 20.2, 23.1};
 
-        while (running) {
-            System.out.println("\n1. Ajouter une tâche");
-            System.out.println("2. Afficher les tâches");
-            System.out.println("3. Marquer une tâche comme terminée");
-            System.out.println("4. Nombre de tâches restantes");
-            System.out.println("5. Quitter");
-            System.out.print("\nChoix : ");
+        System.out.println("Températures originales : " + Arrays.toString(temperatures));
 
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Consommer le retour à la ligne
+        // Tri des températures
+        Arrays.sort(temperatures);
+        System.out.println("Températures triées : " + Arrays.toString(temperatures));
 
-            switch (choice) {
-                case 1:
-                    System.out.print("Nouvelle tâche : ");
-                    String task = scanner.nextLine();
-                    tasks.add(task);
-                    System.out.println("Tâche ajoutée !");
-                    break;
-
-                case 2:
-                    System.out.println("\n=== Liste des tâches ===");
-                    if (tasks.isEmpty()) {
-                        System.out.println("Aucune tâche.");
-                    } else {
-                        for (int i = 0; i < tasks.size(); i++) {
-                            System.out.println((i + 1) + ". " + tasks.get(i));
-                        }
-                    }
-                    break;
-
-                case 3:
-                    if (tasks.isEmpty()) {
-                        System.out.println("Aucune tâche à terminer.");
-                    } else {
-                        System.out.print("Numéro de la tâche terminée : ");
-                        int taskNumber = scanner.nextInt();
-                        scanner.nextLine();
-
-                        if (taskNumber > 0 && taskNumber <= tasks.size()) {
-                            String completed = tasks.remove(taskNumber - 1);
-                            System.out.println("Tâche terminée : " + completed);
-                        } else {
-                            System.out.println("Numéro invalide.");
-                        }
-                    }
-                    break;
-
-                case 4:
-                    System.out.println("Nombre de tâches restantes : " + tasks.size());
-                    break;
-
-                case 5:
-                    running = false;
-                    System.out.println("Au revoir !");
-                    break;
-
-                default:
-                    System.out.println("Choix invalide.");
-            }
+        // Calcul de la moyenne
+        double sum = 0;
+        for (int i = 0; i < temperatures.length; i++) {
+            sum = sum + temperatures[i];
         }
+        double average = sum / temperatures.length;
 
-        scanner.close();
+        // Affichage des statistiques
+        System.out.println("\n--- Statistiques ---");
+        System.out.println("Température minimale : " + temperatures[0] + "°C");
+        System.out.println("Température maximale : " + temperatures[temperatures.length - 1] + "°C");
+        System.out.println("Température moyenne : " + average + "°C");
     }
 }
 ```
 
 </details>
 
-## Exercice 2 : Générateur de nombres aléatoires
+<details>
+<summary>Solution - Approche 2 : Avec fonctions statiques</summary>
 
-Créez un programme qui simule un jeu de devinette avec `Random`.
+```java
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== Statistiques de températures ===\n");
+
+        // Températures de la semaine (en degrés Celsius)
+        double[] temperatures = {18.5, 22.3, 19.8, 21.0, 17.5, 20.2, 23.1};
+
+        displayStatistics(temperatures);
+    }
+
+    private static void displayStatistics(double[] data) {
+        System.out.println("Températures originales : " + Arrays.toString(data));
+
+        // Tri des températures
+        Arrays.sort(data);
+        System.out.println("Températures triées : " + Arrays.toString(data));
+
+        // Calcul et affichage des statistiques
+        System.out.println("\n--- Statistiques ---");
+        System.out.println("Température minimale : " + findMin(data) + "°C");
+        System.out.println("Température maximale : " + findMax(data) + "°C");
+        System.out.println("Température moyenne : " + calculateAverage(data) + "°C");
+    }
+
+    private static double findMin(double[] data) {
+        return data[0];
+    }
+
+    private static double findMax(double[] data) {
+        return data[data.length - 1];
+    }
+
+    private static double calculateAverage(double[] data) {
+        double sum = 0;
+        for (int i = 0; i < data.length; i++) {
+            sum = sum + data[i];
+        }
+        return sum / data.length;
+    }
+}
+```
+
+Cette approche organise mieux le code en séparant les responsabilités dans des
+fonctions distinctes.
+
+</details>
+
+## Exercice 2 : Jeu de dés avec `java.util.Random`
+
+Créez un jeu où deux joueurs lancent chacun deux dés. Le joueur avec le total le
+plus élevé gagne.
 
 Le programme doit :
 
-1. Générer un nombre aléatoire entre 1 et 100.
-2. Demander à l'utilisatrice de deviner le nombre.
-3. Indiquer si la réponse est trop haute, trop basse, ou correcte.
-4. Compter le nombre de tentatives.
-5. À la fin, afficher des statistiques (nombre de tentatives, pourcentage de
-   réussite par rapport au nombre optimal).
+1. Utiliser `Random` pour simuler les lancers de dés.
+2. Calculer le total pour chaque joueur.
+3. Déterminer le gagnant ou déclarer une égalité.
+4. Afficher les résultats de manière claire.
+5. Permettre de jouer plusieurs manches (par exemple 5 manches).
 
 <details>
-<summary>Solution</summary>
+<summary>Solution - Approche 1 : Boucle simple</summary>
 
 ```java
 import java.util.Random;
-import java.util.Scanner;
 
-public class GuessNumber {
+public class Main {
     public static void main(String[] args) {
+        System.out.println("=== Jeu de dés ===\n");
+
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
+        int wins1 = 0;
+        int wins2 = 0;
+        int rounds = 5;
 
-        System.out.println("=== Jeu de devinette ===\n");
-        System.out.println("Je pense à un nombre entre 1 et 100.");
-        System.out.println("Pouvez-vous le deviner ?\n");
+        for (int round = 1; round <= rounds; round++) {
+            System.out.println("--- Manche " + round + " ---");
 
-        // Génération du nombre secret
-        int secretNumber = random.nextInt(100) + 1;
-        int attempts = 0;
-        boolean found = false;
+            // Lancers pour le joueur 1
+            int dice1Player1 = random.nextInt(6) + 1;
+            int dice2Player1 = random.nextInt(6) + 1;
+            int totalPlayer1 = dice1Player1 + dice2Player1;
 
-        // Boucle de jeu
-        while (!found) {
-            System.out.print("Votre proposition : ");
-            int guess = scanner.nextInt();
-            attempts++;
+            // Lancers pour le joueur 2
+            int dice1Player2 = random.nextInt(6) + 1;
+            int dice2Player2 = random.nextInt(6) + 1;
+            int totalPlayer2 = dice1Player2 + dice2Player2;
 
-            if (guess < secretNumber) {
-                System.out.println("Trop petit ! Essayez encore.\n");
-            } else if (guess > secretNumber) {
-                System.out.println("Trop grand ! Essayez encore.\n");
+            // Affichage des résultats
+            System.out.println("Joueur 1 : " + dice1Player1 + " + " + dice2Player1 + " = " + totalPlayer1);
+            System.out.println("Joueur 2 : " + dice1Player2 + " + " + dice2Player2 + " = " + totalPlayer2);
+
+            // Détermination du gagnant
+            if (totalPlayer1 > totalPlayer2) {
+                System.out.println("Joueur 1 gagne !\n");
+                wins1 = wins1 + 1;
+            } else if (totalPlayer2 > totalPlayer1) {
+                System.out.println("Joueur 2 gagne !\n");
+                wins2 = wins2 + 1;
             } else {
-                found = true;
-                System.out.println("\n🎉 Bravo ! Vous avez trouvé le nombre " +
-                        secretNumber + " en " + attempts + " tentatives.");
+                System.out.println("Égalité !\n");
             }
         }
 
-        // Statistiques
-        System.out.println("\n=== Statistiques ===");
-        System.out.println("Nombre de tentatives : " + attempts);
+        // Résultat final
+        System.out.println("=== Résultat final ===");
+        System.out.println("Joueur 1 : " + wins1 + " victoire(s)");
+        System.out.println("Joueur 2 : " + wins2 + " victoire(s)");
 
-        // Le nombre optimal de tentatives pour deviner entre 1 et 100
-        // est de 7 (log2(100) ≈ 6.64)
-        int optimalAttempts = 7;
-        double efficiency = ((double) optimalAttempts / attempts) * 100;
-
-        System.out.println("Nombre optimal : " + optimalAttempts);
-        System.out.println("Efficacité : " + efficiency + "%");
-
-        if (attempts <= optimalAttempts) {
-            System.out.println("Excellent ! Vous avez été très efficace.");
-        } else if (attempts <= optimalAttempts * 2) {
-            System.out.println("Bien joué ! Vous pouvez encore vous améliorer.");
+        if (wins1 > wins2) {
+            System.out.println("Joueur 1 remporte le match !");
+        } else if (wins2 > wins1) {
+            System.out.println("Joueur 2 remporte le match !");
         } else {
-            System.out.println("Continuez à vous entraîner !");
+            System.out.println("Match nul !");
         }
-
-        scanner.close();
     }
 }
 ```
 
 </details>
 
-## Exercice 3 : Gestion d'événements avec `LocalDateTime`
-
-Créez un système de gestion d'événements qui utilise `java.time` pour manipuler
-des dates et des heures.
-
-Le programme doit :
-
-1. Créer plusieurs événements avec un nom, une date et une heure.
-2. Afficher tous les événements futurs (après maintenant).
-3. Calculer le temps restant jusqu'au prochain événement.
-4. Trier les événements par ordre chronologique.
-5. Formater l'affichage de manière lisible.
-
 <details>
-<summary>Solution</summary>
+<summary>Solution - Approche 2 : Avec fonctions statiques</summary>
 
 ```java
-import java.time.LocalDateTime;
-import java.time.Duration;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Random;
 
-class Event {
-    private String name;
-    private LocalDateTime dateTime;
-
-    public Event(String name, LocalDateTime dateTime) {
-        this.name = name;
-        this.dateTime = dateTime;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
-
-    public boolean isFuture() {
-        return dateTime.isAfter(LocalDateTime.now());
-    }
-
-    public Duration getDurationUntil() {
-        return Duration.between(LocalDateTime.now(), dateTime);
-    }
-
-    @Override
-    public String toString() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy à HH:mm");
-        return name + " - " + dateTime.format(formatter);
-    }
-}
-
-public class EventManager {
+public class Main {
     public static void main(String[] args) {
-        System.out.println("=== Gestionnaire d'événements ===\n");
+        System.out.println("=== Jeu de dés ===\n");
 
-        // Création des événements
-        ArrayList<Event> events = new ArrayList<>();
-        LocalDateTime now = LocalDateTime.now();
+        Random random = new Random();
+        int wins1 = 0;
+        int wins2 = 0;
+        int rounds = 5;
 
-        events.add(new Event("Réunion d'équipe", now.plusDays(2).withHour(14).withMinute(0)));
-        events.add(new Event("Présentation projet", now.plusDays(7).withHour(10).withMinute(30)));
-        events.add(new Event("Formation Java", now.plusDays(1).withHour(9).withMinute(0)));
-        events.add(new Event("Revue de code", now.plusDays(5).withHour(16).withMinute(0)));
-        events.add(new Event("Événement passé", now.minusDays(2).withHour(15).withMinute(0)));
+        for (int round = 1; round <= rounds; round++) {
+            System.out.println("--- Manche " + round + " ---");
 
-        // Filtrage des événements futurs
-        ArrayList<Event> futureEvents = new ArrayList<>();
-        for (Event event : events) {
-            if (event.isFuture()) {
-                futureEvents.add(event);
+            int totalPlayer1 = rollTwoDice(random);
+            int totalPlayer2 = rollTwoDice(random);
+
+            System.out.println("Joueur 1 : " + totalPlayer1);
+            System.out.println("Joueur 2 : " + totalPlayer2);
+
+            String result = determineWinner(totalPlayer1, totalPlayer2);
+            System.out.println(result + "\n");
+
+            if (result.contains("Joueur 1")) {
+                wins1 = wins1 + 1;
+            } else if (result.contains("Joueur 2")) {
+                wins2 = wins2 + 1;
             }
         }
 
-        // Tri chronologique
-        Collections.sort(futureEvents, new Comparator<Event>() {
-            @Override
-            public int compare(Event e1, Event e2) {
-                return e1.getDateTime().compareTo(e2.getDateTime());
-            }
-        });
+        displayFinalResult(wins1, wins2);
+    }
 
-        // Affichage des événements futurs
-        System.out.println("Événements à venir :\n");
-        for (Event event : futureEvents) {
-            System.out.println(event);
-        }
+    private static int rollTwoDice(Random random) {
+        int dice1 = random.nextInt(6) + 1;
+        int dice2 = random.nextInt(6) + 1;
+        return dice1 + dice2;
+    }
 
-        // Prochain événement
-        if (!futureEvents.isEmpty()) {
-            Event nextEvent = futureEvents.get(0);
-            Duration timeUntil = nextEvent.getDurationUntil();
-
-            long days = timeUntil.toDays();
-            long hours = timeUntil.toHours() % 24;
-            long minutes = timeUntil.toMinutes() % 60;
-
-            System.out.println("\n=== Prochain événement ===");
-            System.out.println(nextEvent);
-            System.out.println("Dans " + days + " jours, " + hours + " heures et " + minutes + " minutes");
+    private static String determineWinner(int score1, int score2) {
+        if (score1 > score2) {
+            return "Joueur 1 gagne !";
+        } else if (score2 > score1) {
+            return "Joueur 2 gagne !";
         } else {
-            System.out.println("\nAucun événement à venir.");
+            return "Égalité !";
         }
-
-        // Statistiques
-        System.out.println("\n=== Statistiques ===");
-        System.out.println("Total d'événements : " + events.size());
-        System.out.println("Événements futurs : " + futureEvents.size());
-        System.out.println("Événements passés : " + (events.size() - futureEvents.size()));
-    }
-}
-```
-
-</details>
-
-## Exercice 4 : Carnet d'adresses avec fichiers
-
-Créez un carnet d'adresses qui sauvegarde et charge les contacts depuis un
-fichier texte.
-
-Le programme doit :
-
-1. Permettre d'ajouter des contacts (nom, téléphone, email).
-2. Afficher tous les contacts.
-3. Rechercher un contact par nom.
-4. Sauvegarder tous les contacts dans un fichier `contacts.txt`.
-5. Charger les contacts depuis le fichier au démarrage.
-
-Format du fichier : une ligne par contact avec les champs séparés par des
-points-virgules.
-
-<details>
-<summary>Solution</summary>
-
-```java
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-class Contact {
-    private String name;
-    private String phone;
-    private String email;
-
-    public Contact(String name, String phone, String email) {
-        this.name = name;
-        this.phone = phone;
-        this.email = email;
     }
 
-    public String getName() {
-        return name;
-    }
+    private static void displayFinalResult(int wins1, int wins2) {
+        System.out.println("=== Résultat final ===");
+        System.out.println("Joueur 1 : " + wins1 + " victoire(s)");
+        System.out.println("Joueur 2 : " + wins2 + " victoire(s)");
 
-    public String toFileLine() {
-        return name + ";" + phone + ";" + email;
-    }
-
-    public static Contact fromFileLine(String line) {
-        String[] parts = line.split(";");
-        if (parts.length == 3) {
-            return new Contact(parts[0], parts[1], parts[2]);
-        }
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%-20s | %-15s | %s", name, phone, email);
-    }
-}
-
-public class AddressBook {
-    private static final String FILENAME = "contacts.txt";
-    private static ArrayList<Contact> contacts = new ArrayList<>();
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Chargement des contacts
-        loadContacts();
-
-        System.out.println("=== Carnet d'adresses ===\n");
-        boolean running = true;
-
-        while (running) {
-            System.out.println("\n1. Ajouter un contact");
-            System.out.println("2. Afficher tous les contacts");
-            System.out.println("3. Rechercher un contact");
-            System.out.println("4. Sauvegarder et quitter");
-            System.out.print("\nChoix : ");
-
-            int choice = scanner.nextInt();
-            scanner.nextLine();
-
-            switch (choice) {
-                case 1:
-                    addContact(scanner);
-                    break;
-                case 2:
-                    displayContacts();
-                    break;
-                case 3:
-                    searchContact(scanner);
-                    break;
-                case 4:
-                    saveContacts();
-                    running = false;
-                    System.out.println("Au revoir !");
-                    break;
-                default:
-                    System.out.println("Choix invalide.");
-            }
-        }
-
-        scanner.close();
-    }
-
-    private static void addContact(Scanner scanner) {
-        System.out.print("Nom : ");
-        String name = scanner.nextLine();
-
-        System.out.print("Téléphone : ");
-        String phone = scanner.nextLine();
-
-        System.out.print("Email : ");
-        String email = scanner.nextLine();
-
-        contacts.add(new Contact(name, phone, email));
-        System.out.println("Contact ajouté !");
-    }
-
-    private static void displayContacts() {
-        System.out.println("\n=== Liste des contacts ===\n");
-
-        if (contacts.isEmpty()) {
-            System.out.println("Aucun contact.");
+        if (wins1 > wins2) {
+            System.out.println("Joueur 1 remporte le match !");
+        } else if (wins2 > wins1) {
+            System.out.println("Joueur 2 remporte le match !");
         } else {
-            System.out.println(String.format("%-20s | %-15s | %s",
-                    "Nom", "Téléphone", "Email"));
-            System.out.println("-".repeat(60));
-
-            for (Contact contact : contacts) {
-                System.out.println(contact);
-            }
-        }
-    }
-
-    private static void searchContact(Scanner scanner) {
-        System.out.print("Nom à rechercher : ");
-        String searchName = scanner.nextLine();
-
-        boolean found = false;
-        for (Contact contact : contacts) {
-            if (contact.getName().toLowerCase().contains(searchName.toLowerCase())) {
-                if (!found) {
-                    System.out.println("\n=== Résultats ===\n");
-                    found = true;
-                }
-                System.out.println(contact);
-            }
-        }
-
-        if (!found) {
-            System.out.println("Aucun contact trouvé.");
-        }
-    }
-
-    private static void loadContacts() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILENAME))) {
-            String line;
-            int count = 0;
-
-            while ((line = reader.readLine()) != null) {
-                Contact contact = Contact.fromFileLine(line);
-                if (contact != null) {
-                    contacts.add(contact);
-                    count++;
-                }
-            }
-
-            System.out.println(count + " contacts chargés depuis " + FILENAME);
-
-        } catch (IOException e) {
-            System.out.println("Aucun fichier de contacts trouvé. Démarrage avec un carnet vide.");
-        }
-    }
-
-    private static void saveContacts() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILENAME))) {
-            for (Contact contact : contacts) {
-                writer.write(contact.toFileLine());
-                writer.newLine();
-            }
-
-            System.out.println(contacts.size() + " contacts sauvegardés dans " + FILENAME);
-
-        } catch (IOException e) {
-            System.err.println("Erreur lors de la sauvegarde : " + e.getMessage());
+            System.out.println("Match nul !");
         }
     }
 }
@@ -505,479 +266,574 @@ public class AddressBook {
 
 </details>
 
-## Exercice 5 : Calculatrice avec `BigDecimal`
+## Exercice 3 : Calcul d'âge avec `java.time.LocalDate`
 
-Créez une calculatrice qui utilise `BigDecimal` de `java.math` pour effectuer
-des calculs précis avec des nombres décimaux.
-
-Le programme doit :
-
-1. Permettre d'effectuer les opérations de base (addition, soustraction,
-   multiplication, division).
-2. Gérer la précision des résultats (nombre de décimales).
-3. Afficher l'historique des calculs effectués.
-4. Calculer des pourcentages et des puissances.
-
-<details>
-<summary>Solution</summary>
-
-```java
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class PreciseCalculator {
-    private static ArrayList<String> history = new ArrayList<>();
-    private static final int PRECISION = 10; // Nombre de décimales
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        boolean running = true;
-
-        System.out.println("=== Calculatrice précise ===\n");
-
-        while (running) {
-            System.out.println("\n1. Addition");
-            System.out.println("2. Soustraction");
-            System.out.println("3. Multiplication");
-            System.out.println("4. Division");
-            System.out.println("5. Pourcentage");
-            System.out.println("6. Puissance");
-            System.out.println("7. Afficher l'historique");
-            System.out.println("8. Quitter");
-            System.out.print("\nChoix : ");
-
-            int choice = scanner.nextInt();
-
-            if (choice >= 1 && choice <= 6) {
-                System.out.print("Premier nombre : ");
-                BigDecimal a = scanner.nextBigDecimal();
-
-                System.out.print("Second nombre : ");
-                BigDecimal b = scanner.nextBigDecimal();
-
-                BigDecimal result = null;
-                String operation = "";
-
-                switch (choice) {
-                    case 1:
-                        result = a.add(b);
-                        operation = "+";
-                        break;
-                    case 2:
-                        result = a.subtract(b);
-                        operation = "-";
-                        break;
-                    case 3:
-                        result = a.multiply(b);
-                        operation = "×";
-                        break;
-                    case 4:
-                        if (b.compareTo(BigDecimal.ZERO) == 0) {
-                            System.out.println("Erreur : division par zéro !");
-                            continue;
-                        }
-                        result = a.divide(b, PRECISION, RoundingMode.HALF_UP);
-                        operation = "÷";
-                        break;
-                    case 5:
-                        // Calcul de "a" est "b"% de quoi
-                        result = a.multiply(b).divide(
-                                new BigDecimal("100"),
-                                PRECISION,
-                                RoundingMode.HALF_UP
-                        );
-                        operation = "% de";
-                        break;
-                    case 6:
-                        // Puissance (limité aux entiers pour b)
-                        try {
-                            int exponent = b.intValueExact();
-                            result = a.pow(exponent);
-                            operation = "^";
-                        } catch (ArithmeticException e) {
-                            System.out.println("Erreur : l'exposant doit être un entier.");
-                            continue;
-                        }
-                        break;
-                }
-
-                if (result != null) {
-                    // Suppression des zéros inutiles
-                    result = result.stripTrailingZeros();
-
-                    String calculation = a + " " + operation + " " + b + " = " + result;
-                    history.add(calculation);
-
-                    System.out.println("\nRésultat : " + result);
-                }
-
-            } else if (choice == 7) {
-                displayHistory();
-            } else if (choice == 8) {
-                running = false;
-                System.out.println("Au revoir !");
-            } else {
-                System.out.println("Choix invalide.");
-            }
-        }
-
-        scanner.close();
-    }
-
-    private static void displayHistory() {
-        System.out.println("\n=== Historique des calculs ===\n");
-
-        if (history.isEmpty()) {
-            System.out.println("Aucun calcul effectué.");
-        } else {
-            for (int i = 0; i < history.size(); i++) {
-                System.out.println((i + 1) + ". " + history.get(i));
-            }
-        }
-    }
-}
-```
-
-</details>
-
-## Exercice 6 : Bibliothèque de livres
-
-Créez un système de gestion de bibliothèque qui utilise plusieurs concepts vus
-dans ce cours.
+Créez un programme qui calcule l'âge précis d'une personne à partir de sa date
+de naissance.
 
 Le programme doit :
 
-1. Gérer une collection de livres (titre, auteur, année, disponibilité).
-2. Utiliser `ArrayList` pour stocker les livres.
-3. Calculer des statistiques (livre le plus ancien, nombre de livres par
-   auteur).
-4. Sauvegarder et charger la bibliothèque depuis un fichier.
-5. Permettre d'emprunter et de retourner des livres avec des dates.
-6. Afficher les livres empruntés avec leur date de retour prévue.
+1. Utiliser `LocalDate` pour représenter la date de naissance et la date
+   actuelle.
+2. Calculer l'âge en années.
+3. Calculer également le nombre de jours depuis la naissance.
+4. Indiquer dans combien de jours aura lieu le prochain anniversaire.
 
 <details>
-<summary>Solution</summary>
+<summary>Solution - Approche 1 : Calculs directs</summary>
 
 ```java
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.time.temporal.ChronoUnit;
 
-class Book {
-    private String title;
-    private String author;
-    private int year;
-    private boolean available;
-    private LocalDate dueDate;
-
-    public Book(String title, String author, int year) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
-        this.available = true;
-        this.dueDate = null;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public LocalDate getDueDate() {
-        return dueDate;
-    }
-
-    public void borrow(int days) {
-        available = false;
-        dueDate = LocalDate.now().plusDays(days);
-    }
-
-    public void returnBook() {
-        available = true;
-        dueDate = null;
-    }
-
-    public String toFileLine() {
-        String dueDateStr;
-        if (dueDate != null) {
-            dueDateStr = dueDate.toString();
-        } else {
-            dueDateStr = "";
-        }
-        return title + ";" + author + ";" + year + ";" + available + ";" + dueDateStr;
-    }
-
-    public static Book fromFileLine(String line) {
-        String[] parts = line.split(";");
-        if (parts.length >= 4) {
-            Book book = new Book(parts[0], parts[1], Integer.parseInt(parts[2]));
-            book.available = Boolean.parseBoolean(parts[3]);
-
-            if (parts.length == 5 && !parts[4].isEmpty()) {
-                book.dueDate = LocalDate.parse(parts[4]);
-            }
-
-            return book;
-        }
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        String status;
-        if (available) {
-            status = "Disponible";
-        } else {
-            status = "Emprunté";
-        }
-        String info = String.format("%-30s | %-20s | %d | %s",
-                title, author, year, status);
-
-        if (!available && dueDate != null) {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            info += " (retour: " + dueDate.format(formatter) + ")";
-        }
-
-        return info;
-    }
-}
-
-public class Library {
-    private static final String FILENAME = "library.txt";
-    private static ArrayList<Book> books = new ArrayList<>();
-
+public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        loadLibrary();
+        System.out.println("=== Calcul d'âge ===\n");
 
-        System.out.println("=== Système de bibliothèque ===\n");
-        boolean running = true;
+        // Date de naissance (exemple : 15 mars 2005)
+        LocalDate birthDate = LocalDate.of(2005, 3, 15);
+        LocalDate today = LocalDate.now();
 
-        while (running) {
-            System.out.println("\n1. Ajouter un livre");
-            System.out.println("2. Afficher tous les livres");
-            System.out.println("3. Emprunter un livre");
-            System.out.println("4. Retourner un livre");
-            System.out.println("5. Statistiques");
-            System.out.println("6. Sauvegarder et quitter");
-            System.out.print("\nChoix : ");
+        System.out.println("Date de naissance : " + birthDate);
+        System.out.println("Date actuelle : " + today);
+        System.out.println();
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+        // Calcul de l'âge en années
+        int age = today.getYear() - birthDate.getYear();
 
-            switch (choice) {
-                case 1:
-                    addBook(scanner);
-                    break;
-                case 2:
-                    displayBooks();
-                    break;
-                case 3:
-                    borrowBook(scanner);
-                    break;
-                case 4:
-                    returnBook(scanner);
-                    break;
-                case 5:
-                    displayStatistics();
-                    break;
-                case 6:
-                    saveLibrary();
-                    running = false;
-                    System.out.println("Au revoir !");
-                    break;
-                default:
-                    System.out.println("Choix invalide.");
-            }
+        // Ajustement si l'anniversaire n'est pas encore passé cette année
+        LocalDate birthdayThisYear = birthDate.withYear(today.getYear());
+        if (today.isBefore(birthdayThisYear)) {
+            age = age - 1;
         }
 
-        scanner.close();
-    }
+        // Calcul du nombre de jours depuis la naissance
+        long daysSinceBirth = ChronoUnit.DAYS.between(birthDate, today);
 
-    private static void addBook(Scanner scanner) {
-        System.out.print("Titre : ");
-        String title = scanner.nextLine();
-
-        System.out.print("Auteur : ");
-        String author = scanner.nextLine();
-
-        System.out.print("Année : ");
-        int year = scanner.nextInt();
-        scanner.nextLine();
-
-        books.add(new Book(title, author, year));
-        System.out.println("Livre ajouté !");
-    }
-
-    private static void displayBooks() {
-        System.out.println("\n=== Catalogue ===\n");
-
-        if (books.isEmpty()) {
-            System.out.println("Aucun livre dans la bibliothèque.");
+        // Calcul du prochain anniversaire
+        LocalDate nextBirthday;
+        if (today.isBefore(birthdayThisYear)) {
+            nextBirthday = birthdayThisYear;
+        } else if (today.isEqual(birthdayThisYear)) {
+            nextBirthday = birthdayThisYear;
         } else {
-            for (int i = 0; i < books.size(); i++) {
-                System.out.println((i + 1) + ". " + books.get(i));
-            }
-        }
-    }
-
-    private static void borrowBook(Scanner scanner) {
-        displayBooks();
-
-        if (books.isEmpty()) {
-            return;
+            nextBirthday = birthDate.withYear(today.getYear() + 1);
         }
 
-        System.out.print("\nNuméro du livre à emprunter : ");
-        int bookNumber = scanner.nextInt();
-        scanner.nextLine();
+        long daysUntilBirthday = ChronoUnit.DAYS.between(today, nextBirthday);
 
-        if (bookNumber > 0 && bookNumber <= books.size()) {
-            Book book = books.get(bookNumber - 1);
+        // Affichage des résultats
+        System.out.println("--- Résultats ---");
+        System.out.println("Âge : " + age + " ans");
+        System.out.println("Jours depuis la naissance : " + daysSinceBirth + " jours");
 
-            if (book.isAvailable()) {
-                System.out.print("Durée de l'emprunt (jours) : ");
-                int days = scanner.nextInt();
-                scanner.nextLine();
-
-                book.borrow(days);
-                System.out.println("Livre emprunté ! À retourner avant le " +
-                        book.getDueDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-            } else {
-                System.out.println("Ce livre est déjà emprunté.");
-            }
+        if (daysUntilBirthday == 0) {
+            System.out.println("Bon anniversaire !");
         } else {
-            System.out.println("Numéro invalide.");
-        }
-    }
-
-    private static void returnBook(Scanner scanner) {
-        // Afficher seulement les livres empruntés
-        System.out.println("\n=== Livres empruntés ===\n");
-
-        ArrayList<Integer> borrowedIndices = new ArrayList<>();
-        for (int i = 0; i < books.size(); i++) {
-            if (!books.get(i).isAvailable()) {
-                borrowedIndices.add(i);
-                System.out.println((borrowedIndices.size()) + ". " + books.get(i));
-            }
-        }
-
-        if (borrowedIndices.isEmpty()) {
-            System.out.println("Aucun livre emprunté.");
-            return;
-        }
-
-        System.out.print("\nNuméro du livre à retourner : ");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
-
-        if (choice > 0 && choice <= borrowedIndices.size()) {
-            Book book = books.get(borrowedIndices.get(choice - 1));
-            book.returnBook();
-            System.out.println("Livre retourné !");
-        } else {
-            System.out.println("Numéro invalide.");
-        }
-    }
-
-    private static void displayStatistics() {
-        System.out.println("\n=== Statistiques ===\n");
-
-        int available = 0;
-        int borrowed = 0;
-        int oldestYear = Integer.MAX_VALUE;
-        String oldestBook = "";
-
-        // Comptage par auteur
-        HashMap<String, Integer> authorCounts = new HashMap<>();
-
-        for (Book book : books) {
-            if (book.isAvailable()) {
-                available++;
-            } else {
-                borrowed++;
-            }
-
-            if (book.getYear() < oldestYear) {
-                oldestYear = book.getYear();
-                oldestBook = book.getTitle();
-            }
-
-            String author = book.getAuthor();
-            authorCounts.put(author, authorCounts.getOrDefault(author, 0) + 1);
-        }
-
-        System.out.println("Nombre total de livres : " + books.size());
-        System.out.println("Livres disponibles : " + available);
-        System.out.println("Livres empruntés : " + borrowed);
-
-        if (!books.isEmpty()) {
-            System.out.println("\nLivre le plus ancien :");
-            System.out.println("  " + oldestBook + " (" + oldestYear + ")");
-        }
-
-        System.out.println("\nNombre de livres par auteur :");
-        for (String author : authorCounts.keySet()) {
-            System.out.println("  " + author + " : " + authorCounts.get(author));
-        }
-    }
-
-    private static void loadLibrary() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILENAME))) {
-            String line;
-            int count = 0;
-
-            while ((line = reader.readLine()) != null) {
-                Book book = Book.fromFileLine(line);
-                if (book != null) {
-                    books.add(book);
-                    count++;
-                }
-            }
-
-            System.out.println(count + " livres chargés depuis " + FILENAME + "\n");
-
-        } catch (IOException e) {
-            System.out.println("Aucune bibliothèque trouvée. Démarrage avec une collection vide.\n");
-        }
-    }
-
-    private static void saveLibrary() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILENAME))) {
-            for (Book book : books) {
-                writer.write(book.toFileLine());
-                writer.newLine();
-            }
-
-            System.out.println(books.size() + " livres sauvegardés dans " + FILENAME);
-
-        } catch (IOException e) {
-            System.err.println("Erreur lors de la sauvegarde : " + e.getMessage());
+            System.out.println("Prochain anniversaire dans : " + daysUntilBirthday + " jours");
         }
     }
 }
 ```
+
+</details>
+
+<details>
+<summary>Solution - Approche 2 : Avec fonctions statiques réutilisables</summary>
+
+```java
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== Calcul d'âge ===\n");
+
+        // Date de naissance (exemple : 15 mars 2005)
+        LocalDate birthDate = LocalDate.of(2005, 3, 15);
+        LocalDate today = LocalDate.now();
+
+        System.out.println("Date de naissance : " + birthDate);
+        System.out.println("Date actuelle : " + today);
+        System.out.println();
+
+        displayAgeStatistics(birthDate, today);
+    }
+
+    private static void displayAgeStatistics(LocalDate birthDate, LocalDate referenceDate) {
+        int age = calculateAge(birthDate, referenceDate);
+        long daysSinceBirth = calculateDaysSinceBirth(birthDate, referenceDate);
+        long daysUntilBirthday = calculateDaysUntilBirthday(birthDate, referenceDate);
+
+        System.out.println("--- Résultats ---");
+        System.out.println("Âge : " + age + " ans");
+        System.out.println("Jours depuis la naissance : " + daysSinceBirth + " jours");
+
+        if (daysUntilBirthday == 0) {
+            System.out.println("Bon anniversaire !");
+        } else {
+            System.out.println("Prochain anniversaire dans : " + daysUntilBirthday + " jours");
+        }
+    }
+
+    private static int calculateAge(LocalDate birthDate, LocalDate referenceDate) {
+        int age = referenceDate.getYear() - birthDate.getYear();
+
+        LocalDate birthdayThisYear = birthDate.withYear(referenceDate.getYear());
+        if (referenceDate.isBefore(birthdayThisYear)) {
+            age = age - 1;
+        }
+
+        return age;
+    }
+
+    private static long calculateDaysSinceBirth(LocalDate birthDate, LocalDate referenceDate) {
+        return ChronoUnit.DAYS.between(birthDate, referenceDate);
+    }
+
+    private static long calculateDaysUntilBirthday(LocalDate birthDate, LocalDate referenceDate) {
+        LocalDate birthdayThisYear = birthDate.withYear(referenceDate.getYear());
+
+        LocalDate nextBirthday;
+        if (referenceDate.isAfter(birthdayThisYear)) {
+            nextBirthday = birthDate.withYear(referenceDate.getYear() + 1);
+        } else {
+            nextBirthday = birthdayThisYear;
+        }
+
+        return ChronoUnit.DAYS.between(referenceDate, nextBirthday);
+    }
+}
+```
+
+</details>
+
+## Exercice 4 : Package utilitaire personnalisé
+
+Créez votre propre package utilitaire avec des fonctions statiques pour des
+calculs mathématiques.
+
+Structure à créer :
+
+```text
+src/
+├── utils/
+│   └── MathHelper.java
+└── Main.java
+```
+
+Le package `utils.MathHelper` doit contenir les fonctions statiques suivantes :
+
+1. `isPrime(int n)` : vérifie si un nombre est premier
+2. `factorial(int n)` : calcule la factorielle d'un nombre
+3. `sumDigits(int n)` : calcule la somme des chiffres d'un nombre
+4. `isPalindrome(int n)` : vérifie si un nombre est un palindrome
+
+Le programme principal doit importer et utiliser ces fonctions.
+
+<details>
+<summary>Solution - Approche 1 : Algorithmes simples</summary>
+
+**Fichier : `utils/MathHelper.java`**
+
+```java
+package utils;
+
+public class MathHelper {
+
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static int factorial(int n) {
+        if (n < 0) {
+            return -1;
+        }
+
+        int result = 1;
+        for (int i = 2; i <= n; i++) {
+            result = result * i;
+        }
+
+        return result;
+    }
+
+    public static int sumDigits(int n) {
+        int sum = 0;
+        int number = n;
+
+        if (number < 0) {
+            number = -number;
+        }
+
+        while (number > 0) {
+            sum = sum + (number % 10);
+            number = number / 10;
+        }
+
+        return sum;
+    }
+
+    public static boolean isPalindrome(int n) {
+        int original = n;
+        int reversed = 0;
+
+        if (n < 0) {
+            return false;
+        }
+
+        while (n > 0) {
+            reversed = reversed * 10 + (n % 10);
+            n = n / 10;
+        }
+
+        return original == reversed;
+    }
+}
+```
+
+**Fichier : `Main.java`**
+
+```java
+import utils.MathHelper;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== Tests MathHelper ===\n");
+
+        // Test isPrime
+        System.out.println("--- Test isPrime ---");
+        int[] numbersToTest = {2, 7, 10, 17, 20};
+        for (int i = 0; i < numbersToTest.length; i++) {
+            int num = numbersToTest[i];
+            System.out.println(num + " est premier : " + MathHelper.isPrime(num));
+        }
+
+        // Test factorial
+        System.out.println("\n--- Test factorial ---");
+        for (int i = 0; i <= 6; i++) {
+            System.out.println(i + "! = " + MathHelper.factorial(i));
+        }
+
+        // Test sumDigits
+        System.out.println("\n--- Test sumDigits ---");
+        int[] digitTests = {123, 456, 789, 1000};
+        for (int i = 0; i < digitTests.length; i++) {
+            int num = digitTests[i];
+            System.out.println("Somme des chiffres de " + num + " = " + MathHelper.sumDigits(num));
+        }
+
+        // Test isPalindrome
+        System.out.println("\n--- Test isPalindrome ---");
+        int[] palindromeTests = {121, 123, 1221, 12321};
+        for (int i = 0; i < palindromeTests.length; i++) {
+            int num = palindromeTests[i];
+            System.out.println(num + " est palindrome : " + MathHelper.isPalindrome(num));
+        }
+    }
+}
+```
+
+**Compilation et exécution :**
+
+```bash
+javac utils/MathHelper.java Main.java
+java Main
+```
+
+</details>
+
+<details>
+<summary>Solution - Approche 2 : Algorithmes optimisés</summary>
+
+**Fichier : `utils/MathHelper.java`**
+
+```java
+package utils;
+
+public class MathHelper {
+
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        if (n == 2) {
+            return true;
+        }
+        if (n % 2 == 0) {
+            return false;
+        }
+
+        // On teste seulement jusqu'à la racine carrée
+        int limit = (int) Math.sqrt(n);
+        for (int i = 3; i <= limit; i = i + 2) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static long factorial(int n) {
+        if (n < 0) {
+            return -1;
+        }
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+
+        long result = 1;
+        for (int i = 2; i <= n; i++) {
+            result = result * i;
+        }
+
+        return result;
+    }
+
+    public static int sumDigits(int n) {
+        int number = Math.abs(n);
+        int sum = 0;
+
+        while (number > 0) {
+            sum = sum + (number % 10);
+            number = number / 10;
+        }
+
+        return sum;
+    }
+
+    public static boolean isPalindrome(int n) {
+        if (n < 0) {
+            return false;
+        }
+
+        // Conversion en chaîne pour comparer
+        String str = String.valueOf(n);
+        int length = str.length();
+
+        for (int i = 0; i < length / 2; i++) {
+            if (str.charAt(i) != str.charAt(length - 1 - i)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+```
+
+**Fichier : `Main.java`** (identique à l'approche 1)
+
+Cette approche optimise les algorithmes :
+
+- `isPrime()` : Teste uniquement jusqu'à la racine carrée et ignore les nombres
+  pairs
+- `factorial()` : Utilise `long` pour éviter les dépassements et gère les cas de
+  base
+- `sumDigits()` : Utilise `Math.abs()` pour simplifier le traitement des nombres
+  négatifs
+- `isPalindrome()` : Utilise une comparaison de chaînes, plus lisible
+
+</details>
+
+## Exercice 5 : Simulation de bibliothèque d'outils
+
+Créez un programme qui simule une bibliothèque d'outils communautaire en
+utilisant des tableaux et des fonctions statiques dans un package personnalisé.
+
+Structure à créer :
+
+```text
+src/
+├── utils/
+│   └── ToolStats.java
+└── Main.java
+```
+
+Le package `utils.ToolStats` doit contenir :
+
+1. `countAvailable(int[] quantities)` : compte le nombre d'outils disponibles
+2. `calculateUsageRate(int borrowed, int total)` : calcule le taux d'utilisation
+   en pourcentage
+3. `findMostBorrowed(int[] borrowed)` : trouve l'indice de l'outil le plus
+   emprunté
+
+Le programme principal doit :
+
+1. Gérer un tableau de noms d'outils
+2. Gérer un tableau de quantités disponibles
+3. Gérer un tableau de quantités empruntées
+4. Afficher des statistiques en utilisant les fonctions de `ToolStats`
+
+<details>
+<summary>Solution - Approche 1 : Affichage simple</summary>
+
+**Fichier : `utils/ToolStats.java`**
+
+```java
+package utils;
+
+public class ToolStats {
+
+    public static int countAvailable(int[] quantities) {
+        int count = 0;
+        for (int i = 0; i < quantities.length; i++) {
+            count = count + quantities[i];
+        }
+        return count;
+    }
+
+    public static double calculateUsageRate(int borrowed, int total) {
+        if (total == 0) {
+            return 0.0;
+        }
+        return (borrowed * 100.0) / total;
+    }
+
+    public static int findMostBorrowed(int[] borrowed) {
+        if (borrowed.length == 0) {
+            return -1;
+        }
+
+        int maxIndex = 0;
+        int maxValue = borrowed[0];
+
+        for (int i = 1; i < borrowed.length; i++) {
+            if (borrowed[i] > maxValue) {
+                maxValue = borrowed[i];
+                maxIndex = i;
+            }
+        }
+
+        return maxIndex;
+    }
+}
+```
+
+**Fichier : `Main.java`**
+
+```java
+import utils.ToolStats;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== Bibliothèque d'outils communautaire ===\n");
+
+        // Données de la bibliothèque
+        String[] toolNames = {"Perceuse", "Scie circulaire", "Ponceuse", "Marteau", "Tournevis"};
+        int[] available = {3, 2, 4, 5, 6};
+        int[] borrowed = {2, 3, 1, 2, 1};
+
+        // Affichage de l'inventaire
+        System.out.println("--- Inventaire ---");
+        for (int i = 0; i < toolNames.length; i++) {
+            int total = available[i] + borrowed[i];
+            double usageRate = ToolStats.calculateUsageRate(borrowed[i], total);
+            System.out.println(toolNames[i] + " : " + available[i] + " disponible(s), " +
+                             borrowed[i] + " emprunté(s), taux d'utilisation : " +
+                             usageRate + "%");
+        }
+
+        // Statistiques globales
+        System.out.println("\n--- Statistiques globales ---");
+        int totalAvailable = ToolStats.countAvailable(available);
+        int totalBorrowed = ToolStats.countAvailable(borrowed);
+        System.out.println("Total disponible : " + totalAvailable + " outil(s)");
+        System.out.println("Total emprunté : " + totalBorrowed + " outil(s)");
+
+        // Outil le plus populaire
+        int mostBorrowedIndex = ToolStats.findMostBorrowed(borrowed);
+        System.out.println("\nOutil le plus emprunté : " + toolNames[mostBorrowedIndex] +
+                         " (" + borrowed[mostBorrowedIndex] + " emprunt(s))");
+    }
+}
+```
+
+**Compilation et exécution :**
+
+```bash
+javac utils/ToolStats.java Main.java
+java Main
+```
+
+</details>
+
+<details>
+<summary>Solution - Approche 2 : Avec fonctions d'affichage réutilisables</summary>
+
+**Fichier : `utils/ToolStats.java`** (identique à l'approche 1)
+
+**Fichier : `Main.java`**
+
+```java
+import utils.ToolStats;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== Bibliothèque d'outils communautaire ===\n");
+
+        // Données de la bibliothèque
+        String[] toolNames = {"Perceuse", "Scie circulaire", "Ponceuse", "Marteau", "Tournevis"};
+        int[] available = {3, 2, 4, 5, 6};
+        int[] borrowed = {2, 3, 1, 2, 1};
+
+        displayInventory(toolNames, available, borrowed);
+        displayGlobalStatistics(available, borrowed);
+        displayMostBorrowed(toolNames, borrowed);
+    }
+
+    private static void displayInventory(String[] names, int[] available, int[] borrowed) {
+        System.out.println("--- Inventaire ---");
+        for (int i = 0; i < names.length; i++) {
+            int total = available[i] + borrowed[i];
+            double usageRate = ToolStats.calculateUsageRate(borrowed[i], total);
+
+            String formattedRate = String.format("%.1f", usageRate);
+            System.out.println(names[i] + " : " + available[i] + " disponible(s), " +
+                             borrowed[i] + " emprunté(s), taux : " + formattedRate + "%");
+        }
+    }
+
+    private static void displayGlobalStatistics(int[] available, int[] borrowed) {
+        System.out.println("\n--- Statistiques globales ---");
+
+        int totalAvailable = ToolStats.countAvailable(available);
+        int totalBorrowed = ToolStats.countAvailable(borrowed);
+        int grandTotal = totalAvailable + totalBorrowed;
+
+        double globalUsageRate = ToolStats.calculateUsageRate(totalBorrowed, grandTotal);
+        String formattedRate = String.format("%.1f", globalUsageRate);
+
+        System.out.println("Total disponible : " + totalAvailable + " outil(s)");
+        System.out.println("Total emprunté : " + totalBorrowed + " outil(s)");
+        System.out.println("Taux d'utilisation global : " + formattedRate + "%");
+    }
+
+    private static void displayMostBorrowed(String[] names, int[] borrowed) {
+        int mostBorrowedIndex = ToolStats.findMostBorrowed(borrowed);
+
+        if (mostBorrowedIndex >= 0) {
+            System.out.println("\n--- Outil le plus populaire ---");
+            System.out.println(names[mostBorrowedIndex] + " : " +
+                             borrowed[mostBorrowedIndex] + " emprunt(s)");
+        }
+    }
+}
+```
+
+Cette approche organise l'affichage en fonctions séparées, ce qui rend le code
+plus modulaire et plus facile à maintenir.
 
 </details>
 

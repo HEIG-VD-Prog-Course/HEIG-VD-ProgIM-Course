@@ -50,8 +50,7 @@ consultez le [support de cours][cours]._
 - Organiser son code en packages.
 - Importer et utiliser des classes d'autres packages.
 - Utiliser les bibliothèques standard Java (java.util, java.time, java.io).
-- Lire la documentation Java (Javadoc).
-- Comprendre la visibilité et l'encapsulation.
+- Consulter la documentation Java pour explorer de nouvelles classes.
 
 ![bg right:40%][illustration-objectifs]
 
@@ -98,16 +97,16 @@ Les packages correspondent à une structure de dossiers :
 src/
 ├── ch/
 │   └── heigvd/
-│       └── bank/
+│       └── toolshare/
 │           ├── models/
-│           │   ├── Account.java
-│           │   └── Customer.java
+│           │   ├── Tool.java
+│           │   └── Member.java
 │           └── services/
-│               └── BankService.java
+│               └── LoanService.java
 ```
 
-Le package `ch.heigvd.bank.models` correspond au dossier
-`src/ch/heigvd/bank/models/`.
+Le package `ch.heigvd.toolshare.models` correspond au dossier
+`src/ch/heigvd/toolshare/models/`.
 
 ## Importer des classes
 
@@ -275,89 +274,72 @@ BigDecimal quantity = new BigDecimal("3");
 BigDecimal total = price.multiply(quantity);
 ```
 
-## Modificateurs d'accès
+## Exemple concret : Bibliothèque d'outils
 
-Contrôlent la visibilité des classes et membres :
-
-| Modificateur | Classe | Package | Sous-classe | Monde |
-| ------------ | ------ | ------- | ----------- | ----- |
-| public       | ✓      | ✓       | ✓           | ✓     |
-| protected    | ✓      | ✓       | ✓           | ✗     |
-| (aucun)      | ✓      | ✓       | ✗           | ✗     |
-| private      | ✓      | ✗       | ✗           | ✗     |
-
-**Bonne pratique :** Utiliser `private` par défaut, `public` seulement si
-nécessaire.
-
-## Exemple de visibilité
+Les bibliothèques d'outils communautaires permettent de partager des ressources
+:
 
 ```java
 package models;
 
-public class BankAccount {
-    private double balance;  // Accessible uniquement dans cette classe
+public class Tool {
+    private String name;
+    private String category;
+    private int availableQuantity;
 
-    public void deposit(double amount) {  // Accessible partout
-        if (amount > 0) {
-            balance += amount;
-        }
+    public Tool(String name, String category, int quantity) {
+        this.name = name;
+        this.category = category;
+        this.availableQuantity = quantity;
     }
 
-    double getBalance() {  // Package-private (accessible dans 'models')
-        return balance;
+    public boolean isAvailable() {
+        return availableQuantity > 0;
     }
 }
 ```
 
-## Documentation Java (Javadoc)
+## Exemple concret : Organisation en packages
 
-**Lire la Javadoc :**
+Une application de gestion organisée :
 
-Documentation officielle de l'API Java :
-[docs.oracle.com/en/java/javase/17/docs/api/](https://docs.oracle.com/en/java/javase/17/docs/api/)
+```java
+// Dans models/Tool.java
+package models;
+public class Tool { /* ... */ }
+
+// Dans models/ToolLibrary.java
+package models;
+import java.util.ArrayList;
+public class ToolLibrary { /* ... */ }
+
+// Dans Main.java
+import models.Tool;
+import models.ToolLibrary;
+
+public class Main {
+    public static void main(String[] args) {
+        ToolLibrary library = new ToolLibrary("Atelier du Quartier");
+        library.addTool(new Tool("Perceuse", "Électroportatif", 5));
+    }
+}
+```
+
+## Documentation Java
+
+**Consulter la documentation :**
+
+Plateforme officielle dev.java :
+[dev.java/learn/packages/](https://dev.java/learn/packages/)
 
 **Utilisation :**
 
 1. Rechercher le package (ex: `java.util`)
-2. Cliquer sur la classe (ex: `ArrayList`)
+2. Explorer les classes disponibles (ex: `ArrayList`)
 3. Lire la description, constructeurs et méthodes
+4. Consulter les exemples de code
 
-**Essentiel pour apprendre à utiliser de nouvelles classes !**
-
-## Écrire de la Javadoc
-
-Documenter votre code avec des commentaires spéciaux :
-
-```java
-/**
- * Représente un compte bancaire simple.
- *
- * @author V. Guidoux
- * @version 1.0
- */
-public class BankAccount {
-    /**
-     * Dépose un montant sur le compte.
-     *
-     * @param amount le montant à déposer
-     * @return le nouveau solde
-     */
-    public double deposit(double amount) {
-        // ...
-    }
-}
-```
-
-## Balises Javadoc courantes
-
-- `@param` : Décrit un paramètre
-- `@return` : Décrit la valeur de retour
-- `@throws` : Décrit une exception
-- `@author` : Indique l'auteur
-- `@version` : Indique la version
-- `@see` : Référence à une autre classe/méthode
-
-**Bonne pratique :** Documenter toutes les classes et méthodes publiques.
+**Développe votre autonomie en programmation !**
 
 ## Points clés à retenir
 
@@ -369,8 +351,8 @@ public class BankAccount {
   - `java.time` : Dates et heures
   - `java.io` : Entrées/sorties
   - `java.math` : Calculs précis
-- Les **modificateurs d'accès** contrôlent la visibilité.
-- La **Javadoc** est la documentation de référence.
+- La documentation sur **dev.java** aide à explorer l'API Java.
+- Organiser son code en packages favorise la réutilisation.
 
 ![bg right:40%][illustration-conclusion]
 
@@ -379,7 +361,7 @@ public class BankAccount {
 - Relire le support de cours.
 - Explorer les exemples de code.
 - Faire les exercices.
-- Consulter la Javadoc pour découvrir de nouvelles classes.
+- Consulter dev.java pour découvrir de nouvelles classes.
 - Poser des questions si nécessaire.
 
 **La programmation s'apprend par la pratique !**

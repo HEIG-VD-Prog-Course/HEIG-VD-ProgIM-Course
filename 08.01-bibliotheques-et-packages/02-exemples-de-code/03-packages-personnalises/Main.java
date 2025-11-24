@@ -26,7 +26,7 @@ public class Main {
 
         // Données : durées d'emprunt enregistrées (en jours)
         // Ces données représentent les emprunts effectués ce mois
-        double[] loanDurations = { 7.0, 14.0, 3.5, 21.0, 10.0, 7.0, 14.0, 5.0 };
+        double[] loanDurations = {7.0, 14.0, 3.5, 21.0, 10.0, 7.0, 14.0, 5.0};
 
         System.out.println("=== Analyse des emprunts du mois ===\n");
         System.out.println("Nombre d'emprunts enregistrés : " + loanDurations.length);
@@ -45,34 +45,34 @@ public class Main {
         double minDuration = Calculator.min(loanDurations);
         double maxDuration = Calculator.max(loanDurations);
 
-        System.out.println("Durée moyenne d'emprunt : " +
+        System.out.println("Durée moyenne d'emprunt : " + 
                 String.format("%.2f", avgDuration) + " jours");
-        System.out.println("Durée minimale : " +
+        System.out.println("Durée minimale : " + 
                 String.format("%.2f", minDuration) + " jours");
-        System.out.println("Durée maximale : " +
+        System.out.println("Durée maximale : " + 
                 String.format("%.2f", maxDuration) + " jours");
 
         // Analyse des taux d'utilisation (pourcentages)
-        double[] utilizationRates = { 60.0, 80.0, 100.0, 45.0, 70.0 };
+        double[] utilizationRates = {60.0, 80.0, 100.0, 45.0, 70.0};
 
         System.out.println("\n" + Formatter.createSeparator(50));
         System.out.println("\n=== Taux d'utilisation par catégorie ===\n");
 
         String[] categories = {
-                "Électroportatif",
-                "Jardin",
-                "Accès",
-                "Menuiserie",
-                "Plomberie"
+            "Électroportatif",
+            "Jardin",
+            "Accès",
+            "Menuiserie",
+            "Plomberie"
         };
 
         for (int i = 0; i < categories.length; i++) {
-            System.out.println("  " + categories[i] + " : " +
+            System.out.println("  " + categories[i] + " : " + 
                     String.format("%.1f", utilizationRates[i]) + "%");
         }
 
         double avgUtilization = Calculator.average(utilizationRates);
-        System.out.println("\nTaux d'utilisation moyen : " +
+        System.out.println("\nTaux d'utilisation moyen : " + 
                 String.format("%.1f", avgUtilization) + "%");
 
         // Calcul de pourcentage
@@ -82,9 +82,9 @@ public class Main {
 
         System.out.println("\n" + Formatter.createSeparator(50));
         System.out.println("\n=== État actuel ===\n");
-        System.out.println("Outils totaux : " + (int) totalTools);
-        System.out.println("Outils empruntés : " + (int) borrowedTools);
-        System.out.println("Pourcentage emprunté : " +
+        System.out.println("Outils totaux : " + (int)totalTools);
+        System.out.println("Outils empruntés : " + (int)borrowedTools);
+        System.out.println("Pourcentage emprunté : " + 
                 String.format("%.1f", percentageBorrowed) + "%");
 
         // Message de conclusion

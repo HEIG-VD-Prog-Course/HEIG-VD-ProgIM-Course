@@ -36,16 +36,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Bibliothèques standard de Java](#bibliothèques-standard-de-java)
   - [java.util - Utilitaires](#javautil---utilitaires)
   - [java.time - Date et heure](#javatime---date-et-heure)
-  - [java.io - Entrées/Sorties](#javaio---entréessorties)
   - [java.math - Mathématiques avancées](#javamath---mathématiques-avancées)
-- [Visibilité et modificateurs d'accès](#visibilité-et-modificateurs-daccès)
-  - [Public](#public)
-  - [Private](#private)
-  - [Protected](#protected)
-  - [Package-private (par défaut)](#package-private-par-défaut)
-- [La documentation Java (Javadoc)](#la-documentation-java-javadoc)
-  - [Lire la Javadoc](#lire-la-javadoc)
-  - [Écrire de la Javadoc](#écrire-de-la-javadoc)
+- [Exemple concret : Fonctions utilitaires pour une bibliothèque d'outils](#exemple-concret--fonctions-utilitaires-pour-une-bibliothèque-doutils)
+- [Consulter la documentation Java](#consulter-la-documentation-java)
 - [Conclusion](#conclusion)
 - [Exemples de code](#exemples-de-code)
 - [Exercices](#exercices)
@@ -56,12 +49,11 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - Comprendre le concept de package en Java et son utilité.
 - Organiser son code en packages de manière cohérente.
-- Importer et utiliser des classes provenant d'autres packages.
-- Utiliser les principales bibliothèques standard de Java (java.util, java.time,
-  java.io).
-- Lire et comprendre la documentation Java (Javadoc).
-- Créer des programmes modulaires et réutilisables.
-- Comprendre les notions de visibilité et d'encapsulation liées aux packages.
+- Importer et utiliser des fonctions statiques provenant d'autres packages.
+- Utiliser les bibliothèques standard de Java (java.util, java.time, java.math).
+- Créer des packages personnalisés avec des fonctions utilitaires.
+- Consulter la documentation Java pour explorer de nouvelles classes et
+  méthodes.
 
 ## Introduction aux packages
 
@@ -140,18 +132,19 @@ exemple :
 src/
 ├── ch/
 │   └── heigvd/
-│       └── bank/
+│       └── toolshare/
 │           ├── models/
-│           │   ├── Account.java
-│           │   └── Customer.java
+│           │   ├── Tool.java
+│           │   └── Member.java
 │           ├── services/
-│           │   └── BankService.java
+│           │   └── LoanService.java
 │           └── utils/
-│               └── Calculator.java
+│               └── DateFormatter.java
 ```
 
-Le package `ch.heigvd.bank.models` correspond au dossier
-`src/ch/heigvd/bank/models/`.
+> [!IMPORTANT] Le package `ch.heigvd.toolshare.models` doit correspondre
+> exactement au chemin de dossiers `src/ch/heigvd/toolshare/models/`. Une erreur
+> dans cette correspondance empêchera la compilation.
 
 ## Importer des classes
 
@@ -194,9 +187,9 @@ public class Main {
 }
 ```
 
-**Attention** : L'import avec `*` n'importe que les classes du package spécifié,
-pas les sous-packages. Par exemple, `import java.util.*` n'importe pas les
-classes de `java.util.stream`.
+> [!WARNING] L'import avec `*` n'importe que les classes du package spécifié,
+> pas les sous-packages. Par exemple, `import java.util.*` n'importe pas les
+> classes de `java.util.stream`.
 
 ### Import statique
 
@@ -232,7 +225,9 @@ Java. Il contient les classes fondamentales :
 - `Integer`, `Double`, `Boolean` : Wrappers des types primitifs
 - `Object` : Classe mère de toutes les classes
 
-Pas besoin d'importer ces classes, elles sont toujours disponibles.
+> [!NOTE] Les classes du package `java.lang` sont toujours disponibles sans
+> import. C'est pourquoi vous n'avez jamais eu besoin d'importer `String` ou
+> `Math` dans vos programmes.
 
 ## Bibliothèques standard de Java
 
@@ -243,18 +238,6 @@ Programming Interface). Explorons les packages les plus utiles.
 
 Ce package contient des utilitaires essentiels :
 
-**Collections :**
-
-```java
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-
-ArrayList<String> list = new ArrayList<>();
-HashMap<String, Integer> map = new HashMap<>();
-HashSet<Integer> set = new HashSet<>();
-```
-
 **Scanner :**
 
 ```java
@@ -262,6 +245,7 @@ import java.util.Scanner;
 
 Scanner scanner = new Scanner(System.in);
 String name = scanner.nextLine();
+int age = scanner.nextInt();
 ```
 
 **Random :**
@@ -271,6 +255,7 @@ import java.util.Random;
 
 Random random = new Random();
 int dice = random.nextInt(6) + 1;  // 1 à 6
+double percentage = random.nextDouble();  // Entre 0.0 et 1.0
 ```
 
 **Arrays (déjà vu) :**
@@ -282,6 +267,10 @@ int[] numbers = {3, 1, 4, 1, 5};
 Arrays.sort(numbers);
 System.out.println(Arrays.toString(numbers));
 ```
+
+> [!TIP] Pour aller plus loin, le package `java.util` contient également des
+> structures de données avancées comme `ArrayList`, `HashMap`, et `HashSet`. Ces
+> collections seront étudiées dans un cours ultérieur.
 
 ### java.time - Date et heure
 
@@ -340,42 +329,9 @@ System.out.println(period.getYears() + " ans, " +
                    period.getDays() + " jours");
 ```
 
-### java.io - Entrées/Sorties
-
-Ce package gère la lecture et l'écriture de fichiers :
-
-**Lecture de fichier :**
-
-```java
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
-try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
-    String line;
-    while ((line = reader.readLine()) != null) {
-        System.out.println(line);
-    }
-} catch (IOException e) {
-    System.err.println("Erreur de lecture : " + e.getMessage());
-}
-```
-
-**Écriture de fichier :**
-
-```java
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-
-try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
-    writer.write("Bonjour le monde !");
-    writer.newLine();
-    writer.write("Deuxième ligne");
-} catch (IOException e) {
-    System.err.println("Erreur d'écriture : " + e.getMessage());
-}
-```
+> [!TIP] Pour aller plus loin, le package `java.io` permet de lire et écrire des
+> fichiers. Ces concepts seront abordés dans un cours ultérieur sur les
+> entrées/sorties.
 
 ### java.math - Mathématiques avancées
 
@@ -408,168 +364,173 @@ BigDecimal total = price.multiply(quantity);
 System.out.println("Total : " + total + " CHF");
 ```
 
-## Visibilité et modificateurs d'accès
+## Exemple concret : Fonctions utilitaires pour une bibliothèque d'outils
 
-Les packages permettent de contrôler la visibilité des classes et de leurs
-membres grâce aux modificateurs d'accès.
+Pour illustrer l'utilisation des packages dans un contexte réel, imaginons des
+fonctions utilitaires pour gérer une bibliothèque d'outils communautaire. Ce
+type d'initiative permet aux membres d'une communauté d'emprunter des outils
+plutôt que de les acheter individuellement, favorisant ainsi le partage des
+ressources et réduisant la consommation.
 
-### Public
+> [!NOTE] Les bibliothèques d'outils communautaires sont des initiatives locales
+> qui encouragent le partage et l'économie circulaire. Elles permettent de
+> réduire la production d'objets neufs et de renforcer les liens sociaux.
 
-Le modificateur `public` rend un élément accessible depuis n'importe où :
+Notre application pourrait être organisée avec les packages suivants :
 
-```java
-package models;
-
-public class Student {
-    public String name;  // Accessible partout
-
-    public void sayHello() {  // Accessible partout
-        System.out.println("Bonjour !");
-    }
-}
+```text
+src/
+├── utils/
+│   ├── Calculator.java     // Calculs statistiques
+│   ├── Formatter.java      // Formatage de l'affichage
+│   └── ToolHelper.java     // Fonctions d'aide pour les outils
+└── Main.java               // Point d'entrée du programme
 ```
 
-### Private
-
-Le modificateur `private` restreint l'accès à la classe elle-même :
+**Exemple du package utils avec des fonctions statiques :**
 
 ```java
-package models;
-
-public class BankAccount {
-    private double balance;  // Accessible uniquement dans cette classe
-
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;  // OK, on est dans la même classe
-        }
-    }
-}
-```
-
-### Protected
-
-Le modificateur `protected` permet l'accès dans le même package et aux
-sous-classes :
-
-```java
-package models;
-
-public class Person {
-    protected String name;  // Accessible dans le package et aux sous-classes
-}
-```
-
-### Package-private (par défaut)
-
-Sans modificateur, l'accès est limité au package :
-
-```java
-package models;
-
-class InternalHelper {  // Pas de 'public', accessible uniquement dans 'models'
-    void help() {
-        // ...
-    }
-}
-```
-
-Récapitulatif de la visibilité :
-
-| Modificateur | Classe | Package | Sous-classe | Monde |
-| ------------ | ------ | ------- | ----------- | ----- |
-| public       | ✓      | ✓       | ✓           | ✓     |
-| protected    | ✓      | ✓       | ✓           | ✗     |
-| (aucun)      | ✓      | ✓       | ✗           | ✗     |
-| private      | ✓      | ✗       | ✗           | ✗     |
-
-## La documentation Java (Javadoc)
-
-La Javadoc est la documentation officielle de l'API Java. Elle décrit toutes les
-classes, méthodes et constantes disponibles.
-
-### Lire la Javadoc
-
-La documentation Java est disponible en ligne :
-[https://docs.oracle.com/en/java/javase/17/docs/api/](https://docs.oracle.com/en/java/javase/17/docs/api/)
-
-Pour trouver une classe :
-
-1. Rechercher le package (ex: `java.util`)
-2. Cliquer sur la classe (ex: `ArrayList`)
-3. Lire la description, les constructeurs et les méthodes
-
-Exemple de lecture de la doc pour `ArrayList` :
-
-- **Description générale** : Présente ce qu'est un ArrayList
-- **Constructeurs** : Comment créer un ArrayList
-- **Méthodes** : `add()`, `get()`, `remove()`, `size()`, etc.
-- **Exemples** : Parfois inclus dans la documentation
-
-### Écrire de la Javadoc
-
-Vous pouvez documenter votre propre code avec des commentaires Javadoc :
-
-```java
-package models;
+package utils;
 
 /**
- * Représente un compte bancaire simple.
- *
- * Cette classe permet de gérer le solde d'un compte avec des opérations
- * de dépôt et de retrait.
- *
- * @author V. Guidoux
- * @version 1.0
+ * Fonctions utilitaires pour les calculs.
  */
-public class BankAccount {
-    private double balance;
-
+public class Calculator {
     /**
-     * Crée un nouveau compte bancaire avec un solde initial.
-     *
-     * @param initialBalance le solde initial du compte
-     * @throws IllegalArgumentException si le solde initial est négatif
+     * Calcule la moyenne d'un tableau de nombres.
      */
-    public BankAccount(double initialBalance) {
-        if (initialBalance < 0) {
-            throw new IllegalArgumentException("Le solde ne peut pas être négatif");
+    public static double average(double[] numbers) {
+        if (numbers.length == 0) {
+            return 0;
         }
-        this.balance = initialBalance;
+        double sum = 0;
+        for (double num : numbers) {
+            sum += num;
+        }
+        return sum / numbers.length;
     }
 
     /**
-     * Dépose un montant sur le compte.
-     *
-     * @param amount le montant à déposer (doit être positif)
-     * @return le nouveau solde après le dépôt
+     * Trouve la valeur maximale dans un tableau.
      */
-    public double deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
+    public static double max(double[] numbers) {
+        if (numbers.length == 0) {
+            return 0;
         }
-        return balance;
-    }
-
-    /**
-     * Retourne le solde actuel du compte.
-     *
-     * @return le solde du compte
-     */
-    public double getBalance() {
-        return balance;
+        double maximum = numbers[0];
+        for (double num : numbers) {
+            if (num > maximum) {
+                maximum = num;
+            }
+        }
+        return maximum;
     }
 }
 ```
 
-Les balises Javadoc courantes :
+```java
+package utils;
 
-- `@param` : Décrit un paramètre
-- `@return` : Décrit la valeur de retour
-- `@throws` : Décrit une exception qui peut être levée
-- `@author` : Indique l'auteur
-- `@version` : Indique la version
-- `@see` : Référence à une autre classe ou méthode
+/**
+ * Fonctions utilitaires pour le formatage.
+ */
+public class Formatter {
+    /**
+     * Crée un titre formaté.
+     */
+    public static String formatTitle(String title) {
+        return \"=== \" + title + \" ===\";
+    }
+
+    /**
+     * Crée une ligne de séparation.
+     */
+    public static String createSeparator(int length) {
+        String separator = \"\";
+        for (int i = 0; i < length; i++) {
+            separator += \"-\";
+        }
+        return separator;
+    }
+}
+```
+
+**Programme principal utilisant ces fonctions :**
+
+```java
+import utils.Calculator;
+import utils.Formatter;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Formatter.formatTitle(\"Bibliothèque d'outils communautaire\"));
+        System.out.println();
+
+        // Durées d'emprunt moyennes par catégorie (en jours)
+        double[] durations = {7.5, 14.0, 3.5, 21.0, 10.0};
+
+        System.out.println(\"Durées d'emprunt enregistrées :\");
+        for (int i = 0; i < durations.length; i++) {
+            System.out.println(\"  Emprunt \" + (i + 1) + \" : \" + durations[i] + \" jours\");
+        }
+
+        System.out.println();
+        System.out.println(Formatter.createSeparator(50));
+        System.out.println();
+
+        // Calculs statistiques
+        double avgDuration = Calculator.average(durations);
+        double maxDuration = Calculator.max(durations);
+
+        System.out.println(\"Durée moyenne d'emprunt : \" + avgDuration + \" jours\");
+        System.out.println(\"Durée maximale d'emprunt : \" + maxDuration + \" jours\");
+    }
+}
+```
+
+> [!IMPORTANT] Remarquez que nous utilisons les fonctions avec la syntaxe
+> `Calculator.average()` et `Formatter.formatTitle()` sans utiliser le mot-clé
+> `new`. Ce sont des **fonctions statiques** qui peuvent être appelées
+> directement sur le nom de la classe.
+
+> [!TIP] En organisant vos fonctions dans des packages, vous facilitez leur
+> réutilisation. Par exemple, le package `utils` pourrait être utilisé dans
+> d'autres projets nécessitant des calculs ou du formatage.
+
+## Consulter la documentation Java
+
+Pour explorer les packages et classes disponibles en Java, vous pouvez consulter
+la documentation officielle sur [dev.java](https://dev.java/learn/packages/).
+
+> [!IMPORTANT] La documentation Java est votre meilleure alliée pour découvrir
+> de nouvelles classes et comprendre comment les utiliser. Prenez l'habitude de
+> la consulter régulièrement.
+
+La plateforme dev.java propose :
+
+- **Tutoriels guidés** : Apprentissage progressif des concepts Java
+- **Documentation des packages** : Description détaillée de chaque classe
+- **Exemples de code** : Illustrations pratiques d'utilisation
+- **API Reference** : Documentation technique complète
+
+Pour trouver une classe spécifique :
+
+1. Visitez [dev.java/learn](https://dev.java/learn/)
+2. Recherchez le package concerné (par exemple, `java.util`)
+3. Consultez la liste des classes disponibles
+4. Lisez la description, les constructeurs et les méthodes
+
+Par exemple, pour en savoir plus sur `ArrayList` :
+
+- Cherchez "ArrayList" dans la documentation
+- Lisez la description générale de la classe
+- Consultez les constructeurs disponibles
+- Explorez les méthodes principales : `add()`, `get()`, `remove()`, `size()`,
+  etc.
+
+> [!TIP] Lorsque vous rencontrez une nouvelle classe dans un programme,
+> consultez sa documentation pour comprendre son rôle et ses capacités. Cela
+> développe votre autonomie en programmation.
 
 ## Conclusion
 
@@ -578,20 +539,36 @@ professionnel et maintenable. Ils permettent :
 
 - D'organiser le code de manière logique et structurée.
 - De réutiliser du code existant (bibliothèques standard).
-- D'éviter les conflits de noms.
-- De contrôler la visibilité et l'encapsulation.
+- D'éviter les conflits de noms entre classes.
+- De faciliter la collaboration et le partage de code.
 
 Points clés à retenir :
 
 - Un package est déclaré avec `package` en début de fichier.
-- Les classes d'autres packages sont importées avec `import`.
+- Les fonctions d'autres packages sont importées avec `import`.
+- Les fonctions statiques s'appellent avec `NomClasse.nomFonction()` sans
+  utiliser `new`.
 - Java fournit de nombreuses bibliothèques standard (`java.util`, `java.time`,
-  `java.io`, etc.).
-- Les modificateurs d'accès contrôlent la visibilité.
-- La Javadoc est la documentation de référence de l'API Java.
+  `java.math`, etc.).
+- La documentation sur dev.java est une ressource précieuse pour explorer l'API
+  Java.
+- Organiser ses fonctions en packages favorise la modularité et la
+  réutilisation.
 
 Dans les prochains cours, nous continuerons à utiliser ces bibliothèques pour
 créer des programmes plus sophistiqués.
+
+## Exemples de code
+
+Des exemples pratiques sont disponibles dans le dossier
+[02-exemples-de-code](../02-exemples-de-code/) pour illustrer les concepts vus
+dans ce cours.
+
+## Exercices
+
+Des exercices pratiques sont disponibles dans le dossier
+[03-exercices](../03-exercices/) pour mettre en pratique l'organisation du code
+en packages et l'utilisation des bibliothèques standard.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
