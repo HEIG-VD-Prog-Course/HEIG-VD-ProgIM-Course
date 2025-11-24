@@ -42,24 +42,30 @@ _paginate: false
 _Cette présentation est un résumé du support de cours. Pour plus de détails,
 consultez le [support de cours][cours]._
 
-## Objectifs
+## Objectifs (1/2)
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Comprendre le concept de package et son utilité.
 - Organiser son code en packages.
 - Importer et utiliser des classes d'autres packages.
+
+![bg right:40%][illustration-objectifs]
+
+## Objectifs (2/2)
+
+À la fin de cette séance, vous devriez être capable de :
+
 - Utiliser les bibliothèques standard Java (java.util, java.time, java.io).
-- Lire la documentation Java (Javadoc).
-- Comprendre la visibilité et l'encapsulation.
+- Créer des packages personnalisés avec des fonctions utilitaires.
+- Consulter la documentation Java pour explorer de nouvelles classes.
 
 ![bg right:40%][illustration-objectifs]
 
 ## Pourquoi les packages ?
 
-Les packages organisent le code comme les dossiers organisent les fichiers.
-
-**Avantages :**
+Les packages organisent le code comme les dossiers organisent les fichiers. Avec
+quelques avantages :
 
 - **Organisation** : Regrouper les classes par fonctionnalité
 - **Réutilisation** : Faciliter l'utilisation dans d'autres projets
@@ -69,7 +75,7 @@ Les packages organisent le code comme les dossiers organisent les fichiers.
 
 **Analogie :** Une bibliothèque avec des livres classés par thème.
 
-## Déclarer un package
+## Déclarer un package (1/2)
 
 Le package est déclaré en première ligne du fichier :
 
@@ -77,12 +83,11 @@ Le package est déclaré en première ligne du fichier :
 package models;
 
 public class Student {
-    private String name;
-    private int age;
-
-    // ... constructeurs et méthodes
+    // ... méthodes
 }
 ```
+
+## Déclarer un package (2/2)
 
 **Convention de nommage :**
 
@@ -98,16 +103,47 @@ Les packages correspondent à une structure de dossiers :
 src/
 ├── ch/
 │   └── heigvd/
-│       └── bank/
+│       └── toolshare/
 │           ├── models/
-│           │   ├── Account.java
-│           │   └── Customer.java
-│           └── services/
-│               └── BankService.java
+│           │   ├── Tool.java
+│           ... └── Member.java
 ```
 
-Le package `ch.heigvd.bank.models` correspond au dossier
-`src/ch/heigvd/bank/models/`.
+Le package `ch.heigvd.toolshare.models` correspond au dossier
+`src/ch/heigvd/toolshare/models/`.
+
+## Compiler et exécuter (1/2)
+
+**Structure simple :**
+
+```text
+projet/
+├── Main.java
+└── utils/
+    ├── Calculator.java
+    └── Formatter.java
+```
+
+**Compilation :**
+
+```bash
+javac utils/*.java Main.java
+java Main
+```
+
+## Compiler et exécuter (2/2)
+
+**Structure hiérarchique :**
+
+```bash
+# Compilation depuis src/
+javac ch/heigvd/toolshare/utils/*.java ch/heigvd/toolshare/Main.java
+
+# Exécution avec le nom complet (points, pas slashes)
+java ch.heigvd.toolshare.Main
+```
+
+**Astuce :** `javac **/*.java` compile tous les fichiers récursivement.
 
 ## Importer des classes
 
@@ -126,13 +162,6 @@ import java.util.Scanner;
 import java.util.*;  // Importe toutes les classes de java.util
 ```
 
-**Import statique :**
-
-```java
-import static java.lang.Math.PI;
-import static java.lang.Math.sqrt;
-```
-
 ## Package java.lang
 
 Le package `java.lang` est automatiquement importé. Il contient :
@@ -145,19 +174,9 @@ Le package `java.lang` est automatiquement importé. Il contient :
 
 **Pas besoin de les importer !**
 
-## Bibliothèque java.util
+## Bibliothèque java.util (1/2)
 
 Package d'utilitaires essentiels :
-
-**Collections :**
-
-```java
-import java.util.ArrayList;
-import java.util.HashMap;
-
-ArrayList<String> list = new ArrayList<>();
-HashMap<String, Integer> map = new HashMap<>();
-```
 
 **Scanner :**
 
@@ -165,7 +184,12 @@ HashMap<String, Integer> map = new HashMap<>();
 import java.util.Scanner;
 
 Scanner scanner = new Scanner(System.in);
+
+String name = scanner.nextLine();
+int age = scanner.nextInt();
 ```
+
+## Bibliothèque java.util (2/2)
 
 **Random :**
 
@@ -176,7 +200,10 @@ Random random = new Random();
 int dice = random.nextInt(6) + 1;
 ```
 
-## Bibliothèque java.time
+`+ 1` pour obtenir un nombre entre 1 et 6. Sans cela, on obtient un nombre entre
+0 et 5.
+
+## Bibliothèque java.time (1/4)
 
 Gestion moderne des dates et heures (Java 8+) :
 
@@ -191,6 +218,8 @@ LocalDate birthDate = LocalDate.of(2000, 5, 15);
 int age = today.getYear() - birthDate.getYear();
 ```
 
+## Bibliothèque java.time (2/4)
+
 **LocalTime :**
 
 ```java
@@ -200,7 +229,7 @@ LocalTime now = LocalTime.now();
 LocalTime meeting = LocalTime.of(14, 30);  // 14h30
 ```
 
-## Bibliothèque java.time (suite)
+## Bibliothèque java.time (3/4)
 
 **LocalDateTime :**
 
@@ -215,42 +244,18 @@ DateTimeFormatter formatter =
 String formattedDate = now.format(formatter);
 ```
 
+## Bibliothèque java.time (4/4)
+
 **Period :**
 
 ```java
+import java.time.Period;
+
 Period period = Period.between(start, end);
 System.out.println(period.getYears() + " ans");
 ```
 
-## Bibliothèque java.io
-
-Gestion des entrées/sorties (fichiers) :
-
-**Lecture :**
-
-```java
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-try (BufferedReader reader = new BufferedReader(
-        new FileReader("data.txt"))) {
-    String line;
-    while ((line = reader.readLine()) != null) {
-        System.out.println(line);
-    }
-}
-```
-
-**Écriture :**
-
-```java
-try (BufferedWriter writer = new BufferedWriter(
-        new FileWriter("output.txt"))) {
-    writer.write("Contenu du fichier");
-}
-```
-
-## Bibliothèque java.math
+## Bibliothèque java.math (1/2)
 
 Calculs de haute précision :
 
@@ -265,6 +270,8 @@ BigInteger b = new BigInteger("987654321098765432109876543210");
 BigInteger sum = a.add(b);
 ```
 
+## Bibliothèque java.math (2/2)
+
 **BigDecimal (décimaux précis) :**
 
 ```java
@@ -275,111 +282,81 @@ BigDecimal quantity = new BigDecimal("3");
 BigDecimal total = price.multiply(quantity);
 ```
 
-## Modificateurs d'accès
+## Exemple : Packages personnalisés (1/3)
 
-Contrôlent la visibilité des classes et membres :
+**Création d'un package utilitaire :**
 
-| Modificateur | Classe | Package | Sous-classe | Monde |
-| ------------ | ------ | ------- | ----------- | ----- |
-| public       | ✓      | ✓       | ✓           | ✓     |
-| protected    | ✓      | ✓       | ✓           | ✗     |
-| (aucun)      | ✓      | ✓       | ✗           | ✗     |
-| private      | ✓      | ✗       | ✗           | ✗     |
+Structure du projet :
 
-**Bonne pratique :** Utiliser `private` par défaut, `public` seulement si
-nécessaire.
+```text
+03-packages-personnalises/
+├── Main.java
+└── utils/
+    ├── Calculator.java
+    └── Formatter.java
+```
 
-## Exemple de visibilité
+Organisation simple et claire !
+
+## Exemple : Packages personnalisés (2/3)
 
 ```java
-package models;
+// utils/Calculator.java
+package utils;
 
-public class BankAccount {
-    private double balance;  // Accessible uniquement dans cette classe
-
-    public void deposit(double amount) {  // Accessible partout
-        if (amount > 0) {
-            balance += amount;
+public class Calculator {
+    public static double average(double[] values) {
+        if (values.length == 0) return 0;
+        double sum = 0;
+        for (double value : values) {
+            sum += value;
         }
+        return sum / values.length;
     }
-
-    double getBalance() {  // Package-private (accessible dans 'models')
-        return balance;
-    }
+    public static double max(double[] values) { /* ... */ }
+    public static double min(double[] values) { /* ... */ }
 }
 ```
 
-## Documentation Java (Javadoc)
+## Exemple : Packages personnalisés (3/3)
 
-**Lire la Javadoc :**
+```java
+// Main.java
+import utils.Calculator;
+import utils.Formatter;
 
-Documentation officielle de l'API Java :
-[docs.oracle.com/en/java/javase/17/docs/api/](https://docs.oracle.com/en/java/javase/17/docs/api/)
+public class Main {
+    public static void main(String[] args) {
+        double[] data = {7.0, 14.0, 3.5, 21.0};
+
+        double avg = Calculator.average(data);
+        System.out.println("Moyenne : " + avg);
+}   }
+```
+
+Voir l'exemple dans `02-exemples-de-code/03-packages-personnalises/`
+
+## Documentation Java
+
+**Consulter la documentation :**
+
+Documentation officielle Java API : <https://docs.oracle.com/javase/8/docs/api/>
 
 **Utilisation :**
 
 1. Rechercher le package (ex: `java.util`)
-2. Cliquer sur la classe (ex: `ArrayList`)
+2. Explorer les classes disponibles (ex: `ArrayList`)
 3. Lire la description, constructeurs et méthodes
+4. Consulter les exemples de code
 
-**Essentiel pour apprendre à utiliser de nouvelles classes !**
-
-## Écrire de la Javadoc
-
-Documenter votre code avec des commentaires spéciaux :
-
-```java
-/**
- * Représente un compte bancaire simple.
- *
- * @author V. Guidoux
- * @version 1.0
- */
-public class BankAccount {
-    /**
-     * Dépose un montant sur le compte.
-     *
-     * @param amount le montant à déposer
-     * @return le nouveau solde
-     */
-    public double deposit(double amount) {
-        // ...
-    }
-}
-```
-
-## Balises Javadoc courantes
-
-- `@param` : Décrit un paramètre
-- `@return` : Décrit la valeur de retour
-- `@throws` : Décrit une exception
-- `@author` : Indique l'auteur
-- `@version` : Indique la version
-- `@see` : Référence à une autre classe/méthode
-
-**Bonne pratique :** Documenter toutes les classes et méthodes publiques.
-
-## Points clés à retenir
-
-- Les **packages** organisent le code de manière logique.
-- On déclare un package avec `package nom.du.package`.
-- On importe des classes avec `import`.
-- Java fournit de nombreuses **bibliothèques standard** :
-  - `java.util` : Utilitaires et collections
-  - `java.time` : Dates et heures
-  - `java.io` : Entrées/sorties
-  - `java.math` : Calculs précis
-- Les **modificateurs d'accès** contrôlent la visibilité.
-- La **Javadoc** est la documentation de référence.
-
-![bg right:40%][illustration-conclusion]
+**Développe votre autonomie en programmation !**
 
 ## À vous de jouer !
 
 - Relire le support de cours.
 - Explorer les exemples de code.
 - Faire les exercices.
-- Consulter la Javadoc pour découvrir de nouvelles classes.
+- Consulter dev.java pour découvrir de nouvelles classes.
 - Poser des questions si nécessaire.
 
 **La programmation s'apprend par la pratique !**

@@ -220,7 +220,11 @@ char currentPlayer = 'X';  // Commence toujours par X
 **Après chaque coup valide :**
 
 ```java
-currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+if (currentPlayer == 'X') {
+    currentPlayer = 'O';
+} else {
+    currentPlayer = 'X';
+}
 ```
 
 **Affichage :**
@@ -386,7 +390,11 @@ while (true) {
     }
 
     // Alternance
-    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    if (currentPlayer == 'X') {
+        currentPlayer = 'O';
+    } else {
+        currentPlayer = 'X';
+    }
 }
 ```
 

@@ -2730,7 +2730,10 @@ programmation :
 
 ### Sources et liens utiles
 
-- <https://www.w3schools.com/java/>
+- <https://dev.java/learn/language-basics/variables/>
+- <https://dev.java/learn/language-basics/primitive-types/>
+- <https://www.w3schools.com/java/java_variables.asp>
+- <https://www.w3schools.com/java/java_data_types.asp>
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

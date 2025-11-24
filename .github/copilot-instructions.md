@@ -3,14 +3,17 @@
 This repository contains teaching materials for a programming course
 (HEIG-VD-ProgIM-Course).
 
-## Context
+## Course Configuration
 
-- **Language**: Course materials are primarily in French
+**Customize these values for different courses:**
+
+- **Course Language**: French
+- **Programming Language**: Java (version 11+)
+- **Student Level**: Beginner - first programming course, no prior experience
 - **Target Audience**: Students learning programming for the first time
 - **Content Type**: Educational presentations (Marp), code examples, exercises,
-  and PlantUML diagrams
-- **Level**: Beginner - first programming course, no prior experience required
-- **Technology Stack**: Java, algorithms, data structures, software design
+  PlantUML diagrams
+- **Topics Covered**: Algorithms, data structures, software design fundamentals
 
 ## Teaching Philosophy
 
@@ -113,18 +116,17 @@ society.
 
 ### General Instructions
 
-1. **French Content**: Most content should be in French unless specifically
-   working on code
-2. **Educational Focus**: Explanations should be clear, pedagogical, and
-   appropriate for beginner-level students
-3. **No Emojis**: Never use emojis in any course materials, presentations, or
-   exercises
-4. **Encourage exploration**: Guide students toward solutions without giving
-   direct answers - "teach them to fish"
-5. **Real-world relevance**: Prefer practical, industry-relevant examples over
-   purely academic ones
-6. **Respect student freedom**: Support diverse approaches and personal projects
-   that engage students
+1. **Content Language**: Write all course materials in the configured course
+   language (see Course Configuration section)
+2. **Code Language**: Use the configured programming language for all code
+   examples
+3. **Pedagogical Level**: Adapt explanations to the configured student level
+4. **No Emojis**: Never use emojis in course materials, presentations, or
+   exercises (except root README.md as specified below)
+5. **Encourage exploration**: Guide students toward solutions without giving
+   direct answers
+6. **Real-world relevance**: Prefer practical, relatable examples over abstract
+   concepts
 
 ### Author Attribution
 
@@ -662,15 +664,12 @@ La conversion entre types primitifs peut être implicite ou explicite.
 
 ### Code Examples
 
-- Use **Java** for all code examples
-- Keep examples simple and relatable
-- Prefer practical, everyday scenarios over abstract concepts
+- Use the configured programming language for all code examples
+- **Code elements in English**: Variable names, method names, class names, and
+  parameter names must be in English (universal programming convention)
+- Keep examples simple and relatable to student level
 - Follow pedagogical progression from simple to complex
-- **Use English for all code elements**: variable names, method names, class
-  names, and parameter names must be in English, even when course content is in
-  French
-- Follow Java best practices and conventions (camelCase, proper access
-  modifiers, etc.)
+- Follow language best practices and conventions
 - Include proper package declarations and imports when relevant
 
 ### Individual Code Example Structure
@@ -805,12 +804,24 @@ XX-example-name/
       theory
     - For formatted output, use `String.format()` combined with
       `System.out.println()`, or simple string concatenation
+    - **NEVER use ternary operators (`condition ? value1 : value2`)** - they are
+      too advanced for beginners and not taught in theory
+    - Always use explicit `if-else` statements for conditional assignments
     - Example:
+
       ```java
       System.out.println("=== Résultats ===");
       System.out.println("Montant total: " + total + " CHF");
       // OR for formatting:
       System.out.println(String.format("Montant total: %.2f CHF", total));
+
+      // For conditional values, use if-else:
+      String status;
+      if (condition) {
+          status = "valeur1";
+      } else {
+          status = "valeur2";
+      }
       ```
 
 11. **Error Handling**:

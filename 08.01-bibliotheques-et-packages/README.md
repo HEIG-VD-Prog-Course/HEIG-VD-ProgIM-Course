@@ -23,9 +23,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Importer et utiliser des classes provenant d'autres packages.
 - Utiliser les principales bibliothèques standard de Java (java.util, java.time,
   java.io).
-- Lire et comprendre la documentation Java (Javadoc).
 - Créer des programmes modulaires et réutilisables.
-- Comprendre les notions de visibilité et d'encapsulation liées aux packages.
+- Consulter la documentation Java pour explorer de nouvelles classes et
+  méthodes.
 
 ## Méthodes d'enseignement et d'apprentissage
 

@@ -43,6 +43,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Comparaison avec equals](#comparaison-avec-equals)
 - [Limites des tableaux](#limites-des-tableaux)
 - [Conclusion](#conclusion)
+  - [Source](#source)
 
 ## Objectifs
 
@@ -498,6 +499,11 @@ Points clés à retenir :
 Dans les prochains cours, nous explorerons des structures de données plus
 flexibles qui permettent de gérer des collections dont la taille peut varier
 dynamiquement.
+
+### Source
+
+- <https://dev.java/learn/language-basics/arrays/>
+- <https://www.w3schools.com/java/java_arrays.asp>
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

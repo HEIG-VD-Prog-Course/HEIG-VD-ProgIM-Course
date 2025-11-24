@@ -93,7 +93,11 @@ class Student {
  * 
  * 3. Dans getEmail() :
  * - Retourner une valeur par défaut si email est null :
- * return email != null ? email : "Non défini";
+ * if (email != null) {
+ *     return email;
+ * } else {
+ *     return "Non défini";
+ * }
  * 
  * Ou initialiser email dans le constructeur :
  * this.email = "non-defini@email.com";
