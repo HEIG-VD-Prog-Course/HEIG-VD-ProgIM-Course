@@ -127,6 +127,10 @@ society.
    direct answers
 6. **Real-world relevance**: Prefer practical, relatable examples over abstract
    concepts
+7. **Langage épicène**: Use gender-neutral language when writing in French.
+   Prefer epicene forms (e.g., "l'utilisatrice", "la personne qui étudie", "la
+   personne qui développe") over masculine defaults or middle-point notation
+   (point médian). This promotes inclusivity while maintaining readability
 
 ### Author Attribution
 
@@ -797,13 +801,14 @@ XX-example-name/
 
    **Diversity in naming**: Use diverse, internationally representative names in
    code examples to reflect the multicultural reality of programming. Avoid
-   defaulting to Western names only. Examples of diverse names to use:
+   defaulting to Western names only. Prefer non-gendered names when possible.
+   Examples of diverse names to use:
 
-   - European: Sophie, Luca, Amina, Dimitri, Elena
-   - Asian: Yuki, Wei, Priya, Hassan, Mei
-   - African: Kwame, Amara, Zara, Kofi, Aisha
-   - Latin American: Diego, Carmen, Santiago, Lucia, Mateo
-   - Middle Eastern: Fatima, Omar, Layla, Karim, Yasmin
+   - European: Sacha, Camille, Claude, Dominique, Maxime, Noah
+   - Asian: Yuki, Wei, Mei, Kim, An
+   - African: Amari, Zuri, Keza, Nuru, Sekai
+   - Latin American: Alex, Andrea, Ariel, Angel, Guadalupe
+   - Middle Eastern: Nour, Sami, Rayan, Iman, Rasha
 
    Mix names naturally across examples rather than clustering by origin. This
    promotes inclusivity and reflects the global nature of the tech community.
@@ -837,22 +842,7 @@ XX-example-name/
       }
       ```
 
-11. **Error Handling**:
-
-    - Demonstrate proper exception handling where relevant
-    - Use checked exceptions for recoverable errors
-    - Use unchecked exceptions for programming errors
-    - Always clean up resources properly
-    - Example:
-      ```java
-      try {
-          // Operation risquée
-      } catch (IOException e) {
-          System.err.println("Erreur lors de la lecture: " + e.getMessage());
-      }
-      ```
-
-12. **Main Method Pattern**:
+11. **Main Method Pattern**:
 
     ```java
     public class Main {
@@ -871,19 +861,7 @@ XX-example-name/
     }
     ```
 
-13. **Testing Demonstrations** (when relevant):
-
-    - Include simple test cases to verify behavior
-    - Show assert statements for validation
-    - Demonstrate edge cases
-    - Example:
-      ```java
-      // Test avec différentes valeurs
-      assert calculator.add(2, 3) == 5 : "Addition simple échouée";
-      assert calculator.divide(10, 0) throws ArithmeticException : "Division par zéro non gérée";
-      ```
-
-14. **Build Instructions in README**: Always include compilation and execution
+12. **Build Instructions in README**: Always include compilation and execution
     instructions:
 
     ````markdown
