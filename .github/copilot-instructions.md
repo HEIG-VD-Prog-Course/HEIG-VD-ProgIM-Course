@@ -795,6 +795,19 @@ XX-example-name/
    **Avoid**: E-commerce, banking with interest, mass consumption scenarios,
    car-centric examples, growth-focused metrics
 
+   **Diversity in naming**: Use diverse, internationally representative names in
+   code examples to reflect the multicultural reality of programming. Avoid
+   defaulting to Western names only. Examples of diverse names to use:
+
+   - European: Sophie, Luca, Amina, Dimitri, Elena
+   - Asian: Yuki, Wei, Priya, Hassan, Mei
+   - African: Kwame, Amara, Zara, Kofi, Aisha
+   - Latin American: Diego, Carmen, Santiago, Lucia, Mateo
+   - Middle Eastern: Fatima, Omar, Layla, Karim, Yasmin
+
+   Mix names naturally across examples rather than clustering by origin. This
+   promotes inclusivity and reflects the global nature of the tech community.
+
 10. **Input/Output Patterns**:
 
     - Use `System.out.println()` for simple output demonstrations
