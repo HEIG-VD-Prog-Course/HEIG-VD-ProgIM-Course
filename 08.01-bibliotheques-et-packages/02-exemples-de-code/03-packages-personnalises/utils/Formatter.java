@@ -8,11 +8,6 @@ package utils;
  */
 public class Formatter {
 
-    // Constructeur privé pour empêcher l'instanciation
-    private Formatter() {
-        throw new UnsupportedOperationException("Classe utilitaire");
-    }
-
     /**
      * Formate un montant en CHF avec 2 décimales.
      * 
@@ -20,7 +15,9 @@ public class Formatter {
      * @return le montant formaté avec l'unité
      */
     public static String formatPrice(double amount) {
-        return String.format("%.2f CHF", amount);
+        // Arrondir à 2 décimales
+        double rounded = Math.round(amount * 100.0) / 100.0;
+        return rounded + " CHF";
     }
 
     /**
@@ -30,7 +27,11 @@ public class Formatter {
      * @return une chaîne de caractères '=' de la longueur spécifiée
      */
     public static String createSeparator(int length) {
-        return "=".repeat(length);
+        String separator = "";
+        for (int i = 0; i < length; i++) {
+            separator = separator + "=";
+        }
+        return separator;
     }
 
     /**
@@ -54,6 +55,14 @@ public class Formatter {
      */
     public static String centerText(String text, int width) {
         int padding = (width - text.length()) / 2;
+
+        // Alternative avec une boucle :
+        // String spaces = "";
+        // for (int i = 0; i < padding; i++) {
+        // spaces = spaces + " ";
+        // }
+        // return spaces + text;
+
         return " ".repeat(padding) + text;
     }
 }

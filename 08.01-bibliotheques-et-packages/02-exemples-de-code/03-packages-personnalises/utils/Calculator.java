@@ -7,11 +7,6 @@ package utils;
  */
 public class Calculator {
 
-    // Constructeur privé pour empêcher l'instanciation
-    private Calculator() {
-        throw new UnsupportedOperationException("Classe utilitaire");
-    }
-
     /**
      * Calcule la moyenne d'un tableau de nombres.
      * 
