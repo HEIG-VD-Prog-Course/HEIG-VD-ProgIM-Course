@@ -329,19 +329,11 @@ public static int countOccurrences(int[] array, int value) {
 
 ## Recherche du minimum (1/2)
 
-Trouver la plus petite valeur dans un tableau.
-
-**Avec for** :
-
 ```java
 public static int findMin(int[] array) {
-    if (array.length == 0) {
-        throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-    }
-
     int min = array[0];
 
-    for (int i = 1; i < array.length; i++) {
+    for (int i = 1; i < array.length; i++) { // avec for
         if (array[i] < min) {
             min = array[i];
         }
@@ -353,17 +345,11 @@ public static int findMin(int[] array) {
 
 ## Recherche du minimum (2/2)
 
-**Avec for-each** :
-
 ```java
 public static int findMin(int[] array) {
-    if (array.length == 0) {
-        throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-    }
-
     int min = array[0];
 
-    for (int value : array) {
+    for (int value : array) { // avec for-each
         if (value < min) {
             min = value;
         }
@@ -373,22 +359,14 @@ public static int findMin(int[] array) {
 }
 ```
 
-Note : Adaptable pour trouver l'indice du minimum au lieu de sa valeur !
-
 ## Recherche du maximum
-
-**Avec while** :
 
 ```java
 public static int findMax(int[] array) {
-    if (array.length == 0) {
-        throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-    }
-
     int max = array[0];
     int index = 1;
 
-    while (index < array.length) {
+    while (index < array.length) { // avec while
         if (array[index] > max) {
             max = array[index];
         }
@@ -428,8 +406,6 @@ public static void countdown(int n) {
 
 La factorielle de n (n!) est le produit de tous les entiers de 1 à n.
 
-**Version récursive** :
-
 ```java
 /**
  * Calcule la factorielle d'un nombre de manière récursive.
@@ -455,10 +431,6 @@ public static long factorial(int n) {
 3. `factorial(3)` = 3 × `factorial(2)`
 4. `factorial(2)` = 2 × `factorial(1)`
 5. `factorial(1)` = 1 (cas de base)
-6. Retour : 2 × 1 = 2
-7. Retour : 3 × 2 = 6
-8. Retour : 4 × 6 = 24
-9. Retour : 5 × 24 = **120**
 
 ## Exemple 2 : Fibonacci (1/2)
 
@@ -466,15 +438,7 @@ Suite de Fibonacci : 0, 1, 1, 2, 3, 5, 8, 13...
 
 Chaque nombre est la somme des deux précédents.
 
-**Version récursive** :
-
 ```java
-/**
- * Calcule le n-ième terme de la suite de Fibonacci.
- *
- * @param n la position dans la suite (0-indexée)
- * @return le n-ième nombre de Fibonacci
- */
 public static int fibonacci(int n) {
     if (n <= 1) { // Cas de base
         return n;
@@ -497,24 +461,14 @@ fib(3) fib(2) fib(2) fib(1)
   ...    ...   ...    1
 ```
 
-Résultat : **5**
-
-Attention : Version inefficace pour grandes valeurs (recalcule plusieurs fois
-les mêmes valeurs).
-
-Note : En pratique, préférer une version itérative ou avec mémoïsation.
+Résultat : **5**. Attention : Version inefficace pour grandes valeurs (recalcule
+plusieurs fois les mêmes valeurs).
 
 ## Exemple 3 : Chaîne de souhaits (1/2)
 
 Une personne souhaite une bonne journée à deux autres, qui font de même...
 
 ```java
-/**
- * Simule une chaîne de souhaits où chaque personne en salue deux autres.
- *
- * @param depth le nombre de niveaux de propagation
- * @param personName le nom de la personne qui souhaite
- */
 public static void wishGoodDay(int depth, String personName) {
     if (depth <= 0) { // Cas de base
         return;
@@ -592,9 +546,6 @@ solution !
 
 - Réaliser les exercices proposés dans les [exercices][exercices].
 - Explorer les exemples de code fournis.
-- Expérimenter avec différents types de boucles pour chaque algorithme.
-- Essayer de transformer des algorithmes récursifs en version itérative et vice
-  versa.
 
 ## Questions
 
@@ -604,21 +555,12 @@ _class: lead
 
 ## Sources
 
-**Illustrations** :
-
-- Illustration principale : `home.jpg` (placeholder)
-- Illustration objectifs : Photo de
+- [Illustration objectifs][illustration-objectifs] par
   [Usman Yousaf](https://unsplash.com/@usmanyousaf) sur
   [Unsplash](https://unsplash.com/photos/pTrhfmj2jDA)
-- Illustration "À vous de jouer !" : Photo de
+- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
   [Annie Spratt](https://unsplash.com/@anniespratt) sur
   [Unsplash](https://unsplash.com/photos/QckxruozjRg)
-
-**Références** :
-
-- [Oracle Java Documentation - Arrays](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html)
-- [Dev.java - Learn Java: Control Flow](https://dev.java/learn/language-basics/control-flow/)
-- [W3Schools - Java Methods](https://www.w3schools.com/java/java_methods.asp)
 
 <!-- URLs -->
 

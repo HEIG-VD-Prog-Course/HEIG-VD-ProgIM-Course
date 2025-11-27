@@ -351,10 +351,6 @@ algorithmes.
 
 ```java
 public static int findMin(int[] array) {
-    if (array.length == 0) {
-        throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-    }
-
     int min = array[0];
 
     for (int i = 1; i < array.length; i++) {
@@ -371,10 +367,6 @@ public static int findMin(int[] array) {
 
 ```java
 public static int findMax(int[] array) {
-    if (array.length == 0) {
-        throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-    }
-
     int max = array[0];
     int index = 1;
 
@@ -393,10 +385,6 @@ public static int findMax(int[] array) {
 
 ```java
 public static int findMin(int[] array) {
-    if (array.length == 0) {
-        throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-    }
-
     int min = array[0];
 
     for (int value : array) {
@@ -679,9 +667,11 @@ public static int searchRecursive(int[] array, int target, int index) {
 ## Sources
 
 - [Oracle Java Documentation - Arrays](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html)
-- [Oracle Java Tutorials - Language Basics: Control Flow](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
-- [Dev.java - Learn Java: Control Flow](https://dev.java/learn/language-basics/control-flow/)
+- [Dev.java - Learn Java: Arrays](https://dev.java/learn/language-basics/arrays/)
+- [Dev.java - Learn Java: Controlling Flow](https://dev.java/learn/language-basics/controlling-flow/)
+- [W3Schools - Java Arrays](https://www.w3schools.com/java/java_arrays_reallife.asp)
 - [W3Schools - Java Methods](https://www.w3schools.com/java/java_methods.asp)
+- [W3Schools - Java Recursion](https://www.w3schools.com/java/java_recursion.asp)
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

@@ -117,7 +117,22 @@ consultez le [support de cours][cours]._
 5. **"À vous de jouer !"** with standard bullets and
    `![bg right:40%][illustration-a-vous-de-jouer]`
 6. **Questions** with `_class: lead`
-7. **Sources** with illustration credits and all URL references
+7. **Sources** with illustration credits ONLY (list format with links to
+   illustration references):
+
+```markdown
+## Sources
+
+- [Illustration objectifs][illustration-objectifs] par
+  [Author Name](https://unsplash.com/@username) sur
+  [Unsplash](https://unsplash.com/photos/photoId)
+- [Illustration à vous de jouer][illustration-a-vous-de-jouer] par
+  [Author Name](https://unsplash.com/@username) sur
+  [Unsplash](https://unsplash.com/photos/photoId)
+```
+
+**IMPORTANT**: Do NOT include a "Références" section or documentation links in
+Sources. Only list illustration credits.
 
 ## Footer URL Structure (MANDATORY)
 
@@ -216,6 +231,8 @@ For quiz/revision presentations, use the "Question/Answer" format:
 9. ❌ Missing "_Retrouvez plus de détails dans le support de cours_" section
    with proper formatting
 10. ❌ Not creating `images/` folder with `home.jpg` placeholder
+11. ❌ Including "Références" or documentation links in Sources slide (only
+    illustration credits allowed)
 
 ## Technical Specifications
 

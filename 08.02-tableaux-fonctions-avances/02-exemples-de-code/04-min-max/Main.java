@@ -69,10 +69,6 @@ public class Main {
      * Recherche du minimum avec boucle for.
      */
     private static double findMinFor(double[] array) {
-        if (array.length == 0) {
-            throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-        }
-
         double min = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -88,10 +84,6 @@ public class Main {
      * Recherche du minimum avec boucle for-each.
      */
     private static double findMinForEach(double[] array) {
-        if (array.length == 0) {
-            throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-        }
-
         double min = array[0];
 
         for (double value : array) {
@@ -107,10 +99,6 @@ public class Main {
      * Recherche du minimum avec boucle while.
      */
     private static double findMinWhile(double[] array) {
-        if (array.length == 0) {
-            throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-        }
-
         double min = array[0];
         int index = 1;
 
@@ -150,10 +138,6 @@ public class Main {
      * Recherche du maximum avec boucle for.
      */
     private static double findMaxFor(double[] array) {
-        if (array.length == 0) {
-            throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-        }
-
         double max = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -169,10 +153,6 @@ public class Main {
      * Recherche du maximum avec boucle while.
      */
     private static double findMaxWhile(double[] array) {
-        if (array.length == 0) {
-            throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-        }
-
         double max = array[0];
         int index = 1;
 
@@ -190,10 +170,6 @@ public class Main {
      * Recherche du maximum avec boucle do-while.
      */
     private static double findMaxDoWhile(double[] array) {
-        if (array.length == 0) {
-            throw new IllegalArgumentException("Le tableau ne peut pas être vide");
-        }
-
         double max = array[0];
         int index = 1;
 
