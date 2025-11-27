@@ -53,10 +53,10 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [02](#-cours-02) | Séquence, sélection et itération                                                         |
 | [03](#-cours-03) | Itération                                                                                |
 | [04](#-cours-04) | Java & Variables & Constantes                                                            |
-| [05](#-cours-05) | Fonctions, Entrée/sortie/encodage, Bonnes pratiques & Préparation au test                |
+| [05](#-cours-05) | Fonctions, Entrée/sortie/encodage & Bonnes pratiques                                     |
 | [06](#-cours-06) | Tableaux                                                                                 |
 | [07](#-cours-07) | Consolidation : Types, compilation et vocabulaire                                        |
-| [08](#-cours-08) | Bibliothèques et packages                                                                |
+| [08](#-cours-08) | Bibliothèques et packages & Tableaux et fonctions avancés                                |
 | [09](#-cours-09) | Algorithmes de parcours                                                                  |
 | [10](#-cours-10) | Algorithme de tris                                                                       |
 | [11](#-cours-11) | Débogage                                                                                 |
@@ -167,15 +167,6 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Exercices :
   [Lien vers le contenu](./05.03-bonnes-pratiques/02-exercices/README.md)
 
-### Préparation au test
-
-- Supports de cours :
-  [Lien vers le contenu](./05.04-preparation-test/01-supports-de-cours/README.md)
-  ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.04-preparation-test/01-supports-de-cours/05.04-preparation-test-presentation.pdf)
-
 ## 🕕 Cours 06
 
 ### Tableaux
@@ -218,6 +209,19 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
   [Lien vers le contenu](./08.01-bibliotheques-et-packages/02-exemples-de-code/)
 - Exercices :
   [Lien vers le contenu](./08.01-bibliotheques-et-packages/03-exercices/README.md)
+
+### Tableaux et fonctions avancés
+
+- Supports de cours :
+  [Lien vers le contenu](./08.02-tableaux-fonctions-avances/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.02-tableaux-fonctions-avances/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/08.02-tableaux-fonctions-avances/01-supports-de-cours/08.02-tableaux-fonctions-avances-presentation.pdf)
+- Exemples de code :
+  [Lien vers le contenu](./08.02-tableaux-fonctions-avances/02-exemples-de-code/)
+- Exercices :
+  [Lien vers le contenu](./08.02-tableaux-fonctions-avances/03-exercices/README.md)
 
 ## 🕘 Cours 09
 
