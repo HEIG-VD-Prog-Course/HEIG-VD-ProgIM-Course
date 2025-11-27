@@ -143,13 +143,13 @@ XX-example-name/
 
     **Principles:**
 
-11. Prefer non-gendered names that are commonly neutral in their cultural
-    context
-12. Reflect global diversity naturally by mixing names from various regions
-13. Avoid overused unisex clichés (Alex, Sam, Chris, Taylor)
-14. Keep examples readable: short names, easy to type, minimal diacritics
-15. Respect cultural context: some names are neutral in one region but gendered
-    in another
+    - Prefer non-gendered names that are commonly neutral in their cultural
+      context
+    - Reflect global diversity naturally by mixing names from various regions
+    - Avoid overused unisex clichés (Alex, Sam, Chris, Taylor)
+    - Keep examples readable: short names, easy to type, minimal diacritics
+    - Respect cultural context: some names are neutral in one region but
+      gendered in another
 
 **Recommended Neutral Names (non-exhaustive):**
 

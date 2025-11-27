@@ -26,7 +26,7 @@ description: [Brief description] pour l'unité d'enseignement ProgIM1 enseigné 
 url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/XX.XX-topic/01-supports-de-cours/index.html
 header: "**[Topic]**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
-headingDivider: 6
+headingDivider: 2
 math: mathjax
 -->
 ```
@@ -36,7 +36,7 @@ math: mathjax
 - Use `theme: custom-marp-theme` (NOT `theme: default`)
 - NEVER use `<style>` tag with `@import url('.marp/theme.css')`
 - NEVER use `:` in value without quotes
-- Set `headingDivider: 6` to auto-create slides from `##` headings
+- Set `headingDivider: 2` to auto-create slides from `##` headings
 - Use `[license]` (NOT `[licence]`) for consistency
 
 ## Slide Separation (CRITICAL RULE)
@@ -48,7 +48,7 @@ allowed are:
 2. Line 3: Closing frontmatter delimiter
 
 All other slides are automatically created by `##` headings thanks to
-`headingDivider: 6`.
+`headingDivider: 2`.
 
 ❌ **WRONG**:
 
@@ -76,8 +76,41 @@ More content
 
 ## Required Sections (in order)
 
-1. **Title slide** with `_class: lead` and `_paginate: false`
-2. **"Retrouvez plus de détails"** section with `_class: lead`
+1. **Title slide** with complete structure:
+
+```markdown
+# [Topic Title]
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
+
+[Support de cours][cours] · [Présentation (web)][presentation-web] ·
+[Présentation (PDF)][presentation-pdf]
+
+<small>V. Guidoux, avec l'aide de
+[GitHub Copilot](https://github.com/features/copilot).</small>
+
+<small>Ce travail est sous licence [CC BY-SA 4.0][license].</small>
+
+![bg brightness:2 opacity:0.2][illustration-principale]
+```
+
+2. **"Retrouvez plus de détails dans le support de cours"** section with
+   `_class: lead`:
+
+```markdown
+## _Retrouvez plus de détails dans le support de cours_
+
+<!-- _class: lead -->
+
+_Cette présentation est un résumé du support de cours. Pour plus de détails,
+consultez le [support de cours][cours]._
+```
+
 3. **Objectifs** starting with "À la fin de cette séance, vous devriez être
    capable de :" with `![bg right:40%][illustration-objectifs]`
 4. **Content sections** (as many `##` headings as needed)
@@ -117,15 +150,25 @@ Replace `XX.XX-topic` with actual module folder name.
 
 ## Slide Content Density Guidelines
 
+**CRITICAL: Maximum characters per slide: ~800 characters (including code)**
+
+This is approximately:
+
+- 10-12 lines of text (prose)
+- OR 15-20 lines of code with minimal text
+- OR 6-8 lines of text + 10 lines of code
+
 **When to split a slide into multiple parts:**
 
-- **Text-heavy slides**: If explanatory text exceeds ~150 words (excluding code)
-- **Mixed content**: When combining significant text (>100 words) AND code
+- **Character count**: If total content exceeds ~800 characters
+- **Text-heavy slides**: If explanatory text exceeds ~100 words (excluding code)
+- **Mixed content**: When combining significant text (>80 words) AND code
   examples
-- **Long lists**: When bullet point lists exceed 8-10 items
-- **Multiple code blocks**: When showing 2+ substantial code examples (>10 lines
-  each)
-- **Complex explanations**: When explaining 4+ distinct concepts on one slide
+- **Long lists**: When bullet point lists exceed 5-6 items
+- **Multiple code blocks**: When showing 2+ code examples (>8 lines each)
+- **Complex explanations**: When explaining 3+ distinct concepts on one slide
+
+**Count ALL content**: headings, text, code, comments, bullet points
 
 **Multi-part slide format:**
 
@@ -142,9 +185,13 @@ Replace `XX.XX-topic` with actual module folder name.
 **Splitting strategies:**
 
 - **Text + Code**: Put explanatory text on (1/2), code example on (2/2)
-- **Long lists**: Group related items (e.g., 3-4 items per slide)
+- **Long lists**: Group related items (e.g., 2-3 items per slide max)
 - **Before/After examples**: Split into separate slides with clear labels
 - **Definitions**: One concept per slide when explaining vocabulary
+- **Code variations**: One approach per slide (e.g., "with for" vs "with while")
+
+**No emojis**: Never use emojis in presentations (use text warnings like
+"Attention :" or "Note :")
 
 ## Quiz Presentations (Special Format)
 
@@ -159,13 +206,16 @@ For quiz/revision presentations, use the "Question/Answer" format:
 
 1. ❌ Using `theme: default` instead of `theme: custom-marp-theme`
 2. ❌ Adding `<style>` tag with `@import` (theme is already configured)
-3. ❌ Using `---` to separate slides (breaks with `headingDivider: 6`)
+3. ❌ Using `---` to separate slides (breaks with `headingDivider: 2`)
 4. ❌ Using `[licence]` instead of `[license]`
-5. ❌ Forgetting `![bg right:40%][illustration-objectifs]` on objectives slide
-6. ❌ Not including "À la fin de cette séance, vous devriez être capable de :"
-7. ❌ Using `<!-- _class: title -->` instead of proper lead structure
-8. ❌ Missing "Retrouvez plus de détails dans le support de cours" section
-9. ❌ Not creating `images/` folder with `home.jpg` placeholder
+5. ❌ Using `headingDivider: 6` instead of `headingDivider: 2`
+6. ❌ Forgetting `![bg right:40%][illustration-objectifs]` on objectives slide
+7. ❌ Not including "À la fin de cette séance, vous devriez être capable de :"
+8. ❌ Using simplified title slide instead of complete template with links and
+   attributions
+9. ❌ Missing "_Retrouvez plus de détails dans le support de cours_" section
+   with proper formatting
+10. ❌ Not creating `images/` folder with `home.jpg` placeholder
 
 ## Technical Specifications
 
