@@ -57,7 +57,7 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [06](#-cours-06) | Tableaux                                                                                 |
 | [07](#-cours-07) | Consolidation : Types, compilation et vocabulaire                                        |
 | [08](#-cours-08) | Bibliothèques et packages & Tableaux et fonctions avancés                                |
-| [09](#-cours-09) | Algorithmes de parcours                                                                  |
+| [09](#-cours-09) | Méthodologies de résolution de problèmes                                                 |
 | [10](#-cours-10) | Algorithme de tris                                                                       |
 | [11](#-cours-11) | Débogage                                                                                 |
 | [12](#-cours-12) | Projet guidé - Puissance 4                                                               |
@@ -225,18 +225,18 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕘 Cours 09
 
-### Algorithmes de parcours
+### Méthodologies de résolution de problèmes
 
 - Supports de cours :
-  [Lien vers le contenu](./09.01-algorithmes-de-parcours/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-parcours/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-algorithmes-de-parcours/01-supports-de-cours/09.01-algorithmes-de-parcours-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/09.01-methodologies-de-resolution-de-problemes-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./09.01-algorithmes-de-parcours/02-exemples-de-code/)
+  [Lien vers le contenu](./09.01-methodologies-de-resolution-de-problemes/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./09.01-algorithmes-de-parcours/03-exercices/README.md)
+  [Lien vers le contenu](./09.01-methodologies-de-resolution-de-problemes/03-exercices/README.md)
 
 ## 🕙 Cours 10
 
