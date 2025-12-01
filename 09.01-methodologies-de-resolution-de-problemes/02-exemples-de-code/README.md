@@ -39,16 +39,19 @@ recourir à de l'aide externe**.
 
 1. **01-probleme-simple** : Calculateur de réduction pour un système d'échange
    local
+
    - Analyse du problème (entrées, sorties, contraintes)
    - Pseudocode puis implémentation Java
    - Tests manuels et automatiques
 
 2. **02-decomposition-fonctions** : Gestion d'un potager partagé
+
    - Décomposition d'un problème complexe
    - Structuration avec des fonctions dédiées
    - Approche descendante (top-down)
 
 3. **03-probleme-complexe** : Planificateur de covoiturage pour une communauté
+
    - Problème complexe nécessitant plusieurs structures de données
    - Combinaison de plusieurs stratégies
    - Validation et gestion d'erreurs

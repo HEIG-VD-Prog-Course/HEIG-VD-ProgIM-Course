@@ -18,39 +18,39 @@
  */
 
 public class GestionPotager {
-    
+
     // Données du système (simplifiées pour l'exemple)
     // Dans un vrai programme, on utiliserait des tableaux ou des listes
     private static String[] membres = new String[10];
     private static int nombreMembres = 0;
-    
+
     private static String[] parcelles = new String[5]; // Nom du membre qui occupe chaque parcelle
     private static final int NB_PARCELLES = 5;
-    
+
     private static String[] planningArrosage = new String[7]; // Un membre par jour de la semaine
-    
+
     /**
      * DÉCOMPOSITION DU PROBLÈME
      * =========================
      * 
      * Potager partagé
      * ├── Gérer les membres
-     * │   ├── Ajouter un membre
-     * │   ├── Retirer un membre
-     * │   └── Afficher les membres
+     * │ ├── Ajouter un membre
+     * │ ├── Retirer un membre
+     * │ └── Afficher les membres
      * ├── Gérer les parcelles
-     * │   ├── Attribuer une parcelle
-     * │   ├── Libérer une parcelle
-     * │   └── Afficher l'état des parcelles
+     * │ ├── Attribuer une parcelle
+     * │ ├── Libérer une parcelle
+     * │ └── Afficher l'état des parcelles
      * └── Gérer l'arrosage
-     *     ├── Planifier l'arrosage
-     *     └── Afficher le planning
+     * ├── Planifier l'arrosage
+     * └── Afficher le planning
      */
-    
+
     // ========================================================================
     // GESTION DES MEMBRES
     // ========================================================================
-    
+
     /**
      * Ajoute un nouveau membre au potager.
      * 
@@ -63,24 +63,24 @@ public class GestionPotager {
             System.out.println("Erreur : le nom ne peut pas être vide.");
             return false;
         }
-        
+
         if (nombreMembres >= membres.length) {
             System.out.println("Erreur : le potager est complet.");
             return false;
         }
-        
+
         if (membreExiste(nom)) {
             System.out.println("Erreur : ce membre existe déjà.");
             return false;
         }
-        
+
         // Ajout
         membres[nombreMembres] = nom;
         nombreMembres++;
         System.out.println("✓ " + nom + " a été ajouté au potager.");
         return true;
     }
-    
+
     /**
      * Retire un membre du potager.
      * 
@@ -89,35 +89,35 @@ public class GestionPotager {
      */
     public static boolean retirerMembre(String nom) {
         int index = trouverIndexMembre(nom);
-        
+
         if (index == -1) {
             System.out.println("Erreur : ce membre n'existe pas.");
             return false;
         }
-        
+
         // Vérifier qu'il n'occupe pas de parcelle
         if (membreOccupeParcelle(nom)) {
             System.out.println("Erreur : " + nom + " occupe encore une parcelle.");
             return false;
         }
-        
+
         // Retrait (décaler les éléments)
         for (int i = index; i < nombreMembres - 1; i++) {
             membres[i] = membres[i + 1];
         }
         membres[nombreMembres - 1] = null;
         nombreMembres--;
-        
+
         System.out.println("✓ " + nom + " a été retiré du potager.");
         return true;
     }
-    
+
     /**
      * Affiche la liste de tous les membres.
      */
     public static void afficherMembres() {
         System.out.println("\n=== Membres du potager ===");
-        
+
         if (nombreMembres == 0) {
             System.out.println("Aucun membre enregistré.");
         } else {
@@ -125,17 +125,17 @@ public class GestionPotager {
                 System.out.printf("%d. %s%n", i + 1, membres[i]);
             }
         }
-        
+
         System.out.println("Total : " + nombreMembres + " membre(s)");
     }
-    
+
     /**
      * Vérifie si un membre existe.
      */
     private static boolean membreExiste(String nom) {
         return trouverIndexMembre(nom) != -1;
     }
-    
+
     /**
      * Trouve l'index d'un membre dans le tableau.
      * 
@@ -149,15 +149,15 @@ public class GestionPotager {
         }
         return -1;
     }
-    
+
     // ========================================================================
     // GESTION DES PARCELLES
     // ========================================================================
-    
+
     /**
      * Attribue une parcelle à un membre.
      * 
-     * @param nom Le nom du membre
+     * @param nom            Le nom du membre
      * @param numeroParcelle Le numéro de la parcelle (0 à 4)
      * @return true si l'attribution a réussi, false sinon
      */
@@ -167,32 +167,32 @@ public class GestionPotager {
             System.out.println("Erreur : numéro de parcelle invalide.");
             return false;
         }
-        
+
         // Vérifier que le membre existe
         if (!membreExiste(nom)) {
             System.out.println("Erreur : ce membre n'existe pas.");
             return false;
         }
-        
+
         // Vérifier que la parcelle est libre
         if (parcelles[numeroParcelle] != null) {
-            System.out.println("Erreur : cette parcelle est déjà occupée par " + 
-                             parcelles[numeroParcelle] + ".");
+            System.out.println("Erreur : cette parcelle est déjà occupée par " +
+                    parcelles[numeroParcelle] + ".");
             return false;
         }
-        
+
         // Vérifier que le membre n'a pas déjà une parcelle
         if (membreOccupeParcelle(nom)) {
             System.out.println("Erreur : " + nom + " occupe déjà une parcelle.");
             return false;
         }
-        
+
         // Attribution
         parcelles[numeroParcelle] = nom;
         System.out.println("✓ Parcelle " + numeroParcelle + " attribuée à " + nom + ".");
         return true;
     }
-    
+
     /**
      * Libère une parcelle.
      * 
@@ -204,24 +204,24 @@ public class GestionPotager {
             System.out.println("Erreur : numéro de parcelle invalide.");
             return false;
         }
-        
+
         if (parcelles[numeroParcelle] == null) {
             System.out.println("Erreur : cette parcelle est déjà libre.");
             return false;
         }
-        
+
         String ancienOccupant = parcelles[numeroParcelle];
         parcelles[numeroParcelle] = null;
         System.out.println("✓ Parcelle " + numeroParcelle + " libérée (" + ancienOccupant + ").");
         return true;
     }
-    
+
     /**
      * Affiche l'état de toutes les parcelles.
      */
     public static void afficherParcelles() {
         System.out.println("\n=== État des parcelles ===");
-        
+
         for (int i = 0; i < NB_PARCELLES; i++) {
             System.out.printf("Parcelle %d : ", i);
             if (parcelles[i] == null) {
@@ -231,7 +231,7 @@ public class GestionPotager {
             }
         }
     }
-    
+
     /**
      * Vérifie si un membre occupe une parcelle.
      */
@@ -243,11 +243,11 @@ public class GestionPotager {
         }
         return false;
     }
-    
+
     // ========================================================================
     // GESTION DE L'ARROSAGE
     // ========================================================================
-    
+
     /**
      * Planifie l'arrosage pour la semaine.
      * 
@@ -256,41 +256,41 @@ public class GestionPotager {
      */
     public static void planifierArrosage() {
         System.out.println("\n=== Planification de l'arrosage ===");
-        
+
         // Récupérer les membres qui ont une parcelle
         String[] membresAvecParcelle = new String[NB_PARCELLES];
         int nbMembresAvecParcelle = 0;
-        
+
         for (int i = 0; i < NB_PARCELLES; i++) {
             if (parcelles[i] != null) {
                 membresAvecParcelle[nbMembresAvecParcelle] = parcelles[i];
                 nbMembresAvecParcelle++;
             }
         }
-        
+
         if (nbMembresAvecParcelle == 0) {
             System.out.println("Aucune parcelle occupée. Pas d'arrosage à planifier.");
             return;
         }
-        
+
         // Attribuer les jours de la semaine
-        String[] jours = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
-        
+        String[] jours = { "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche" };
+
         for (int i = 0; i < 7; i++) {
             planningArrosage[i] = membresAvecParcelle[i % nbMembresAvecParcelle];
         }
-        
+
         System.out.println("✓ Planning d'arrosage créé pour la semaine.");
     }
-    
+
     /**
      * Affiche le planning d'arrosage de la semaine.
      */
     public static void afficherPlanningArrosage() {
         System.out.println("\n=== Planning d'arrosage ===");
-        
-        String[] jours = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
-        
+
+        String[] jours = { "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche" };
+
         boolean planningVide = true;
         for (int i = 0; i < 7; i++) {
             if (planningArrosage[i] != null) {
@@ -298,22 +298,22 @@ public class GestionPotager {
                 break;
             }
         }
-        
+
         if (planningVide) {
             System.out.println("Aucun planning d'arrosage défini.");
             return;
         }
-        
+
         for (int i = 0; i < 7; i++) {
-            System.out.printf("%-10s : %s%n", jours[i], 
-                            planningArrosage[i] != null ? planningArrosage[i] : "-");
+            System.out.printf("%-10s : %s%n", jours[i],
+                    planningArrosage[i] != null ? planningArrosage[i] : "-");
         }
     }
-    
+
     // ========================================================================
     // MENU PRINCIPAL
     // ========================================================================
-    
+
     /**
      * Affiche le menu principal.
      */
@@ -332,42 +332,42 @@ public class GestionPotager {
         System.out.println("0. Quitter");
         System.out.println("========================================");
     }
-    
+
     /**
      * Programme principal : démonstration avec des données de test.
      */
     public static void main(String[] args) {
         System.out.println("=== Démonstration du système de gestion de potager ===\n");
-        
+
         // Scénario de démonstration
         System.out.println("1. Ajout de membres");
         ajouterMembre("Alice");
         ajouterMembre("Bob");
         ajouterMembre("Charlie");
         ajouterMembre("Diana");
-        
+
         afficherMembres();
-        
+
         System.out.println("\n2. Attribution de parcelles");
         attribuerParcelle("Alice", 0);
         attribuerParcelle("Bob", 1);
         attribuerParcelle("Charlie", 2);
-        
+
         afficherParcelles();
-        
+
         System.out.println("\n3. Planification de l'arrosage");
         planifierArrosage();
         afficherPlanningArrosage();
-        
+
         System.out.println("\n4. Libération d'une parcelle");
         libererParcelle(1);
-        
+
         afficherParcelles();
-        
+
         System.out.println("\n5. Nouvelle planification après changement");
         planifierArrosage();
         afficherPlanningArrosage();
-        
+
         System.out.println("\n=== Fin de la démonstration ===");
     }
 }

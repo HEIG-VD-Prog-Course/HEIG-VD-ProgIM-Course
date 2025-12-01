@@ -25,14 +25,13 @@ développeur ou une bonne développeuse est avant tout une personne capable de
 
 > [!IMPORTANT] La méthodologie de résolution de problèmes est plus importante
 > que la maîtrise d'un langage spécifique. Un bon ingénieur ou une bonne
-> ingénieure sait **comment** aborder un problème, pas seulement **quoi**
-> coder.
+> ingénieure sait **comment** aborder un problème, pas seulement **quoi** coder.
 
 ### Pourquoi la méthodologie est essentielle
 
-Lorsque vous serez confronté à un problème réel en entreprise ou dans un
-projet, vous n'aurez pas toujours quelqu'un pour vous dire exactement quoi
-faire. Vous devrez :
+Lorsque vous serez confronté à un problème réel en entreprise ou dans un projet,
+vous n'aurez pas toujours quelqu'un pour vous dire exactement quoi faire. Vous
+devrez :
 
 - Comprendre le problème dans son ensemble
 - Identifier ce qui est vraiment demandé
@@ -40,10 +39,10 @@ faire. Vous devrez :
 - Concevoir une solution avant de coder
 - Évaluer si votre solution répond bien au besoin
 
-**Exemple concret** : Imaginez qu'on vous demande de créer un système pour
-gérer une bibliothèque de prêt d'outils entre voisins. Si vous commencez
-directement à coder sans réfléchir, vous risquez de vous perdre rapidement. Une
-bonne méthodologie vous permet d'avancer de manière structurée et efficace.
+**Exemple concret** : Imaginez qu'on vous demande de créer un système pour gérer
+une bibliothèque de prêt d'outils entre voisins. Si vous commencez directement à
+coder sans réfléchir, vous risquez de vous perdre rapidement. Une bonne
+méthodologie vous permet d'avancer de manière structurée et efficace.
 
 ### Apprendre à apprendre
 
@@ -155,7 +154,7 @@ Ensuite, on combine ces opérations :
 ```java
 // Fonction de niveau intermédiaire
 double calculerEmpreinteMensuelle(
-    double kmVelo, double kmVoiture, 
+    double kmVelo, double kmVoiture,
     double kmTrain, double kmAvion
 )
 ```
@@ -222,19 +221,19 @@ Pour chaque problème, demandez-vous :
 
 **Exemple : Calculateur de réduction pour un système d'échange local**
 
-| Aspect    | Description                                           |
-| --------- | ----------------------------------------------------- |
-| Entrées   | Prix initial (double), nombre de services rendus (int) |
-| Sorties   | Prix final après réduction (double)                   |
-| Format    | Nombres avec 2 décimales pour les prix               |
+| Aspect  | Description                                            |
+| ------- | ------------------------------------------------------ |
+| Entrées | Prix initial (double), nombre de services rendus (int) |
+| Sorties | Prix final après réduction (double)                    |
+| Format  | Nombres avec 2 décimales pour les prix                 |
 
 **Exemple : Planificateur de covoiturage**
 
-| Aspect    | Description                                                     |
-| --------- | --------------------------------------------------------------- |
-| Entrées   | Liste de trajets, adresses de départ/arrivée, horaires         |
-| Sorties   | Groupes de covoiturage optimisés, économies de CO2             |
-| Format    | Tableau de structures complexes, rapport textuel                |
+| Aspect  | Description                                            |
+| ------- | ------------------------------------------------------ |
+| Entrées | Liste de trajets, adresses de départ/arrivée, horaires |
+| Sorties | Groupes de covoiturage optimisés, économies de CO2     |
+| Format  | Tableau de structures complexes, rapport textuel       |
 
 ### Identifier les contraintes et les cas limites
 
@@ -250,12 +249,12 @@ cases) sont les situations particulières qui pourraient poser problème.
 
 **Exemple : Système de réservation d'outils**
 
-| Type de contrainte   | Description                                      |
-| -------------------- | ------------------------------------------------ |
-| Domaine              | La durée de prêt est entre 1 et 30 jours         |
-| Format               | Le nom de l'outil est une chaîne non vide        |
-| Performance          | Réponse en moins d'1 seconde                     |
-| Métier               | Un outil ne peut être prêté qu'à une personne    |
+| Type de contrainte | Description                                   |
+| ------------------ | --------------------------------------------- |
+| Domaine            | La durée de prêt est entre 1 et 30 jours      |
+| Format             | Le nom de l'outil est une chaîne non vide     |
+| Performance        | Réponse en moins d'1 seconde                  |
+| Métier             | Un outil ne peut être prêté qu'à une personne |
 
 **Cas limites à considérer** :
 
@@ -288,13 +287,13 @@ définir des critères clairs de réussite.
 
 **Exemple : Calculateur d'empreinte carbone**
 
-| Critère                          | Description                                |
-| -------------------------------- | ------------------------------------------ |
-| Fonctionnel                      | Calcule correctement l'empreinte en kg CO2 |
-| Précision                        | Arrondi à 2 décimales                      |
-| Validation                       | Refuse les distances négatives             |
-| Utilisabilité                    | Messages d'erreur clairs                   |
-| Comparaison                      | Affiche les moyennes nationales            |
+| Critère       | Description                                |
+| ------------- | ------------------------------------------ |
+| Fonctionnel   | Calcule correctement l'empreinte en kg CO2 |
+| Précision     | Arrondi à 2 décimales                      |
+| Validation    | Refuse les distances négatives             |
+| Utilisabilité | Messages d'erreur clairs                   |
+| Comparaison   | Affiche les moyennes nationales            |
 
 **Critères généraux de qualité** :
 
@@ -329,7 +328,7 @@ boolean validerFormulaire(String nom, String email, String telephone) {
     boolean nomValide = validerNom(nom);
     boolean emailValide = validerEmail(email);
     boolean telephoneValide = validerTelephone(telephone);
-    
+
     return nomValide && emailValide && telephoneValide;
 }
 
@@ -355,8 +354,8 @@ séparément.
 ### Approche itérative vs approche récursive
 
 Il existe deux grandes façons de concevoir des algorithmes : l'approche
-itérative (avec des boucles) et l'approche récursive (une fonction qui
-s'appelle elle-même).
+itérative (avec des boucles) et l'approche récursive (une fonction qui s'appelle
+elle-même).
 
 **Approche itérative** : Répéter une opération avec une boucle
 
@@ -389,11 +388,11 @@ int sommePremiers(int n) {
 
 **Quand utiliser quelle approche ?**
 
-| Situation                              | Approche recommandée |
-| -------------------------------------- | -------------------- |
-| Parcourir un tableau                   | Itérative            |
-| Répéter une action N fois              | Itérative            |
-| Problème naturellement récursif        | Récursive            |
+| Situation                                 | Approche recommandée   |
+| ----------------------------------------- | ---------------------- |
+| Parcourir un tableau                      | Itérative              |
+| Répéter une action N fois                 | Itérative              |
+| Problème naturellement récursif           | Récursive              |
 | Recherche dans une structure arborescente | Récursive ou itérative |
 
 ### Utilisation de fonctions pour structurer le code
@@ -419,7 +418,7 @@ permettent de :
        // Envoi d'un email
        // Affichage d'un message
    }
-   
+
    // Bon : fonctions séparées
    boolean validerNom(String nom)
    void ajouterUtilisateur(String nom)
@@ -432,7 +431,7 @@ permettent de :
    ```java
    // Mauvais
    void f(double x)
-   
+
    // Bon
    void calculerReduction(double prixInitial)
    ```
@@ -443,9 +442,9 @@ permettent de :
    ```java
    // Mauvais : trop de paramètres
    void creerReservation(String n, int d, int m, int a, String o, int dur)
-   
+
    // Bon : paramètres regroupés et explicites
-   void creerReservation(String nomUtilisateur, Date date, 
+   void creerReservation(String nomUtilisateur, Date date,
                          String nomOutil, int dureeJours)
    ```
 
@@ -493,8 +492,8 @@ void emprunterOutil() {
 
 ## Outils de planification
 
-Avant d'écrire du code, il est utile d'utiliser des outils de planification
-pour clarifier vos idées.
+Avant d'écrire du code, il est utile d'utiliser des outils de planification pour
+clarifier vos idées.
 
 ### Pseudocode
 
@@ -518,7 +517,7 @@ DÉBUT
     SINON
         instruction 4
     FIN SI
-    
+
     POUR i DE 1 À n FAIRE
         instruction 5
     FIN POUR
@@ -532,13 +531,13 @@ DÉBUT CalculerReduction
     ENTRÉES :
         prixInitial : nombre décimal
         nombreServices : nombre entier
-    
+
     SORTIE :
         prixFinal : nombre décimal
-    
+
     ALGORITHME :
         tauxReduction ← 0
-        
+
         SI nombreServices >= 10 ALORS
             tauxReduction ← 0.20
         SINON SI nombreServices >= 5 ALORS
@@ -546,10 +545,10 @@ DÉBUT CalculerReduction
         SINON SI nombreServices >= 1 ALORS
             tauxReduction ← 0.05
         FIN SI
-        
+
         reduction ← prixInitial × tauxReduction
         prixFinal ← prixInitial - reduction
-        
+
         RETOURNER prixFinal
 FIN
 ```
@@ -559,7 +558,7 @@ Une fois le pseudocode écrit, la traduction en Java est simple :
 ```java
 double calculerReduction(double prixInitial, int nombreServices) {
     double tauxReduction = 0;
-    
+
     if (nombreServices >= 10) {
         tauxReduction = 0.20;
     } else if (nombreServices >= 5) {
@@ -567,10 +566,10 @@ double calculerReduction(double prixInitial, int nombreServices) {
     } else if (nombreServices >= 1) {
         tauxReduction = 0.05;
     }
-    
+
     double reduction = prixInitial * tauxReduction;
     double prixFinal = prixInitial - reduction;
-    
+
     return prixFinal;
 }
 ```
@@ -614,14 +613,14 @@ différentes étapes.
                   [FIN]
 ```
 
-> [!TIP] Les diagrammes de flux sont particulièrement utiles pour visualiser
-> les décisions complexes et les boucles. Vous pouvez les dessiner à la main
-> sur papier ou utiliser des outils comme draw.io ou PlantUML.
+> [!TIP] Les diagrammes de flux sont particulièrement utiles pour visualiser les
+> décisions complexes et les boucles. Vous pouvez les dessiner à la main sur
+> papier ou utiliser des outils comme draw.io ou PlantUML.
 
 ### Diagrammes de décomposition
 
-Les diagrammes de décomposition montrent comment un problème complexe est
-divisé en sous-problèmes.
+Les diagrammes de décomposition montrent comment un problème complexe est divisé
+en sous-problèmes.
 
 **Exemple : Système de gestion de potager partagé**
 
@@ -663,16 +662,16 @@ sorties et contraintes pour chaque fonction.
 
 **Exemple : Fonction de validation d'une réservation**
 
-| Aspect       | Description                                               |
-| ------------ | --------------------------------------------------------- |
-| **Nom**      | `validerReservation`                                      |
-| **But**      | Vérifier qu'une réservation est possible                  |
-| **Entrées**  | - `nomOutil` (String)<br>- `dateDebut` (Date)<br>- `duree` (int) |
-| **Sorties**  | `boolean` (true si valide, false sinon)                   |
-| **Pré-conditions** | - `nomOutil` non null<br>- `dateDebut` non null<br>- `duree` > 0 |
+| Aspect              | Description                                                         |
+| ------------------- | ------------------------------------------------------------------- |
+| **Nom**             | `validerReservation`                                                |
+| **But**             | Vérifier qu'une réservation est possible                            |
+| **Entrées**         | - `nomOutil` (String)<br>- `dateDebut` (Date)<br>- `duree` (int)    |
+| **Sorties**         | `boolean` (true si valide, false sinon)                             |
+| **Pré-conditions**  | - `nomOutil` non null<br>- `dateDebut` non null<br>- `duree` > 0    |
 | **Post-conditions** | - Retourne true si l'outil est disponible<br>- Retourne false sinon |
-| **Contraintes** | - `duree` entre 1 et 30 jours<br>- `dateDebut` dans le futur |
-| **Cas limites** | - Outil inexistant<br>- Date dans le passé<br>- Durée hors limites |
+| **Contraintes**     | - `duree` entre 1 et 30 jours<br>- `dateDebut` dans le futur        |
+| **Cas limites**     | - Outil inexistant<br>- Date dans le passé<br>- Durée hors limites  |
 
 Ce tableau vous aide à réfléchir à tous les aspects de la fonction avant de
 l'implémenter.
@@ -688,8 +687,8 @@ Voici les principaux critères pour évaluer une solution :
 
 #### 1. Lisibilité
 
-Un code lisible est facile à comprendre par d'autres personnes (ou par
-vous-même dans 6 mois).
+Un code lisible est facile à comprendre par d'autres personnes (ou par vous-même
+dans 6 mois).
 
 ```java
 // Peu lisible
@@ -749,8 +748,8 @@ double calculerReduction(double prix, int services) {
 }
 ```
 
-Maintenant, si on veut changer les seuils ou les taux, il suffit de modifier
-les constantes.
+Maintenant, si on veut changer les seuils ou les taux, il suffit de modifier les
+constantes.
 
 #### 3. Efficacité
 
@@ -807,12 +806,12 @@ int trouverMaximum(int[] tableau) {
 
 **Comparaison** :
 
-| Critère       | Approche 1                  | Approche 2                    |
-| ------------- | --------------------------- | ----------------------------- |
-| Lisibilité    | Claire et directe           | Très simple                   |
-| Efficacité    | O(n) - très rapide          | O(n log n) - plus lent        |
-| Effet de bord | Ne modifie pas le tableau   | Modifie le tableau            |
-| Recommandation | **Meilleure solution**     | À éviter                      |
+| Critère        | Approche 1                | Approche 2             |
+| -------------- | ------------------------- | ---------------------- |
+| Lisibilité     | Claire et directe         | Très simple            |
+| Efficacité     | O(n) - très rapide        | O(n log n) - plus lent |
+| Effet de bord  | Ne modifie pas le tableau | Modifie le tableau     |
+| Recommandation | **Meilleure solution**    | À éviter               |
 
 **Conclusion** : L'approche 1 est meilleure car elle est plus rapide et ne
 modifie pas le tableau d'origine.
@@ -841,8 +840,8 @@ boolean estPremier(int n) {
 }
 ```
 
-Cette version fonctionne et est facile à comprendre. Pour les petits nombres
-(< 10000), elle est largement suffisante.
+Cette version fonctionne et est facile à comprendre. Pour les petits nombres (<
+10000), elle est largement suffisante.
 
 **Version optimisée** :
 
@@ -851,7 +850,7 @@ boolean estPremier(int n) {
     if (n <= 1) return false;
     if (n <= 3) return true;
     if (n % 2 == 0 || n % 3 == 0) return false;
-    
+
     for (int i = 5; i * i <= n; i += 6) {
         if (n % i == 0 || n % (i + 2) == 0) return false;
     }
@@ -965,7 +964,7 @@ void testerCalculerReduction() {
     } else {
         System.out.println("OK Test 1");
     }
-    
+
     // Test 2
     double resultat2 = calculerReduction(50.0, 10);
     if (resultat2 != 40.0) {
@@ -982,8 +981,8 @@ void testerCalculerReduction() {
 - Détecte les régressions (erreurs réintroduites)
 - Peut être exécuté automatiquement
 
-> [!TIP] Écrivez vos tests avant ou pendant le développement, pas seulement à
-> la fin. Cela vous aide à mieux concevoir vos fonctions.
+> [!TIP] Écrivez vos tests avant ou pendant le développement, pas seulement à la
+> fin. Cela vous aide à mieux concevoir vos fonctions.
 
 ### Validation systématique
 
@@ -998,13 +997,13 @@ Pour valider une fonction de manière complète :
 
 **Tableau de validation** :
 
-| ID   | Type      | Entrée                      | Sortie attendue | Sortie obtenue | Statut |
-| ---- | --------- | --------------------------- | --------------- | -------------- | ------ |
-| T1   | Normal    | prix=100, services=5        | 90.0            | 90.0           | ✓      |
-| T2   | Normal    | prix=50, services=10        | 40.0            | 40.0           | ✓      |
-| T3   | Limite    | prix=100, services=0        | 100.0           | 100.0          | ✓      |
-| T4   | Limite    | prix=0, services=5          | 0.0             | 0.0            | ✓      |
-| T5   | Erreur    | prix=-10, services=5        | Exception       | 90.0           | ✗      |
+| ID  | Type   | Entrée               | Sortie attendue | Sortie obtenue | Statut |
+| --- | ------ | -------------------- | --------------- | -------------- | ------ |
+| T1  | Normal | prix=100, services=5 | 90.0            | 90.0           | ✓      |
+| T2  | Normal | prix=50, services=10 | 40.0            | 40.0           | ✓      |
+| T3  | Limite | prix=100, services=0 | 100.0           | 100.0          | ✓      |
+| T4  | Limite | prix=0, services=5   | 0.0             | 0.0            | ✓      |
+| T5  | Erreur | prix=-10, services=5 | Exception       | 90.0           | ✗      |
 
 Le test T5 révèle un problème : la fonction ne vérifie pas que le prix est
 positif.
@@ -1083,8 +1082,8 @@ efficacement :
 > int moyenne = somme / notes.length;
 > ```
 >
-> Je m'attendais à obtenir 11 (ou 12), mais j'obtiens 0. Qu'est-ce qui ne va
-> pas ?"
+> Je m'attendais à obtenir 11 (ou 12), mais j'obtiens 0. Qu'est-ce qui ne va pas
+> ?"
 
 **Éléments d'une bonne demande d'aide** :
 
@@ -1106,11 +1105,11 @@ efficacement :
 3. **Analyser avant de coder** : Identifier les entrées, sorties et contraintes
    avant de commencer à écrire du code.
 
-4. **Planifier avec des outils** : Utiliser le pseudocode, les diagrammes et
-   les tableaux d'analyse pour clarifier vos idées.
+4. **Planifier avec des outils** : Utiliser le pseudocode, les diagrammes et les
+   tableaux d'analyse pour clarifier vos idées.
 
-5. **Évaluer les solutions** : Comparer différentes approches selon des
-   critères de lisibilité, maintenabilité et efficacité.
+5. **Évaluer les solutions** : Comparer différentes approches selon des critères
+   de lisibilité, maintenabilité et efficacité.
 
 6. **Tester rigoureusement** : Tester les cas normaux, les cas limites et les
    cas d'erreur.
@@ -1133,4 +1132,3 @@ Ces exercices vous permettront de :
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
-

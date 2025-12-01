@@ -21,8 +21,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 Ces exercices vous permettent de mettre en pratique les méthodologies de
 résolution de problèmes vues en cours. Ils sont conçus pour développer votre
-capacité à analyser, décomposer et résoudre des problèmes de manière
-structurée.
+capacité à analyser, décomposer et résoudre des problèmes de manière structurée.
 
 **Important** : Pour chaque exercice, suivez ces étapes :
 
@@ -58,6 +57,7 @@ livres. Le système doit permettre :
    en sous-problèmes
 
 2. **Pour chaque sous-problème principal**, identifiez :
+
    - Les entrées nécessaires
    - Les sorties attendues
    - Les contraintes à respecter
@@ -99,35 +99,35 @@ Système de gestion de bibliothèque
 
 **Gérer les membres**
 
-| Aspect       | Description                                     |
-| ------------ | ----------------------------------------------- |
-| Entrées      | Nom, prénom, numéro de membre                   |
-| Sorties      | Confirmation d'inscription ou message d'erreur  |
-| Contraintes  | Numéro de membre unique, nom non vide           |
+| Aspect      | Description                                    |
+| ----------- | ---------------------------------------------- |
+| Entrées     | Nom, prénom, numéro de membre                  |
+| Sorties     | Confirmation d'inscription ou message d'erreur |
+| Contraintes | Numéro de membre unique, nom non vide          |
 
 **Gérer le catalogue**
 
-| Aspect       | Description                                     |
-| ------------ | ----------------------------------------------- |
-| Entrées      | Titre, auteur, ISBN, nombre d'exemplaires       |
-| Sorties      | Confirmation d'ajout ou message d'erreur        |
-| Contraintes  | ISBN unique, au moins 1 exemplaire              |
+| Aspect      | Description                               |
+| ----------- | ----------------------------------------- |
+| Entrées     | Titre, auteur, ISBN, nombre d'exemplaires |
+| Sorties     | Confirmation d'ajout ou message d'erreur  |
+| Contraintes | ISBN unique, au moins 1 exemplaire        |
 
 **Gérer les emprunts**
 
-| Aspect       | Description                                            |
-| ------------ | ------------------------------------------------------ |
-| Entrées      | Numéro de membre, ISBN du livre, date d'emprunt        |
-| Sorties      | Confirmation d'emprunt ou message d'erreur             |
-| Contraintes  | Maximum 3 livres par membre, livre disponible         |
+| Aspect      | Description                                     |
+| ----------- | ----------------------------------------------- |
+| Entrées     | Numéro de membre, ISBN du livre, date d'emprunt |
+| Sorties     | Confirmation d'emprunt ou message d'erreur      |
+| Contraintes | Maximum 3 livres par membre, livre disponible   |
 
 **Gérer les amendes**
 
-| Aspect       | Description                                            |
-| ------------ | ------------------------------------------------------ |
-| Entrées      | Date d'emprunt, date de retour, durée autorisée        |
-| Sorties      | Montant de l'amende                                    |
-| Contraintes  | 0.50 CHF par jour de retard, durée maximale 30 jours   |
+| Aspect      | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| Entrées     | Date d'emprunt, date de retour, durée autorisée      |
+| Sorties     | Montant de l'amende                                  |
+| Contraintes | 0.50 CHF par jour de retard, durée maximale 30 jours |
 
 ### 3. Fonctions nécessaires
 
@@ -240,11 +240,11 @@ FONCTION principale()
     DEBUT
         afficherMenu()
         montantInsere ← 0
-        
+
         REPETER
             afficherMessage("Insérez des pièces (0 pour terminer)")
             piece ← lirePiece()
-            
+
             SI piece > 0 ALORS
                 SI estPieceValide(piece) ALORS
                     montantInsere ← montantInsere + piece
@@ -254,11 +254,11 @@ FONCTION principale()
                 FIN SI
             FIN SI
         JUSQU'À piece = 0
-        
+
         SI montantInsere > 0 ALORS
             choix ← lireChoixBoisson()
             prixBoisson ← obtenirPrixBoisson(choix)
-            
+
             SI prixBoisson != -1 ALORS
                 traiterAchat(montantInsere, prixBoisson, choix)
             SINON
@@ -311,9 +311,9 @@ FONCTION traiterAchat(montantInsere : réel, prix : réel, choix : entier)
         SI montantInsere >= prix ALORS
             afficherMessage("Distribution de la boisson...")
             distribuerBoisson(choix)
-            
+
             monnaie ← montantInsere - prix
-            
+
             SI monnaie > 0 ALORS
                 afficherMessage("Votre monnaie : " + monnaie + " CHF")
                 rendreMonnaie(monnaie)
@@ -323,9 +323,9 @@ FONCTION traiterAchat(montantInsere : réel, prix : réel, choix : entier)
             afficherMessage("Montant insuffisant. Il manque " + manquant + " CHF")
             afficherMessage("1. Insérer plus d'argent")
             afficherMessage("2. Annuler et se faire rembourser")
-            
+
             choixAction ← lireEntier()
-            
+
             SI choixAction = 1 ALORS
                 // Relancer le processus d'insertion de pièces
                 principale()
@@ -350,7 +350,7 @@ FONCTION rendreMonnaie(montant : réel)
     DEBUT
         // Simplification : on suppose que le distributeur a toujours la monnaie
         afficherMessage("Monnaie rendue : " + montant + " CHF")
-        
+
         // Dans un vrai système, on calculerait les pièces à rendre
         // (2.00, 1.00, 0.50, 0.20, 0.10)
     FIN
@@ -410,20 +410,20 @@ Implémentez le programme en Java en suivant ces principes :
 import java.util.Scanner;
 
 public class BilanCarbone {
-    
+
     // Coefficients d'émission CO2 en kg/km
     private static final double CO2_VOITURE = 0.2;
     private static final double CO2_TRANSPORT_PUBLIC = 0.05;
     private static final double CO2_VELO_MARCHE = 0.0;
     private static final double CO2_AVION_COURT = 0.25;
     private static final double CO2_AVION_LONG = 0.15;
-    
+
     // Seuil pour distinguer court/long courrier
     private static final int SEUIL_LONG_COURRIER = 1000;
-    
+
     // Moyenne suisse (kg CO2/mois)
     private static final double MOYENNE_SUISSE = 360.0;
-    
+
     /**
      * Calcule l'empreinte CO2 pour la voiture.
      */
@@ -431,7 +431,7 @@ public class BilanCarbone {
         if (km < 0) return 0;
         return km * CO2_VOITURE;
     }
-    
+
     /**
      * Calcule l'empreinte CO2 pour les transports publics.
      */
@@ -439,27 +439,27 @@ public class BilanCarbone {
         if (km < 0) return 0;
         return km * CO2_TRANSPORT_PUBLIC;
     }
-    
+
     /**
      * Calcule l'empreinte CO2 pour le vélo/marche.
      */
     public static double calculerCO2VeloMarche(double km) {
         return 0; // Pas d'émissions
     }
-    
+
     /**
      * Calcule l'empreinte CO2 pour l'avion.
      */
     public static double calculerCO2Avion(double km) {
         if (km < 0) return 0;
-        
+
         if (km < SEUIL_LONG_COURRIER) {
             return km * CO2_AVION_COURT; // Court courrier
         } else {
             return km * CO2_AVION_LONG; // Long courrier
         }
     }
-    
+
     /**
      * Calcule l'empreinte totale.
      */
@@ -467,14 +467,14 @@ public class BilanCarbone {
                                                double co2VeloMarche, double co2Avion) {
         return co2Voiture + co2TransportsPublics + co2VeloMarche + co2Avion;
     }
-    
+
     /**
      * Compare avec la moyenne suisse.
      */
     public static String comparerAvecMoyenne(double empreinte) {
         double difference = empreinte - MOYENNE_SUISSE;
         double pourcentage = (difference / MOYENNE_SUISSE) * 100;
-        
+
         if (Math.abs(difference) < 1) {
             return "Vous êtes dans la moyenne suisse.";
         } else if (difference < 0) {
@@ -485,42 +485,42 @@ public class BilanCarbone {
                                pourcentage, difference);
         }
     }
-    
+
     /**
      * Donne des conseils personnalisés.
      */
     public static void donnerConseils(double co2Voiture, double co2TransportsPublics,
                                      double co2VeloMarche, double co2Avion) {
         System.out.println("\n=== Conseils pour réduire votre empreinte ===");
-        
+
         // Identifier le mode le plus émetteur
-        double max = Math.max(Math.max(co2Voiture, co2TransportsPublics), 
+        double max = Math.max(Math.max(co2Voiture, co2TransportsPublics),
                              Math.max(co2VeloMarche, co2Avion));
-        
+
         if (co2Voiture == max && co2Voiture > 0) {
             System.out.println("🚗 La voiture est votre principale source d'émissions.");
             System.out.println("   → Privilégiez les transports publics quand c'est possible");
             System.out.println("   → Envisagez le covoiturage pour les trajets réguliers");
             System.out.println("   → Pour les courtes distances, optez pour le vélo");
         }
-        
+
         if (co2Avion > 100) {
             System.out.println("✈️  L'avion représente une part importante de vos émissions.");
             System.out.println("   → Privilégiez le train pour les distances < 1000 km");
             System.out.println("   → Limitez les vols long-courrier");
         }
-        
+
         if (co2VeloMarche == 0 && co2TransportsPublics == 0) {
             System.out.println("🚲 Vous n'utilisez pas les modes de transport doux.");
             System.out.println("   → Pour les trajets < 5 km, le vélo est idéal");
             System.out.println("   → La marche est excellente pour les courtes distances");
         }
-        
+
         if (co2Voiture == 0 && co2Avion == 0) {
             System.out.println("🌱 Excellent ! Vous utilisez déjà des modes de transport durables.");
         }
     }
-    
+
     /**
      * Affiche le détail du bilan.
      */
@@ -530,30 +530,30 @@ public class BilanCarbone {
         double co2TransportsPublics = calculerCO2TransportsPublics(kmTransportsPublics);
         double co2VeloMarche = calculerCO2VeloMarche(kmVeloMarche);
         double co2Avion = calculerCO2Avion(kmAvion);
-        double total = calculerEmpreinteTotal(co2Voiture, co2TransportsPublics, 
+        double total = calculerEmpreinteTotal(co2Voiture, co2TransportsPublics,
                                              co2VeloMarche, co2Avion);
-        
+
         System.out.println("\n=== Votre bilan carbone mensuel ===");
         System.out.printf("Voiture : %.0f km → %.1f kg CO2%n", kmVoiture, co2Voiture);
-        System.out.printf("Transports publics : %.0f km → %.1f kg CO2%n", 
+        System.out.printf("Transports publics : %.0f km → %.1f kg CO2%n",
                          kmTransportsPublics, co2TransportsPublics);
-        System.out.printf("Vélo/Marche : %.0f km → %.1f kg CO2%n", 
+        System.out.printf("Vélo/Marche : %.0f km → %.1f kg CO2%n",
                          kmVeloMarche, co2VeloMarche);
         System.out.printf("Avion : %.0f km → %.1f kg CO2%n", kmAvion, co2Avion);
         System.out.println("─────────────────────────────────────");
         System.out.printf("TOTAL : %.1f kg CO2%n", total);
-        
+
         System.out.println("\n" + comparerAvecMoyenne(total));
-        
+
         donnerConseils(co2Voiture, co2TransportsPublics, co2VeloMarche, co2Avion);
     }
-    
+
     /**
      * Lit un nombre de kilomètres (avec validation).
      */
     public static double lireKilometres(Scanner scanner, String typeTransport) {
         double km = -1;
-        
+
         while (km < 0) {
             System.out.printf("Kilomètres parcourus en %s ce mois : ", typeTransport);
             if (scanner.hasNextDouble()) {
@@ -566,65 +566,65 @@ public class BilanCarbone {
                 scanner.next(); // Consommer l'entrée invalide
             }
         }
-        
+
         return km;
     }
-    
+
     /**
      * Tests automatiques.
      */
     public static void testerCalculs() {
         System.out.println("=== Tests des calculs ===\n");
-        
+
         // Test 1 : Voiture
         double co2 = calculerCO2Voiture(100);
-        System.out.printf("Test 1 : 100 km en voiture → %.1f kg CO2 %s%n", 
+        System.out.printf("Test 1 : 100 km en voiture → %.1f kg CO2 %s%n",
                          co2, co2 == 20.0 ? "✓" : "✗");
-        
+
         // Test 2 : Transports publics
         co2 = calculerCO2TransportsPublics(200);
         System.out.printf("Test 2 : 200 km en transports publics → %.1f kg CO2 %s%n",
                          co2, co2 == 10.0 ? "✓" : "✗");
-        
+
         // Test 3 : Avion court courrier
         co2 = calculerCO2Avion(500);
         System.out.printf("Test 3 : 500 km en avion (court) → %.1f kg CO2 %s%n",
                          co2, co2 == 125.0 ? "✓" : "✗");
-        
+
         // Test 4 : Avion long courrier
         co2 = calculerCO2Avion(5000);
         System.out.printf("Test 4 : 5000 km en avion (long) → %.1f kg CO2 %s%n",
                          co2, co2 == 750.0 ? "✓" : "✗");
-        
+
         // Test 5 : Valeurs négatives
         co2 = calculerCO2Voiture(-10);
         System.out.printf("Test 5 : -10 km → %.1f kg CO2 %s%n",
                          co2, co2 == 0.0 ? "✓" : "✗");
-        
+
         System.out.println();
     }
-    
+
     /**
      * Programme principal.
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("=== CALCULATEUR DE BILAN CARBONE ===\n");
         System.out.println("Calculez l'empreinte carbone de vos déplacements mensuels.\n");
-        
+
         // Exécuter les tests
         testerCalculs();
-        
+
         // Saisie interactive
         double kmVoiture = lireKilometres(scanner, "voiture");
         double kmTransportsPublics = lireKilometres(scanner, "transports publics");
         double kmVeloMarche = lireKilometres(scanner, "vélo/marche");
         double kmAvion = lireKilometres(scanner, "avion");
-        
+
         // Afficher le bilan
         afficherBilan(kmVoiture, kmTransportsPublics, kmVeloMarche, kmAvion);
-        
+
         scanner.close();
     }
 }
@@ -669,14 +669,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class RechercheElement {
-    
+
     // ========================================================================
     // SOLUTION 1 : Parcours simple
     // ========================================================================
-    
+
     /**
      * Recherche un élément en parcourant le tableau.
-     * 
+     *
      * Complexité : O(n) - parcours linéaire
      */
     public static boolean rechercherSimple(int[] tableau, int element) {
@@ -687,14 +687,14 @@ public class RechercheElement {
         }
         return false;
     }
-    
+
     // ========================================================================
     // SOLUTION 2 : Tri + recherche binaire
     // ========================================================================
-    
+
     /**
      * Recherche un élément après avoir trié le tableau.
-     * 
+     *
      * Complexité : O(n log n) pour le tri + O(log n) pour la recherche
      * ATTENTION : Modifie le tableau !
      */
@@ -702,14 +702,14 @@ public class RechercheElement {
         Arrays.sort(tableau); // Modifie le tableau
         return Arrays.binarySearch(tableau, element) >= 0;
     }
-    
+
     // ========================================================================
     // SOLUTION 3 : Conversion en Set
     // ========================================================================
-    
+
     /**
      * Recherche un élément en utilisant un Set.
-     * 
+     *
      * Complexité : O(n) pour créer le Set + O(1) pour la recherche
      */
     public static boolean rechercherAvecSet(int[] tableau, int element) {
@@ -719,14 +719,14 @@ public class RechercheElement {
         }
         return ensemble.contains(element);
     }
-    
+
     // ========================================================================
     // COMPARAISON
     // ========================================================================
-    
+
     public static void comparerSolutions() {
         System.out.println("=== COMPARAISON DES SOLUTIONS ===\n");
-        
+
         System.out.println("CRITÈRE 1 : Lisibilité");
         System.out.println("-----------------------");
         System.out.println("Solution 1 (Parcours simple) : ★★★★★");
@@ -735,7 +735,7 @@ public class RechercheElement {
         System.out.println("  → Utilise des méthodes Java, mais modifie le tableau");
         System.out.println("Solution 3 (Set) : ★★★★☆");
         System.out.println("  → Claire, mais nécessite de comprendre les Sets");
-        
+
         System.out.println("\nCRITÈRE 2 : Maintenabilité");
         System.out.println("--------------------------");
         System.out.println("Solution 1 : ★★★★★");
@@ -744,7 +744,7 @@ public class RechercheElement {
         System.out.println("  → DANGER : modifie le tableau (effet de bord majeur)");
         System.out.println("Solution 3 : ★★★★☆");
         System.out.println("  → Pas d'effet de bord, mais utilise plus de mémoire");
-        
+
         System.out.println("\nCRITÈRE 3 : Efficacité");
         System.out.println("----------------------");
         System.out.println("Solution 1 : ★★★★☆ O(n)");
@@ -753,66 +753,66 @@ public class RechercheElement {
         System.out.println("  → Inefficace pour 1 recherche, mais bon pour plusieurs");
         System.out.println("Solution 3 : ★★★☆☆ O(n) création + O(1) recherche");
         System.out.println("  → Excellent si on fait plusieurs recherches");
-        
+
         System.out.println("\n=== VERDICT ===");
         System.out.println("Pour UNE recherche : Solution 1 (parcours simple)");
         System.out.println("Pour PLUSIEURS recherches : Solution 3 (Set)");
         System.out.println("À éviter : Solution 2 (modifie le tableau)");
     }
-    
+
     // ========================================================================
     // TESTS DE PERFORMANCE
     // ========================================================================
-    
+
     public static void testerPerformance() {
         System.out.println("\n=== TEST DE PERFORMANCE ===\n");
-        
+
         int taille = 10000;
         int[] tableau = new int[taille];
         for (int i = 0; i < taille; i++) {
             tableau[i] = i;
         }
-        
+
         int elementRecherche = 7500; // Au milieu
-        
+
         // Solution 1
         long debut1 = System.nanoTime();
         boolean resultat1 = rechercherSimple(Arrays.copyOf(tableau, taille), elementRecherche);
         long fin1 = System.nanoTime();
         long temps1 = (fin1 - debut1) / 1000;
-        
+
         // Solution 2 (avec copie pour ne pas modifier l'original)
         long debut2 = System.nanoTime();
         boolean resultat2 = rechercherAvecTri(Arrays.copyOf(tableau, taille), elementRecherche);
         long fin2 = System.nanoTime();
         long temps2 = (fin2 - debut2) / 1000;
-        
+
         // Solution 3
         long debut3 = System.nanoTime();
         boolean resultat3 = rechercherAvecSet(tableau, elementRecherche);
         long fin3 = System.nanoTime();
         long temps3 = (fin3 - debut3) / 1000;
-        
+
         System.out.printf("Taille du tableau : %d éléments%n", taille);
         System.out.printf("Élément recherché : %d%n%n", elementRecherche);
-        
+
         System.out.printf("Solution 1 (Parcours simple) : %d μs %s%n", temps1, resultat1 ? "✓" : "✗");
         System.out.printf("Solution 2 (Tri + binaire) : %d μs %s%n", temps2, resultat2 ? "✓" : "✗");
         System.out.printf("Solution 3 (Set) : %d μs %s%n%n", temps3, resultat3 ? "✓" : "✗");
-        
+
         System.out.printf("Solution 2 est %.1fx plus lente que Solution 1%n", (double)temps2 / temps1);
         System.out.printf("Solution 3 est %.1fx plus lente que Solution 1%n", (double)temps3 / temps1);
-        
+
         // Test avec plusieurs recherches
         System.out.println("\n--- Test avec 100 recherches ---");
-        
+
         long debutMulti1 = System.nanoTime();
         for (int i = 0; i < 100; i++) {
             rechercherSimple(tableau, i * 100);
         }
         long finMulti1 = System.nanoTime();
         long tempsMulti1 = (finMulti1 - debutMulti1) / 1000;
-        
+
         long debutMulti3 = System.nanoTime();
         Set<Integer> ensemble = new HashSet<>();
         for (int valeur : tableau) {
@@ -823,25 +823,25 @@ public class RechercheElement {
         }
         long finMulti3 = System.nanoTime();
         long tempsMulti3 = (finMulti3 - debutMulti3) / 1000;
-        
+
         System.out.printf("Solution 1 : %d μs%n", tempsMulti1);
         System.out.printf("Solution 3 : %d μs%n", tempsMulti3);
         System.out.println("→ Pour plusieurs recherches, le Set est plus rapide !");
     }
-    
+
     // ========================================================================
     // PROGRAMME PRINCIPAL
     // ========================================================================
-    
+
     public static void main(String[] args) {
         System.out.println("=== COMPARAISON DE SOLUTIONS : RECHERCHE D'ÉLÉMENT ===\n");
-        
+
         // Comparaison théorique
         comparerSolutions();
-        
+
         // Tests de performance
         testerPerformance();
-        
+
         System.out.println("\n=== CONCLUSION ===");
         System.out.println("Le choix dépend du contexte :");
         System.out.println("- 1 recherche → Parcours simple");
@@ -898,10 +898,10 @@ La fonction doit retourner `true` si le mot de passe est valide, `false` sinon.
 
 ```java
 public class ValidateurMotDePasse {
-    
+
     /**
      * Valide un mot de passe selon les critères de sécurité.
-     * 
+     *
      * Critères :
      * - Au moins 8 caractères
      * - Au moins une lettre majuscule
@@ -909,7 +909,7 @@ public class ValidateurMotDePasse {
      * - Au moins un chiffre
      * - Au moins un caractère spécial (!@#$%^&*)
      * - Pas d'espaces
-     * 
+     *
      * @param mdp Le mot de passe à valider
      * @return true si le mot de passe est valide, false sinon
      */
@@ -918,28 +918,28 @@ public class ValidateurMotDePasse {
         if (mdp == null) {
             return false;
         }
-        
+
         // Critère 1 : Au moins 8 caractères
         if (mdp.length() < 8) {
             return false;
         }
-        
+
         // Critère 2-5 : Vérifier présence des différents types de caractères
         boolean aMajuscule = false;
         boolean aMinuscule = false;
         boolean aChiffre = false;
         boolean aSpecial = false;
-        
+
         String caracteresSpeciaux = "!@#$%^&*";
-        
+
         for (int i = 0; i < mdp.length(); i++) {
             char c = mdp.charAt(i);
-            
+
             // Critère 6 : Pas d'espaces
             if (c == ' ') {
                 return false;
             }
-            
+
             if (Character.isUpperCase(c)) {
                 aMajuscule = true;
             } else if (Character.isLowerCase(c)) {
@@ -950,151 +950,151 @@ public class ValidateurMotDePasse {
                 aSpecial = true;
             }
         }
-        
+
         return aMajuscule && aMinuscule && aChiffre && aSpecial;
     }
-    
+
     /**
      * Fonction utilitaire pour tester un cas.
      */
     private static void testerCas(String description, String mdp, boolean attendu) {
         boolean resultat = validerMotDePasse(mdp);
         boolean reussi = (resultat == attendu);
-        
+
         System.out.printf("%-60s : ", description);
         if (reussi) {
             System.out.printf("✓ OK%n");
         } else {
-            System.out.printf("✗ ERREUR - Attendu: %b, Obtenu: %b (MDP: \"%s\")%n", 
+            System.out.printf("✗ ERREUR - Attendu: %b, Obtenu: %b (MDP: \"%s\")%n",
                             attendu, resultat, mdp);
         }
     }
-    
+
     /**
      * Suite de tests exhaustive.
      */
     public static void executerTests() {
         System.out.println("=== TESTS DE VALIDATION DE MOT DE PASSE ===\n");
-        
+
         // ===== CAS NORMAUX (valides) =====
         System.out.println("--- Cas normaux (mots de passe valides) ---");
-        
-        testerCas("MDP valide standard", 
+
+        testerCas("MDP valide standard",
                  "Motdepasse1!", true);
-        
-        testerCas("MDP valide avec tous les types de caractères spéciaux", 
+
+        testerCas("MDP valide avec tous les types de caractères spéciaux",
                  "Test123!@#$%^&*", true);
-        
-        testerCas("MDP valide long", 
+
+        testerCas("MDP valide long",
                  "UnMotDePasseTresLong123!@#", true);
-        
-        testerCas("MDP valide avec plusieurs chiffres", 
+
+        testerCas("MDP valide avec plusieurs chiffres",
                  "Password123456!", true);
-        
+
         // ===== CAS LIMITES =====
         System.out.println("\n--- Cas limites ---");
-        
-        testerCas("MDP exactement 8 caractères (longueur minimale)", 
+
+        testerCas("MDP exactement 8 caractères (longueur minimale)",
                  "Azerty1!", true);
-        
-        testerCas("MDP avec un seul caractère de chaque type", 
+
+        testerCas("MDP avec un seul caractère de chaque type",
                  "Aa1!xxxx", true);
-        
-        testerCas("MDP avec un seul caractère spécial", 
+
+        testerCas("MDP avec un seul caractère spécial",
                  "Password1!", true);
-        
-        testerCas("MDP avec caractère spécial en début", 
+
+        testerCas("MDP avec caractère spécial en début",
                  "!Password1", true);
-        
-        testerCas("MDP avec caractère spécial en fin", 
+
+        testerCas("MDP avec caractère spécial en fin",
                  "Password1!", true);
-        
-        testerCas("MDP avec tous les caractères spéciaux possibles", 
+
+        testerCas("MDP avec tous les caractères spéciaux possibles",
                  "Aa1!@#$%^&*", true);
-        
+
         // ===== CAS D'ERREUR =====
         System.out.println("\n--- Cas d'erreur (mots de passe invalides) ---");
-        
+
         // Erreur : null
-        testerCas("Erreur : MDP null", 
+        testerCas("Erreur : MDP null",
                  null, false);
-        
+
         // Erreur : trop court
-        testerCas("Erreur : MDP de 7 caractères (trop court)", 
+        testerCas("Erreur : MDP de 7 caractères (trop court)",
                  "Azerty1", false);
-        
-        testerCas("Erreur : MDP vide", 
+
+        testerCas("Erreur : MDP vide",
                  "", false);
-        
+
         // Erreur : absence de majuscule
-        testerCas("Erreur : Pas de majuscule", 
+        testerCas("Erreur : Pas de majuscule",
                  "password1!", false);
-        
+
         // Erreur : absence de minuscule
-        testerCas("Erreur : Pas de minuscule", 
+        testerCas("Erreur : Pas de minuscule",
                  "PASSWORD1!", false);
-        
+
         // Erreur : absence de chiffre
-        testerCas("Erreur : Pas de chiffre", 
+        testerCas("Erreur : Pas de chiffre",
                  "Motdepasse!", false);
-        
+
         // Erreur : absence de caractère spécial
-        testerCas("Erreur : Pas de caractère spécial", 
+        testerCas("Erreur : Pas de caractère spécial",
                  "Motdepasse1", false);
-        
+
         // Erreur : présence d'espace
-        testerCas("Erreur : Contient un espace au milieu", 
+        testerCas("Erreur : Contient un espace au milieu",
                  "Mot depasse1!", false);
-        
-        testerCas("Erreur : Contient un espace au début", 
+
+        testerCas("Erreur : Contient un espace au début",
                  " Motdepasse1!", false);
-        
-        testerCas("Erreur : Contient un espace à la fin", 
+
+        testerCas("Erreur : Contient un espace à la fin",
                  "Motdepasse1! ", false);
-        
+
         // Erreur : combinaisons incomplètes
-        testerCas("Erreur : Seulement minuscules et chiffres", 
+        testerCas("Erreur : Seulement minuscules et chiffres",
                  "motdepasse123", false);
-        
-        testerCas("Erreur : Seulement majuscules et chiffres", 
+
+        testerCas("Erreur : Seulement majuscules et chiffres",
                  "MOTDEPASSE123", false);
-        
-        testerCas("Erreur : Tous les critères sauf la longueur", 
+
+        testerCas("Erreur : Tous les critères sauf la longueur",
                  "Azert1!", false);
-        
-        testerCas("Erreur : Caractère spécial invalide (point)", 
+
+        testerCas("Erreur : Caractère spécial invalide (point)",
                  "Motdepasse1.", false);
-        
-        testerCas("Erreur : Caractère spécial invalide (virgule)", 
+
+        testerCas("Erreur : Caractère spécial invalide (virgule)",
                  "Motdepasse1,", false);
-        
+
         System.out.println("\n=== Fin des tests ===");
     }
-    
+
     /**
      * Fonction pour obtenir un feedback détaillé sur un mot de passe.
      */
     public static void analyserMotDePasse(String mdp) {
         System.out.println("\n=== Analyse du mot de passe ===");
         System.out.println("Mot de passe : \"" + mdp + "\"");
-        
+
         if (mdp == null) {
             System.out.println("✗ Le mot de passe est null");
             return;
         }
-        
+
         System.out.println("\nCritères :");
-        System.out.printf("  Longueur >= 8 : %s (longueur: %d)%n", 
+        System.out.printf("  Longueur >= 8 : %s (longueur: %d)%n",
                          mdp.length() >= 8 ? "✓" : "✗", mdp.length());
-        
+
         boolean aMajuscule = false;
         boolean aMinuscule = false;
         boolean aChiffre = false;
         boolean aSpecial = false;
         boolean aEspace = false;
-        
+
         String caracteresSpeciaux = "!@#$%^&*";
-        
+
         for (int i = 0; i < mdp.length(); i++) {
             char c = mdp.charAt(i);
             if (c == ' ') aEspace = true;
@@ -1103,27 +1103,27 @@ public class ValidateurMotDePasse {
             if (Character.isDigit(c)) aChiffre = true;
             if (caracteresSpeciaux.indexOf(c) != -1) aSpecial = true;
         }
-        
+
         System.out.printf("  Majuscule : %s%n", aMajuscule ? "✓" : "✗");
         System.out.printf("  Minuscule : %s%n", aMinuscule ? "✓" : "✗");
         System.out.printf("  Chiffre : %s%n", aChiffre ? "✓" : "✗");
         System.out.printf("  Caractère spécial (!@#$%%^&*) : %s%n", aSpecial ? "✓" : "✗");
         System.out.printf("  Pas d'espaces : %s%n", !aEspace ? "✓" : "✗");
-        
+
         boolean valide = validerMotDePasse(mdp);
         System.out.printf("%nRésultat : %s%n", valide ? "✓ VALIDE" : "✗ INVALIDE");
     }
-    
+
     /**
      * Programme principal.
      */
     public static void main(String[] args) {
         // Exécuter la suite de tests complète
         executerTests();
-        
+
         // Démonstrations d'analyse
         System.out.println("\n\n=== DÉMONSTRATIONS D'ANALYSE ===");
-        
+
         analyserMotDePasse("Motdepasse1!");
         analyserMotDePasse("motdepasse123");
         analyserMotDePasse("MOT DE PASSE1!");
@@ -1141,8 +1141,8 @@ Si vous avez terminé tous les exercices, voici des défis supplémentaires :
 
 ### Défi 1 : Système de réservation complet
 
-Combinez les concepts des exercices pour créer un système de réservation pour
-un espace de coworking avec :
+Combinez les concepts des exercices pour créer un système de réservation pour un
+espace de coworking avec :
 
 - Gestion des membres
 - Réservation de salles
@@ -1157,9 +1157,8 @@ minimiser l'empreinte carbone collective en proposant des covoiturages.
 
 ### Défi 3 : Comparaison d'algorithmes de tri
 
-Implémentez et comparez 3 algorithmes de tri différents selon les mêmes
-critères que l'exercice 4.
+Implémentez et comparez 3 algorithmes de tri différents selon les mêmes critères
+que l'exercice 4.
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
-

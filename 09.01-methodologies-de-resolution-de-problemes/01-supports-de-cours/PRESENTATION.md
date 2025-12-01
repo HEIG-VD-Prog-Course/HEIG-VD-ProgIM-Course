@@ -31,9 +31,8 @@ Ce travail est sous licence
 
 ## Réponse : La **méthodologie**
 
-Pas la connaissance de la syntaxe.
-Pas le nombre de langages maîtrisés.
-Mais la **capacité à résoudre des problèmes**.
+Pas la connaissance de la syntaxe. Pas le nombre de langages maîtrisés. Mais la
+**capacité à résoudre des problèmes**.
 
 ---
 
@@ -51,12 +50,12 @@ Jusqu'ici, vous avez appris :
 
 ## Ingénieur vs Technicien
 
-| Technicien                         | Ingénieur                           |
-| ---------------------------------- | ----------------------------------- |
-| Applique des solutions connues     | Conçoit de nouvelles solutions      |
-| Suit des procédures                | Crée des procédures                 |
-| Sait **quoi** faire                | Sait **comment** aborder un problème |
-| Maîtrise des outils spécifiques    | S'adapte à tout outil               |
+| Technicien                      | Ingénieur                            |
+| ------------------------------- | ------------------------------------ |
+| Applique des solutions connues  | Conçoit de nouvelles solutions       |
+| Suit des procédures             | Crée des procédures                  |
+| Sait **quoi** faire             | Sait **comment** aborder un problème |
+| Maîtrise des outils spécifiques | S'adapte à tout outil                |
 
 > Vous êtes formés pour devenir des **ingénieurs**, pas des techniciens.
 
@@ -88,9 +87,8 @@ Comment vous y prendriez-vous ?
 
 "Je vais organiser une fête de quartier."
 
-→ Par où commencer ?
-→ Qu'est-ce qu'il faut faire en premier ?
-→ Qu'est-ce que j'oublie ?
+→ Par où commencer ? → Qu'est-ce qu'il faut faire en premier ? → Qu'est-ce que
+j'oublie ?
 
 **Résultat** : On se sent dépassé, on ne sait pas par où commencer.
 
@@ -214,12 +212,12 @@ Avant de coder, posez-vous ces questions :
 **Problème** : Un système d'échange local offre des réductions en fonction du
 nombre de services rendus.
 
-| Aspect       | Description                                              |
-| ------------ | -------------------------------------------------------- |
-| **Entrées**  | Prix initial (double), nombre de services rendus (int)   |
-| **Sorties**  | Prix final après réduction (double)                      |
+| Aspect          | Description                                                                      |
+| --------------- | -------------------------------------------------------------------------------- |
+| **Entrées**     | Prix initial (double), nombre de services rendus (int)                           |
+| **Sorties**     | Prix final après réduction (double)                                              |
 | **Contraintes** | - 1-4 services : 5% de réduction<br>- 5-9 services : 10%<br>- 10+ services : 20% |
-| **Cas limites** | - 0 services<br>- Prix = 0<br>- Valeurs négatives (invalides) |
+| **Cas limites** | - 0 services<br>- Prix = 0<br>- Valeurs négatives (invalides)                    |
 
 ---
 
@@ -243,7 +241,7 @@ Avant d'écrire du Java, écrivez en langage naturel :
 ```
 DÉBUT CalculerReduction
     ENTRÉES : prixInitial, nombreServices
-    
+
     SI nombreServices >= 10 ALORS
         tauxReduction ← 0.20
     SINON SI nombreServices >= 5 ALORS
@@ -253,10 +251,10 @@ DÉBUT CalculerReduction
     SINON
         tauxReduction ← 0
     FIN SI
-    
+
     reduction ← prixInitial × tauxReduction
     prixFinal ← prixInitial - reduction
-    
+
     RETOURNER prixFinal
 FIN
 ```
@@ -270,7 +268,7 @@ Le pseudocode se traduit facilement en Java :
 ```java
 double calculerReduction(double prixInitial, int nombreServices) {
     double tauxReduction = 0;
-    
+
     if (nombreServices >= 10) {
         tauxReduction = 0.20;
     } else if (nombreServices >= 5) {
@@ -278,10 +276,10 @@ double calculerReduction(double prixInitial, int nombreServices) {
     } else if (nombreServices >= 1) {
         tauxReduction = 0.05;
     }
-    
+
     double reduction = prixInitial * tauxReduction;
     double prixFinal = prixInitial - reduction;
-    
+
     return prixFinal;
 }
 ```
@@ -292,14 +290,14 @@ double calculerReduction(double prixInitial, int nombreServices) {
 
 Ne codez pas au hasard. **Testez méthodiquement** :
 
-| Type          | Entrée                  | Sortie attendue |
-| ------------- | ----------------------- | --------------- |
-| Normal        | prix=100, services=5    | 90.0            |
-| Normal        | prix=50, services=10    | 40.0            |
-| Limite        | prix=100, services=0    | 100.0           |
-| Limite        | prix=100, services=1    | 95.0            |
-| Limite        | prix=0, services=5      | 0.0             |
-| Erreur        | prix=-10, services=5    | ?               |
+| Type   | Entrée               | Sortie attendue |
+| ------ | -------------------- | --------------- |
+| Normal | prix=100, services=5 | 90.0            |
+| Normal | prix=50, services=10 | 40.0            |
+| Limite | prix=100, services=0 | 100.0           |
+| Limite | prix=100, services=1 | 95.0            |
+| Limite | prix=0, services=5   | 0.0             |
+| Erreur | prix=-10, services=5 | ?               |
 
 ---
 
@@ -356,7 +354,7 @@ boolean validerFormulaire(String nom, String email, String telephone) {
     boolean nomValide = validerNom(nom);
     boolean emailValide = validerEmail(email);
     boolean telephoneValide = validerTelephone(telephone);
-    
+
     return nomValide && emailValide && telephoneValide;
 }
 ```
@@ -458,11 +456,11 @@ Maintenant, modifier les seuils est **simple et clair**.
 
 ## Types de tests
 
-| Type         | Description                          | Exemple                     |
-| ------------ | ------------------------------------ | --------------------------- |
-| Normal       | Cas typiques                         | prix=100, services=5        |
-| Limite       | Valeurs aux frontières               | prix=0, services=0          |
-| Erreur       | Entrées invalides                    | prix=-10, services=-5       |
+| Type   | Description            | Exemple               |
+| ------ | ---------------------- | --------------------- |
+| Normal | Cas typiques           | prix=100, services=5  |
+| Limite | Valeurs aux frontières | prix=0, services=0    |
+| Erreur | Entrées invalides      | prix=-10, services=-5 |
 
 **Important** : Testez **tous les types** de cas.
 
@@ -566,8 +564,8 @@ Ces compétences vous serviront :
 - En programmation web, mobile, embarquée, etc.
 - Dans tous les domaines de l'ingénierie
 
-**Vous n'apprenez pas seulement Java.**
-**Vous apprenez à résoudre des problèmes.**
+**Vous n'apprenez pas seulement Java.** **Vous apprenez à résoudre des
+problèmes.**
 
 ---
 
