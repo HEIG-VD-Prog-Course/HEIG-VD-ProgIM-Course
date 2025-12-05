@@ -59,15 +59,13 @@ successives du programme, chacune ajoutant une nouvelle capacité.
 ### Réflexion en français
 
 Commençons par le plus simple possible : afficher quelques notes et calculer
-leurs statistiques (minimum, maximum, moyenne).
+leur moyenne.
 
 Pour cette première version, nous allons :
 
 - Définir les notes directement dans le code (valeurs "en dur")
 - Utiliser des variables individuelles (`note1`, `note2`, etc.)
-- Afficher les notes de plusieurs façons pour comparer les approches
-- Calculer le minimum en comparant chaque note avec le minimum actuel
-- Calculer le maximum de la même manière
+- Afficher chaque note individuellement
 - Calculer la moyenne en additionnant toutes les notes et en divisant par leur
   nombre
 
@@ -76,19 +74,12 @@ de l'utilisation de variables individuelles.
 
 ### Modélisation UML
 
-Voici le diagramme d'activité pour l'affichage des notes avec une boucle :
+Voici le diagramme d'activité pour le calcul de la moyenne :
 
-![Diagramme d'activité : affichage des notes](images/etape-01-activite-affichage.png)
-
-_Source :
-[etape-01-activite-affichage.plantuml](images/etape-01-activite-affichage.plantuml)_
-
-Et voici le diagramme pour le calcul du minimum :
-
-![Diagramme d'activité : calcul du minimum](images/etape-01-activite-minimum.png)
+![Diagramme d'activité : calcul de la moyenne](images/etape-01-activite-moyenne.png)
 
 _Source :
-[etape-01-activite-minimum.plantuml](images/etape-01-activite-minimum.plantuml)_
+[etape-01-activite-moyenne.plantuml](images/etape-01-activite-moyenne.plantuml)_
 
 ### Implémentation en Java
 
@@ -97,7 +88,7 @@ Le code complet se trouve dans :
 
 Voici les points clés de cette implémentation :
 
-```java
+````java
 // Déclaration de variables individuelles
 double note1 = 4.5;
 double note2 = 5.0;
@@ -105,43 +96,28 @@ double note3 = 3.8;
 double note4 = 4.2;
 double note5 = 5.3;
 
-// Affichage avec une structure conditionnelle dans une boucle
-for (int i = 1; i <= 5; i++) {
-    double current;
+// Affichage de chaque note individuellement
+System.out.println("Note 1 : " + note1);
+System.out.println("Note 2 : " + note2);
+System.out.println("Note 3 : " + note3);
+System.out.println("Note 4 : " + note4);
+System.out.println("Note 5 : " + note5);
 
-    if (i == 1) {
-        current = note1;
-    } else if (i == 2) {
-        current = note2;
-    } // ... etc
-
-    System.out.println("Note " + i + " : " + current);
-}
-
-// Calcul du minimum avec des comparaisons successives
-double min = note1;
-if (note2 < min) {
-    min = note2;
-}
-// ... répété pour chaque note
-```
-
-### Enseignements tirés
+// Calcul de la moyenne
+double sum = note1 + note2 + note3 + note4 + note5;
+double average = sum / 5;
+```### Enseignements tirés
 
 Cette première version fonctionne, mais elle présente plusieurs problèmes :
 
 1. **Rigidité** : Pour ajouter une note, il faut modifier le code à plusieurs
-   endroits (déclaration, affichage, calculs)
-2. **Répétition** : Le code pour l'affichage et les calculs contient beaucoup de
-   répétitions
+   endroits (déclaration, affichage, calcul de la somme, diviseur)
+2. **Répétition** : Chaque note nécessite une ligne de code pour l'affichage et
+   doit être ajoutée manuellement à la somme
 3. **Difficulté de maintenance** : Si on se trompe dans le nombre de notes, on
-   doit corriger partout
-
-> [!NOTE]
->
-> Le code montre trois façons d'afficher les notes : individuellement, avec une
-> boucle `while`, et avec une boucle `for`. Observez comment la structure
-> `if/else if` devient nécessaire pour sélectionner la bonne variable.
+   doit corriger partout (affichage, somme, diviseur)
+4. **Erreurs faciles** : Oublier une note dans la somme ou se tromper dans le
+   diviseur sont des erreurs courantes
 
 Ces limitations nous amènent naturellement à la question : existe-t-il une
 structure de données permettant de stocker plusieurs valeurs du même type ? Oui,
@@ -204,7 +180,7 @@ for (int i = 1; i < notes.length; i++) {
         min = notes[i];
     }
 }
-```
+````
 
 ### Enseignements tirés
 
