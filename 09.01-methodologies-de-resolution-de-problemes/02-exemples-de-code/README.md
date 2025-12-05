@@ -14,7 +14,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Exemples de code progressifs
 
-Ce dossier contient les 5 étapes du tutoriel sous forme de code exécutable.
+Ce dossier contient les 7 étapes du tutoriel sous forme de code exécutable.
 
 Chaque exemple correspond à une étape de la résolution progressive du problème
 de gestion de notes :
@@ -22,12 +22,20 @@ de gestion de notes :
 1. **01-notes-en-dur-variables** : Version initiale avec variables individuelles
    et calculs simples dans `main`
 2. **02-notes-en-dur-tableau** : Introduction des tableaux avec taille fixe
-3. **03-saisie-notes-nombre-fixe** : Ajout de la saisie utilisateur pour un
-   nombre fixe de notes
+3. **03-saisie-notes-nombre-fixe** : Ajout de la saisie utilisateur simple pour
+   un nombre fixe de notes
 4. **04-saisie-notes-nombre-dynamique** : Taille du tableau déterminée par la
    personne utilisatrice
 5. **05-modification-note** : Fonctionnalité de modification d'une note
    existante
+6. **06-validation-robuste** : Validation complète des entrées avec gestion des
+   erreurs
+7. **07-refactoring** (à venir) : Refactorisation avec des fonctions
+
+> [!NOTE]
+>
+> Les étapes 3, 4 et 5 utilisent des validations minimales pour rester simples
+> et focalisées sur la logique de base. L'étape 6 ajoute la robustesse complète.
 
 Ces exemples sont conçus pour être étudiés dans l'ordre, en parallèle avec le
 tutoriel dans les supports de cours. Chaque exemple peut être compilé et exécuté

@@ -1,6 +1,6 @@
-@startuml etape-06-activite-refactoring
+@startuml etape-07-activite-refactoring
 
-title Étape 6 : Structure avec fonctions
+title Étape 7 : Structure avec fonctions
 
 start
 

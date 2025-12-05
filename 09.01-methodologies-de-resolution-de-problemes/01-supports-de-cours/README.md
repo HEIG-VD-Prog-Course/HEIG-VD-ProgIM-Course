@@ -51,8 +51,9 @@ Ce problème peut sembler simple, mais il contient plusieurs difficultés :
 - Comment valider que les valeurs sont correctes ?
 - Comment permettre la modification après la saisie ?
 
-Nous allons résoudre ces questions une par une, en construisant 5 versions
-successives du programme, chacune ajoutant une nouvelle capacité.
+Nous allons résoudre ces questions une par une, en construisant 7 versions
+successives du programme, chacune ajoutant une nouvelle capacité ou améliorant
+un aspect du code.
 
 ## Étape 1 : Notes en dur avec variables individuelles
 
@@ -221,16 +222,15 @@ résoudre ce problème.
 ### Réflexion en français
 
 Nous allons maintenant rendre le programme interactif en permettant à
-l'utilisatrice de saisir les notes au clavier. Cela soulève plusieurs questions
-:
+l'utilisatrice de saisir les notes au clavier. Cela soulève une question
+importante :
 
 - Comment lire des valeurs depuis le clavier en Java ?
-- Comment s'assurer que les valeurs saisies sont valides ?
-- Que faire si l'utilisatrice entre une valeur incorrecte ?
 
-Java propose la classe `Scanner` pour lire les entrées. Pour valider les
-données, nous allons utiliser une boucle `while` qui continue tant que la valeur
-n'est pas valide.
+Java propose la classe `Scanner` pour lire les entrées. Pour cette première
+version interactive, nous allons faire simple : nous supposons que
+l'utilisatrice entre toujours des valeurs correctes. Nous verrons comment gérer
+les erreurs dans une étape ultérieure.
 
 Pour cette version, nous gardons un nombre fixe de notes (5) pour simplifier.
 Nous ajouterons la flexibilité dans l'étape suivante.
@@ -248,27 +248,10 @@ import java.util.Scanner;
 // Création du Scanner
 Scanner scanner = new Scanner(System.in);
 
-// Saisie avec validation
+// Saisie simple
 for (int i = 0; i < NOMBRE_NOTES; i++) {
-    boolean valid = false;
-
-    while (!valid) {
-        System.out.print("Entrez la note " + (i + 1) + " (entre 1 et 6) : ");
-
-        if (scanner.hasNextInt()) {
-            int grade = scanner.nextInt();
-
-            if (grade >= 1 && grade <= 6) {
-                notes[i] = grade;
-                valid = true;
-            } else {
-                System.out.println("Erreur : la note doit être entre 1 et 6");
-            }
-        } else {
-            System.out.println("Erreur : veuillez entrer un nombre entier valide");
-            scanner.next(); // Consommer l'entrée invalide
-        }
-    }
+    System.out.print("Entrez la note " + (i + 1) + " : ");
+    notes[i] = scanner.nextInt();
 }
 
 // Fermeture du Scanner
@@ -280,17 +263,16 @@ scanner.close();
 L'ajout de l'interaction utilisatrice introduit plusieurs concepts importants :
 
 1. **Entrées-sorties** : La classe `Scanner` permet de lire depuis la console
-2. **Validation** : Les données externes doivent toujours être validées
-3. **Robustesse** : Le programme gère les erreurs et guide l'utilisatrice
-4. **Gestion des ressources** : Il faut fermer le `Scanner` après utilisation
+2. **Méthode `nextInt()`** : Lit un entier depuis l'entrée standard
+3. **Gestion des ressources** : Il faut fermer le `Scanner` après utilisation
+4. **Simplicité** : Commencer par une version simple aide à comprendre les bases
 
-> [!WARNING]
+> [!NOTE]
 >
-> Ne jamais faire confiance aux données saisies par l'utilisatrice. Validez
-> toujours le type (avec `hasNextInt()`) et les valeurs (avec des conditions).
-> Sinon, votre programme peut planter ou produire des résultats incorrects.
+> Cette version suppose que l'utilisatrice entre toujours des entiers valides.
+> Dans un programme réel, il faudrait valider les entrées (étape 6).
 
-Cette version est fonctionnelle et utilisable, mais elle manque encore de
+Cette version est fonctionnelle pour un usage normal, mais elle manque encore de
 flexibilité : pourquoi forcer l'utilisatrice à entrer exactement 5 notes ?
 Laissons-la choisir.
 
@@ -305,7 +287,6 @@ la taille appropriée.
 Cette modification nécessite de :
 
 - Demander le nombre de notes en premier
-- Valider que ce nombre est positif
 - Créer le tableau avec la taille choisie
 - Adapter le reste du code pour utiliser cette taille
 
@@ -321,25 +302,8 @@ Voici la partie ajoutée :
 
 ```java
 // Demande du nombre de notes
-int count = 0;
-boolean validCount = false;
-
-while (!validCount) {
-    System.out.print("Combien de notes souhaitez-vous saisir ? ");
-
-    if (scanner.hasNextInt()) {
-        count = scanner.nextInt();
-
-        if (count > 0) {
-            validCount = true;
-        } else {
-            System.out.println("Erreur : le nombre de notes doit être positif");
-        }
-    } else {
-        System.out.println("Erreur : veuillez entrer un nombre entier valide");
-        scanner.next();
-    }
-}
+System.out.print("Combien de notes souhaitez-vous saisir ? ");
+int count = scanner.nextInt();
 
 // Création du tableau de la taille choisie
 int[] notes = new int[count];
@@ -355,8 +319,7 @@ Cette évolution démontre l'importance de la généricité dans le code :
    quelle taille à l'exécution
 2. **Code adaptable** : Utiliser `notes.length` au lieu d'une constante rend le
    code flexible
-3. **Validation en cascade** : Chaque donnée saisie doit être validée de la même
-   manière
+3. **Simplicité** : Le changement est minimal grâce à un code bien conçu
 
 > [!NOTE]
 >
@@ -371,13 +334,12 @@ fonctionnalité : que faire si l'utilisatrice fait une erreur de saisie ?
 
 ### Réflexion en français
 
-La dernière fonctionnalité à ajouter est la possibilité de modifier une note
-après avoir tout saisi. Cela nécessite de :
+La dernière fonctionnalité de base à ajouter est la possibilité de modifier une
+note après avoir tout saisi. Cela nécessite de :
 
 - Afficher les statistiques une première fois
 - Demander à l'utilisatrice si elle souhaite modifier une note
 - Si oui, lui demander quelle note modifier (par son index)
-- Valider que l'index est correct
 - Lui demander la nouvelle valeur
 - Mettre à jour le tableau
 - Recalculer et réafficher les statistiques
@@ -399,31 +361,24 @@ scanner.nextLine(); // Consommer le retour à la ligne restant
 String response = scanner.nextLine().toLowerCase();
 
 if (response.equals("oui") || response.equals("o")) {
-    // Demande de l'index à modifier
     System.out.print("Quelle note souhaitez-vous modifier ? (1-" + count + ") : ");
     int indexToModify = scanner.nextInt() - 1;
 
-    // Validation de l'index
-    if (indexToModify >= 0 && indexToModify < count) {
-        System.out.println("Note actuelle : " + notes[indexToModify]);
+    System.out.println("Note actuelle : " + notes[indexToModify]);
+    System.out.print("Entrez la nouvelle note : ");
+    int newGrade = scanner.nextInt();
 
-        // Saisie de la nouvelle valeur avec validation
-        System.out.print("Entrez la nouvelle note (entre 1 et 6) : ");
-        int newGrade = scanner.nextInt();
+    notes[indexToModify] = newGrade;
+    System.out.println("Note modifiée avec succès !");
 
-        // Mise à jour
-        notes[indexToModify] = newGrade;
-
-        // Recalcul et réaffichage
-        displayGrades(notes);
-        calculateAndDisplayStatistics(notes);
-    }
+    // Recalcul et réaffichage
+    // ... code de recalcul des statistiques ...
 }
 ```
 
 ### Enseignements tirés
 
-Cette dernière étape illustre plusieurs concepts avancés :
+Cette étape illustre plusieurs concepts importants :
 
 1. **Modification en place** : On modifie directement une case du tableau avec
    `notes[i] = nouvelleNote`
@@ -439,16 +394,91 @@ Cette dernière étape illustre plusieurs concepts avancés :
 > des problèmes. Le `nextInt()` ne consomme pas le retour à la ligne, donc il
 > faut un `nextLine()` supplémentaire avant de lire une chaîne de caractères.
 
-Notre programme est maintenant complet et fonctionnel. Mais le code commence à
-être long et répétitif. Il est temps de le restructurer.
+Notre programme est maintenant fonctionnel avec toutes les fonctionnalités de
+base. Mais il y a un problème : que se passe-t-il si l'utilisatrice entre des
+valeurs incorrectes ?
 
-## Étape 6 : Refactorisation avec des fonctions
+## Étape 6 : Validation robuste des entrées
 
 ### Réflexion en français
 
-Le code de l'étape 5 fonctionne bien, mais il devient difficile à lire : tout
-est dans la fonction `main`, qui fait maintenant plus de 150 lignes. Il est
-temps de **refactoriser**, c'est-à-dire de réorganiser le code sans changer son
+Jusqu'à présent, nous avons supposé que l'utilisatrice entrait toujours des
+valeurs correctes. Mais dans la réalité, des erreurs peuvent survenir :
+
+- L'utilisatrice tape une lettre au lieu d'un nombre
+- Elle entre un nombre négatif ou trop grand
+- Elle fait une faute de frappe
+
+Sans validation, le programme va planter avec une exception. Pour rendre le
+programme robuste, nous devons valider toutes les entrées.
+
+### Implémentation en Java
+
+Le code complet se trouve dans :
+[02-exemples-de-code/06-validation-robuste/Main.java](../02-exemples-de-code/06-validation-robuste/Main.java)
+
+Voici comment valider une entrée :
+
+```java
+int count = 0;
+boolean validCount = false;
+
+while (!validCount) {
+    System.out.print("Combien de notes souhaitez-vous saisir ? ");
+
+    // Vérifier que c'est bien un entier
+    if (scanner.hasNextInt()) {
+        count = scanner.nextInt();
+
+        // Vérifier que la valeur est acceptable
+        if (count > 0) {
+            validCount = true;
+        } else {
+            System.out.println("Erreur : le nombre doit être positif");
+        }
+    } else {
+        System.out.println("Erreur : veuillez entrer un nombre entier");
+        scanner.next(); // Consommer l'entrée invalide
+    }
+}
+```
+
+### Enseignements tirés
+
+La validation robuste ajoute de la complexité mais améliore grandement
+l'expérience utilisatrice :
+
+1. **Vérification du type** : `hasNextInt()` vérifie qu'un entier peut être lu
+2. **Vérification de la valeur** : Tester que la valeur est dans une plage
+   acceptable
+3. **Boucle de validation** : `while (!valid)` redemande jusqu'à obtenir une
+   valeur correcte
+4. **Consommer les erreurs** : `scanner.next()` enlève l'entrée invalide du
+   buffer
+5. **Messages clairs** : Expliquer à l'utilisatrice ce qui ne va pas
+
+> [!IMPORTANT]
+>
+> La validation robuste est essentielle dans les programmes réels, mais elle
+> ajoute beaucoup de code. C'est pourquoi nous l'avons traitée dans une étape
+> séparée : comprendre d'abord la logique de base, puis ajouter la robustesse.
+
+> [!WARNING]
+>
+> Ne jamais faire confiance aux données saisies par l'utilisatrice. Validez
+> toujours le type ET les valeurs. Un programme qui plante sur une entrée
+> incorrecte n'est pas un programme professionnel.
+
+Notre programme est maintenant robuste. Mais le code devient long et répétitif.
+Il est temps de le restructurer.
+
+## Étape 7 : Refactorisation avec des fonctions
+
+### Réflexion en français
+
+Le code de l'étape 6 fonctionne bien, mais il devient difficile à lire : tout
+est dans la fonction `main`, qui contient beaucoup de lignes. Il est temps de
+**refactoriser**, c'est-à-dire de réorganiser le code sans changer son
 comportement.
 
 Les avantages de la refactorisation :
@@ -474,16 +504,16 @@ Nous allons créer des fonctions pour :
 
 Le diagramme d'activité montre la structure simplifiée avec des fonctions :
 
-![Diagramme d'activité : structure avec fonctions](images/etape-06-activite-refactoring.png)
+![Diagramme d'activité : structure avec fonctions](images/etape-07-activite-refactoring.png)
 
 _Source :
-[etape-06-activite-refactoring.plantuml](images/etape-06-activite-refactoring.plantuml)_
+[etape-07-activite-refactoring.plantuml](images/etape-07-activite-refactoring.plantuml)_
 
 Et voici le diagramme de classes montrant toutes les fonctions :
 
-![Diagramme de classes : organisation avec fonctions](images/etape-06-classes.png)
+![Diagramme de classes : organisation avec fonctions](images/etape-07-classes.png)
 
-_Source : [etape-06-classes.plantuml](images/etape-06-classes.plantuml)_
+_Source : [etape-07-classes.plantuml](images/etape-07-classes.plantuml)_
 
 Observez comment chaque fonction a une responsabilité unique et bien définie.
 
@@ -538,7 +568,8 @@ La refactorisation apporte plusieurs bénéfices :
 > - Une taille raisonnable (généralement moins de 20 lignes)
 
 Cette refactorisation conclut notre construction progressive du programme de
-gestion de notes. Nous avons maintenant un code propre, lisible et maintenable.
+gestion de notes. Nous avons maintenant un code propre, lisible, robuste et
+maintenable.
 
 ## Récapitulatif de la méthodologie
 
@@ -580,17 +611,19 @@ quel que soit le langage ou le domaine.
 
 Voici un tableau récapitulatif de l'évolution :
 
-| Étape | Stockage  | Saisie | Taille | Modification | Complexité |
-| ----- | --------- | ------ | ------ | ------------ | ---------- |
-| 1     | Variables | Non    | Fixe   | Non          | Haute      |
-| 2     | Tableau   | Non    | Fixe   | Non          | Moyenne    |
-| 3     | Tableau   | Oui    | Fixe   | Non          | Moyenne    |
-| 4     | Tableau   | Oui    | Libre  | Non          | Moyenne    |
-| 5     | Tableau   | Oui    | Libre  | Oui          | Moyenne    |
-| 6     | Tableau   | Oui    | Libre  | Oui          | Faible     |
+| Étape | Stockage  | Saisie | Taille | Modification | Validation | Structure |
+| ----- | --------- | ------ | ------ | ------------ | ---------- | --------- |
+| 1     | Variables | Non    | Fixe   | Non          | N/A        | Main      |
+| 2     | Tableau   | Non    | Fixe   | Non          | N/A        | Main      |
+| 3     | Tableau   | Oui    | Fixe   | Non          | Non        | Main      |
+| 4     | Tableau   | Oui    | Libre  | Non          | Non        | Main      |
+| 5     | Tableau   | Oui    | Libre  | Oui          | Non        | Main      |
+| 6     | Tableau   | Oui    | Libre  | Oui          | Oui        | Main      |
+| 7     | Tableau   | Oui    | Libre  | Oui          | Oui        | Fonctions |
 
-Observez comment la complexité diminue à l'étape 6 grâce à la refactorisation,
-même si les fonctionnalités augmentent.
+Observez la progression : chaque étape ajoute une fonctionnalité ou améliore un
+aspect. L'étape 6 ajoute la robustesse (validation), et l'étape 7 améliore la
+structure (refactorisation).
 
 ## Pour aller plus loin
 
@@ -620,47 +653,6 @@ explorer. Voici quelques pistes pour approfondir :
 - **Tests unitaires** : Écrire des tests pour chaque fonction avec JUnit
 - **Design patterns** : Appliquer des patrons de conception (Strategy, Command,
   etc.)
-
-### Exercices suggérés
-
-1. **Moyenne pondérée** : Ajouter un coefficient pour chaque note et calculer la
-   moyenne pondérée
-2. **Recherche de notes** : Permettre de rechercher toutes les notes dans un
-   intervalle donné
-3. **Tri des notes** : Afficher les notes triées par ordre croissant ou
-   décroissant
-4. **Histogramme** : Afficher un graphique en mode texte de la répartition des
-   notes
-5. **Comparaison de séries** : Gérer deux séries de notes et les comparer
-
-### Ressources complémentaires
-
-Pour approfondir la méthodologie de résolution de problèmes :
-
-- George Pólya, _How to Solve It_ : Un classique sur la résolution de problèmes
-  en mathématiques, applicable à la programmation
-- Martin Fowler, _Refactoring_ : Le livre de référence sur la refactorisation de
-  code
-- Robert C. Martin, _Clean Code_ : Principes pour écrire du code lisible et
-  maintenable
-
-## Conclusion
-
-Ce tutoriel vous a montré qu'on ne code jamais "tout d'un coup". La
-programmation est un processus itératif où l'on construit progressivement une
-solution en faisant des choix réfléchis à chaque étape.
-
-Les compétences développées ici sont transférables :
-
-- Décomposer un problème complexe en sous-problèmes simples
-- Commencer par une version simple et ajouter progressivement des
-  fonctionnalités
-- Réfléchir en français avant de coder
-- Modéliser pour comprendre la structure avant l'implémentation
-- Refactoriser quand le code devient complexe
-
-Ces compétences sont au cœur de la programmation professionnelle. Continuez à
-les pratiquer dans tous vos projets !
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

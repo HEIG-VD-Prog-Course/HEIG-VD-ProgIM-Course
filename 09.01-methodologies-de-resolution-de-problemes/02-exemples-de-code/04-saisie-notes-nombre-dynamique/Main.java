@@ -8,6 +8,8 @@ import java.util.Scanner;
  * - La possibilité pour l'utilisatrice de choisir le nombre de notes
  * - La création d'un tableau de taille dynamique
  * - Une meilleure flexibilité du programme
+ * 
+ * Note : Cette version suppose que l'utilisatrice entre des valeurs correctes.
  */
 public class Main {
 
@@ -18,27 +20,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Demande du nombre de notes à saisir
-        int count = 0;
-        boolean validCount = false;
-
-        while (!validCount) {
-            System.out.print("Combien de notes souhaitez-vous saisir ? ");
-
-            // Vérification que l'entrée est bien un nombre entier
-            if (scanner.hasNextInt()) {
-                count = scanner.nextInt();
-
-                // Validation du nombre
-                if (count > 0) {
-                    validCount = true;
-                } else {
-                    System.out.println("Erreur : le nombre de notes doit être positif");
-                }
-            } else {
-                System.out.println("Erreur : veuillez entrer un nombre entier valide");
-                scanner.next(); // Consommer l'entrée invalide
-            }
-        }
+        System.out.print("Combien de notes souhaitez-vous saisir ? ");
+        int count = scanner.nextInt();
 
         // Création du tableau de la taille appropriée
         int[] notes = new int[count];
@@ -46,27 +29,8 @@ public class Main {
         System.out.println("\n--- Saisie des notes ---");
         // Saisie des notes
         for (int i = 0; i < count; i++) {
-            boolean valid = false;
-
-            while (!valid) {
-                System.out.print("Entrez la note " + (i + 1) + " (entre 1 et 6) : ");
-
-                // Vérification que l'entrée est bien un nombre entier
-                if (scanner.hasNextInt()) {
-                    int grade = scanner.nextInt();
-
-                    // Validation de la note
-                    if (grade >= 1 && grade <= 6) {
-                        notes[i] = grade;
-                        valid = true;
-                    } else {
-                        System.out.println("Erreur : la note doit être entre 1 et 6");
-                    }
-                } else {
-                    System.out.println("Erreur : veuillez entrer un nombre entier valide");
-                    scanner.next(); // Consommer l'entrée invalide
-                }
-            }
+            System.out.print("Entrez la note " + (i + 1) + " : ");
+            notes[i] = scanner.nextInt();
         }
 
         System.out.println("\n--- Affichage des notes saisies ---");
