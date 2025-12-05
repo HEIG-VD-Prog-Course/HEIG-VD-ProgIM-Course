@@ -195,6 +195,11 @@ XX-example-name/
 
     ```java
     public class Main {
+
+        public static void demonstrateConcept() {
+            // Implementation
+        }
+
         public static void main(String[] args) {
             System.out.println("=== Exemple : [Title] ===\n");
 
@@ -202,10 +207,6 @@ XX-example-name/
             demonstrateConcept();
 
             System.out.println("\n=== Fin de l'exemple ===");
-        }
-
-        private static void demonstrateConcept() {
-            // Implementation
         }
     }
     ```

@@ -10,37 +10,7 @@ import java.util.Arrays;
  * Complexité : O(n²) dans le cas moyen et pire cas.
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Tri à bulles ===\n");
-
-        int[] numbers = { 64, 34, 25, 12, 22, 11, 90 };
-
-        System.out.println("Tableau initial :");
-        System.out.println(Arrays.toString(numbers));
-        System.out.println();
-
-        // Tri avec affichage des étapes
-        bubbleSortVerbose(numbers.clone());
-
-        System.out.println("\n--- Tri optimisé ---\n");
-
-        int[] numbers2 = { 64, 34, 25, 12, 22, 11, 90 };
-        bubbleSortOptimized(numbers2);
-
-        System.out.println("Tableau trié :");
-        System.out.println(Arrays.toString(numbers2));
-
-        // Test avec un tableau déjà trié
-        System.out.println("\n--- Test avec tableau déjà trié ---\n");
-        int[] sorted = { 1, 2, 3, 4, 5, 6, 7 };
-
-        System.out.println("Tableau initial : " + Arrays.toString(sorted));
-        int comparisons = bubbleSortWithCount(sorted);
-        System.out.println("Comparaisons effectuées : " + comparisons);
-        System.out.println("(Optimisation détectée : tableau déjà trié)");
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Tri à bulles simple.
@@ -160,5 +130,37 @@ public class Main {
         }
 
         return comparisons;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Tri à bulles ===\n");
+
+        int[] numbers = { 64, 34, 25, 12, 22, 11, 90 };
+
+        System.out.println("Tableau initial :");
+        System.out.println(Arrays.toString(numbers));
+        System.out.println();
+
+        // Tri avec affichage des étapes
+        bubbleSortVerbose(numbers.clone());
+
+        System.out.println("\n--- Tri optimisé ---\n");
+
+        int[] numbers2 = { 64, 34, 25, 12, 22, 11, 90 };
+        bubbleSortOptimized(numbers2);
+
+        System.out.println("Tableau trié :");
+        System.out.println(Arrays.toString(numbers2));
+
+        // Test avec un tableau déjà trié
+        System.out.println("\n--- Test avec tableau déjà trié ---\n");
+        int[] sorted = { 1, 2, 3, 4, 5, 6, 7 };
+
+        System.out.println("Tableau initial : " + Arrays.toString(sorted));
+        int comparisons = bubbleSortWithCount(sorted);
+        System.out.println("Comparaisons effectuées : " + comparisons);
+        System.out.println("(Optimisation détectée : tableau déjà trié)");
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

@@ -11,20 +11,7 @@ import java.util.Collections;
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Recherche dans des collections ===\n");
-
-        // Recherche dans ArrayList
-        demonstrateArrayList();
-
-        // Recherche dans les tableaux
-        demonstrateArrays();
-
-        // Recherche binaire avec Collections
-        demonstrateCollectionsBinarySearch();
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Démonstration de la recherche dans ArrayList.
@@ -147,5 +134,20 @@ public class Main {
         System.out.println("  Recherche linéaire : " + linearTime + " ns");
         System.out.println("  Recherche binaire  : " + binaryTime + " ns");
         System.out.println("  Rapport : " + (linearTime / binaryTime) + "x plus rapide");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Recherche dans des collections ===\n");
+
+        // Recherche dans ArrayList
+        demonstrateArrayList();
+
+        // Recherche dans les tableaux
+        demonstrateArrays();
+
+        // Recherche binaire avec Collections
+        demonstrateCollectionsBinarySearch();
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

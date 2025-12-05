@@ -5,6 +5,7 @@
  * tableau et calculer des statistiques simples.
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Parcours avec différentes boucles ===\n");
 

@@ -12,32 +12,7 @@ import java.util.Scanner;
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Puissance 4 - Étape 2 : Placement d'un pion ===\n");
-
-        // Création et initialisation de la grille
-        char[][] grid = createGrid();
-        displayGrid(grid);
-
-        // Scanner pour lire l'entrée utilisatrice
-        Scanner scanner = new Scanner(System.in);
-
-        // Demander au joueur de choisir une colonne
-        System.out.print("\nChoisissez une colonne (1-7) : ");
-        int column = scanner.nextInt();
-
-        // Convertir la colonne utilisatrice (1-7) en index tableau (0-6)
-        int columnIndex = column - 1;
-
-        // Placer le pion X dans la colonne choisie
-        placeToken(grid, columnIndex, 'X');
-
-        // Afficher la grille après placement
-        System.out.println();
-        displayGrid(grid);
-
-        scanner.close();
-    }
+    
 
     /**
      * Crée une grille de Puissance 4 vide (6 lignes × 7 colonnes).
@@ -113,5 +88,32 @@ public class Main {
 
         // Colonne pleine, placement impossible
         return -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Puissance 4 - Étape 2 : Placement d'un pion ===\n");
+
+        // Création et initialisation de la grille
+        char[][] grid = createGrid();
+        displayGrid(grid);
+
+        // Scanner pour lire l'entrée utilisatrice
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander au joueur de choisir une colonne
+        System.out.print("\nChoisissez une colonne (1-7) : ");
+        int column = scanner.nextInt();
+
+        // Convertir la colonne utilisatrice (1-7) en index tableau (0-6)
+        int columnIndex = column - 1;
+
+        // Placer le pion X dans la colonne choisie
+        placeToken(grid, columnIndex, 'X');
+
+        // Afficher la grille après placement
+        System.out.println();
+        displayGrid(grid);
+
+        scanner.close();
     }
 }

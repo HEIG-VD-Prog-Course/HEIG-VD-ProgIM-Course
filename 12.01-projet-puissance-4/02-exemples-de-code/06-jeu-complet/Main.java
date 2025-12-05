@@ -30,76 +30,7 @@ public class Main {
     public static final char PLAYER2 = 'O';
     public static final char EMPTY = ' ';
 
-    public static void main(String[] args) {
-        System.out.println("=== Puissance 4 - Jeu complet ===\n");
-
-        // Initialisation
-        char[][] grid = createGrid();
-        char currentPlayer = PLAYER1;
-        Scanner scanner = new Scanner(System.in);
-
-        // Boucle de jeu principale
-        while (true) {
-            // Afficher l'état actuel de la grille
-            displayGrid(grid);
-
-            // Demander au joueur de choisir une colonne
-            System.out.print("\nJoueur " + currentPlayer +
-                    " - Choisissez une colonne (1-7, 0 pour quitter) : ");
-            int column = scanner.nextInt();
-
-            // Permettre de quitter
-            if (column == 0) {
-                System.out.println("Fin de la partie.");
-                break;
-            }
-
-            // Convertir la colonne utilisatrice (1-7) en index tableau (0-6)
-            int columnIndex = column - 1;
-
-            // Validation de la colonne
-            if (columnIndex < 0 || columnIndex >= COLS) {
-                System.out.println("❌ Colonne invalide ! Choisissez entre 1 et 7.");
-                continue;
-            }
-
-            // Vérifier que la colonne n'est pas pleine
-            if (findLowestRow(grid, columnIndex) == -1) {
-                System.out.println("❌ Cette colonne est pleine ! Choisissez-en une autre.");
-                continue;
-            }
-
-            // Placer le pion
-            placeToken(grid, columnIndex, currentPlayer);
-
-            // Vérifier s'il y a victoire
-            if (hasWon(grid, currentPlayer)) {
-                System.out.println();
-                displayGrid(grid);
-                System.out.println("\n🎉 Le joueur " + currentPlayer + " a gagné !");
-                break;
-            }
-
-            // Vérifier s'il y a match nul
-            if (isGridFull(grid)) {
-                System.out.println();
-                displayGrid(grid);
-                System.out.println("\n🤝 Match nul ! La grille est pleine.");
-                break;
-            }
-
-            // Alterner les joueurs
-            if (currentPlayer == PLAYER1) {
-                currentPlayer = PLAYER2;
-            } else {
-                currentPlayer = PLAYER1;
-            }
-
-            System.out.println();
-        }
-
-        scanner.close();
-    }
+    
 
     /**
      * Crée une grille de Puissance 4 vide.
@@ -291,5 +222,76 @@ public class Main {
             }
         }
         return true; // Toutes les colonnes sont pleines
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Puissance 4 - Jeu complet ===\n");
+
+        // Initialisation
+        char[][] grid = createGrid();
+        char currentPlayer = PLAYER1;
+        Scanner scanner = new Scanner(System.in);
+
+        // Boucle de jeu principale
+        while (true) {
+            // Afficher l'état actuel de la grille
+            displayGrid(grid);
+
+            // Demander au joueur de choisir une colonne
+            System.out.print("\nJoueur " + currentPlayer +
+                    " - Choisissez une colonne (1-7, 0 pour quitter) : ");
+            int column = scanner.nextInt();
+
+            // Permettre de quitter
+            if (column == 0) {
+                System.out.println("Fin de la partie.");
+                break;
+            }
+
+            // Convertir la colonne utilisatrice (1-7) en index tableau (0-6)
+            int columnIndex = column - 1;
+
+            // Validation de la colonne
+            if (columnIndex < 0 || columnIndex >= COLS) {
+                System.out.println("❌ Colonne invalide ! Choisissez entre 1 et 7.");
+                continue;
+            }
+
+            // Vérifier que la colonne n'est pas pleine
+            if (findLowestRow(grid, columnIndex) == -1) {
+                System.out.println("❌ Cette colonne est pleine ! Choisissez-en une autre.");
+                continue;
+            }
+
+            // Placer le pion
+            placeToken(grid, columnIndex, currentPlayer);
+
+            // Vérifier s'il y a victoire
+            if (hasWon(grid, currentPlayer)) {
+                System.out.println();
+                displayGrid(grid);
+                System.out.println("\n🎉 Le joueur " + currentPlayer + " a gagné !");
+                break;
+            }
+
+            // Vérifier s'il y a match nul
+            if (isGridFull(grid)) {
+                System.out.println();
+                displayGrid(grid);
+                System.out.println("\n🤝 Match nul ! La grille est pleine.");
+                break;
+            }
+
+            // Alterner les joueurs
+            if (currentPlayer == PLAYER1) {
+                currentPlayer = PLAYER2;
+            } else {
+                currentPlayer = PLAYER1;
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
     }
 }

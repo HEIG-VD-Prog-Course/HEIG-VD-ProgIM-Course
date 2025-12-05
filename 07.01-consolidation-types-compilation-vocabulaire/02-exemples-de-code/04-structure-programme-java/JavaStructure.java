@@ -16,28 +16,7 @@ public class JavaStructure {
     // MÉTHODES DE LA CLASSE
     // ═══════════════════════════════════════════════════════════
 
-    /**
-     * La méthode main est le POINT D'ENTRÉE du programme.
-     * C'est la première méthode que la JVM exécute.
-     * 
-     * Signature obligatoire :
-     * - public : accessible depuis l'extérieur
-     * - static : peut être appelée sans créer d'objet
-     * - void : ne retourne aucune valeur
-     * - main : nom spécial reconnu par la JVM
-     * - String[] args : arguments de ligne de commande
-     */
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Structure d'un programme Java ===\n");
-
-        explainClass();
-        explainFileName();
-        explainMainMethod();
-        explainPublicStatic();
-        showExampleWithMultipleMethods();
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Explique ce qu'est une classe.
@@ -163,5 +142,28 @@ public class JavaStructure {
      */
     public static int add(int a, int b) {
         return a + b;
+    }
+
+    /**
+     * La méthode main est le POINT D'ENTRÉE du programme.
+     * C'est la première méthode que la JVM exécute.
+     * 
+     * Signature obligatoire :
+     * - public : accessible depuis l'extérieur
+     * - static : peut être appelée sans créer d'objet
+     * - void : ne retourne aucune valeur
+     * - main : nom spécial reconnu par la JVM
+     * - String[] args : arguments de ligne de commande
+     */
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Structure d'un programme Java ===\n");
+
+        explainClass();
+        explainFileName();
+        explainMainMethod();
+        explainPublicStatic();
+        showExampleWithMultipleMethods();
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

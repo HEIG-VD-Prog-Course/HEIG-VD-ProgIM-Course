@@ -11,58 +11,7 @@ import java.util.Scanner;
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Puissance 4 - Étape 4 : Détection de victoire horizontale ===\n");
-
-        char[][] grid = createGrid();
-        char currentPlayer = 'X';
-        Scanner scanner = new Scanner(System.in);
-
-        // Boucle de jeu
-        while (true) {
-            displayGrid(grid);
-
-            System.out.print("\nJoueur " + currentPlayer +
-                    " - Choisissez une colonne (1-7, 0 pour quitter) : ");
-            int column = scanner.nextInt();
-
-            if (column == 0) {
-                System.out.println("Fin de la partie.");
-                break;
-            }
-
-            int columnIndex = column - 1;
-
-            if (columnIndex < 0 || columnIndex >= 7) {
-                System.out.println("Colonne invalide !");
-                continue;
-            }
-
-            if (findLowestRow(grid, columnIndex) == -1) {
-                System.out.println("Colonne pleine !");
-                continue;
-            }
-
-            placeToken(grid, columnIndex, currentPlayer);
-
-            // Vérifier s'il y a victoire horizontale
-            if (checkHorizontalWin(grid, currentPlayer)) {
-                System.out.println();
-                displayGrid(grid);
-                System.out.println("\nLe joueur " + currentPlayer + " a gagné horizontalement !");
-                break;
-            }
-
-            if (currentPlayer == 'X') {
-                currentPlayer = 'O';
-            } else {
-                currentPlayer = 'X';
-            }
-            System.out.println();
-        }
-
-        scanner.close();
-    }
+    
 
     /**
      * Crée une grille de Puissance 4 vide.
@@ -152,5 +101,58 @@ public class Main {
             }
         }
         return false; // Aucune victoire horizontale
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Puissance 4 - Étape 4 : Détection de victoire horizontale ===\n");
+
+        char[][] grid = createGrid();
+        char currentPlayer = 'X';
+        Scanner scanner = new Scanner(System.in);
+
+        // Boucle de jeu
+        while (true) {
+            displayGrid(grid);
+
+            System.out.print("\nJoueur " + currentPlayer +
+                    " - Choisissez une colonne (1-7, 0 pour quitter) : ");
+            int column = scanner.nextInt();
+
+            if (column == 0) {
+                System.out.println("Fin de la partie.");
+                break;
+            }
+
+            int columnIndex = column - 1;
+
+            if (columnIndex < 0 || columnIndex >= 7) {
+                System.out.println("Colonne invalide !");
+                continue;
+            }
+
+            if (findLowestRow(grid, columnIndex) == -1) {
+                System.out.println("Colonne pleine !");
+                continue;
+            }
+
+            placeToken(grid, columnIndex, currentPlayer);
+
+            // Vérifier s'il y a victoire horizontale
+            if (checkHorizontalWin(grid, currentPlayer)) {
+                System.out.println();
+                displayGrid(grid);
+                System.out.println("\nLe joueur " + currentPlayer + " a gagné horizontalement !");
+                break;
+            }
+
+            if (currentPlayer == 'X') {
+                currentPlayer = 'O';
+            } else {
+                currentPlayer = 'X';
+            }
+            System.out.println();
+        }
+
+        scanner.close();
     }
 }

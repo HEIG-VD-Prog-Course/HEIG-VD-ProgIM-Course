@@ -5,6 +5,23 @@
  * de longueurs différentes.
  */
 public class Main {
+    
+
+    /**
+     * Affiche un planning hebdomadaire de manière lisible.
+     *
+     * @param schedule le planning à afficher (tableau irrégulier)
+     */
+    public static void displaySchedule(int[][] schedule) {
+        for (int week = 0; week < schedule.length; week++) {
+            System.out.print("Semaine " + (week + 1) + " :");
+            for (int day = 0; day < schedule[week].length; day++) {
+                System.out.print(" " + schedule[week][day] + "h");
+            }
+            System.out.println(" (" + schedule[week].length + " jours)");
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Tableau irrégulier ===\n");
 
@@ -70,20 +87,5 @@ public class Main {
         }
 
         System.out.println("\n=== Fin de l'exemple ===");
-    }
-
-    /**
-     * Affiche un planning hebdomadaire de manière lisible.
-     *
-     * @param schedule le planning à afficher (tableau irrégulier)
-     */
-    private static void displaySchedule(int[][] schedule) {
-        for (int week = 0; week < schedule.length; week++) {
-            System.out.print("Semaine " + (week + 1) + " :");
-            for (int day = 0; day < schedule[week].length; day++) {
-                System.out.print(" " + schedule[week][day] + "h");
-            }
-            System.out.println(" (" + schedule[week].length + " jours)");
-        }
     }
 }

@@ -10,40 +10,7 @@ import java.util.Arrays;
  * Complexité : O(n²) dans le pire cas, O(n) dans le meilleur cas (adaptatif).
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Tri par insertion ===\n");
-
-        int[] numbers = { 12, 11, 13, 5, 6 };
-
-        System.out.println("Tableau initial :");
-        System.out.println(Arrays.toString(numbers));
-        System.out.println();
-
-        // Tri avec affichage des étapes
-        insertionSortVerbose(numbers.clone());
-
-        // Test avec un tableau presque trié (adaptatif)
-        System.out.println("\n--- Test avec tableau presque trié ---\n");
-        int[] almostSorted = { 1, 2, 3, 8, 5, 6, 7, 4, 9, 10 };
-
-        System.out.println("Tableau initial : " + Arrays.toString(almostSorted));
-        int comparisons = insertionSortWithCount(almostSorted);
-        System.out.println("Tableau trié : " + Arrays.toString(almostSorted));
-        System.out.println("Comparaisons : " + comparisons);
-
-        // Test avec un tableau complètement trié
-        System.out.println("\n--- Test avec tableau déjà trié ---\n");
-        int[] sorted = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-        System.out.println("Tableau initial : " + Arrays.toString(sorted));
-        comparisons = insertionSortWithCount(sorted);
-        System.out.println("Tableau final : " + Arrays.toString(sorted));
-        System.out.println("Comparaisons : " + comparisons);
-        System.out.println("(Le tri par insertion est très efficace sur");
-        System.out.println(" des données déjà triées : O(n))");
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Tri par insertion simple.
@@ -187,5 +154,40 @@ public class Main {
             // Insérer
             array[insertPos] = key;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Tri par insertion ===\n");
+
+        int[] numbers = { 12, 11, 13, 5, 6 };
+
+        System.out.println("Tableau initial :");
+        System.out.println(Arrays.toString(numbers));
+        System.out.println();
+
+        // Tri avec affichage des étapes
+        insertionSortVerbose(numbers.clone());
+
+        // Test avec un tableau presque trié (adaptatif)
+        System.out.println("\n--- Test avec tableau presque trié ---\n");
+        int[] almostSorted = { 1, 2, 3, 8, 5, 6, 7, 4, 9, 10 };
+
+        System.out.println("Tableau initial : " + Arrays.toString(almostSorted));
+        int comparisons = insertionSortWithCount(almostSorted);
+        System.out.println("Tableau trié : " + Arrays.toString(almostSorted));
+        System.out.println("Comparaisons : " + comparisons);
+
+        // Test avec un tableau complètement trié
+        System.out.println("\n--- Test avec tableau déjà trié ---\n");
+        int[] sorted = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        System.out.println("Tableau initial : " + Arrays.toString(sorted));
+        comparisons = insertionSortWithCount(sorted);
+        System.out.println("Tableau final : " + Arrays.toString(sorted));
+        System.out.println("Comparaisons : " + comparisons);
+        System.out.println("(Le tri par insertion est très efficace sur");
+        System.out.println(" des données déjà triées : O(n))");
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

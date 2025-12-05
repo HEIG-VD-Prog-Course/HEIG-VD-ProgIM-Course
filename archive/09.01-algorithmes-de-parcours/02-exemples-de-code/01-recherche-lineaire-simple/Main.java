@@ -5,41 +5,7 @@
  * trouver l'élément recherché ou atteindre la fin du tableau.
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Recherche linéaire simple ===\n");
-
-        int[] numbers = { 10, 25, 30, 45, 50, 65, 70, 85, 90 };
-
-        // Recherche de plusieurs valeurs
-        int[] toFind = { 30, 90, 10, 100 };
-
-        for (int target : toFind) {
-            int index = linearSearch(numbers, target);
-
-            if (index != -1) {
-                System.out.println("Élément " + target + " trouvé à l'index " + index);
-            } else {
-                System.out.println("Élément " + target + " non trouvé");
-            }
-        }
-
-        // Démonstration du nombre de comparaisons
-        System.out.println("\n--- Analyse des comparaisons ---\n");
-
-        int target = 70;
-        int comparisons = linearSearchWithCount(numbers, target);
-        System.out.println("Recherche de " + target + " : " + comparisons + " comparaisons");
-
-        target = 10;
-        comparisons = linearSearchWithCount(numbers, target);
-        System.out.println("Recherche de " + target + " : " + comparisons + " comparaisons");
-
-        target = 100;
-        comparisons = linearSearchWithCount(numbers, target);
-        System.out.println("Recherche de " + target + " : " + comparisons + " comparaisons");
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Effectue une recherche linéaire dans un tableau.
@@ -76,5 +42,41 @@ public class Main {
         }
 
         return comparisons; // Toutes les comparaisons effectuées
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Recherche linéaire simple ===\n");
+
+        int[] numbers = { 10, 25, 30, 45, 50, 65, 70, 85, 90 };
+
+        // Recherche de plusieurs valeurs
+        int[] toFind = { 30, 90, 10, 100 };
+
+        for (int target : toFind) {
+            int index = linearSearch(numbers, target);
+
+            if (index != -1) {
+                System.out.println("Élément " + target + " trouvé à l'index " + index);
+            } else {
+                System.out.println("Élément " + target + " non trouvé");
+            }
+        }
+
+        // Démonstration du nombre de comparaisons
+        System.out.println("\n--- Analyse des comparaisons ---\n");
+
+        int target = 70;
+        int comparisons = linearSearchWithCount(numbers, target);
+        System.out.println("Recherche de " + target + " : " + comparisons + " comparaisons");
+
+        target = 10;
+        comparisons = linearSearchWithCount(numbers, target);
+        System.out.println("Recherche de " + target + " : " + comparisons + " comparaisons");
+
+        target = 100;
+        comparisons = linearSearchWithCount(numbers, target);
+        System.out.println("Recherche de " + target + " : " + comparisons + " comparaisons");
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

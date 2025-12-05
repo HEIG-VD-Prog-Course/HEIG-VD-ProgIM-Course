@@ -10,16 +10,7 @@
  * 4. Identifier les erreurs de calcul
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Débogage : Erreurs de calcul ===\n");
-
-        testPriceCalculation();
-        testTemperatureConversion();
-        testFactorial();
-        testPercentage();
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Test 1 : Calcul de prix avec TVA
@@ -145,7 +136,19 @@ public class Main {
  * result *= i;
  * }
  * return result;
- * }
+ *
+
+    public static void main(String[] args) {
+        System.out.println("=== Débogage : Erreurs de calcul ===\n");
+
+        testPriceCalculation();
+        testTemperatureConversion();
+        testFactorial();
+        testPercentage();
+
+        System.out.println("\n=== Fin de l'exemple ===");
+    }
+}
  * 
  * 4. testPercentage() :
  * - Caster en double :

@@ -12,63 +12,7 @@ import java.util.Scanner;
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Puissance 4 - Étape 3 : Alternance des joueuses ===\n");
-
-        // Création et initialisation de la grille
-        char[][] grid = createGrid();
-
-        // Le joueur X commence toujours
-        char currentPlayer = 'X';
-
-        Scanner scanner = new Scanner(System.in);
-
-        // Boucle de jeu
-        while (true) {
-            // Afficher la grille
-            displayGrid(grid);
-
-            // Demander au joueur courant de jouer
-            System.out.print("\nJoueur " + currentPlayer +
-                    " - Choisissez une colonne (1-7, 0 pour quitter) : ");
-            int column = scanner.nextInt();
-
-            // Permettre de quitter
-            if (column == 0) {
-                System.out.println("Fin de la partie.");
-                break;
-            }
-
-            // Convertir en index tableau
-            int columnIndex = column - 1;
-
-            // Vérifier que la colonne est valide
-            if (columnIndex < 0 || columnIndex >= 7) {
-                System.out.println("Colonne invalide ! Choisissez entre 1 et 7.");
-                continue;
-            }
-
-            // Vérifier que la colonne n'est pas pleine
-            if (findLowestRow(grid, columnIndex) == -1) {
-                System.out.println("Cette colonne est pleine ! Choisissez-en une autre.");
-                continue;
-            }
-
-            // Placer le pion
-            placeToken(grid, columnIndex, currentPlayer);
-
-            // Alterner les joueurs
-            if (currentPlayer == 'X') {
-                currentPlayer = 'O';
-            } else {
-                currentPlayer = 'X';
-            }
-
-            System.out.println();
-        }
-
-        scanner.close();
-    }
+    
 
     /**
      * Crée une grille de Puissance 4 vide (6 lignes × 7 colonnes).
@@ -136,5 +80,63 @@ public class Main {
         }
 
         return -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Puissance 4 - Étape 3 : Alternance des joueuses ===\n");
+
+        // Création et initialisation de la grille
+        char[][] grid = createGrid();
+
+        // Le joueur X commence toujours
+        char currentPlayer = 'X';
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Boucle de jeu
+        while (true) {
+            // Afficher la grille
+            displayGrid(grid);
+
+            // Demander au joueur courant de jouer
+            System.out.print("\nJoueur " + currentPlayer +
+                    " - Choisissez une colonne (1-7, 0 pour quitter) : ");
+            int column = scanner.nextInt();
+
+            // Permettre de quitter
+            if (column == 0) {
+                System.out.println("Fin de la partie.");
+                break;
+            }
+
+            // Convertir en index tableau
+            int columnIndex = column - 1;
+
+            // Vérifier que la colonne est valide
+            if (columnIndex < 0 || columnIndex >= 7) {
+                System.out.println("Colonne invalide ! Choisissez entre 1 et 7.");
+                continue;
+            }
+
+            // Vérifier que la colonne n'est pas pleine
+            if (findLowestRow(grid, columnIndex) == -1) {
+                System.out.println("Cette colonne est pleine ! Choisissez-en une autre.");
+                continue;
+            }
+
+            // Placer le pion
+            placeToken(grid, columnIndex, currentPlayer);
+
+            // Alterner les joueurs
+            if (currentPlayer == 'X') {
+                currentPlayer = 'O';
+            } else {
+                currentPlayer = 'X';
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
     }
 }

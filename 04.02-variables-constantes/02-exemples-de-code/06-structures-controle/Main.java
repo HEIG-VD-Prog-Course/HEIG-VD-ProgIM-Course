@@ -6,6 +6,7 @@
  * 3. Itération : répétition d'actions (boucles while et for)
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Structures de contrôle ===\n");
 
