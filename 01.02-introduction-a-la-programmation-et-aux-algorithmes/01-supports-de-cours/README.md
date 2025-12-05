@@ -25,6 +25,16 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [La recette de cuisine : une métaphore](#la-recette-de-cuisine-une-métaphore)
 - [Pourquoi la précision est importante](#pourquoi-la-précision-est-importante)
 - [Présentation des exemples dans le cours](#présentation-des-exemples-dans-le-cours)
+
+## Objectifs
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Expliquer ce qu'est la programmation à l'aide d'exemples du quotidien
+- Comprendre la notion d'algorithme grâce à la métaphore de la recette
+- Suivre et imaginer des instructions simples pour résoudre un problème
+- Prendre conscience de l'importance de la précision dans les instructions
+
   - [Exemple : « Deviner un nombre »](#exemple-deviner-un-nombre)
 
 ## Objectifs

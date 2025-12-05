@@ -92,6 +92,17 @@ plus efficacement et de préparer le terrain pour les concepts plus avancés
 (tableaux, bibliothèques, packages) que nous verrons dans les prochains
 chapitres.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Distinguer et utiliser tous les types primitifs de Java (byte, short, int,
+- Expliquer les limites de la représentation des nombres à virgule flottante et
+- Compiler et exécuter un programme Java en ligne de commande avec des arguments
+- Comprendre le rôle de `public class Main` et la structure minimale d'un
+- Différencier le vocabulaire technique : paramètre vs argument, fonction vs
+- Expliquer le rôle d'un IDE (VS Code, IntelliJ) comme interface facilitant le
+- Comprendre le processus de compilation : de `.java` à `.class` et l'exécution
+
 ## Objectifs
 
 À l'issue de ce chapitre, vous devriez être capable de :

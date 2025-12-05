@@ -83,6 +83,20 @@ appeler, à leur passer des informations et à récupérer leurs résultats. Vou
 découvrirez également les nombreuses méthodes déjà fournies par Java que vous
 pouvez utiliser immédiatement.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Décrire ce qu'est une méthode en programmation
+- Déclarer une méthode en Java
+- Appeler une méthode en Java
+- Passer des paramètres à une méthode en Java
+- Utiliser une valeur de retour
+- Expliquer ce qu'est une portée de variable
+- Utiliser des variables de classe
+- Savoir où trouver la documentation sur les méthodes prédéfinies en Java
+- Utiliser des méthodes prédéfinies en Java
+- Réutiliser du code avec des méthodes
+
 ## Qu'est-ce qu'une méthode ?
 
 ### Définition

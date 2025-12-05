@@ -22,6 +22,15 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [L'itération](#litération)
+
+## Objectifs
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Comprendre le concept d'itération et son utilité dans la programmation.
+- Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
+- Être capable de représenter des boucles en pseudocode et en diagrammes
+
   - [Qu'est-ce que l'itération ? (rappel)](#quest-ce-que-litération--rappel)
   - [La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)](#la-boucle-tant-que-quand-on-ne-connaît-pas-le-nombre-ditérations)
   - [Variables](#variables)

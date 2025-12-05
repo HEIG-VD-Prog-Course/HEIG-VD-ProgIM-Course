@@ -24,6 +24,15 @@ allons explorer des stratégies de parcours plus avancées et découvrir la
 récursivité. Ces techniques vous permettront de résoudre des problèmes plus
 complexes de manière élégante et efficace.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Parcourir un tableau avec différentes stratégies (sauter des éléments, exclure
+- Choisir le type de boucle adapté à chaque situation de parcours.
+- Implémenter des algorithmes simples de recherche et de comptage dans des
+- Comprendre et appliquer le principe de la récursivité pour des cas simples
+- Décomposer des problèmes complexes en fonctions réutilisables travaillant avec
+
 ## Stratégies de parcours de tableaux
 
 ### Parcours avec saut d'éléments

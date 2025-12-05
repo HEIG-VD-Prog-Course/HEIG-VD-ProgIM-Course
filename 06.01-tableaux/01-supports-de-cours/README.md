@@ -47,7 +47,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-À l'issue de ce cours, la personne qui étudie sera capable de :
+À la fin de cette séance, vous devriez être capable de :
 
 - Décrire ce qu'est un tableau et ses caractéristiques en Java.
 - Créer et initialiser des tableaux de types primitifs et d'objets.
@@ -56,9 +56,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Manipuler des tableaux multidimensionnels.
 - Utiliser les méthodes utilitaires de la classe `Arrays`.
 - Comprendre les limites des tableaux et quand utiliser des structures
-  alternatives.
 - Résoudre des problèmes pratiques impliquant le stockage et le traitement de
-  collections de données.
 
 ## Introduction aux tableaux
 

@@ -34,6 +34,14 @@ fonctionne, puis on ajoute progressivement des fonctionnalités.
 > l'ordre, d'exécuter les exemples de code sur votre machine, et de comprendre
 > les raisonnements présentés. Ne sautez pas d'étapes.
 
+À la fin de cette séance, vous devriez être capable de :
+
+- Décomposer un problème complexe en étapes simples et progressives.
+- Traduire un besoin exprimé en français en algorithme structuré (diagramme
+- Passer d'un algorithme à une implémentation en Java de manière méthodique.
+- Identifier les moments opportuns pour introduire des structures de données
+- Appliquer une démarche itérative : commencer simple, tester, puis améliorer.
+
 ## Description du problème
 
 Nous allons construire un programme de gestion de notes. Ce programme doit
@@ -517,15 +525,6 @@ _Source :
 
 ```java
 public class AverageExample {
-    public static void main(String[] args) {
-        int[] notes = {5, 6, 4, 4, 5};
-
-        // average() retourne une valeur que nous stockons
-        double avg = average(notes);
-
-        // showAverage() ne retourne rien (void), elle affiche juste
-        showAverage(avg);
-    }
 
     // Fonction qui RETOURNE une valeur (comme la plombière)
     public static double average(int[] notes) {
@@ -540,6 +539,16 @@ public class AverageExample {
     public static void showAverage(double avg) {
         System.out.println("Moyenne : " + avg);
         // Pas de return - la fonction se termine après l'affichage
+    }
+
+    public static void main(String[] args) {
+        int[] notes = {5, 6, 4, 4, 5};
+
+        // average() retourne une valeur que nous stockons
+        double avg = average(notes);
+
+        // showAverage() ne retourne rien (void), elle affiche juste
+        showAverage(avg);
     }
 }
 ```

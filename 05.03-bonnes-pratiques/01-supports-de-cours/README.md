@@ -85,6 +85,16 @@ vous-même dans 6 mois) peuvent comprendre et modifier facilement, c'est mieux !
 Les bonnes pratiques de programmation sont comme les règles de politesse dans
 une conversation : elles facilitent la communication et évitent les malentendus.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Comprendre l'importance des bonnes pratiques de programmation
+- Nommer vos variables, méthodes et classes de manière claire et cohérente
+- Formater votre code de manière uniforme et lisible
+- Écrire des commentaires utiles et pertinents
+- Configurer VS Code pour maintenir automatiquement la qualité de votre code
+- Utiliser EditorConfig pour assurer la cohérence dans une équipe
+
 ## Pourquoi les bonnes pratiques sont importantes
 
 ### Pour vous

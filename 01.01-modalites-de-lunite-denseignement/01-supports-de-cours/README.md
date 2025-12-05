@@ -19,5 +19,12 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
+À la fin de cette séance, vous devriez être capable de :
+
+- Lister les objectifs de l'unité d'enseignement.
+- Lister les modalités d'organisation de l'unité d'enseignement.
+- Lister les modalités d'évaluation.
+
+
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

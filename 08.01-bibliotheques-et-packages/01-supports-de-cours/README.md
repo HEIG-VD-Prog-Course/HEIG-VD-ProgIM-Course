@@ -44,15 +44,14 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-À l'issue de ce cours, la personne qui étudie sera capable de :
+À la fin de cette séance, vous devriez être capable de :
 
 - Comprendre le concept de package en Java et son utilité.
 - Organiser son code en packages de manière cohérente.
-- Importer et utiliser des fonctions statiques provenant d'autres packages.
-- Utiliser les bibliothèques standard de Java (java.util, java.time, java.math).
-- Créer des packages personnalisés avec des fonctions utilitaires.
+- Importer et utiliser des classes provenant d'autres packages.
+- Utiliser les principales bibliothèques standard de Java (java.util, java.time,
+- Créer des programmes modulaires et réutilisables.
 - Consulter la documentation Java pour explorer de nouvelles classes et
-  méthodes.
 
 ## Introduction aux packages
 
