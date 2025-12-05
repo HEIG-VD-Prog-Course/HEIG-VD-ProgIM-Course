@@ -4,40 +4,32 @@ title Étape 6 : Structure avec fonctions
 
 start
 
-:Demander le nombre de notes;
-:count = readGradeCount();
+:Je demande combien de notes
+seront saisies;
 
-:Créer tableau notes[count];
+:Je crée un tableau de la
+taille appropriée;
 
-:Saisir les notes;
-:inputGrades(notes);
+:Je saisis toutes les notes
+avec validation;
 
-:Afficher les notes;
-:displayGrades(notes);
+:J'affiche les notes saisies;
 
-:Calculer les statistiques;
-:min = calculateMinimum(notes);
-:max = calculateMaximum(notes);
-:average = calculateAverage(notes);
+:Je calcule le minimum,
+le maximum et la moyenne;
 
-:Afficher les statistiques;
-:displayStatistics(min, max, average);
+:J'affiche les statistiques;
 
-:Proposer modification;
-if (Modification souhaitée ?) then (oui)
-  :Modifier une note;
-  :modifyGrade(notes);
+if (L'utilisatrice veut-elle
+modifier une note ?) then (oui)
+  :Je demande quelle note modifier
+  et la nouvelle valeur;
   
-  :Afficher notes modifiées;
-  :displayGrades(notes);
+  :J'affiche les notes mises à jour;
   
-  :Recalculer statistiques;
-  :min = calculateMinimum(notes);
-  :max = calculateMaximum(notes);
-  :average = calculateAverage(notes);
+  :Je recalcule les statistiques;
   
-  :Afficher nouvelles statistiques;
-  :displayStatistics(min, max, average);
+  :J'affiche les nouvelles statistiques;
 endif
 
 stop

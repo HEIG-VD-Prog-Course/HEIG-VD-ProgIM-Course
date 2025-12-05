@@ -4,22 +4,16 @@ title Étape 1 : Calcul de la moyenne avec variables individuelles
 
 start
 
-:note1 = 4.5;
-:note2 = 5.0;
-:note3 = 3.8;
-:note4 = 4.2;
-:note5 = 5.3;
+:Je prépare 5 variables pour stocker mes notes;
 
-:Afficher "Note 1 : note1";
-:Afficher "Note 2 : note2";
-:Afficher "Note 3 : note3";
-:Afficher "Note 4 : note4";
-:Afficher "Note 5 : note5";
+:J'affiche chaque note individuellement;
 
-:sum = note1 + note2 + note3 + note4 + note5;
-:average = sum / 5;
+:Je fais la somme de toutes les notes;
 
-:Afficher "Moyenne : average";
+:Je divise la somme par le nombre de notes
+pour obtenir la moyenne;
+
+:J'affiche la moyenne;
 
 stop
 
