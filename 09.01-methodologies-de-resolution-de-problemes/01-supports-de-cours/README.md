@@ -88,7 +88,7 @@ Le code complet se trouve dans :
 
 Voici les points clés de cette implémentation :
 
-````java
+```java
 // Déclaration de variables individuelles
 double note1 = 4.5;
 double note2 = 5.0;
@@ -106,7 +106,9 @@ System.out.println("Note 5 : " + note5);
 // Calcul de la moyenne
 double sum = note1 + note2 + note3 + note4 + note5;
 double average = sum / 5;
-```### Enseignements tirés
+```
+
+### Enseignements tirés
 
 Cette première version fonctionne, mais elle présente plusieurs problèmes :
 
@@ -180,7 +182,7 @@ for (int i = 1; i < notes.length; i++) {
         min = notes[i];
     }
 }
-````
+```
 
 ### Enseignements tirés
 
