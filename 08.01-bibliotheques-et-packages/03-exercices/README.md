@@ -74,16 +74,8 @@ public class Main {
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Statistiques de températures ===\n");
 
-        // Températures de la semaine (en degrés Celsius)
-        double[] temperatures = {18.5, 22.3, 19.8, 21.0, 17.5, 20.2, 23.1};
-
-        displayStatistics(temperatures);
-    }
-
-    private static void displayStatistics(double[] data) {
+    public static void displayStatistics(double[] data) {
         System.out.println("Températures originales : " + Arrays.toString(data));
 
         // Tri des températures
@@ -97,21 +89,30 @@ public class Main {
         System.out.println("Température moyenne : " + calculateAverage(data) + "°C");
     }
 
-    private static double findMin(double[] data) {
+    public static double findMin(double[] data) {
         return data[0];
     }
 
-    private static double findMax(double[] data) {
+    public static double findMax(double[] data) {
         return data[data.length - 1];
     }
 
-    private static double calculateAverage(double[] data) {
+    public static double calculateAverage(double[] data) {
         double sum = 0;
         for (int i = 0; i < data.length; i++) {
             sum = sum + data[i];
         }
         return sum / data.length;
     }
+    public static void main(String[] args) {
+        System.out.println("=== Statistiques de températures ===\n");
+
+        // Températures de la semaine (en degrés Celsius)
+        double[] temperatures = {18.5, 22.3, 19.8, 21.0, 17.5, 20.2, 23.1};
+
+        displayStatistics(temperatures);
+    }
+
 }
 ```
 
@@ -202,6 +203,36 @@ public class Main {
 import java.util.Random;
 
 public class Main {
+
+    public static int rollTwoDice(Random random) {
+        int dice1 = random.nextInt(6) + 1;
+        int dice2 = random.nextInt(6) + 1;
+        return dice1 + dice2;
+    }
+
+    public static String determineWinner(int score1, int score2) {
+        if (score1 > score2) {
+            return "Joueur 1 gagne !";
+        } else if (score2 > score1) {
+            return "Joueur 2 gagne !";
+        } else {
+            return "Égalité !";
+        }
+    }
+
+    public static void displayFinalResult(int wins1, int wins2) {
+        System.out.println("=== Résultat final ===");
+        System.out.println("Joueur 1 : " + wins1 + " victoire(s)");
+        System.out.println("Joueur 2 : " + wins2 + " victoire(s)");
+
+        if (wins1 > wins2) {
+            System.out.println("Joueur 1 remporte le match !");
+        } else if (wins2 > wins1) {
+            System.out.println("Joueur 2 remporte le match !");
+        } else {
+            System.out.println("Match nul !");
+        }
+    }
     public static void main(String[] args) {
         System.out.println("=== Jeu de dés ===\n");
 
@@ -232,35 +263,6 @@ public class Main {
         displayFinalResult(wins1, wins2);
     }
 
-    private static int rollTwoDice(Random random) {
-        int dice1 = random.nextInt(6) + 1;
-        int dice2 = random.nextInt(6) + 1;
-        return dice1 + dice2;
-    }
-
-    private static String determineWinner(int score1, int score2) {
-        if (score1 > score2) {
-            return "Joueur 1 gagne !";
-        } else if (score2 > score1) {
-            return "Joueur 2 gagne !";
-        } else {
-            return "Égalité !";
-        }
-    }
-
-    private static void displayFinalResult(int wins1, int wins2) {
-        System.out.println("=== Résultat final ===");
-        System.out.println("Joueur 1 : " + wins1 + " victoire(s)");
-        System.out.println("Joueur 2 : " + wins2 + " victoire(s)");
-
-        if (wins1 > wins2) {
-            System.out.println("Joueur 1 remporte le match !");
-        } else if (wins2 > wins1) {
-            System.out.println("Joueur 2 remporte le match !");
-        } else {
-            System.out.println("Match nul !");
-        }
-    }
 }
 ```
 
@@ -346,21 +348,8 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Calcul d'âge ===\n");
 
-        // Date de naissance (exemple : 15 mars 2005)
-        LocalDate birthDate = LocalDate.of(2005, 3, 15);
-        LocalDate today = LocalDate.now();
-
-        System.out.println("Date de naissance : " + birthDate);
-        System.out.println("Date actuelle : " + today);
-        System.out.println();
-
-        displayAgeStatistics(birthDate, today);
-    }
-
-    private static void displayAgeStatistics(LocalDate birthDate, LocalDate referenceDate) {
+    public static void displayAgeStatistics(LocalDate birthDate, LocalDate referenceDate) {
         int age = calculateAge(birthDate, referenceDate);
         long daysSinceBirth = calculateDaysSinceBirth(birthDate, referenceDate);
         long daysUntilBirthday = calculateDaysUntilBirthday(birthDate, referenceDate);
@@ -376,7 +365,7 @@ public class Main {
         }
     }
 
-    private static int calculateAge(LocalDate birthDate, LocalDate referenceDate) {
+    public static int calculateAge(LocalDate birthDate, LocalDate referenceDate) {
         int age = referenceDate.getYear() - birthDate.getYear();
 
         LocalDate birthdayThisYear = birthDate.withYear(referenceDate.getYear());
@@ -387,11 +376,11 @@ public class Main {
         return age;
     }
 
-    private static long calculateDaysSinceBirth(LocalDate birthDate, LocalDate referenceDate) {
+    public static long calculateDaysSinceBirth(LocalDate birthDate, LocalDate referenceDate) {
         return ChronoUnit.DAYS.between(birthDate, referenceDate);
     }
 
-    private static long calculateDaysUntilBirthday(LocalDate birthDate, LocalDate referenceDate) {
+    public static long calculateDaysUntilBirthday(LocalDate birthDate, LocalDate referenceDate) {
         LocalDate birthdayThisYear = birthDate.withYear(referenceDate.getYear());
 
         LocalDate nextBirthday;
@@ -403,6 +392,20 @@ public class Main {
 
         return ChronoUnit.DAYS.between(referenceDate, nextBirthday);
     }
+    public static void main(String[] args) {
+        System.out.println("=== Calcul d'âge ===\n");
+
+        // Date de naissance (exemple : 15 mars 2005)
+        LocalDate birthDate = LocalDate.of(2005, 3, 15);
+        LocalDate today = LocalDate.now();
+
+        System.out.println("Date de naissance : " + birthDate);
+        System.out.println("Date actuelle : " + today);
+        System.out.println();
+
+        displayAgeStatistics(birthDate, today);
+    }
+
 }
 ```
 
@@ -780,20 +783,8 @@ java Main
 import utils.ToolStats;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Bibliothèque d'outils communautaire ===\n");
 
-        // Données de la bibliothèque
-        String[] toolNames = {"Perceuse", "Scie circulaire", "Ponceuse", "Marteau", "Tournevis"};
-        int[] available = {3, 2, 4, 5, 6};
-        int[] borrowed = {2, 3, 1, 2, 1};
-
-        displayInventory(toolNames, available, borrowed);
-        displayGlobalStatistics(available, borrowed);
-        displayMostBorrowed(toolNames, borrowed);
-    }
-
-    private static void displayInventory(String[] names, int[] available, int[] borrowed) {
+    public static void displayInventory(String[] names, int[] available, int[] borrowed) {
         System.out.println("--- Inventaire ---");
         for (int i = 0; i < names.length; i++) {
             int total = available[i] + borrowed[i];
@@ -805,7 +796,7 @@ public class Main {
         }
     }
 
-    private static void displayGlobalStatistics(int[] available, int[] borrowed) {
+    public static void displayGlobalStatistics(int[] available, int[] borrowed) {
         System.out.println("\n--- Statistiques globales ---");
 
         int totalAvailable = ToolStats.countAvailable(available);
@@ -820,7 +811,7 @@ public class Main {
         System.out.println("Taux d'utilisation global : " + formattedRate + "%");
     }
 
-    private static void displayMostBorrowed(String[] names, int[] borrowed) {
+    public static void displayMostBorrowed(String[] names, int[] borrowed) {
         int mostBorrowedIndex = ToolStats.findMostBorrowed(borrowed);
 
         if (mostBorrowedIndex >= 0) {
@@ -829,6 +820,19 @@ public class Main {
                              borrowed[mostBorrowedIndex] + " emprunt(s)");
         }
     }
+    public static void main(String[] args) {
+        System.out.println("=== Bibliothèque d'outils communautaire ===\n");
+
+        // Données de la bibliothèque
+        String[] toolNames = {"Perceuse", "Scie circulaire", "Ponceuse", "Marteau", "Tournevis"};
+        int[] available = {3, 2, 4, 5, 6};
+        int[] borrowed = {2, 3, 1, 2, 1};
+
+        displayInventory(toolNames, available, borrowed);
+        displayGlobalStatistics(available, borrowed);
+        displayMostBorrowed(toolNames, borrowed);
+    }
+
 }
 ```
 

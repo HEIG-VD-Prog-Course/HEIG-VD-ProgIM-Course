@@ -215,29 +215,6 @@ import java.util.Arrays;
  * Solution de l'exercice 3 : Recherche dans un tableau.
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exercice 3 : Recherche dans un tableau ===\n");
-
-        // Tableau de fruits
-        String[] fruits = {"pomme", "banane", "orange", "pomme", "kiwi", "pomme"};
-
-        // Affichage du tableau
-        System.out.println("Fruits : " + Arrays.toString(fruits));
-
-        // Première recherche : pomme
-        System.out.println("\nRecherche : pomme");
-        searchAndDisplay(fruits, "pomme");
-
-        // Deuxième recherche : fraise
-        System.out.println("\nRecherche : fraise");
-        searchAndDisplay(fruits, "fraise");
-
-        // Troisième recherche : banane
-        System.out.println("\nRecherche : banane");
-        searchAndDisplay(fruits, "banane");
-
-        System.out.println("\n=== Fin de l'exercice ===");
-    }
 
     /**
      * Recherche un fruit dans le tableau et affiche toutes ses positions.
@@ -245,7 +222,7 @@ public class Main {
      * @param fruits le tableau de fruits
      * @param searchTerm le fruit à rechercher
      */
-    private static void searchAndDisplay(String[] fruits, String searchTerm) {
+    public static void searchAndDisplay(String[] fruits, String searchTerm) {
         int foundCount = 0;
 
         for (int i = 0; i < fruits.length; i++) {
@@ -277,6 +254,30 @@ public class Main {
             System.out.println();
         }
     }
+    public static void main(String[] args) {
+        System.out.println("=== Exercice 3 : Recherche dans un tableau ===\n");
+
+        // Tableau de fruits
+        String[] fruits = {"pomme", "banane", "orange", "pomme", "kiwi", "pomme"};
+
+        // Affichage du tableau
+        System.out.println("Fruits : " + Arrays.toString(fruits));
+
+        // Première recherche : pomme
+        System.out.println("\nRecherche : pomme");
+        searchAndDisplay(fruits, "pomme");
+
+        // Deuxième recherche : fraise
+        System.out.println("\nRecherche : fraise");
+        searchAndDisplay(fruits, "fraise");
+
+        // Troisième recherche : banane
+        System.out.println("\nRecherche : banane");
+        searchAndDisplay(fruits, "banane");
+
+        System.out.println("\n=== Fin de l'exercice ===");
+    }
+
 }
 ```
 
@@ -458,6 +459,20 @@ position `[i][j]` dans la matrice originale se retrouve à la position
  * Solution de l'exercice 6 : Rotation de matrice.
  */
 public class Main {
+
+    /**
+     * Affiche une matrice de manière lisible.
+     *
+     * @param matrix la matrice à afficher
+     */
+    public static void displayMatrix(int[][] matrix) {
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                System.out.print(matrix[row][col] + " ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         System.out.println("=== Exercice 6 : Rotation de matrice ===\n");
 
@@ -491,19 +506,6 @@ public class Main {
         System.out.println("\n=== Fin de l'exercice ===");
     }
 
-    /**
-     * Affiche une matrice de manière lisible.
-     *
-     * @param matrix la matrice à afficher
-     */
-    private static void displayMatrix(int[][] matrix) {
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                System.out.print(matrix[row][col] + " ");
-            }
-            System.out.println();
-        }
-    }
 }
 ```
 

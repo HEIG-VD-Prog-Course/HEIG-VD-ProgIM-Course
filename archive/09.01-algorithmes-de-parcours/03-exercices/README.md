@@ -34,28 +34,6 @@ Testez avec différents tableaux : `{1, 3, 5, 7, 9}`, `{1, 3, 4, 7, 9}`,
 
 ```java
 public class FirstEvenNumber {
-    public static void main(String[] args) {
-        int[][] testCases = {
-            {1, 3, 5, 7, 9},
-            {1, 3, 4, 7, 9},
-            {2, 3, 4}
-        };
-
-        for (int[] array : testCases) {
-            System.out.print("Tableau : ");
-            printArray(array);
-
-            int index = findFirstEven(array);
-
-            if (index != -1) {
-                System.out.println("Premier nombre pair à l'index " + index +
-                        " (valeur : " + array[index] + ")");
-            } else {
-                System.out.println("Aucun nombre pair trouvé");
-            }
-            System.out.println();
-        }
-    }
 
     /**
      * Trouve l'index du premier nombre pair dans un tableau.
@@ -82,6 +60,29 @@ public class FirstEvenNumber {
         }
         System.out.println("]");
     }
+    public static void main(String[] args) {
+        int[][] testCases = {
+            {1, 3, 5, 7, 9},
+            {1, 3, 4, 7, 9},
+            {2, 3, 4}
+        };
+
+        for (int[] array : testCases) {
+            System.out.print("Tableau : ");
+            printArray(array);
+
+            int index = findFirstEven(array);
+
+            if (index != -1) {
+                System.out.println("Premier nombre pair à l'index " + index +
+                        " (valeur : " + array[index] + ")");
+            } else {
+                System.out.println("Aucun nombre pair trouvé");
+            }
+            System.out.println();
+        }
+    }
+
 }
 ```
 
@@ -105,25 +106,6 @@ Testez avec un tableau trié : `{5, 10, 15, 20, 25, 30, 35, 40, 45, 50}`.
 
 ```java
 public class RecursiveBinarySearch {
-    public static void main(String[] args) {
-        int[] sortedArray = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50};
-
-        System.out.println("Tableau trié : ");
-        printArray(sortedArray);
-        System.out.println();
-
-        int[] toFind = {25, 5, 50, 17, 100};
-
-        for (int target : toFind) {
-            int index = binarySearchRecursive(sortedArray, target, 0, sortedArray.length - 1);
-
-            if (index != -1) {
-                System.out.println("Élément " + target + " trouvé à l'index " + index);
-            } else {
-                System.out.println("Élément " + target + " non trouvé");
-            }
-        }
-    }
 
     /**
      * Recherche binaire récursive.
@@ -168,6 +150,26 @@ public class RecursiveBinarySearch {
         }
         System.out.println("]");
     }
+    public static void main(String[] args) {
+        int[] sortedArray = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50};
+
+        System.out.println("Tableau trié : ");
+        printArray(sortedArray);
+        System.out.println();
+
+        int[] toFind = {25, 5, 50, 17, 100};
+
+        for (int target : toFind) {
+            int index = binarySearchRecursive(sortedArray, target, 0, sortedArray.length - 1);
+
+            if (index != -1) {
+                System.out.println("Élément " + target + " trouvé à l'index " + index);
+            } else {
+                System.out.println("Élément " + target + " non trouvé");
+            }
+        }
+    }
+
 }
 ```
 
@@ -193,30 +195,6 @@ Testez avec : `{5, 2, 8, 2, 9, 2, 3}` et cherchez toutes les occurrences de `2`.
 import java.util.ArrayList;
 
 public class FindAllOccurrences {
-    public static void main(String[] args) {
-        int[] array = {5, 2, 8, 2, 9, 2, 3};
-        int target = 2;
-
-        System.out.print("Tableau : ");
-        printArray(array);
-        System.out.println("\nRecherche de toutes les occurrences de " + target + "\n");
-
-        ArrayList<Integer> indices = findAllOccurrences(array, target);
-
-        if (indices.isEmpty()) {
-            System.out.println("Aucune occurrence trouvée");
-        } else {
-            System.out.println("Trouvé " + indices.size() + " occurrence(s) aux index :");
-            for (int index : indices) {
-                System.out.println("  - Index " + index + " (valeur : " + array[index] + ")");
-            }
-        }
-
-        // Test avec une valeur absente
-        System.out.println("\nRecherche de 10 :");
-        ArrayList<Integer> notFound = findAllOccurrences(array, 10);
-        System.out.println("Nombre d'occurrences : " + notFound.size());
-    }
 
     /**
      * Trouve tous les index où une valeur apparaît dans un tableau.
@@ -247,6 +225,31 @@ public class FindAllOccurrences {
         }
         System.out.println("]");
     }
+    public static void main(String[] args) {
+        int[] array = {5, 2, 8, 2, 9, 2, 3};
+        int target = 2;
+
+        System.out.print("Tableau : ");
+        printArray(array);
+        System.out.println("\nRecherche de toutes les occurrences de " + target + "\n");
+
+        ArrayList<Integer> indices = findAllOccurrences(array, target);
+
+        if (indices.isEmpty()) {
+            System.out.println("Aucune occurrence trouvée");
+        } else {
+            System.out.println("Trouvé " + indices.size() + " occurrence(s) aux index :");
+            for (int index : indices) {
+                System.out.println("  - Index " + index + " (valeur : " + array[index] + ")");
+            }
+        }
+
+        // Test avec une valeur absente
+        System.out.println("\nRecherche de 10 :");
+        ArrayList<Integer> notFound = findAllOccurrences(array, 10);
+        System.out.println("Nombre d'occurrences : " + notFound.size());
+    }
+
 }
 ```
 
@@ -295,6 +298,44 @@ class Student {
 }
 
 public class StudentSearch {
+
+    /**
+     * Recherche un étudiant par son ID.
+     *
+     * @param students la liste d'étudiants
+     * @param id l'ID à rechercher
+     * @return l'étudiant trouvé, ou null
+     */
+    public static Student findStudentById(ArrayList<Student> students, int id) {
+        for (Student student : students) {
+            if (student.getId() == id) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Recherche tous les étudiants dont le nom contient une chaîne donnée.
+     *
+     * @param students la liste d'étudiants
+     * @param namePattern la chaîne à chercher (insensible à la casse)
+     * @return une liste d'étudiants correspondants
+     */
+    public static ArrayList<Student> findStudentsByName(
+            ArrayList<Student> students, String namePattern) {
+
+        ArrayList<Student> results = new ArrayList<>();
+        String lowerPattern = namePattern.toLowerCase();
+
+        for (Student student : students) {
+            if (student.getName().toLowerCase().contains(lowerPattern)) {
+                results.add(student);
+            }
+        }
+
+        return results;
+    }
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student("Amal Cohen", 1001));
@@ -334,43 +375,6 @@ public class StudentSearch {
         }
     }
 
-    /**
-     * Recherche un étudiant par son ID.
-     *
-     * @param students la liste d'étudiants
-     * @param id l'ID à rechercher
-     * @return l'étudiant trouvé, ou null
-     */
-    public static Student findStudentById(ArrayList<Student> students, int id) {
-        for (Student student : students) {
-            if (student.getId() == id) {
-                return student;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Recherche tous les étudiants dont le nom contient une chaîne donnée.
-     *
-     * @param students la liste d'étudiants
-     * @param namePattern la chaîne à chercher (insensible à la casse)
-     * @return une liste d'étudiants correspondants
-     */
-    public static ArrayList<Student> findStudentsByName(
-            ArrayList<Student> students, String namePattern) {
-
-        ArrayList<Student> results = new ArrayList<>();
-        String lowerPattern = namePattern.toLowerCase();
-
-        for (Student student : students) {
-            if (student.getName().toLowerCase().contains(lowerPattern)) {
-                results.add(student);
-            }
-        }
-
-        return results;
-    }
 }
 ```
 
@@ -395,37 +399,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class GridSearch {
-    public static void main(String[] args) {
-        int rows = 5;
-        int cols = 5;
-        int[][] grid = createRandomGrid(rows, cols);
-
-        System.out.println("=== Grille générée ===\n");
-        displayGrid(grid);
-
-        // Recherche de toutes les positions d'une valeur
-        System.out.println("\n--- Recherche d'une valeur ---\n");
-        int target = grid[2][3]; // Prendre une valeur qui existe
-        System.out.println("Recherche de la valeur : " + target + "\n");
-
-        ArrayList<int[]> positions = findAllPositions(grid, target);
-        System.out.println("Trouvé " + positions.size() + " occurrence(s) :");
-        for (int[] pos : positions) {
-            System.out.println("  Position [" + pos[0] + "][" + pos[1] + "]");
-        }
-
-        // Ligne avec la somme la plus élevée
-        System.out.println("\n--- Ligne avec la somme maximale ---\n");
-        int maxRow = findRowWithMaxSum(grid);
-        int maxSum = calculateRowSum(grid, maxRow);
-        System.out.println("Ligne " + maxRow + " avec une somme de " + maxSum);
-
-        // Colonne avec le plus grand nombre
-        System.out.println("\n--- Colonne avec le plus grand nombre ---\n");
-        int[] maxInfo = findColumnWithMaxValue(grid);
-        System.out.println("Colonne " + maxInfo[0] + " contient le maximum : " +
-                maxInfo[1] + " à la ligne " + maxInfo[2]);
-    }
 
     /**
      * Crée une grille avec des nombres aléatoires.
@@ -541,6 +514,38 @@ public class GridSearch {
 
         return new int[]{maxCol, maxValue, maxRow};
     }
+    public static void main(String[] args) {
+        int rows = 5;
+        int cols = 5;
+        int[][] grid = createRandomGrid(rows, cols);
+
+        System.out.println("=== Grille générée ===\n");
+        displayGrid(grid);
+
+        // Recherche de toutes les positions d'une valeur
+        System.out.println("\n--- Recherche d'une valeur ---\n");
+        int target = grid[2][3]; // Prendre une valeur qui existe
+        System.out.println("Recherche de la valeur : " + target + "\n");
+
+        ArrayList<int[]> positions = findAllPositions(grid, target);
+        System.out.println("Trouvé " + positions.size() + " occurrence(s) :");
+        for (int[] pos : positions) {
+            System.out.println("  Position [" + pos[0] + "][" + pos[1] + "]");
+        }
+
+        // Ligne avec la somme la plus élevée
+        System.out.println("\n--- Ligne avec la somme maximale ---\n");
+        int maxRow = findRowWithMaxSum(grid);
+        int maxSum = calculateRowSum(grid, maxRow);
+        System.out.println("Ligne " + maxRow + " avec une somme de " + maxSum);
+
+        // Colonne avec le plus grand nombre
+        System.out.println("\n--- Colonne avec le plus grand nombre ---\n");
+        int[] maxInfo = findColumnWithMaxValue(grid);
+        System.out.println("Colonne " + maxInfo[0] + " contient le maximum : " +
+                maxInfo[1] + " à la ligne " + maxInfo[2]);
+    }
+
 }
 ```
 
@@ -568,6 +573,67 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class PerformanceComparison {
+
+    /**
+     * Crée un tableau trié de taille donnée.
+     */
+    public static int[] createSortedArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = i + 1;
+        }
+        return array;
+    }
+
+    /**
+     * Génère des valeurs aléatoires à rechercher.
+     */
+    public static int[] generateRandomTargets(int count, int maxValue) {
+        int[] targets = new int[count];
+        Random random = new Random();
+
+        for (int i = 0; i < count; i++) {
+            targets[i] = random.nextInt(maxValue) + 1;
+        }
+
+        return targets;
+    }
+
+    /**
+     * Recherche linéaire.
+     */
+    public static int linearSearch(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Recherche binaire.
+     */
+    public static int binarySearch(int[] array, int target) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left <= right) {
+            int middle = left + (right - left) / 2;
+
+            if (array[middle] == target) {
+                return middle;
+            }
+
+            if (array[middle] < target) {
+                left = middle + 1;
+            } else {
+                right = middle - 1;
+            }
+        }
+
+        return -1;
+    }
     public static void main(String[] args) {
         System.out.println("=== Comparaison de performances ===\n");
 
@@ -632,66 +698,6 @@ public class PerformanceComparison {
                 "x plus rapide que notre implémentation");
     }
 
-    /**
-     * Crée un tableau trié de taille donnée.
-     */
-    public static int[] createSortedArray(int size) {
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = i + 1;
-        }
-        return array;
-    }
-
-    /**
-     * Génère des valeurs aléatoires à rechercher.
-     */
-    public static int[] generateRandomTargets(int count, int maxValue) {
-        int[] targets = new int[count];
-        Random random = new Random();
-
-        for (int i = 0; i < count; i++) {
-            targets[i] = random.nextInt(maxValue) + 1;
-        }
-
-        return targets;
-    }
-
-    /**
-     * Recherche linéaire.
-     */
-    public static int linearSearch(int[] array, int target) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == target) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    /**
-     * Recherche binaire.
-     */
-    public static int binarySearch(int[] array, int target) {
-        int left = 0;
-        int right = array.length - 1;
-
-        while (left <= right) {
-            int middle = left + (right - left) / 2;
-
-            if (array[middle] == target) {
-                return middle;
-            }
-
-            if (array[middle] < target) {
-                left = middle + 1;
-            } else {
-                right = middle - 1;
-            }
-        }
-
-        return -1;
-    }
 }
 ```
 

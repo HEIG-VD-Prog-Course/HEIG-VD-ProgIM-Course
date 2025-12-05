@@ -70,13 +70,6 @@ simple : un morpion (Tic-Tac-Toe). Créez un programme qui :
 
 ```java
 public class TicTacToe {
-    public static void main(String[] args) {
-        // Créer une grille 3x3
-        char[][] grid = createGrid();
-
-        // Afficher la grille
-        displayGrid(grid);
-    }
 
     public static char[][] createGrid() {
         char[][] grid = new char[3][3];
@@ -101,6 +94,14 @@ public class TicTacToe {
         }
         System.out.println(" 1 2 3");
     }
+    public static void main(String[] args) {
+        // Créer une grille 3x3
+        char[][] grid = createGrid();
+
+        // Afficher la grille
+        displayGrid(grid);
+    }
+
 }
 ```
 
@@ -234,6 +235,8 @@ Implémentez une boucle de jeu qui :
 import java.util.Scanner;
 
 public class ConnectFour {
+
+    // ... autres fonctions (createGrid, displayGrid, etc.)
     public static void main(String[] args) {
         char[][] grid = createGrid();
         char currentPlayer = 'X';
@@ -282,7 +285,6 @@ public class ConnectFour {
         scanner.close();
     }
 
-    // ... autres fonctions (createGrid, displayGrid, etc.)
 }
 ```
 
