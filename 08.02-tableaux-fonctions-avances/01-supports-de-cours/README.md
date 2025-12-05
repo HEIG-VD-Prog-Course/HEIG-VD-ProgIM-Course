@@ -68,7 +68,9 @@ for (int i = 0; i < values.length; i++) {
 }
 ```
 
-> [!TIP] L'approche avec `i += 2` est plus efficace que celle avec `i % 2 == 0`
+> [!TIP]
+>
+> L'approche avec `i += 2` est plus efficace que celle avec `i % 2 == 0`
 > car elle évite des itérations inutiles.
 
 ### Parcours en excluant les bornes
@@ -123,7 +125,9 @@ while (index < temperatures.length - 1) {
 }
 ```
 
-> [!IMPORTANT] Vérifiez toujours que le tableau contient suffisamment d'éléments
+> [!IMPORTANT]
+>
+> Vérifiez toujours que le tableau contient suffisamment d'éléments
 > avant d'exclure les bornes. Un tableau de moins de 2 éléments pourrait causer
 > des problèmes.
 
@@ -170,7 +174,9 @@ if (scores.length > 0) { // Protection contre tableau vide
 }
 ```
 
-> [!WARNING] Attention à l'indice de départ : `scores.length - 1` et non
+> [!WARNING]
+>
+> Attention à l'indice de départ : `scores.length - 1` et non
 > `scores.length` qui provoquerait une erreur `ArrayIndexOutOfBoundsException`.
 
 ### Parcours partiel (sous-ensemble)
@@ -224,7 +230,9 @@ for (int i = start; i < end && i < values.length; i++) {
 }
 ```
 
-> [!TIP] Utilisez des fonctions pour encapsuler ces parcours complexes et les
+> [!TIP]
+>
+> Utilisez des fonctions pour encapsuler ces parcours complexes et les
 > rendre réutilisables.
 
 ## Algorithmes simples sur tableaux
@@ -284,7 +292,9 @@ public static int linearSearch(int[] array, int target) {
 }
 ```
 
-> [!NOTE] La recherche linéaire a une complexité O(n), ce qui signifie que dans
+> [!NOTE]
+>
+> La recherche linéaire a une complexité O(n), ce qui signifie que dans
 > le pire cas, elle doit parcourir tout le tableau.
 
 ### Comptage d'occurrences
@@ -397,7 +407,9 @@ public static int findMin(int[] array) {
 }
 ```
 
-> [!TIP] Ces algorithmes peuvent être adaptés pour trouver l'indice de la valeur
+> [!TIP]
+>
+> Ces algorithmes peuvent être adaptés pour trouver l'indice de la valeur
 > minimale ou maximale en retournant l'indice au lieu de la valeur.
 
 ## Introduction à la récursivité
@@ -479,7 +491,9 @@ public static int fibonacci(int n) {
 3. ... (l'arbre d'appels devient complexe)
 4. Résultat final : 5
 
-> [!WARNING] La version récursive de Fibonacci est inefficace pour de grandes
+> [!WARNING]
+>
+> La version récursive de Fibonacci est inefficace pour de grandes
 > valeurs de n car elle recalcule les mêmes valeurs plusieurs fois. Une version
 > itérative ou avec mémoïsation serait préférable en pratique.
 
@@ -547,7 +561,9 @@ public static long factorialIterative(int n) {
 }
 ```
 
-> [!IMPORTANT] La récursivité est un outil puissant, mais elle n'est pas
+> [!IMPORTANT]
+>
+> La récursivité est un outil puissant, mais elle n'est pas
 > toujours la meilleure solution. Utilisez-la quand elle rend le code plus clair
 > et maintenable.
 
@@ -660,7 +676,9 @@ public static int searchRecursive(int[] array, int target, int index) {
 // Utilisation : searchRecursive(array, target, 0)
 ```
 
-> [!NOTE] Ces exemples récursifs avec tableaux sont pédagogiques. En pratique,
+> [!NOTE]
+>
+> Ces exemples récursifs avec tableaux sont pédagogiques. En pratique,
 > les versions itératives sont généralement préférables pour des raisons de
 > performance.
 

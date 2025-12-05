@@ -244,20 +244,6 @@ n'est pas valide.
 Pour cette version, nous gardons un nombre fixe de notes (5) pour simplifier.
 Nous ajouterons la flexibilité dans l'étape suivante.
 
-### Modélisation UML
-
-Le diagramme de séquence montre l'interaction entre l'utilisatrice et le
-programme :
-
-![Diagramme de séquence : saisie avec validation](images/etape-03-sequence-saisie.png)
-
-_Source :
-[etape-03-sequence-saisie.plantuml](images/etape-03-sequence-saisie.plantuml)_
-
-Observez la boucle de validation : le programme demande une note, vérifie
-qu'elle est valide, et redemande si nécessaire. Cette approche garantit que
-seules des valeurs correctes sont stockées.
-
 ### Implémentation en Java
 
 Le code complet se trouve dans :
@@ -334,18 +320,6 @@ Cette modification nécessite de :
 Heureusement, notre code utilise déjà `notes.length` partout, donc il n'y a pas
 beaucoup de changements à faire !
 
-### Modélisation UML
-
-Le diagramme de séquence complet montre maintenant deux phases :
-
-![Diagramme de séquence : déroulement complet](images/etape-04-sequence-complete.png)
-
-_Source :
-[etape-04-sequence-complete.plantuml](images/etape-04-sequence-complete.plantuml)_
-
-La première phase (demande du nombre) est nouvelle. La seconde phase (saisie des
-notes) est identique à l'étape 3, mais avec un nombre variable de notes.
-
 ### Implémentation en Java
 
 Le code complet se trouve dans :
@@ -416,18 +390,6 @@ après avoir tout saisi. Cela nécessite de :
 
 Cette fonctionnalité illustre un concept important : la modification de données
 après leur création initiale.
-
-### Modélisation UML
-
-Le diagramme de séquence montre la nouvelle interaction :
-
-![Diagramme de séquence : modification d'une note](images/etape-05-sequence-modification.png)
-
-_Source :
-[etape-05-sequence-modification.plantuml](images/etape-05-sequence-modification.plantuml)_
-
-Observez comment le programme propose la modification après avoir affiché les
-statistiques, puis recalcule tout si une modification est faite.
 
 ### Implémentation en Java
 

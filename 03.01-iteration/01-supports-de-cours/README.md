@@ -53,7 +53,9 @@ Deux structures très utilisées sont :
 
 ### La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)
 
-> [!TIP] Dans la plupart des langages de programmation, la boucle « TANT QUE »
+> [!TIP]
+>
+> Dans la plupart des langages de programmation, la boucle « TANT QUE »
 > s'appelle « WHILE » (mot anglais pour « tant que »).
 
 La boucle `TANT QUE` répète tant qu'une condition est vraie. Elle est utile
@@ -288,7 +290,9 @@ public class Panier {
 
 ### La boucle POUR (quand on connaît le nombre d'itérations)
 
-> [!TIP] Dans la plupart des langages de programmation, la boucle « POUR »
+> [!TIP]
+>
+> Dans la plupart des langages de programmation, la boucle « POUR »
 > s'appelle « FOR » (mot anglais pour « pour »).
 
 La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter

@@ -141,7 +141,9 @@ src/
 │               └── DateFormatter.java
 ```
 
-> [!IMPORTANT] Le package `ch.heigvd.toolshare.models` doit correspondre
+> [!IMPORTANT]
+>
+> Le package `ch.heigvd.toolshare.models` doit correspondre
 > exactement au chemin de dossiers `src/ch/heigvd/toolshare/models/`. Une erreur
 > dans cette correspondance empêchera la compilation.
 
@@ -199,10 +201,14 @@ javac ch/heigvd/toolshare/utils/*.java ch/heigvd/toolshare/Main.java
 java ch.heigvd.toolshare.Main
 ```
 
-> [!IMPORTANT] Lors de l'exécution, utilisez le nom complet de la classe avec
+> [!IMPORTANT]
+>
+> Lors de l'exécution, utilisez le nom complet de la classe avec
 > son package (points, pas de slashes) : `java ch.heigvd.toolshare.Main`
 
-> [!TIP] Pour faciliter la compilation de projets complexes, vous pouvez
+> [!TIP]
+>
+> Pour faciliter la compilation de projets complexes, vous pouvez
 > compiler tous les fichiers Java d'un coup :
 >
 > ```bash
@@ -256,7 +262,9 @@ public class Main {
 Le symbole `*` est appelé "wildcard" (joker) : il remplace n'importe quel nom de
 classe du package.
 
-> [!WARNING] L'import avec `*` n'importe que les classes du package spécifié,
+> [!WARNING]
+>
+> L'import avec `*` n'importe que les classes du package spécifié,
 > pas les sous-packages. Par exemple, `import java.util.*` n'importe pas les
 > classes de `java.util.stream`.
 
@@ -271,7 +279,9 @@ Java. Il contient les classes fondamentales :
 - `Integer`, `Double`, `Boolean` : Wrappers des types primitifs
 - `Object` : Classe mère de toutes les classes
 
-> [!NOTE] Les classes du package `java.lang` sont toujours disponibles sans
+> [!NOTE]
+>
+> Les classes du package `java.lang` sont toujours disponibles sans
 > import. C'est pourquoi vous n'avez jamais eu besoin d'importer `String` ou
 > `Math` dans vos programmes.
 
@@ -314,7 +324,9 @@ Arrays.sort(numbers);
 System.out.println(Arrays.toString(numbers));
 ```
 
-> [!TIP] Pour aller plus loin, le package `java.util` contient également des
+> [!TIP]
+>
+> Pour aller plus loin, le package `java.util` contient également des
 > structures de données avancées comme `ArrayList`, `HashMap`, et `HashSet`. Ces
 > collections seront étudiées dans un cours ultérieur.
 
@@ -375,7 +387,9 @@ System.out.println(period.getYears() + " ans, " +
                    period.getDays() + " jours");
 ```
 
-> [!TIP] Pour aller plus loin, le package `java.io` permet de lire et écrire des
+> [!TIP]
+>
+> Pour aller plus loin, le package `java.io` permet de lire et écrire des
 > fichiers. Ces concepts seront abordés dans un cours ultérieur sur les
 > entrées/sorties.
 
@@ -418,7 +432,9 @@ type d'initiative permet aux membres d'une communauté d'emprunter des outils
 plutôt que de les acheter individuellement, favorisant ainsi le partage des
 ressources et réduisant la consommation.
 
-> [!NOTE] Les bibliothèques d'outils communautaires sont des initiatives locales
+> [!NOTE]
+>
+> Les bibliothèques d'outils communautaires sont des initiatives locales
 > qui encouragent le partage et l'économie circulaire. Elles permettent de
 > réduire la production d'objets neufs et de renforcer les liens sociaux.
 
@@ -534,12 +550,16 @@ public class Main {
 }
 ```
 
-> [!IMPORTANT] Remarquez que nous utilisons les fonctions avec la syntaxe
+> [!IMPORTANT]
+>
+> Remarquez que nous utilisons les fonctions avec la syntaxe
 > `Calculator.average()` et `Formatter.formatTitle()` sans utiliser le mot-clé
 > `new`. Ce sont des **fonctions statiques** qui peuvent être appelées
 > directement sur le nom de la classe.
 
-> [!TIP] En organisant vos fonctions dans des packages, vous facilitez leur
+> [!TIP]
+>
+> En organisant vos fonctions dans des packages, vous facilitez leur
 > réutilisation. Par exemple, le package `utils` pourrait être utilisé dans
 > d'autres projets nécessitant des calculs ou du formatage.
 
@@ -550,7 +570,9 @@ la documentation officielle Java API sur
 <https://docs.oracle.com/javase/8/docs/api/> ou la plateforme moderne
 [dev.java](https://dev.java/learn/packages/).
 
-> [!IMPORTANT] La documentation Java est votre meilleure alliée pour découvrir
+> [!IMPORTANT]
+>
+> La documentation Java est votre meilleure alliée pour découvrir
 > de nouvelles classes et comprendre comment les utiliser. Prenez l'habitude de
 > la consulter régulièrement.
 
@@ -576,7 +598,9 @@ Par exemple, pour en savoir plus sur `ArrayList` :
 - Explorez les méthodes principales : `add()`, `get()`, `remove()`, `size()`,
   etc.
 
-> [!TIP] Lorsque vous rencontrez une nouvelle classe dans un programme,
+> [!TIP]
+>
+> Lorsque vous rencontrez une nouvelle classe dans un programme,
 > consultez sa documentation pour comprendre son rôle et ses capacités. Cela
 > développe votre autonomie en programmation.
 

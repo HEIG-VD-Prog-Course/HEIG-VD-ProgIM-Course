@@ -113,7 +113,9 @@ Java possède **huit types primitifs**. Jusqu'à présent, nous en avons
 principalement utilisé quatre : `int`, `double`, `boolean` et `char`. Il est
 temps de découvrir les quatre autres et de comprendre quand utiliser chacun.
 
-> [!NOTE] Les types primitifs sont les briques de base du langage. Contrairement
+> [!NOTE]
+>
+> Les types primitifs sont les briques de base du langage. Contrairement
 > aux objets, ils ne sont pas créés avec `new` et sont stockés directement en
 > mémoire.
 
@@ -153,7 +155,9 @@ byte minValue = -128; // Valeur minimale
   données (tableaux, fichiers).
 - Quand on sait que les valeurs seront toujours entre -128 et 127.
 
-> [!WARNING] Si vous dépassez la plage de valeurs, vous obtiendrez un
+> [!WARNING]
+>
+> Si vous dépassez la plage de valeurs, vous obtiendrez un
 > débordement (_overflow_) sans erreur de compilation !
 
 ```java
@@ -194,7 +198,9 @@ int minValue = -2147483648; // Valeur minimale
 - Par défaut, pour tous les nombres entiers.
 - C'est le type le plus utilisé pour les calculs entiers.
 
-> [!TIP] Vous pouvez utiliser des underscores (`_`) pour rendre les grands
+> [!TIP]
+>
+> Vous pouvez utiliser des underscores (`_`) pour rendre les grands
 > nombres plus lisibles :
 >
 > ```java
@@ -213,7 +219,9 @@ long maxValue = 9223372036854775807L;  // Valeur maximale
 long minValue = -9223372036854775808L; // Valeur minimale
 ```
 
-> [!IMPORTANT] Pour les littéraux `long`, on ajoute un `L` (ou `l`, mais `L` est
+> [!IMPORTANT]
+>
+> Pour les littéraux `long`, on ajoute un `L` (ou `l`, mais `L` est
 > préféré pour éviter la confusion avec `1`) à la fin du nombre.
 
 **Quand l'utiliser ?**
@@ -236,7 +244,9 @@ float pi = 3.14159f;
 float temperature = -5.5f;
 ```
 
-> [!IMPORTANT] Pour les littéraux `float`, on ajoute un `f` (ou `F`) à la fin du
+> [!IMPORTANT]
+>
+> Pour les littéraux `float`, on ajoute un `f` (ou `F`) à la fin du
 > nombre.
 
 **Quand l'utiliser ?**
@@ -262,7 +272,9 @@ double distance = 1.5e10; // Notation scientifique : 1.5 × 10¹⁰
 - Quand la précision est importante (calculs scientifiques, financiers avec
   précautions).
 
-> [!WARNING] Les nombres à virgule flottante ont une précision limitée. Voir la
+> [!WARNING]
+>
+> Les nombres à virgule flottante ont une précision limitée. Voir la
 > section dédiée ci-dessous.
 
 ### Type booléen
@@ -296,7 +308,9 @@ char newline = '\n'; // Caractère spécial
 char unicode = '\u0041'; // 'A' en Unicode
 ```
 
-> [!NOTE] Les littéraux `char` utilisent des guillemets simples (`'`),
+> [!NOTE]
+>
+> Les littéraux `char` utilisent des guillemets simples (`'`),
 > contrairement aux `String` qui utilisent des guillemets doubles (`"`).
 
 **Caractères spéciaux (échappement) :**
@@ -338,7 +352,9 @@ int approxPi = (int) pi; // Cast explicite double → int
 System.out.println(approxPi); // 3 (partie décimale perdue)
 ```
 
-> [!CAUTION] Le cast explicite peut entraîner une perte de données ou un
+> [!CAUTION]
+>
+> Le cast explicite peut entraîner une perte de données ou un
 > débordement. Utilisez-le consciemment !
 
 ```java
@@ -419,7 +435,9 @@ BigDecimal sum = a.add(b);
 System.out.println(sum); // Affiche : 0.3 (exact!)
 ```
 
-> [!TIP] Utilisez `BigDecimal` pour les montants d'argent, les calculs
+> [!TIP]
+>
+> Utilisez `BigDecimal` pour les montants d'argent, les calculs
 > comptables ou toute situation nécessitant une précision décimale exacte.
 
 ## Compilation et exécution en ligne de commande
@@ -458,7 +476,9 @@ javac HelloWorld.java
 
 Cette commande crée un fichier `HelloWorld.class` contenant le bytecode.
 
-> [!NOTE] Le bytecode est un langage intermédiaire, ni du code source Java ni du
+> [!NOTE]
+>
+> Le bytecode est un langage intermédiaire, ni du code source Java ni du
 > code machine natif. C'est ce qui permet au Java d'être portable.
 
 ### La JVM (Java Virtual Machine)
@@ -472,7 +492,9 @@ lit les fichiers `.class` et les exécute.
 java HelloWorld
 ```
 
-> [!IMPORTANT] On écrit `java HelloWorld` (pas `java HelloWorld.class`). La JVM
+> [!IMPORTANT]
+>
+> On écrit `java HelloWorld` (pas `java HelloWorld.class`). La JVM
 > cherche automatiquement le fichier `.class`.
 
 **Pourquoi deux étapes ?**
@@ -599,7 +621,9 @@ mais retenez :
 - Le mot-clé `public` signifie que la classe est accessible de partout.
 - Le nom de la classe doit commencer par une majuscule (convention).
 
-> [!NOTE] Une classe est un "moule" ou un "plan" qui contient des données et des
+> [!NOTE]
+>
+> Une classe est un "moule" ou un "plan" qui contient des données et des
 > comportements. Pour l'instant, nous l'utilisons simplement comme conteneur
 > obligatoire.
 
@@ -617,7 +641,9 @@ public class Calculator {
 }
 ```
 
-> [!CAUTION] Si le fichier s'appelle `Calculator.java`, la classe doit s'appeler
+> [!CAUTION]
+>
+> Si le fichier s'appelle `Calculator.java`, la classe doit s'appeler
 > `Calculator`. Sinon, vous aurez une erreur de compilation.
 
 ### La méthode main
@@ -641,7 +667,9 @@ public static void main(String[] args) {
 - `main` : Nom obligatoire reconnu par la JVM.
 - `String[] args` : Tableau des arguments de la ligne de commande.
 
-> [!IMPORTANT] La signature de la méthode `main` est **stricte**. Si vous
+> [!IMPORTANT]
+>
+> La signature de la méthode `main` est **stricte**. Si vous
 > changez un élément, la JVM ne la reconnaîtra pas comme point d'entrée.
 
 ### Préparer le terrain pour les packages
@@ -683,7 +711,9 @@ public static void main(String[] args) {
 }
 ```
 
-> [!TIP] Mnémotechnique : **P**aramètre = **P**laceholder (emplacement),
+> [!TIP]
+>
+> Mnémotechnique : **P**aramètre = **P**laceholder (emplacement),
 > **A**rgument = **A**ctual value (valeur réelle).
 
 ### Fonction vs Méthode
@@ -706,7 +736,9 @@ public class MathUtils {
 }
 ```
 
-> [!NOTE] On dira souvent "fonction" par habitude, mais techniquement, en Java,
+> [!NOTE]
+>
+> On dira souvent "fonction" par habitude, mais techniquement, en Java,
 > ce sont des méthodes.
 
 ### Déclaration vs Définition vs Appel
@@ -747,7 +779,9 @@ final double PI = 3.14159; // Constante (final)
 // PI = 3.14;              // ERREUR de compilation
 ```
 
-> [!IMPORTANT] En Java, on utilise le mot-clé `final` pour déclarer une
+> [!IMPORTANT]
+>
+> En Java, on utilise le mot-clé `final` pour déclarer une
 > constante.
 
 ### Type vs Valeur
@@ -802,7 +836,9 @@ System.out.println(x * 2);
 // ^^^^^^^^^^^^^^^^^^^^^^^^ Instruction
 ```
 
-> [!NOTE] Une instruction se termine souvent par un point-virgule (`;`).
+> [!NOTE]
+>
+> Une instruction se termine souvent par un point-virgule (`;`).
 
 ## Le rôle des IDE
 
@@ -832,7 +868,9 @@ Un IDE combine plusieurs outils :
 
 ### Ce que l'IDE ne fait PAS
 
-> [!WARNING] L'IDE ne "fait pas tourner" votre code. C'est toujours `javac` et
+> [!WARNING]
+>
+> L'IDE ne "fait pas tourner" votre code. C'est toujours `javac` et
 > `java` qui travaillent en arrière-plan !
 
 Un IDE est une **interface graphique** vers les outils en ligne de commande :
@@ -859,7 +897,9 @@ L'IDE est un **outil de productivité**, pas une béquille.
 - Rend dépendant de l'outil.
 - Peut être lent sur de gros projets.
 
-> [!TIP] Apprenez à compiler et exécuter en ligne de commande. Cela vous permet
+> [!TIP]
+>
+> Apprenez à compiler et exécuter en ligne de commande. Cela vous permet
 > de :
 >
 > - Comprendre vraiment ce qui se passe.
