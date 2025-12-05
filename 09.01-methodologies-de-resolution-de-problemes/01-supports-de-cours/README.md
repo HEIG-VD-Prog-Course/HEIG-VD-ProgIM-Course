@@ -502,20 +502,17 @@ Nous allons créer des fonctions pour :
 
 ### Modélisation UML
 
-Le diagramme d'activité montre la structure simplifiée avec des fonctions :
+Le diagramme de séquence montre l'interaction entre l'utilisatrice et les
+différentes fonctions du programme :
 
-![Diagramme d'activité : structure avec fonctions](images/etape-07-activite-refactoring.png)
+![Diagramme de séquence : interaction avec fonctions](images/etape-07-sequence-refactoring.png)
 
 _Source :
-[etape-07-activite-refactoring.plantuml](images/etape-07-activite-refactoring.plantuml)_
+[etape-07-sequence-refactoring.plantuml](images/etape-07-sequence-refactoring.plantuml)_
 
-Et voici le diagramme de classes montrant toutes les fonctions :
-
-![Diagramme de classes : organisation avec fonctions](images/etape-07-classes.png)
-
-_Source : [etape-07-classes.plantuml](images/etape-07-classes.plantuml)_
-
-Observez comment chaque fonction a une responsabilité unique et bien définie.
+Observez comment le programme principal (`Main`) délègue chaque tâche à une
+fonction spécialisée. Chaque fonction a une responsabilité unique et bien
+définie, ce qui rend le code beaucoup plus facile à comprendre et à maintenir.
 
 ### Implémentation en Java
 
