@@ -1,0 +1,21 @@
+@startuml etape-02-activite-minimum
+
+title Étape 2 : Calcul du minimum avec tableau
+
+start
+
+:min = notes[0];
+:i = 1;
+
+while (i < notes.length ?) is (oui)
+  if (notes[i] < min) then (oui)
+    :min = notes[i];
+  endif
+  :i = i + 1;
+endwhile (non)
+
+:Afficher "Note minimale : min";
+
+stop
+
+@enduml

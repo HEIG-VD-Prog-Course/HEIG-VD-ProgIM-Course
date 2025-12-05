@@ -9,1126 +9,700 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
-- Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
-  ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/09.01-methodologies-de-resolution-de-problemes-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
 ## Introduction
 
-La programmation ne se résume pas à connaître la syntaxe d'un langage. Un bon
-développeur ou une bonne développeuse est avant tout une personne capable de
-**résoudre des problèmes de manière structurée**.
+Ce support de cours présente une méthodologie de résolution de problèmes
+appliquée à la programmation. Plutôt que de présenter des concepts de manière
+abstraite, nous allons construire ensemble un programme complet, étape par
+étape, en réfléchissant à voix haute sur les choix à faire.
 
-> [!IMPORTANT] La méthodologie de résolution de problèmes est plus importante
-> que la maîtrise d'un langage spécifique. Un bon ingénieur ou une bonne
-> ingénieure sait **comment** aborder un problème, pas seulement **quoi** coder.
+L'objectif n'est pas d'apprendre de nouvelles structures de programmation : vous
+connaissez déjà les variables, les tableaux, les boucles, les conditions et les
+fonctions. L'objectif est d'apprendre à **penser** un problème avant de coder, à
+décomposer une tâche complexe en sous-tâches simples, et à faire évoluer une
+solution de manière itérative.
 
-### Pourquoi la méthodologie est essentielle
+Cette approche est au cœur de la programmation professionnelle : on ne code
+jamais la solution finale directement. On commence par une version simple qui
+fonctionne, puis on ajoute progressivement des fonctionnalités.
 
-Lorsque vous serez confronté à un problème réel en entreprise ou dans un projet,
-vous n'aurez pas toujours quelqu'un pour vous dire exactement quoi faire. Vous
-devrez :
+> [!IMPORTANT]
+>
+> Ce cours est un tutoriel guidé. Prenez le temps de lire chaque section dans
+> l'ordre, d'exécuter les exemples de code sur votre machine, et de comprendre
+> les raisonnements présentés. Ne sautez pas d'étapes.
 
-- Comprendre le problème dans son ensemble
-- Identifier ce qui est vraiment demandé
-- Décomposer le problème en parties gérables
-- Concevoir une solution avant de coder
-- Évaluer si votre solution répond bien au besoin
+## Description du problème
 
-**Exemple concret** : Imaginez qu'on vous demande de créer un système pour gérer
-une bibliothèque de prêt d'outils entre voisins. Si vous commencez directement à
-coder sans réfléchir, vous risquez de vous perdre rapidement. Une bonne
-méthodologie vous permet d'avancer de manière structurée et efficace.
+Nous allons construire un programme de gestion de notes. Ce programme doit
+permettre à l'utilisatrice de :
 
-### Apprendre à apprendre
+1. Saisir plusieurs notes
+2. Afficher toutes les notes
+3. Calculer et afficher le minimum, maximum et la moyenne
+4. Modifier une note si nécessaire
 
-En informatique, les technologies évoluent constamment. Ce que vous apprenez
-aujourd'hui (Java, par exemple) pourrait ne pas être le langage que vous
-utiliserez dans 5 ans. Ce qui reste constant, c'est votre capacité à :
+Ce problème peut sembler simple, mais il contient plusieurs difficultés :
 
-- Analyser un problème
-- Concevoir une solution
-- L'implémenter de manière claire
-- La tester et la valider
+- Comment stocker plusieurs notes ?
+- Comment demander des valeurs à l'utilisatrice ?
+- Comment valider que les valeurs sont correctes ?
+- Comment permettre la modification après la saisie ?
 
-Ces compétences sont **transférables** d'un langage à l'autre, d'un domaine à
-l'autre.
+Nous allons résoudre ces questions une par une, en construisant 5 versions
+successives du programme, chacune ajoutant une nouvelle capacité.
 
-## Décomposition de problèmes
+## Étape 1 : Notes en dur avec variables individuelles
 
-La décomposition consiste à diviser un problème complexe en sous-problèmes plus
-simples et gérables. C'est une compétence fondamentale en programmation.
+### Réflexion en français
 
-### Approche descendante (top-down)
+Commençons par le plus simple possible : afficher quelques notes et calculer
+leurs statistiques (minimum, maximum, moyenne).
 
-L'approche descendante consiste à partir du problème global et à le diviser
-progressivement en sous-problèmes de plus en plus détaillés.
+Pour cette première version, nous allons :
 
-**Principe** :
+- Définir les notes directement dans le code (valeurs "en dur")
+- Utiliser des variables individuelles (`note1`, `note2`, etc.)
+- Afficher les notes de plusieurs façons pour comparer les approches
+- Calculer le minimum en comparant chaque note avec le minimum actuel
+- Calculer le maximum de la même manière
+- Calculer la moyenne en additionnant toutes les notes et en divisant par leur
+  nombre
 
-1. Comprendre le problème dans son ensemble
-2. Identifier les grandes étapes nécessaires
-3. Décomposer chaque étape en sous-étapes
-4. Continuer jusqu'à avoir des tâches simples à implémenter
+Cette approche est volontairement naïve. Elle nous permettra de voir les limites
+de l'utilisation de variables individuelles.
 
-**Exemple : Organiser une fête de quartier**
+### Modélisation UML
 
-```
-Niveau 1 : Organiser une fête de quartier
-├── Niveau 2 : Planifier l'événement
-│   ├── Choisir une date
-│   ├── Trouver un lieu
-│   └── Établir un budget
-├── Niveau 2 : Gérer la logistique
-│   ├── Réserver le matériel
-│   ├── Organiser les stands
-│   └── Prévoir la gestion des déchets
-└── Niveau 2 : Communiquer
-    ├── Créer des affiches
-    ├── Informer les voisins
-    └── Coordonner les bénévoles
-```
+Voici le diagramme d'activité pour l'affichage des notes avec une boucle :
 
-Chaque sous-problème peut ensuite être décomposé davantage :
+![Diagramme d'activité : affichage des notes](images/etape-01-activite-affichage.png)
 
-```
-Gérer la logistique
-└── Prévoir la gestion des déchets
-    ├── Calculer le nombre de poubelles nécessaires
-    ├── Organiser le tri sélectif
-    ├── Prévoir la collecte et le recyclage
-    └── Sensibiliser les participantes au tri
-```
+_Source :
+[etape-01-activite-affichage.plantuml](images/etape-01-activite-affichage.plantuml)_
 
-**Application en programmation** :
+Et voici le diagramme pour le calcul du minimum :
 
-Imaginons un programme pour gérer un potager partagé :
+![Diagramme d'activité : calcul du minimum](images/etape-01-activite-minimum.png)
 
-```
-Programme de gestion de potager partagé
-├── Gérer les membres
-│   ├── Ajouter un nouveau membre
-│   ├── Retirer un membre
-│   └── Afficher la liste des membres
-├── Gérer les parcelles
-│   ├── Attribuer une parcelle
-│   ├── Libérer une parcelle
-│   └── Afficher l'état des parcelles
-└── Gérer les ressources communes
-    ├── Planifier l'arrosage
-    ├── Gérer le compost
-    └── Organiser l'entretien collectif
-```
+_Source :
+[etape-01-activite-minimum.plantuml](images/etape-01-activite-minimum.plantuml)_
 
-### Approche ascendante (bottom-up)
+### Implémentation en Java
 
-L'approche ascendante consiste à identifier d'abord les petites tâches ou
-fonctions de base, puis à les combiner pour résoudre des problèmes plus
-complexes.
+Le code complet se trouve dans :
+[02-exemples-de-code/01-notes-en-dur-variables/Main.java](../02-exemples-de-code/01-notes-en-dur-variables/Main.java)
 
-**Principe** :
+Voici les points clés de cette implémentation :
 
-1. Identifier les opérations de base nécessaires
-2. Implémenter ces opérations simples
-3. Combiner ces opérations pour créer des fonctionnalités plus complexes
-4. Assembler le tout pour résoudre le problème global
+````java
+// Déclaration de variables individuelles
+double note1 = 4.5;
+double note2 = 5.0;
+double note3 = 3.8;
+double note4 = 4.2;
+double note5 = 5.3;
 
-**Exemple : Calculateur d'empreinte carbone**
+// Affichage avec une structure conditionnelle dans une boucle
+for (int i = 1; i <= 5; i++) {
+    double current;
 
-Commençons par les opérations de base :
+    if (i == 1) {
+        current = note1;
+    } else if (i == 2) {
+        current = note2;
+    } // ... etc
+
+    System.out.println("Note " + i + " : " + current);
+}
+
+// Calcul du minimum avec des comparaisons successives
+double min = note1;
+if (note2 < min) {
+    min = note2;
+}
+// ... répété pour chaque note
+```### Enseignements tirés
+
+Cette première version fonctionne, mais elle présente plusieurs problèmes :
+
+1. **Rigidité** : Pour ajouter une note, il faut modifier le code à plusieurs
+   endroits (déclaration, affichage, calculs)
+2. **Répétition** : Le code pour l'affichage et les calculs contient beaucoup de
+   répétitions
+3. **Difficulté de maintenance** : Si on se trompe dans le nombre de notes, on
+   doit corriger partout
+
+> [!NOTE]
+>
+> Le code montre trois façons d'afficher les notes : individuellement, avec une
+> boucle `while`, et avec une boucle `for`. Observez comment la structure
+> `if/else if` devient nécessaire pour sélectionner la bonne variable.
+
+Ces limitations nous amènent naturellement à la question : existe-t-il une
+structure de données permettant de stocker plusieurs valeurs du même type ? Oui,
+les tableaux !
+
+## Étape 2 : Notes en dur avec un tableau
+
+### Réflexion en français
+
+Nous allons maintenant remplacer les 5 variables individuelles par un seul
+tableau. Cette modification va simplifier considérablement le code :
+
+- Déclaration en une seule ligne
+- Boucles simplifiées (plus besoin de `if/else if`)
+- Calculs utilisant des boucles sur les indices du tableau
+- Code beaucoup plus facile à maintenir
+
+Les tableaux sont conçus précisément pour stocker plusieurs valeurs du même
+type. Ils offrent un accès par indice (`notes[0]`, `notes[1]`, etc.) et
+connaissent leur propre taille (`notes.length`).
+
+### Modélisation UML
+
+Le diagramme pour le calcul du minimum devient beaucoup plus simple avec un
+tableau :
+
+![Diagramme d'activité : calcul du minimum avec tableau](images/etape-02-activite-minimum.png)
+
+_Source :
+[etape-02-activite-minimum.plantuml](images/etape-02-activite-minimum.plantuml)_
+
+Observez comment la boucle parcourt simplement les indices du tableau, sans
+avoir besoin de structure conditionnelle pour sélectionner la bonne valeur.
+
+### Implémentation en Java
+
+Le code complet se trouve dans :
+[02-exemples-de-code/02-notes-en-dur-tableau/Main.java](../02-exemples-de-code/02-notes-en-dur-tableau/Main.java)
+
+Voici les améliorations principales :
 
 ```java
-// Opérations de base
-double calculerDistanceVelo(double km)
-double calculerDistanceVoiture(double km)
-double calculerDistanceTrain(double km)
-double calculerDistanceAvion(double km)
-```
+// Déclaration et initialisation en une ligne
+double[] notes = {4.5, 5.0, 3.8, 4.2, 5.3};
 
-Ensuite, on combine ces opérations :
-
-```java
-// Fonction de niveau intermédiaire
-double calculerEmpreinteMensuelle(
-    double kmVelo, double kmVoiture,
-    double kmTrain, double kmAvion
-)
-```
-
-Enfin, on crée la fonction de haut niveau :
-
-```java
-// Fonction finale
-void afficherBilanAnnuel(double[] donneesParMois)
-```
-
-### Identifier les sous-problèmes réutilisables
-
-Lors de la décomposition, certains sous-problèmes reviennent souvent. Il est
-important de les identifier pour éviter de dupliquer le code.
-
-**Exemple** : Dans un système de gestion de bibliothèque d'outils :
-
-```
-Sous-problèmes réutilisables :
-- Valider une date
-- Calculer le nombre de jours entre deux dates
-- Vérifier si un utilisateur existe
-- Afficher un message d'erreur formaté
-```
-
-Ces fonctions peuvent être utilisées dans plusieurs contextes différents :
-
-```java
-// Fonction réutilisable
-boolean validerDate(int jour, int mois, int annee) {
-    if (mois < 1 || mois > 12) return false;
-    if (jour < 1 || jour > joursParMois(mois, annee)) return false;
-    return true;
+// Affichage simplifié avec une boucle for classique
+for (int i = 0; i < notes.length; i++) {
+    System.out.println("Note " + (i + 1) + " : " + notes[i]);
 }
 
-// Utilisée dans différents contextes
-void enregistrerEmprunt() {
-    // Utilise validerDate pour la date d'emprunt
+// Ou avec une boucle for-each encore plus simple
+for (double note : notes) {
+    System.out.println("Note : " + note);
 }
 
-void enregistrerReservation() {
-    // Utilise validerDate pour la date de réservation
-}
-```
-
-> [!TIP] Lorsque vous identifiez un sous-problème qui pourrait être utile
-> ailleurs, créez une fonction dédiée avec un nom clair et des paramètres
-> génériques.
-
-## Analyse du problème
-
-Avant de commencer à coder, il est essentiel d'analyser le problème en
-profondeur. Cette phase permet d'éviter de nombreuses erreurs et de gagner du
-temps.
-
-### Identifier les entrées et les sorties
-
-Pour chaque problème, demandez-vous :
-
-- **Quelles sont les données en entrée ?** (ce que l'utilisatrice fournit)
-- **Quelles sont les données en sortie ?** (ce que le programme doit produire)
-- **Quel est le format de ces données ?** (nombre, texte, tableau, etc.)
-
-**Exemple : Calculateur de réduction pour un système d'échange local**
-
-| Aspect  | Description                                            |
-| ------- | ------------------------------------------------------ |
-| Entrées | Prix initial (double), nombre de services rendus (int) |
-| Sorties | Prix final après réduction (double)                    |
-| Format  | Nombres avec 2 décimales pour les prix                 |
-
-**Exemple : Planificateur de covoiturage**
-
-| Aspect  | Description                                            |
-| ------- | ------------------------------------------------------ |
-| Entrées | Liste de trajets, adresses de départ/arrivée, horaires |
-| Sorties | Groupes de covoiturage optimisés, économies de CO2     |
-| Format  | Tableau de structures complexes, rapport textuel       |
-
-### Identifier les contraintes et les cas limites
-
-Les contraintes définissent les limites du problème. Les cas limites (edge
-cases) sont les situations particulières qui pourraient poser problème.
-
-**Types de contraintes** :
-
-- **Contraintes de domaine** : valeurs minimales/maximales acceptées
-- **Contraintes de format** : format des données en entrée
-- **Contraintes de performance** : temps de calcul acceptable
-- **Contraintes métier** : règles spécifiques au domaine
-
-**Exemple : Système de réservation d'outils**
-
-| Type de contrainte | Description                                   |
-| ------------------ | --------------------------------------------- |
-| Domaine            | La durée de prêt est entre 1 et 30 jours      |
-| Format             | Le nom de l'outil est une chaîne non vide     |
-| Performance        | Réponse en moins d'1 seconde                  |
-| Métier             | Un outil ne peut être prêté qu'à une personne |
-
-**Cas limites à considérer** :
-
-```
-Entrées valides mais extrêmes :
-- Durée de prêt = 1 jour (minimum)
-- Durée de prêt = 30 jours (maximum)
-- Nom de l'outil = "A" (très court)
-
-Entrées invalides :
-- Durée de prêt = 0 ou négative
-- Durée de prêt > 30
-- Nom de l'outil vide ou null
-- Date de début dans le passé
-
-Situations exceptionnelles :
-- Aucun outil disponible
-- Tous les outils sont réservés
-- L'utilisatrice a déjà emprunté cet outil
-```
-
-> [!WARNING] Ne pas prendre en compte les cas limites est l'une des erreurs les
-> plus fréquentes en programmation. Un programme qui fonctionne dans les cas
-> normaux mais échoue dans les cas limites est un programme incomplet.
-
-### Définir les critères de réussite
-
-Comment saurez-vous que votre programme fonctionne correctement ? Il faut
-définir des critères clairs de réussite.
-
-**Exemple : Calculateur d'empreinte carbone**
-
-| Critère       | Description                                |
-| ------------- | ------------------------------------------ |
-| Fonctionnel   | Calcule correctement l'empreinte en kg CO2 |
-| Précision     | Arrondi à 2 décimales                      |
-| Validation    | Refuse les distances négatives             |
-| Utilisabilité | Messages d'erreur clairs                   |
-| Comparaison   | Affiche les moyennes nationales            |
-
-**Critères généraux de qualité** :
-
-- **Correction** : Le programme produit les résultats attendus
-- **Robustesse** : Le programme gère les erreurs sans planter
-- **Lisibilité** : Le code est facile à comprendre
-- **Maintenabilité** : Le code est facile à modifier
-- **Efficacité** : Le programme s'exécute dans un temps raisonnable
-
-## Stratégies de conception
-
-Une fois le problème analysé et décomposé, il faut concevoir la solution. Il
-existe plusieurs stratégies pour y parvenir.
-
-### Diviser pour régner
-
-Cette stratégie consiste à diviser le problème en sous-problèmes
-**indépendants**, les résoudre séparément, puis combiner les solutions.
-
-**Principe** :
-
-1. Diviser le problème en sous-problèmes plus petits
-2. Résoudre chaque sous-problème indépendamment
-3. Combiner les solutions des sous-problèmes
-
-**Exemple : Validation d'un formulaire d'inscription**
-
-Au lieu de valider tout le formulaire d'un coup, on peut le diviser :
-
-```java
-boolean validerFormulaire(String nom, String email, String telephone) {
-    boolean nomValide = validerNom(nom);
-    boolean emailValide = validerEmail(email);
-    boolean telephoneValide = validerTelephone(telephone);
-
-    return nomValide && emailValide && telephoneValide;
-}
-
-boolean validerNom(String nom) {
-    // Vérifie que le nom n'est pas vide et contient au moins 2 caractères
-    return nom != null && nom.length() >= 2;
-}
-
-boolean validerEmail(String email) {
-    // Vérifie que l'email contient @ et un point
-    return email != null && email.contains("@") && email.contains(".");
-}
-
-boolean validerTelephone(String telephone) {
-    // Vérifie que le téléphone contient uniquement des chiffres
-    return telephone != null && telephone.matches("[0-9]+");
-}
-```
-
-Chaque fonction de validation est **indépendante** et peut être testée
-séparément.
-
-### Approche itérative vs approche récursive
-
-Il existe deux grandes façons de concevoir des algorithmes : l'approche
-itérative (avec des boucles) et l'approche récursive (une fonction qui s'appelle
-elle-même).
-
-**Approche itérative** : Répéter une opération avec une boucle
-
-```java
-// Calcul de la somme des N premiers entiers (itératif)
-int sommePremiers(int n) {
-    int somme = 0;
-    for (int i = 1; i <= n; i++) {
-        somme = somme + i;
-    }
-    return somme;
-}
-```
-
-**Approche récursive** : Une fonction qui s'appelle elle-même
-
-```java
-// Calcul de la somme des N premiers entiers (récursif)
-int sommePremiers(int n) {
-    if (n == 1) {
-        return 1;  // Cas de base
-    }
-    return n + sommePremiers(n - 1);  // Appel récursif
-}
-```
-
-> [!NOTE] À ce stade du cours, vous n'avez pas besoin de maîtriser la
-> récursivité. L'approche itérative est généralement plus naturelle pour
-> débuter. La récursivité sera abordée dans des cours plus avancés.
-
-**Quand utiliser quelle approche ?**
-
-| Situation                                 | Approche recommandée   |
-| ----------------------------------------- | ---------------------- |
-| Parcourir un tableau                      | Itérative              |
-| Répéter une action N fois                 | Itérative              |
-| Problème naturellement récursif           | Récursive              |
-| Recherche dans une structure arborescente | Récursive ou itérative |
-
-### Utilisation de fonctions pour structurer le code
-
-Les fonctions sont l'outil principal pour structurer votre code. Elles
-permettent de :
-
-- **Réutiliser** du code
-- **Organiser** le code en blocs logiques
-- **Simplifier** la lecture
-- **Faciliter** les tests
-
-**Principes de conception de fonctions** :
-
-1. **Une fonction = une responsabilité** : Chaque fonction doit faire une seule
-   chose clairement définie
-
-   ```java
-   // Mauvais : fonction qui fait trop de choses
-   void gererUtilisateur(String nom, String action) {
-       // Validation
-       // Modification de la base de données
-       // Envoi d'un email
-       // Affichage d'un message
-   }
-
-   // Bon : fonctions séparées
-   boolean validerNom(String nom)
-   void ajouterUtilisateur(String nom)
-   void envoyerEmailBienvenue(String email)
-   void afficherConfirmation(String message)
-   ```
-
-2. **Nom explicite** : Le nom doit décrire ce que fait la fonction
-
-   ```java
-   // Mauvais
-   void f(double x)
-
-   // Bon
-   void calculerReduction(double prixInitial)
-   ```
-
-3. **Paramètres clairs** : Les paramètres doivent être nécessaires et bien
-   nommés
-
-   ```java
-   // Mauvais : trop de paramètres
-   void creerReservation(String n, int d, int m, int a, String o, int dur)
-
-   // Bon : paramètres regroupés et explicites
-   void creerReservation(String nomUtilisateur, Date date,
-                         String nomOutil, int dureeJours)
-   ```
-
-4. **Petite taille** : Une fonction ne devrait pas dépasser 20-30 lignes
-
-**Exemple : Gestion d'une bibliothèque d'outils**
-
-```java
-// Structure claire avec des fonctions dédiées
-
-void afficherMenuPrincipal() {
-    System.out.println("=== Bibliothèque d'outils ===");
-    System.out.println("1. Emprunter un outil");
-    System.out.println("2. Retourner un outil");
-    System.out.println("3. Voir les outils disponibles");
-    System.out.println("0. Quitter");
-}
-
-int lireChoixUtilisateur() {
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Votre choix : ");
-    return scanner.nextInt();
-}
-
-void traiterChoix(int choix) {
-    switch (choix) {
-        case 1: emprunterOutil(); break;
-        case 2: retournerOutil(); break;
-        case 3: afficherOutilsDisponibles(); break;
-        case 0: quitter(); break;
-        default: afficherErreur("Choix invalide");
+// Calcul du minimum avec une boucle simple
+double min = notes[0];
+for (int i = 1; i < notes.length; i++) {
+    if (notes[i] < min) {
+        min = notes[i];
     }
 }
+````
 
-void emprunterOutil() {
-    String nomOutil = demanderNomOutil();
-    if (outilDisponible(nomOutil)) {
-        enregistrerEmprunt(nomOutil);
-        afficherConfirmation("Emprunt enregistré");
-    } else {
-        afficherErreur("Outil non disponible");
-    }
-}
-```
-
-## Outils de planification
-
-Avant d'écrire du code, il est utile d'utiliser des outils de planification pour
-clarifier vos idées.
-
-### Pseudocode
-
-Le pseudocode est une description en langage naturel structuré de l'algorithme,
-sans se préoccuper de la syntaxe d'un langage spécifique.
-
-**Avantages** :
-
-- Se concentrer sur la logique sans se soucier de la syntaxe
-- Communiquer facilement avec d'autres personnes
-- Identifier les problèmes avant de coder
-
-**Conventions du pseudocode** :
-
-```
-DÉBUT
-    instruction 1
-    instruction 2
-    SI condition ALORS
-        instruction 3
-    SINON
-        instruction 4
-    FIN SI
-
-    POUR i DE 1 À n FAIRE
-        instruction 5
-    FIN POUR
-FIN
-```
-
-**Exemple : Calculateur de réduction pour un système d'échange local**
-
-```
-DÉBUT CalculerReduction
-    ENTRÉES :
-        prixInitial : nombre décimal
-        nombreServices : nombre entier
-
-    SORTIE :
-        prixFinal : nombre décimal
-
-    ALGORITHME :
-        tauxReduction ← 0
-
-        SI nombreServices >= 10 ALORS
-            tauxReduction ← 0.20
-        SINON SI nombreServices >= 5 ALORS
-            tauxReduction ← 0.10
-        SINON SI nombreServices >= 1 ALORS
-            tauxReduction ← 0.05
-        FIN SI
-
-        reduction ← prixInitial × tauxReduction
-        prixFinal ← prixInitial - reduction
-
-        RETOURNER prixFinal
-FIN
-```
-
-Une fois le pseudocode écrit, la traduction en Java est simple :
-
-```java
-double calculerReduction(double prixInitial, int nombreServices) {
-    double tauxReduction = 0;
-
-    if (nombreServices >= 10) {
-        tauxReduction = 0.20;
-    } else if (nombreServices >= 5) {
-        tauxReduction = 0.10;
-    } else if (nombreServices >= 1) {
-        tauxReduction = 0.05;
-    }
-
-    double reduction = prixInitial * tauxReduction;
-    double prixFinal = prixInitial - reduction;
-
-    return prixFinal;
-}
-```
-
-### Diagrammes de flux
-
-Les diagrammes de flux (flowcharts) sont des représentations visuelles de
-l'algorithme. Ils utilisent des symboles standardisés pour représenter les
-différentes étapes.
-
-**Symboles principaux** :
-
-- **Ovale** : Début / Fin
-- **Rectangle** : Instruction / Action
-- **Losange** : Décision / Condition
-- **Parallélogramme** : Entrée / Sortie
-- **Flèches** : Flux d'exécution
-
-**Exemple simple** : Vérifier si une personne peut emprunter un outil
-
-```
-    [DÉBUT]
-       |
-       v
-[Lire nom utilisateur]
-       |
-       v
-<Utilisateur existe?>
-    /     \
-  NON     OUI
-   |       |
-   v       v
-[Erreur] <A déjà emprunté 3 outils?>
-             /     \
-           OUI     NON
-            |       |
-            v       v
-        [Erreur]  [Autoriser emprunt]
-                     |
-                     v
-                  [FIN]
-```
-
-> [!TIP] Les diagrammes de flux sont particulièrement utiles pour visualiser les
-> décisions complexes et les boucles. Vous pouvez les dessiner à la main sur
-> papier ou utiliser des outils comme draw.io ou PlantUML.
-
-### Diagrammes de décomposition
-
-Les diagrammes de décomposition montrent comment un problème complexe est divisé
-en sous-problèmes.
-
-**Exemple : Système de gestion de potager partagé**
-
-```
-                    Gérer le potager
-                           |
-        +------------------+------------------+
-        |                  |                  |
-   Gérer membres    Gérer parcelles   Gérer ressources
-        |                  |                  |
-    +---+---+          +---+---+          +---+---+
-    |   |   |          |   |   |          |   |   |
-  Ajout Sup Liste   Attrib Liber Etat  Arros Comp Entret
-```
-
-Chaque niveau peut ensuite être détaillé :
-
-```
-Gérer l'arrosage
-    |
-    +-- Calculer les besoins en eau
-    |   |
-    |   +-- Identifier les plantes
-    |   +-- Consulter la météo
-    |   +-- Estimer l'évaporation
-    |
-    +-- Planifier les tours d'arrosage
-    |   |
-    |   +-- Assigner les jours aux membres
-    |   +-- Envoyer les rappels
-    |
-    +-- Enregistrer les arrosages effectués
-```
-
-### Tableaux d'analyse
-
-Les tableaux d'analyse permettent de documenter systématiquement les entrées,
-sorties et contraintes pour chaque fonction.
-
-**Exemple : Fonction de validation d'une réservation**
-
-| Aspect              | Description                                                         |
-| ------------------- | ------------------------------------------------------------------- |
-| **Nom**             | `validerReservation`                                                |
-| **But**             | Vérifier qu'une réservation est possible                            |
-| **Entrées**         | - `nomOutil` (String)<br>- `dateDebut` (Date)<br>- `duree` (int)    |
-| **Sorties**         | `boolean` (true si valide, false sinon)                             |
-| **Pré-conditions**  | - `nomOutil` non null<br>- `dateDebut` non null<br>- `duree` > 0    |
-| **Post-conditions** | - Retourne true si l'outil est disponible<br>- Retourne false sinon |
-| **Contraintes**     | - `duree` entre 1 et 30 jours<br>- `dateDebut` dans le futur        |
-| **Cas limites**     | - Outil inexistant<br>- Date dans le passé<br>- Durée hors limites  |
-
-Ce tableau vous aide à réfléchir à tous les aspects de la fonction avant de
-l'implémenter.
-
-## Évaluation de solutions
-
-Il existe souvent plusieurs façons de résoudre un problème. Comment choisir la
-meilleure ?
-
-### Critères de qualité
-
-Voici les principaux critères pour évaluer une solution :
-
-#### 1. Lisibilité
-
-Un code lisible est facile à comprendre par d'autres personnes (ou par vous-même
-dans 6 mois).
-
-```java
-// Peu lisible
-double c(double p, int n) {
-    return p - (p * (n >= 10 ? 0.2 : n >= 5 ? 0.1 : n >= 1 ? 0.05 : 0));
-}
-
-// Lisible
-double calculerPrixAvecReduction(double prixInitial, int nombreServices) {
-    double tauxReduction = determinerTauxReduction(nombreServices);
-    double reduction = prixInitial * tauxReduction;
-    return prixInitial - reduction;
-}
-
-double determinerTauxReduction(int nombreServices) {
-    if (nombreServices >= 10) return 0.20;
-    if (nombreServices >= 5) return 0.10;
-    if (nombreServices >= 1) return 0.05;
-    return 0;
-}
-```
-
-**Éléments de lisibilité** :
-
-- Noms de variables explicites
-- Noms de fonctions descriptifs
-- Commentaires pertinents
-- Indentation cohérente
-- Longueur de fonction raisonnable
-
-#### 2. Maintenabilité
-
-Un code maintenable est facile à modifier et à faire évoluer.
-
-```java
-// Difficile à maintenir : valeurs "magiques" dans le code
-double calculerReduction(double prix, int services) {
-    if (services >= 10) return prix * 0.20;
-    if (services >= 5) return prix * 0.10;
-    if (services >= 1) return prix * 0.05;
-    return 0;
-}
-
-// Facile à maintenir : constantes nommées
-final double TAUX_REDUCTION_BRONZE = 0.05;
-final double TAUX_REDUCTION_ARGENT = 0.10;
-final double TAUX_REDUCTION_OR = 0.20;
-final int SEUIL_BRONZE = 1;
-final int SEUIL_ARGENT = 5;
-final int SEUIL_OR = 10;
-
-double calculerReduction(double prix, int services) {
-    if (services >= SEUIL_OR) return prix * TAUX_REDUCTION_OR;
-    if (services >= SEUIL_ARGENT) return prix * TAUX_REDUCTION_ARGENT;
-    if (services >= SEUIL_BRONZE) return prix * TAUX_REDUCTION_BRONZE;
-    return 0;
-}
-```
-
-Maintenant, si on veut changer les seuils ou les taux, il suffit de modifier les
-constantes.
-
-#### 3. Efficacité
-
-L'efficacité mesure la rapidité d'exécution et l'utilisation de la mémoire.
-
-```java
-// Inefficace : recalcule à chaque fois
-void afficherTableauMultiplication(int n) {
-    for (int i = 1; i <= 10; i++) {
-        System.out.println(n + " × " + i + " = " + (n * i));
-    }
-}
-
-// Plus efficace : utilise une valeur déjà calculée
-void afficherTableauMultiplication(int n) {
-    int resultat = 0;
-    for (int i = 1; i <= 10; i++) {
-        resultat += n;  // Addition au lieu de multiplication
-        System.out.println(n + " × " + i + " = " + resultat);
-    }
-}
-```
-
-> [!NOTE] Pour les problèmes de ce cours, l'efficacité n'est généralement pas
-> critique. Privilégiez la **lisibilité** et la **maintenabilité** avant
-> l'optimisation.
-
-### Comparaison de différentes approches
-
-Considérons le problème : trouver le maximum dans un tableau d'entiers.
-
-**Approche 1 : Parcours simple**
-
-```java
-int trouverMaximum(int[] tableau) {
-    int max = tableau[0];
-    for (int i = 1; i < tableau.length; i++) {
-        if (tableau[i] > max) {
-            max = tableau[i];
+### Enseignements tirés
+
+L'utilisation d'un tableau apporte plusieurs avantages majeurs :
+
+1. **Simplicité** : Le code est plus court et plus lisible
+2. **Généricité** : Les boucles fonctionnent quelle que soit la taille du
+   tableau
+3. **Maintenance** : Pour changer le nombre de notes, on modifie uniquement la
+   déclaration
+
+> [!TIP]
+>
+> Comparez le code de cette étape avec celui de l'étape 1. Le tableau réduit la
+> complexité de manière spectaculaire. C'est un excellent exemple de choix de
+> structure de données impactant la qualité du code.
+
+Cependant, nous avons toujours un problème : les notes sont définies dans le
+code. Pour utiliser ce programme avec d'autres notes, il faut modifier le code
+source, recompiler, et relancer. Ce n'est pas pratique. La prochaine étape va
+résoudre ce problème.
+
+## Étape 3 : Saisie de notes avec un nombre fixe
+
+### Réflexion en français
+
+Nous allons maintenant rendre le programme interactif en permettant à
+l'utilisatrice de saisir les notes au clavier. Cela soulève plusieurs questions
+:
+
+- Comment lire des valeurs depuis le clavier en Java ?
+- Comment s'assurer que les valeurs saisies sont valides ?
+- Que faire si l'utilisatrice entre une valeur incorrecte ?
+
+Java propose la classe `Scanner` pour lire les entrées. Pour valider les
+données, nous allons utiliser une boucle `while` qui continue tant que la valeur
+n'est pas valide.
+
+Pour cette version, nous gardons un nombre fixe de notes (5) pour simplifier.
+Nous ajouterons la flexibilité dans l'étape suivante.
+
+### Modélisation UML
+
+Le diagramme de séquence montre l'interaction entre l'utilisatrice et le
+programme :
+
+![Diagramme de séquence : saisie avec validation](images/etape-03-sequence-saisie.png)
+
+_Source :
+[etape-03-sequence-saisie.plantuml](images/etape-03-sequence-saisie.plantuml)_
+
+Observez la boucle de validation : le programme demande une note, vérifie
+qu'elle est valide, et redemande si nécessaire. Cette approche garantit que
+seules des valeurs correctes sont stockées.
+
+### Implémentation en Java
+
+Le code complet se trouve dans :
+[02-exemples-de-code/03-saisie-notes-nombre-fixe/Main.java](../02-exemples-de-code/03-saisie-notes-nombre-fixe/Main.java)
+
+Voici les éléments nouveaux :
+
+````java
+import java.util.Scanner;
+
+// Création du Scanner
+Scanner scanner = new Scanner(System.in);
+
+// Saisie avec validation
+for (int i = 0; i < NOMBRE_NOTES; i++) {
+    boolean valid = false;
+
+    while (!valid) {
+        System.out.print("Entrez la note " + (i + 1) + " (entre 1.0 et 6.0) : ");
+
+        if (scanner.hasNextDouble()) {
+            double grade = scanner.nextDouble();
+
+            if (grade >= 1.0 && grade <= 6.0) {
+                notes[i] = grade;
+                valid = true;
+            } else {
+                System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+            }
+        } else {
+            System.out.println("Erreur : veuillez entrer un nombre valide");
+            scanner.next(); // Consommer l'entrée invalide
         }
     }
-    return max;
 }
-```
 
-**Approche 2 : Avec tri préalable**
+// Fermeture du Scanner
+scanner.close();
+```### Enseignements tirés
 
-```java
-int trouverMaximum(int[] tableau) {
-    Arrays.sort(tableau);
-    return tableau[tableau.length - 1];
-}
-```
+L'ajout de l'interaction utilisatrice introduit plusieurs concepts importants :
 
-**Comparaison** :
+1. **Entrées-sorties** : La classe `Scanner` permet de lire depuis la console
+2. **Validation** : Les données externes doivent toujours être validées
+3. **Robustesse** : Le programme gère les erreurs et guide l'utilisatrice
+4. **Gestion des ressources** : Il faut fermer le `Scanner` après utilisation
 
-| Critère        | Approche 1                | Approche 2             |
-| -------------- | ------------------------- | ---------------------- |
-| Lisibilité     | Claire et directe         | Très simple            |
-| Efficacité     | O(n) - très rapide        | O(n log n) - plus lent |
-| Effet de bord  | Ne modifie pas le tableau | Modifie le tableau     |
-| Recommandation | **Meilleure solution**    | À éviter               |
-
-**Conclusion** : L'approche 1 est meilleure car elle est plus rapide et ne
-modifie pas le tableau d'origine.
-
-### Quand optimiser et quand privilégier la simplicité
-
-> [!IMPORTANT] "Premature optimization is the root of all evil" - Donald Knuth
-
-Il ne faut pas chercher à optimiser dès le départ. Suivez cette règle :
-
-1. **D'abord**, faites fonctionner le programme correctement
-2. **Ensuite**, rendez-le lisible et maintenable
-3. **Enfin**, si nécessaire, optimisez les parties lentes
-
-**Exemple : Vérifier si un nombre est premier**
-
-**Version simple** :
-
-```java
-boolean estPremier(int n) {
-    if (n <= 1) return false;
-    for (int i = 2; i < n; i++) {
-        if (n % i == 0) return false;
-    }
-    return true;
-}
-```
-
-Cette version fonctionne et est facile à comprendre. Pour les petits nombres (<
-10000), elle est largement suffisante.
-
-**Version optimisée** :
-
-```java
-boolean estPremier(int n) {
-    if (n <= 1) return false;
-    if (n <= 3) return true;
-    if (n % 2 == 0 || n % 3 == 0) return false;
-
-    for (int i = 5; i * i <= n; i += 6) {
-        if (n % i == 0 || n % (i + 2) == 0) return false;
-    }
-    return true;
-}
-```
-
-Cette version est beaucoup plus rapide pour les grands nombres, mais moins
-facile à comprendre.
-
-**Quand utiliser quelle version ?**
-
-- Pour un exercice ou un petit programme : version simple
-- Pour un programme qui doit traiter des millions de nombres : version optimisée
-
-## Testing et validation
-
-Un programme n'est complet que s'il a été testé et validé.
-
-### Types de cas de test
-
-Il existe différents types de cas de test à considérer :
-
-#### 1. Cas normaux
-
-Ce sont les cas d'utilisation typiques, avec des valeurs normales.
-
-**Exemple : Fonction de calcul de réduction**
-
-```java
-// Cas normaux
-testCalculerReduction(100.0, 5);   // Résultat attendu : 90.0
-testCalculerReduction(50.0, 10);   // Résultat attendu : 40.0
-testCalculerReduction(200.0, 3);   // Résultat attendu : 190.0
-```
-
-#### 2. Cas limites (edge cases)
-
-Ce sont les valeurs aux frontières du domaine valide.
-
-**Exemple : Fonction de calcul de réduction**
-
-```java
-// Cas limites
-testCalculerReduction(100.0, 0);   // Résultat attendu : 100.0 (pas de réduction)
-testCalculerReduction(100.0, 1);   // Résultat attendu : 95.0 (réduction minimale)
-testCalculerReduction(100.0, 4);   // Résultat attendu : 95.0 (juste avant palier)
-testCalculerReduction(100.0, 5);   // Résultat attendu : 90.0 (palier)
-testCalculerReduction(100.0, 9);   // Résultat attendu : 90.0 (juste avant palier)
-testCalculerReduction(100.0, 10);  // Résultat attendu : 80.0 (palier)
-testCalculerReduction(0.0, 5);     // Résultat attendu : 0.0 (prix nul)
-```
-
-#### 3. Cas d'erreur
-
-Ce sont les entrées invalides qui devraient être détectées.
-
-**Exemple : Fonction de validation de réservation**
-
-```java
-// Cas d'erreur
-testValiderReservation(null, dateValide, 5);          // Outil null
-testValiderReservation("Perceuse", null, 5);          // Date null
-testValiderReservation("Perceuse", dateValide, 0);    // Durée invalide
-testValiderReservation("Perceuse", dateValide, -5);   // Durée négative
-testValiderReservation("Perceuse", dateValide, 100);  // Durée trop longue
-testValiderReservation("", dateValide, 5);            // Nom vide
-```
-
-### Stratégies de test
-
-#### Test manuel
-
-Le test manuel consiste à exécuter le programme et vérifier manuellement les
-résultats.
-
-**Avantages** :
-
-- Simple à mettre en œuvre
-- Bon pour les tests exploratoires
-
-**Inconvénients** :
-
-- Fastidieux et répétitif
-- Erreurs humaines possibles
-- Difficile à reproduire
-
-**Exemple de procédure de test manuel** :
-
-```
-Test de la fonction calculerReduction
--------------------------------------
-1. Lancer le programme
-2. Entrer : prix = 100, services = 5
-3. Vérifier que le résultat affiché est 90.0
-4. Répéter avec prix = 50, services = 10
-5. Vérifier que le résultat affiché est 40.0
-...
-```
-
-#### Test automatique
-
-Le test automatique utilise du code pour vérifier le code.
-
-```java
-void testerCalculerReduction() {
-    // Test 1
-    double resultat1 = calculerReduction(100.0, 5);
-    if (resultat1 != 90.0) {
-        System.out.println("ERREUR Test 1 : attendu 90.0, obtenu " + resultat1);
-    } else {
-        System.out.println("OK Test 1");
-    }
-
-    // Test 2
-    double resultat2 = calculerReduction(50.0, 10);
-    if (resultat2 != 40.0) {
-        System.out.println("ERREUR Test 2 : attendu 40.0, obtenu " + resultat2);
-    } else {
-        System.out.println("OK Test 2");
-    }
-}
-```
-
-**Avantages** :
-
-- Rapide et reproductible
-- Détecte les régressions (erreurs réintroduites)
-- Peut être exécuté automatiquement
-
-> [!TIP] Écrivez vos tests avant ou pendant le développement, pas seulement à la
-> fin. Cela vous aide à mieux concevoir vos fonctions.
-
-### Validation systématique
-
-Pour valider une fonction de manière complète :
-
-1. **Identifier les catégories de tests** (normaux, limites, erreurs)
-2. **Créer au moins un test par catégorie**
-3. **Exécuter tous les tests**
-4. **Documenter les résultats**
-5. **Corriger les erreurs détectées**
-6. **Re-tester après correction**
-
-**Tableau de validation** :
-
-| ID  | Type   | Entrée               | Sortie attendue | Sortie obtenue | Statut |
-| --- | ------ | -------------------- | --------------- | -------------- | ------ |
-| T1  | Normal | prix=100, services=5 | 90.0            | 90.0           | ✓      |
-| T2  | Normal | prix=50, services=10 | 40.0            | 40.0           | ✓      |
-| T3  | Limite | prix=100, services=0 | 100.0           | 100.0          | ✓      |
-| T4  | Limite | prix=0, services=5   | 0.0             | 0.0            | ✓      |
-| T5  | Erreur | prix=-10, services=5 | Exception       | 90.0           | ✗      |
-
-Le test T5 révèle un problème : la fonction ne vérifie pas que le prix est
-positif.
-
-## Développer un esprit critique
-
-### Poser les bonnes questions
-
-Avant de commencer à coder, posez-vous ces questions :
-
-- **Ai-je bien compris le problème ?** Puis-je le reformuler avec mes propres
-  mots ?
-- **Quelles sont les entrées et les sorties ?** Sont-elles clairement définies ?
-- **Quelles sont les contraintes ?** Ai-je identifié tous les cas limites ?
-- **Existe-t-il des sous-problèmes similaires déjà résolus ?** Puis-je
-  réutiliser du code ?
-- **Ma solution est-elle la plus simple possible ?** Suis-je en train de
-  compliquer inutilement ?
-- **Comment puis-je tester ma solution ?** Quels cas de test vais-je utiliser ?
-
-### Apprendre de ses erreurs
-
-Les erreurs sont une partie normale de l'apprentissage de la programmation. Ce
-qui compte, c'est d'en tirer des leçons.
-
-**Processus d'apprentissage par l'erreur** :
-
-1. **Identifier l'erreur** : Quel est le symptôme ? Qu'est-ce qui ne fonctionne
-   pas ?
-2. **Comprendre la cause** : Pourquoi l'erreur s'est-elle produite ?
-3. **Corriger** : Comment résoudre le problème ?
-4. **Documenter** : Noter l'erreur et la solution pour ne pas la reproduire
-5. **Généraliser** : Existe-t-il d'autres endroits dans mon code avec le même
-   problème ?
-
-**Exemple d'erreur fréquente** :
-
-```java
-// Code avec erreur
-int[] notes = {12, 15, 8, 18, 14};
-double somme = 0;
-for (int i = 0; i <= notes.length; i++) {  // BUG : <= au lieu de <
-    somme += notes[i];
-}
-```
-
-Cette erreur provoque une `ArrayIndexOutOfBoundsException`.
-
-**Analyse** :
-
-- **Symptôme** : Le programme plante avec une exception
-- **Cause** : La boucle essaie d'accéder à `notes[5]` qui n'existe pas
-- **Correction** : Remplacer `<=` par `<`
-- **Leçon** : Toujours vérifier les bornes des boucles sur les tableaux
-
-### Demander de l'aide efficacement
-
-Savoir demander de l'aide est une compétence importante. Voici comment le faire
-efficacement :
-
-**Mauvaise demande d'aide** :
-
-> "Mon code ne marche pas, pouvez-vous m'aider ?"
-
-**Bonne demande d'aide** :
-
-> "J'essaie de calculer la moyenne d'un tableau, mais j'obtiens toujours 0.
-> Voici mon code :
+> [!WARNING]
 >
-> ```java
-> int[] notes = {12, 15, 8};
-> int somme = 0;
-> for (int i = 0; i < notes.length; i++) {
->     somme += notes[i];
-> }
-> int moyenne = somme / notes.length;
-> ```
+> Ne jamais faire confiance aux données saisies par l'utilisatrice. Validez
+> toujours le type (avec `hasNextDouble()`) et les valeurs (avec des
+> conditions). Sinon, votre programme peut planter ou produire des résultats
+> incorrects.
+
+Cette version est fonctionnelle et utilisable, mais elle manque encore de
+flexibilité : pourquoi forcer l'utilisatrice à entrer exactement 5 notes ?
+Laissons-la choisir.
+
+## Étape 4 : Saisie de notes avec un nombre dynamique
+
+### Réflexion en français
+
+Pour rendre le programme vraiment flexible, nous allons demander à
+l'utilisatrice combien de notes elle souhaite saisir, puis créer un tableau de
+la taille appropriée.
+
+Cette modification nécessite de :
+
+- Demander le nombre de notes en premier
+- Valider que ce nombre est positif
+- Créer le tableau avec la taille choisie
+- Adapter le reste du code pour utiliser cette taille
+
+Heureusement, notre code utilise déjà `notes.length` partout, donc il n'y a pas
+beaucoup de changements à faire !
+
+### Modélisation UML
+
+Le diagramme de séquence complet montre maintenant deux phases :
+
+![Diagramme de séquence : déroulement complet](images/etape-04-sequence-complete.png)
+
+_Source :
+[etape-04-sequence-complete.plantuml](images/etape-04-sequence-complete.plantuml)_
+
+La première phase (demande du nombre) est nouvelle. La seconde phase (saisie des
+notes) est identique à l'étape 3, mais avec un nombre variable de notes.
+
+### Implémentation en Java
+
+Le code complet se trouve dans :
+[02-exemples-de-code/04-saisie-notes-nombre-dynamique/Main.java](../02-exemples-de-code/04-saisie-notes-nombre-dynamique/Main.java)
+
+Voici la partie ajoutée :
+
+```java
+// Demande du nombre de notes
+int count = 0;
+boolean validCount = false;
+
+while (!validCount) {
+    System.out.print("Combien de notes souhaitez-vous saisir ? ");
+
+    if (scanner.hasNextInt()) {
+        count = scanner.nextInt();
+
+        if (count > 0) {
+            validCount = true;
+        } else {
+            System.out.println("Erreur : le nombre de notes doit être positif");
+        }
+    } else {
+        System.out.println("Erreur : veuillez entrer un nombre entier valide");
+        scanner.next();
+    }
+}
+
+// Création du tableau de la taille choisie
+double[] notes = new double[count];
+
+// Le reste du code reste identique
+```### Enseignements tirés
+
+Cette évolution démontre l'importance de la généricité dans le code :
+
+1. **Tableaux dynamiques** : En Java, on peut créer un tableau de n'importe
+   quelle taille à l'exécution
+2. **Code adaptable** : Utiliser `notes.length` au lieu d'une constante rend le
+   code flexible
+3. **Validation en cascade** : Chaque donnée saisie doit être validée de la même
+   manière
+
+> [!NOTE]
 >
-> Je m'attendais à obtenir 11 (ou 12), mais j'obtiens 0. Qu'est-ce qui ne va pas
-> ?"
+> Remarquez que le code de l'étape 3 (saisie des notes, calcul des statistiques)
+> n'a **pas changé**. C'est la récompense d'avoir écrit un code générique dès le
+> départ.
 
-**Éléments d'une bonne demande d'aide** :
+Notre programme est maintenant très flexible, mais il lui manque une dernière
+fonctionnalité : que faire si l'utilisatrice fait une erreur de saisie ?
 
-- Description claire du problème
-- Code minimal reproduisant le problème
-- Résultat attendu vs résultat obtenu
-- Ce que vous avez déjà essayé
+## Étape 5 : Modification d'une note
 
-## Synthèse
+### Réflexion en français
 
-### Points clés à retenir
+La dernière fonctionnalité à ajouter est la possibilité de modifier une note
+après avoir tout saisi. Cela nécessite de :
 
-1. **La méthodologie avant la syntaxe** : Savoir **comment** résoudre un
-   problème est plus important que connaître **quelle** syntaxe utiliser.
+- Afficher les statistiques une première fois
+- Demander à l'utilisatrice si elle souhaite modifier une note
+- Si oui, lui demander quelle note modifier (par son index)
+- Valider que l'index est correct
+- Lui demander la nouvelle valeur
+- Mettre à jour le tableau
+- Recalculer et réafficher les statistiques
 
-2. **Décomposer systématiquement** : Tout problème complexe peut être décomposé
-   en sous-problèmes plus simples.
+Cette fonctionnalité illustre un concept important : la modification de données
+après leur création initiale.
 
-3. **Analyser avant de coder** : Identifier les entrées, sorties et contraintes
-   avant de commencer à écrire du code.
+### Modélisation UML
 
-4. **Planifier avec des outils** : Utiliser le pseudocode, les diagrammes et les
-   tableaux d'analyse pour clarifier vos idées.
+Le diagramme de séquence montre la nouvelle interaction :
 
-5. **Évaluer les solutions** : Comparer différentes approches selon des critères
-   de lisibilité, maintenabilité et efficacité.
+![Diagramme de séquence : modification d'une note](images/etape-05-sequence-modification.png)
 
-6. **Tester rigoureusement** : Tester les cas normaux, les cas limites et les
-   cas d'erreur.
+_Source :
+[etape-05-sequence-modification.plantuml](images/etape-05-sequence-modification.plantuml)_
 
-7. **Développer l'esprit critique** : Poser les bonnes questions, apprendre de
-   ses erreurs, demander de l'aide efficacement.
+Observez comment le programme propose la modification après avoir affiché les
+statistiques, puis recalcule tout si une modification est faite.
 
-### Exercices pratiques
+### Implémentation en Java
 
-Pour mettre en pratique ces méthodologies, consultez les exercices dans le
-dossier `03-exercices/`.
+Le code complet se trouve dans :
+[02-exemples-de-code/05-modification-note/Main.java](../02-exemples-de-code/05-modification-note/Main.java)
 
-Ces exercices vous permettront de :
+Voici la partie ajoutée :
 
-- Décomposer des problèmes sur papier
-- Écrire du pseudocode
-- Implémenter des solutions structurées
-- Comparer différentes approches
-- Créer des cas de test
+```java
+// Proposition de modification
+System.out.print("Souhaitez-vous modifier une note ? (oui/non) : ");
+scanner.nextLine(); // Consommer le retour à la ligne restant
+String response = scanner.nextLine().toLowerCase();
+
+if (response.equals("oui") || response.equals("o")) {
+    // Demande de l'index à modifier
+    System.out.print("Quelle note souhaitez-vous modifier ? (1-" + count + ") : ");
+    int indexToModify = scanner.nextInt() - 1;
+
+    // Validation de l'index
+    if (indexToModify >= 0 && indexToModify < count) {
+        System.out.println("Note actuelle : " + notes[indexToModify]);
+
+        // Saisie de la nouvelle valeur avec validation
+        System.out.print("Entrez la nouvelle note (entre 1.0 et 6.0) : ");
+        double newGrade = scanner.nextDouble();
+
+        // Mise à jour
+        notes[indexToModify] = newGrade;
+
+        // Recalcul et réaffichage
+        displayGrades(notes);
+        calculateAndDisplayStatistics(notes);
+    }
+}
+```### Enseignements tirés
+
+Cette dernière étape illustre plusieurs concepts avancés :
+
+1. **Modification en place** : On modifie directement une case du tableau avec
+   `notes[i] = nouvelleNote`
+2. **Gestion des indices** : Attention à la conversion entre numérotation
+   utilisatrice (1-n) et indices Java (0-(n-1))
+3. **Recalcul** : Après modification, il faut recalculer les statistiques
+4. **Expérience utilisatrice** : Proposer la modification est plus ergonomique
+   que forcer à recommencer
+
+> [!WARNING]
+>
+> L'interaction entre `scanner.nextInt()` et `scanner.nextLine()` peut causer
+> des problèmes. Le `nextInt()` ne consomme pas le retour à la ligne, donc il
+> faut un `nextLine()` supplémentaire avant de lire une chaîne de caractères.
+
+Notre programme est maintenant complet et fonctionnel. Mais le code commence à
+être long et répétitif. Il est temps de le restructurer.
+
+## Étape 6 : Refactorisation avec des fonctions
+
+### Réflexion en français
+
+Le code de l'étape 5 fonctionne bien, mais il devient difficile à lire : tout
+est dans la fonction `main`, qui fait maintenant plus de 150 lignes. Il est
+temps de **refactoriser**, c'est-à-dire de réorganiser le code sans changer son
+comportement.
+
+Les avantages de la refactorisation :
+
+- **Lisibilité** : Chaque fonction a un nom qui décrit ce qu'elle fait
+- **Réutilisabilité** : On peut appeler la même fonction plusieurs fois
+- **Maintenance** : Plus facile de trouver et corriger un bug
+- **Tests** : Plus facile de tester chaque fonction individuellement
+
+Nous allons créer des fonctions pour :
+
+- Lire le nombre de notes
+- Saisir une note avec validation
+- Saisir toutes les notes
+- Afficher les notes
+- Calculer le minimum
+- Calculer le maximum
+- Calculer la moyenne
+- Afficher les statistiques
+- Modifier une note
+
+### Modélisation UML
+
+Le diagramme d'activité montre la structure simplifiée avec des fonctions :
+
+![Diagramme d'activité : structure avec fonctions](images/etape-06-activite-refactoring.png)
+
+_Source :
+[etape-06-activite-refactoring.plantuml](images/etape-06-activite-refactoring.plantuml)_
+
+Et voici le diagramme de classes montrant toutes les fonctions :
+
+![Diagramme de classes : organisation avec fonctions](images/etape-06-classes.png)
+
+_Source : [etape-06-classes.plantuml](images/etape-06-classes.plantuml)_
+
+Observez comment chaque fonction a une responsabilité unique et bien définie.
+
+### Implémentation en Java
+
+Voici un exemple de refactorisation pour le calcul du minimum :
+
+```java
+// Avant : code dans main
+double min = notes[0];
+for (int i = 1; i < notes.length; i++) {
+    if (notes[i] < min) {
+        min = notes[i];
+    }
+}
+System.out.println("Note minimale : " + min);
+
+// Après : fonction dédiée
+private static double calculateMinimum(double[] grades) {
+    double min = grades[0];
+    for (int i = 1; i < grades.length; i++) {
+        if (grades[i] < min) {
+            min = grades[i];
+        }
+    }
+    return min;
+}
+
+// Utilisation dans main
+double min = calculateMinimum(notes);
+System.out.println("Note minimale : " + min);
+````
+
+### Enseignements tirés
+
+La refactorisation apporte plusieurs bénéfices :
+
+1. **Séparation des responsabilités** : Chaque fonction fait une seule chose
+2. **Code auto-documenté** : Les noms de fonctions expliquent le code
+3. **Éviter la répétition** : Le calcul des statistiques est utilisé deux fois,
+   mais le code n'est écrit qu'une fois
+4. **Main simplifié** : La fonction `main` devient un scénario de haut niveau
+   facile à comprendre
+
+> [!TIP]
+>
+> Une bonne fonction a :
+>
+> - Un nom clair décrivant ce qu'elle fait
+> - Des paramètres bien définis
+> - Une seule responsabilité
+> - Une taille raisonnable (généralement moins de 20 lignes)
+
+Cette refactorisation conclut notre construction progressive du programme de
+gestion de notes. Nous avons maintenant un code propre, lisible et maintenable.
+
+## Récapitulatif de la méthodologie
+
+Revenons sur ce que nous avons fait et extrayons-en une méthodologie générale
+applicable à n'importe quel problème de programmation.
+
+### Étapes de résolution
+
+1. **Commencer simple** : Résoudre la version la plus simple du problème
+2. **Faire fonctionner** : S'assurer que cette version simple marche
+3. **Ajouter une fonctionnalité** : Étendre progressivement les capacités
+4. **Tester** : Vérifier que chaque ajout fonctionne avant de continuer
+5. **Refactoriser** : Réorganiser le code quand il devient complexe
+6. **Répéter** : Continuer jusqu'à avoir toutes les fonctionnalités voulues
+
+### Principes guidant les choix
+
+- **Généricité** : Écrire du code qui s'adapte plutôt que du code rigide
+- **Validation** : Toujours vérifier les données externes
+- **Lisibilité** : Le code est lu plus souvent qu'il n'est écrit
+- **Robustesse** : Gérer les cas d'erreur gracieusement
+- **Modularité** : Découper en fonctions avec une responsabilité unique
+
+### Outils de réflexion
+
+Avant de coder, nous avons systématiquement :
+
+1. **Réfléchi en français** : Décrit le problème et l'approche dans notre langue
+   naturelle
+2. **Modélisé en UML** : Visualisé la structure et le comportement
+3. **Implémenté en Java** : Traduit la réflexion en code
+4. **Tiré des enseignements** : Analysé les forces et faiblesses de chaque
+   approche
+
+Cette méthodologie est applicable à n'importe quel problème de programmation,
+quel que soit le langage ou le domaine.
+
+### Comparaison des versions
+
+Voici un tableau récapitulatif de l'évolution :
+
+| Étape | Stockage  | Saisie | Taille | Modification | Complexité |
+| ----- | --------- | ------ | ------ | ------------ | ---------- |
+| 1     | Variables | Non    | Fixe   | Non          | Haute      |
+| 2     | Tableau   | Non    | Fixe   | Non          | Moyenne    |
+| 3     | Tableau   | Oui    | Fixe   | Non          | Moyenne    |
+| 4     | Tableau   | Oui    | Libre  | Non          | Moyenne    |
+| 5     | Tableau   | Oui    | Libre  | Oui          | Moyenne    |
+| 6     | Tableau   | Oui    | Libre  | Oui          | Faible     |
+
+Observez comment la complexité diminue à l'étape 6 grâce à la refactorisation,
+même si les fonctionnalités augmentent.
+
+## Pour aller plus loin
+
+Ce tutoriel vous a montré une méthode de travail, mais il reste beaucoup à
+explorer. Voici quelques pistes pour approfondir :
+
+### Améliorations possibles du programme
+
+1. **Menu interactif** : Permettre plusieurs actions (afficher, ajouter,
+   supprimer, modifier) dans une boucle jusqu'à ce que l'utilisatrice choisisse
+   de quitter
+2. **Sauvegarde sur disque** : Écrire les notes dans un fichier pour les
+   retrouver plus tard
+3. **Statistiques avancées** : Médiane, écart-type, notes au-dessus de la
+   moyenne
+4. **Catégories de notes** : Gérer plusieurs matières avec leurs notes
+5. **Interface graphique** : Remplacer la console par une fenêtre avec des
+   boutons
+
+### Concepts à approfondir
+
+- **Gestion d'exceptions** : Utiliser `try/catch` au lieu de `hasNextDouble()`
+- **Programmation orientée objet** : Créer une classe `GestionnaireNotes` avec
+  des méthodes
+- **Collections Java** : Utiliser `ArrayList` pour permettre l'ajout/suppression
+  de notes
+- **Tests unitaires** : Écrire des tests pour chaque fonction avec JUnit
+- **Design patterns** : Appliquer des patrons de conception (Strategy, Command,
+  etc.)
+
+### Exercices suggérés
+
+1. **Moyenne pondérée** : Ajouter un coefficient pour chaque note et calculer la
+   moyenne pondérée
+2. **Recherche de notes** : Permettre de rechercher toutes les notes dans un
+   intervalle donné
+3. **Tri des notes** : Afficher les notes triées par ordre croissant ou
+   décroissant
+4. **Histogramme** : Afficher un graphique en mode texte de la répartition des
+   notes
+5. **Comparaison de séries** : Gérer deux séries de notes et les comparer
+
+### Ressources complémentaires
+
+Pour approfondir la méthodologie de résolution de problèmes :
+
+- George Pólya, _How to Solve It_ : Un classique sur la résolution de problèmes
+  en mathématiques, applicable à la programmation
+- Martin Fowler, _Refactoring_ : Le livre de référence sur la refactorisation de
+  code
+- Robert C. Martin, _Clean Code_ : Principes pour écrire du code lisible et
+  maintenable
+
+## Conclusion
+
+Ce tutoriel vous a montré qu'on ne code jamais "tout d'un coup". La
+programmation est un processus itératif où l'on construit progressivement une
+solution en faisant des choix réfléchis à chaque étape.
+
+Les compétences développées ici sont transférables :
+
+- Décomposer un problème complexe en sous-problèmes simples
+- Commencer par une version simple et ajouter progressivement des
+  fonctionnalités
+- Réfléchir en français avant de coder
+- Modéliser pour comprendre la structure avant l'implémentation
+- Refactoriser quand le code devient complexe
+
+Ces compétences sont au cœur de la programmation professionnelle. Continuez à
+les pratiquer dans tous vos projets !
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

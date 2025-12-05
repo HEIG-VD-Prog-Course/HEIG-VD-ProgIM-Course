@@ -10,56 +10,38 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Objectifs, méthodes d'enseignement et d'apprentissage, et méthodes
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
-  ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/09.01-methodologies-de-resolution-de-problemes-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
-## Exemples de code
+## Exemples de code progressifs
 
-Ce dossier contient des exemples de code en lien avec les éléments vus en cours.
+Ce dossier contient les 5 étapes du tutoriel sous forme de code exécutable.
 
-Ces exemples ont deux buts bien précis :
+Chaque exemple correspond à une étape de la résolution progressive du problème
+de gestion de notes :
 
-1. Vous familiariser à la lecture de code et sa compréhension de façon autonome.
-2. Servir de base pour les exercices et les projets libres à réaliser.
+1. **01-notes-en-dur-variables** : Version initiale avec variables individuelles
+   et calculs simples dans `main`
+2. **02-notes-en-dur-tableau** : Introduction des tableaux avec taille fixe
+3. **03-saisie-notes-nombre-fixe** : Ajout de la saisie utilisateur pour un
+   nombre fixe de notes
+4. **04-saisie-notes-nombre-dynamique** : Taille du tableau déterminée par la
+   personne utilisatrice
+5. **05-modification-note** : Fonctionnalité de modification d'une note
+   existante
 
-Ces exemples sont construits pour être simples d'accès et facilement
-compréhensibles. Ils sont à votre disposition pour vous aider à progresser dans
-votre apprentissage.
+Ces exemples sont conçus pour être étudiés dans l'ordre, en parallèle avec le
+tutoriel dans les supports de cours. Chaque exemple peut être compilé et exécuté
+indépendamment.
 
-Ces exemples sont triés par ordre de complexité croissante. Nous vous
-conseillons de les explorer dans l'ordre et de prendre le temps de les exécuter
-sur votre machine et de prendre le temps de les comprendre en profondeur **sans
-recourir à de l'aide externe**.
+## Compilation et exécution
 
-## Liste des exemples
+Pour chaque exemple :
 
-1. **01-probleme-simple** : Calculateur de réduction pour un système d'échange
-   local
-
-   - Analyse du problème (entrées, sorties, contraintes)
-   - Pseudocode puis implémentation Java
-   - Tests manuels et automatiques
-
-2. **02-decomposition-fonctions** : Gestion d'un potager partagé
-
-   - Décomposition d'un problème complexe
-   - Structuration avec des fonctions dédiées
-   - Approche descendante (top-down)
-
-3. **03-probleme-complexe** : Planificateur de covoiturage pour une communauté
-
-   - Problème complexe nécessitant plusieurs structures de données
-   - Combinaison de plusieurs stratégies
-   - Validation et gestion d'erreurs
-
-4. **04-comparaison-solutions** : Trouver le maximum dans un tableau
-   - Deux approches différentes pour le même problème
-   - Comparaison selon critères de qualité
-   - Analyse critique des solutions
+```bash
+cd XX-nom-de-lexemple/
+javac Main.java
+java Main
+```
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md

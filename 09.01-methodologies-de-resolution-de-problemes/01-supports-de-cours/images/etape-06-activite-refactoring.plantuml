@@ -1,0 +1,45 @@
+@startuml etape-06-activite-refactoring
+
+title Étape 6 : Structure avec fonctions
+
+start
+
+:Demander le nombre de notes;
+:count = readGradeCount();
+
+:Créer tableau notes[count];
+
+:Saisir les notes;
+:inputGrades(notes);
+
+:Afficher les notes;
+:displayGrades(notes);
+
+:Calculer les statistiques;
+:min = calculateMinimum(notes);
+:max = calculateMaximum(notes);
+:average = calculateAverage(notes);
+
+:Afficher les statistiques;
+:displayStatistics(min, max, average);
+
+:Proposer modification;
+if (Modification souhaitée ?) then (oui)
+  :Modifier une note;
+  :modifyGrade(notes);
+  
+  :Afficher notes modifiées;
+  :displayGrades(notes);
+  
+  :Recalculer statistiques;
+  :min = calculateMinimum(notes);
+  :max = calculateMaximum(notes);
+  :average = calculateAverage(notes);
+  
+  :Afficher nouvelles statistiques;
+  :displayStatistics(min, max, average);
+endif
+
+stop
+
+@enduml

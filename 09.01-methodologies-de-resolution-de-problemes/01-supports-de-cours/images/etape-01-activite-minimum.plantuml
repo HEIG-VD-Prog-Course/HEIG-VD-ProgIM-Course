@@ -1,0 +1,29 @@
+@startuml etape-01-activite-minimum
+
+title Étape 1 : Calcul du minimum
+
+start
+
+:min = note1;
+
+if (note2 < min) then (oui)
+  :min = note2;
+endif
+
+if (note3 < min) then (oui)
+  :min = note3;
+endif
+
+if (note4 < min) then (oui)
+  :min = note4;
+endif
+
+if (note5 < min) then (oui)
+  :min = note5;
+endif
+
+:Afficher "Note minimale : min";
+
+stop
+
+@enduml

@@ -229,14 +229,8 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Lien vers le contenu](./09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/README.md)
-  ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/09.01-methodologies-de-resolution-de-problemes/01-supports-de-cours/09.01-methodologies-de-resolution-de-problemes-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./09.01-methodologies-de-resolution-de-problemes/02-exemples-de-code/)
-- Exercices :
-  [Lien vers le contenu](./09.01-methodologies-de-resolution-de-problemes/03-exercices/README.md)
 
 ## 🕙 Cours 10
 

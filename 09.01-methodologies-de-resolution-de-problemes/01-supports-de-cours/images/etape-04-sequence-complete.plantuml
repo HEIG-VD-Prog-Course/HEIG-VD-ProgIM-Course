@@ -1,0 +1,45 @@
+@startuml etape-04-sequence-complete
+
+title Étape 4 : Déroulement complet avec nombre dynamique
+
+actor "Utilisatrice" as User
+participant "Programme" as Prog
+
+User -> Prog : Démarre le programme
+activate Prog
+
+Prog -> User : "Combien de notes souhaitez-vous saisir ?"
+
+loop Jusqu'à nombre valide
+  User -> Prog : Saisit un nombre
+  
+  alt Valeur non entière
+    Prog -> User : "Erreur : veuillez entrer un nombre entier valide"
+  else Valeur <= 0
+    Prog -> User : "Erreur : le nombre de notes doit être positif"
+  else Nombre valide
+    Prog -> Prog : Crée tableau notes[nombreNotes]
+  end
+end
+
+loop Pour chaque note (i de 0 à nombreNotes-1)
+  Prog -> User : "Entrez la note i+1 (entre 1.0 et 6.0)"
+  
+  loop Jusqu'à note valide
+    User -> Prog : Saisit une valeur
+    
+    alt Valeur non numérique ou invalide
+      Prog -> User : Message d'erreur approprié
+    else Note valide
+      Prog -> Prog : Stocke la note dans notes[i]
+    end
+  end
+end
+
+Prog -> User : Affiche toutes les notes
+Prog -> Prog : Calcule min, max, moyenne
+Prog -> User : Affiche les statistiques
+
+deactivate Prog
+
+@enduml

@@ -1,0 +1,186 @@
+import java.util.Scanner;
+
+/**
+ * Programme de gestion de notes - Étape 5
+ * 
+ * Version complète avec possibilité de modifier une note.
+ * Cette version ajoute :
+ * - La possibilité de modifier une note après la saisie
+ * - Le recalcul des statistiques après modification
+ * - Une interface plus complète pour l'utilisatrice
+ */
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("=== Programme de gestion de notes - Étape 5 ===\n");
+
+        // Création du Scanner pour lire les entrées
+        Scanner scanner = new Scanner(System.in);
+
+        // Demande du nombre de notes à saisir
+        int count = 0;
+        boolean validCount = false;
+
+        while (!validCount) {
+            System.out.print("Combien de notes souhaitez-vous saisir ? ");
+
+            // Vérification que l'entrée est bien un nombre entier
+            if (scanner.hasNextInt()) {
+                count = scanner.nextInt();
+
+                // Validation du nombre
+                if (count > 0) {
+                    validCount = true;
+                } else {
+                    System.out.println("Erreur : le nombre de notes doit être positif");
+                }
+            } else {
+                System.out.println("Erreur : veuillez entrer un nombre entier valide");
+                scanner.next(); // Consommer l'entrée invalide
+            }
+        }
+
+        // Création du tableau de la taille appropriée
+        double[] notes = new double[count];
+
+        System.out.println("\n--- Saisie des notes ---");
+        // Saisie des notes
+        for (int i = 0; i < count; i++) {
+            boolean valid = false;
+
+            while (!valid) {
+                System.out.print("Entrez la note " + (i + 1) + " (entre 1.0 et 6.0) : ");
+
+                // Vérification que l'entrée est bien un nombre
+                if (scanner.hasNextDouble()) {
+                    double grade = scanner.nextDouble();
+
+                    // Validation de la note
+                    if (grade >= 1.0 && grade <= 6.0) {
+                        notes[i] = grade;
+                        valid = true;
+                    } else {
+                        System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+                    }
+                } else {
+                    System.out.println("Erreur : veuillez entrer un nombre valide");
+                    scanner.next(); // Consommer l'entrée invalide
+                }
+            }
+        }
+
+        System.out.println("\n--- Affichage des notes saisies ---");
+        // Affichage des notes
+        for (int i = 0; i < notes.length; i++) {
+            System.out.println("Note " + (i + 1) + " : " + notes[i]);
+        }
+
+        // Calcul des statistiques
+        System.out.println("\n--- Calcul des statistiques ---");
+
+        double min = notes[0];
+        double max = notes[0];
+        double sum = 0;
+
+        for (int i = 0; i < notes.length; i++) {
+            if (notes[i] < min) {
+                min = notes[i];
+            }
+            if (notes[i] > max) {
+                max = notes[i];
+            }
+            sum += notes[i];
+        }
+
+        double average = sum / notes.length;
+
+        System.out.println("Minimum : " + min);
+        System.out.println("Maximum : " + max);
+        System.out.println("Moyenne : " + average);
+
+        // Proposition de modification
+        System.out.println("\n--- Modification d'une note ---");
+        System.out.print("Souhaitez-vous modifier une note ? (oui/non) : ");
+        scanner.nextLine(); // Consommer le retour à la ligne restant
+        String response = scanner.nextLine().toLowerCase();
+
+        if (response.equals("oui") || response.equals("o")) {
+            boolean validModification = false;
+
+            while (!validModification) {
+                System.out.print("Quelle note souhaitez-vous modifier ? (1-" + count + ") : ");
+
+                if (scanner.hasNextInt()) {
+                    int indexToModify = scanner.nextInt() - 1;
+
+                    // Validation de l'index
+                    if (indexToModify >= 0 && indexToModify < count) {
+                        System.out.println("Note actuelle : " + notes[indexToModify]);
+
+                        boolean validNewGrade = false;
+                        while (!validNewGrade) {
+                            System.out.print("Entrez la nouvelle note (entre 1.0 et 6.0) : ");
+
+                            if (scanner.hasNextDouble()) {
+                                double newGrade = scanner.nextDouble();
+
+                                if (newGrade >= 1.0 && newGrade <= 6.0) {
+                                    notes[indexToModify] = newGrade;
+                                    validNewGrade = true;
+                                    validModification = true;
+                                    System.out.println("Note modifiée avec succès !");
+                                } else {
+                                    System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+                                }
+                            } else {
+                                System.out.println("Erreur : veuillez entrer un nombre valide");
+                                scanner.next(); // Consommer l'entrée invalide
+                            }
+                        }
+                    } else {
+                        System.out.println("Erreur : l'index doit être entre 1 et " + count);
+                    }
+                } else {
+                    System.out.println("Erreur : veuillez entrer un nombre entier valide");
+                    scanner.next(); // Consommer l'entrée invalide
+                }
+            }
+
+            // Affichage des notes après modification
+            System.out.println("\n--- Affichage des notes après modification ---");
+            for (int i = 0; i < notes.length; i++) {
+                System.out.println("Note " + (i + 1) + " : " + notes[i]);
+            }
+
+            // Recalcul des statistiques
+            System.out.println("\n--- Nouvelles statistiques ---");
+
+            min = notes[0];
+            max = notes[0];
+            sum = 0;
+
+            for (int i = 0; i < notes.length; i++) {
+                if (notes[i] < min) {
+                    min = notes[i];
+                }
+                if (notes[i] > max) {
+                    max = notes[i];
+                }
+                sum += notes[i];
+            }
+
+            average = sum / notes.length;
+
+            System.out.println("Minimum : " + min);
+            System.out.println("Maximum : " + max);
+            System.out.println("Moyenne : " + average);
+        } else {
+            System.out.println("Aucune modification effectuée.");
+        }
+
+        System.out.println("\n=== Programme terminé ===");
+
+        // Fermeture du Scanner
+        scanner.close();
+    }
+}
