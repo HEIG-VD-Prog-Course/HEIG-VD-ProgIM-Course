@@ -90,17 +90,11 @@ public class WasteCollection {
 
 ```java
 public class WasteCollection {
-    public static void main(String[] args) {
-        double[] collection = {12.5, 8.3, 15.2, 9.1, 11.8, 7.5, 14.3, 8.9};
-
-        System.out.println("=== Analyse de la collecte sélective ===\n");
-        analyzeCollection(collection);
-    }
 
     /**
      * Analyse complète de la collecte de déchets.
      */
-    private static void analyzeCollection(double[] collection) {
+    public static void analyzeCollection(double[] collection) {
         double organicTotal = sumEvenIndices(collection);
         double recyclableTotal = sumOddIndices(collection);
 
@@ -116,7 +110,7 @@ public class WasteCollection {
     /**
      * Calcule la somme des éléments aux indices pairs.
      */
-    private static double sumEvenIndices(double[] array) {
+    public static double sumEvenIndices(double[] array) {
         double sum = 0;
         for (int i = 0; i < array.length; i += 2) {
             sum += array[i];
@@ -127,7 +121,7 @@ public class WasteCollection {
     /**
      * Calcule la somme des éléments aux indices impairs.
      */
-    private static double sumOddIndices(double[] array) {
+    public static double sumOddIndices(double[] array) {
         double sum = 0;
         for (int i = 1; i < array.length; i += 2) {
             sum += array[i];
@@ -138,21 +132,21 @@ public class WasteCollection {
     /**
      * Compte le nombre d'indices pairs.
      */
-    private static int countEvenIndices(double[] array) {
+    public static int countEvenIndices(double[] array) {
         return (array.length + 1) / 2;
     }
 
     /**
      * Compte le nombre d'indices impairs.
      */
-    private static int countOddIndices(double[] array) {
+    public static int countOddIndices(double[] array) {
         return array.length / 2;
     }
 
     /**
      * Affiche les résultats de l'analyse.
      */
-    private static void displayResults(double organicTotal, double organicAverage,
+    public static void displayResults(double organicTotal, double organicAverage,
                                        double recyclableTotal, double recyclableAverage) {
         System.out.println(String.format("Déchets organiques : %.2f kg (moyenne : %.2f kg)",
                                        organicTotal, organicAverage));
@@ -168,6 +162,13 @@ public class WasteCollection {
 
         System.out.println(String.format("\nCatégorie la plus importante : %s", category));
     }
+    public static void main(String[] args) {
+        double[] collection = {12.5, 8.3, 15.2, 9.1, 11.8, 7.5, 14.3, 8.9};
+
+        System.out.println("=== Analyse de la collecte sélective ===\n");
+        analyzeCollection(collection);
+    }
+
 }
 ```
 
@@ -248,19 +249,11 @@ public class GreenhouseTemperature {
 
 ```java
 public class GreenhouseTemperature {
-    public static void main(String[] args) {
-        double[] temperatures = {8.5, 15.2, 18.3, 19.5, 20.1, 18.9, 17.2, 14.5, 11.3};
-
-        System.out.println("=== Analyse de température dans la serre ===\n");
-
-        displayAllTemperatures(temperatures);
-        analyzeStableTemperatures(temperatures);
-    }
 
     /**
      * Affiche toutes les températures mesurées.
      */
-    private static void displayAllTemperatures(double[] temperatures) {
+    public static void displayAllTemperatures(double[] temperatures) {
         System.out.println("Températures mesurées :");
         for (int i = 0; i < temperatures.length; i++) {
             System.out.println(String.format("Heure %d : %.1f°C", i + 1, temperatures[i]));
@@ -270,7 +263,7 @@ public class GreenhouseTemperature {
     /**
      * Analyse les températures stables (sans premières/dernières mesures).
      */
-    private static void analyzeStableTemperatures(double[] temperatures) {
+    public static void analyzeStableTemperatures(double[] temperatures) {
         if (temperatures.length < 3) {
             System.out.println("\nPas assez de données pour l'analyse.");
             return;
@@ -289,7 +282,7 @@ public class GreenhouseTemperature {
     /**
      * Calcule la moyenne en excluant les bornes.
      */
-    private static double calculateAverageWithoutBounds(double[] array) {
+    public static double calculateAverageWithoutBounds(double[] array) {
         double sum = 0;
         int count = 0;
 
@@ -304,7 +297,7 @@ public class GreenhouseTemperature {
     /**
      * Trouve le minimum en excluant les bornes.
      */
-    private static double findMinWithoutBounds(double[] array) {
+    public static double findMinWithoutBounds(double[] array) {
         double min = array[1];
 
         for (int i = 2; i < array.length - 1; i++) {
@@ -319,7 +312,7 @@ public class GreenhouseTemperature {
     /**
      * Trouve le maximum en excluant les bornes.
      */
-    private static double findMaxWithoutBounds(double[] array) {
+    public static double findMaxWithoutBounds(double[] array) {
         double max = array[1];
 
         for (int i = 2; i < array.length - 1; i++) {
@@ -330,6 +323,15 @@ public class GreenhouseTemperature {
 
         return max;
     }
+    public static void main(String[] args) {
+        double[] temperatures = {8.5, 15.2, 18.3, 19.5, 20.1, 18.9, 17.2, 14.5, 11.3};
+
+        System.out.println("=== Analyse de température dans la serre ===\n");
+
+        displayAllTemperatures(temperatures);
+        analyzeStableTemperatures(temperatures);
+    }
+
 }
 ```
 
@@ -433,22 +435,11 @@ public class ToolInventory {
 
 ```java
 public class ToolInventory {
-    public static void main(String[] args) {
-        int[] inventory = {101, 203, 101, 405, 203, 607, 101, 203, 809};
-        int[] searchCodes = {101, 405, 999};
-        String[] toolNames = {"tournevis", "marteau", "clé"};
-
-        System.out.println("=== Inventaire d'outils partagés ===\n");
-
-        searchTools(inventory, searchCodes, toolNames);
-        countExamples(inventory, searchCodes, toolNames);
-        findDuplicates(inventory);
-    }
 
     /**
      * Recherche des outils spécifiques dans l'inventaire.
      */
-    private static void searchTools(int[] inventory, int[] searchCodes, String[] toolNames) {
+    public static void searchTools(int[] inventory, int[] searchCodes, String[] toolNames) {
         System.out.println("--- Recherche d'outils ---");
 
         for (int i = 0; i < searchCodes.length; i++) {
@@ -470,7 +461,7 @@ public class ToolInventory {
     /**
      * Compte les exemplaires de chaque outil.
      */
-    private static void countExamples(int[] inventory, int[] searchCodes, String[] toolNames) {
+    public static void countExamples(int[] inventory, int[] searchCodes, String[] toolNames) {
         System.out.println("\n--- Nombre d'exemplaires ---");
 
         for (int i = 0; i < searchCodes.length; i++) {
@@ -488,7 +479,7 @@ public class ToolInventory {
     /**
      * Trouve tous les outils présents en plusieurs exemplaires.
      */
-    private static void findDuplicates(int[] inventory) {
+    public static void findDuplicates(int[] inventory) {
         System.out.println("\n--- Outils en double ---");
 
         int[] uniqueCodes = {101, 203, 405, 607, 809};
@@ -506,7 +497,7 @@ public class ToolInventory {
     /**
      * Recherche linéaire d'une valeur dans un tableau.
      */
-    private static boolean linearSearch(int[] array, int target) {
+    public static boolean linearSearch(int[] array, int target) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == target) {
                 return true;
@@ -518,7 +509,7 @@ public class ToolInventory {
     /**
      * Compte les occurrences d'une valeur dans un tableau.
      */
-    private static int countOccurrences(int[] array, int value) {
+    public static int countOccurrences(int[] array, int value) {
         int count = 0;
 
         for (int element : array) {
@@ -529,6 +520,18 @@ public class ToolInventory {
 
         return count;
     }
+    public static void main(String[] args) {
+        int[] inventory = {101, 203, 101, 405, 203, 607, 101, 203, 809};
+        int[] searchCodes = {101, 405, 999};
+        String[] toolNames = {"tournevis", "marteau", "clé"};
+
+        System.out.println("=== Inventaire d'outils partagés ===\n");
+
+        searchTools(inventory, searchCodes, toolNames);
+        countExamples(inventory, searchCodes, toolNames);
+        findDuplicates(inventory);
+    }
+
 }
 ```
 
@@ -613,20 +616,11 @@ public class WorkshopParticipation {
 
 ```java
 public class WorkshopParticipation {
-    public static void main(String[] args) {
-        int[] participation = {12, 18, 15, 22, 19, 25, 28, 24, 20, 16, 14, 11};
-        String[] months = {"Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
-                          "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"};
-
-        System.out.println("=== Suivi de participation à l'atelier ===\n");
-
-        analyzeParticipation(participation, months);
-    }
 
     /**
      * Analyse complète de la participation.
      */
-    private static void analyzeParticipation(int[] participation, String[] months) {
+    public static void analyzeParticipation(int[] participation, String[] months) {
         int min = findMin(participation);
         int max = findMax(participation);
         int minIndex = findIndex(participation, min);
@@ -641,7 +635,7 @@ public class WorkshopParticipation {
     /**
      * Trouve la valeur minimale dans un tableau.
      */
-    private static int findMin(int[] array) {
+    public static int findMin(int[] array) {
         int min = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -656,7 +650,7 @@ public class WorkshopParticipation {
     /**
      * Trouve la valeur maximale dans un tableau.
      */
-    private static int findMax(int[] array) {
+    public static int findMax(int[] array) {
         int max = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -671,7 +665,7 @@ public class WorkshopParticipation {
     /**
      * Trouve l'indice d'une valeur donnée.
      */
-    private static int findIndex(int[] array, int value) {
+    public static int findIndex(int[] array, int value) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
                 return i;
@@ -683,7 +677,7 @@ public class WorkshopParticipation {
     /**
      * Calcule la moyenne des valeurs d'un tableau.
      */
-    private static double calculateAverage(int[] array) {
+    public static double calculateAverage(int[] array) {
         int sum = 0;
 
         for (int value : array) {
@@ -696,7 +690,7 @@ public class WorkshopParticipation {
     /**
      * Compte combien de valeurs dépassent une limite donnée.
      */
-    private static int countAboveAverage(int[] array, double threshold) {
+    public static int countAboveAverage(int[] array, double threshold) {
         int count = 0;
 
         for (int value : array) {
@@ -711,7 +705,7 @@ public class WorkshopParticipation {
     /**
      * Affiche les résultats de l'analyse.
      */
-    private static void displayResults(int min, int max, int minIndex, int maxIndex,
+    public static void displayResults(int min, int max, int minIndex, int maxIndex,
                                        double average, int aboveAverage, int total,
                                        String[] months) {
         System.out.println(String.format("Participation minimale : %d (%s)",
@@ -722,6 +716,16 @@ public class WorkshopParticipation {
         System.out.println(String.format("Sessions au-dessus de la moyenne : %d sur %d",
                                        aboveAverage, total));
     }
+    public static void main(String[] args) {
+        int[] participation = {12, 18, 15, 22, 19, 25, 28, 24, 20, 16, 14, 11};
+        String[] months = {"Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+                          "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"};
+
+        System.out.println("=== Suivi de participation à l'atelier ===\n");
+
+        analyzeParticipation(participation, months);
+    }
+
 }
 ```
 
@@ -747,6 +751,49 @@ Testez avec : factorielle de 6 et Fibonacci de 8
 
 ```java
 public class RecursionExamples {
+
+    // Factorielle récursive
+    public static long factorialRecursive(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * factorialRecursive(n - 1);
+    }
+
+    // Factorielle itérative
+    public static long factorialIterative(int n) {
+        long result = 1;
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    // Fibonacci récursif
+    public static int fibonacciRecursive(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+    }
+
+    // Fibonacci itératif
+    public static int fibonacciIterative(int n) {
+        if (n <= 1) {
+            return n;
+        }
+
+        int previous = 0;
+        int current = 1;
+
+        for (int i = 2; i <= n; i++) {
+            int next = previous + current;
+            previous = current;
+            current = next;
+        }
+
+        return current;
+    }
     public static void main(String[] args) {
         int n = 6;
         int fibN = 8;
@@ -784,48 +831,6 @@ public class RecursionExamples {
         System.out.println(fibMatch);
     }
 
-    // Factorielle récursive
-    private static long factorialRecursive(int n) {
-        if (n <= 1) {
-            return 1;
-        }
-        return n * factorialRecursive(n - 1);
-    }
-
-    // Factorielle itérative
-    private static long factorialIterative(int n) {
-        long result = 1;
-        for (int i = 2; i <= n; i++) {
-            result *= i;
-        }
-        return result;
-    }
-
-    // Fibonacci récursif
-    private static int fibonacciRecursive(int n) {
-        if (n <= 1) {
-            return n;
-        }
-        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-    }
-
-    // Fibonacci itératif
-    private static int fibonacciIterative(int n) {
-        if (n <= 1) {
-            return n;
-        }
-
-        int previous = 0;
-        int current = 1;
-
-        for (int i = 2; i <= n; i++) {
-            int next = previous + current;
-            previous = current;
-            current = next;
-        }
-
-        return current;
-    }
 }
 ```
 
@@ -833,20 +838,11 @@ public class RecursionExamples {
 
 ```java
 public class RecursionExamples {
-    public static void main(String[] args) {
-        int n = 6;
-        int fibN = 8;
-
-        System.out.println("=== Exemples de récursivité ===\n");
-
-        demonstrateFactorial(n);
-        demonstrateFibonacci(fibN);
-    }
 
     /**
      * Démontre le calcul de factorielle (récursif et itératif).
      */
-    private static void demonstrateFactorial(int n) {
+    public static void demonstrateFactorial(int n) {
         System.out.println("--- Factorielle de " + n + " ---");
 
         long factRecursive = factorialRecursive(n);
@@ -861,7 +857,7 @@ public class RecursionExamples {
     /**
      * Démontre le calcul de Fibonacci (récursif et itératif).
      */
-    private static void demonstrateFibonacci(int n) {
+    public static void demonstrateFibonacci(int n) {
         System.out.println("\n--- Fibonacci de " + n + " ---");
 
         int fibRecursive = fibonacciRecursive(n);
@@ -876,7 +872,7 @@ public class RecursionExamples {
     /**
      * Vérifie et affiche si les résultats correspondent.
      */
-    private static void verifyMatch(boolean match) {
+    public static void verifyMatch(boolean match) {
         String message;
         if (match) {
             message = "✓ Les résultats correspondent";
@@ -889,7 +885,7 @@ public class RecursionExamples {
     /**
      * Calcule la factorielle de manière récursive.
      */
-    private static long factorialRecursive(int n) {
+    public static long factorialRecursive(int n) {
         if (n <= 1) {
             return 1;
         }
@@ -899,7 +895,7 @@ public class RecursionExamples {
     /**
      * Calcule la factorielle de manière itérative.
      */
-    private static long factorialIterative(int n) {
+    public static long factorialIterative(int n) {
         long result = 1;
         for (int i = 2; i <= n; i++) {
             result *= i;
@@ -910,7 +906,7 @@ public class RecursionExamples {
     /**
      * Calcule le n-ième terme de Fibonacci de manière récursive.
      */
-    private static int fibonacciRecursive(int n) {
+    public static int fibonacciRecursive(int n) {
         if (n <= 1) {
             return n;
         }
@@ -920,7 +916,7 @@ public class RecursionExamples {
     /**
      * Calcule le n-ième terme de Fibonacci de manière itérative.
      */
-    private static int fibonacciIterative(int n) {
+    public static int fibonacciIterative(int n) {
         if (n <= 1) {
             return n;
         }
@@ -936,6 +932,16 @@ public class RecursionExamples {
 
         return current;
     }
+    public static void main(String[] args) {
+        int n = 6;
+        int fibN = 8;
+
+        System.out.println("=== Exemples de récursivité ===\n");
+
+        demonstrateFactorial(n);
+        demonstrateFibonacci(fibN);
+    }
+
 }
 ```
 
@@ -963,6 +969,38 @@ Utilisez le tableau : `{45, 78, 52, 89, 63, 71, 58, 82, 67}` avec un seuil de
 
 ```java
 public class RecursiveCounter {
+
+    // Comptage récursif
+    public static int countAboveThresholdRecursive(int[] array, int threshold, int index) {
+        // Cas de base : fin du tableau
+        if (index >= array.length) {
+            return 0;
+        }
+
+        // Compte 1 si l'élément dépasse le seuil, sinon 0
+        int current;
+        if (array[index] > threshold) {
+            current = 1;
+        } else {
+            current = 0;
+        }
+
+        // Cas récursif : élément courant + comptage du reste
+        return current + countAboveThresholdRecursive(array, threshold, index + 1);
+    }
+
+    // Comptage itératif
+    public static int countAboveThresholdIterative(int[] array, int threshold) {
+        int count = 0;
+
+        for (int value : array) {
+            if (value > threshold) {
+                count++;
+            }
+        }
+
+        return count;
+    }
     public static void main(String[] args) {
         int[] scores = {45, 78, 52, 89, 63, 71, 58, 82, 67};
         int threshold = 65;
@@ -994,37 +1032,6 @@ public class RecursiveCounter {
         System.out.println("\n" + match);
     }
 
-    // Comptage récursif
-    private static int countAboveThresholdRecursive(int[] array, int threshold, int index) {
-        // Cas de base : fin du tableau
-        if (index >= array.length) {
-            return 0;
-        }
-
-        // Compte 1 si l'élément dépasse le seuil, sinon 0
-        int current;
-        if (array[index] > threshold) {
-            current = 1;
-        } else {
-            current = 0;
-        }
-
-        // Cas récursif : élément courant + comptage du reste
-        return current + countAboveThresholdRecursive(array, threshold, index + 1);
-    }
-
-    // Comptage itératif
-    private static int countAboveThresholdIterative(int[] array, int threshold) {
-        int count = 0;
-
-        for (int value : array) {
-            if (value > threshold) {
-                count++;
-            }
-        }
-
-        return count;
-    }
 }
 ```
 
@@ -1032,22 +1039,11 @@ public class RecursiveCounter {
 
 ```java
 public class RecursiveCounter {
-    public static void main(String[] args) {
-        int[] scores = {45, 78, 52, 89, 63, 71, 58, 82, 67};
-        int threshold = 65;
-
-        System.out.println("=== Compteur récursif de valeurs ===\n");
-
-        displayScores(scores);
-        System.out.println("\nSeuil de réussite : " + threshold);
-
-        compareCountingMethods(scores, threshold);
-    }
 
     /**
      * Affiche tous les scores.
      */
-    private static void displayScores(int[] scores) {
+    public static void displayScores(int[] scores) {
         System.out.println("Scores : ");
         for (int i = 0; i < scores.length; i++) {
             System.out.println("Joueur " + (i + 1) + " : " + scores[i]);
@@ -1057,7 +1053,7 @@ public class RecursiveCounter {
     /**
      * Compare les méthodes récursive et itérative.
      */
-    private static void compareCountingMethods(int[] scores, int threshold) {
+    public static void compareCountingMethods(int[] scores, int threshold) {
         int countRecursive = countAboveThresholdRecursive(scores, threshold, 0);
         int countIterative = countAboveThresholdIterative(scores, threshold);
 
@@ -1068,7 +1064,7 @@ public class RecursiveCounter {
     /**
      * Affiche les résultats du comptage.
      */
-    private static void displayResults(int recursive, int iterative) {
+    public static void displayResults(int recursive, int iterative) {
         System.out.println("\nRésultat récursif : " + recursive + " joueurs au-dessus du seuil");
         System.out.println("Résultat itératif : " + iterative + " joueurs au-dessus du seuil");
     }
@@ -1076,7 +1072,7 @@ public class RecursiveCounter {
     /**
      * Vérifie et affiche si les résultats correspondent.
      */
-    private static void verifyMatch(boolean match) {
+    public static void verifyMatch(boolean match) {
         String message;
         if (match) {
             message = "✓ Les résultats correspondent";
@@ -1089,7 +1085,7 @@ public class RecursiveCounter {
     /**
      * Compte récursivement les éléments supérieurs à un seuil.
      */
-    private static int countAboveThresholdRecursive(int[] array, int threshold, int index) {
+    public static int countAboveThresholdRecursive(int[] array, int threshold, int index) {
         // Cas de base : fin du tableau
         if (index >= array.length) {
             return 0;
@@ -1110,7 +1106,7 @@ public class RecursiveCounter {
     /**
      * Compte itérativement les éléments supérieurs à un seuil.
      */
-    private static int countAboveThresholdIterative(int[] array, int threshold) {
+    public static int countAboveThresholdIterative(int[] array, int threshold) {
         int count = 0;
 
         for (int value : array) {
@@ -1121,6 +1117,18 @@ public class RecursiveCounter {
 
         return count;
     }
+    public static void main(String[] args) {
+        int[] scores = {45, 78, 52, 89, 63, 71, 58, 82, 67};
+        int threshold = 65;
+
+        System.out.println("=== Compteur récursif de valeurs ===\n");
+
+        displayScores(scores);
+        System.out.println("\nSeuil de réussite : " + threshold);
+
+        compareCountingMethods(scores, threshold);
+    }
+
 }
 ```
 

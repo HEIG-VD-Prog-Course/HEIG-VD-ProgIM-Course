@@ -7,36 +7,12 @@
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Parcours avec saut d'éléments ===\n");
-
-        // Données : consommation énergétique d'un foyer (kWh) sur 10 jours
-        // Les indices pairs représentent la consommation de jour
-        // Les indices impairs représentent la consommation de nuit
-        double[] consumption = { 12.5, 8.2, 15.3, 9.1, 11.8, 7.5, 13.2, 8.8, 14.1, 9.3 };
-
-        System.out.println("Consommation énergétique complète :");
-        displayAllConsumption(consumption);
-
-        System.out.println("\n--- Approche 1 : Boucle for avec i += 2 ---");
-        displayDayConsumptionWithFor(consumption);
-
-        System.out.println("\n--- Approche 2 : Boucle while ---");
-        displayDayConsumptionWithWhile(consumption);
-
-        System.out.println("\n--- Approche 3 : Test de modulo ---");
-        displayDayConsumptionWithModulo(consumption);
-
-        System.out.println("\n--- Analyse comparative ---");
-        analyzeConsumption(consumption);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Affiche toutes les valeurs du tableau avec leurs indices.
      */
-    private static void displayAllConsumption(double[] consumption) {
+    public static void displayAllConsumption(double[] consumption) {
         for (int i = 0; i < consumption.length; i++) {
             String period;
             if (i % 2 == 0) {
@@ -54,7 +30,7 @@ public class Main {
      * 
      * C'est l'approche la plus efficace car elle évite les itérations inutiles.
      */
-    private static void displayDayConsumptionWithFor(double[] consumption) {
+    public static void displayDayConsumptionWithFor(double[] consumption) {
         System.out.println("Consommation de jour uniquement :");
 
         for (int i = 0; i < consumption.length; i += 2) {
@@ -67,7 +43,7 @@ public class Main {
      * 
      * Alternative à la boucle for, utile quand le saut n'est pas constant.
      */
-    private static void displayDayConsumptionWithWhile(double[] consumption) {
+    public static void displayDayConsumptionWithWhile(double[] consumption) {
         System.out.println("Consommation de jour uniquement :");
 
         int index = 0;
@@ -84,7 +60,7 @@ public class Main {
      * Moins efficace que i += 2 car elle itère sur tous les éléments,
      * mais utile quand la condition de saut est plus complexe.
      */
-    private static void displayDayConsumptionWithModulo(double[] consumption) {
+    public static void displayDayConsumptionWithModulo(double[] consumption) {
         System.out.println("Consommation de jour uniquement :");
 
         for (int i = 0; i < consumption.length; i++) {
@@ -100,7 +76,7 @@ public class Main {
      * 
      * Utilise deux parcours avec saut pour calculer les moyennes séparément.
      */
-    private static void analyzeConsumption(double[] consumption) {
+    public static void analyzeConsumption(double[] consumption) {
         double dayTotal = 0;
         double nightTotal = 0;
         int dayCount = 0;
@@ -130,5 +106,31 @@ public class Main {
             System.out.println("\n💡 Conseil : Envisagez de déplacer certaines activités " +
                     "énergivores vers les heures de nuit pour réduire la consommation.");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Parcours avec saut d'éléments ===\n");
+
+        // Données : consommation énergétique d'un foyer (kWh) sur 10 jours
+        // Les indices pairs représentent la consommation de jour
+        // Les indices impairs représentent la consommation de nuit
+        double[] consumption = { 12.5, 8.2, 15.3, 9.1, 11.8, 7.5, 13.2, 8.8, 14.1, 9.3 };
+
+        System.out.println("Consommation énergétique complète :");
+        displayAllConsumption(consumption);
+
+        System.out.println("\n--- Approche 1 : Boucle for avec i += 2 ---");
+        displayDayConsumptionWithFor(consumption);
+
+        System.out.println("\n--- Approche 2 : Boucle while ---");
+        displayDayConsumptionWithWhile(consumption);
+
+        System.out.println("\n--- Approche 3 : Test de modulo ---");
+        displayDayConsumptionWithModulo(consumption);
+
+        System.out.println("\n--- Analyse comparative ---");
+        analyzeConsumption(consumption);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

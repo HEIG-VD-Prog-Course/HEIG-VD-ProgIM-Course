@@ -27,6 +27,17 @@ Dans ce module, nous explorerons différents algorithmes de tri, de plus simples
 aux plus sophistiqués, en analysant leurs avantages, inconvénients, et
 performances.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Comprendre et implémenter différents algorithmes de tri.
+- Analyser la complexité temporelle et spatiale des algorithmes de tri.
+- Différencier les algorithmes de tri simples des algorithmes avancés.
+- Choisir l'algorithme de tri approprié selon le contexte.
+- Comparer les performances de différents algorithmes de tri.
+- Utiliser les méthodes de tri intégrées de Java.
+- Reconnaître la stabilité d'un algorithme de tri.
+
 ## Pourquoi trier ?
 
 Le tri est essentiel pour de nombreuses raisons :

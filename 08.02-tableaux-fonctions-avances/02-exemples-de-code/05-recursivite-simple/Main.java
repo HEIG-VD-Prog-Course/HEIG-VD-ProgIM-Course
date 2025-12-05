@@ -7,31 +7,12 @@
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Récursivité simple ===\n");
-
-        System.out.println("=== 1. Factorielle ===\n");
-        demonstrateFactorial();
-
-        System.out.println("\n=== 2. Suite de Fibonacci ===\n");
-        demonstrateFibonacci();
-
-        System.out.println("\n=== 3. Chaîne de souhaits ===\n");
-        demonstrateWishChain();
-
-        System.out.println("\n=== 4. Somme récursive d'un tableau ===\n");
-        demonstrateArraySum();
-
-        System.out.println("\n=== 5. Comparaison récursivité vs itération ===\n");
-        compareRecursionVsIteration();
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Démontre le calcul de factorielle (récursif et itératif).
      */
-    private static void demonstrateFactorial() {
+    public static void demonstrateFactorial() {
         int n = 5;
 
         System.out.println("Calcul de " + n + "! (factorielle de " + n + ")");
@@ -62,7 +43,7 @@ public class Main {
      * @param n le nombre dont on veut calculer la factorielle
      * @return la factorielle de n
      */
-    private static long factorialRecursive(int n) {
+    public static long factorialRecursive(int n) {
         // Cas de base : arrêt de la récursion
         if (n <= 1) {
             return 1;
@@ -78,7 +59,7 @@ public class Main {
      * @param n le nombre dont on veut calculer la factorielle
      * @return la factorielle de n
      */
-    private static long factorialIterative(int n) {
+    public static long factorialIterative(int n) {
         long result = 1;
 
         for (int i = 2; i <= n; i++) {
@@ -91,7 +72,7 @@ public class Main {
     /**
      * Démontre la suite de Fibonacci.
      */
-    private static void demonstrateFibonacci() {
+    public static void demonstrateFibonacci() {
         System.out.println("Suite de Fibonacci : 0, 1, 1, 2, 3, 5, 8, 13, ...");
         System.out.println("Chaque nombre est la somme des deux précédents.\n");
 
@@ -112,7 +93,7 @@ public class Main {
      * @param n la position dans la suite (0-indexée)
      * @return le n-ième nombre de Fibonacci
      */
-    private static int fibonacciRecursive(int n) {
+    public static int fibonacciRecursive(int n) {
         // Cas de base
         if (n <= 1) {
             return n;
@@ -125,7 +106,7 @@ public class Main {
     /**
      * Calcule Fibonacci de manière itérative (plus efficace).
      */
-    private static int fibonacciIterative(int n) {
+    public static int fibonacciIterative(int n) {
         if (n <= 1) {
             return n;
         }
@@ -145,7 +126,7 @@ public class Main {
     /**
      * Démontre une chaîne de souhaits (propagation exponentielle).
      */
-    private static void demonstrateWishChain() {
+    public static void demonstrateWishChain() {
         System.out.println("Une personne souhaite une bonne journée à deux autres,");
         System.out.println("qui font de même, et ainsi de suite...\n");
 
@@ -162,7 +143,7 @@ public class Main {
      * @param depth      le nombre de niveaux de propagation
      * @param personName le nom de la personne qui souhaite
      */
-    private static void wishGoodDay(int depth, String personName) {
+    public static void wishGoodDay(int depth, String personName) {
         // Cas de base : arrêt de la chaîne
         if (depth <= 0) {
             return;
@@ -178,7 +159,7 @@ public class Main {
     /**
      * Démontre la somme récursive d'un tableau.
      */
-    private static void demonstrateArraySum() {
+    public static void demonstrateArraySum() {
         int[] values = { 5, 12, 8, 15, 3, 9 };
 
         System.out.println("Tableau : [5, 12, 8, 15, 3, 9]");
@@ -202,7 +183,7 @@ public class Main {
      * @param index l'indice courant (commence à 0)
      * @return la somme des éléments
      */
-    private static int sumRecursive(int[] array, int index) {
+    public static int sumRecursive(int[] array, int index) {
         // Cas de base : fin du tableau
         if (index >= array.length) {
             return 0;
@@ -215,7 +196,7 @@ public class Main {
     /**
      * Calcule la somme d'un tableau de manière itérative.
      */
-    private static int sumIterative(int[] array) {
+    public static int sumIterative(int[] array) {
         int sum = 0;
 
         for (int value : array) {
@@ -228,7 +209,7 @@ public class Main {
     /**
      * Compare les performances récursivité vs itération.
      */
-    private static void compareRecursionVsIteration() {
+    public static void compareRecursionVsIteration() {
         int n = 10;
 
         System.out.println("Comparaison des approches pour calculer " + n + "!");
@@ -264,5 +245,26 @@ public class Main {
         System.out.println("\n💡 Conseil : Utilisez la récursivité quand elle rend");
         System.out.println("le code plus clair, mais préférez l'itération pour");
         System.out.println("des performances optimales.");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Récursivité simple ===\n");
+
+        System.out.println("=== 1. Factorielle ===\n");
+        demonstrateFactorial();
+
+        System.out.println("\n=== 2. Suite de Fibonacci ===\n");
+        demonstrateFibonacci();
+
+        System.out.println("\n=== 3. Chaîne de souhaits ===\n");
+        demonstrateWishChain();
+
+        System.out.println("\n=== 4. Somme récursive d'un tableau ===\n");
+        demonstrateArraySum();
+
+        System.out.println("\n=== 5. Comparaison récursivité vs itération ===\n");
+        compareRecursionVsIteration();
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

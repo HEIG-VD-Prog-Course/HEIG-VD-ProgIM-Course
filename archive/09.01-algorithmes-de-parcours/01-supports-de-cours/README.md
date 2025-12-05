@@ -27,6 +27,17 @@ programmes efficaces.
 Dans ce module, nous explorerons différentes stratégies de recherche, de la plus
 simple à la plus optimisée, en analysant leurs performances et cas d'usage.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Comprendre et implémenter différents algorithmes de recherche.
+- Différencier la recherche linéaire et la recherche binaire.
+- Analyser la complexité temporelle des algorithmes de recherche.
+- Choisir l'algorithme de recherche approprié selon le contexte.
+- Implémenter des parcours séquentiels et indexés dans des collections.
+- Reconnaître les avantages et limitations de chaque algorithme.
+- Optimiser les performances de recherche dans vos programmes.
+
 ## Comprendre la complexité algorithmique
 
 Avant de plonger dans les algorithmes de recherche, il est essentiel de

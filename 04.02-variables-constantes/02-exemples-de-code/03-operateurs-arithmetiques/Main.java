@@ -4,6 +4,7 @@
  * Les opérateurs permettent d'effectuer des calculs sur les variables.
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Opérateurs arithmétiques ===\n");
 

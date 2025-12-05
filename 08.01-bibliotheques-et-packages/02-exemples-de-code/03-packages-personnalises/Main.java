@@ -20,6 +20,7 @@ import utils.Calculator;
  * Toutes les fonctions sont appelées directement via NomClasse.nomFonction()
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println(Formatter.formatTitle("Bibliothèque d'outils communautaire"));
         System.out.println();

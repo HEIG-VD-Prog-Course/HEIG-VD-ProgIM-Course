@@ -7,29 +7,12 @@
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Recherche et comptage ===\n");
-
-        // IDs des livres empruntés dans une bibliothèque de quartier
-        // Chaque ID correspond à un livre, les doublons indiquent plusieurs emprunts
-        int[] borrowedBooks = { 101, 205, 342, 101, 456, 205, 789, 101, 342, 205, 101 };
-
-        System.out.println("=== Recherche linéaire ===\n");
-        demonstrateLinearSearch(borrowedBooks);
-
-        System.out.println("\n=== Comptage d'occurrences ===\n");
-        demonstrateCountOccurrences(borrowedBooks);
-
-        System.out.println("\n=== Analyse des emprunts ===\n");
-        analyzePopularBooks(borrowedBooks);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Démontre la recherche linéaire avec différentes boucles.
      */
-    private static void demonstrateLinearSearch(int[] array) {
+    public static void demonstrateLinearSearch(int[] array) {
         int searchTarget = 205;
 
         // Recherche avec boucle for
@@ -66,7 +49,7 @@ public class Main {
     /**
      * Recherche linéaire avec boucle for.
      */
-    private static int linearSearchFor(int[] array, int target) {
+    public static int linearSearchFor(int[] array, int target) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == target) {
                 return i;
@@ -78,7 +61,7 @@ public class Main {
     /**
      * Recherche linéaire avec boucle while.
      */
-    private static int linearSearchWhile(int[] array, int target) {
+    public static int linearSearchWhile(int[] array, int target) {
         int index = 0;
 
         while (index < array.length) {
@@ -94,7 +77,7 @@ public class Main {
     /**
      * Recherche linéaire avec boucle do-while.
      */
-    private static int linearSearchDoWhile(int[] array, int target) {
+    public static int linearSearchDoWhile(int[] array, int target) {
         if (array.length == 0) {
             return -1;
         }
@@ -114,7 +97,7 @@ public class Main {
     /**
      * Démontre le comptage d'occurrences avec différentes boucles.
      */
-    private static void demonstrateCountOccurrences(int[] array) {
+    public static void demonstrateCountOccurrences(int[] array) {
         int bookId = 101;
 
         // Comptage avec for classique
@@ -136,7 +119,7 @@ public class Main {
     /**
      * Compte les occurrences avec boucle for classique.
      */
-    private static int countOccurrencesFor(int[] array, int value) {
+    public static int countOccurrencesFor(int[] array, int value) {
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -151,7 +134,7 @@ public class Main {
     /**
      * Compte les occurrences avec boucle for-each.
      */
-    private static int countOccurrencesForEach(int[] array, int value) {
+    public static int countOccurrencesForEach(int[] array, int value) {
         int count = 0;
 
         for (int element : array) {
@@ -166,7 +149,7 @@ public class Main {
     /**
      * Compte les occurrences avec boucle while.
      */
-    private static int countOccurrencesWhile(int[] array, int value) {
+    public static int countOccurrencesWhile(int[] array, int value) {
         int count = 0;
         int index = 0;
 
@@ -183,7 +166,7 @@ public class Main {
     /**
      * Analyse les livres les plus populaires de la bibliothèque.
      */
-    private static void analyzePopularBooks(int[] borrowedBooks) {
+    public static void analyzePopularBooks(int[] borrowedBooks) {
         // Identifie les IDs uniques (approche simple pour cet exemple)
         int[] uniqueBooks = { 101, 205, 342, 456, 789 };
         String[] bookTitles = {
@@ -214,5 +197,24 @@ public class Main {
                 bookTitles[mostPopularIndex], maxBorrows));
         System.out.println("💡 Conseil : Envisagez d'acquérir un exemplaire supplémentaire " +
                 "de ce livre populaire !");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Recherche et comptage ===\n");
+
+        // IDs des livres empruntés dans une bibliothèque de quartier
+        // Chaque ID correspond à un livre, les doublons indiquent plusieurs emprunts
+        int[] borrowedBooks = { 101, 205, 342, 101, 456, 205, 789, 101, 342, 205, 101 };
+
+        System.out.println("=== Recherche linéaire ===\n");
+        demonstrateLinearSearch(borrowedBooks);
+
+        System.out.println("\n=== Comptage d'occurrences ===\n");
+        demonstrateCountOccurrences(borrowedBooks);
+
+        System.out.println("\n=== Analyse des emprunts ===\n");
+        analyzePopularBooks(borrowedBooks);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

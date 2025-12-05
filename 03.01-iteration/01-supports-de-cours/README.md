@@ -32,10 +32,11 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
+À la fin de cette séance, vous devriez être capable de :
+
 - Comprendre le concept d'itération et son utilité dans la programmation.
 - Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
 - Être capable de représenter des boucles en pseudocode et en diagrammes
-  d'activité UML.
 
 ## L'itération
 
@@ -53,7 +54,9 @@ Deux structures très utilisées sont :
 
 ### La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)
 
-> [!TIP] Dans la plupart des langages de programmation, la boucle « TANT QUE »
+> [!TIP]
+>
+> Dans la plupart des langages de programmation, la boucle « TANT QUE »
 > s'appelle « WHILE » (mot anglais pour « tant que »).
 
 La boucle `TANT QUE` répète tant qu'une condition est vraie. Elle est utile
@@ -288,8 +291,10 @@ public class Panier {
 
 ### La boucle POUR (quand on connaît le nombre d'itérations)
 
-> [!TIP] Dans la plupart des langages de programmation, la boucle « POUR »
-> s'appelle « FOR » (mot anglais pour « pour »).
+> [!TIP]
+>
+> Dans la plupart des langages de programmation, la boucle « POUR » s'appelle
+> « FOR » (mot anglais pour « pour »).
 
 La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter
 une action (par exemple : arroser 5 plantes, distribuer 6 parts, etc.).

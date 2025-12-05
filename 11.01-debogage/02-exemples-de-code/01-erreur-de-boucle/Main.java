@@ -10,20 +10,7 @@
  * 4. Identifier le problème et le corriger
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Débogage : Erreur de boucle ===\n");
-
-        int[] numbers = { 10, 20, 30, 40, 50 };
-
-        System.out.println("Calcul de la somme des nombres...");
-
-        // BUG INTENTIONNEL ICI
-        int sum = calculateSum(numbers);
-
-        System.out.println("Somme totale : " + sum);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Calcule la somme des éléments d'un tableau.
@@ -43,6 +30,21 @@ public class Main {
         }
 
         return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Débogage : Erreur de boucle ===\n");
+
+        int[] numbers = { 10, 20, 30, 40, 50 };
+
+        System.out.println("Calcul de la somme des nombres...");
+
+        // BUG INTENTIONNEL ICI
+        int sum = calculateSum(numbers);
+
+        System.out.println("Somme totale : " + sum);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }
 

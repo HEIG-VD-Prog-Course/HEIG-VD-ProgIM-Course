@@ -58,6 +58,18 @@ C'est une compétence essentielle pour tout développeur, car :
 
 ---
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Comprendre ce qu'est un bug et les différents types d'erreurs (compilation,
+- Appliquer une démarche méthodique pour identifier et corriger les bugs.
+- Utiliser les techniques de débogage de base (lecture de code, ajout de traces,
+- Utiliser un débogueur (VS Code) pour inspecter l'état d'un programme en cours
+- Placer et gérer des points d'arrêt (breakpoints) pour contrôler l'exécution.
+- Examiner les variables, la pile d'appels et évaluer des expressions pendant le
+- Naviguer dans le code avec les actions de débogage (step over, step into, step
+- Identifier et corriger les bugs les plus courants (erreurs de boucle,
+
 ## Partie 1 : Concepts généraux de débogage
 
 Cette première partie couvre les concepts fondamentaux du débogage, applicables

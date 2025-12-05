@@ -7,37 +7,12 @@
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Recherche du minimum et du maximum ===\n");
-
-        // Production d'énergie solaire (kWh) d'un panneau partagé sur 12 mois
-        double[] solarProduction = { 45.2, 62.8, 95.5, 128.3, 156.7, 165.2,
-                170.8, 158.4, 122.6, 88.9, 52.3, 38.1 };
-        String[] months = { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
-                "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" };
-
-        System.out.println("Production solaire annuelle :");
-        displayProduction(solarProduction, months);
-
-        System.out.println("\n=== Recherche du minimum ===\n");
-        demonstrateFindMin(solarProduction, months);
-
-        System.out.println("\n=== Recherche du maximum ===\n");
-        demonstrateFindMax(solarProduction, months);
-
-        System.out.println("\n=== Recherche simultanée ===\n");
-        demonstrateFindMinMax(solarProduction, months);
-
-        System.out.println("\n=== Analyse annuelle ===\n");
-        analyzeProduction(solarProduction, months);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Affiche la production pour chaque mois.
      */
-    private static void displayProduction(double[] production, String[] months) {
+    public static void displayProduction(double[] production, String[] months) {
         for (int i = 0; i < production.length; i++) {
             System.out.println(String.format("%s : %.1f kWh", months[i], production[i]));
         }
@@ -46,7 +21,7 @@ public class Main {
     /**
      * Démontre la recherche du minimum avec différentes boucles.
      */
-    private static void demonstrateFindMin(double[] production, String[] months) {
+    public static void demonstrateFindMin(double[] production, String[] months) {
         // Recherche avec for
         System.out.println("--- Recherche avec for ---");
         double minFor = findMinFor(production);
@@ -68,7 +43,7 @@ public class Main {
     /**
      * Recherche du minimum avec boucle for.
      */
-    private static double findMinFor(double[] array) {
+    public static double findMinFor(double[] array) {
         double min = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -83,7 +58,7 @@ public class Main {
     /**
      * Recherche du minimum avec boucle for-each.
      */
-    private static double findMinForEach(double[] array) {
+    public static double findMinForEach(double[] array) {
         double min = array[0];
 
         for (double value : array) {
@@ -98,7 +73,7 @@ public class Main {
     /**
      * Recherche du minimum avec boucle while.
      */
-    private static double findMinWhile(double[] array) {
+    public static double findMinWhile(double[] array) {
         double min = array[0];
         int index = 1;
 
@@ -115,7 +90,7 @@ public class Main {
     /**
      * Démontre la recherche du maximum avec différentes boucles.
      */
-    private static void demonstrateFindMax(double[] production, String[] months) {
+    public static void demonstrateFindMax(double[] production, String[] months) {
         // Recherche avec for
         System.out.println("--- Recherche avec for ---");
         double maxFor = findMaxFor(production);
@@ -137,7 +112,7 @@ public class Main {
     /**
      * Recherche du maximum avec boucle for.
      */
-    private static double findMaxFor(double[] array) {
+    public static double findMaxFor(double[] array) {
         double max = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -152,7 +127,7 @@ public class Main {
     /**
      * Recherche du maximum avec boucle while.
      */
-    private static double findMaxWhile(double[] array) {
+    public static double findMaxWhile(double[] array) {
         double max = array[0];
         int index = 1;
 
@@ -169,7 +144,7 @@ public class Main {
     /**
      * Recherche du maximum avec boucle do-while.
      */
-    private static double findMaxDoWhile(double[] array) {
+    public static double findMaxDoWhile(double[] array) {
         double max = array[0];
         int index = 1;
 
@@ -188,7 +163,7 @@ public class Main {
     /**
      * Recherche simultanée du minimum et du maximum (plus efficace).
      */
-    private static void demonstrateFindMinMax(double[] production, String[] months) {
+    public static void demonstrateFindMinMax(double[] production, String[] months) {
         if (production.length == 0) {
             System.out.println("Pas de données disponibles");
             return;
@@ -219,7 +194,7 @@ public class Main {
     /**
      * Trouve l'indice d'une valeur donnée.
      */
-    private static int findIndexFor(double[] array, double value) {
+    public static int findIndexFor(double[] array, double value) {
         for (int i = 0; i < array.length; i++) {
             if (Math.abs(array[i] - value) < 0.001) { // Comparaison de doubles
                 return i;
@@ -231,7 +206,7 @@ public class Main {
     /**
      * Analyse complète de la production annuelle.
      */
-    private static void analyzeProduction(double[] production, String[] months) {
+    public static void analyzeProduction(double[] production, String[] months) {
         double min = findMinFor(production);
         double max = findMaxFor(production);
         int minIndex = findIndexFor(production, min);
@@ -259,5 +234,32 @@ public class Main {
             System.out.println("Envisagez un système de stockage par batterie pour " +
                     "équilibrer la consommation.");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Recherche du minimum et du maximum ===\n");
+
+        // Production d'énergie solaire (kWh) d'un panneau partagé sur 12 mois
+        double[] solarProduction = { 45.2, 62.8, 95.5, 128.3, 156.7, 165.2,
+                170.8, 158.4, 122.6, 88.9, 52.3, 38.1 };
+        String[] months = { "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+                "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre" };
+
+        System.out.println("Production solaire annuelle :");
+        displayProduction(solarProduction, months);
+
+        System.out.println("\n=== Recherche du minimum ===\n");
+        demonstrateFindMin(solarProduction, months);
+
+        System.out.println("\n=== Recherche du maximum ===\n");
+        demonstrateFindMax(solarProduction, months);
+
+        System.out.println("\n=== Recherche simultanée ===\n");
+        demonstrateFindMinMax(solarProduction, months);
+
+        System.out.println("\n=== Analyse annuelle ===\n");
+        analyzeProduction(solarProduction, months);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

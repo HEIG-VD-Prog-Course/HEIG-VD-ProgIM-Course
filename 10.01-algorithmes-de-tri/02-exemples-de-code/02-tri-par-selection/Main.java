@@ -10,40 +10,7 @@ import java.util.Arrays;
  * Complexité : O(n²) dans tous les cas (meilleur, moyen, pire).
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Tri par sélection ===\n");
-
-        int[] numbers = { 64, 25, 12, 22, 11 };
-
-        System.out.println("Tableau initial :");
-        System.out.println(Arrays.toString(numbers));
-        System.out.println();
-
-        // Tri avec affichage des étapes
-        selectionSortVerbose(numbers.clone());
-
-        System.out.println("\n--- Comptage des échanges ---\n");
-
-        int[] numbers2 = { 64, 25, 12, 22, 11 };
-        int swaps = selectionSortWithCount(numbers2);
-
-        System.out.println("Tableau trié : " + Arrays.toString(numbers2));
-        System.out.println("Nombre d'échanges : " + swaps);
-        System.out.println("(Le tri par sélection effectue toujours n-1 échanges)");
-
-        // Comparaison avec un tableau déjà trié
-        System.out.println("\n--- Tableau déjà trié ---\n");
-        int[] sorted = { 1, 2, 3, 4, 5 };
-
-        System.out.println("Tableau initial : " + Arrays.toString(sorted));
-        swaps = selectionSortWithCount(sorted);
-        System.out.println("Tableau final : " + Arrays.toString(sorted));
-        System.out.println("Nombre d'échanges : " + swaps);
-        System.out.println("(Même nombre d'échanges, le tri par sélection");
-        System.out.println(" n'est pas adaptatif)");
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Tri par sélection simple.
@@ -154,5 +121,40 @@ public class Main {
         }
 
         return swapCount;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Tri par sélection ===\n");
+
+        int[] numbers = { 64, 25, 12, 22, 11 };
+
+        System.out.println("Tableau initial :");
+        System.out.println(Arrays.toString(numbers));
+        System.out.println();
+
+        // Tri avec affichage des étapes
+        selectionSortVerbose(numbers.clone());
+
+        System.out.println("\n--- Comptage des échanges ---\n");
+
+        int[] numbers2 = { 64, 25, 12, 22, 11 };
+        int swaps = selectionSortWithCount(numbers2);
+
+        System.out.println("Tableau trié : " + Arrays.toString(numbers2));
+        System.out.println("Nombre d'échanges : " + swaps);
+        System.out.println("(Le tri par sélection effectue toujours n-1 échanges)");
+
+        // Comparaison avec un tableau déjà trié
+        System.out.println("\n--- Tableau déjà trié ---\n");
+        int[] sorted = { 1, 2, 3, 4, 5 };
+
+        System.out.println("Tableau initial : " + Arrays.toString(sorted));
+        swaps = selectionSortWithCount(sorted);
+        System.out.println("Tableau final : " + Arrays.toString(sorted));
+        System.out.println("Nombre d'échanges : " + swaps);
+        System.out.println("(Même nombre d'échanges, le tri par sélection");
+        System.out.println(" n'est pas adaptatif)");
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

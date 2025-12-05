@@ -5,72 +5,7 @@
  * dans des matrices (tableaux bidimensionnels).
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Parcours de tableaux 2D ===\n");
-
-        // Matrice pour les démonstrations
-        int[][] matrix = {
-                { 12, 45, 23, 78, 56 },
-                { 34, 89, 12, 67, 90 },
-                { 56, 23, 45, 12, 34 },
-                { 78, 12, 67, 89, 23 }
-        };
-
-        System.out.println("=== Matrice ===\n");
-        displayMatrix(matrix);
-
-        // Recherche simple d'une valeur
-        System.out.println("\n--- Recherche d'une valeur ---\n");
-        int target = 67;
-        if (searchValue(matrix, target)) {
-            System.out.println("Valeur " + target + " trouvée dans la matrice");
-            int[] position = findPosition(matrix, target);
-            System.out.println("Position : [" + position[0] + "][" + position[1] + "]");
-        }
-
-        // Compter les occurrences
-        System.out.println("\n--- Occurrences ---\n");
-        int value = 12;
-        int count = countOccurrences(matrix, value);
-        System.out.println("Le nombre " + value + " apparaît " + count + " fois");
-
-        // Trouver le maximum
-        System.out.println("\n--- Recherche du maximum ---\n");
-        int max = findMax(matrix);
-        System.out.println("Valeur maximale : " + max);
-        int[] maxPos = findPosition(matrix, max);
-        System.out.println("Position : [" + maxPos[0] + "][" + maxPos[1] + "]");
-
-        // Trouver le minimum
-        System.out.println("\n--- Recherche du minimum ---\n");
-        int min = findMin(matrix);
-        System.out.println("Valeur minimale : " + min);
-
-        // Recherche dans une ligne spécifique
-        System.out.println("\n--- Recherche dans une ligne ---\n");
-        int row = 2;
-        int rowTarget = 45;
-        if (searchInRow(matrix, row, rowTarget)) {
-            System.out.println("Valeur " + rowTarget + " trouvée dans la ligne " + row);
-        }
-
-        // Recherche dans une colonne spécifique
-        System.out.println("\n--- Recherche dans une colonne ---\n");
-        int col = 3;
-        int colTarget = 89;
-        if (searchInColumn(matrix, col, colTarget)) {
-            System.out.println("Valeur " + colTarget + " trouvée dans la colonne " + col);
-        }
-
-        // Somme de tous les éléments
-        System.out.println("\n--- Statistiques ---\n");
-        int sum = calculateSum(matrix);
-        double average = (double) sum / (matrix.length * matrix[0].length);
-        System.out.println("Somme totale : " + sum);
-        System.out.println("Moyenne : " + average);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Affiche une matrice de manière formatée.
@@ -241,5 +176,72 @@ public class Main {
         }
 
         return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Parcours de tableaux 2D ===\n");
+
+        // Matrice pour les démonstrations
+        int[][] matrix = {
+                { 12, 45, 23, 78, 56 },
+                { 34, 89, 12, 67, 90 },
+                { 56, 23, 45, 12, 34 },
+                { 78, 12, 67, 89, 23 }
+        };
+
+        System.out.println("=== Matrice ===\n");
+        displayMatrix(matrix);
+
+        // Recherche simple d'une valeur
+        System.out.println("\n--- Recherche d'une valeur ---\n");
+        int target = 67;
+        if (searchValue(matrix, target)) {
+            System.out.println("Valeur " + target + " trouvée dans la matrice");
+            int[] position = findPosition(matrix, target);
+            System.out.println("Position : [" + position[0] + "][" + position[1] + "]");
+        }
+
+        // Compter les occurrences
+        System.out.println("\n--- Occurrences ---\n");
+        int value = 12;
+        int count = countOccurrences(matrix, value);
+        System.out.println("Le nombre " + value + " apparaît " + count + " fois");
+
+        // Trouver le maximum
+        System.out.println("\n--- Recherche du maximum ---\n");
+        int max = findMax(matrix);
+        System.out.println("Valeur maximale : " + max);
+        int[] maxPos = findPosition(matrix, max);
+        System.out.println("Position : [" + maxPos[0] + "][" + maxPos[1] + "]");
+
+        // Trouver le minimum
+        System.out.println("\n--- Recherche du minimum ---\n");
+        int min = findMin(matrix);
+        System.out.println("Valeur minimale : " + min);
+
+        // Recherche dans une ligne spécifique
+        System.out.println("\n--- Recherche dans une ligne ---\n");
+        int row = 2;
+        int rowTarget = 45;
+        if (searchInRow(matrix, row, rowTarget)) {
+            System.out.println("Valeur " + rowTarget + " trouvée dans la ligne " + row);
+        }
+
+        // Recherche dans une colonne spécifique
+        System.out.println("\n--- Recherche dans une colonne ---\n");
+        int col = 3;
+        int colTarget = 89;
+        if (searchInColumn(matrix, col, colTarget)) {
+            System.out.println("Valeur " + colTarget + " trouvée dans la colonne " + col);
+        }
+
+        // Somme de tous les éléments
+        System.out.println("\n--- Statistiques ---\n");
+        int sum = calculateSum(matrix);
+        double average = (double) sum / (matrix.length * matrix[0].length);
+        System.out.println("Somme totale : " + sum);
+        System.out.println("Moyenne : " + average);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

@@ -72,7 +72,9 @@ Les méthodes (également appelées fonctions dans d'autres langages) sont la
 solution à ce problème. Elles permettent de **découper un programme en morceaux
 plus petits**, chacun ayant une responsabilité claire et bien définie.
 
-> [!NOTE] En Java, on utilise le terme "méthode" plutôt que "fonction" car elles
+> [!NOTE]
+>
+> En Java, on utilise le terme "méthode" plutôt que "fonction" car elles
 > sont toujours définies à l'intérieur d'une classe. Mais les deux termes font
 > référence au même concept.
 
@@ -80,6 +82,20 @@ Dans ce chapitre, vous allez apprendre à créer vos propres méthodes, à les
 appeler, à leur passer des informations et à récupérer leurs résultats. Vous
 découvrirez également les nombreuses méthodes déjà fournies par Java que vous
 pouvez utiliser immédiatement.
+
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Décrire ce qu'est une méthode en programmation
+- Déclarer une méthode en Java
+- Appeler une méthode en Java
+- Passer des paramètres à une méthode en Java
+- Utiliser une valeur de retour
+- Expliquer ce qu'est une portée de variable
+- Utiliser des variables de classe
+- Savoir où trouver la documentation sur les méthodes prédéfinies en Java
+- Utiliser des méthodes prédéfinies en Java
+- Réutiliser du code avec des méthodes
 
 ## Qu'est-ce qu'une méthode ?
 
@@ -179,7 +195,9 @@ Les méthodes apportent plusieurs avantages majeurs :
 
 5. **Test et débogage** : Plus facile de tester et corriger des petites méthodes
 
-> [!IMPORTANT] Une bonne méthode fait **une seule chose** et la fait bien. Si
+> [!IMPORTANT]
+>
+> Une bonne méthode fait **une seule chose** et la fait bien. Si
 > votre méthode fait trop de choses différentes, c'est probablement qu'elle
 > devrait être divisée en plusieurs méthodes plus petites.
 
@@ -206,7 +224,9 @@ Décomposons chaque élément :
 6. **`{ ... }`** : Corps de la méthode (le code à exécuter)
 7. **`return resultat`** : Valeur à renvoyer
 
-> [!NOTE] Le mot-clé `static` signifie que la méthode appartient à la classe
+> [!NOTE]
+>
+> Le mot-clé `static` signifie que la méthode appartient à la classe
 > elle-même et non à une instance de la classe. Pour l'instant, utilisez
 > toujours `static` pour vos méthodes. Nous verrons la programmation orientée
 > objet plus tard.
@@ -247,7 +267,9 @@ Version 1.0
 ====================================
 ```
 
-> [!TIP] Le type `void` signifie "aucun retour". Utilisez `void` quand votre
+> [!TIP]
+>
+> Le type `void` signifie "aucun retour". Utilisez `void` quand votre
 > méthode effectue une action (comme afficher quelque chose) mais ne calcule pas
 > de résultat à renvoyer.
 
@@ -278,7 +300,9 @@ Calculer()        // Ne commence pas par une minuscule
 calculer_moyenne() // Utilise des underscores (style Python/C)
 ```
 
-> [!IMPORTANT] Un bon nom de méthode doit être suffisamment descriptif pour
+> [!IMPORTANT]
+>
+> Un bon nom de méthode doit être suffisamment descriptif pour
 > qu'on comprenne ce qu'elle fait sans lire son code. Préférez un nom long et
 > clair à un nom court et obscur.
 
@@ -364,7 +388,9 @@ Section 2
 ========================
 ```
 
-> [!TIP] C'est exactement le but des méthodes : éviter de répéter le même code.
+> [!TIP]
+>
+> C'est exactement le but des méthodes : éviter de répéter le même code.
 > Plutôt que d'écrire trois fois
 > `System.out.println("========================")`, on écrit une fois la méthode
 > et on l'appelle trois fois.
@@ -394,7 +420,9 @@ public class Main {
 }
 ```
 
-> [!IMPORTANT] L'ordre des déclarations n'a pas d'importance en Java. Vous
+> [!IMPORTANT]
+>
+> L'ordre des déclarations n'a pas d'importance en Java. Vous
 > pouvez appeler une méthode qui est déclarée plus bas dans le fichier. Ce qui
 > compte, c'est que la méthode soit déclarée quelque part dans la classe.
 
@@ -440,7 +468,9 @@ public static void main(String[] args) {
 }
 ```
 
-> [!NOTE] Dans la pratique, les termes "paramètre" et "argument" sont souvent
+> [!NOTE]
+>
+> Dans la pratique, les termes "paramètre" et "argument" sont souvent
 > utilisés de manière interchangeable, mais connaître la distinction aide à
 > comprendre la documentation.
 
@@ -515,7 +545,9 @@ Aire : 70
 Périmètre : 34
 ```
 
-> [!IMPORTANT] L'ordre des arguments doit correspondre exactement à l'ordre des
+> [!IMPORTANT]
+>
+> L'ordre des arguments doit correspondre exactement à l'ordre des
 > paramètres. Si vous inversez les valeurs, le résultat sera incorrect (ou le
 > code ne compilera pas si les types ne correspondent pas).
 
@@ -599,7 +631,9 @@ public static String creerMessage(String nom) {
 }
 ```
 
-> [!IMPORTANT] Le type de la valeur retournée avec `return` doit correspondre
+> [!IMPORTANT]
+>
+> Le type de la valeur retournée avec `return` doit correspondre
 > exactement au type déclaré dans la signature de la méthode. Si vous déclarez
 > `int` mais retournez un `String`, le code ne compilera pas.
 
@@ -650,7 +684,9 @@ public static int[] calculerStatistiques(int a, int b) {
 }
 ```
 
-> [!TIP] Quand `return` est exécuté, la méthode s'arrête immédiatement. Tout
+> [!TIP]
+>
+> Quand `return` est exécuté, la méthode s'arrête immédiatement. Tout
 > code après un `return` ne sera jamais exécuté. C'est une erreur de compilation
 > si le compilateur détecte du code inaccessible après un `return`.
 
@@ -718,7 +754,9 @@ public class Main {
 }
 ```
 
-> [!WARNING] Si vous inversez l'ordre des arguments, vous pouvez obtenir un
+> [!WARNING]
+>
+> Si vous inversez l'ordre des arguments, vous pouvez obtenir un
 > résultat mathématiquement correct mais sémantiquement incorrect. Soyez
 > attentif à l'ordre des paramètres !
 
@@ -772,7 +810,9 @@ public class Main {
 }
 ```
 
-> [!NOTE] Pensez à une variable locale comme à une note sur un papier dans un
+> [!NOTE]
+>
+> Pensez à une variable locale comme à une note sur un papier dans un
 > bureau fermé. Seule la personne dans ce bureau peut lire cette note. Une fois
 > qu'elle sort et ferme la porte, la note n'est plus accessible.
 
@@ -835,7 +875,9 @@ public class Main {
 }
 ```
 
-> [!IMPORTANT] Deux méthodes différentes peuvent avoir des variables locales
+> [!IMPORTANT]
+>
+> Deux méthodes différentes peuvent avoir des variables locales
 > avec le même nom sans conflit, car elles sont dans des portées différentes.
 > C'est comme avoir deux pièces séparées avec chacune une boîte nommée
 > "outils" - elles sont indépendantes.
@@ -952,7 +994,9 @@ public class Main {
 }
 ```
 
-> [!CAUTION] Pour l'instant, évitez d'utiliser des variables de classe (sauf
+> [!CAUTION]
+>
+> Pour l'instant, évitez d'utiliser des variables de classe (sauf
 > pour les constantes). Privilégiez les paramètres et les valeurs de retour.
 > Vous verrez plus tard, avec la programmation orientée objet, quand et comment
 > utiliser correctement l'état dans vos programmes.
@@ -974,7 +1018,9 @@ public class Main {
 }
 ```
 
-> [!TIP] Les constantes sont acceptables car elles ne changent jamais, donc
+> [!TIP]
+>
+> Les constantes sont acceptables car elles ne changent jamais, donc
 > elles ne créent pas les problèmes de l'état global mutable.
 
 ## Méthodes prédéfinies en Java
@@ -1024,7 +1070,9 @@ public class Main {
 }
 ```
 
-> [!TIP] Utilisez `Math.pow(base, exposant)` pour calculer des puissances. Par
+> [!TIP]
+>
+> Utilisez `Math.pow(base, exposant)` pour calculer des puissances. Par
 > exemple, `Math.pow(2, 10)` calcule $2^{10} = 1024$.
 
 ### La classe `String` : manipulation de texte
@@ -1063,7 +1111,9 @@ public class Main {
 }
 ```
 
-> [!IMPORTANT] Les méthodes sur les `String` ne modifient **jamais** la chaîne
+> [!IMPORTANT]
+>
+> Les méthodes sur les `String` ne modifient **jamais** la chaîne
 > originale. Elles renvoient une **nouvelle** chaîne. C'est pourquoi vous devez
 > récupérer le résultat : `String nouveau = texte.toUpperCase();`
 
@@ -1102,7 +1152,9 @@ Toutes les méthodes prédéfinies sont documentées en ligne :
 - **Classe System** :
   [java.lang.System](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html)
 
-> [!TIP] Apprendre à lire la documentation Java est une compétence essentielle.
+> [!TIP]
+>
+> Apprendre à lire la documentation Java est une compétence essentielle.
 > Explorez les méthodes disponibles, regardez les exemples, testez-les dans
 > votre code. C'est en explorant que vous découvrirez de nouveaux outils !
 
@@ -1238,7 +1290,9 @@ public class Main {
 }
 ```
 
-> [!IMPORTANT] La règle DRY (Don't Repeat Yourself) : "Ne vous répétez pas".
+> [!IMPORTANT]
+>
+> La règle DRY (Don't Repeat Yourself) : "Ne vous répétez pas".
 > Chaque fois que vous copiez-collez du code, demandez-vous si une méthode ne
 > serait pas plus appropriée.
 
@@ -1287,7 +1341,9 @@ public class Main {
 }
 ```
 
-> [!TIP] Un bon `main()` devrait lire comme un sommaire : il montre les grandes
+> [!TIP]
+>
+> Un bon `main()` devrait lire comme un sommaire : il montre les grandes
 > étapes du programme, et chaque méthode gère les détails.
 
 ## Bonnes pratiques et conseils
@@ -1381,7 +1437,9 @@ public static double calculerPrixTTC(double prixHT) {
 }
 ```
 
-> [!TIP] Si vous devez écrire beaucoup de commentaires pour expliquer ce que
+> [!TIP]
+>
+> Si vous devez écrire beaucoup de commentaires pour expliquer ce que
 > fait une méthode, c'est peut-être que son nom n'est pas assez clair, ou
 > qu'elle fait trop de choses.
 
@@ -1436,7 +1494,9 @@ public static double calculerMoyenne(int[] nombres) {
 }
 ```
 
-> [!WARNING] Toujours vérifier les cas limites : valeurs nulles, tableaux vides,
+> [!WARNING]
+>
+> Toujours vérifier les cas limites : valeurs nulles, tableaux vides,
 > divisions par zéro, nombres négatifs quand ils ne sont pas attendus, etc.
 
 ## Conclusion

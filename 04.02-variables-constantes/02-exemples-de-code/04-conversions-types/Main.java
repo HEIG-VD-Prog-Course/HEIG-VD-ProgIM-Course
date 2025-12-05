@@ -6,6 +6,7 @@
  * - Explicite (casting) : d'un type plus grand vers un plus petit
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Conversions de types ===\n");
 

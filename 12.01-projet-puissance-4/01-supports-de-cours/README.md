@@ -91,6 +91,18 @@ concepts vus en cours. Ce projet nous permettra de vivre l'expérience complète
 du développement logiciel, de la conception initiale à l'application
 fonctionnelle.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Analyser un problème complexe et le décomposer en étapes réalisables.
+- Concevoir une architecture logicielle pour un projet complet.
+- Utiliser des tableaux multidimensionnels pour représenter une grille de jeu.
+- Implémenter des algorithmes de parcours et de détection de motifs.
+- Organiser son code en fonctions réutilisables et bien nommées.
+- Développer une application interactive en mode console.
+- Tester et déboguer un programme étape par étape.
+- Appliquer les bonnes pratiques de programmation dans un contexte réel.
+
 ## Le jeu Puissance 4
 
 ### Règles du jeu

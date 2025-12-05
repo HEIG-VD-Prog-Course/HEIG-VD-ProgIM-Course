@@ -19,6 +19,16 @@
 - [Objectifs](#objectifs)
 - [Qu'est-ce que l'entrée et la sortie ?](#quest-ce-que-lentrée-et-la-sortie-)
 - [Afficher du texte avec System.out](#afficher-du-texte-avec-systemout)
+
+## Objectifs
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Afficher du texte dans le terminal avec `System.out`
+- Lire des données saisies par l'utilisatrice avec `Scanner`
+- Comprendre ce qu'est l'encodage des caractères (ASCII, UTF-8)
+- Créer des programmes interactifs simples
+
   - [System.out.print vs System.out.println](#systemoutprint-vs-systemoutprintln)
   - [Afficher plusieurs valeurs](#afficher-plusieurs-valeurs)
 - [Lire des données avec Scanner](#lire-des-données-avec-scanner)

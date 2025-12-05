@@ -9,15 +9,7 @@
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Puissance 4 - Étape 1 : Affichage de la grille ===\n");
-
-        // Création et initialisation de la grille
-        char[][] grid = createGrid();
-
-        // Affichage de la grille vide
-        displayGrid(grid);
-    }
+    
 
     /**
      * Crée une grille de Puissance 4 vide (6 lignes × 7 colonnes).
@@ -63,5 +55,15 @@ public class Main {
 
         // Afficher les numéros de colonnes (de 1 à 7 pour l'utilisatrice)
         System.out.println(" 1 2 3 4 5 6 7");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Puissance 4 - Étape 1 : Affichage de la grille ===\n");
+
+        // Création et initialisation de la grille
+        char[][] grid = createGrid();
+
+        // Affichage de la grille vide
+        displayGrid(grid);
     }
 }

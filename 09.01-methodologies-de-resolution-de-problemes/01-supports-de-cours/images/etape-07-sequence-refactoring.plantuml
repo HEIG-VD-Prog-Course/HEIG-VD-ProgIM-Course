@@ -1,0 +1,80 @@
+@startuml etape-07-sequence-refactoring
+
+title Étape 7 : Interaction avec fonctions
+
+actor "Utilisatrice" as User
+participant "Console" as Console
+participant "Main" as Main
+participant "readGradeCount" as ReadCount
+participant "inputGrades" as Input
+participant "displayGrades" as Display
+participant "calculateMinimum" as CalcMin
+participant "calculateMaximum" as CalcMax
+participant "calculateAverage" as CalcAvg
+participant "modifyGrade" as Modify
+
+User -> Main: Lancer le programme
+
+Main -> ReadCount: readGradeCount()
+ReadCount -> Console: Afficher "Combien de notes ?"
+User -> Console: Taper 3
+Console -> ReadCount: Lire entrée
+ReadCount --> Main: count = 3
+
+Main -> Input: inputGrades(notes, 3)
+loop Pour chaque note
+    Input -> Console: Afficher "Entrez la note"
+    User -> Console: Taper note
+    Console -> Input: Lire entrée
+    Input -> Input: Valider et stocker
+end
+Input --> Main: Tableau rempli
+
+Main -> Display: displayGrades(notes)
+Display -> Console: Afficher toutes les notes
+Console -> User: Voir les notes
+
+Main -> CalcMin: calculateMinimum(notes)
+CalcMin --> Main: min
+
+Main -> CalcMax: calculateMaximum(notes)
+CalcMax --> Main: max
+
+Main -> CalcAvg: calculateAverage(notes)
+CalcAvg --> Main: average
+
+Main -> Console: Afficher statistiques
+Console -> User: Voir statistiques
+
+Main -> Console: Afficher "Modifier une note ?"
+Console -> User: Voir question
+User -> Console: Taper "oui"
+Console -> Main: Lire réponse
+
+Main -> Modify: modifyGrade(notes)
+Modify -> Console: Afficher "Quelle note modifier ?"
+User -> Console: Taper 2
+Console -> Modify: Lire index
+Modify -> Console: Afficher "Nouvelle valeur ?"
+User -> Console: Taper 5
+Console -> Modify: Lire valeur
+Modify -> Modify: Mettre à jour notes[1]
+Modify --> Main: Note modifiée
+
+Main -> Display: displayGrades(notes)
+Display -> Console: Afficher notes mises à jour
+Console -> User: Voir notes
+
+Main -> CalcMin: calculateMinimum(notes)
+CalcMin --> Main: min
+
+Main -> CalcMax: calculateMaximum(notes)
+CalcMax --> Main: max
+
+Main -> CalcAvg: calculateAverage(notes)
+CalcAvg --> Main: average
+
+Main -> Console: Afficher nouvelles statistiques
+Console -> User: Voir statistiques
+
+@enduml

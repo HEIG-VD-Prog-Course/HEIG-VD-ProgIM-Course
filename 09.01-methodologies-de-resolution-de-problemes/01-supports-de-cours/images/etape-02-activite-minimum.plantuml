@@ -1,0 +1,22 @@
+@startuml etape-02-activite-minimum
+
+title Étape 2 : Calcul du minimum avec tableau
+
+start
+
+:je vais garder un minimum de côté;
+:Je vais commencer par le premier élément du tableau;
+
+while (Ai-je fini de parcourir le tableau ?) is (non)
+  :Regarder l'élément courant;
+    if (L'élément courant est-il plus petit que le minimum actuel ?) then (oui)
+        :Mettre à jour le minimum;
+    endif
+  :Passer à l'élément suivant;
+endwhile (oui)
+
+:Afficher le minimum trouvé;
+
+stop
+
+@enduml

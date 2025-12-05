@@ -1,0 +1,20 @@
+@startuml etape-01-activite-moyenne
+
+title Étape 1 : Calcul de la moyenne avec variables individuelles
+
+start
+
+:Je prépare 5 variables pour stocker mes notes;
+
+:J'affiche chaque note individuellement;
+
+:Je fais la somme de toutes les notes;
+
+:Je divise la somme par le nombre de notes
+pour obtenir la moyenne;
+
+:J'affiche la moyenne;
+
+stop
+
+@enduml

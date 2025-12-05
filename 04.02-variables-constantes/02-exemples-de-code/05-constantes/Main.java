@@ -6,6 +6,7 @@
  * On utilise le mot-clé 'final' pour déclarer une constante.
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Constantes ===\n");
 

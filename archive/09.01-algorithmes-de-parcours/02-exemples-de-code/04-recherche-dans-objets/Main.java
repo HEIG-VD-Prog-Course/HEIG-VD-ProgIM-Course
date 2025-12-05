@@ -46,52 +46,7 @@ class Product {
  * critères dans une ArrayList.
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Recherche dans des objets ===\n");
-
-        // Créer un inventaire de produits
-        ArrayList<Product> inventory = createInventory();
-
-        // Afficher tous les produits
-        System.out.println("=== Inventaire complet ===\n");
-        displayProducts(inventory);
-
-        // Recherche par nom
-        System.out.println("\n--- Recherche par nom ---\n");
-        Product found = searchByName(inventory, "Clavier mécanique");
-        if (found != null) {
-            System.out.println("Trouvé : " + found);
-        } else {
-            System.out.println("Produit non trouvé");
-        }
-
-        // Recherche par catégorie
-        System.out.println("\n--- Recherche par catégorie ---\n");
-        ArrayList<Product> electronics = searchByCategory(inventory, "Électronique");
-        System.out.println("Produits dans la catégorie 'Électronique' :");
-        displayProducts(electronics);
-
-        // Recherche par prix maximum
-        System.out.println("\n--- Recherche par prix ---\n");
-        ArrayList<Product> affordable = searchByMaxPrice(inventory, 100.00);
-        System.out.println("Produits à moins de 100 CHF :");
-        displayProducts(affordable);
-
-        // Recherche par stock faible
-        System.out.println("\n--- Recherche par stock faible ---\n");
-        ArrayList<Product> lowStock = searchByLowStock(inventory, 10);
-        System.out.println("Produits avec stock < 10 :");
-        displayProducts(lowStock);
-
-        // Recherche multiple (catégorie ET prix)
-        System.out.println("\n--- Recherche multiple ---\n");
-        ArrayList<Product> result = searchByCategoryAndMaxPrice(
-                inventory, "Accessoires", 50.00);
-        System.out.println("Accessoires à moins de 50 CHF :");
-        displayProducts(result);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Crée un inventaire de produits pour les démonstrations.
@@ -230,5 +185,52 @@ public class Main {
                 System.out.println(product);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Recherche dans des objets ===\n");
+
+        // Créer un inventaire de produits
+        ArrayList<Product> inventory = createInventory();
+
+        // Afficher tous les produits
+        System.out.println("=== Inventaire complet ===\n");
+        displayProducts(inventory);
+
+        // Recherche par nom
+        System.out.println("\n--- Recherche par nom ---\n");
+        Product found = searchByName(inventory, "Clavier mécanique");
+        if (found != null) {
+            System.out.println("Trouvé : " + found);
+        } else {
+            System.out.println("Produit non trouvé");
+        }
+
+        // Recherche par catégorie
+        System.out.println("\n--- Recherche par catégorie ---\n");
+        ArrayList<Product> electronics = searchByCategory(inventory, "Électronique");
+        System.out.println("Produits dans la catégorie 'Électronique' :");
+        displayProducts(electronics);
+
+        // Recherche par prix maximum
+        System.out.println("\n--- Recherche par prix ---\n");
+        ArrayList<Product> affordable = searchByMaxPrice(inventory, 100.00);
+        System.out.println("Produits à moins de 100 CHF :");
+        displayProducts(affordable);
+
+        // Recherche par stock faible
+        System.out.println("\n--- Recherche par stock faible ---\n");
+        ArrayList<Product> lowStock = searchByLowStock(inventory, 10);
+        System.out.println("Produits avec stock < 10 :");
+        displayProducts(lowStock);
+
+        // Recherche multiple (catégorie ET prix)
+        System.out.println("\n--- Recherche multiple ---\n");
+        ArrayList<Product> result = searchByCategoryAndMaxPrice(
+                inventory, "Accessoires", 50.00);
+        System.out.println("Accessoires à moins de 50 CHF :");
+        displayProducts(result);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

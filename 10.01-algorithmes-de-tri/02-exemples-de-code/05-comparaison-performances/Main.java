@@ -10,50 +10,7 @@ import java.util.Random;
  * Documentation : https://docs.oracle.com/en/java/javase/17/docs/api/
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Comparaison des performances ===\n");
-
-        // Tailles de tableaux à tester
-        int[] sizes = { 100, 1000, 5000 };
-
-        for (int size : sizes) {
-            System.out.println("=".repeat(60));
-            System.out.println("Test avec " + size + " éléments");
-            System.out.println("=".repeat(60));
-
-            compareAlgorithms(size);
-            System.out.println();
-        }
-
-        // Démonstration spécifique : tableau presque trié
-        System.out.println("=".repeat(60));
-        System.out.println("Test spécial : Tableau presque trié (10000 éléments)");
-        System.out.println("=".repeat(60));
-
-        testAlmostSorted(10000);
-
-        System.out.println("\n=== Conclusions ===\n");
-        System.out.println("1. Algorithmes simples (O(n²)) :");
-        System.out.println("   - Tri à bulles, sélection, insertion");
-        System.out.println("   - Acceptables pour petits tableaux (< 1000)");
-        System.out.println("   - Très lents pour grands tableaux");
-        System.out.println();
-        System.out.println("2. Algorithmes efficaces (O(n log n)) :");
-        System.out.println("   - Tri fusion (Merge Sort)");
-        System.out.println("   - Recommandés pour tableaux moyens/grands");
-        System.out.println("   - Performance stable et prévisible");
-        System.out.println();
-        System.out.println("3. Tri par insertion :");
-        System.out.println("   - Excellent sur données presque triées");
-        System.out.println("   - Adaptatif : s'adapte à l'ordre existant");
-        System.out.println();
-        System.out.println("4. Arrays.sort() (Java) :");
-        System.out.println("   - Utilise Dual-Pivot Quicksort");
-        System.out.println("   - Optimisé et très performant");
-        System.out.println("   - À utiliser en production !");
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Compare les performances des différents algorithmes de tri.
@@ -229,7 +186,7 @@ public class Main {
         merge(array, left, right);
     }
 
-    private static void merge(int[] dest, int[] left, int[] right) {
+    public static void merge(int[] dest, int[] left, int[] right) {
         int i = 0, j = 0, k = 0;
 
         while (i < left.length && j < right.length) {
@@ -244,5 +201,50 @@ public class Main {
             dest[k++] = left[i++];
         while (j < right.length)
             dest[k++] = right[j++];
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Comparaison des performances ===\n");
+
+        // Tailles de tableaux à tester
+        int[] sizes = { 100, 1000, 5000 };
+
+        for (int size : sizes) {
+            System.out.println("=".repeat(60));
+            System.out.println("Test avec " + size + " éléments");
+            System.out.println("=".repeat(60));
+
+            compareAlgorithms(size);
+            System.out.println();
+        }
+
+        // Démonstration spécifique : tableau presque trié
+        System.out.println("=".repeat(60));
+        System.out.println("Test spécial : Tableau presque trié (10000 éléments)");
+        System.out.println("=".repeat(60));
+
+        testAlmostSorted(10000);
+
+        System.out.println("\n=== Conclusions ===\n");
+        System.out.println("1. Algorithmes simples (O(n²)) :");
+        System.out.println("   - Tri à bulles, sélection, insertion");
+        System.out.println("   - Acceptables pour petits tableaux (< 1000)");
+        System.out.println("   - Très lents pour grands tableaux");
+        System.out.println();
+        System.out.println("2. Algorithmes efficaces (O(n log n)) :");
+        System.out.println("   - Tri fusion (Merge Sort)");
+        System.out.println("   - Recommandés pour tableaux moyens/grands");
+        System.out.println("   - Performance stable et prévisible");
+        System.out.println();
+        System.out.println("3. Tri par insertion :");
+        System.out.println("   - Excellent sur données presque triées");
+        System.out.println("   - Adaptatif : s'adapte à l'ordre existant");
+        System.out.println();
+        System.out.println("4. Arrays.sort() (Java) :");
+        System.out.println("   - Utilise Dual-Pivot Quicksort");
+        System.out.println("   - Optimisé et très performant");
+        System.out.println("   - À utiliser en production !");
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }

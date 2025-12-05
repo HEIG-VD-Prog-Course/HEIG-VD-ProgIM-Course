@@ -11,25 +11,7 @@
  * 4. Inspecter les valeurs et identifier la logique incorrecte
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Débogage : Erreur logique ===\n");
-
-        // Tester différents âges
-        checkAge("Ariel", 25);
-        checkAge("Nox", 17);
-        checkAge("Amaru", 18);
-        checkAge("David", 12);
-
-        System.out.println("\n--- Test de calcul de moyenne ---\n");
-
-        // Test de moyenne
-        int[] grades = { 15, 18, 12, 16, 14 };
-        double average = calculateAverage(grades);
-        System.out.println("Moyenne : " + average);
-        System.out.println("(Attendu : 15.0, mais vous verrez autre chose...)");
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Vérifie si une personne est majeure ou mineure.
@@ -81,7 +63,28 @@ public class Main {
  * System.out.println(name + " (" + age + " ans) est majeur.");
  * } else {
  * System.out.println(name + " (" + age + " ans) est mineur.");
- * }
+ *
+
+    public static void main(String[] args) {
+        System.out.println("=== Débogage : Erreur logique ===\n");
+
+        // Tester différents âges
+        checkAge("Ariel", 25);
+        checkAge("Nox", 17);
+        checkAge("Amaru", 18);
+        checkAge("David", 12);
+
+        System.out.println("\n--- Test de calcul de moyenne ---\n");
+
+        // Test de moyenne
+        int[] grades = { 15, 18, 12, 16, 14 };
+        double average = calculateAverage(grades);
+        System.out.println("Moyenne : " + average);
+        System.out.println("(Attendu : 15.0, mais vous verrez autre chose...)");
+
+        System.out.println("\n=== Fin de l'exemple ===");
+    }
+}
  * 
  * 2. Erreur dans calculateAverage() :
  * 

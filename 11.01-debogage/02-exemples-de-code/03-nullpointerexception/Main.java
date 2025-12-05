@@ -10,21 +10,7 @@
  * 4. Remonter dans le code pour comprendre pourquoi
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Débogage : NullPointerException ===\n");
-
-        // Créer quelques étudiants
-        Student alice = new Student("Ariel", 20);
-        Student bob = new Student("Nox", 22);
-        Student charlie = null; // BUG : charlie n'est pas initialisé
-
-        // Afficher les informations
-        displayStudent(alice);
-        displayStudent(bob);
-        displayStudent(charlie); // NullPointerException ici
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Affiche les informations d'un étudiant.
@@ -97,7 +83,24 @@ class Student {
  *     return email;
  * } else {
  *     return "Non défini";
- * }
+ *
+
+    public static void main(String[] args) {
+        System.out.println("=== Débogage : NullPointerException ===\n");
+
+        // Créer quelques étudiants
+        Student alice = new Student("Ariel", 20);
+        Student bob = new Student("Nox", 22);
+        Student charlie = null; // BUG : charlie n'est pas initialisé
+
+        // Afficher les informations
+        displayStudent(alice);
+        displayStudent(bob);
+        displayStudent(charlie); // NullPointerException ici
+
+        System.out.println("\n=== Fin de l'exemple ===");
+    }
+}
  * 
  * Ou initialiser email dans le constructeur :
  * this.email = "non-defini@email.com";

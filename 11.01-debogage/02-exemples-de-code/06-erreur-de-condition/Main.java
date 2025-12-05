@@ -11,16 +11,7 @@
  * 5. Identifier les conditions incorrectes
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Débogage : Erreurs de condition ===\n");
-
-        testGrading();
-        testAccessControl();
-        testRangeCheck();
-        testDiscount();
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Test 1 : Système de notation
@@ -213,7 +204,19 @@ public class Main {
  * - Ajouter des parenthèses pour clarifier :
  * if ((price > 100 && price < 200) || isVIP) {
  * return 0.10;
- * }
+ *
+
+    public static void main(String[] args) {
+        System.out.println("=== Débogage : Erreurs de condition ===\n");
+
+        testGrading();
+        testAccessControl();
+        testRangeCheck();
+        testDiscount();
+
+        System.out.println("\n=== Fin de l'exemple ===");
+    }
+}
  * 
  * EXPLICATION :
  * - Les erreurs de condition sont difficiles à voir en lisant le code

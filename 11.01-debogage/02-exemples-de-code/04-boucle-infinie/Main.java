@@ -11,16 +11,7 @@
  * 5. Identifier pourquoi la condition ne devient jamais fausse
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Débogage : Boucle infinie ===\n");
-
-        System.out.println("Affichage des nombres de 1 à 10 :");
-
-        // BUG : Cette boucle ne se termine jamais
-        printNumbers();
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Affiche les nombres de 1 à 10.
@@ -75,7 +66,19 @@ public class Main {
  * - Changer i-- en i++ :
  * for (int i = 0; i < 10; i++) {
  * System.out.println(i);
- * }
+ *
+
+    public static void main(String[] args) {
+        System.out.println("=== Débogage : Boucle infinie ===\n");
+
+        System.out.println("Affichage des nombres de 1 à 10 :");
+
+        // BUG : Cette boucle ne se termine jamais
+        printNumbers();
+
+        System.out.println("\n=== Fin de l'exemple ===");
+    }
+}
  * 
  * 3. Dans impossibleCondition() :
  * - Changer l'opération :

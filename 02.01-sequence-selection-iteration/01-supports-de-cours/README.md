@@ -96,6 +96,19 @@ représenter de deux manières :
 > cuisine : chaque étape est clairement définie et, si on les suit correctement,
 > on obtient toujours le même résultat.
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Comprendre les trois piliers fondamentaux de la programmation
+- Décrire le concept de variable en programmation
+- Écrire des algorithmes en pseudocode
+- Créer des diagrammes d'activité avec PlantUML
+- Comprendre et appliquer la séquence d'instructions
+- Décrire la sélection avec les conditions SI/ALORS/SINON
+- Utiliser l'itération avec les différents types de boucles
+- Traduire des concepts algorithmiques en diagrammes visuels
+- Analyser et décomposer des problèmes complexes
+
 ## Les variables
 
 ### Qu'est-ce qu'une variable ?

@@ -36,17 +36,27 @@ rendered as colored boxes on GitHub.
 **Available admonition types:**
 
 ```markdown
-> [!NOTE] Highlights information that users should take into account, even when
+> [!NOTE]
+>
+> Highlights information that users should take into account, even when
 > skimming.
 
-> [!TIP] Optional information to help a user be more successful.
+> [!TIP]
+>
+> Optional information to help a user be more successful.
 
-> [!IMPORTANT] Crucial information necessary for users to succeed.
+> [!IMPORTANT]
+>
+> Crucial information necessary for users to succeed.
 
-> [!WARNING] Critical content demanding immediate user attention due to
+> [!WARNING]
+>
+> Critical content demanding immediate user attention due to
 > potential risks.
 
-> [!CAUTION] Negative potential consequences of an action.
+> [!CAUTION]
+>
+> Negative potential consequences of an action.
 ```
 
 **Usage guidelines:**
@@ -67,10 +77,14 @@ rendered as colored boxes on GitHub.
 
 La conversion entre types primitifs peut être implicite ou explicite.
 
-> [!IMPORTANT] Une conversion de type avec perte de précision (par exemple de
+> [!IMPORTANT]
+>
+> Une conversion de type avec perte de précision (par exemple de
 > `double` vers `int`) nécessite un cast explicite.
 
-> [!WARNING] Un cast explicite peut entraîner une perte de données. Par exemple,
+> [!WARNING]
+>
+> Un cast explicite peut entraîner une perte de données. Par exemple,
 > `(int) 3.9` donnera `3`, pas `4`.
 ```
 

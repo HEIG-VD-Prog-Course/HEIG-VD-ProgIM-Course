@@ -4,6 +4,7 @@
  * Cet exemple montre comment déclarer un tableau, y accéder et le modifier.
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Tableau simple ===\n");
 

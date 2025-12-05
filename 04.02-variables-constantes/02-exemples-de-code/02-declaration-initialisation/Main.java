@@ -5,6 +5,7 @@
  * Elle peut être initialisée (recevoir une valeur) immédiatement ou plus tard.
  */
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Déclaration et initialisation ===\n");
 

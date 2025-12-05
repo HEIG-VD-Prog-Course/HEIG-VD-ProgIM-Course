@@ -80,6 +80,9 @@ profession being taught rather than added as a separate module.
    typographic apostrophes (')
 7. **Real-world relevance**: Use practical examples with ecological and low-tech
    values
+8. **English code**: All variable names, function names, class names, and
+   identifiers in code must be in English following language conventions (Java,
+   etc.)
 
 ## Author Attribution
 

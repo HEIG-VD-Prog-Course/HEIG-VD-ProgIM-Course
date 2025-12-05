@@ -24,6 +24,18 @@ allons explorer des stratégies de parcours plus avancées et découvrir la
 récursivité. Ces techniques vous permettront de résoudre des problèmes plus
 complexes de manière élégante et efficace.
 
+À l'issue de cette séance de cours, vous serez capable de :
+
+- Parcourir un tableau avec différentes stratégies (sauter des éléments, exclure
+  des bornes, parcours inversé, parcours partiel).
+- Choisir le type de boucle adapté à chaque situation de parcours.
+- Implémenter des algorithmes simples de recherche et de comptage dans des
+  tableaux.
+- Comprendre et appliquer le principe de la récursivité pour des cas simples
+  (factorielle, Fibonacci).
+- Décomposer des problèmes complexes en fonctions réutilisables travaillant avec
+  des tableaux.
+
 ## Stratégies de parcours de tableaux
 
 ### Parcours avec saut d'éléments
@@ -68,8 +80,10 @@ for (int i = 0; i < values.length; i++) {
 }
 ```
 
-> [!TIP] L'approche avec `i += 2` est plus efficace que celle avec `i % 2 == 0`
-> car elle évite des itérations inutiles.
+> [!TIP]
+>
+> L'approche avec `i += 2` est plus efficace que celle avec `i % 2 == 0` car
+> elle évite des itérations inutiles.
 
 ### Parcours en excluant les bornes
 
@@ -123,9 +137,11 @@ while (index < temperatures.length - 1) {
 }
 ```
 
-> [!IMPORTANT] Vérifiez toujours que le tableau contient suffisamment d'éléments
-> avant d'exclure les bornes. Un tableau de moins de 2 éléments pourrait causer
-> des problèmes.
+> [!IMPORTANT]
+>
+> Vérifiez toujours que le tableau contient suffisamment d'éléments avant
+> d'exclure les bornes. Un tableau de moins de 2 éléments pourrait causer des
+> problèmes.
 
 ### Parcours inversé
 
@@ -170,8 +186,10 @@ if (scores.length > 0) { // Protection contre tableau vide
 }
 ```
 
-> [!WARNING] Attention à l'indice de départ : `scores.length - 1` et non
-> `scores.length` qui provoquerait une erreur `ArrayIndexOutOfBoundsException`.
+> [!WARNING]
+>
+> Attention à l'indice de départ : `scores.length - 1` et non `scores.length`
+> qui provoquerait une erreur `ArrayIndexOutOfBoundsException`.
 
 ### Parcours partiel (sous-ensemble)
 
@@ -224,8 +242,10 @@ for (int i = start; i < end && i < values.length; i++) {
 }
 ```
 
-> [!TIP] Utilisez des fonctions pour encapsuler ces parcours complexes et les
-> rendre réutilisables.
+> [!TIP]
+>
+> Utilisez des fonctions pour encapsuler ces parcours complexes et les rendre
+> réutilisables.
 
 ## Algorithmes simples sur tableaux
 
@@ -284,8 +304,10 @@ public static int linearSearch(int[] array, int target) {
 }
 ```
 
-> [!NOTE] La recherche linéaire a une complexité O(n), ce qui signifie que dans
-> le pire cas, elle doit parcourir tout le tableau.
+> [!NOTE]
+>
+> La recherche linéaire a une complexité O(n), ce qui signifie que dans le pire
+> cas, elle doit parcourir tout le tableau.
 
 ### Comptage d'occurrences
 
@@ -397,7 +419,9 @@ public static int findMin(int[] array) {
 }
 ```
 
-> [!TIP] Ces algorithmes peuvent être adaptés pour trouver l'indice de la valeur
+> [!TIP]
+>
+> Ces algorithmes peuvent être adaptés pour trouver l'indice de la valeur
 > minimale ou maximale en retournant l'indice au lieu de la valeur.
 
 ## Introduction à la récursivité
@@ -479,9 +503,11 @@ public static int fibonacci(int n) {
 3. ... (l'arbre d'appels devient complexe)
 4. Résultat final : 5
 
-> [!WARNING] La version récursive de Fibonacci est inefficace pour de grandes
-> valeurs de n car elle recalcule les mêmes valeurs plusieurs fois. Une version
-> itérative ou avec mémoïsation serait préférable en pratique.
+> [!WARNING]
+>
+> La version récursive de Fibonacci est inefficace pour de grandes valeurs de n
+> car elle recalcule les mêmes valeurs plusieurs fois. Une version itérative ou
+> avec mémoïsation serait préférable en pratique.
 
 ### Exemple 3 : Chaîne de souhaits
 
@@ -547,9 +573,11 @@ public static long factorialIterative(int n) {
 }
 ```
 
-> [!IMPORTANT] La récursivité est un outil puissant, mais elle n'est pas
-> toujours la meilleure solution. Utilisez-la quand elle rend le code plus clair
-> et maintenable.
+> [!IMPORTANT]
+>
+> La récursivité est un outil puissant, mais elle n'est pas toujours la
+> meilleure solution. Utilisez-la quand elle rend le code plus clair et
+> maintenable.
 
 ## Pour aller plus loin
 
@@ -660,8 +688,10 @@ public static int searchRecursive(int[] array, int target, int index) {
 // Utilisation : searchRecursive(array, target, 0)
 ```
 
-> [!NOTE] Ces exemples récursifs avec tableaux sont pédagogiques. En pratique,
-> les versions itératives sont généralement préférables pour des raisons de
+> [!NOTE]
+>
+> Ces exemples récursifs avec tableaux sont pédagogiques. En pratique, les
+> versions itératives sont généralement préférables pour des raisons de
 > performance.
 
 ## Sources

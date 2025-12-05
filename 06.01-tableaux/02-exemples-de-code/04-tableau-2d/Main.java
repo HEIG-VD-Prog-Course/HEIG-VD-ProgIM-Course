@@ -4,6 +4,42 @@
  * Cet exemple montre comment créer et manipuler une matrice (grille).
  */
 public class Main {
+    
+
+    /**
+     * Affiche une grille de morpion de manière lisible.
+     *
+     * @param grid la grille à afficher
+     */
+    public static void displayGrid(String[][] grid) {
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
+                System.out.print(grid[row][col]);
+                if (col < grid[row].length - 1) {
+                    System.out.print(" | ");
+                }
+            }
+            System.out.println();
+            if (row < grid.length - 1) {
+                System.out.println("---------");
+            }
+        }
+    }
+
+    /**
+     * Affiche une matrice numérique de manière lisible.
+     *
+     * @param matrix la matrice à afficher
+     */
+    public static void displayMatrix(int[][] matrix) {
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                System.out.print(String.format("%4d", matrix[row][col]));
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("=== Exemple : Tableau à deux dimensions ===\n");
 
@@ -58,39 +94,5 @@ public class Main {
         }
 
         System.out.println("\n=== Fin de l'exemple ===");
-    }
-
-    /**
-     * Affiche une grille de morpion de manière lisible.
-     *
-     * @param grid la grille à afficher
-     */
-    private static void displayGrid(String[][] grid) {
-        for (int row = 0; row < grid.length; row++) {
-            for (int col = 0; col < grid[row].length; col++) {
-                System.out.print(grid[row][col]);
-                if (col < grid[row].length - 1) {
-                    System.out.print(" | ");
-                }
-            }
-            System.out.println();
-            if (row < grid.length - 1) {
-                System.out.println("---------");
-            }
-        }
-    }
-
-    /**
-     * Affiche une matrice numérique de manière lisible.
-     *
-     * @param matrix la matrice à afficher
-     */
-    private static void displayMatrix(int[][] matrix) {
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                System.out.print(String.format("%4d", matrix[row][col]));
-            }
-            System.out.println();
-        }
     }
 }

@@ -333,11 +333,6 @@ public static void selectionSortPeople(Person[] people) {
         people[i] = people[minIndex];
         people[minIndex] = temp;
     }
-}
-
-/**
- * Test de stabilité.
- */
 public static void main(String[] args) {
     Person[] people1 = {
         new Person("Ariel", 25),
@@ -361,6 +356,8 @@ public static void main(String[] args) {
     System.out.println("\nAprès tri par sélection (NON STABLE) :");
     System.out.println(Arrays.toString(people2));
     // L'ordre relatif peut changer pour les éléments égaux
+}
+
 }
 ```
 

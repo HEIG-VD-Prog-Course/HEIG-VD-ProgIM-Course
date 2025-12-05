@@ -1,0 +1,27 @@
+@startuml introduction-sequence-code
+
+title Exemple de code : Calcul et affichage de moyenne
+
+actor "Utilisatrice" as User
+participant "Main" as Main
+participant "average()" as Average
+participant "showAverage()" as Show
+participant "Console" as Console
+
+User -> Main: Lancer le programme
+
+Main -> Average: average(notes)
+Average -> Average: Calculer la moyenne
+Average --> Main: retourne 4.8
+
+Main -> Show: showAverage(4.8)
+Show -> Console: Afficher "Moyenne : 4.8"
+Console -> User: Voir le résultat
+
+note right of Show
+  showAverage() est void :
+  elle affiche mais ne
+  retourne rien à Main
+end note
+
+@enduml

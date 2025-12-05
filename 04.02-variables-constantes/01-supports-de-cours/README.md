@@ -88,6 +88,12 @@ public class MyProgram {
 }
 ```
 
+
+À la fin de cette séance, vous devriez être capable de :
+
+- Identifier et appliquer les structures algorithmiques fondamentales :
+- Utiliser efficacement les variables, les constantes et les types de données de
+
 ## 1. Les variables en Java
 
 ### 1.1. Qu'est-ce qu'une variable ?

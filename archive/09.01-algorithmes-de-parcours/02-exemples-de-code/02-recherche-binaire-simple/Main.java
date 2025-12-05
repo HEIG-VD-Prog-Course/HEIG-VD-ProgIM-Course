@@ -6,46 +6,7 @@
  * données soient triées.
  */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("=== Exemple : Recherche binaire simple ===\n");
-
-        // Tableau trié (condition obligatoire pour la recherche binaire)
-        int[] sortedNumbers = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
-
-        System.out.println("Tableau trié : ");
-        printArray(sortedNumbers);
-
-        // Recherche de plusieurs valeurs
-        int[] toFind = { 25, 5, 50, 17 };
-
-        System.out.println("\n--- Recherches ---\n");
-        for (int target : toFind) {
-            int index = binarySearch(sortedNumbers, target);
-
-            if (index != -1) {
-                System.out.println("Élément " + target + " trouvé à l'index " + index);
-            } else {
-                System.out.println("Élément " + target + " non trouvé");
-            }
-        }
-
-        // Comparaison du nombre de comparaisons
-        System.out.println("\n--- Comparaison linéaire vs binaire ---\n");
-
-        int target = 45;
-        int linearComparisons = linearSearchWithCount(sortedNumbers, target);
-        int binaryComparisons = binarySearchWithCount(sortedNumbers, target);
-
-        System.out.println("Recherche de " + target + " :");
-        System.out.println("  Linéaire : " + linearComparisons + " comparaisons");
-        System.out.println("  Binaire  : " + binaryComparisons + " comparaisons");
-
-        // Démonstration étape par étape
-        System.out.println("\n--- Étapes de la recherche binaire ---\n");
-        binarySearchVerbose(sortedNumbers, 35);
-
-        System.out.println("\n=== Fin de l'exemple ===");
-    }
+    
 
     /**
      * Effectue une recherche binaire dans un tableau trié.
@@ -177,5 +138,46 @@ public class Main {
             }
         }
         System.out.println("]");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Exemple : Recherche binaire simple ===\n");
+
+        // Tableau trié (condition obligatoire pour la recherche binaire)
+        int[] sortedNumbers = { 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+
+        System.out.println("Tableau trié : ");
+        printArray(sortedNumbers);
+
+        // Recherche de plusieurs valeurs
+        int[] toFind = { 25, 5, 50, 17 };
+
+        System.out.println("\n--- Recherches ---\n");
+        for (int target : toFind) {
+            int index = binarySearch(sortedNumbers, target);
+
+            if (index != -1) {
+                System.out.println("Élément " + target + " trouvé à l'index " + index);
+            } else {
+                System.out.println("Élément " + target + " non trouvé");
+            }
+        }
+
+        // Comparaison du nombre de comparaisons
+        System.out.println("\n--- Comparaison linéaire vs binaire ---\n");
+
+        int target = 45;
+        int linearComparisons = linearSearchWithCount(sortedNumbers, target);
+        int binaryComparisons = binarySearchWithCount(sortedNumbers, target);
+
+        System.out.println("Recherche de " + target + " :");
+        System.out.println("  Linéaire : " + linearComparisons + " comparaisons");
+        System.out.println("  Binaire  : " + binaryComparisons + " comparaisons");
+
+        // Démonstration étape par étape
+        System.out.println("\n--- Étapes de la recherche binaire ---\n");
+        binarySearchVerbose(sortedNumbers, 35);
+
+        System.out.println("\n=== Fin de l'exemple ===");
     }
 }
