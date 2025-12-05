@@ -133,7 +133,6 @@ Nous allons maintenant remplacer les 5 variables individuelles par un seul
 tableau. Cette modification va simplifier considérablement le code :
 
 - Déclaration en une seule ligne
-- Boucles simplifiées (plus besoin de `if/else if`)
 - Calculs utilisant des boucles sur les indices du tableau
 - Code beaucoup plus facile à maintenir
 
