@@ -4,17 +4,18 @@ title Étape 2 : Calcul du minimum avec tableau
 
 start
 
-:min = notes[0];
-:i = 1;
+:je vais garder un minimum de côté;
+:Je vais commencer par le premier élément du tableau;
 
-while (i < notes.length ?) is (oui)
-  if (notes[i] < min) then (oui)
-    :min = notes[i];
-  endif
-  :i = i + 1;
-endwhile (non)
+while (Ai-je fini de parcourir le tableau ?) is (non)
+  :Regarder l'élément courant;
+    if (L'élément courant est-il plus petit que le minimum actuel ?) then (oui)
+        :Mettre à jour le minimum;
+    endif
+  :Passer à l'élément suivant;
+endwhile (oui)
 
-:Afficher "Note minimale : min";
+:Afficher le minimum trouvé;
 
 stop
 
