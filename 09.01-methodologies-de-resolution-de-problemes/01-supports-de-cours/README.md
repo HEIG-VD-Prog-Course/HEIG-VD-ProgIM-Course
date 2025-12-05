@@ -97,7 +97,7 @@ Le code complet se trouve dans :
 
 Voici les points clés de cette implémentation :
 
-````java
+```java
 // Déclaration de variables individuelles
 double note1 = 4.5;
 double note2 = 5.0;
@@ -124,7 +124,9 @@ if (note2 < min) {
     min = note2;
 }
 // ... répété pour chaque note
-```### Enseignements tirés
+```
+
+### Enseignements tirés
 
 Cette première version fonctionne, mais elle présente plusieurs problèmes :
 
@@ -202,7 +204,7 @@ for (int i = 1; i < notes.length; i++) {
         min = notes[i];
     }
 }
-````
+```
 
 ### Enseignements tirés
 
@@ -251,7 +253,7 @@ Le code complet se trouve dans :
 
 Voici les éléments nouveaux :
 
-````java
+```java
 import java.util.Scanner;
 
 // Création du Scanner
@@ -282,7 +284,9 @@ for (int i = 0; i < NOMBRE_NOTES; i++) {
 
 // Fermeture du Scanner
 scanner.close();
-```### Enseignements tirés
+```
+
+### Enseignements tirés
 
 L'ajout de l'interaction utilisatrice introduit plusieurs concepts importants :
 
@@ -353,7 +357,9 @@ while (!validCount) {
 double[] notes = new double[count];
 
 // Le reste du code reste identique
-```### Enseignements tirés
+```
+
+### Enseignements tirés
 
 Cette évolution démontre l'importance de la généricité dans le code :
 
@@ -425,7 +431,9 @@ if (response.equals("oui") || response.equals("o")) {
         calculateAndDisplayStatistics(notes);
     }
 }
-```### Enseignements tirés
+```
+
+### Enseignements tirés
 
 Cette dernière étape illustre plusieurs concepts avancés :
 
@@ -519,7 +527,7 @@ private static double calculateMinimum(double[] grades) {
 // Utilisation dans main
 double min = calculateMinimum(notes);
 System.out.println("Note minimale : " + min);
-````
+```
 
 ### Enseignements tirés
 
