@@ -1,0 +1,22 @@
+@startuml introduction-sequence-analogie
+
+title Analogie : Propriétaire, Plombière et Héraut
+
+actor "Propriétaire" as Owner
+participant "Plombière" as Plumber
+participant "Héraut" as Herald
+actor "Foule" as Crowd
+
+Owner -> Plumber: Débouche mon tuyau
+Plumber -> Plumber: Déboucher le tuyau
+Plumber --> Owner: Tuyau débouché (retourne résultat)
+
+Owner -> Herald: Annonce à la foule
+Herald -> Crowd: Annonce le message
+note right of Herald
+  Le héraut fait son travail
+  mais ne retourne rien
+  à la propriétaire
+end note
+
+@enduml

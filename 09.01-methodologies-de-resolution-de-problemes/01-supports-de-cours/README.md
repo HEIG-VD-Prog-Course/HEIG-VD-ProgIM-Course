@@ -472,6 +472,102 @@ l'expérience utilisatrice :
 Notre programme est maintenant robuste. Mais le code devient long et répétitif.
 Il est temps de le restructurer.
 
+## Interlude : Introduction aux diagrammes de séquence
+
+Avant de passer à la refactorisation, prenons un moment pour découvrir un nouvel
+outil de modélisation : le **diagramme de séquence**. Cet outil nous aidera à
+visualiser comment différentes parties d'un programme interagissent entre elles
+au fil du temps.
+
+### Analogie avec le monde réel
+
+Imaginons une propriétaire qui doit effectuer différentes tâches dans sa maison.
+Elle fait appel à deux personnes différentes :
+
+![Diagramme de séquence : analogie avec propriétaire, plombière et héraut](images/introduction-sequence-analogie.png)
+
+_Source :
+[introduction-sequence-analogie.plantuml](images/introduction-sequence-analogie.plantuml)_
+
+Observez la différence importante :
+
+- **La plombière** : Elle reçoit une demande, effectue le travail, et **retourne
+  un résultat** à la propriétaire (le tuyau débouché). La propriétaire reçoit
+  quelque chose en retour.
+
+- **Le héraut** : Il reçoit une demande, effectue le travail (annoncer à la
+  foule), mais **ne retourne rien** à la propriétaire. Son travail est fait,
+  mais la propriétaire ne récupère aucune information.
+
+### Application en programmation
+
+En Java, cette distinction correspond exactement à la différence entre :
+
+- **Fonctions avec retour** : Comme la plombière, elles calculent et retournent
+  une valeur
+- **Fonctions void** : Comme le héraut, elles effectuent une action (souvent
+  afficher quelque chose) mais ne retournent rien
+
+Voici un exemple concret avec le calcul et l'affichage d'une moyenne :
+
+![Diagramme de séquence : exemple avec average() et showAverage()](images/introduction-sequence-code.png)
+
+_Source :
+[introduction-sequence-code.plantuml](images/introduction-sequence-code.plantuml)_
+
+```java
+public class AverageExample {
+    public static void main(String[] args) {
+        int[] notes = {5, 6, 4, 4, 5};
+
+        // average() retourne une valeur que nous stockons
+        double avg = average(notes);
+
+        // showAverage() ne retourne rien (void), elle affiche juste
+        showAverage(avg);
+    }
+
+    // Fonction qui RETOURNE une valeur (comme la plombière)
+    public static double average(int[] notes) {
+        int sum = 0;
+        for (int i = 0; i < notes.length; i++) {
+            sum = sum + notes[i];
+        }
+        return sum / (double) notes.length;
+    }
+
+    // Fonction VOID qui ne retourne rien (comme le héraut)
+    public static void showAverage(double avg) {
+        System.out.println("Moyenne : " + avg);
+        // Pas de return - la fonction se termine après l'affichage
+    }
+}
+```
+
+### Points clés à retenir
+
+> [!TIP]
+>
+> - **Diagramme de séquence** : Montre l'ordre des interactions entre
+>   différentes parties du programme
+> - **Flèche pleine (→)** : Appel d'une fonction
+> - **Flèche pointillée (⇢)** : Retour d'une valeur
+> - **Fonction avec retour** : Calcule et retourne une valeur que l'appelant
+>   peut utiliser
+> - **Fonction void** : Effectue une action (comme afficher) mais ne retourne
+>   rien
+
+> [!NOTE]
+>
+> Une fonction `void` peut faire beaucoup de choses (afficher dans la console,
+> modifier un tableau, écrire dans un fichier), mais elle ne **retourne pas de
+> valeur** à la fonction qui l'a appelée. C'est pourquoi on ne peut pas écrire
+> `double result = showAverage(avg);` - il n'y a rien à récupérer !
+
+Maintenant que nous comprenons les diagrammes de séquence et la distinction
+entre fonctions avec retour et fonctions void, nous sommes prêts à refactoriser
+notre programme de gestion de notes.
+
 ## Étape 7 : Refactorisation avec des fonctions
 
 ### Réflexion en français
