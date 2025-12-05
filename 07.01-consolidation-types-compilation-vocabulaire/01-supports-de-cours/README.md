@@ -92,29 +92,24 @@ plus efficacement et de préparer le terrain pour les concepts plus avancés
 (tableaux, bibliothèques, packages) que nous verrons dans les prochains
 chapitres.
 
+## Objectifs
 
 À la fin de cette séance, vous devriez être capable de :
 
 - Distinguer et utiliser tous les types primitifs de Java (byte, short, int,
+  long, float, double, boolean, char) et comprendre leurs différences.
 - Expliquer les limites de la représentation des nombres à virgule flottante et
+  pourquoi 0.1 + 0.2 ≠ 0.3.
 - Compiler et exécuter un programme Java en ligne de commande avec des arguments
+  passés à la méthode `main`.
 - Comprendre le rôle de `public class Main` et la structure minimale d'un
+  programme Java.
 - Différencier le vocabulaire technique : paramètre vs argument, fonction vs
+  méthode, déclaration vs appel, définition vs utilisation.
 - Expliquer le rôle d'un IDE (VS Code, IntelliJ) comme interface facilitant le
+  travail avec les fichiers sources.
 - Comprendre le processus de compilation : de `.java` à `.class` et l'exécution
-
-## Objectifs
-
-À l'issue de ce chapitre, vous devriez être capable de :
-
-- Nommer et utiliser les 8 types primitifs de Java.
-- Expliquer pourquoi les nombres à virgule flottante ont une précision limitée.
-- Compiler et exécuter un programme Java en ligne de commande.
-- Passer des arguments à un programme Java via la ligne de commande.
-- Expliquer le rôle minimal d'une classe en Java.
-- Utiliser le vocabulaire technique précis (paramètre vs argument, fonction vs
-  méthode, etc.).
-- Comprendre le rôle d'un IDE et ses limites.
+  par la JVM.
 
 ## Types primitifs en Java
 
@@ -126,8 +121,8 @@ temps de découvrir les quatre autres et de comprendre quand utiliser chacun.
 
 > [!NOTE]
 >
-> Les types primitifs sont les briques de base du langage. Contrairement
-> aux objets, ils ne sont pas créés avec `new` et sont stockés directement en
+> Les types primitifs sont les briques de base du langage. Contrairement aux
+> objets, ils ne sont pas créés avec `new` et sont stockés directement en
 > mémoire.
 
 Voici la liste complète des 8 types primitifs, organisés par catégorie :
@@ -168,8 +163,8 @@ byte minValue = -128; // Valeur minimale
 
 > [!WARNING]
 >
-> Si vous dépassez la plage de valeurs, vous obtiendrez un
-> débordement (_overflow_) sans erreur de compilation !
+> Si vous dépassez la plage de valeurs, vous obtiendrez un débordement
+> (_overflow_) sans erreur de compilation !
 
 ```java
 byte value = 127;
@@ -211,8 +206,8 @@ int minValue = -2147483648; // Valeur minimale
 
 > [!TIP]
 >
-> Vous pouvez utiliser des underscores (`_`) pour rendre les grands
-> nombres plus lisibles :
+> Vous pouvez utiliser des underscores (`_`) pour rendre les grands nombres plus
+> lisibles :
 >
 > ```java
 > int population = 8_000_000; // 8 millions
@@ -232,8 +227,8 @@ long minValue = -9223372036854775808L; // Valeur minimale
 
 > [!IMPORTANT]
 >
-> Pour les littéraux `long`, on ajoute un `L` (ou `l`, mais `L` est
-> préféré pour éviter la confusion avec `1`) à la fin du nombre.
+> Pour les littéraux `long`, on ajoute un `L` (ou `l`, mais `L` est préféré pour
+> éviter la confusion avec `1`) à la fin du nombre.
 
 **Quand l'utiliser ?**
 
@@ -257,8 +252,7 @@ float temperature = -5.5f;
 
 > [!IMPORTANT]
 >
-> Pour les littéraux `float`, on ajoute un `f` (ou `F`) à la fin du
-> nombre.
+> Pour les littéraux `float`, on ajoute un `f` (ou `F`) à la fin du nombre.
 
 **Quand l'utiliser ?**
 
@@ -285,8 +279,8 @@ double distance = 1.5e10; // Notation scientifique : 1.5 × 10¹⁰
 
 > [!WARNING]
 >
-> Les nombres à virgule flottante ont une précision limitée. Voir la
-> section dédiée ci-dessous.
+> Les nombres à virgule flottante ont une précision limitée. Voir la section
+> dédiée ci-dessous.
 
 ### Type booléen
 
@@ -321,8 +315,8 @@ char unicode = '\u0041'; // 'A' en Unicode
 
 > [!NOTE]
 >
-> Les littéraux `char` utilisent des guillemets simples (`'`),
-> contrairement aux `String` qui utilisent des guillemets doubles (`"`).
+> Les littéraux `char` utilisent des guillemets simples (`'`), contrairement aux
+> `String` qui utilisent des guillemets doubles (`"`).
 
 **Caractères spéciaux (échappement) :**
 
@@ -365,8 +359,8 @@ System.out.println(approxPi); // 3 (partie décimale perdue)
 
 > [!CAUTION]
 >
-> Le cast explicite peut entraîner une perte de données ou un
-> débordement. Utilisez-le consciemment !
+> Le cast explicite peut entraîner une perte de données ou un débordement.
+> Utilisez-le consciemment !
 
 ```java
 int big = 300;
@@ -448,8 +442,8 @@ System.out.println(sum); // Affiche : 0.3 (exact!)
 
 > [!TIP]
 >
-> Utilisez `BigDecimal` pour les montants d'argent, les calculs
-> comptables ou toute situation nécessitant une précision décimale exacte.
+> Utilisez `BigDecimal` pour les montants d'argent, les calculs comptables ou
+> toute situation nécessitant une précision décimale exacte.
 
 ## Compilation et exécution en ligne de commande
 
@@ -489,8 +483,8 @@ Cette commande crée un fichier `HelloWorld.class` contenant le bytecode.
 
 > [!NOTE]
 >
-> Le bytecode est un langage intermédiaire, ni du code source Java ni du
-> code machine natif. C'est ce qui permet au Java d'être portable.
+> Le bytecode est un langage intermédiaire, ni du code source Java ni du code
+> machine natif. C'est ce qui permet au Java d'être portable.
 
 ### La JVM (Java Virtual Machine)
 
@@ -505,8 +499,8 @@ java HelloWorld
 
 > [!IMPORTANT]
 >
-> On écrit `java HelloWorld` (pas `java HelloWorld.class`). La JVM
-> cherche automatiquement le fichier `.class`.
+> On écrit `java HelloWorld` (pas `java HelloWorld.class`). La JVM cherche
+> automatiquement le fichier `.class`.
 
 **Pourquoi deux étapes ?**
 
@@ -680,8 +674,8 @@ public static void main(String[] args) {
 
 > [!IMPORTANT]
 >
-> La signature de la méthode `main` est **stricte**. Si vous
-> changez un élément, la JVM ne la reconnaîtra pas comme point d'entrée.
+> La signature de la méthode `main` est **stricte**. Si vous changez un élément,
+> la JVM ne la reconnaîtra pas comme point d'entrée.
 
 ### Préparer le terrain pour les packages
 
@@ -724,8 +718,8 @@ public static void main(String[] args) {
 
 > [!TIP]
 >
-> Mnémotechnique : **P**aramètre = **P**laceholder (emplacement),
-> **A**rgument = **A**ctual value (valeur réelle).
+> Mnémotechnique : **P**aramètre = **P**laceholder (emplacement), **A**rgument =
+> **A**ctual value (valeur réelle).
 
 ### Fonction vs Méthode
 
@@ -749,8 +743,8 @@ public class MathUtils {
 
 > [!NOTE]
 >
-> On dira souvent "fonction" par habitude, mais techniquement, en Java,
-> ce sont des méthodes.
+> On dira souvent "fonction" par habitude, mais techniquement, en Java, ce sont
+> des méthodes.
 
 ### Déclaration vs Définition vs Appel
 
@@ -792,8 +786,7 @@ final double PI = 3.14159; // Constante (final)
 
 > [!IMPORTANT]
 >
-> En Java, on utilise le mot-clé `final` pour déclarer une
-> constante.
+> En Java, on utilise le mot-clé `final` pour déclarer une constante.
 
 ### Type vs Valeur
 
@@ -881,8 +874,8 @@ Un IDE combine plusieurs outils :
 
 > [!WARNING]
 >
-> L'IDE ne "fait pas tourner" votre code. C'est toujours `javac` et
-> `java` qui travaillent en arrière-plan !
+> L'IDE ne "fait pas tourner" votre code. C'est toujours `javac` et `java` qui
+> travaillent en arrière-plan !
 
 Un IDE est une **interface graphique** vers les outils en ligne de commande :
 
@@ -910,8 +903,7 @@ L'IDE est un **outil de productivité**, pas une béquille.
 
 > [!TIP]
 >
-> Apprenez à compiler et exécuter en ligne de commande. Cela vous permet
-> de :
+> Apprenez à compiler et exécuter en ligne de commande. Cela vous permet de :
 >
 > - Comprendre vraiment ce qui se passe.
 > - Travailler sur des serveurs sans interface graphique.

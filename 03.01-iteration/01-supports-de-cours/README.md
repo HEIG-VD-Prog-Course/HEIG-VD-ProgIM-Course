@@ -22,15 +22,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [L'itération](#litération)
-
-## Objectifs
-
-À la fin de cette séance, vous devriez être capable de :
-
-- Comprendre le concept d'itération et son utilité dans la programmation.
-- Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
-- Être capable de représenter des boucles en pseudocode et en diagrammes
-
   - [Qu'est-ce que l'itération ? (rappel)](#quest-ce-que-litération--rappel)
   - [La boucle TANT QUE (quand on ne connaît pas le nombre d'itérations)](#la-boucle-tant-que-quand-on-ne-connaît-pas-le-nombre-ditérations)
   - [Variables](#variables)
@@ -41,10 +32,11 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
+À la fin de cette séance, vous devriez être capable de :
+
 - Comprendre le concept d'itération et son utilité dans la programmation.
 - Savoir utiliser les structures d'itération `TANT QUE` et `POUR`.
 - Être capable de représenter des boucles en pseudocode et en diagrammes
-  d'activité UML.
 
 ## L'itération
 
@@ -301,8 +293,8 @@ public class Panier {
 
 > [!TIP]
 >
-> Dans la plupart des langages de programmation, la boucle « POUR »
-> s'appelle « FOR » (mot anglais pour « pour »).
+> Dans la plupart des langages de programmation, la boucle « POUR » s'appelle
+> « FOR » (mot anglais pour « pour »).
 
 La boucle `POUR` sert quand on sait à l'avance combien de fois on veut répéter
 une action (par exemple : arroser 5 plantes, distribuer 6 parts, etc.).

@@ -44,14 +44,16 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Objectifs
 
-À la fin de cette séance, vous devriez être capable de :
+À l'issue de ce cours, la personne qui étudie sera capable de :
 
 - Comprendre le concept de package en Java et son utilité.
 - Organiser son code en packages de manière cohérente.
 - Importer et utiliser des classes provenant d'autres packages.
 - Utiliser les principales bibliothèques standard de Java (java.util, java.time,
+  java.io).
 - Créer des programmes modulaires et réutilisables.
 - Consulter la documentation Java pour explorer de nouvelles classes et
+  méthodes.
 
 ## Introduction aux packages
 
@@ -142,9 +144,9 @@ src/
 
 > [!IMPORTANT]
 >
-> Le package `ch.heigvd.toolshare.models` doit correspondre
-> exactement au chemin de dossiers `src/ch/heigvd/toolshare/models/`. Une erreur
-> dans cette correspondance empêchera la compilation.
+> Le package `ch.heigvd.toolshare.models` doit correspondre exactement au chemin
+> de dossiers `src/ch/heigvd/toolshare/models/`. Une erreur dans cette
+> correspondance empêchera la compilation.
 
 ### Compiler et exécuter des programmes avec packages
 
@@ -202,13 +204,13 @@ java ch.heigvd.toolshare.Main
 
 > [!IMPORTANT]
 >
-> Lors de l'exécution, utilisez le nom complet de la classe avec
-> son package (points, pas de slashes) : `java ch.heigvd.toolshare.Main`
+> Lors de l'exécution, utilisez le nom complet de la classe avec son package
+> (points, pas de slashes) : `java ch.heigvd.toolshare.Main`
 
 > [!TIP]
 >
-> Pour faciliter la compilation de projets complexes, vous pouvez
-> compiler tous les fichiers Java d'un coup :
+> Pour faciliter la compilation de projets complexes, vous pouvez compiler tous
+> les fichiers Java d'un coup :
 >
 > ```bash
 > javac **/*.java
@@ -263,9 +265,9 @@ classe du package.
 
 > [!WARNING]
 >
-> L'import avec `*` n'importe que les classes du package spécifié,
-> pas les sous-packages. Par exemple, `import java.util.*` n'importe pas les
-> classes de `java.util.stream`.
+> L'import avec `*` n'importe que les classes du package spécifié, pas les
+> sous-packages. Par exemple, `import java.util.*` n'importe pas les classes de
+> `java.util.stream`.
 
 ### Package java.lang
 
@@ -280,9 +282,9 @@ Java. Il contient les classes fondamentales :
 
 > [!NOTE]
 >
-> Les classes du package `java.lang` sont toujours disponibles sans
-> import. C'est pourquoi vous n'avez jamais eu besoin d'importer `String` ou
-> `Math` dans vos programmes.
+> Les classes du package `java.lang` sont toujours disponibles sans import.
+> C'est pourquoi vous n'avez jamais eu besoin d'importer `String` ou `Math` dans
+> vos programmes.
 
 ## Bibliothèques standard de Java
 
@@ -325,8 +327,8 @@ System.out.println(Arrays.toString(numbers));
 
 > [!TIP]
 >
-> Pour aller plus loin, le package `java.util` contient également des
-> structures de données avancées comme `ArrayList`, `HashMap`, et `HashSet`. Ces
+> Pour aller plus loin, le package `java.util` contient également des structures
+> de données avancées comme `ArrayList`, `HashMap`, et `HashSet`. Ces
 > collections seront étudiées dans un cours ultérieur.
 
 ### java.time - Date et heure
@@ -433,9 +435,9 @@ ressources et réduisant la consommation.
 
 > [!NOTE]
 >
-> Les bibliothèques d'outils communautaires sont des initiatives locales
-> qui encouragent le partage et l'économie circulaire. Elles permettent de
-> réduire la production d'objets neufs et de renforcer les liens sociaux.
+> Les bibliothèques d'outils communautaires sont des initiatives locales qui
+> encouragent le partage et l'économie circulaire. Elles permettent de réduire
+> la production d'objets neufs et de renforcer les liens sociaux.
 
 Notre application pourrait être organisée avec les packages suivants :
 
@@ -571,9 +573,9 @@ la documentation officielle Java API sur
 
 > [!IMPORTANT]
 >
-> La documentation Java est votre meilleure alliée pour découvrir
-> de nouvelles classes et comprendre comment les utiliser. Prenez l'habitude de
-> la consulter régulièrement.
+> La documentation Java est votre meilleure alliée pour découvrir de nouvelles
+> classes et comprendre comment les utiliser. Prenez l'habitude de la consulter
+> régulièrement.
 
 La plateforme dev.java propose :
 
@@ -599,9 +601,9 @@ Par exemple, pour en savoir plus sur `ArrayList` :
 
 > [!TIP]
 >
-> Lorsque vous rencontrez une nouvelle classe dans un programme,
-> consultez sa documentation pour comprendre son rôle et ses capacités. Cela
-> développe votre autonomie en programmation.
+> Lorsque vous rencontrez une nouvelle classe dans un programme, consultez sa
+> documentation pour comprendre son rôle et ses capacités. Cela développe votre
+> autonomie en programmation.
 
 ## Conclusion
 
