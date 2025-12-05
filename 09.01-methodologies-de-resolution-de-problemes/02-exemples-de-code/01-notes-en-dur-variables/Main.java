@@ -14,11 +14,11 @@ public class Main {
         System.out.println("=== Programme de gestion de notes - Étape 1 ===\n");
 
         // Déclaration et initialisation de 5 notes
-        double note1 = 4.5;
-        double note2 = 5.0;
-        double note3 = 3.8;
-        double note4 = 4.2;
-        double note5 = 5.3;
+        int note1 = 5;
+        int note2 = 6;
+        int note3 = 4;
+        int note4 = 4;
+        int note5 = 5;
 
         System.out.println("--- Affichage individuel ---");
         // Affichage de chaque note individuellement
@@ -30,8 +30,8 @@ public class Main {
 
         System.out.println("\n--- Calcul de la moyenne ---");
         // Calcul de la moyenne
-        double sum = note1 + note2 + note3 + note4 + note5;
-        double average = sum / 5;
+        int sum = note1 + note2 + note3 + note4 + note5;
+        double average = sum / 5.0;
 
         System.out.println("\n=== Résumé des statistiques ===");
         System.out.println("Moyenne : " + average);

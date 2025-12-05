@@ -13,7 +13,7 @@ public class Main {
         System.out.println("=== Programme de gestion de notes - Étape 2 ===\n");
 
         // Déclaration et initialisation d'un tableau de 5 notes
-        double[] notes = { 4.5, 5.0, 3.8, 4.2, 5.3 };
+        int[] notes = { 5, 6, 4, 4, 5 };
 
         System.out.println("--- Affichage avec boucle for classique ---");
         // Affichage avec une boucle for utilisant les indices
@@ -24,14 +24,14 @@ public class Main {
         System.out.println("\n--- Affichage avec boucle for-each ---");
         // Affichage avec une boucle for-each
         int index = 1;
-        for (double note : notes) {
+        for (int note : notes) {
             System.out.println("Note " + index + " : " + note);
             index++;
         }
 
         System.out.println("\n--- Calcul du minimum ---");
         // Calcul du minimum
-        double min = notes[0];
+        int min = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] < min) {
                 min = notes[i];
@@ -41,7 +41,7 @@ public class Main {
 
         System.out.println("\n--- Calcul du maximum ---");
         // Calcul du maximum
-        double max = notes[0];
+        int max = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] > max) {
                 max = notes[i];
@@ -51,11 +51,11 @@ public class Main {
 
         System.out.println("\n--- Calcul de la moyenne ---");
         // Calcul de la moyenne
-        double sum = 0;
-        for (double note : notes) {
+        int sum = 0;
+        for (int note : notes) {
             sum += note;
         }
-        double average = sum / notes.length;
+        double average = sum / (double) notes.length;
         System.out.println("Moyenne : " + average);
 
         System.out.println("\n=== Résumé des statistiques ===");

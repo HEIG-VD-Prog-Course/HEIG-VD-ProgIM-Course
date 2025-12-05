@@ -19,7 +19,7 @@ public class Main {
 
         // Nombre de notes à saisir (fixe)
         final int NOMBRE_NOTES = 5;
-        double[] notes = new double[NOMBRE_NOTES];
+        int[] notes = new int[NOMBRE_NOTES];
 
         System.out.println("--- Saisie des notes ---");
         // Saisie des notes
@@ -27,21 +27,21 @@ public class Main {
             boolean valid = false;
 
             while (!valid) {
-                System.out.print("Entrez la note " + (i + 1) + " (entre 1.0 et 6.0) : ");
+                System.out.print("Entrez la note " + (i + 1) + " (entre 1 et 6) : ");
 
-                // Vérification que l'entrée est bien un nombre
-                if (scanner.hasNextDouble()) {
-                    double grade = scanner.nextDouble();
+                // Vérification que l'entrée est bien un nombre entier
+                if (scanner.hasNextInt()) {
+                    int grade = scanner.nextInt();
 
                     // Validation de la note
-                    if (grade >= 1.0 && grade <= 6.0) {
+                    if (grade >= 1 && grade <= 6) {
                         notes[i] = grade;
                         valid = true;
                     } else {
-                        System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+                        System.out.println("Erreur : la note doit être entre 1 et 6");
                     }
                 } else {
-                    System.out.println("Erreur : veuillez entrer un nombre valide");
+                    System.out.println("Erreur : veuillez entrer un nombre entier valide");
                     scanner.next(); // Consommer l'entrée invalide
                 }
             }
@@ -55,7 +55,7 @@ public class Main {
 
         System.out.println("\n--- Calcul du minimum ---");
         // Calcul du minimum
-        double min = notes[0];
+        int min = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] < min) {
                 min = notes[i];
@@ -65,7 +65,7 @@ public class Main {
 
         System.out.println("\n--- Calcul du maximum ---");
         // Calcul du maximum
-        double max = notes[0];
+        int max = notes[0];
         for (int i = 1; i < notes.length; i++) {
             if (notes[i] > max) {
                 max = notes[i];
@@ -75,11 +75,11 @@ public class Main {
 
         System.out.println("\n--- Calcul de la moyenne ---");
         // Calcul de la moyenne
-        double sum = 0;
-        for (double note : notes) {
+        int sum = 0;
+        for (int note : notes) {
             sum += note;
         }
-        double average = sum / notes.length;
+        double average = sum / (double) notes.length;
         System.out.println("Moyenne : " + average);
 
         System.out.println("\n=== Résumé des statistiques ===");

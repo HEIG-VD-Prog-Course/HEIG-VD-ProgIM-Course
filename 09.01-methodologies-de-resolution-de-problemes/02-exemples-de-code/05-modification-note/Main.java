@@ -41,7 +41,7 @@ public class Main {
         }
 
         // Création du tableau de la taille appropriée
-        double[] notes = new double[count];
+        int[] notes = new int[count];
 
         System.out.println("\n--- Saisie des notes ---");
         // Saisie des notes
@@ -49,21 +49,21 @@ public class Main {
             boolean valid = false;
 
             while (!valid) {
-                System.out.print("Entrez la note " + (i + 1) + " (entre 1.0 et 6.0) : ");
+                System.out.print("Entrez la note " + (i + 1) + " (entre 1 et 6) : ");
 
-                // Vérification que l'entrée est bien un nombre
-                if (scanner.hasNextDouble()) {
-                    double grade = scanner.nextDouble();
+                // Vérification que l'entrée est bien un nombre entier
+                if (scanner.hasNextInt()) {
+                    int grade = scanner.nextInt();
 
                     // Validation de la note
-                    if (grade >= 1.0 && grade <= 6.0) {
+                    if (grade >= 1 && grade <= 6) {
                         notes[i] = grade;
                         valid = true;
                     } else {
-                        System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+                        System.out.println("Erreur : la note doit être entre 1 et 6");
                     }
                 } else {
-                    System.out.println("Erreur : veuillez entrer un nombre valide");
+                    System.out.println("Erreur : veuillez entrer un nombre entier valide");
                     scanner.next(); // Consommer l'entrée invalide
                 }
             }
@@ -78,9 +78,9 @@ public class Main {
         // Calcul des statistiques
         System.out.println("\n--- Calcul des statistiques ---");
 
-        double min = notes[0];
-        double max = notes[0];
-        double sum = 0;
+        int min = notes[0];
+        int max = notes[0];
+        int sum = 0;
 
         for (int i = 0; i < notes.length; i++) {
             if (notes[i] < min) {
@@ -92,7 +92,7 @@ public class Main {
             sum += notes[i];
         }
 
-        double average = sum / notes.length;
+        double average = sum / (double) notes.length;
 
         System.out.println("Minimum : " + min);
         System.out.println("Maximum : " + max);
@@ -119,21 +119,21 @@ public class Main {
 
                         boolean validNewGrade = false;
                         while (!validNewGrade) {
-                            System.out.print("Entrez la nouvelle note (entre 1.0 et 6.0) : ");
+                            System.out.print("Entrez la nouvelle note (entre 1 et 6) : ");
 
-                            if (scanner.hasNextDouble()) {
-                                double newGrade = scanner.nextDouble();
+                            if (scanner.hasNextInt()) {
+                                int newGrade = scanner.nextInt();
 
-                                if (newGrade >= 1.0 && newGrade <= 6.0) {
+                                if (newGrade >= 1 && newGrade <= 6) {
                                     notes[indexToModify] = newGrade;
                                     validNewGrade = true;
                                     validModification = true;
                                     System.out.println("Note modifiée avec succès !");
                                 } else {
-                                    System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+                                    System.out.println("Erreur : la note doit être entre 1 et 6");
                                 }
                             } else {
-                                System.out.println("Erreur : veuillez entrer un nombre valide");
+                                System.out.println("Erreur : veuillez entrer un nombre entier valide");
                                 scanner.next(); // Consommer l'entrée invalide
                             }
                         }

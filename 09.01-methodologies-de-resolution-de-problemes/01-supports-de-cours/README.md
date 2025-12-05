@@ -90,11 +90,11 @@ Voici les points clés de cette implémentation :
 
 ```java
 // Déclaration de variables individuelles
-double note1 = 4.5;
-double note2 = 5.0;
-double note3 = 3.8;
-double note4 = 4.2;
-double note5 = 5.3;
+int note1 = 5;
+int note2 = 6;
+int note3 = 4;
+int note4 = 4;
+int note5 = 5;
 
 // Affichage de chaque note individuellement
 System.out.println("Note 1 : " + note1);
@@ -104,8 +104,8 @@ System.out.println("Note 4 : " + note4);
 System.out.println("Note 5 : " + note5);
 
 // Calcul de la moyenne
-double sum = note1 + note2 + note3 + note4 + note5;
-double average = sum / 5;
+int sum = note1 + note2 + note3 + note4 + note5;
+double average = sum / 5.0;
 ```
 
 ### Enseignements tirés
@@ -153,6 +153,18 @@ _Source :
 Observez comment la boucle parcourt simplement les indices du tableau, sans
 avoir besoin de structure conditionnelle pour sélectionner la bonne valeur.
 
+> [!NOTE]
+>
+> Quand un humain regarde une liste de notes comme `[5, 6, 4, 4, 5]`, il
+> identifie instantanément le minimum (4) d'un seul coup d'œil. Mais un
+> ordinateur ne peut pas "voir" toute la liste en même temps : il doit examiner
+> chaque élément un par un, en suivant une procédure explicite. C'est
+> précisément ce que montre le diagramme ci-dessus : l'ordinateur garde en
+> mémoire le plus petit élément vu jusqu'à présent, puis compare chaque nouvel
+> élément avec ce minimum temporaire. Cette démarche étape par étape, qui peut
+> sembler évidente ou même laborieuse pour nous, est fondamentale en
+> programmation : nous devons décrire chaque action dans un ordre précis.
+
 ### Implémentation en Java
 
 Le code complet se trouve dans :
@@ -162,7 +174,7 @@ Voici les améliorations principales :
 
 ```java
 // Déclaration et initialisation en une ligne
-double[] notes = {4.5, 5.0, 3.8, 4.2, 5.3};
+int[] notes = {5, 6, 4, 4, 5};
 
 // Affichage simplifié avec une boucle for classique
 for (int i = 0; i < notes.length; i++) {
@@ -170,12 +182,12 @@ for (int i = 0; i < notes.length; i++) {
 }
 
 // Ou avec une boucle for-each encore plus simple
-for (double note : notes) {
+for (int note : notes) {
     System.out.println("Note : " + note);
 }
 
 // Calcul du minimum avec une boucle simple
-double min = notes[0];
+int min = notes[0];
 for (int i = 1; i < notes.length; i++) {
     if (notes[i] < min) {
         min = notes[i];
@@ -241,19 +253,19 @@ for (int i = 0; i < NOMBRE_NOTES; i++) {
     boolean valid = false;
 
     while (!valid) {
-        System.out.print("Entrez la note " + (i + 1) + " (entre 1.0 et 6.0) : ");
+        System.out.print("Entrez la note " + (i + 1) + " (entre 1 et 6) : ");
 
-        if (scanner.hasNextDouble()) {
-            double grade = scanner.nextDouble();
+        if (scanner.hasNextInt()) {
+            int grade = scanner.nextInt();
 
-            if (grade >= 1.0 && grade <= 6.0) {
+            if (grade >= 1 && grade <= 6) {
                 notes[i] = grade;
                 valid = true;
             } else {
-                System.out.println("Erreur : la note doit être entre 1.0 et 6.0");
+                System.out.println("Erreur : la note doit être entre 1 et 6");
             }
         } else {
-            System.out.println("Erreur : veuillez entrer un nombre valide");
+            System.out.println("Erreur : veuillez entrer un nombre entier valide");
             scanner.next(); // Consommer l'entrée invalide
         }
     }
@@ -275,9 +287,8 @@ L'ajout de l'interaction utilisatrice introduit plusieurs concepts importants :
 > [!WARNING]
 >
 > Ne jamais faire confiance aux données saisies par l'utilisatrice. Validez
-> toujours le type (avec `hasNextDouble()`) et les valeurs (avec des
-> conditions). Sinon, votre programme peut planter ou produire des résultats
-> incorrects.
+> toujours le type (avec `hasNextInt()`) et les valeurs (avec des conditions).
+> Sinon, votre programme peut planter ou produire des résultats incorrects.
 
 Cette version est fonctionnelle et utilisable, mais elle manque encore de
 flexibilité : pourquoi forcer l'utilisatrice à entrer exactement 5 notes ?
@@ -331,7 +342,7 @@ while (!validCount) {
 }
 
 // Création du tableau de la taille choisie
-double[] notes = new double[count];
+int[] notes = new int[count];
 
 // Le reste du code reste identique
 ```
@@ -397,8 +408,8 @@ if (response.equals("oui") || response.equals("o")) {
         System.out.println("Note actuelle : " + notes[indexToModify]);
 
         // Saisie de la nouvelle valeur avec validation
-        System.out.print("Entrez la nouvelle note (entre 1.0 et 6.0) : ");
-        double newGrade = scanner.nextDouble();
+        System.out.print("Entrez la nouvelle note (entre 1 et 6) : ");
+        int newGrade = scanner.nextInt();
 
         // Mise à jour
         notes[indexToModify] = newGrade;
@@ -482,7 +493,7 @@ Voici un exemple de refactorisation pour le calcul du minimum :
 
 ```java
 // Avant : code dans main
-double min = notes[0];
+int min = notes[0];
 for (int i = 1; i < notes.length; i++) {
     if (notes[i] < min) {
         min = notes[i];
@@ -491,8 +502,8 @@ for (int i = 1; i < notes.length; i++) {
 System.out.println("Note minimale : " + min);
 
 // Après : fonction dédiée
-private static double calculateMinimum(double[] grades) {
-    double min = grades[0];
+private static int calculateMinimum(int[] grades) {
+    int min = grades[0];
     for (int i = 1; i < grades.length; i++) {
         if (grades[i] < min) {
             min = grades[i];
@@ -502,7 +513,7 @@ private static double calculateMinimum(double[] grades) {
 }
 
 // Utilisation dans main
-double min = calculateMinimum(notes);
+int min = calculateMinimum(notes);
 System.out.println("Note minimale : " + min);
 ```
 
