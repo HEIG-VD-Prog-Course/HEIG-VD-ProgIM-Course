@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.02-projet-puissance-4/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/12.01-projet-puissance-4-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.02-projet-puissance-4/01-supports-de-cours/10.02-projet-puissance-4-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -23,6 +23,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - [Table des matières](#table-des-matières)
 - [Objectifs](#objectifs)
 - [Introduction](#introduction)
+- [Notions préalables](#notions-préalables)
+  - [Les instructions `break` et `continue` dans les boucles](#les-instructions-break-et-continue-dans-les-boucles)
+  - [Les constantes de classe en Java](#les-constantes-de-classe-en-java)
 - [Le jeu Puissance 4](#le-jeu-puissance-4)
   - [Règles du jeu](#règles-du-jeu)
   - [Représentation de la grille](#représentation-de-la-grille)
@@ -38,7 +41,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Concepts utilisés](#concepts-utilisés-1)
   - [Stratégie d'implémentation](#stratégie-dimplémentation-1)
   - [La gravité](#la-gravité)
-- [Étape 3 : Alternance des joueuses](#étape-3--alternance-des-joueurs)
+- [Étape 3 : Alternance des joueuses](#étape-3--alternance-des-joueuses)
   - [Objectif](#objectif-2)
   - [Concepts utilisés](#concepts-utilisés-2)
   - [Stratégie d'implémentation](#stratégie-dimplémentation-2)
@@ -91,7 +94,6 @@ concepts vus en cours. Ce projet nous permettra de vivre l'expérience complète
 du développement logiciel, de la conception initiale à l'application
 fonctionnelle.
 
-
 À la fin de cette séance, vous devriez être capable de :
 
 - Analyser un problème complexe et le décomposer en étapes réalisables.
@@ -102,6 +104,275 @@ fonctionnelle.
 - Développer une application interactive en mode console.
 - Tester et déboguer un programme étape par étape.
 - Appliquer les bonnes pratiques de programmation dans un contexte réel.
+
+## Notions préalables
+
+Avant de commencer le projet, nous allons introduire deux notions qui seront
+utilisées dans l'implémentation du Puissance 4 mais que nous n'avons pas encore
+vues en cours.
+
+### Les instructions `break` et `continue` dans les boucles
+
+Dans nos programmes, il arrive que nous ayons besoin de contrôler plus finement
+le déroulement des boucles. Deux instructions nous permettent de le faire :
+`break` et `continue`.
+
+#### L'instruction `break`
+
+L'instruction `break` permet de **sortir immédiatement** d'une boucle, peu
+importe où on se trouve dans son exécution.
+
+**Syntaxe :**
+
+```java
+while (condition) {
+    // Instructions
+    if (autreCondition) {
+        break; // Sort immédiatement de la boucle
+    }
+    // Instructions
+}
+```
+
+**Exemple concret - Recherche d'un élément :**
+
+```java
+int[] numbers = {3, 7, 12, 5, 9, 15};
+int searchValue = 5;
+boolean found = false;
+
+for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] == searchValue) {
+        found = true;
+        break; // Inutile de continuer, on a trouvé
+    }
+}
+
+if (found) {
+    System.out.println("Valeur trouvée !");
+}
+```
+
+**Utilisation dans le Puissance 4 :**
+
+Dans notre projet, nous utilisons `break` pour sortir de la boucle de jeu
+lorsqu'un joueur gagne ou que la partie se termine :
+
+```java
+while (true) {
+    // ... affichage et placement ...
+
+    if (hasWon(grid, currentPlayer)) {
+        System.out.println("Le joueur " + currentPlayer + " a gagné !");
+        break; // Sort de la boucle de jeu
+    }
+
+    if (isGridFull(grid)) {
+        System.out.println("Match nul !");
+        break; // Sort de la boucle de jeu
+    }
+}
+```
+
+#### L'instruction `continue`
+
+L'instruction `continue` permet de **passer directement à l'itération suivante**
+de la boucle, en ignorant le reste du code dans l'itération actuelle.
+
+**Syntaxe :**
+
+```java
+for (int i = 0; i < n; i++) {
+    if (condition) {
+        continue; // Passe à l'itération suivante
+    }
+    // Ces instructions ne seront pas exécutées si continue est appelé
+}
+```
+
+**Exemple concret - Filtrage de valeurs :**
+
+```java
+// Afficher seulement les nombres positifs
+int[] numbers = {-5, 3, -2, 8, 0, 12, -7};
+
+for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] <= 0) {
+        continue; // Ignore les nombres négatifs ou nuls
+    }
+    System.out.println(numbers[i]); // Affiche uniquement les positifs
+}
+```
+
+#### Différence entre `break` et `continue`
+
+| Instruction | Effet                                     | Utilisation                                      |
+| ----------- | ----------------------------------------- | ------------------------------------------------ |
+| `break`     | Sort complètement de la boucle            | Terminer une recherche, quitter un jeu           |
+| `continue`  | Passe à l'itération suivante de la boucle | Ignorer certaines valeurs, redemander une saisie |
+
+**Conseil :** Ces instructions rendent le code plus lisible que des conditions
+complexes imbriquées. Utilisez-les quand elles clarifient l'intention de votre
+code.
+
+### Les constantes de classe en Java
+
+Dans le projet Puissance 4, vous verrez des constantes définies directement dans
+la classe, avec les mots-clés `public static final` :
+
+```java
+public class Main {
+    // Constantes pour la configuration du jeu
+    public static final int ROWS = 6;
+    public static final int COLS = 7;
+    public static final char PLAYER1 = 'X';
+    public static final char PLAYER2 = 'O';
+    public static final char EMPTY = ' ';
+
+    // Méthodes...
+}
+```
+
+#### Pourquoi des constantes de classe ?
+
+Jusqu'à présent, nous avons déclaré nos variables et constantes **à l'intérieur
+des méthodes** (variables locales). Dans ce projet, nous définissons des
+constantes **au niveau de la classe** pour plusieurs raisons :
+
+1. **Réutilisabilité** : Ces valeurs sont utilisées dans plusieurs méthodes
+   différentes (`createGrid`, `displayGrid`, `findLowestRow`, etc.). Les définir
+   une seule fois évite la répétition.
+
+2. **Centralisation** : Si nous voulons changer la taille de la grille (par
+   exemple 8×9), nous modifions uniquement ces constantes au lieu de chercher
+   tous les `6` et `7` dans le code.
+
+3. **Lisibilité** : `ROWS` et `COLS` sont plus explicites que des nombres
+   magiques (`6` et `7`) dispersés dans le code.
+
+4. **Configuration globale** : Ces valeurs configurent le comportement de tout
+   le programme.
+
+#### Signification des mots-clés
+
+Décomposons la déclaration `public static final int ROWS = 6;` :
+
+- **`public`** : La constante est accessible de partout (même si, dans notre
+  cas, nous restons dans la même classe).
+
+- **`static`** : La constante appartient à la classe elle-même, pas à une
+  instance particulière. On peut y accéder directement via `Main.ROWS` sans
+  créer d'objet `Main`.
+
+- **`final`** : La valeur ne peut pas être modifiée après initialisation. C'est
+  ce qui fait que c'est une **constante**.
+
+- **`int ROWS`** : Le type et le nom de la constante.
+
+- **`= 6`** : La valeur initiale.
+
+#### Convention de nommage
+
+En Java, les constantes s'écrivent **en majuscules avec des underscores** pour
+séparer les mots :
+
+```java
+public static final int MAX_ATTEMPTS = 3;
+public static final String DEFAULT_NAME = "Player";
+public static final double PI = 3.14159;
+```
+
+Cette convention permet de distinguer visuellement les constantes des variables.
+
+#### Utilisation dans le code
+
+Ces constantes peuvent ensuite être utilisées dans toutes les méthodes de la
+classe :
+
+```java
+public static char[][] createGrid() {
+    char[][] grid = new char[ROWS][COLS]; // Utilisation des constantes
+
+    for (int row = 0; row < ROWS; row++) {
+        for (int col = 0; col < COLS; col++) {
+            grid[row][col] = EMPTY;
+        }
+    }
+
+    return grid;
+}
+
+public static void displayGrid(char[][] grid) {
+    for (int row = 0; row < ROWS; row++) {
+        // ...
+    }
+}
+```
+
+#### Différence avec les variables locales
+
+| Aspect             | Variables locales                     | Constantes de classe                            |
+| ------------------ | ------------------------------------- | ----------------------------------------------- |
+| Déclaration        | À l'intérieur d'une méthode           | Au niveau de la classe (en dehors des méthodes) |
+| Portée             | Uniquement dans la méthode            | Dans toutes les méthodes de la classe           |
+| Durée de vie       | Pendant l'exécution de la méthode     | Pendant toute l'exécution du programme          |
+| Mot-clé `static`   | Non applicable                        | Nécessaire pour accès sans instance             |
+| Mot-clé `final`    | Optionnel (crée une constante locale) | Requis pour créer une constante                 |
+| Convention nommage | camelCase (ex: `maxValue`)            | UPPER_SNAKE_CASE (ex: `MAX_VALUE`)              |
+
+#### Pourquoi pas des paramètres de méthodes ?
+
+On pourrait se demander : "Pourquoi ne pas passer `rows` et `cols` en paramètres
+à chaque méthode ?"
+
+**Réponse :** C'est possible, mais cela rendrait le code plus lourd :
+
+```java
+// Avec paramètres (plus lourd)
+public static char[][] createGrid(int rows, int cols, char empty) { ... }
+public static void displayGrid(char[][] grid, int rows, int cols) { ... }
+public static int findLowestRow(char[][] grid, int col, int rows, char empty) { ... }
+
+// Chaque appel nécessite de passer les valeurs
+char[][] grid = createGrid(6, 7, ' ');
+displayGrid(grid, 6, 7);
+```
+
+**Avec des constantes de classe (plus simple) :**
+
+```java
+// Définition une seule fois
+public static final int ROWS = 6;
+public static final int COLS = 7;
+public static final char EMPTY = ' ';
+
+// Méthodes plus simples
+public static char[][] createGrid() { ... }
+public static void displayGrid(char[][] grid) { ... }
+public static int findLowestRow(char[][] grid, int col) { ... }
+
+// Appels plus simples
+char[][] grid = createGrid();
+displayGrid(grid);
+```
+
+Les constantes de classe sont particulièrement adaptées pour des **valeurs de
+configuration** qui restent constantes pendant toute l'exécution du programme.
+
+#### Ce que vous allez voir plus tard
+
+Dans ce cours introductif, nous définissons ces constantes dans la classe `Main`
+par simplicité. Plus tard, dans des cours avancés de programmation orientée
+objet, vous apprendrez à créer des classes dédiées pour encapsuler les données
+et le comportement (par exemple, une classe `Grid` avec ses propres constantes).
+
+Pour l'instant, retenez simplement que :
+
+- Les constantes de classe permettent de partager des valeurs entre plusieurs
+  méthodes
+- Elles rendent le code plus maintenable et lisible
+- Le mot-clé `static` permet d'accéder à la constante sans créer d'objet
+- Le mot-clé `final` garantit que la valeur ne changera pas
 
 ## Le jeu Puissance 4
 

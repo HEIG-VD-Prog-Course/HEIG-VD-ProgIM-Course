@@ -58,10 +58,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 | [07](#-cours-07) | Consolidation : Types, compilation et vocabulaire                                        |
 | [08](#-cours-08) | Bibliothèques et packages & Tableaux et fonctions avancés                                |
 | [09](#-cours-09) | Méthodologies de résolution de problèmes                                                 |
-| [10](#-cours-10) | Algorithme de tris                                                                       |
-| [11](#-cours-11) | Débogage                                                                                 |
-| [12](#-cours-12) | Projet guidé - Puissance 4                                                               |
-| [13](#-cours-13) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen                      |
+| [10](#-cours-10) | Projet libre                                                                             |
+| [11](#-cours-11) | Projet guidé - Puissance 4                                                               |
+| [12](#-cours-12) | Récapitulatif de l'unité d'enseignement avec préparation à l'examen                      |
 
 ## 🕐 Cours 01
 
@@ -234,47 +233,29 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 ## 🕙 Cours 10
 
-### Algorithmes de tri
+### Projet libre
 
 - Supports de cours :
-  [Lien vers le contenu](./10.01-algorithmes-de-tri/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./10.01-projet-libre/01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/index.html)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-algorithmes-de-tri/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-algorithmes-de-tri/01-supports-de-cours/10.01-algorithmes-de-tri-presentation.pdf)
-- Exemples de code :
-  [Lien vers le contenu](./10.01-algorithmes-de-tri/02-exemples-de-code/)
-- Exercices :
-  [Lien vers le contenu](./10.01-algorithmes-de-tri/03-exercices/README.md)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
 
 ## 🕚 Cours 11
-
-### Débogage
-
-- Supports de cours :
-  [Lien vers le contenu](./11.01-debogage/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-debogage/01-supports-de-cours/index.html)
-  ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/11.01-debogage/01-supports-de-cours/11.01-debogage-presentation.pdf)
-- Exemples de code :
-  [Lien vers le contenu](./11.01-debogage/02-exemples-de-code/)
-- Exercices : [Lien vers le contenu](./11.01-debogage/03-exercices/README.md)
-
-## 🕛 Cours 12
 
 ### Projet guidé - Puissance 4
 
 - Supports de cours :
-  [Lien vers le contenu](./12.01-projet-puissance-4/01-supports-de-cours/README.md)
+  [Lien vers le contenu](./10.02-projet-puissance-4/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/index.html)
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.02-projet-puissance-4/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/12.01-projet-puissance-4-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.02-projet-puissance-4/01-supports-de-cours/10.02-projet-puissance-4-presentation.pdf)
 - Exemples de code :
-  [Lien vers le contenu](./12.01-projet-puissance-4/02-exemples-de-code/)
+  [Lien vers le contenu](./10.02-projet-puissance-4/02-exemples-de-code/)
 - Exercices :
-  [Lien vers le contenu](./12.01-projet-puissance-4/03-exercices/README.md)
+  [Lien vers le contenu](./10.02-projet-puissance-4/03-exercices/README.md)
 
-## 🕐 Cours 13
+## 🕛 Cours 12
 
 ### Récapitulatif de l'unité d'enseignement avec préparation à l'examen
