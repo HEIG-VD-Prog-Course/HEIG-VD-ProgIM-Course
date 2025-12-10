@@ -7,10 +7,10 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Ressources annexes
 
-- Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/index.html)
+- Supports de cours : [Lien vers le contenu](01-supports-de-cours/README.md) ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.02-projet-puissance-4/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-projet-puissance-4/01-supports-de-cours/12.01-projet-puissance-4-presentation.pdf)
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.02-projet-puissance-4/01-supports-de-cours/10.02-projet-puissance-4-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](./02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](./03-exercices/README.md)
 
