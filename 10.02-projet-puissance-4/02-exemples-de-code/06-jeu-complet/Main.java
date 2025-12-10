@@ -30,7 +30,15 @@ public class Main {
     public static final char PLAYER2 = 'O';
     public static final char EMPTY = ' ';
 
-    
+    /**
+     * Efface l'écran du terminal.
+     * Utilise les codes ANSI pour positionner le curseur et effacer l'écran.
+     * Fonctionne sur la plupart des terminaux Unix/Linux/macOS et Windows modernes.
+     */
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 
     /**
      * Crée une grille de Puissance 4 vide.
@@ -234,6 +242,13 @@ public class Main {
 
         // Boucle de jeu principale
         while (true) {
+            // Effacer l'écran pour un affichage propre
+            clearScreen();
+
+            // Titre du jeu
+            System.out.println("=== Puissance 4 ===");
+            System.out.println();
+
             // Afficher l'état actuel de la grille
             displayGrid(grid);
 
@@ -268,6 +283,8 @@ public class Main {
 
             // Vérifier s'il y a victoire
             if (hasWon(grid, currentPlayer)) {
+                clearScreen();
+                System.out.println("=== Puissance 4 ===");
                 System.out.println();
                 displayGrid(grid);
                 System.out.println("\n🎉 Le joueur " + currentPlayer + " a gagné !");
@@ -276,6 +293,8 @@ public class Main {
 
             // Vérifier s'il y a match nul
             if (isGridFull(grid)) {
+                clearScreen();
+                System.out.println("=== Puissance 4 ===");
                 System.out.println();
                 displayGrid(grid);
                 System.out.println("\n🤝 Match nul ! La grille est pleine.");
@@ -288,8 +307,6 @@ public class Main {
             } else {
                 currentPlayer = PLAYER1;
             }
-
-            System.out.println();
         }
 
         scanner.close();
