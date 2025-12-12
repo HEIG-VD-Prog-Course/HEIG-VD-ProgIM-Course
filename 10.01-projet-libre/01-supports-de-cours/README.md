@@ -33,6 +33,7 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   - [Restez simple](#restez-simple)
   - [Organisez votre code](#organisez-votre-code)
   - [Testez régulièrement](#testez-régulièrement)
+  - [Outils collaboratifs](#outils-collaboratifs)
 - [Points d'étapes](#points-détapes)
   - [Étape 1 : Choix et démarrage du projet](#étape-1--choix-et-démarrage-du-projet)
   - [Étape 2 : Finalisation](#étape-2--finalisation)
@@ -244,6 +245,27 @@ public static int findTask(String[] tasks, int count, String searchTerm) {
 ```
 
 Une fois que la fonction marche, vous pouvez retirer les `println` de debug.
+
+### Outils collaboratifs
+
+Si vous souhaitez travailler avec une autre personne pour vous entraider ou
+partager vos connaissances, vous pouvez utiliser des outils de programmation
+collaborative en temps réel. Ces outils permettent de coder ensemble sur le même
+fichier, même à distance.
+
+**Outils recommandés :**
+
+- **VS Code Live Share** : Extension pour Visual Studio Code permettant de
+  partager votre session de codage en temps réel
+
+  - [VS Code Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+  - Gratuit et facile à utiliser
+  - Permet le partage d'écran, le chat et la collaboration sur le code
+
+- **IntelliJ Code With Me** : Outil pour IntelliJ IDEA et autres IDE JetBrains
+  - [Code With Me](https://www.jetbrains.com/help/idea/code-with-me.html)
+  - Idéal si vous utilisez IntelliJ IDEA
+  - Collaboration en temps réel avec plusieurs personnes
 
 ## Points d'étapes
 
