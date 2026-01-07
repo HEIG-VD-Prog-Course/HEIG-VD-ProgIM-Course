@@ -259,3 +259,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 ## 🕛 Cours 12
 
 ### Récapitulatif de l'unité d'enseignement avec préparation à l'examen
+
+- Supports de cours :
+  [Lien vers le contenu](./12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/README.md)
+  ·
+  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  ·
+  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+- Résultats des formulaires de feedback et évaluations GAPS :
+  [Lien vers le contenu](./12.01-recapitulatif-de-lunite-denseignement/02-resultats-des-formulaires-de-feedback/)
