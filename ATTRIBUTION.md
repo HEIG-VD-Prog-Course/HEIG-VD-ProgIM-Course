@@ -12,10 +12,10 @@
   under a
   [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md)
   license.
-- [HEIG-VD ProgServ2 Course](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course)
+- [HEIG-VD ProgServ2 Course](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course)
   by Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo/) is licensed
   under a
-  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)
+  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)
   license.
 - [HEIG-VD MVP Course](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course)
   by Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo/) and Vincent

@@ -9,9 +9,9 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM Course - Introduction à la programmation et aux algorithmes
 description: Introduction à la programmation et aux algorithmes pour l'unité d'enseignement ProgIM enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html
+url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html
 header: "**Introduction à la programmation et aux algorithmes**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-ProgIM-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM 2025-2026](https://github.com/heig-vd-progserv-course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
@@ -177,9 +177,9 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/01.02-introduction-a-la-programmation-et-aux-algorithmes
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/01.02-introduction-a-la-programmation-et-aux-algorithmes
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

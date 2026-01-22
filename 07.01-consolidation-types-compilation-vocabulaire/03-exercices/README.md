@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -415,13 +415,11 @@ java HelloWorld
 **Réponses** :
 
 1. **Que contient le fichier `.class` ?**
-
    - Le bytecode Java (code intermédiaire entre code source et code machine)
    - Ce bytecode peut être exécuté sur n'importe quelle JVM, quel que soit le
      système d'exploitation
 
 2. **Renommer la classe ?**
-
    - Si vous renommez la classe en `HelloUniverse` dans le code mais gardez le
      nom de fichier `HelloWorld.java`, la compilation échouera avec une erreur :
    - `error: class HelloUniverse is public, should be declared in a file named HelloUniverse.java`
@@ -435,4 +433,4 @@ java HelloWorld
 </details>
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

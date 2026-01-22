@@ -9,9 +9,9 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Récapitulatif de l'unité d'enseignement
 description: Récapitulatif de l'unité d'enseignement pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html
+url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html
 header: "**Récapitulatif de l'unité d'enseignement**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 2
 math: mathjax
 -->
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
+<https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course>
 
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -70,7 +70,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/01.01-modalites-de-lunite-denseignement)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/01.01-modalites-de-lunite-denseignement)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -91,7 +91,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/02.01-sequence-selection-iteration)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/02.01-sequence-selection-iteration)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -110,7 +110,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/03.01-iteration)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/03.01-iteration)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -131,7 +131,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.01-java)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/04.01-java)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -149,7 +149,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/05.01-fonctions)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/05.01-fonctions)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -172,7 +172,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/06.01-tableaux)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/06.01-tableaux)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -191,7 +191,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/07.01-consolidation-types-compilation-vocabulaire)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/07.01-consolidation-types-compilation-vocabulaire)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -209,7 +209,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/08.01-bibliotheques-et-packages)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/08.01-bibliotheques-et-packages)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -229,7 +229,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/09.01-methodologies-de-resolution-de-problemes)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/09.01-methodologies-de-resolution-de-problemes)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -248,7 +248,7 @@ Jetons un coup d'œil sur ce que **vous** avez fait durant ce semestre.
 
 <!-- _class: lead -->
 
-[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/10.01-projet-libre)
+[Retrouvez ce cours sur le dépôt Git de l'unité d'enseignement](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/10.01-projet-libre)
 
 ![bg brightness:2 opacity:0.2][illustration-principale]
 
@@ -381,13 +381,13 @@ Au plaisir de vous recroiser !
 <!-- URLs -->
 
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/README.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/README.md
 [presentation-web]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html
+	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf
+	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

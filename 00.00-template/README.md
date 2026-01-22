@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/00.00-template/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/00.00-template/01-supports-de-cours/00.00-template-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/00.00-template-presentation.pdf)
 - Exercices : [Lien vers le contenu](./02-exercices/README.md)
 
 ## Objectifs
@@ -55,4 +55,4 @@ il est recommandé pour le cours suivant de :
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

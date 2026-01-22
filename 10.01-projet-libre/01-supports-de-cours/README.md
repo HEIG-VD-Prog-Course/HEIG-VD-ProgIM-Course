@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
 
 ## Table des matières
 
@@ -257,7 +257,6 @@ fichier, même à distance.
 
 - **VS Code Live Share** : Extension pour Visual Studio Code permettant de
   partager votre session de codage en temps réel
-
   - [VS Code Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
   - Gratuit et facile à utiliser
   - Permet le partage d'écran, le chat et la collaboration sur le code
@@ -443,4 +442,4 @@ pendant les points d'étapes ou par e-mail. Ce projet est une occasion unique de
 créer quelque chose qui vous ressemble. Profitez-en ! 🚀
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -88,7 +88,6 @@ public class MyProgram {
 }
 ```
 
-
 À la fin de cette séance, vous devriez être capable de :
 
 - Identifier et appliquer les structures algorithmiques fondamentales :
@@ -110,19 +109,16 @@ information. Cette boîte a :
 Pensez à ces exemples concrets :
 
 1. **Un panier de pommes** 🍎
-
    - Le panier s'appelle `appleCount`
    - Il contient des **nombres entiers** (on ne peut pas avoir 2.5 pommes)
    - Sa valeur actuelle est `5`
 
 2. **Un portefeuille** 💰
-
    - Le portefeuille s'appelle `myMoney`
    - Il contient un **nombre décimal** (on peut avoir 25.50 francs)
    - Sa valeur actuelle est `25.50`
 
 3. **Une étiquette avec votre nom** 📛
-
    - L'étiquette s'appelle `myName`
    - Elle contient du **texte** (une chaîne de caractères)
    - Sa valeur actuelle est `"Rune"`
@@ -2076,11 +2072,9 @@ Le magasin est fermé (week-end)
 > **Différence entre `&&` (ET) et `||` (OU) :**
 >
 > - `&&` (ET) : **TOUTES** les conditions doivent être vraies
->
 >   - `true && true` → `true`
 >   - `true && false` → `false`
 >   - `false && false` → `false`
->
 > - `||` (OU) : **AU MOINS UNE** condition doit être vraie
 >   - `true || true` → `true`
 >   - `true || false` → `true`
@@ -2678,10 +2672,8 @@ programmation :
 > **Erreurs fréquentes :**
 >
 > 1. **Confusion entre `=` et `==`**
->
 >    - `=` : affectation (`age = 20`)
 >    - `==` : comparaison (`age == 20`)
->
 > 2. **Boucle infinie**
 >
 >    ```java
@@ -2714,22 +2706,16 @@ programmation :
 > **Conseils pour écrire du bon code :**
 >
 > 1. **Nommage des variables**
->
 >    - Utilisez des noms descriptifs : `nombreDePommes` plutôt que `n`
 >    - Utilisez le camelCase : `prixTotal`, `ageMinimum`
 >    - Les constantes en MAJUSCULES : `AGE_MAJORITE`, `TVA_SUISSE`
->
 > 2. **Indentation**
->
 >    - Indentez le code à l'intérieur des blocs `{}` (4 espaces ou 1 tab)
 >    - Cela rend le code plus lisible
->
 > 3. **Commentaires**
->
 >    - Expliquez **pourquoi**, pas **quoi**
 >    - ✅ `// Le taux de TVA est défini par la loi suisse`
 >    - ❌ `// Je déclare une variable`
->
 > 4. **Testez votre code**
 >    - Testez avec différentes valeurs
 >    - Testez les cas limites (0, nombres négatifs, etc.)
@@ -2742,4 +2728,4 @@ programmation :
 - <https://www.w3schools.com/java/java_data_types.asp>
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-algorithmes-de-tri/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-algorithmes-de-tri/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-algorithmes-de-tri/01-supports-de-cours/10.01-algorithmes-de-tri-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-algorithmes-de-tri/01-supports-de-cours/10.01-algorithmes-de-tri-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -36,4 +36,4 @@ sur votre machine et de prendre le temps de les comprendre en profondeur **sans
 recourir à de l'aide externe (IA, forums, etc.)**.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

@@ -9,9 +9,9 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Projet libre
 description: Projet libre pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/index.html
+url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html
 header: "**Projet libre**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 2
 math: mathjax
 -->
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
+<https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course>
 
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -371,13 +371,13 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/10.01-projet-libre/01-supports-de-cours
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/10.01-projet-libre/01-supports-de-cours
 [presentation-web]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/index.html
+	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf
+	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

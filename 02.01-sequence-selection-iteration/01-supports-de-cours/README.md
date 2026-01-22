@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 
 ## Table des matières
@@ -95,7 +95,6 @@ représenter de deux manières :
 > de résoudre un problème ou d'accomplir une tâche. C'est comme une recette de
 > cuisine : chaque étape est clairement définie et, si on les suit correctement,
 > on obtient toujours le même résultat.
-
 
 À la fin de cette séance, vous devriez être capable de :
 
@@ -208,7 +207,6 @@ C'est un excellent outil pour :
 ### Règles de base du pseudocode
 
 1. **Utilisez des mots simples et clairs**
-
    - "Demander l'âge à l'utilisatrice" (recommandé)
    - "scanf(%d, &age)" (à éviter)
 
@@ -222,7 +220,6 @@ C'est un excellent outil pour :
    ```
 
 3. **Utilisez des mots-clés cohérents**
-
    - DÉBUT / FIN
    - SI / ALORS / SINON / FIN SI
    - POUR / À / FAIRE / FIN POUR
@@ -867,4 +864,4 @@ Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 - <https://www.w3schools.com/java/java_conditions.asp>
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

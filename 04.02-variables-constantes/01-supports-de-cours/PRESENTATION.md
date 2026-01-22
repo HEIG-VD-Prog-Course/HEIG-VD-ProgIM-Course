@@ -9,9 +9,9 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Variables & Constantes
 description: Variables & Constantes pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html
+url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html
 header: "**Variables & Constantes**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
+<https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course>
 
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -889,16 +889,16 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/index.html
+	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf
+	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/01-supports-de-cours
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/04.02-variables-constantes/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/04.02-variables-constantes/03-exercices
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/04.02-variables-constantes/03-exercices
 [plantuml-editor]: https://plantuml.nortalle.ch
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

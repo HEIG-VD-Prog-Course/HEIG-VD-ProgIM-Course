@@ -17,7 +17,7 @@ applyTo: "**/*.md"
 
 All web presentation and PDF links follow this pattern:
 
-- Base: `https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/`
+- Base: `https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/`
 - Web: `{base}XX.XX-topic/01-supports-de-cours/index.html`
 - PDF: `{base}XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf`
 
@@ -51,8 +51,7 @@ rendered as colored boxes on GitHub.
 
 > [!WARNING]
 >
-> Critical content demanding immediate user attention due to
-> potential risks.
+> Critical content demanding immediate user attention due to potential risks.
 
 > [!CAUTION]
 >
@@ -79,8 +78,8 @@ La conversion entre types primitifs peut être implicite ou explicite.
 
 > [!IMPORTANT]
 >
-> Une conversion de type avec perte de précision (par exemple de
-> `double` vers `int`) nécessite un cast explicite.
+> Une conversion de type avec perte de précision (par exemple de `double` vers
+> `int`) nécessite un cast explicite.
 
 > [!WARNING]
 >
