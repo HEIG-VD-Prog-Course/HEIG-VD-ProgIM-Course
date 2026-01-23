@@ -9,7 +9,7 @@ paginate: true
 author: V. Guidoux & L. Delafontaine, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Entrée, sortie et encodage
 description: Cours sur l'entrée, la sortie et l'encodage pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html
+url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html
 header: "**Entrée, sortie et encodage**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -343,9 +343,9 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/05.02-entree-sortie-encodage/01-supports-de-cours
 [exercices]:

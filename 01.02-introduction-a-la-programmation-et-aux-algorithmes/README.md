@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
 
 ## Objectifs
 

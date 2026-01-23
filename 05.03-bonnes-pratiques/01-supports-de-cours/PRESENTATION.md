@@ -9,7 +9,7 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Bonnes pratiques de programmation
 description: Cours sur les bonnes pratiques de programmation pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html
+url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html
 header: "**Bonnes pratiques de programmation**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -390,9 +390,9 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/05.03-bonnes-pratiques/01-supports-de-cours
 [exercices]:

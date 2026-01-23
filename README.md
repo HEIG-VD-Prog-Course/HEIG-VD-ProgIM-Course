@@ -69,18 +69,18 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./01.01-modalites-de-lunite-denseignement/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.01-modalites-de-lunite-denseignement/01-supports-de-cours/01.01-modalites-de-lunite-denseignement-presentation.pdf)
 
 ### Introduction à la programmation et aux algorithmes
 
 - Supports de cours :
   [Lien vers le contenu](./01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
 
 ## 🕑 Cours 02
 
@@ -89,9 +89,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./02.01-sequence-selection-iteration/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf)
 - Exercices :
   [Lien vers le contenu](./02.01-sequence-selection-iteration/02-exercices/README.md)
 
@@ -101,9 +101,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Lien vers le contenu](./03.01-iteration/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/03.01-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/03.01-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
 - Exercices : [Lien vers le contenu](./03.01-iteration/02-exercices/README.md)
 
 ## 🕓 Cours 04
@@ -112,18 +112,18 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Lien vers le contenu](./04.01-java/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.01-java/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/04.01-java/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.01-java/01-supports-de-cours/04.01-java-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/04.01-java/01-supports-de-cours/04.01-java-presentation.pdf)
 
 ### Variables & Constantes
 
 - Supports de cours :
   [Lien vers le contenu](./04.02-variables-constantes/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./04.02-variables-constantes/02-exemples-de-code/)
 - Exercices :
@@ -135,9 +135,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Lien vers le contenu](./05.01-fonctions/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.01-fonctions/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.01-fonctions/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./05.01-fonctions/02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](./05.01-fonctions/03-exercices/README.md)
@@ -147,9 +147,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./05.02-entree-sortie-encodage/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./05.02-entree-sortie-encodage/02-exemples-de-code/)
 - Exercices :
@@ -160,9 +160,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./05.03-bonnes-pratiques/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
 - Exercices :
   [Lien vers le contenu](./05.03-bonnes-pratiques/02-exercices/README.md)
 
@@ -172,9 +172,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Lien vers le contenu](./06.01-tableaux/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/06.01-tableaux/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/06.01-tableaux/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/06.01-tableaux/01-supports-de-cours/06.01-tableaux-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/06.01-tableaux/01-supports-de-cours/06.01-tableaux-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./06.01-tableaux/02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](./06.01-tableaux/03-exercices/README.md)
@@ -186,9 +186,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./07.01-consolidation-types-compilation-vocabulaire/02-exemples-de-code/)
 - Exercices :
@@ -201,9 +201,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./08.01-bibliotheques-et-packages/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/08.01-bibliotheques-et-packages/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/08.01-bibliotheques-et-packages/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/08.01-bibliotheques-et-packages/01-supports-de-cours/08.01-bibliotheques-et-packages-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/08.01-bibliotheques-et-packages/01-supports-de-cours/08.01-bibliotheques-et-packages-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./08.01-bibliotheques-et-packages/02-exemples-de-code/)
 - Exercices :
@@ -214,9 +214,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./08.02-tableaux-fonctions-avances/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/08.02-tableaux-fonctions-avances/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/08.02-tableaux-fonctions-avances/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/08.02-tableaux-fonctions-avances/01-supports-de-cours/08.02-tableaux-fonctions-avances-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/08.02-tableaux-fonctions-avances/01-supports-de-cours/08.02-tableaux-fonctions-avances-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./08.02-tableaux-fonctions-avances/02-exemples-de-code/)
 - Exercices :
@@ -237,9 +237,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 
 - Supports de cours :
   [Lien vers le contenu](./10.01-projet-libre/01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
 
 ## 🕚 Cours 11
 
@@ -248,9 +248,9 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./10.02-projet-puissance-4/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.02-projet-puissance-4/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.02-projet-puissance-4/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.02-projet-puissance-4/01-supports-de-cours/10.02-projet-puissance-4-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.02-projet-puissance-4/01-supports-de-cours/10.02-projet-puissance-4-presentation.pdf)
 - Exemples de code :
   [Lien vers le contenu](./10.02-projet-puissance-4/02-exemples-de-code/)
 - Exercices :
@@ -263,8 +263,8 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - Supports de cours :
   [Lien vers le contenu](./12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
   [Lien vers le contenu](./12.01-recapitulatif-de-lunite-denseignement/02-resultats-des-formulaires-de-feedback/)

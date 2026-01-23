@@ -10,9 +10,9 @@ _[Variables & Constantes](../01-supports-de-cours/README.md)_.
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/04.02-variables-constantes/01-supports-de-cours/04.02-variables-constantes-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Énoncés et solutions](../02-exercices/README.md)
 

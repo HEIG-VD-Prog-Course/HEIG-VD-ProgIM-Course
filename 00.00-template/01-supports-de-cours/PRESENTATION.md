@@ -9,7 +9,7 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Template
 description: Template pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/index.html
+url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/index.html
 header: "**Template**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
@@ -82,9 +82,9 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/index.html
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/00.00-template-presentation.pdf
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/00.00-template/01-supports-de-cours/00.00-template-presentation.pdf
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/00.00-template/01-supports-de-cours
 [exercices]:

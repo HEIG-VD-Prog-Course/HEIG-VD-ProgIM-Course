@@ -51,9 +51,9 @@ Les supports suivants reprennent les éléments théoriques et détaillent
 l'organisation du projet :
 
 - Supports de cours : [Lien vers le contenu](01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
 
 [licence]:
 	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md

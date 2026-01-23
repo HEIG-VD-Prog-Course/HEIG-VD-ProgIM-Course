@@ -9,7 +9,7 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: "HEIG-VD ProgIM1 Course - Consolidation : Types, compilation et vocabulaire"
 description: Consolidation des connaissances sur les types, la compilation et le vocabulaire technique pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html
+url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html
 header: "**Consolidation : Types, compilation et vocabulaire**"
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 2
@@ -560,9 +560,9 @@ Les illustrations et images utilisées dans cette présentation proviennent de :
 <!-- URLs -->
 
 [presentation-web]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours/07.01-consolidation-types-compilation-vocabulaire-presentation.pdf
 [cours]:
 	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/07.01-consolidation-types-compilation-vocabulaire/01-supports-de-cours
 [exercices]:

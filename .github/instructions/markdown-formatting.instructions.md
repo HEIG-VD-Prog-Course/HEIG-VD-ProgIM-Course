@@ -17,7 +17,7 @@ applyTo: "**/*.md"
 
 All web presentation and PDF links follow this pattern:
 
-- Base: `https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/`
+- Base: `https://heig-vd-progim-course.github.io/heig-vd-progim1-course/`
 - Web: `{base}XX.XX-topic/01-supports-de-cours/index.html`
 - PDF: `{base}XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf`
 

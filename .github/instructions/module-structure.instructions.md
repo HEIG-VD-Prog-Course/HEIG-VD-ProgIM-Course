@@ -67,9 +67,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](./02-exemples-de-code/) (if
   applicable)
 - Exercices : [Lien vers le contenu](./03-exercices/README.md) (if applicable)
@@ -169,9 +169,9 @@ Example format (adjust XX.XX and topic name):
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-progim1-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/) (if
   applicable)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
