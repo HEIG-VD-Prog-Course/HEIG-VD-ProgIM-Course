@@ -537,4 +537,4 @@ Cependant, comprendre comment fonctionnent les algorithmes de tri vous permet de
 prendre des décisions éclairées et de résoudre des problèmes complexes.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

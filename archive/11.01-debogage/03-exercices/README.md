@@ -630,4 +630,4 @@ System.out.println("Max : " + findMax(test4));  // -8 ✓
 ---
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

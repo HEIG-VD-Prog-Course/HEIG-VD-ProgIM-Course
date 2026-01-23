@@ -11,7 +11,7 @@ title: HEIG-VD ProgIM1 Course - Débogage
 description: Débogage pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/11.01-debogage/01-supports-de-cours/index.html
 header: "**Débogage**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/heig-vd-progim-course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course>
+<https://github.com/heig-vd-progim-course/heig-vd-progim1-course>
 
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -581,11 +581,11 @@ Est-ce que vous avez des questions ?
 [presentation-pdf]:
 	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/11.01-debogage/01-supports-de-cours/11.01-debogage-presentation.pdf
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/11.01-debogage/01-supports-de-cours
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/tree/main/11.01-debogage/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/11.01-debogage/03-exercices
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/tree/main/11.01-debogage/03-exercices
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

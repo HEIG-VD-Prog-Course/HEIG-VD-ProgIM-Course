@@ -500,4 +500,4 @@ Comprendre ces algorithmes vous permet de créer des programmes plus efficaces e
 de prendre des décisions éclairées sur les structures de données à utiliser.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md
