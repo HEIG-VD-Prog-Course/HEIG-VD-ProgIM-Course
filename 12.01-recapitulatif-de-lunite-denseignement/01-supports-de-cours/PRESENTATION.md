@@ -281,10 +281,9 @@ Vous pourrez les retrouver sur le [dépôt Git de l'unité d'enseignement][cours
 ## Modalités de l'évaluation
 
 - **Type** : Épreuve écrite
-- **Durée** : À confirmer
-- **Matériel autorisé** : À confirmer
-- **Support** : À Confirmer
-- **Date** : À confirmer selon le calendrier académique
+- **Durée** : 3H
+- **Matériel autorisé** : Une feuille recto-verso manuscrite ou imprimée
+- **Date** : Lundi 2 février de 9h à 12h
 
 ## Critères d'évaluation
 
