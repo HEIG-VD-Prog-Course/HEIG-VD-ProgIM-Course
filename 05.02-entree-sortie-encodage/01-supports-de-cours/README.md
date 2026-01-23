@@ -6,9 +6,9 @@
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.02-entree-sortie-encodage/01-supports-de-cours/05.02-entree-sortie-encodage-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -28,9 +28,9 @@
 - Lire des données saisies par l'utilisatrice avec `Scanner`
 - Comprendre ce qu'est l'encodage des caractères (ASCII, UTF-8)
 - Créer des programmes interactifs simples
-
   - [System.out.print vs System.out.println](#systemoutprint-vs-systemoutprintln)
   - [Afficher plusieurs valeurs](#afficher-plusieurs-valeurs)
+
 - [Lire des données avec Scanner](#lire-des-données-avec-scanner)
   - [Créer un Scanner](#créer-un-scanner)
   - [Lire différents types de données](#lire-différents-types-de-données)

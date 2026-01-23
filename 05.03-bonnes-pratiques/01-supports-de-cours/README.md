@@ -1,6 +1,6 @@
 # Bonnes pratiques de programmation - Support de cours
 
-<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
+<https://github.com/heig-vd-progim-course/heig-vd-progim1-course>
 
 [Markdown][course-material]
 
@@ -14,9 +14,9 @@ Ce travail est sous licence [CC BY-SA 4.0][license].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
 - Exercices : [Lien vers le contenu](../02-exercices/README.md)
 
 ## Table des matières
@@ -84,7 +84,6 @@ vous-même dans 6 mois) peuvent comprendre et modifier facilement, c'est mieux !
 
 Les bonnes pratiques de programmation sont comme les règles de politesse dans
 une conversation : elles facilitent la communication et évitent les malentendus.
-
 
 À la fin de cette séance, vous devriez être capable de :
 
@@ -815,6 +814,6 @@ configuration de l'éditeur.
 <!-- URLs -->
 
 [course-material]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/05.03-bonnes-pratiques/01-supports-de-cours/README.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/05.03-bonnes-pratiques/01-supports-de-cours/README.md
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

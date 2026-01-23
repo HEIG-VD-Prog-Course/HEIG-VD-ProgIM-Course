@@ -8,9 +8,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 ## Ressources annexes
 
 - Supports de cours : [Lien vers le contenu](./01-supports-de-cours/README.md) ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/12.01-recapitulatif-de-lunite-denseignement/01-supports-de-cours/12.01-recapitulatif-de-lunite-denseignement-presentation.pdf)
 - Résultats des formulaires de feedback et évaluations GAPS :
   [Lien vers le contenu](./02-resultats-des-formulaires-de-feedback/)
 
@@ -45,4 +45,4 @@ L'évaluation se fait en utilisant les critères suivants :
 - Capacité à écrire un code lisible et bien commenté.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

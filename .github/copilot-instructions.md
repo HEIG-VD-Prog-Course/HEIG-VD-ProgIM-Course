@@ -1,7 +1,7 @@
 # GitHub Copilot Instructions
 
 This repository contains teaching materials for a programming course
-(HEIG-VD-ProgIM-Course).
+(heig-vd-progim1-course).
 
 ## Course Configuration
 
@@ -97,12 +97,12 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 
 ## Repository Information
 
-- **Repository**: HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course
+- **Repository**: heig-vd-progim-course/heig-vd-progim1-course
 - **Hosted URL Base**:
-  https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/
+  https://heig-vd-progim-course.github.io/heig-vd-progim1-course/
 - **License**: CC BY-SA 4.0
 - **License URL**:
-  https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+  https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 ## Specialized Instructions
 

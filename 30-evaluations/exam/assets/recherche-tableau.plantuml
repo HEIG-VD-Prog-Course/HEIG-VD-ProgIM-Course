@@ -1,0 +1,28 @@
+@startuml recherche-tableau
+!theme plain
+skinparam defaultTextAlignment center
+skinparam activityDiamondBackgroundColor #EEEEEE
+skinparam activityBackgroundColor #FFFFFF
+skinparam activityBorderColor #333333
+skinparam activityArrowColor #333333
+
+start
+
+:Déclarer tableau = {10, 25, 7, 42, 18, 3};
+:Déclarer element = 42;
+:Déclarer i = 0;
+
+while (i < longueur du tableau ?) is (oui)
+  if (tableau[i] == element ?) then (oui)
+    :Retourner i;
+    stop
+  else (non)
+  endif
+  :i = i + 1;
+endwhile (non)
+
+:Retourner -1;
+
+stop
+
+@enduml

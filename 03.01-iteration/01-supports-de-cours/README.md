@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/03.01-iteration/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/03.01-iteration/01-supports-de-cours/03.01-iteration-presentation.pdf)
 - Exercices : [Lien vers le contenu](../02-exercices/README.md)
 
 ## Table des matières
@@ -466,4 +466,4 @@ Remarques pour `POUR` :
 - <https://www.w3schools.com/java/java_for_loop.asp>
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

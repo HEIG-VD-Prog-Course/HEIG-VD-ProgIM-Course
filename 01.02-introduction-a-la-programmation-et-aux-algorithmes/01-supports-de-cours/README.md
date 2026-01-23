@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-prog-course.github.io/HEIG-VD-ProgIM-Course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/01.02-introduction-a-la-programmation-et-aux-algorithmes/01-supports-de-cours/01.02-introduction-a-la-programmation-et-aux-algorithmes-presentation.pdf)
 
 ## Table des matières
 
@@ -34,7 +34,6 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Comprendre la notion d'algorithme grâce à la métaphore de la recette
 - Suivre et imaginer des instructions simples pour résoudre un problème
 - Prendre conscience de l'importance de la précision dans les instructions
-
   - [Exemple : « Deviner un nombre »](#exemple-deviner-un-nombre)
 
 ## Objectifs
@@ -136,4 +135,4 @@ public class GuessNumber {
 ```
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

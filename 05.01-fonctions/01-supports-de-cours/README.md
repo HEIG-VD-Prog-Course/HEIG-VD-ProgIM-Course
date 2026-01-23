@@ -11,9 +11,9 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.01-fonctions/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.01-fonctions/01-supports-de-cours/05.01-fonctions-presentation.pdf)
 - Exemples de code : [Lien vers le contenu](../02-exemples-de-code/)
 - Exercices : [Lien vers le contenu](../03-exercices/README.md)
 
@@ -74,15 +74,14 @@ plus petits**, chacun ayant une responsabilité claire et bien définie.
 
 > [!NOTE]
 >
-> En Java, on utilise le terme "méthode" plutôt que "fonction" car elles
-> sont toujours définies à l'intérieur d'une classe. Mais les deux termes font
+> En Java, on utilise le terme "méthode" plutôt que "fonction" car elles sont
+> toujours définies à l'intérieur d'une classe. Mais les deux termes font
 > référence au même concept.
 
 Dans ce chapitre, vous allez apprendre à créer vos propres méthodes, à les
 appeler, à leur passer des informations et à récupérer leurs résultats. Vous
 découvrirez également les nombreuses méthodes déjà fournies par Java que vous
 pouvez utiliser immédiatement.
-
 
 À la fin de cette séance, vous devriez être capable de :
 
@@ -197,9 +196,9 @@ Les méthodes apportent plusieurs avantages majeurs :
 
 > [!IMPORTANT]
 >
-> Une bonne méthode fait **une seule chose** et la fait bien. Si
-> votre méthode fait trop de choses différentes, c'est probablement qu'elle
-> devrait être divisée en plusieurs méthodes plus petites.
+> Une bonne méthode fait **une seule chose** et la fait bien. Si votre méthode
+> fait trop de choses différentes, c'est probablement qu'elle devrait être
+> divisée en plusieurs méthodes plus petites.
 
 ## Déclarer une méthode en Java
 
@@ -226,10 +225,9 @@ Décomposons chaque élément :
 
 > [!NOTE]
 >
-> Le mot-clé `static` signifie que la méthode appartient à la classe
-> elle-même et non à une instance de la classe. Pour l'instant, utilisez
-> toujours `static` pour vos méthodes. Nous verrons la programmation orientée
-> objet plus tard.
+> Le mot-clé `static` signifie que la méthode appartient à la classe elle-même
+> et non à une instance de la classe. Pour l'instant, utilisez toujours `static`
+> pour vos méthodes. Nous verrons la programmation orientée objet plus tard.
 
 ### Syntaxe générale
 
@@ -269,9 +267,9 @@ Version 1.0
 
 > [!TIP]
 >
-> Le type `void` signifie "aucun retour". Utilisez `void` quand votre
-> méthode effectue une action (comme afficher quelque chose) mais ne calcule pas
-> de résultat à renvoyer.
+> Le type `void` signifie "aucun retour". Utilisez `void` quand votre méthode
+> effectue une action (comme afficher quelque chose) mais ne calcule pas de
+> résultat à renvoyer.
 
 ### Conventions de nommage des méthodes
 
@@ -302,9 +300,9 @@ calculer_moyenne() // Utilise des underscores (style Python/C)
 
 > [!IMPORTANT]
 >
-> Un bon nom de méthode doit être suffisamment descriptif pour
-> qu'on comprenne ce qu'elle fait sans lire son code. Préférez un nom long et
-> clair à un nom court et obscur.
+> Un bon nom de méthode doit être suffisamment descriptif pour qu'on comprenne
+> ce qu'elle fait sans lire son code. Préférez un nom long et clair à un nom
+> court et obscur.
 
 ## Appeler une méthode en Java
 
@@ -390,10 +388,9 @@ Section 2
 
 > [!TIP]
 >
-> C'est exactement le but des méthodes : éviter de répéter le même code.
-> Plutôt que d'écrire trois fois
-> `System.out.println("========================")`, on écrit une fois la méthode
-> et on l'appelle trois fois.
+> C'est exactement le but des méthodes : éviter de répéter le même code. Plutôt
+> que d'écrire trois fois `System.out.println("========================")`, on
+> écrit une fois la méthode et on l'appelle trois fois.
 
 ### Appeler une méthode depuis une autre méthode
 
@@ -422,9 +419,9 @@ public class Main {
 
 > [!IMPORTANT]
 >
-> L'ordre des déclarations n'a pas d'importance en Java. Vous
-> pouvez appeler une méthode qui est déclarée plus bas dans le fichier. Ce qui
-> compte, c'est que la méthode soit déclarée quelque part dans la classe.
+> L'ordre des déclarations n'a pas d'importance en Java. Vous pouvez appeler une
+> méthode qui est déclarée plus bas dans le fichier. Ce qui compte, c'est que la
+> méthode soit déclarée quelque part dans la classe.
 
 ## Passer des paramètres à une méthode
 
@@ -470,9 +467,9 @@ public static void main(String[] args) {
 
 > [!NOTE]
 >
-> Dans la pratique, les termes "paramètre" et "argument" sont souvent
-> utilisés de manière interchangeable, mais connaître la distinction aide à
-> comprendre la documentation.
+> Dans la pratique, les termes "paramètre" et "argument" sont souvent utilisés
+> de manière interchangeable, mais connaître la distinction aide à comprendre la
+> documentation.
 
 ### Différents types de paramètres
 
@@ -547,9 +544,9 @@ Périmètre : 34
 
 > [!IMPORTANT]
 >
-> L'ordre des arguments doit correspondre exactement à l'ordre des
-> paramètres. Si vous inversez les valeurs, le résultat sera incorrect (ou le
-> code ne compilera pas si les types ne correspondent pas).
+> L'ordre des arguments doit correspondre exactement à l'ordre des paramètres.
+> Si vous inversez les valeurs, le résultat sera incorrect (ou le code ne
+> compilera pas si les types ne correspondent pas).
 
 ## Retourner une valeur depuis une méthode
 
@@ -633,9 +630,9 @@ public static String creerMessage(String nom) {
 
 > [!IMPORTANT]
 >
-> Le type de la valeur retournée avec `return` doit correspondre
-> exactement au type déclaré dans la signature de la méthode. Si vous déclarez
-> `int` mais retournez un `String`, le code ne compilera pas.
+> Le type de la valeur retournée avec `return` doit correspondre exactement au
+> type déclaré dans la signature de la méthode. Si vous déclarez `int` mais
+> retournez un `String`, le code ne compilera pas.
 
 ### Méthode sans valeur de retour (`void`)
 
@@ -686,9 +683,9 @@ public static int[] calculerStatistiques(int a, int b) {
 
 > [!TIP]
 >
-> Quand `return` est exécuté, la méthode s'arrête immédiatement. Tout
-> code après un `return` ne sera jamais exécuté. C'est une erreur de compilation
-> si le compilateur détecte du code inaccessible après un `return`.
+> Quand `return` est exécuté, la méthode s'arrête immédiatement. Tout code après
+> un `return` ne sera jamais exécuté. C'est une erreur de compilation si le
+> compilateur détecte du code inaccessible après un `return`.
 
 ## Combiner paramètres et valeurs de retour
 
@@ -756,9 +753,9 @@ public class Main {
 
 > [!WARNING]
 >
-> Si vous inversez l'ordre des arguments, vous pouvez obtenir un
-> résultat mathématiquement correct mais sémantiquement incorrect. Soyez
-> attentif à l'ordre des paramètres !
+> Si vous inversez l'ordre des arguments, vous pouvez obtenir un résultat
+> mathématiquement correct mais sémantiquement incorrect. Soyez attentif à
+> l'ordre des paramètres !
 
 ### Exemples pratiques avec plusieurs paramètres
 
@@ -812,9 +809,9 @@ public class Main {
 
 > [!NOTE]
 >
-> Pensez à une variable locale comme à une note sur un papier dans un
-> bureau fermé. Seule la personne dans ce bureau peut lire cette note. Une fois
-> qu'elle sort et ferme la porte, la note n'est plus accessible.
+> Pensez à une variable locale comme à une note sur un papier dans un bureau
+> fermé. Seule la personne dans ce bureau peut lire cette note. Une fois qu'elle
+> sort et ferme la porte, la note n'est plus accessible.
 
 ### Paramètres sont aussi locaux
 
@@ -877,10 +874,10 @@ public class Main {
 
 > [!IMPORTANT]
 >
-> Deux méthodes différentes peuvent avoir des variables locales
-> avec le même nom sans conflit, car elles sont dans des portées différentes.
-> C'est comme avoir deux pièces séparées avec chacune une boîte nommée
-> "outils" - elles sont indépendantes.
+> Deux méthodes différentes peuvent avoir des variables locales avec le même nom
+> sans conflit, car elles sont dans des portées différentes. C'est comme avoir
+> deux pièces séparées avec chacune une boîte nommée "outils" - elles sont
+> indépendantes.
 
 ## Variables de classe (à éviter pour l'instant)
 
@@ -996,10 +993,10 @@ public class Main {
 
 > [!CAUTION]
 >
-> Pour l'instant, évitez d'utiliser des variables de classe (sauf
-> pour les constantes). Privilégiez les paramètres et les valeurs de retour.
-> Vous verrez plus tard, avec la programmation orientée objet, quand et comment
-> utiliser correctement l'état dans vos programmes.
+> Pour l'instant, évitez d'utiliser des variables de classe (sauf pour les
+> constantes). Privilégiez les paramètres et les valeurs de retour. Vous verrez
+> plus tard, avec la programmation orientée objet, quand et comment utiliser
+> correctement l'état dans vos programmes.
 
 ### Exception : les constantes
 
@@ -1020,8 +1017,8 @@ public class Main {
 
 > [!TIP]
 >
-> Les constantes sont acceptables car elles ne changent jamais, donc
-> elles ne créent pas les problèmes de l'état global mutable.
+> Les constantes sont acceptables car elles ne changent jamais, donc elles ne
+> créent pas les problèmes de l'état global mutable.
 
 ## Méthodes prédéfinies en Java
 
@@ -1072,8 +1069,8 @@ public class Main {
 
 > [!TIP]
 >
-> Utilisez `Math.pow(base, exposant)` pour calculer des puissances. Par
-> exemple, `Math.pow(2, 10)` calcule $2^{10} = 1024$.
+> Utilisez `Math.pow(base, exposant)` pour calculer des puissances. Par exemple,
+> `Math.pow(2, 10)` calcule $2^{10} = 1024$.
 
 ### La classe `String` : manipulation de texte
 
@@ -1113,9 +1110,9 @@ public class Main {
 
 > [!IMPORTANT]
 >
-> Les méthodes sur les `String` ne modifient **jamais** la chaîne
-> originale. Elles renvoient une **nouvelle** chaîne. C'est pourquoi vous devez
-> récupérer le résultat : `String nouveau = texte.toUpperCase();`
+> Les méthodes sur les `String` ne modifient **jamais** la chaîne originale.
+> Elles renvoient une **nouvelle** chaîne. C'est pourquoi vous devez récupérer
+> le résultat : `String nouveau = texte.toUpperCase();`
 
 ### Exemple pratique : calculer une aire
 
@@ -1292,9 +1289,9 @@ public class Main {
 
 > [!IMPORTANT]
 >
-> La règle DRY (Don't Repeat Yourself) : "Ne vous répétez pas".
-> Chaque fois que vous copiez-collez du code, demandez-vous si une méthode ne
-> serait pas plus appropriée.
+> La règle DRY (Don't Repeat Yourself) : "Ne vous répétez pas". Chaque fois que
+> vous copiez-collez du code, demandez-vous si une méthode ne serait pas plus
+> appropriée.
 
 ### Reconnaître quand créer une méthode
 
@@ -1343,8 +1340,8 @@ public class Main {
 
 > [!TIP]
 >
-> Un bon `main()` devrait lire comme un sommaire : il montre les grandes
-> étapes du programme, et chaque méthode gère les détails.
+> Un bon `main()` devrait lire comme un sommaire : il montre les grandes étapes
+> du programme, et chaque méthode gère les détails.
 
 ## Bonnes pratiques et conseils
 
@@ -1439,9 +1436,9 @@ public static double calculerPrixTTC(double prixHT) {
 
 > [!TIP]
 >
-> Si vous devez écrire beaucoup de commentaires pour expliquer ce que
-> fait une méthode, c'est peut-être que son nom n'est pas assez clair, ou
-> qu'elle fait trop de choses.
+> Si vous devez écrire beaucoup de commentaires pour expliquer ce que fait une
+> méthode, c'est peut-être que son nom n'est pas assez clair, ou qu'elle fait
+> trop de choses.
 
 ### Éviter les effets de bord
 
@@ -1496,8 +1493,8 @@ public static double calculerMoyenne(int[] nombres) {
 
 > [!WARNING]
 >
-> Toujours vérifier les cas limites : valeurs nulles, tableaux vides,
-> divisions par zéro, nombres négatifs quand ils ne sont pas attendus, etc.
+> Toujours vérifier les cas limites : valeurs nulles, tableaux vides, divisions
+> par zéro, nombres négatifs quand ils ne sont pas attendus, etc.
 
 ## Conclusion
 
@@ -1543,4 +1540,4 @@ Vous trouverez les détails des exercices ici :
 [Exercices](../03-exercices/README.md).
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

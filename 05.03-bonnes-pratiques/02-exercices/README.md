@@ -10,9 +10,9 @@ l'identification de problèmes dans du code.
   d'évaluation : [Lien vers le contenu](..)
 - Supports de cours : [Lien vers le contenu](../01-supports-de-cours/README.md)
   ·
-  [Presentation (web)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
+  [Presentation (web)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/index.html)
   ·
-  [Presentation (PDF)](https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/05.03-bonnes-pratiques/01-supports-de-cours/05.03-bonnes-pratiques-presentation.pdf)
 - Exercices : [Lien vers le contenu](../02-exercices/README.md)
 
 ## Objectifs
@@ -388,20 +388,17 @@ public class Main {
 **Améliorations appliquées** :
 
 1. **Formatage** :
-
    - Indentation correcte
    - Espaces autour des opérateurs
    - Lignes vides pour séparer les sections logiques
    - Accolades correctement placées
 
 2. **Nommage** :
-
    - `s` → `scanner`
    - `x`, `y` → `firstNumber`, `secondNumber`
    - `a`, `b`, `c`, `d` → `sum`, `difference`, `product`, `quotient`
 
 3. **Commentaires** :
-
    - Suppression de tous les commentaires évidents
    - Pas de commentaires nécessaires ici (le code est auto-explicatif)
    - Suppression du code commenté
@@ -623,7 +620,6 @@ variables sont suffisamment clairs !
 Travaillez en groupe de 3-4 personnes :
 
 1. Chaque personne écrit un petit programme (20-30 lignes) qui :
-
    - Demande des informations à l'utilisatrice
    - Effectue des calculs
    - Affiche des résultats
@@ -631,7 +627,6 @@ Travaillez en groupe de 3-4 personnes :
 2. Échangez vos codes entre vous
 
 3. Chaque personne revoit le code d'un camarade et identifie :
-
    - Points positifs (ce qui est bien fait)
    - Points à améliorer (nommage, formatage, commentaires)
    - Suggestions concrètes

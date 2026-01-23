@@ -9,9 +9,9 @@ paginate: true
 author: V. Guidoux, avec l'aide de GitHub Copilot
 title: HEIG-VD ProgIM1 Course - Séquence, sélection et itération
 description: Séquence, sélection et itération pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
-url: https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html
+url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html
 header: "**Séquence, sélection et itération**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/heig-vd-progim-course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 6
 math: mathjax
 -->
@@ -23,7 +23,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course>
+<https://github.com/heig-vd-progim-course/heig-vd-progim1-course>
 
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -343,8 +343,8 @@ stop
 - Poser des questions si nécessaire.
 
 \
-**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos propres
-exercices.**
+**La programmation s'apprend par la pratique !** **N'hésitez pas à créer vos
+propres exercices.**
 
 ![bg right:40%][illustration-a-vous-de-jouer]
 
@@ -378,16 +378,16 @@ Est-ce que vous avez des questions ?
 <!-- URLs -->
 
 [presentation-web]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/index.html
 [presentation-pdf]:
-	https://HEIG-VD-Prog-Course.github.io/HEIG-VD-ProgIM-Course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf
+	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/02.01-sequence-selection-iteration/01-supports-de-cours/02.01-sequence-selection-iteration-presentation.pdf
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/02.01-sequence-selection-iteration/01-supports-de-cours
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/tree/main/02.01-sequence-selection-iteration/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/tree/main/02.01-sequence-selection-iteration/02-exercices
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/tree/main/02.01-sequence-selection-iteration/02-exercices
 [plantuml-editor]: https://plantuml.nortalle.ch
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/HEIG-VD-ProgIM-Course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 
