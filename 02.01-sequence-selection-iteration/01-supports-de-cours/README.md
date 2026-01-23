@@ -864,4 +864,4 @@ Les ressources suivantes ont été utilisées pour la préparation de ce cours :
 - <https://www.w3schools.com/java/java_conditions.asp>
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

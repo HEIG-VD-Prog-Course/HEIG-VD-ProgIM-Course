@@ -348,4 +348,4 @@ professionnel mais, surtout, que vous soyez heureux.ses !
 Au plaisir de vous recroiser !
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

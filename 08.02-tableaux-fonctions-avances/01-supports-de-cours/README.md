@@ -704,4 +704,4 @@ public static int searchRecursive(int[] array, int target, int index) {
 - [W3Schools - Java Recursion](https://www.w3schools.com/java/java_recursion.asp)
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

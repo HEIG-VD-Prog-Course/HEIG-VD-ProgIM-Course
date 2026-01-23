@@ -56,4 +56,4 @@ l'organisation du projet :
   [Presentation (PDF)](https://heig-vd-progim-course.github.io/heig-vd-progim1-course/10.01-projet-libre/01-supports-de-cours/10.01-projet-libre-presentation.pdf)
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

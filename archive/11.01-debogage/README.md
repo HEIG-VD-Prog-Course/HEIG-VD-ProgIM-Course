@@ -72,4 +72,4 @@ il est recommandé pour le cours suivant de :
 - Finaliser les exercices qui n'ont pas été terminés en classe.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

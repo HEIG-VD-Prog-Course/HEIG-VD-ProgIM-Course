@@ -962,4 +962,4 @@ bibliothèques) des prochains chapitres.
 - Qu'est-ce qu'un IDE et que fait-il réellement ?
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

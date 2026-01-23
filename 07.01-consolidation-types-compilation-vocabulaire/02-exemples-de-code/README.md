@@ -36,4 +36,4 @@ sur votre machine et de prendre le temps de les comprendre en profondeur **sans
 recourir à de l'aide externe** (assistants IA, forums, etc.).
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

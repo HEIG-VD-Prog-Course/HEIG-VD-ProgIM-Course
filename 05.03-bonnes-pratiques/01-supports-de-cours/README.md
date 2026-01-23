@@ -1,6 +1,6 @@
 # Bonnes pratiques de programmation - Support de cours
 
-<https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course>
+<https://github.com/heig-vd-progim-course/heig-vd-progim1-course>
 
 [Markdown][course-material]
 
@@ -814,6 +814,6 @@ configuration de l'éditeur.
 <!-- URLs -->
 
 [course-material]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/05.03-bonnes-pratiques/01-supports-de-cours/README.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/05.03-bonnes-pratiques/01-supports-de-cours/README.md
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

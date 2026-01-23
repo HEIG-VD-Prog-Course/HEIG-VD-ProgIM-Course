@@ -45,4 +45,4 @@ L'évaluation se fait en utilisant les critères suivants :
 - Capacité à écrire un code lisible et bien commenté.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

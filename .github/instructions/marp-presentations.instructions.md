@@ -25,7 +25,7 @@ title: HEIG-VD ProgIM1 Course - [Topic]
 description: [Brief description] pour l'unité d'enseignement ProgIM1 enseigné à la HEIG-VD, Suisse
 url: https://heig-vd-progim-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/index.html
 header: "**[Topic]**"
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [ProgIM1 2025-2026](https://github.com/heig-vd-progim-course/heig-vd-progim1-course) - [CC BY-SA 4.0](https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md)'
 headingDivider: 2
 math: mathjax
 -->
@@ -86,7 +86,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course>
+<https://github.com/heig-vd-progim-course/heig-vd-progim1-course>
 
 [Support de cours][cours] · [Présentation (web)][presentation-web] ·
 [Présentation (PDF)][presentation-pdf]
@@ -146,11 +146,11 @@ All presentations must include these URL references at the end:
 [presentation-pdf]:
 	https://heig-vd-progim-course.github.io/heig-vd-progim1-course/XX.XX-topic/01-supports-de-cours/XX.XX-topic-presentation.pdf
 [cours]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/XX.XX-topic/01-supports-de-cours
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/tree/main/XX.XX-topic/01-supports-de-cours
 [exercices]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/tree/main/XX.XX-topic/03-exercices
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/tree/main/XX.XX-topic/03-exercices
 [license]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md
 
 <!-- Illustrations -->
 

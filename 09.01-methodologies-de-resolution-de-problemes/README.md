@@ -53,4 +53,4 @@ il est recommandé pour le cours suivant de :
 - Réfléchir à l'application de cette méthodologie à d'autres problèmes simples.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

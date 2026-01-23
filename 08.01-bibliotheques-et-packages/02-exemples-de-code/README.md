@@ -38,4 +38,4 @@ premier temps. Si vous êtes bloqué, n'hésitez pas à poser des questions en c
 ou par mail.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

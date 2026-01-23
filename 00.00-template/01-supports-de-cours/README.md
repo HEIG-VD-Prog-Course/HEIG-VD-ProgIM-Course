@@ -34,4 +34,4 @@ De façon plus concise, à la fin de cette séance, vous devriez être capable d
 ### Sources et liens utiles
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

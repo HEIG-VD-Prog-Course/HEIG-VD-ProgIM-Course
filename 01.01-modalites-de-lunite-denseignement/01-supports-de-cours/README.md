@@ -26,4 +26,4 @@ Ce travail est sous licence [CC BY-SA 4.0][licence].
 - Lister les modalités d'évaluation.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md

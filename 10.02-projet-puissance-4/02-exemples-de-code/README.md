@@ -206,4 +206,4 @@ Le code de la dernière étape constitue une base solide pour toutes ces
 extensions.
 
 [licence]:
-	https://github.com/HEIG-VD-Prog-Course/heig-vd-progim1-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-progim-course/heig-vd-progim1-course/blob/main/LICENSE.md
