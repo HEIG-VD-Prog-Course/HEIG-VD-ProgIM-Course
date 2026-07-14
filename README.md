@@ -69,12 +69,12 @@ méthodes d'enseignement et d'apprentissage, et les méthodes d'évaluation.
 - 02 : UML - No code
 - 03 : Langage de programmation, types, variables, constante, Scanner, console
 - 04 : Structures conditionnelles - Algèbre de Boole
-- 05 : Fonctions
-- 06 : Tableaux
+- 05 : Boucles et itérations
+- 06 : Fonctions
+- 07 : Tableaux
 - Evaluation
-- 07 : Débugging
-- 08 : (Git) et pratique
-- 09 : Pratique
+- 08 : Débugging
+- 09 : (Git) et pratique
 - 10 : Pratique
 - 11 : Pratique
 - 12 : Récapitulatif du cours et préparation à l'examen
