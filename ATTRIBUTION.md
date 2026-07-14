@@ -7,6 +7,21 @@
   Louis [@hadrylouis](https://github.com/hadrylouis) is licensed under a
   [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)
   license.
+- [HEIG-VD DévProdMéd Course](https://github.com/heig-vd-devprodmed-course/heig-vd-devprodmed-course)
+  by Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo/) is licensed
+  under a
+  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course/blob/main/LICENSE.md)
+  license.
+- [HEIG-VD MSCI Course](https://github.com/heig-vd-msci-course/heig-vd-msci-course)
+  by Clarisse Fleurimont [@stelucidam](https://github.com/stelucidam) and
+  Vincent Guidoux [@Nortalle](https://github.com/Nortalle) is licensed under a
+  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-msci-course/heig-vd-msci-course/blob/main/LICENSE.md)
+  license.
+- [HEIG-VD MVP Course](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course)
+  by Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo/) and Vincent
+  Guidoux [@Nortalle](https://github.com/Nortalle) is licensed under a
+  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/LICENSE.md)
+  license.
 - [HEIG-VD ProgServ1 Course](https://github.com/heig-vd-progserv-course/heig-vd-progserv1-course)
   by Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo/) is licensed
   under a
@@ -17,10 +32,10 @@
   under a
   [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-progserv-course/heig-vd-progserv2-course/blob/main/LICENSE.md)
   license.
-- [HEIG-VD MVP Course](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course)
+- [HEIG-VD UPInfo Course](https://github.com/heig-vd-upinfo-course/heig-vd-upinfo-course)
   by Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo/) and Vincent
   Guidoux [@Nortalle](https://github.com/Nortalle) is licensed under a
-  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-mvp-course/heig-vd-mvp-course/blob/main/LICENSE.md)
+  [Creative Commons Attribution-ShareAlike 4.0 International](https://github.com/heig-vd-upinfo-course/heig-vd-upinfo-course/blob/main/LICENSE.md)
   license.
 - [HEIG-VD WEB courses](https://github.com/web-classroom/web-classroom.github.io)
   by Bertil Chapuis [@bchapuis](https://github.com/bchapuis), Olivier Lemer
